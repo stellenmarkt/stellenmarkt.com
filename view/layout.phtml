@@ -80,7 +80,8 @@ foreach ($languages as $lang) {
                           ->setRole($this->auth('role'))
                           ->menu()
                           ->setMaxDepth(0) // only show the top level entries
-                          ->setUlClass('nav navbar-nav pull-right')//renderPartial(null, 'main-navigation')
+                          ->renderPartial(null, 'main-navigation');
+//                          ->setUlClass('nav navbar-nav pull-right')//renderPartial(null, 'main-navigation')
                 ?>
                 <?php #echo $this->loginInfo() ?>
             </nav>

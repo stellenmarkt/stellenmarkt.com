@@ -17,11 +17,6 @@ return [
         'default' => [
             'settings' => [
                 'pages' => [
-                    'invoice' => [
-                        'label' => /*@translate */ 'Invoice Address',
-                        'route' => 'lang/my-invoice',
-                        'order' => 10,
-                    ],
                     'my-profile' => [
                         'label' => /*@translate */ 'My profile',
                         'route' => 'lang/my',
