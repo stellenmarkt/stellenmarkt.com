@@ -59,624 +59,133 @@ foreach ($languages as $lang) {
 <body class="home">
 <div class="page">
     <header role="banner">
-        <div class=" navbar">
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse"
-                        type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand hidden-xs menu-logo" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">
-                   <img src="<?php echo $this->basepath('/Gastro24/gastrojob24_blue.svg') ?>" alt="logo" class="menu-logo">
-                </a>
-                <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">Y</a>
-            </div>
+        <div class="navbar">
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse"
+                            type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-xs menu-logo" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">
+                        <img src="<?php echo $this->basepath('/Gastro24/gastrojob24_blue.svg') ?>" alt="logo" class="menu-logo">
+                    </a>
+                    <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">G24</a>
+                </div>
                 <?php
                 echo $this->navigation('Core/Navigation')
                           ->setAcl($this->services('acl'))
                           ->setRole($this->auth('role'))
                           ->menu()
                           ->setMaxDepth(0) // only show the top level entries
-                          ->setUlClass('nav navbar-nav pull-left')//renderPartial(null, 'main-navigation')
+                          ->setUlClass('nav navbar-nav pull-right')//renderPartial(null, 'main-navigation')
                 ?>
-                <?php echo $this->loginInfo() ?>
+                <?php #echo $this->loginInfo() ?>
             </nav>
             <!-- /main-navigation -->
         </div>
     </header>
-
-    <nav id="menu-1" class="mega-menu fa-change-black" data-color="">
-        <section class="menu-list-items">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <ul class="menu-links pull-right">
-                            <li class="login-btn-no-bg">
-                                <a href="login.html" data-toggle="dropdown" class="login-header-btn job-categories-header">Berufsgruppen <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="job-category1.html"> Kellner/ -in <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Koch/ Köchin <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Hotelfachmann/ -frau <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Küchenchef/ -in <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Hoteldirektor/ -in <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Hotelfachmann/ -frau  <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Restaurantfachmann/ -frau <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Rezeptionist/ -in <span class="badge">33</span> </a></li>
-                                    <li><a href="job-category1.html"> Barkeeper/ -in <span class="badge">133</span> </a></li>
-                                    <li><strong><a href="all-categories.html"> Alle Berufsgruppen anzeigen  </a></strong></li>
-                                </ul>
-                            </li>
-                            <li class="no-bg login-btn-no-bg"><a href="jobmail.html" class="login-header-btn">Jobmail abonnieren</a></li>
-                            <li class="no-bg login-btn-no-bg"><a href="login.html" class="login-header-btn">Login</a></li>
-                            <li class="no-bg"><a href="pricing.html" class="p-job">Stellenanzeige schalten</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </nav>
-    <div class="clearfix"></div>
-    <section class="main-section">
-        <div class="container-search">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-                    <div class="search-form-contaner">
-                        <strong>Dein Traumjob ist nur ein Klick entfernt</strong>
-                        <form class="form-inline">
-                            <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-                                <div class="form-group">
-
-                                    <input type="text" class="form-control" name="keyword" placeholder="Beruf oder Tätigkeit eingeben...." value="">
-                                    <button type="button" class="btn btn-primary btn-search-submit">Job finden <i class="fa fa-search" ></i></button>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-                                <div class="form-group">
-
-
-                                    <div class="category-box">
-                                        <span  class="opener">Berufsgruppe auswählen <i class="fa fa-chevron-circle-down"></i> <i class="fa fa-chevron-circle-up"></i></span>
-
-
-                                        <div class="categories">
-
-                                            <ul>
-
-                                                <li><a href="job-category1.html"> Kellner/ -in <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Koch/ Köchin <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Hotelfachmann/ -frau <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Küchenchef/ -in <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Hoteldirektor/ -in <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Hotelfachmann/ -frau  <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Restaurantfachmann/ -frau <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Rezeptionist/ -in <span class="badge">33</span> </a></li>
-                                                <li><a href="job-category1.html"> Barkeeper/ -in <span class="badge">133</span> </a></li>
-                                                <li><strong><a href="all-categories.html"> Alle Berufsgruppen anzeigen  </a></strong></li>
-                                            </ul>
-
-
-                                        </div>
-
-
-
-
-                                    </div>
-                                </div>
-
-
-
-                        </form>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </section>
-    <section class="featured-jobs" style=" background-color: white;
-    border-radius: 2px;
-    box-shadow: 0 1px 1px 1px rgba(127, 127, 127, 0.3);
-    box-sizing: border-box;
-    margin: 0 0 4px;
-    padding: 60px 0;">
-        <div class="container">
-            <div class="row">
-
-                <div class="Heading-title black">
-                    <h1>Jobportal für Gastronomie, Restauration, Hotellerie & Touristik                </h1>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-
-
-                    <ul class="infoList">
-                        <li> <i class="fa fa-check" aria-hidden="true"></i> <strong>Maximale Reichweite Ihrer Jobs</strong>
-                            Ihr Stelleninserat erreicht zukünftige Mitarbeiter auch über E-Mail, RSS-Feeds und Social Media. Ein Job-Inserat, viele Kanäle.                                 </li>
-                        <li> <i class="fa fa-check" aria-hidden="true"></i> <strong>Unkompliziert neue Mitarbeiter finden</strong>
-                            Einfach, schnell und kostengünstig Jobs schalten - Sie bezahlen bequem per Kreditkarte, PayPal oder Rechnung</li>
-                        <li> <i class="fa fa-check" aria-hidden="true"></i> <strong>Bekannt in Gastronomie und Hotellerie</strong>
-                            Seit über 7 Jahren präsent und geschätzt im Schweizer Recruiting Markt  </li>
-
-
-
-                    </ul>
-
-
-
-                    <aside class="priceHomepage"><h4 class="widget-title">Jetzt Einzelinserat Plus schalten</h4>
-                        <div class="textwidget"><a href="/neues-inserat-erfassen/" class="price-wrap">
-                                <span class="price">Nur CHF 50.-</span> <span class="tax">60 Tage Laufzeit, Text oder PDF Inserat</span>
-                                <span class="conditions"></span>
-                            </a></div>
-                    </aside>
-                    <div class="moreInfos">
-                        <a href="">Alle Angebote und Vorteile auf einen Blick</a>
-                    </div>
-
-
-
-                </div>
-
-
-
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <aside class="listing-widget ">
-                            <h4>Diese Firmen inserieren bereits</h4>
-                            <ul class="client-logos row ">
-
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://www.gastrojob24.ch/photos/1472826140_neues_Logo.jpg" alt="Additively-Logo-Screen" itemprop="image" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="https://www.webstobe.ch/fileadmin/user_upload/logos_kunden/wildhaus-sw.png" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://www.hotelcareer.ch/images/newlayout/hc_logo_ch.gif" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://www.hotelcareer.ch/file.php?id=13798899&k=d700524e923d55cf3742b1100f2319a424484b46" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-
-
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://www.gastrojob24.ch/photos/1477656284_Foto0137.jpg" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="https://www.webstobe.ch/fileadmin/user_upload/logos_kunden/wildhaus-sw.png" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://www.gastrojob24.ch/photos/1478767379_cactuslogo.jpg" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://freshjobs.ch/content/uploads/2016/05/Additively-Logo-Screen-100x30.png" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="https://www.webstobe.ch/fileadmin/user_upload/logos_kunden/gemdat-sw.png" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://www.gastrojob24.ch/photos/1478767379_cactuslogo.jpg" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="http://freshjobs.ch/content/uploads/2016/05/Additively-Logo-Screen-100x30.png" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-                                <li class="col-md-4 col-sm-6 col-xs-12">
-                                    <a href="http://freshjobs.ch/company/additively-ag/" title="Additively AG">
-                                        <figure class="company-logo">
-                                            <img src="https://www.webstobe.ch/fileadmin/user_upload/logos_kunden/gemdat-sw.png" class="attachment-mini-frontpage-thumb size-mini-frontpage-thumb" alt="Additively-Logo-Screen" itemprop="image" srcset="" sizes="(max-width: 100px) 100vw, 100px" width="100" height="30">						    </figure>
-                                    </a>
-                                </li>
-
-
-                            </ul>
-
-
-                        </aside>
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="featured-jobs">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="Heading-title black">
-                        <h2>Aktuelle Stellenangebote</h2>
-                    </div>
-
-
-                </div>
-
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-                        <div class="img-box"><a title="" href=""><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQF2VhmQaeZtaxw3KQxziFkDF7vKmROD0OHtIHWz1lGA5Gq0K8bK6ZHXGeS" class="img-responsive center-block" alt=""></a></div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>Festanstellung-Teilzeit</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-                        <div class="img-box"><a title="" href=""><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQF2VhmQaeZtaxw3KQxziFkDF7vKmROD0OHtIHWz1lGA5Gq0K8bK6ZHXGeS" class="img-responsive center-block" alt=""></a></div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>Festanstellung-Vollzeit</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-                        <div class="img-box"><a title="" href=""><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQF2VhmQaeZtaxw3KQxziFkDF7vKmROD0OHtIHWz1lGA5Gq0K8bK6ZHXGeS" class="img-responsive center-block" alt=""></a></div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>Jahresstelle</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-
-                        <div class="img-box">
-
-                            <a title="" href=""><img src="http://www.hotelcareer.ch/file.php?id=13798899&k=d700524e923d55cf3742b1100f2319a424484b46" class="img-responsive center-block" alt=""></a>
-
-                            <div class="big-bullet">
-                                <p class="black-bullet">
-                                    <span>11</span>
-                                    <br>Jobs<br>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>
-                                    Saison Job - per sofort gesucht</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-                        <div class="img-box"><a title="" href=""><img src="http://www.hotelcareer.ch/file.php?id=13798899&k=d700524e923d55cf3742b1100f2319a424484b46" class="img-responsive center-block" alt=""></a></div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>Jahresstelle</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-                        <div class="img-box"><a title="" href=""><img src="http://www.hotelcareer.ch/file.php?id=13798899&k=d700524e923d55cf3742b1100f2319a424484b46" class="img-responsive center-block" alt=""></a></div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>Jahresstelle</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="featured-image-box">
-                        <div class="img-box"><a title="" href=""><img src="http://www.gastrojob24.ch/photos/1478011262_hellofresh-logo.png" class="img-responsive center-block" alt=""></a></div>
-                        <div class="content-area">
-                            <div class="top-cnt">
-                                <p class="date">17.11.2016</p>
-                                <h4>
-                                    <a title="Réceptionist/in (100%)" href="">Réceptionist/in (100%)</a>
-                                </h4>
-                                <p>Jahresstelle</p>
-                                <p>Region Zentralschweiz</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="col-md-12 col-sm-12 col-xs-12 ">
-                    <div class="pagination-box clearfix">
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a>
-                            </li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="fixed-footer1">
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 col-xs-12">
-                        <div class="footer_block">
-
-                            <h4>Gastrojob24</h4>
-
-                            <ul class="footer-links">
-                                <li> <a href="#">Kontakt</a> </li>
-                                <li> <a href="#">Impressum</a> </li>
-                                <li> <a href="#">Disclaimer</a> </li>
-                                <li> <a href="#">Über uns</a> </li>
-
-
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-xs-12">
-                        <div class="footer_block">
-                            <h4>Arbeitgeber</h4>
-
-                            <ul class="footer-links">
-                                <li> <a href="#">Merkliste</a> </li>
-                                <li> <a href="#">About Us</a> </li>
-                                <li> <a href="#">Privacy</a> </li>
-                                <li> <a href="#">Contact Us</a> </li>
-                                <li> <a href="#">Term & Conditions</a> </li>
-                            </ul>
-
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-xs-12">
-                        <div class="footer_block">
-                            <h4>Jobsuche</h4>
-
-                            <ul class="footer-links">
-                                <li> <a href="#">Merkliste</a> </li>
-                                <li> <a href="#">About Us</a> </li>
-                                <li> <a href="#">Privacy</a> </li>
-                                <li> <a href="#">Contact Us</a> </li>
-                                <li> <a href="#">Term & Conditions</a> </li>
-                            </ul>
-
-
-
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-xs-12">
-                        <div class="footer_block">
-                            <h4>Beliebte Suchanfragen</h4>
-
-                            <ul class="footer-links">
-                                <li> <a href="#">Merkliste</a> </li>
-                                <li> <a href="#">About Us</a> </li>
-                                <li> <a href="#">Privacy</a> </li>
-                                <li> <a href="#">Contact Us</a> </li>
-                                <li> <a href="#">Term & Conditions</a> </li>
-                            </ul>
-
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-        <section class="footer-bottom-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-bottom">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h3>Haben Sie Fragen?</h3>
-                                        <h4>Rufen Sie uns an: <strong>+41 71 310 10 08</strong>. Wir helfen Ihnen gerne weiter!</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- CORE JS -->
-    <script type="text/javascript" src="js/custom.js"></script>
-
 </div>
 
-<a class="sr-only" href="#content">Skip to main content</a>
-<header role="banner">
-    <div class=" navbar-inverse">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse"
-                    type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand hidden-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">Gastro Jobs</a>
-            <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">Y</a>
-        </div>
-        <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
-            <?php
-            echo $this->navigation('Core/Navigation')
-                ->setAcl($this->services('acl'))
-                ->setRole($this->auth('role'))
-                ->menu()
-                ->setMaxDepth(0) // only show the top level entries
-                ->setUlClass('nav navbar-nav pull-left')//renderPartial(null, 'main-navigation')
-            ?>
-            <?php echo $this->loginInfo() ?>
-        </nav>
-        <!-- /main-navigation -->
-    </div>
-</header>
-<div class="container col-md-2">
-    <!-- SIDEBAR -->
-    <nav id="sidebar">
-        <div class="btn-group" data-toggle="buttons-radio" id="language-switcher">
-            <?php $lang = $this->params('lang');
-            foreach ( $languages as $key=>$language): ?>
-                <button type="button"
-                        class="btn btn-xs btn-default<?php echo $language == $lang ? ' active' : '' ?>"
-                        id="language-switcher-<?php echo $key ?>">
-                    <span class="flag-icon flag-icon-<?php echo  strtolower(substr($language,-2)) ?>"></span><?php echo strtoupper($key) ?></button>
-            <?php endforeach ?>
-        </div>
-        <p><a href="https://www.transifex.com/projects/p/yawik/">
-                <?php echo $this->translate('Help to translate YAWIK'); ?></a></p>
-
-        <div id="sub-nav">
-            <?php
-            echo $this->navigation()->menu()
-                ->setOnlyActiveBranch(true)
-                ->setMaxDepth(null)
-                ->setMinDepth(1)
-                ->setRenderParents(false)
-                ->setUlClass('nav nav-pills nav-stacked');
-            ?>
-            <?php
-            /**
-             * you can put partials
-             */
-            foreach ($this->layout()->getChildren() as $child):
-                if (0 === strpos($child->captureTo(), "sidebar_")):
-                    echo $this->{$child->captureTo()};
-                endif;
-            endforeach;?>
-        </div>
-    </nav>
-    <!-- /SIDEBAR -->
-</div>
-
-<main id="content" class="col-md-10">
+<main id="content" class="col-md-12">
     <?php echo $notifications?>
     <?php echo $this->content; ?>
 </main>
 <!-- /container -->
-<footer id="yk-footer">
+<footer id="footer">
  <div class="container">
     <div class="row">
   </div>
+         <div class="container">
+             <div class="row">
+                 <div class="col-sm-6 col-md-3 col-xs-12">
+                     <div class="footer_block">
+
+                         <h4>Gastrojob24</h4>
+
+                         <ul class="footer-links">
+                             <li> <a href="#">Kontakt</a> </li>
+                             <li> <a href="#">Impressum</a> </li>
+                             <li> <a href="#">Disclaimer</a> </li>
+                             <li> <a href="#">Über uns</a> </li>
+
+
+                         </ul>
+
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-3 col-xs-12">
+                     <div class="footer_block">
+                         <h4>Arbeitgeber</h4>
+
+                         <ul class="footer-links">
+                             <li> <a href="#">Merkliste</a> </li>
+                             <li> <a href="#">About Us</a> </li>
+                             <li> <a href="#">Privacy</a> </li>
+                             <li> <a href="#">Contact Us</a> </li>
+                             <li> <a href="#">Term & Conditions</a> </li>
+                         </ul>
+
+
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-3 col-xs-12">
+                     <div class="footer_block">
+                         <h4>Jobsuche</h4>
+
+                         <ul class="footer-links">
+                             <li> <a href="#">Merkliste</a> </li>
+                             <li> <a href="#">About Us</a> </li>
+                             <li> <a href="#">Privacy</a> </li>
+                             <li> <a href="#">Contact Us</a> </li>
+                             <li> <a href="#">Term & Conditions</a> </li>
+                         </ul>
+
+
+
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-3 col-xs-12">
+                     <div class="footer_block">
+                         <h4>Beliebte Suchanfragen</h4>
+
+                         <ul class="footer-links">
+                             <li> <a href="#">Merkliste</a> </li>
+                             <li> <a href="#">About Us</a> </li>
+                             <li> <a href="#">Privacy</a> </li>
+                             <li> <a href="#">Contact Us</a> </li>
+                             <li> <a href="#">Term & Conditions</a> </li>
+                         </ul>
+
+
+
+                     </div>
+                 </div>
+
+             </div>
+         </div>
 </footer>
+<section class="footer-bottom-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h3>Haben Sie Fragen?</h3>
+                                <h4>Rufen Sie uns an: <strong>+41 71 310 10 08</strong>. Wir helfen Ihnen gerne weiter!</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php echo $this->partial("piwik") ?>
 </body>
 </html>

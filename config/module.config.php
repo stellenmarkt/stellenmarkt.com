@@ -45,5 +45,17 @@ return array(
                      'Gastro24/ClassificationFieldset' => 'Gastro24\Form\ClassificationFieldsetFactory',
                  ],
              ],
+    'router'       => array(
+        'routes' => array(
+            'lang' => array(
+                'options' => array(
+                    'defaults' => array(
+                        'controller' => 'Jobs/Jobboard', //Overwrites the route of the start Page
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+        ),
+    ),
 
 );
