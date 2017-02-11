@@ -18,7 +18,6 @@ return array(
                      'layout/layout' => __DIR__ . '/../view/layout.phtml',
                      'layout/application-form' => __DIR__ . '/../view/application-form.phtml',
                      'core/index/index' => __DIR__ . '/../view/index.phtml',
-                     'auth/password/index' => __DIR__ . '/../view/password.phtml',
                      'piwik' => __DIR__ . '/../view/piwik.phtml',
                      'iframe/iFrame.phtml'               => __DIR__ . '/../view/iFrame.phtml',
                      'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
