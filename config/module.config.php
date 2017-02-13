@@ -20,6 +20,7 @@ return array(
                      'core/index/index' => __DIR__ . '/../view/index.phtml',
                      'piwik' => __DIR__ . '/../view/piwik.phtml',
                      'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
+                     'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
                      'auth/users/list.ajax.phtml' => __DIR__ . '/../view/auth/users/list.ajax.phtml', // hide email adresses, since this is is a public demo
                       ),
              ),
