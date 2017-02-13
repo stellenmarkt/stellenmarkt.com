@@ -9,12 +9,12 @@
       $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
 ?>
 
-<h1><?php echo $this->translate('Public Job Opportunities')?></h1>
+<h1 class="text-center"><?php echo $this->translate('recent job offers')?></h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
-                    <div class="search-form-contaner">
+                    <div class="search-form-container">
                         <?php $this->filterForm->setButtonElement('q'); echo $this->searchform($this->filterForm)  ?>
                     </div>
 </nav>
