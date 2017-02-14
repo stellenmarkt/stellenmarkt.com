@@ -33,6 +33,10 @@ return [
         'Hoteldirektor/-in',
         'Rezeptionist/-in',
         'Restaurantfachmann/-frau',
+        'Hauswirtschafterin',
+        'Housekeeping / Etage',
+        'Servicefachmann / -frau',
+        'Systemgastronomiefachfrau/-mann',
         ]
 ];
 
