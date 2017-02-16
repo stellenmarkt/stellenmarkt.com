@@ -47,7 +47,8 @@ return [
             'post-a-job' => [
                 'label' => 'Stellenanzeige schalten',
                 'route' => 'lang/jobboard',
-                'order' => 60
+                'order' => 60,
+                'class' => 'inverted'
             ]
         ],
     ],
