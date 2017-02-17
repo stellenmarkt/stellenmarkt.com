@@ -4,12 +4,20 @@
           ->appendFile($this->basePath('Core/js/core.forms.js'))
           ->appendFile($this->basePath('assets/select2/js/select2.min.js'));
       if ($this->params('lang') != 'en') {
-          $this->headScript()->appendFile($this->basePath('assets/select2/js/select2/i18n/' . $this->params('lang') . '.js'));
+          $this->headScript()->appendFile($this->basePath('assets/select2/js/i18n/' . $this->params('lang') . '.js'));
       }
       $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
 ?>
+<?php
+$url="https://gastro:gastro2017@gastro24.yawik.org/blog/wp-json/wp/v2/pages/2";
+$json=file_get_contents($url);
+$data=json_decode($json);
+?>
 
-<h1 class="text-center"><?php echo $this->translate('recent job offers')?></h1>
+<h1 class="text-center">
+    <?php echo $this->translate('recent job offers')?>
+    <?=$data->title->rendered?>
+</h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
@@ -26,6 +34,10 @@
                    ))?>"
     data-uri="<?php
     echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true)?>">
+
+    <div class=""WP-Content>
+        <?=$data->content->rendered;?>
+    </div>
 
     <div class="pagination-content">
     <?php echo $this->render('jobs/jobboard/index.ajax.phtml')?>
