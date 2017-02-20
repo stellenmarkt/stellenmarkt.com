@@ -37,6 +37,13 @@ return [
             'login' => [
                 'label' => 'Login',
                 'route' => 'lang/auth',
+                'resource' => 'route/lang/auth',  // login link only for guests
+                'order' => 50
+            ],
+            'logout' => [
+                'label' => 'Logout',
+                'route' => 'auth-logout',
+                'resource' => 'route/logout',  // logou link only for logged in users
                 'order' => 50
             ],
             'jobmail' => [
@@ -60,8 +67,12 @@ return [
     'acl' => [
         'rules' => [
             'recruiter' => [
+                'allow' => [
+                    'route/logout'
+                ],
                 'deny' => [
                     'route/lang/applications',
+                    'route/lang/auth',
                 ],
             ],
         ],
