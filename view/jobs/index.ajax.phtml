@@ -53,7 +53,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                     <?php foreach ($facetValues as $facetValue => $facetValueCount):?>
                         <div>
                             <label>
-                                <input type="checkbox" name="params[<?=$this->escapeHtmlAttr($facetName)?>][<?=$this->escapeHtmlAttr($facetValue)?>]" class="facet-checkbox"<?php if ($facets->isValueActive($facetName, $facetValue)):?> checked<?php endif;?>>
+                                <input type="checkbox" name="<?=$this->escapeHtmlAttr($facetName)?>[<?=$this->escapeHtmlAttr($facetValue)?>]" class="facet-checkbox"<?php if ($facets->isValueActive($facetName, $facetValue)):?> checked<?php endif;?>>
                                 <?=$facetValue?> (<?=$facetValueCount?>)
                             </label>
                         </div>
