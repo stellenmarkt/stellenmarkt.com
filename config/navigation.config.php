@@ -38,23 +38,23 @@ return [
                 'label' => 'Login',
                 'route' => 'lang/auth',
                 'resource' => 'route/lang/auth',  // login link only for guests
-                'order' => 50
+                'order' => 150
             ],
             'logout' => [
                 'label' => 'Logout',
                 'route' => 'auth-logout',
                 'resource' => 'route/logout',  // logou link only for logged in users
-                'order' => 50
+                'order' => 150
             ],
             'jobmail' => [
                 'label' => 'Jobmail abonnieren',
                 'route' => 'lang/auth',
-                'order' => 40
+                'order' => 140
             ],
             'post-a-job' => [
                 'label' => 'Stellenanzeige schalten',
                 'route' => 'lang/jobboard',
-                'order' => 60,
+                'order' => 960,
                 'class' => 'inverted'
             ]
         ],
