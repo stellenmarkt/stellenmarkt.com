@@ -22,6 +22,7 @@ return array(
                      'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
                      'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
                      'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
+                     'auth/index/login-info' => __DIR__ . '/../view/login-info.phtml',
                      'auth/users/list.ajax.phtml' => __DIR__ . '/../view/auth/users/list.ajax.phtml', // hide email adresses, since this is is a public demo
                       ),
              ),

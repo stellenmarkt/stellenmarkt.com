@@ -81,16 +81,16 @@ foreach ($languages as $lang) {
                     </a>
                     <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">G24</a>
                 </div>
-                <?php
-                echo $this->navigation('Core/Navigation')
-                          ->setAcl($this->services('acl'))
-                          ->setRole($this->auth('role'))
-                          ->menu()
-                          ->setMaxDepth(0) // only show the top level entries
-                          ->renderPartial(null, 'main-navigation');
-//                          ->setUlClass('nav navbar-nav pull-right')//renderPartial(null, 'main-navigation')
+
+                <?= $this->loginInfo(array('lang' => $lang ));?>
+                <?= $this->navigation('Core/Navigation')
+                         ->setAcl($this->services('acl'))
+                         ->setRole($this->auth('role'))
+                         ->menu()
+                         ->setMaxDepth(0) // only show the top level entries
+                         ->renderPartial(null, 'main-navigation');
+//                         ->setUlClass('nav navbar-nav pull-right')//renderPartial(null, 'main-navigation')
                 ?>
-                <?php #echo $this->loginInfo() ?>
             </nav>
             <!-- /main-navigation -->
         </div>

@@ -34,18 +34,7 @@ return [
                     ],
                 ]
             ],
-            'login' => [
-                'label' => 'Login',
-                'route' => 'lang/auth',
-                'resource' => 'route/lang/auth',  // login link only for guests
-                'order' => 150
-            ],
-            'logout' => [
-                'label' => 'Logout',
-                'route' => 'auth-logout',
-                'resource' => 'route/logout',  // logou link only for logged in users
-                'order' => 150
-            ],
+
             'jobmail' => [
                 'label' => 'Jobmail abonnieren',
                 'route' => 'lang/auth',
@@ -58,6 +47,23 @@ return [
                 'class' => 'inverted'
             ]
         ],
+        'login' => [
+            'login' => [
+                'label' => 'Login',
+                'route' => 'lang/auth',
+                'resource' => 'route/lang/auth',  // login link only for guests
+                'order' => 150,
+                'class' => 'top-right'
+            ],
+            'logout' => [
+                'label' => 'Logout',
+                'route' => 'auth-logout',
+                'resource' => 'route/logout',  // logou link only for logged in users
+                'order' => 150,
+                'class' => 'top-right'
+            ],
+
+        ]
     ],
 
     /**
