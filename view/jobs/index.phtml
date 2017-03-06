@@ -1,15 +1,15 @@
 <?php //description: Renders the list of public jobs. ?>
 <?php $this->headTitle($this->translate('Jobs'));
-      $this->headScript()->appendFile($this->basepath('/Core/js/core.pagination-container.js'))
-          ->appendFile($this->basePath('Core/js/core.forms.js'))
-          ->appendFile($this->basePath('assets/select2/js/select2.min.js'));
-      if ($this->params('lang') != 'en') {
-          $this->headScript()->appendFile($this->basePath('assets/select2/js/i18n/' . $this->params('lang') . '.js'));
-      }
-      $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
+$this->headScript()->appendFile($this->basepath('/Core/js/core.pagination-container.js'))
+     ->appendFile($this->basePath('Core/js/core.forms.js'))
+     ->appendFile($this->basePath('assets/select2/js/select2.min.js'));
+if ($this->params('lang') != 'en') {
+    $this->headScript()->appendFile($this->basePath('assets/select2/js/i18n/' . $this->params('lang') . '.js'));
+}
+$this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
 ?>
 <?php
-$url="https://gastro:gastro2017@gastro24.yawik.org/blog/wp-json/wp/v2/pages/2";
+$url="https://gastro:jobs.ch@gastro24.yawik.org/blog/wp-json/wp/v2/pages/2";
 $json=file_get_contents($url);
 $data=json_decode($json);
 ?>
@@ -22,25 +22,33 @@ $data=json_decode($json);
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
-                    <div class="search-form-container">
-                        <?php $this->filterForm->setButtonElement('q'); echo $this->searchform($this->filterForm)  ?>
-                    </div>
+    <div class="search-form-container">
+        <?php $this->filterForm->setButtonElement('q'); echo $this->searchform($this->filterForm)  ?>
+    </div>
 </nav>
 
-<div id="jobs-list-container" class="pagination-container"
-    data-message="<?php echo $this->escapeHtmlAttr(sprintf(
-                          $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'),
-                          '<strong>', '</strong>'
-                   ))?>"
-    data-uri="<?php
-    echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true)?>">
 
-    <div class=""WP-Content>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#jobs-list-container">Suchergebnis</a></li>
+    <li><a data-toggle="tab" href="#wp-content">Beschreibung</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="jobs-list-container" class="pagination-container tab-pane fade in active"
+         data-message="<?php echo $this->escapeHtmlAttr(sprintf(
+                                                            $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'),
+                                                            '<strong>', '</strong>'
+                                                        ))?>"
+         data-uri="<?php
+         echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true)?>">
+
+        <div class="pagination-content">
+            <?php echo $this->render('jobs/jobboard/index.ajax.phtml')?>
+        </div>
+    </div>
+
+    <div id="wp-content" class="tab-pane fade">
         <?=$data->content->rendered;?>
     </div>
 
-    <div class="pagination-content">
-    <?php echo $this->render('jobs/jobboard/index.ajax.phtml')?>
-    </div>
 </div>
-

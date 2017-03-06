@@ -42,17 +42,17 @@ return array(
                      'Jobs/Description' => 'Gastro24\Form\JobsDescription',
                  ],
              ],
-    'router'       => array(
-        'routes' => array(
-            'lang' => array(
-                'options' => array(
-                    'defaults' => array(
+    'router' => [
+        'routes' => [
+            'lang' => [
+                'options' => [
+                    'defaults' => [
                         'controller' => 'Jobs/Jobboard', //Overwrites the route of the start Page
                         'action'     => 'index',
-                    ),
-                ),
-            ),
-        ),
-    ),
+                    ],
+                ],
+            ],
+        ],
+    ],
 
 );
