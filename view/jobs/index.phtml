@@ -9,14 +9,14 @@ if ($this->params('lang') != 'en') {
 $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
 ?>
 <?php
-$url="https://gastro:jobs.ch@gastro24.yawik.org/blog/wp-json/wp/v2/pages/2";
-$json=file_get_contents($url);
-$data=json_decode($json);
+//$url="https://gastro:jobs.ch@gastro24.yawik.org/blog/wp-json/wp/v2/pages/2";
+//$json=file_get_contents($url);
+//$data=json_decode($json);
 ?>
 
 <h1 class="text-center">
     <?php echo $this->translate('recent job offers')?>
-    <?=$data->title->rendered?>
+    <?=$this->snippet('wordpress-page', ['id' => 'hotelfachmann', 'key' => 'title.rendered']); //$data->title->rendered?>
 </h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
@@ -48,7 +48,7 @@ $data=json_decode($json);
     </div>
 
     <div id="wp-content" class="tab-pane fade">
-        <?=$data->content->rendered;?>
+        <?=$this->snippet('wordpress-page', ['id' => 'hotelfachmann', 'key' => 'content.rendered'])?>
     </div>
 
 </div>

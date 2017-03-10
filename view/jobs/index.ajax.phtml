@@ -128,7 +128,7 @@ foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */
     </div>
     
 <?php endforeach?>
-    </div>  </div>
+
     <div class="clear"></div>
 <?php echo $this->paginationControl($jobs, 'Sliding', 'pagination-control', array('lang' => $this->params('lang'), 'route' => 'lang/jobboard'));?>
 <?php endif ?>
