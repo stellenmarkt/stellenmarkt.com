@@ -71,6 +71,7 @@ return [
             'options' => [
                 'idMap' => [
                     'hotelfachmann' => 2,
+                    'koch' => 6,
                 ],
             ],
         ],

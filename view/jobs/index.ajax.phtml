@@ -9,6 +9,7 @@
 
 $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 ?>
+<div class="row">
 <?php if ($hasFacets):?>
     <?php
     $facets = $jobs->getFacets();
@@ -44,7 +45,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
             <button type="button" class="btn btn-link facet-reset"><?=$this->translate('Remove all filters')?></button>
         </div>
     <?php endif;?>
-    <div class="row">
+
     <div class="col-md-3">
         <?php foreach ($facets as $facetName => $facetValues):?>
             <div class="panel panel-default">
@@ -82,13 +83,13 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
 <?php if (count($jobs)): // We only want to render something, if there are items.?>
     <div class="row-eq-height">
-<?php
-
-foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */
+<?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */ ?>
+    <?php
 
     $org = $job->getOrganization();
+    $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', array(), array('query' => array('id' => $job->getId())), true);
+
     ?>
-    <?php $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', array(), array('query' => array('id' => $job->getId())), true); ?>
     <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="featured-image-box">
             <div class="img-box"><a title="" href="<?=$href?>">
@@ -104,24 +105,18 @@ foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
                     </p>
-                    <h4>
-                        <a title="<?= strip_tags($job->getTitle())?>" href="<?=$href?>"><?= strip_tags($job->getTitle())?></a>
-                    </h4>
+                    <h4><a title="<?=strip_tags($job->getTitle())?>" href="<?=$href?>"><?=strip_tags($job->getTitle())?></a></h4>
                     <?php
     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
         echo $org->getOrganizationName()->getName();
     }
     ?>
                     <p><?php $typeOfContract = $job->getTemplateValues()->get('types')?:'fulltime' ?>
-                        <span class="yk-contract yk-<?php echo $typeOfContract?>">
-                            <?php echo $typeOfContract; ?>
-                        </span>
+                        <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
                     </p>
-                    <p><?php echo $job->getLocation()?></p>
+                    <p><?=$job->getLocation()?></p>
                 </div>
-        <?php
-    echo $this->applyUrl($job);
-    ?>
+        <?=$this->applyUrl($job);?>
 
             </div>
         </div>
@@ -130,6 +125,9 @@ foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */
 <?php endforeach?>
 
     <div class="clear"></div>
-<?php echo $this->paginationControl($jobs, 'Sliding', 'pagination-control', array('lang' => $this->params('lang'), 'route' => 'lang/jobboard'));?>
+    <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control', array('lang' => $this->params('lang'), 'route' => 'lang/jobboard'));?>
+    </div>
+    </div>
 <?php endif ?>
-        </div>
+
+    </div>
