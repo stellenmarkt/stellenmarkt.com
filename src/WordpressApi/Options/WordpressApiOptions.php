@@ -42,6 +42,11 @@ class WordpressApiOptions extends AbstractOptions
     private $cacheOptions;
 
     /**
+     * @var array
+     */
+    private $idMap = [];
+
+    /**
      * @param string $baseUrl
      *
      * @return self
@@ -101,6 +106,25 @@ class WordpressApiOptions extends AbstractOptions
         return $this->httpClientOptions;
     }
 
+    /**
+     * @param array $idMap
+     *
+     * @return self
+     */
+    public function setIdMap($idMap)
+    {
+        $this->idMap = $idMap;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getIdMap()
+    {
+        return $this->idMap;
+    }
 
     
 }

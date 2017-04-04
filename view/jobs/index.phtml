@@ -15,8 +15,8 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
 ?>
 
 <h1 class="text-center">
-    <?php echo $this->translate('recent job offers')?>
-    <?=$this->snippet('wordpress-page', ['id' => 'hotelfachmann', 'key' => 'title.rendered']); //$data->title->rendered?>
+    <?php echo $this->translate('recent job offers'); $wordpress = $this->proxy('wordpress');?>
+    <?=$wordpress->chain(['page' => 'hotelfachmann', 'value' => 'title.rendered'], ''); ?>
 </h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
@@ -48,7 +48,7 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
     </div>
 
     <div id="wp-content" class="tab-pane fade">
-        <?=$this->snippet('wordpress-page', ['id' => 'hotelfachmann', 'key' => 'content.rendered'])?>
+        <?=$wordpress->call('value', ['content.rendered'], '')?>
     </div>
 
 </div>

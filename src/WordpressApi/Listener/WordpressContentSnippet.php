@@ -10,6 +10,7 @@
 /** */
 namespace Gastro24\WordpressApi\Listener;
 
+use Gastro24\WordpressApi\Filter\PageIdMap;
 use Gastro24\WordpressApi\Service\WordpressClient;
 use Zend\EventManager\EventInterface;
 
@@ -36,11 +37,11 @@ class WordpressContentSnippet
     }
 
     /**
-     * @param array $idMap
+     * @param PageIdMap $idMap
      *
      * @return self
      */
-    public function setIdMap(array $idMap)
+    public function setIdMap(PageIdMap $idMap)
     {
         $this->idMap = $idMap;
 
@@ -48,14 +49,16 @@ class WordpressContentSnippet
     }
 
     /**
-     * @return array
+     * @return PageIdMap
      */
     public function getIdMap()
     {
+        if (!$this->idMap) {
+            $this->setIdMap(new PageIdMap());
+        }
+
         return $this->idMap;
     }
-
-
 
     public function __invoke(EventInterface $event)
     {
@@ -65,10 +68,9 @@ class WordpressContentSnippet
             default:
             case 'wordpress-page':
                 $id = $event->getParam('id');
+
                 if ($id) {
-                    if (isset($this->idMap[$id])) {
-                        $id = $this->idMap[$id];
-                    }
+                    $id     = $this->getIdMap()->filter($id);
                     $result = $this->client->getPage($id);
                 }
                 break;

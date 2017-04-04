@@ -15,6 +15,22 @@ return [
             \Gastro24\WordpressApi\Listener\WordpressContentSnippet::class => \Gastro24\WordpressApi\Factory\Listener\WordpressContentSnippetFactory::class,
         ],
     ],
+
+    'filters' => [
+        'factories' => [
+            \Gastro24\WordpressApi\Filter\PageIdMap::class => \Gastro24\WordpressApi\Factory\Filter\PageIdMapFactory::class,
+        ],
+    ],
+
+    'view_helpers' => [
+        'factories' => [
+            \Gastro24\WordpressApi\View\Helper\WordpressContent::class => \Gastro24\WordpressApi\Factory\View\Helper\WordpressContentFactory::class
+        ],
+        'aliases' => [
+            'wordpress' => \Gastro24\WordpressApi\View\Helper\WordpressContent::class,
+        ],
+    ],
+
     'view_manager' => [
                  'template_map' => [
                      'layout/layout' => __DIR__ . '/../view/layout.phtml',
@@ -64,6 +80,9 @@ return [
                 'httpClientOptions' => [
                     'auth' => ['gastro', 'jobs.ch'],
                 ],
+                'idMap' => [
+                    'hotelfachmann' => 2,
+                ]
             ],
         ],
         \Gastro24\WordpressApi\Options\WordpressContentSnippetOptions::class => [

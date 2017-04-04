@@ -8,13 +8,13 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Factory\Listener;
+namespace Gastro24\WordpressApi\Factory\View\Helper;
 
 use Gastro24\WordpressApi\Filter\PageIdMap;
-use Gastro24\WordpressApi\Listener\WordpressContentSnippet;
-use Gastro24\WordpressApi\Options\WordpressContentSnippetOptions;
 use Gastro24\WordpressApi\Service\WordpressClient;
+use Gastro24\WordpressApi\View\Helper\WordpressContent;
 use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\AbstractPluginManager;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -24,29 +24,28 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test 
  */
-class WordpressContentSnippetFactory implements FactoryInterface
+class WordpressContentFactory implements FactoryInterface
 {
-
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $client   = $container->get(WordpressClient::class);
-        $idMap    = $container->get('filtermanager')->get(PageIdMap::class);
-        $listener = new WordpressContentSnippet($client);
+        $client = $container->get(WordpressClient::class);
+        $idMap  = $container->get('filtermanager')->get(PageIdMap::class);
 
-        $listener->setIdMap($idMap);
+        $helper = new WordpressContent($client, $idMap);
 
-        return $listener;
+        return $helper;
     }
 
     /**
      * Create service
      *
-     * @param ServiceLocatorInterface $serviceLocator
+     * @param ServiceLocatorInterface|AbstractPluginManager $serviceLocator
      *
-     * @return mixed
+     * @return WordpressContent
+     * @deprecated obsolete with ZF3
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator, WordpressContentSnippet::class);
+        return $this($serviceLocator->getServiceLocator(), WordpressContent::class);
     }
 }
