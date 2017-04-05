@@ -7,6 +7,14 @@
  * create a config/autoload/Gastro24.global.php and put modifications there
  */
 
+$idMap = [
+    'hotelfachmann' => 2,
+    'koch' => 7,
+    'barkeeper' => 43,
+    'rezeption' => 45,
+    'konditor' => 48,
+];
+
 return [
     'service_manager' => [
         'factories' => [
@@ -80,17 +88,12 @@ return [
                 'httpClientOptions' => [
                     'auth' => ['gastro', 'jobs.ch'],
                 ],
-                'idMap' => [
-                    'hotelfachmann' => 2,
-                ]
+                'idMap' => $idMap
             ],
         ],
         \Gastro24\WordpressApi\Options\WordpressContentSnippetOptions::class => [
             'options' => [
-                'idMap' => [
-                    'hotelfachmann' => 2,
-                    'koch' => 6,
-                ],
+                'idMap' => $idMap
             ],
         ],
     ],

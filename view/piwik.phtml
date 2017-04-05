@@ -9,7 +9,7 @@
         _paq.push(['setTrackerUrl', u+'piwik.php']);
 <?php
 if ($this->auth()->isLoggedIn()){
-  echo '_paq.push([\'setUserId\',\''.$this->auth('info')->getDisplayName().'\']);';
+  echo '_paq.push([\'setUserId\',\''.$this->auth('info')->getDisplayName().'\']);' . PHP_EOL;
 }
 ?>
         _paq.push(['setSiteId', '24']);
