@@ -9,10 +9,7 @@
 
 $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 ?>
-<div class="row">
-<?php if ($this->jobsByMailForm):?>
-    <?=$this->form($this->jobsByMailForm)?>
-<?php endif;?>
+<div class="row"><?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
 <?php if ($hasFacets):?>
     <?php
     $facets = $jobs->getFacets();
