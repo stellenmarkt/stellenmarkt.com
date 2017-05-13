@@ -94,7 +94,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
         <div class="featured-image-box">
             <div class="img-box"><a title="" href="<?=$href?>">
     <?php if ($org && $org->getImage() &&  $org->getOrganizationName()): ?>
-        <img class="yk-logo-sm center-block" src="<?php echo $this->basePath($this->organizationImageCache->getUri($job->organization->image)) ?>">
+        <img class="yk-logo-sm center-block" src="<?php echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) ?>">
     <?php endif ?>
                 </a></div>
             <div class="content-area">

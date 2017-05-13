@@ -47,6 +47,7 @@ class WordpressContent extends AbstractHelper
 
     private $client;
 
+    /* @var $idMap \Gastro24\WordpressApi\Filter\PageIdMap */
     private $idMap;
 
     public function __construct(WordpressClient $client, PageIdMap $idMap)
@@ -84,7 +85,14 @@ class WordpressContent extends AbstractHelper
         throw new \BadMethodCallException('Unknown method: ' . __CLASS__ . ' ::' . $method);
     }
 
-    public function page($id)
+    /**
+     * 51 ist die ID im Worpress für die Startseite
+     *
+     * @param int $id
+     *
+     * @return WordpressContent
+     */
+    public function page($id = 51)
     {
         $id = $this->idMap->filter($id);
 
