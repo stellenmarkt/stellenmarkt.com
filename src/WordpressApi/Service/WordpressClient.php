@@ -101,21 +101,23 @@ class WordpressClient implements WordpressClientInterface
 
 
 
-    public function getPages()
+    public function getPages(array $args = [])
     {
-        return $this->request('/pages');
+        return $this->request('/pages', $args);
     }
 
-    public function getPage($id)
+    public function getPage($id, array $args = [])
     {
-        return $this->request('/pages/' . $id);
+        return $this->request('/pages/' . $id, $args);
     }
 
-    private function request($path)
+    public function request($path, array $args = [])
     {
-        $cache  = $this->getCache();
+        $cache    = $this->getCache();
+        $cacheKey = $path;
+        if ($args) { $cacheKey .= md5(serialize($args)); }
         $hit    = false;
-        $result = $cache->getItem($path, $hit);
+        $result = $cache->getItem($cacheKey, $hit);
 
         if ($hit) {
             return $result;
@@ -124,6 +126,7 @@ class WordpressClient implements WordpressClientInterface
         $client = $this
             ->getHttpClient()
             ->resetParameters(/*clearCookies*/ false, /*clearAuth*/ false)
+            ->setParameterGet($args)
             ->setUri($this->baseUrl . $path)
         ;
 
@@ -139,7 +142,7 @@ class WordpressClient implements WordpressClientInterface
         if (isset($result->code)) {
             $result->error = true;
         } else {
-            $cache->setItem($path, $result);
+            $cache->setItem($cacheKey, $result);
         }
 
         return $result;

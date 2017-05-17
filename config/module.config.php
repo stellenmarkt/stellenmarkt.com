@@ -1,7 +1,7 @@
 <?php
+namespace Gastro24;
 
-
-\Gastro24\Module::$isLoaded = true;
+Module::$isLoaded = true;
 
 /**
  * create a config/autoload/Gastro24.global.php and put modifications there
@@ -20,23 +20,25 @@ return [
     'service_manager' => [
         'factories' => [
             'Auth/Dependency/Manager' => 'Gastro24\Factory\Dependency\ManagerFactory',
-            \Gastro24\WordpressApi\Service\WordpressClient::class => \Gastro24\WordpressApi\Factory\Service\WordpressClientFactory::class,
-            \Gastro24\WordpressApi\Listener\WordpressContentSnippet::class => \Gastro24\WordpressApi\Factory\Listener\WordpressContentSnippetFactory::class,
+            WordpressApi\Service\WordpressClient::class => WordpressApi\Factory\Service\WordpressClientFactory::class,
+            WordpressApi\Listener\WordpressContentSnippet::class => WordpressApi\Factory\Listener\WordpressContentSnippetFactory::class,
         ],
     ],
 
     'filters' => [
         'factories' => [
-            \Gastro24\WordpressApi\Filter\PageIdMap::class => \Gastro24\WordpressApi\Factory\Filter\PageIdMapFactory::class,
+            WordpressApi\Filter\PageIdMap::class => WordpressApi\Factory\Filter\PageIdMapFactory::class,
         ],
     ],
 
     'view_helpers' => [
         'factories' => [
-            \Gastro24\WordpressApi\View\Helper\WordpressContent::class => \Gastro24\WordpressApi\Factory\View\Helper\WordpressContentFactory::class
+            WordpressApi\View\Helper\WordpressContent::class => WordpressApi\Factory\View\Helper\WordpressContentFactory::class,
+            View\Helper\LandingpagesList::class => Factory\View\Helper\LandingpagesListFactory::class,
         ],
         'aliases' => [
-            'wordpress' => \Gastro24\WordpressApi\View\Helper\WordpressContent::class,
+            'wordpress' => WordpressApi\View\Helper\WordpressContent::class,
+            'landingpages' => View\Helper\LandingpagesList::class,
         ],
     ],
 
@@ -83,7 +85,7 @@ return [
 
     'options' => [
         'Gastro24/WordpressApiOptions' => [
-            'class' => \Gastro24\WordpressApi\Options\WordpressApiOptions::class,
+            'class' => WordpressApi\Options\WordpressApiOptions::class,
             'options' => [
                 'baseUrl' => 'https://gastro24.yawik.org/blog/wp-json/wp/v2',
                 'httpClientOptions' => [
@@ -92,7 +94,7 @@ return [
                 'idMap' => $idMap
             ],
         ],
-        \Gastro24\WordpressApi\Options\WordpressContentSnippetOptions::class => [
+        WordpressApi\Options\WordpressContentSnippetOptions::class => [
             'options' => [
                 'idMap' => $idMap
             ],
@@ -102,7 +104,7 @@ return [
     'event_manager' => [
 
         'Core/ViewSnippets/Events' => [ 'listeners' => [
-            \Gastro24\WordpressApi\Listener\WordpressContentSnippet::class => ['wordpress-page', true],
+            WordpressApi\Listener\WordpressContentSnippet::class => ['wordpress-page', true],
         ]],
     ],
 

@@ -86,13 +86,13 @@ class WordpressContent extends AbstractHelper
     }
 
     /**
-     * 51 ist die ID im Worpress für die Startseite
+     *
      *
      * @param int $id
      *
      * @return WordpressContent
      */
-    public function page($id = 51)
+    public function page($id)
     {
         $id = $this->idMap->filter($id);
 

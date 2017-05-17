@@ -10,13 +10,12 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
 ?>
 <?php
 
-$query=$this->params()->fromQuery()
-
+$query=$this->params()->fromQuery('q', 51);
 ?>
 
 <h1 class="text-center">
     <?php echo $this->translate('recent job offers'); $wordpress = $this->proxy('wordpress');?>
-    <?=$wordpress->chain(['page' => $query, 'value' => 'title.rendered'], ''); ?>
+    <?=$wordpress->chain(['page' => [$query], 'value' => 'title.rendered'], ''); ?>
 </h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
@@ -49,6 +48,7 @@ $query=$this->params()->fromQuery()
 
     <div id="wp-content" class="tab-pane fade">
         <?=$wordpress->call('value', ['content.rendered'], '')?>
+        <?php if (51 == $query): echo $this->landingpages(); endif; ?>
     </div>
 
 </div>
