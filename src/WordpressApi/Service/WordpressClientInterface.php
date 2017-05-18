@@ -18,6 +18,13 @@ namespace Gastro24\WordpressApi\Service;
  */
 interface WordpressClientInterface 
 {
-    public function getPages();
-    public function getPage($id);
+
+    public function getPosts(array $args = []);
+    public function getPost($id, array $args = []);
+    public function getPostBySlug($slug, array $args = []);
+
+    public function getPages(array $args = []);
+    public function getPage($id, array $args = []);
+    public function getPageBySlug($slug, array $args = []);
+
 }

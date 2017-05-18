@@ -25,6 +25,12 @@ return [
         ],
     ],
 
+    'controllers' => [
+        'factories' => [
+            Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
+        ],
+    ],
+
     'filters' => [
         'factories' => [
             WordpressApi\Filter\PageIdMap::class => WordpressApi\Factory\Filter\PageIdMapFactory::class,
@@ -52,7 +58,8 @@ return [
                      'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
                      'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
                      'auth/index/login-info' => __DIR__ . '/../view/login-info.phtml',
-                      ],
+                     'gastro24/wordpress-page/index' => __DIR__ . '/../view/gastro24/wordpress-page/index.phtml',
+                 ],
              ],
              'translator' => [
                  'translation_file_patterns' => [
@@ -77,6 +84,21 @@ return [
                     'defaults' => [
                         'controller' => 'Jobs/Jobboard', //Overwrites the route of the start Page
                         'action'     => 'index',
+                    ],
+                ],
+                'child_routes' => [
+                    'wordpress' => [
+                        'type' => 'Segment',
+                        'options' => [
+                            'route' => '/wp/:type/:id',
+                            'defaults' => [
+                                'controller' => Controller\WordpressPageController::class,
+                                'action' => 'index',
+                            ],
+                            'constraints' => [
+                                'type' => '(page|post)',
+                            ]
+                        ],
                     ],
                 ],
             ],
