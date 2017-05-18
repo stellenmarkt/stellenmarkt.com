@@ -13,6 +13,7 @@ namespace Gastro24\WordpressApi\Service;
 use Zend\Cache\Storage\StorageInterface;
 use Zend\Cache\StorageFactory;
 use Zend\Http\Client;
+use Zend\Http\Request;
 use Zend\Json\Json;
 
 /**
@@ -39,9 +40,35 @@ class WordpressClient implements WordpressClientInterface
 
     private $baseUrl;
 
-    public function __construct($baseUrl)
+    /**
+     *
+     *
+     * @var WordpressClientPluginManager
+     */
+    private $pluginManager;
+
+    public function __construct($baseUrl, $plugins)
     {
         $this->baseUrl = rtrim($baseUrl, '/');
+        $this->pluginManager = $plugins;
+    }
+
+    public function __call($method, $args)
+    {
+        $plugin = $this->plugin($method);
+
+        if (is_callable($plugin)) {
+            return $plugin(...$args);
+        }
+
+        return $plugin;
+    }
+
+    public function plugin($name, array $options = [])
+    {
+        $plugin = $this->pluginManager->get($name, $options);
+
+        return $plugin;
     }
 
     /**
@@ -99,50 +126,7 @@ class WordpressClient implements WordpressClientInterface
         return $this->httpClient;
     }
 
-    public function getPosts(array $args = [])
-    {
-        return $this->request('/posts', $args);
-    }
-
-    public function getPost($id, array $args = [])
-    {
-        return $this->request('/posts/' . $id, $args);
-    }
-
-    public function getPostBySlug($slug, array $args = [])
-    {
-        return $this->getArticleBySlug('post', $slug, $args);
-    }
-
-    public function getPages(array $args = [])
-    {
-        return $this->request('/pages', $args);
-    }
-
-    public function getPage($id, array $args = [])
-    {
-        return $this->request('/pages/' . $id, $args);
-    }
-
-    public function getPageBySlug($slug, array $args = [])
-    {
-        return $this->getArticleBySlug('page', $slug, $args);
-    }
-
-    private function getArticleBySlug($type, $slug, array $args = [])
-    {
-        $args   = array_merge($args, ['slug' => $slug]);
-
-        $articles = $this->request('/' . $type . 's', $args);
-
-        if (count($articles)) {
-            return $articles[0];
-        }
-
-        return $this->error('slug_not_found', sprintf('No %s with the slug "%s" was found', $type, $slug));
-    }
-
-    public function request($path, array $args = [])
+     public function request($path, array $args = [], $method = Request::METHOD_GET)
     {
         $cache    = $this->getCache();
         $cacheKey = $path;
@@ -158,7 +142,7 @@ class WordpressClient implements WordpressClientInterface
             ->getHttpClient()
             ->resetParameters(/*clearCookies*/ false, /*clearAuth*/ false)
             ->setParameterGet($args)
-            ->setUri($this->baseUrl . $path)
+            ->setUri(rtrim($this->baseUrl, '/') . '/' . $path)
         ;
 
         $response = $client->send();
@@ -177,10 +161,5 @@ class WordpressClient implements WordpressClientInterface
         }
 
         return $result;
-    }
-
-    private function error($code, $message)
-    {
-        return (object) [ 'error' => true, 'code' => $code, 'message' => $message ];
     }
 }

@@ -10,7 +10,7 @@
 /** */
 namespace Gastro24\Controller;
 
-use Gastro24\WordpressApi\Service\WordpressClientInterface;
+use Gastro24\WordpressApi\Service\Plugin\WordpressV2;
 use Zend\Mvc\Controller\AbstractActionController;
 
 /**
@@ -24,11 +24,11 @@ class WordpressPageController extends AbstractActionController
     /**
      *
      *
-     * @var WordpressClientInterface
+     * @var WordpressV2
      */
     private $client;
 
-    public function __construct(WordpressClientInterface $client)
+    public function __construct(WordpressV2 $client)
     {
         $this->client = $client;
     }

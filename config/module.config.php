@@ -109,7 +109,7 @@ return [
         'Gastro24/WordpressApiOptions' => [
             'class' => WordpressApi\Options\WordpressApiOptions::class,
             'options' => [
-                'baseUrl' => 'https://gastro24.yawik.org/blog/wp-json/wp/v2',
+                'baseUrl' => 'https://gastro24.yawik.org/blog/wp-json',
                 'httpClientOptions' => [
                     'auth' => ['gastro', 'jobs.ch'],
                 ],

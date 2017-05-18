@@ -77,7 +77,7 @@ class LandingpagesList extends AbstractHelper
 
     public function __invoke()
     {
-        $result = $this->client->getPages(['parent' => 58, 'include' => implode(',', array_values($this->idMap))]);
+        $result = $this->client->wp('pages', ['parent' => 58, 'include' => implode(',', array_values($this->idMap))]);
         $map    = array_flip($this->idMap);
         $url    = $this->getUrlHelper();
 

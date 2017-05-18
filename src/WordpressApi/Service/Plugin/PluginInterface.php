@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Service;
+namespace Gastro24\WordpressApi\Service\Plugin;
 
-use Zend\Http\Request;
+use Gastro24\WordpressApi\Service\WordpressClientInterface;
 
 /**
  * ${CARET}
@@ -18,7 +18,7 @@ use Zend\Http\Request;
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test 
  */
-interface WordpressClientInterface 
+interface PluginInterface
 {
-    public function request($path, array $args = [], $method = Request::METHOD_GET);
+    public function setClient(WordpressClientInterface $client);
 }

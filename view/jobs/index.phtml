@@ -15,7 +15,7 @@ $query=$this->params()->fromQuery('q', 51);
 
 <h1 class="text-center">
     <?php echo $this->translate('recent job offers'); $wordpress = $this->proxy('wordpress');?>
-    <?=$wordpress->chain(['page' => [$query], 'value' => 'title.rendered'], ''); ?>
+    <?=$wordpress->chain(['page' => $query, 'value' => 'title.rendered'], ''); ?>
 </h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
