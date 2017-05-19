@@ -13,6 +13,7 @@ namespace Gastro24\WordpressApi\Service;
 use Zend\Cache\Storage\StorageInterface;
 use Zend\Cache\StorageFactory;
 use Zend\Http\Client;
+use Zend\Http\Request;
 use Zend\Json\Json;
 
 /**
@@ -39,9 +40,35 @@ class WordpressClient implements WordpressClientInterface
 
     private $baseUrl;
 
-    public function __construct($baseUrl)
+    /**
+     *
+     *
+     * @var WordpressClientPluginManager
+     */
+    private $pluginManager;
+
+    public function __construct($baseUrl, $plugins)
     {
         $this->baseUrl = rtrim($baseUrl, '/');
+        $this->pluginManager = $plugins;
+    }
+
+    public function __call($method, $args)
+    {
+        $plugin = $this->plugin($method);
+
+        if (is_callable($plugin)) {
+            return $plugin(...$args);
+        }
+
+        return $plugin;
+    }
+
+    public function plugin($name, array $options = [])
+    {
+        $plugin = $this->pluginManager->get($name, $options);
+
+        return $plugin;
     }
 
     /**
@@ -99,23 +126,13 @@ class WordpressClient implements WordpressClientInterface
         return $this->httpClient;
     }
 
-
-
-    public function getPages()
+     public function request($path, array $args = [], $method = Request::METHOD_GET)
     {
-        return $this->request('/pages');
-    }
-
-    public function getPage($id)
-    {
-        return $this->request('/pages/' . $id);
-    }
-
-    private function request($path)
-    {
-        $cache  = $this->getCache();
+        $cache    = $this->getCache();
+        $cacheKey = $path;
+        if ($args) { $cacheKey .= md5(serialize($args)); }
         $hit    = false;
-        $result = $cache->getItem($path, $hit);
+        $result = $cache->getItem($cacheKey, $hit);
 
         if ($hit) {
             return $result;
@@ -124,7 +141,8 @@ class WordpressClient implements WordpressClientInterface
         $client = $this
             ->getHttpClient()
             ->resetParameters(/*clearCookies*/ false, /*clearAuth*/ false)
-            ->setUri($this->baseUrl . $path)
+            ->setParameterGet($args)
+            ->setUri(rtrim($this->baseUrl, '/') . '/' . $path)
         ;
 
         $response = $client->send();
@@ -139,7 +157,7 @@ class WordpressClient implements WordpressClientInterface
         if (isset($result->code)) {
             $result->error = true;
         } else {
-            $cache->setItem($path, $result);
+            $cache->setItem($cacheKey, $result);
         }
 
         return $result;

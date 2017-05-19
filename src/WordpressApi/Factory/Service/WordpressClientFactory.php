@@ -11,6 +11,7 @@
 namespace Gastro24\WordpressApi\Factory\Service;
 
 use Gastro24\WordpressApi\Service\WordpressClient;
+use Gastro24\WordpressApi\Service\WordpressClientPluginManager;
 use Interop\Container\ContainerInterface;
 use Zend\Cache\StorageFactory;
 use Zend\Http\Client;
@@ -27,8 +28,13 @@ class WordpressClientFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $options = $container->get('Gastro24/WordpressApiOptions');
-        $client  = new WordpressClient($options->getBaseUrl());
+        $options       = $container->get('Gastro24/WordpressApiOptions');
+        $pluginsConfig = $container->get('Config');
+        $pluginsConfig = isset($pluginsConfig['wordpressclient_plugins']) ? $pluginsConfig['wordpressclient_plugins'] : [];
+        $plugins       = new WordpressClientPluginManager($container, $pluginsConfig);
+        $client        = new WordpressClient($options->getBaseUrl(), $plugins);
+
+        $plugins->setClient($client);
 
         if ($container->has('Gastro24/WordpressApiClient')) {
             $client->setHttpClient($container->get('Gastro24/WordpressApiClient'));

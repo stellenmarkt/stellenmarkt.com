@@ -112,15 +112,8 @@ foreach ($languages as $lang) {
                      <div class="footer_block">
 
                          <h4>Gastrojob24</h4>
-
-                         <ul class="footer-links">
-                             <li> <a href="#">Kontakt</a> </li>
-                             <li> <a href="#">Impressum</a> </li>
-                             <li> <a href="#">Disclaimer</a> </li>
-                             <li> <a href="#">Über uns</a> </li>
-
-
-                         </ul>
+                         <?=$this->wordpress()->menu('YAWIK-Seiten')?>
+                         
 
                      </div>
                  </div>
@@ -143,13 +136,14 @@ foreach ($languages as $lang) {
                      <div class="footer_block">
                          <h4>Jobsuche</h4>
 
-                         <ul class="footer-links">
+                         <?= $this->landingpages() ?>
+                         <!--<ul class="footer-links">
                              <li> <a href="/de/jobs/koch.html">Koch/Köchin</a> </li>
                              <li> <a href="/de/jobs/hotelfachmann.html">Hotelfachmann/-frau</a> </li>
                              <li> <a href="/de/jobs/barkeeper.html">Barkeeper</a> </li>
                              <li> <a href="/de/jobs/rezeption.html">Rezeption</a> </li>
                              <li> <a href="/de/jobs/konditor.html">Konditor</a> </li>
-                         </ul>
+                         </ul>-->
 
                      </div>
                  </div>

@@ -70,10 +70,6 @@ class WordpressContent extends AbstractHelper
 
     public function __call($method, $args)
     {
-        if (0 !== strpos($method, 'get')) {
-            $method = "get$method";
-        }
-
         $callback = [$this->client, $method];
 
         if (is_callable($callback)) {
@@ -86,17 +82,34 @@ class WordpressContent extends AbstractHelper
     }
 
     /**
-     * 51 ist die ID im Worpress für die Startseite
+     *
      *
      * @param int $id
      *
      * @return WordpressContent
      */
-    public function page($id = 51)
+    public function page($id)
     {
         $id = $this->idMap->filter($id);
 
-        return $this->__call('page', [$id]);
+        $this->result = $this->client->wp()->getPage($id);
+
+        return $this;
+    }
+
+    public function menu($slug)
+    {
+        $this->result = $this->client->menus()->getMenu($slug);
+        $url = $this->getView()->plugin('url');
+
+        if (isset($this->result->error) || !count($this->result->items)) { return ''; }
+
+        $out = '<ul>';
+        foreach ($this->result->items as $item) {
+            $out .= '<li><a href="' . $url('lang/wordpress', ['type' => $item->object, 'id' => basename($item->url)], true) . '">'
+                  . $item->title . '</a></li>';
+        }
+        return "$out</ul>";
     }
 
     public function value($key = null)
