@@ -48,5 +48,6 @@ return [
         'Fitness & Sport',
         'Studenten & Aushilfen',
         'Systemgastronomie'
+        ]
 ];
 
