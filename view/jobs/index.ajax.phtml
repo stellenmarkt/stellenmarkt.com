@@ -9,7 +9,9 @@
 
 $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 ?>
-<div class="row"><?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
+<div class="row">
+    <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
+
 <?php if ($hasFacets):?>
     <?php
     $facets = $jobs->getFacets();
@@ -39,7 +41,9 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
             <?=$this->translate('Active filters:')?>
             <?php foreach ($activeFacets as $facetName => $facetValues):?>
                 <?php foreach ($facetValues as $facetValue):?>
-                    <button type="button" class="btn btn-default btn-sm facet-active" data-name="params[<?=$this->escapeHtmlAttr($facetName)?>][<?=$this->escapeHtmlAttr($facetValue)?>]" title="<?=$this->translate('Remove filter')?>"><?=$facetValue?> <span>&times;</span></button>
+                    <button type="button" class="btn btn-default btn-sm facet-active"
+                            data-name="params[<?=$this->escapeHtmlAttr($facetName)?>][<?=$this->escapeHtmlAttr($facetValue)?>]"
+                            title="<?=$this->translate('Remove filter')?>"><?=$facetValue?> <span>&times;</span></button>
                 <?php endforeach;?>
             <?php endforeach;?>
             <button type="button" class="btn btn-link facet-reset"><?=$this->translate('Remove all filters')?></button>
@@ -48,19 +52,22 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
     <div class="col-md-3">
         <?php foreach ($facets as $facetName => $facetValues):?>
+            <?php if(count($facetValues)>0): ?>
             <div class="panel panel-default">
                 <div class="panel-heading"><?=$this->translate($facets->getTitle($facetName))?></div>
                 <div class="panel-body">
                     <?php foreach ($facetValues as $facetValue => $facetValueCount):?>
                         <div>
                             <label>
-                                <input type="checkbox" name="<?=$this->escapeHtmlAttr($facetName)?>[<?=$this->escapeHtmlAttr($facetValue)?>]" class="facet-checkbox"<?php if ($facets->isValueActive($facetName, $facetValue)):?> checked<?php endif;?>>
+                                <input type="checkbox" name="<?=$this->escapeHtmlAttr($facetName)?>[<?=$this->escapeHtmlAttr($facetValue)?>]"
+                                       class="facet-checkbox"<?=$facets->isValueActive($facetName, $facetValue)?" checked":""?>>
                                 <?=$facetValue?> (<?=$facetValueCount?>)
                             </label>
                         </div>
                     <?php endforeach;?>
                 </div>
             </div>
+            <?php endif; ?>
         <?php endforeach;?>
     </div>
     <div class="col-md-9">
@@ -78,25 +85,27 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
         remove: false
     });
 });
-
 </script>
 
 <?php if (count($jobs)): // We only want to render something, if there are items.?>
     <div class="row-eq-height">
-<?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */ ?>
+    <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */ ?>
     <?php
 
     $org = $job->getOrganization();
-    $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', array(), array('query' => array('id' => $job->getId())), true);
+    $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', [], ['query' => ['id' => $job->getId()]], true);
 
     ?>
     <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="featured-image-box">
-            <div class="img-box"><a title="" href="<?=$href?>">
-    <?php if ($org && $org->getImage() &&  $org->getOrganizationName()): ?>
-        <img class="yk-logo-sm center-block" src="<?php echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) ?>">
-    <?php endif ?>
-                </a></div>
+            <div class="img-box">
+                <a href="<?=$href?>">
+                <?php if ($org && $org->getImage() &&  $org->getOrganizationName()): ?>
+                    <img class="yk-logo-sm center-block"
+                         src="<?php echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) ?>">
+                <?php endif ?>
+                </a>
+            </div>
             <div class="content-area">
                 <div class="top-cnt">
                     <p class="date">
@@ -105,29 +114,39 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
                     </p>
-                    <h4><a title="<?=strip_tags($job->getTitle())?>" href="<?=$href?>"><?=strip_tags($job->getTitle())?></a></h4>
+                    <h4>
+                        <a title="<?=strip_tags($job->getTitle())?>"
+                           href="<?=$href?>">
+                            <?=strip_tags($job->getTitle())?>
+                        </a>
+                    </h4>
                     <?php
-    if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
-        echo $org->getOrganizationName()->getName();
-    }
-    ?>
-                    <p><?php $typeOfContract = $job->getTemplateValues()->get('types')?:'fulltime' ?>
+                    if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
+                        echo $org->getOrganizationName()->getName();
+                    }
+                    ?>
+                    <p>
+                        <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'fulltime' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
                     </p>
                     <p><?=$job->getLocation()?></p>
                 </div>
-        <?=$this->applyUrl($job);?>
-
+                <?=$this->applyUrl($job);?>
             </div>
         </div>
     </div>
     
-<?php endforeach?>
+    <?php endforeach?>
 
     <div class="clear"></div>
-    <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control', array('lang' => $this->params('lang'), 'route' => 'lang/jobboard'));?>
-    </div>
+    <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control',
+                                 [
+                                     'lang' => $this->params('lang'),
+                                     'route' => 'lang/jobboard'
+                                 ]);
+    ?>
     </div>
 <?php endif ?>
-    </div>
-    <?=$hasFacets ? '</div>' : '' ?>
+</div>
+
+<?=$hasFacets ? '</div>' : '' ?>
