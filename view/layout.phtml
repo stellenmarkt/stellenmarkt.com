@@ -111,22 +111,23 @@ foreach ($languages as $lang) {
                  <div class="col-sm-6 col-md-3 col-xs-12">
                      <div class="footer_block">
 
-                         <h4>Gastrojob24</h4>
-                         <?=$this->wordpress()->menu('YAWIK-Seiten')?>
-                         
+                         <h4>Jobsuche</h4>
+                         <ul class="footer-links">
+                             <li><a href="<?=$this->url('lang/content', ['script' => 'regionen'], true)?>">Jobs nach Regionen</a></li>
+                             <li><a href="<?=$this->url('lang/content', ['script' => 'staedte'], true)?>">jobs nach Städten</a></li>
+                         </ul>
 
                      </div>
                  </div>
                  <div class="col-sm-6 col-md-3 col-xs-12">
                      <div class="footer_block">
-                         <h4>Arbeitgeber</h4>
+                         <h4>Service</h4>
 
                          <ul class="footer-links">
-                             <li> <a href="#">Merkliste</a> </li>
-                             <li> <a href="#">About Us</a> </li>
-                             <li> <a href="#">Privacy</a> </li>
-                             <li> <a href="#">Contact Us</a> </li>
-                             <li> <a href="#">Term & Conditions</a> </li>
+                             <li> <a href="#">JobMail</a> </li>
+                             <li> <a href="<?=$this->url('lang/auth', [], true)?>">Kundenlogin</a> </li>
+                             <li> <a href="<?=$this->url('lang/auth',[],  true)?>#register">Registrieren</a> </li>
+                             <li> <a href="<?=$this->url('lang/wordpress', ['type' => 'page', 'id' => 'preise'], true)?>">Preise</a> </li>
                          </ul>
 
 
@@ -134,9 +135,9 @@ foreach ($languages as $lang) {
                  </div>
                  <div class="col-sm-6 col-md-3 col-xs-12">
                      <div class="footer_block">
-                         <h4>Jobsuche</h4>
+                         <h4>Information</h4>
 
-                         <?= $this->landingpages() ?>
+                         <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
                          <!--<ul class="footer-links">
                              <li> <a href="/de/jobs/koch.html">Koch/Köchin</a> </li>
                              <li> <a href="/de/jobs/hotelfachmann.html">Hotelfachmann/-frau</a> </li>
@@ -149,14 +150,11 @@ foreach ($languages as $lang) {
                  </div>
                  <div class="col-sm-6 col-md-3 col-xs-12">
                      <div class="footer_block">
-                         <h4>Beliebte Suchanfragen</h4>
+                         <h4>Netzwerk</h4>
 
                          <ul class="footer-links">
-                             <li> <a href="#">Merkliste</a> </li>
-                             <li> <a href="#">About Us</a> </li>
-                             <li> <a href="#">Privacy</a> </li>
-                             <li> <a href="#">Contact Us</a> </li>
-                             <li> <a href="#">Term & Conditions</a> </li>
+                             <li> <a href="http://haubenhero.de">haubenhero.de</a> </li>
+                             <li> <a href="http://gastrojob24.at">gastrojob24.at</a> </li>
                          </ul>
 
                          <?=$this->languageSwitcher()?>

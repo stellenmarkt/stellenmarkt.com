@@ -106,7 +106,12 @@ class WordpressContent extends AbstractHelper
 
         $out = '<ul>';
         foreach ($this->result->items as $item) {
-            $out .= '<li><a href="' . $url('lang/wordpress', ['type' => $item->object, 'id' => basename($item->url)], true) . '">'
+            if ('custom' == $item->object) {
+                $href = $item->url;
+            } else {
+                $href = $url('lang/wordpress', ['type' => $item->object, 'id' => basename($item->url)], true);
+            }
+            $out .= '<li><a href="' . $href . '">'
                   . $item->title . '</a></li>';
         }
         return "$out</ul>";
