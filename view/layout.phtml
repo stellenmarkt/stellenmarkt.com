@@ -113,8 +113,8 @@ foreach ($languages as $lang) {
 
                          <h4>Jobsuche</h4>
                          <ul class="footer-links">
-                             <li><a href="<?=$this->url('lang/content', ['script' => 'regionen'], true)?>">Jobs nach Regionen</a></li>
-                             <li><a href="<?=$this->url('lang/content', ['script' => 'staedte'], true)?>">jobs nach Städten</a></li>
+                             <li><a href="<?=$this->url('lang/content', ['view' => 'regionen'], true)?>">Jobs nach Regionen</a></li>
+                             <li><a href="<?=$this->url('lang/content', ['view' => 'staedte'], true)?>">jobs nach Städten</a></li>
                          </ul>
 
                      </div>
@@ -138,13 +138,6 @@ foreach ($languages as $lang) {
                          <h4>Information</h4>
 
                          <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
-                         <!--<ul class="footer-links">
-                             <li> <a href="/de/jobs/koch.html">Koch/Köchin</a> </li>
-                             <li> <a href="/de/jobs/hotelfachmann.html">Hotelfachmann/-frau</a> </li>
-                             <li> <a href="/de/jobs/barkeeper.html">Barkeeper</a> </li>
-                             <li> <a href="/de/jobs/rezeption.html">Rezeption</a> </li>
-                             <li> <a href="/de/jobs/konditor.html">Konditor</a> </li>
-                         </ul>-->
 
                      </div>
                  </div>
