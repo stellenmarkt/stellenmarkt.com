@@ -29,7 +29,6 @@ return [
 
     'controllers' => [
         'factories' => [
-            Controller\ContentController::class => InvokableFactory::class,
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
         ],
     ],
@@ -62,8 +61,8 @@ return [
                      'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
                      'auth/index/login-info' => __DIR__ . '/../view/login-info.phtml',
                      'gastro24/wordpress-page/index' => __DIR__ . '/../view/gastro24/wordpress-page/index.phtml',
-                     'gastro24/content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
-                     'gastro24/content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
+                     'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
+                     'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
                  ],
              ],
              'translator' => [
@@ -92,17 +91,6 @@ return [
                     ],
                 ],
                 'child_routes' => [
-                    'content' => [
-                        'type' => 'Segment',
-                        'options' => [
-                            'route' => '/content/:script',
-                            'defaults' => [
-                                'controller' => Controller\ContentController::class,
-                                'action' => 'index'
-                            ],
-                        ],
-                        'may_terminate' => true,
-                    ],
                     'wordpress' => [
                         'type' => 'Segment',
                         'options' => [
