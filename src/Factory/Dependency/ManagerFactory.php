@@ -6,8 +6,8 @@
 /**  */
 namespace Gastro24\Factory\Dependency;
 
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  *
@@ -16,12 +16,20 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  */
 class ManagerFactory implements FactoryInterface
 {
-
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $manager = new \Gastro24\Dependency\Manager($serviceLocator->get('Core/DocumentManager'));
-        $manager->setEventManager($serviceLocator->get('Auth/Dependency/Manager/Events'));
-        
-        return $manager;
-    }
+	/**
+	 * Create new Manager
+	 *
+	 * @param ContainerInterface $container
+	 * @param string $requestedName
+	 * @param array|null $options
+	 *
+	 * @return \Gastro24\Dependency\Manager
+	 */
+	public function __invoke( ContainerInterface $container, $requestedName, array $options = null )
+	{
+		$manager = new \Gastro24\Dependency\Manager($container->get('Core/DocumentManager'));
+		$manager->setEventManager($container->get('Auth/Dependency/Manager/Events'));
+		
+		return $manager;
+	}
 }

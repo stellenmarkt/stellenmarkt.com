@@ -14,38 +14,31 @@ use Gastro24\WordpressApi\Filter\PageIdMap;
 use Gastro24\WordpressApi\Service\WordpressClient;
 use Gastro24\WordpressApi\View\Helper\WordpressContent;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\AbstractPluginManager;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * ${CARET}
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
+ * @author Anthonius Munthi <me@itstoni.com>
  * @todo write test 
  */
 class WordpressContentFactory implements FactoryInterface
 {
+	/**
+	 * @param ContainerInterface $container
+	 * @param string $requestedName
+	 * @param array|null $options
+	 *
+	 * @return WordpressContent
+	 */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $client = $container->get(WordpressClient::class);
-        $idMap  = $container->get('filtermanager')->get(PageIdMap::class);
+        $idMap  = $container->get('FilterManager')->get(PageIdMap::class);
 
         $helper = new WordpressContent($client, $idMap);
 
         return $helper;
-    }
-
-    /**
-     * Create service
-     *
-     * @param ServiceLocatorInterface|AbstractPluginManager $serviceLocator
-     *
-     * @return WordpressContent
-     * @deprecated obsolete with ZF3
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator->getServiceLocator(), WordpressContent::class);
     }
 }

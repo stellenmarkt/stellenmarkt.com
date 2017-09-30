@@ -12,41 +12,35 @@ namespace Gastro24\WordpressApi\Factory\Listener;
 
 use Gastro24\WordpressApi\Filter\PageIdMap;
 use Gastro24\WordpressApi\Listener\WordpressContentSnippet;
-use Gastro24\WordpressApi\Options\WordpressContentSnippetOptions;
 use Gastro24\WordpressApi\Service\WordpressClient;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * ${CARET}
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
+ * @author Anthonius Munthi <me@itstoni.com>
  * @todo write test 
  */
 class WordpressContentSnippetFactory implements FactoryInterface
 {
-
+	
+	/**
+	 * @param ContainerInterface $container
+	 * @param string $requestedName
+	 * @param array|null $options
+	 *
+	 * @return WordpressContentSnippet
+	 */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $client   = $container->get(WordpressClient::class);
-        $idMap    = $container->get('filtermanager')->get(PageIdMap::class);
+        $idMap    = $container->get('FilterManager')->get(PageIdMap::class);
         $listener = new WordpressContentSnippet($client);
 
         $listener->setIdMap($idMap);
 
         return $listener;
-    }
-
-    /**
-     * Create service
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     *
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, WordpressContentSnippet::class);
     }
 }

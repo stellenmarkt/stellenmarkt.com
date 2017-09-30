@@ -15,8 +15,7 @@ use Gastro24\WordpressApi\Service\WordpressClientPluginManager;
 use Interop\Container\ContainerInterface;
 use Zend\Cache\StorageFactory;
 use Zend\Http\Client;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * ${CARET}
@@ -51,19 +50,6 @@ class WordpressClientFactory implements FactoryInterface
         }
 
         return $client;
-    }
-
-
-    /**
-     * Create service
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     *
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, WordpressClient::class);
     }
 
     private function setupHttpClient($options)
