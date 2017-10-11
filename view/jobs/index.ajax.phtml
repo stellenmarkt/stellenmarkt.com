@@ -100,10 +100,16 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
         <div class="featured-image-box">
             <div class="img-box">
                 <a href="<?=$href?>">
-                <?php if ($org && $org->getImage() &&  $org->getOrganizationName()): ?>
-                    <img class="yk-logo-sm center-block"
-                         src="<?php echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) ?>">
-                <?php endif ?>
+                <?php
+                $logo = $job->getSolrValue('companyLogo');
+               
+                if (preg_match("/^(https?:)?\/\//",$logo)) { 
+                    echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
+		} elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
+                    echo '<img class="yk-logo-sm center-block" src="';
+		    echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
+                } 
+                ?>
                 </a>
             </div>
             <div class="content-area">
@@ -121,7 +127,9 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                         </a>
                     </h4>
                     <?php
-                    if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
+                    if ($job->getCompany()) {
+			echo $job->getCompany();
+                    } elseif ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                         echo $org->getOrganizationName()->getName();
                     }
                     ?>
