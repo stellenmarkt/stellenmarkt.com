@@ -71,35 +71,40 @@ class Module
              * We need a post dispatch hook on the controller here as we need to have
              * the application entity to determine how to set the layout in the preview page.
              */
+            $listener = function ($event) {
+	            $viewModel  = $event->getViewModel();
+	            $template   = 'layout/application-form';
+	            $controller = $event->getTarget();
+	
+	            if ($controller instanceof \Applications\Controller\ApplyController) {
+		            $viewModel->setTemplate($template);
+		            return;
+	            }
+	
+	            if ($controller instanceof \Applications\Controller\ManageController
+	                && 'detail' == $event->getRouteMatch()->getParam('action')
+	                && 200 == $event->getResponse()->getStatusCode()
+	            ) {
+		            $result = $event->getResult();
+		            if (!is_array($result)) {
+			            $result = $result->getVariables();
+		            }
+		            if ($result['application']->isDraft()) {
+			            $viewModel->setTemplate($template);
+		            }
+	            }
+	
+            };
+            
             $sharedManager->attach(
-                array('Applications','CamMediaintown'),
-                MvcEvent::EVENT_DISPATCH,
-                function ($event) {
-                    $viewModel  = $event->getViewModel();
-                    $template   = 'layout/application-form';
-                    $controller = $event->getTarget();
-
-                    if ($controller instanceof \Applications\Controller\ApplyController) {
-                        $viewModel->setTemplate($template);
-                        return;
-                    }
-
-                    if ($controller instanceof \Applications\Controller\ManageController
-                        && 'detail' == $event->getRouteMatch()->getParam('action')
-                        && 200 == $event->getResponse()->getStatusCode()
-                    ) {
-                        $result = $event->getResult();
-                        if (!is_array($result)) {
-                            $result = $result->getVariables();
-                        }
-                        if ($result['application']->isDraft()) {
-                            $viewModel->setTemplate($template);
-                        }
-                    }
-
-                },
+                'Applications',
+                MvcEvent::EVENT_DISPATCH,$listener,
                 -2 /*postDispatch, but before most of the other zf2 listener*/
             );
+            $sharedManager->attach(
+            	'CamMediaintown',
+	            MvcEvent::EVENT_DISPATCH,$listener,
+	            -2);
         }
 
     }

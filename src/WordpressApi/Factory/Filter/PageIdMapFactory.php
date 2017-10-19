@@ -12,14 +12,13 @@ namespace Gastro24\WordpressApi\Factory\Filter;
 
 use Gastro24\WordpressApi\Filter\PageIdMap;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\AbstractPluginManager;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
  * ${CARET}
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
+ * @author Anthonius Munthi <me@itstoni.com>
  * @todo write test 
  */
 class PageIdMapFactory implements FactoryInterface
@@ -41,17 +40,5 @@ class PageIdMapFactory implements FactoryInterface
         $filter  = new PageIdMap($map);
 
         return $filter;
-    }
-
-    /**
-     * Create service
-     *
-     * @param ServiceLocatorInterface|AbstractPluginManager $serviceLocator
-     *
-     * @return PageIdMap
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator->getServiceLocator(), PageIdMap::class);
     }
 }
