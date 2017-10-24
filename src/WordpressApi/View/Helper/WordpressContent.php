@@ -97,13 +97,17 @@ class WordpressContent extends AbstractHelper
         return $this;
     }
 
-    public function menu($slug)
+    public function menu($slug, $render = true)
     {
         $this->result = $this->client->menus()->getMenu($slug);
+
+        if (false === $render) {
+            return $this;
+        } else if (isset($this->result->error) || !count($this->result->items)) {
+            return '';
+        }
+
         $url = $this->getView()->plugin('url');
-
-        if (isset($this->result->error) || !count($this->result->items)) { return ''; }
-
         $out = '<ul>';
         foreach ($this->result->items as $item) {
             if ('custom' == $item->object) {

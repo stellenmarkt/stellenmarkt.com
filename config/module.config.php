@@ -84,12 +84,12 @@ return [
     'router' => [
         'routes' => [
             'lang' => [
-                'options' => [
-                    'defaults' => [
-                        'controller' => 'Jobs/Jobboard', //Overwrites the route of the start Page
-                        'action'     => 'index',
-                    ],
-                ],
+//                'options' => [
+//                    'defaults' => [
+//                        'controller' => 'Jobs/Jobboard', //Overwrites the route of the start Page
+//                        'action'     => 'index',
+//                    ],
+//                ],
                 'child_routes' => [
                     'wordpress' => [
                         'type' => 'Segment',
@@ -124,6 +124,23 @@ return [
             'options' => [
                 'idMap' => $idMap
             ],
+        ],
+        Options\JobsearchQueries::class => [[
+            'config' => [
+                'test' => [
+                    'sub' => [
+                        'Popel' => 'q=Popel',
+                    ],
+                    'Marketing' => [
+                        'Business Manager' => 'q=Business+Manager',
+                    ],
+                ],
+                'Regionen' => [
+                    'Deutschland' => [
+                        'Süd-Deutschland' => ',,region_MultiString=Hessen,Baden-Württemberg,Bayern',
+                    ],
+                ],
+            ]],
         ],
     ],
 
