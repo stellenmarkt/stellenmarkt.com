@@ -84,12 +84,6 @@ return [
     'router' => [
         'routes' => [
             'lang' => [
-//                'options' => [
-//                    'defaults' => [
-//                        'controller' => 'Jobs/Jobboard', //Overwrites the route of the start Page
-//                        'action'     => 'index',
-//                    ],
-//                ],
                 'child_routes' => [
                     'wordpress' => [
                         'type' => 'Segment',

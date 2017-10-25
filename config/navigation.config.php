@@ -35,17 +35,22 @@ return [
                 ]
             ],
 
-            'jobmail' => [
-                'label' => 'Jobmail abonnieren',
-                'route' => 'lang/auth',
-                'order' => 140
+            'jobboard' => [
+                'active_on' => ['lang/jobboard', 'lang/landingPage'],
             ],
             'post-a-job' => [
                 'label' => 'Stellenanzeige schalten',
                 'route' => 'lang/jobboard',
                 'order' => 960,
                 'class' => 'inverted'
-            ]
+            ],
+
+            'resume-recruiter' => [
+                'visible' => false,
+            ],
+            'resume-user' => [
+                'visible' => false,
+            ],
         ],
         'login' => [
             'login' => [
@@ -63,7 +68,7 @@ return [
                 'class' => 'top-right'
             ],
 
-        ]
+        ],
     ],
 
     /**
