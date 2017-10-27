@@ -6,13 +6,19 @@
  * @copyright (c) 2013 - 2016 Cross Solution (http://cross-solution.de)
  * @license   MIT
  */
-
+if (count($jobs)): // We only want to render something, if there are items.
 $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 ?>
 <div class="row">
-    <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
+    <div class="col-md-12">
+        <p style="padding-right: 10px;" class="pull-left lead"><?=$this->translate('Similar jobs in your inbox daily:')?></p>
+        <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
+    </div>
+</div>
 
-<?php if ($hasFacets):?>
+    <div class="row">
+
+<?php if (true || $hasFacets):?>
     <?php
     $facets = $jobs->getFacets();
     $activeFacets = $facets->getActiveValues();
@@ -87,7 +93,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 });
 </script>
 
-<?php if (count($jobs)): // We only want to render something, if there are items.?>
+
     <div class="row-eq-height">
     <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */ ?>
     <?php
@@ -154,7 +160,8 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                                  ]);
     ?>
     </div>
-<?php endif ?>
-</div>
+        </div>
 
-<?=$hasFacets ? '</div>' : '' ?>
+        <?=$hasFacets ? '</div>' : '' ?>
+<?php endif ?>
+

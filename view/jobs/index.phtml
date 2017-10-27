@@ -14,7 +14,7 @@ $query=$this->params()->fromQuery('q', 51);
 ?>
 
 <h1 class="text-center">
-    <?php echo $this->translate('recent job offers'); $wordpress = $this->proxy('wordpress');?>
+    <?php $wordpress = $this->proxy('wordpress');?>
     <?=$wordpress->chain(['page' => $query, 'value' => 'title.rendered'], ''); ?>
 </h1>
 
@@ -33,6 +33,7 @@ $query=$this->params()->fromQuery('q', 51);
 </ul>
 
 <div class="tab-content">
+    <p></p>
     <div id="jobs-list-container" class="pagination-container tab-pane fade in active"
          data-message="<?php echo $this->escapeHtmlAttr(sprintf(
                                                             $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'),
