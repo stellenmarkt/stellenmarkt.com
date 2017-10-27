@@ -11,7 +11,22 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
 <?php
 
 $query=$this->params()->fromQuery('q', 51);
+$this->headScript()->captureStart();
 ?>
+(function($) {
+
+    $(function() {
+        var $tabbar = $('#search-tabs');
+
+        $('#jobs-list-container').on('yk-paginator-container:loaded.gastro24 g24-jobs:init', function(ev) {
+            $tabbar.show();
+            var html = $('#jobs-list-container').find('.pagination-content').html();
+
+            if ('' === html.trim()) { $tabbar.hide(); }
+        }).trigger('g24-jobs:init');
+    });
+})(jQuery);
+<?php $this->headScript()->captureEnd();?>
 
 <h1 class="text-center">
     <?php $wordpress = $this->proxy('wordpress');?>
@@ -27,7 +42,7 @@ $query=$this->params()->fromQuery('q', 51);
 </nav>
 
 
-<ul class="nav nav-tabs">
+<ul id="search-tabs" class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#jobs-list-container">Suchergebnis</a></li>
     <li><a data-toggle="tab" href="#wp-content">Beschreibung</a></li>
 </ul>
