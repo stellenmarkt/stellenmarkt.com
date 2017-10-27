@@ -40,7 +40,11 @@ return [
             ],
             'post-a-job' => [
                 'label' => 'Stellenanzeige schalten',
-                'route' => 'lang/jobboard',
+                'route' => 'lang/wordpress',
+                'params' => [
+                    'type' => 'page',
+                    'id' => 'stellenanzeigen-schalten',
+                ],
                 'order' => 960,
                 'class' => 'inverted'
             ],
