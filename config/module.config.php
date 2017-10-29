@@ -135,6 +135,11 @@ return [
                         'Süd-Deutschland' => ',,region_MultiString=Hessen,Baden-Württemberg,Bayern',
                     ],
                 ],
+                'Städte' => [
+                    'Deutschland' => [
+                        'Süd-Deutschland' => ',,region_MultiString=Hessen,Baden-Württemberg,Bayern',
+                    ],
+                ],
             ]],
         ],
     ],
