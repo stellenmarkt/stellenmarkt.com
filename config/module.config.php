@@ -121,7 +121,7 @@ return [
         ],
         Options\JobsearchQueries::class => [[
             'config' => [
-                'Berufe' => [
+                'Kategorie' => [
                     'Küche' => [
                         'Chefkoch' => 'q=Chefkoch+OR+Küchenchef',
                         'Koch/Köchin' => 'q=Koch'
@@ -131,6 +131,12 @@ return [
                     ],
                 ],
                 'Regionen' => [
+                    'Deutschland' => [
+                        'Süd-Deutschland' => ',,region_MultiString=Hessen,Baden-Württemberg,Bayern',
+                    ],
+                ],
+                ,
+                'Städte' => [
                     'Deutschland' => [
                         'Süd-Deutschland' => ',,region_MultiString=Hessen,Baden-Württemberg,Bayern',
                     ],
