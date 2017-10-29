@@ -13,12 +13,14 @@ $form = $this->services('forms.Jobs/JobboardSearch');
 $form->setButtonElement('q');
 $form->setAttribute('action', $this->url('lang/jobboard', [], true));
 
+$this->headTitle('Jobs für Gastronomie, Hotel & Tourismus');
+
 ?>
 <?php $this->headTitle($this->translate('Home'))?>
 <div class="jumbotron text-center">
 
-    <h1>Kurze Überschrift</h1>
-    <p class="lead">Aussagekräftiger, blickfangender Spruch oder wohlgefallende Werbebotschaft.</p>
+    <h1>Jobs für Gastronomie Fachkräfte</h1>
+    <p class="lead">Spannende Jobs für Gastronomie, Hotellerie und Tourismus auf einen Klick finden</p>
     <div class="container">
     <?=$this->searchForm($form);?>
     </div>

@@ -121,9 +121,10 @@ return [
         ],
         Options\JobsearchQueries::class => [[
             'config' => [
-                'test' => [
-                    'sub' => [
-                        'Popel' => 'q=Popel',
+                'Berufe' => [
+                    'Küche' => [
+                        'Chefkoch' => 'q=Chefkoch+OR+Küchenchef',
+                        'Koch/Köchin' => 'q=Koch'
                     ],
                     'Marketing' => [
                         'Business Manager' => 'q=Business+Manager',

@@ -9,8 +9,10 @@
 $this->headTitle($this->article->title->rendered);
 ?>
 
+<div class="container">
 <h1><?=$this->article->title->rendered?></h1>
 
 <div class="wp-content">
     <?=$this->article->content->rendered;?>
+</div>
 </div>
