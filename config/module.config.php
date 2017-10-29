@@ -121,7 +121,7 @@ return [
         ],
         Options\JobsearchQueries::class => [[
             'config' => [
-                'Kategorie' => [
+                'Kategorien' => [
                     'Küche' => [
                         'Chefkoch' => 'q=Chefkoch+OR+Küchenchef',
                         'Koch/Köchin' => 'q=Koch'
