@@ -1,0 +1,47 @@
+<?php
+/**
+ * YAWIK
+ *
+ * @filesource
+ * @license MIT
+ * @copyright  2013 - 2017 Cross Solution <http://cross-solution.de>
+ */
+
+ /*
+  *
+  */
+
+$options = [
+    'hotelfachmann' => [
+        'text' => 'Hotelfachmann',
+        'id' => 2,
+        'query' => [ 'q' => 'Koch OR Chefkoch', 'region_MultiString' => ['Hessen' => 1]],
+        'tab' => 'Regionen',
+        'panel' => 'Gastronomie in Hessen',
+    ],
+    'koch' => [
+        'text' => 'Koch/Chefkoch',
+        'id' => 7,
+        'tab' => 'Kategorie',
+        'panel' => 'Service',
+    ],
+
+
+    'cuisinier' => [
+        'id' => 23,
+            'text' => 'Cuisinier',
+            'tab' => 'Kategorie',
+            'panel' => 'Service',
+    ],
+
+    'barkeeper' => [ 'id' => 43 ],
+    'rezeption' => [ 'id' => 45 ],
+    'konditor' => [ 'id' => 48 ],
+
+
+];
+
+
+/* Do not edit below this line */
+
+return [ 'options' => [ \Gastro24\Options\Landingpages::class => [ $options ] ]];

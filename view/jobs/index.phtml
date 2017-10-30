@@ -10,7 +10,13 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
 ?>
 <?php
 
-$query=$this->params()->fromQuery('q', 51);
+$query=$this->params()->fromRoute('q', 51);
+$wordpress = $this->proxy('wordpress');
+
+$this->headMeta()->setName('description', $wordpress->chain(['page' => $query, 'value' => 'meta-fields.description'], ''));
+$this->headMeta()->setName('keywords', $wordpress->call('value', ['meta-fields.keywords'], ''));
+
+
 $this->headScript()->captureStart();
 ?>
 (function($) {
@@ -29,8 +35,8 @@ $this->headScript()->captureStart();
 <?php $this->headScript()->captureEnd();?>
 
 <h1 class="text-center">
-    <?php $wordpress = $this->proxy('wordpress');?>
-    <?=$wordpress->chain(['page' => $query, 'value' => 'title.rendered'], '') ?: 'Aktuelle Stellenanzeigen'; ?>
+
+    <?=$wordpress->call('value', ['title.rendered'], '') ?: 'Aktuelle Stellenanzeigen'; ?>
 </h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>

@@ -14,6 +14,8 @@ $form->setButtonElement('q');
 $form->setAttribute('action', $this->url('lang/jobboard', [], true));
 
 $this->headTitle('Gastrojob24: Jobs für Gastronomie, Hotel & Tourismus');
+$this->headMeta()->appendName("keywords", "Jobs aus der Gastronomie");
+$this->headMeta()->appendName("description", " Gastronomie Jobbörse mit top-aktuellen Gastro Jobs, Hotel & Tourismus Jobs und mehr. Jetzt Traumjob finden - auf einen Klick!");
 
 ?>
 <?php $this->headTitle($this->translate('Home'))?>
@@ -29,7 +31,8 @@ $this->headTitle('Gastrojob24: Jobs für Gastronomie, Hotel & Tourismus');
 
 <?php
 
-    $queries = $this->services(\Gastro24\Options\JobsearchQueries::class);
+    $queries = $this->services(\Gastro24\Options\Landingpages::class);
+
 
 
 
@@ -38,7 +41,7 @@ $this->headTitle('Gastrojob24: Jobs für Gastronomie, Hotel & Tourismus');
         $sections = [];
         $active = ' active';
         $sectionHtml = '';
-        foreach ($queries->getConfig() as $tab => $sections):
+        foreach ($queries->getTabs() as $tab => $sections):
             $tabSlug = strtolower(str_replace(' ', '', $tab));
             $tabs[$tabSlug] = $tab;
             $sectionHtml .= '<div class="tab-pane' . $active . '" id="' . $tabSlug . '">
@@ -50,8 +53,8 @@ $this->headTitle('Gastrojob24: Jobs für Gastronomie, Hotel & Tourismus');
 <div class="panel-heading"><h3 class="panel-title">' . $section . '</h3></div>
 <div class="panel-body"><ul>
             ';
-                foreach ($links as $name => $params):
-                    $sectionHtml .= '<li><a href="' . $this->url('lang/jobboard', [], true) .'?' . $params .'">' . $name .'</a></li>';
+                foreach ($links as $spec):
+                    $sectionHtml .= '<li><a href="' . $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' . $spec[1] .'</a></li>';
                 endforeach;
                 $sectionHtml .= '</ul></div></div></div>';
             endforeach;

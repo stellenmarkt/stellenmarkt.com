@@ -1,6 +1,7 @@
 <?php
 namespace Gastro24;
 
+use Gastro24\Options\Landingpages;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 Module::$isLoaded = true;
@@ -35,7 +36,7 @@ return [
 
     'filters' => [
         'factories' => [
-            WordpressApi\Filter\PageIdMap::class => WordpressApi\Factory\Filter\PageIdMapFactory::class,
+            WordpressApi\Filter\PageIdMap::class => Factory\Filter\WpApiPageIdMapFactory::class,
         ],
     ],
 
@@ -142,6 +143,7 @@ return [
                 ],
             ]],
         ],
+        Landingpages::class => [],
     ],
 
     'event_manager' => [

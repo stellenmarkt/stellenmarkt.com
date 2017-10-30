@@ -3,8 +3,10 @@
 namespace Gastro24;
 
 use Core\ModuleManager\ModuleConfigLoader;
+use Gastro24\Options\Landingpages;
 use Zend\Console\Console;
 use Zend\Mvc\MvcEvent;
+use Zend\Stdlib\Parameters;
 
 /**
  * Bootstrap class of our demo skin
@@ -105,6 +107,24 @@ class Module
             	'CamMediaintown',
 	            MvcEvent::EVENT_DISPATCH,$listener,
 	            -2);
+
+            $eventManager->attach(MvcEvent::EVENT_ROUTE, function(MvcEvent $event) {
+                $routeMatch = $event->getRouteMatch();
+
+                if (!$routeMatch) { return; }
+
+                if ('lang/landingPage' == $routeMatch->getMatchedRouteName()) {
+                    $services = $event->getApplication()->getServiceManager();
+                    $options = $services->get(Landingpages::class);
+                    $query = $options->getQueryParameters($routeMatch->getParam('q'));
+
+                    if ($query) {
+                        $event->getRequest()->setQuery(new Parameters($query));
+                    }
+
+                }
+
+            }, -9999);
         }
 
     }
