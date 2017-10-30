@@ -8,17 +8,45 @@
  */
 
  /*
-  *
+  * Diese Datei wird in das config/autoload Verzeichnis kopiert und dort bearbeitet
   */
 
 $options = [
+
+    /*
+     * 1. Landingpage
+     * Eindeutiger Schlüssel einer Landingpage. Der Schlüssel der Landingpage wird für die Generierung
+     * der URL herangezogen. Hier: de/jobs/hotelfachmann.html
+     */
     'hotelfachmann' => [
+
+        /*
+         * Link text 
+         */
         'text' => 'Hotelfachmann',
+
+        /*
+         * ID der Wordpress Seite
+         */
         'id' => 2,
-        'query' => [ 'q' => 'Koch OR Chefkoch', 'region_MultiString' => ['Hessen' => 1]],
+
+        /*
+         * optionale Suchanfrage. Der Parameter p ist die Volltextsuche. Der Parameter "region_MultiString" ist
+         * die Region. Wenn kein Wert für "query" angegeben ist, wird nach dem Schlüssel der Landingpage gesucht.
+         */
+        'query' => [ 'q' => 'Koch OR Chefkoch', 'region_MultiString' => ['Niedersachsen' => 1]],
+
+        /*
+         * Überschrift im Tab
+         */
         'tab' => 'Regionen',
-        'panel' => 'Gastronomie in Hessen',
+
+        /*
+         * Überschrift im Pannel
+         */
+        'panel' => 'Gastronomie in Niedersachsen',
     ],
+
     'koch' => [
         'text' => 'Koch/Chefkoch',
         'id' => 7,
@@ -29,14 +57,36 @@ $options = [
 
     'cuisinier' => [
         'id' => 23,
-            'text' => 'Cuisinier',
-            'tab' => 'Kategorie',
-            'panel' => 'Service',
+        'text' => 'Cuisinier',
+        'tab' => 'Kategorie',
+        'panel' => 'Service',
     ],
 
-    'barkeeper' => [ 'id' => 43 ],
-    'rezeption' => [ 'id' => 45 ],
-    'konditor' => [ 'id' => 48 ],
+
+    /*
+     * Weitere Landingpage Suordnungen
+     */
+    'barkeeper' => [
+          'id' => 43,
+          'tab' => 'Kategorie',
+          'panel' => 'Service',
+          'text' => 'Barkeeper'
+     ],
+
+    'rezeption' => [ 
+          'id' => 45,
+          'text' => 'Rezeptionist',
+          'panel' => 'In Zürich',
+          'tab' => 'Regionen' 
+     ],
+
+    'konditor-bei-spruengli' => [ 
+          'id' => 48,
+          'text' => 'Konditor/in bei Sprüngli',
+          'panel' => 'Konditor',
+          'query' => [ 'q' => 'konditor', 'organizationTag' => ['Spruengli' => 1]],
+          'tab' => 'Firmen'
+     ],
 
 
 ];
