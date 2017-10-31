@@ -13,6 +13,23 @@
 
 $options = [
 
+
+
+    'koch' => [
+        'text' => 'Koch/Chefkoch',
+        'id' => 7,
+        'tab' => 'Kategorie',
+        'panel' => 'Küche',
+    ],
+
+
+    'cuisinier' => [
+        'id' => 23,
+        'text' => 'Cuisinier',
+        'tab' => 'Kategorie',
+        'panel' => 'Küche',
+    ],
+
     /*
      * 1. Landingpage
      * Eindeutiger Schlüssel einer Landingpage. Der Schlüssel der Landingpage wird für die Generierung
@@ -47,29 +64,13 @@ $options = [
         'panel' => 'Gastronomie in Niedersachsen',
     ],
 
-    'koch' => [
-        'text' => 'Koch/Chefkoch',
-        'id' => 7,
-        'tab' => 'Kategorie',
-        'panel' => 'Service',
-    ],
-
-
-    'cuisinier' => [
-        'id' => 23,
-        'text' => 'Cuisinier',
-        'tab' => 'Kategorie',
-        'panel' => 'Service',
-    ],
-
-
     /*
      * Weitere Landingpage Suordnungen
      */
     'barkeeper' => [
           'id' => 43,
           'tab' => 'Kategorie',
-          'panel' => 'Service',
+          'panel' => 'Bar',
           'text' => 'Barkeeper'
      ],
 
