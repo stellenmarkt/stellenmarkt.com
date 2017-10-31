@@ -20,46 +20,42 @@ $this->headMeta()->appendName("description", " Gastronomie Jobbörse mit top-akt
 ?>
 <?php $this->headTitle($this->translate('Home'))?>
 <div class="jumbotron text-center">
-
     <h1>Jobs für Gastronomie Fachkräfte</h1>
     <p class="lead">Spannende Jobs für Gastronomie, Hotellerie und Tourismus auf einen Klick finden</p>
-    <div class="container">
-    <?=$this->searchForm($form);?>
-    </div>
-
+    <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
+        <div class="search-form-container">
+            <?=$this->searchForm($form);?>
+        </div>
+    </nav>
 </div>
 
 <?php
 
-    $queries = $this->services(\Gastro24\Options\Landingpages::class);
+$queries = $this->services(\Gastro24\Options\Landingpages::class);
 
 
+$tabs = [];
+$sections = [];
+$active = ' active';
+$sectionHtml = '';
+foreach ($queries->getTabs() as $tab => $sections):
+    $tabSlug = strtolower(str_replace(' ', '', $tab));
+    $tabs[$tabSlug] = $tab;
+    $sectionHtml .= '<div class="tab-pane' . $active . '" id="' . $tabSlug . '"><div class="row">';
+    $active='';
+    foreach ($sections as $section => $links):
+        $sectionHtml .= '<div class="col-md-4"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' .
+                        $section . '</h3></div><div class="panel-body"><ul>';
 
-
-
-        $tabs = [];
-        $sections = [];
-        $active = ' active';
-        $sectionHtml = '';
-        foreach ($queries->getTabs() as $tab => $sections):
-            $tabSlug = strtolower(str_replace(' ', '', $tab));
-            $tabs[$tabSlug] = $tab;
-            $sectionHtml .= '<div class="tab-pane' . $active . '" id="' . $tabSlug . '">
-            
-            <div class="row">';
-            $active='';
-            foreach ($sections as $section => $links):
-                $sectionHtml .= '<div class="col-md-4"><div class="panel panel-default">
-<div class="panel-heading"><h3 class="panel-title">' . $section . '</h3></div>
-<div class="panel-body"><ul>
-            ';
-                foreach ($links as $spec):
-                    $sectionHtml .= '<li><a href="' . $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' . $spec[1] .'</a></li>';
-                endforeach;
-                $sectionHtml .= '</ul></div></div></div>';
-            endforeach;
-            $sectionHtml .= '</div></div>';
+        foreach ($links as $spec):
+            $sectionHtml .= '<li><a href="' .
+                            $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' .
+                            $spec[1] .'</a></li>';
         endforeach;
+        $sectionHtml .= '</ul></div></div></div>';
+    endforeach;
+    $sectionHtml .= '</div></div>';
+endforeach;
                 
 
 ?>
@@ -70,8 +66,6 @@ $this->headMeta()->appendName("description", " Gastronomie Jobbörse mit top-akt
         <li<?=$active?>><a href="#<?=$slug?>" data-toggle="tab"><?=$name?></a></li>
         <?php $active=''; endforeach ?>
     </ul>
-
     <div class="tab-content"><p></p><?=$sectionHtml?></div>
-
 </div>
 
