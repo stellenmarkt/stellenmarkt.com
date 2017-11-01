@@ -52,17 +52,17 @@ $options = [
          * die Region. Wenn kein Wert für "query" angegeben ist, wird nach dem Schlüssel der Landingpage gesucht.
          * 'query' => [ 'q' => 'Koch OR Chefkoch', 'region_MultiString' => ['Niedersachsen' => 1]],
          */
-         'query' => [ 'q' => '', 'region_MultiString' => ['Zürich' => 1]],
+         'query' => [ 'q' => 'Zürich', 'region_MultiString' => ['Zürich' => 1]],
          
         /*
          * Überschrift im Tab
          */
-        'tab' => 'Regionen',
+        'tab' => 'Jobs nach Städte',
 
         /*
          * Überschrift im Pannel
          */
-        'panel' => 'Gastronomie in Niedersachsen',
+        'panel' => 'Panel 1',
     ],
 
     /*
