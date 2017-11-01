@@ -35,12 +35,12 @@ $options = [
      * Eindeutiger Schlüssel einer Landingpage. Der Schlüssel der Landingpage wird für die Generierung
      * der URL herangezogen. Hier: de/jobs/hotelfachmann.html
      */
-    'hotelfachmann' => [
+    'zuerich' => [
 
         /*
          * Link text 
          */
-        'text' => 'Hotelfachmann',
+        'text' => 'Zürich',
 
         /*
          * ID der Wordpress Seite
@@ -48,11 +48,12 @@ $options = [
         'id' => 2,
 
         /*
-         * optionale Suchanfrage. Der Parameter p ist die Volltextsuche. Der Parameter "region_MultiString" ist
+         * optionale Suchanfrage. Der Parameter q ist die Volltextsuche. Der Parameter "region_MultiString" ist
          * die Region. Wenn kein Wert für "query" angegeben ist, wird nach dem Schlüssel der Landingpage gesucht.
+         * 'query' => [ 'q' => 'Koch OR Chefkoch', 'region_MultiString' => ['Niedersachsen' => 1]],
          */
-        'query' => [ 'q' => 'Koch OR Chefkoch', 'region_MultiString' => ['Niedersachsen' => 1]],
-
+         'query' => [ 'q' => '', 'region_MultiString' => ['Zürich' => 1]],
+         
         /*
          * Überschrift im Tab
          */
