@@ -99,6 +99,16 @@ return [
                             ]
                         ],
                     ],
+                    'jobs' => [
+                        'options' => [
+                            'route' => '/job',
+                        ],
+                    ],
+                    'jobboard' => [
+                        'options' => [
+                            'route' => '/jobs',
+                        ]
+                    ]
                 ],
             ],
         ],
