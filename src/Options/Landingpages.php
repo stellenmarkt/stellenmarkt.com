@@ -26,28 +26,69 @@ class Landingpages extends AbstractOptions
     private $queryMap = [];
 
     private $tabs = [];
+    
+    private $companies = [];
 
     public function setFromArray($options)
     {
         $idMap = [];
         $queryMap = [];
         $tabs = [];
+        $companies = [];
 
         foreach ($options as $term => $spec) {
             if (isset($spec['id'])) {
                 $idMap[$term] = $spec['id'];
             }
 
-            $queryMap[$term] = isset($spec['query']) ? $spec['query'] : [ 'q' => $term ];
+            if (isset($spec['company'])) {
+                if (!isset($spec['query'])) {
+                    $spec['query'] = [ 'organizationTag' => [$spec['company'] => 1]];
+                } else if (!isset($spec['query']['organizationTag'])) {
+                    $spec['query']['organizationTag'] = [$spec['company'] => 1];
+                }
+                
+                $companies[$term] = [isset($spec['text'])?$spec['text'] : $term, isset($spec['logo']) ? $spec['logo'] : false];
+            }
+
+            if (isset($spec['query']) && !isset($spec['query']['q'])) {
+                $spec['query']['q'] = '';
+            }
+
+            $queryMap[ $term ] = isset($spec[ 'query' ]) ? $spec[ 'query' ] : ['q' => $term];
 
             if (isset($spec['tab']) && isset($spec['panel'])) {
                 $tabs[ $spec[ 'tab' ] ][ $spec[ 'panel' ] ][] = [$term, $spec[ 'text' ]];
             }
+            
+            
 
         }
 
-        return parent::setFromArray(['idMap' => $idMap, 'queryMap' => $queryMap, 'tabs' => $tabs ]);
+        return parent::setFromArray(['idMap' => $idMap, 'queryMap' => $queryMap, 'tabs' => $tabs, 'companies' => $companies ]);
     }
+
+    /**
+     * @return array
+     */
+    public function getCompanies()
+    {
+        return $this->companies;
+    }
+
+    /**
+     * @param array $companies
+     *
+     * @return self
+     */
+    public function setCompanies($companies)
+    {
+        $this->companies = $companies;
+
+        return $this;
+    }
+
+
 
     /**
      * @return array

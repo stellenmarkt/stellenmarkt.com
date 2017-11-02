@@ -68,4 +68,43 @@ endforeach;
     </ul>
     <div class="tab-content"><p></p><?=$sectionHtml?></div>
 </div>
+<?php $companies = $queries->getCompanies(); 
+if (count($companies)):
+    $companies = array_chunk($companies, 6, true);?>
+<div id="companies-slider" class="carousel slide" data-ride="carousel" style="height: 120px">
+    <ol class="carousel-indicators">
+        <?php for ($i=0, $c=count($companies); $i<$c; $i+=1):?>
+        <li<?=0===$i ? ' class="active"' : '' ?> style="background-color: #666;" data-target="#companies-slider" data-slide-to="<?=$i?>"></li>
+        <?php endfor ?>
+    </ol>
 
+    <div class="carousel-inner">
+        <?php $active=" active"; foreach ($companies as $comps):?>
+            <div class="item<?=$active?> container">
+                <div class="row">
+                    <?php foreach ($comps as $term => $spec):?>
+                        <div class="col-md-2">
+                            <a style="display: flex; align-items: center; height: 80px; width: 100%" class="text-center" href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
+                                <span style="display:inline-block; width: 100%; text-align: center;">
+                                <?php if ($spec[1]): ?>
+                            <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>">
+                                <?php else: ?>
+                                    <?=$spec[0]?>
+                                <?php endif ?>
+                                </span></a>
+                        </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
+        <?php $active = ''; endforeach ?>
+    </div>
+    <!--<a class="left carousel-control" href="#companies-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"> P</span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#companies-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"> N</span>
+        <span class="sr-only">Next</span>
+    </a>-->
+</div>
+<?php endif ?>
