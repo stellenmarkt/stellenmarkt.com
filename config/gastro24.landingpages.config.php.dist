@@ -34,9 +34,9 @@ $options = [
     'zuerich' => [
 
     
-        'text' => 'Zürich'
+        'text' => 'Zürich',
         'id' => 2,
-         query' => [ 'q' => 'Zürich', 'region_MultiString' => ['Zürich' => 1]],
+        'query' => [ 'q' => 'Zürich', 'region_MultiString' => ['Zürich' => 1]],
         'tab' => 'Jobs nach Städte',
         'panel' => 'Panel 1',
     ],
