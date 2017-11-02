@@ -111,9 +111,9 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                
                 if (preg_match("/^(https?:)?\/\//",$logo)) { 
                     echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
-		} elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
+		        } elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
                     echo '<img class="yk-logo-sm center-block" src="';
-		    echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
+		            echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
                 } 
                 ?>
                 </a>
@@ -134,7 +134,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                     </h4>
                     <?php
                     if ($job->getCompany()) {
-			echo $job->getCompany();
+			            echo $job->getCompany();
                     } elseif ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                         echo $org->getOrganizationName()->getName();
                     }
@@ -145,9 +145,20 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                     </p>
                     <p><?=$job->getLocation()?></p>
                 </div>
-                <?=$this->applyUrl($job);?>
             </div>
         </div>
+        <style>
+            .apply {
+    position: relative;
+    top: -4em;
+    text-align: center;
+    background: #ddd;
+    line-height: 2em;
+}
+        </style>
+        <div class="apply">
+        <?=$this->applyUrl($job);?>
+            </div>
     </div>
     
     <?php endforeach?>
