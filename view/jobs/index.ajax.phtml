@@ -146,19 +146,10 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                     <p><?=$job->getLocation()?></p>
                 </div>
             </div>
-        </div>
-        <style>
-            .apply {
-    position: relative;
-    top: -4em;
-    text-align: center;
-    background: #ddd;
-    line-height: 2em;
-}
-        </style>
-        <div class="apply">
-        <?=$this->applyUrl($job);?>
+            <div class="apply">
+                <?=$this->applyUrl($job);?>
             </div>
+        </div>
     </div>
     
     <?php endforeach?>

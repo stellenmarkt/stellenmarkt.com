@@ -13814,6 +13814,7 @@ body {
 .featured-image-box {
   border: 1px solid #ccc;
   margin-bottom: 30px;
+  position: relative;
 }
 .featured-image-box .content-area {
   background-color: #ffffff;
@@ -13854,8 +13855,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 .apply {
-  position: relative;
-  top: -4em;
+  bottom: 0;
   text-align: center;
   background: #ddd;
   line-height: 2em;
