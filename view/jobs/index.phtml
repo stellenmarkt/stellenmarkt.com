@@ -39,9 +39,12 @@ $this->headScript()->captureStart();
         });
 
         $('#jobs-list-filter').on('reset.gastro24', function(ev) { $(ev.target).find('input.facet-param').remove(); });
+
     });
 })(jQuery);
 <?php $this->headScript()->captureEnd();?>
+
+<?php if ($jobs instanceof \Solr\FacetsProviderInterface): $this->headScript()->appendFile($this->basePath('Gastro24/jobs.facets.js')); endif; ?>
 
 <h1 class="text-center">
 
@@ -61,7 +64,11 @@ $this->headScript()->captureStart();
                                                 'attributes' => ['class' => 'facet-param', 'value' => 1]]);
                     endforeach;
                 endif;
-            endforeach;$this->filterForm->setButtonElement('q'); echo $this->searchForm($this->filterForm)  ?>
+            endforeach;$this->filterForm->setButtonElement('q');
+            //$this->filterForm->add( ['type' => 'hidden', 'name' => 'clear', 'attributes' => ['value' => 1]]);
+            $this->filterForm->setAttribute('data-handle-by', 'native');
+            $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
+             echo $this->searchForm($this->filterForm)  ?>
     </div>
 </nav>
 
