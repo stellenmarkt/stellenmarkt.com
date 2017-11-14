@@ -87,7 +87,7 @@ if (count($companies)):
                             <a style="display: flex; align-items: center; height: 80px; width: 100%" class="text-center" href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
                                 <span style="display:inline-block; width: 100%; text-align: center;">
                                 <?php if ($spec[1]): ?>
-                            <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>">
+                            <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>"  style="max-width: 120px">
                                 <?php else: ?>
                                     <?=$spec[0]?>
                                 <?php endif ?>
@@ -98,13 +98,5 @@ if (count($companies)):
             </div>
         <?php $active = ''; endforeach ?>
     </div>
-    <!--<a class="left carousel-control" href="#companies-slider" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"> P</span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#companies-slider" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"> N</span>
-        <span class="sr-only">Next</span>
-    </a>-->
 </div>
 <?php endif ?>
