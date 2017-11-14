@@ -10,7 +10,9 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
 ?>
 <?php
 
-$query=$this->params()->fromRoute('q', 51);
+$queryGet = $this->params()->fromQuery();
+unset($queryGet['clear']);
+$query= !count($queryGet) ? $this->params()->fromRoute('q', 304) : 0;
 $wordpress = $this->proxy('wordpress');
 
 $this->headMeta()->setName('description', $wordpress->chain(['page' => $query, 'value' => 'meta-fields.description'], ''));
