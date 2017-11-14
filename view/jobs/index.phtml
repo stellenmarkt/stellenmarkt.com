@@ -1,5 +1,5 @@
 <?php //description: Renders the list of public jobs. ?>
-<?php $this->headTitle($this->translate('Jobs'));
+<?php
 $this->headScript()->appendFile($this->basepath('/Core/js/core.pagination-container.js'))
      ->appendFile($this->basePath('Core/js/core.forms.js'))
      ->appendFile($this->basePath('assets/select2/js/select2.min.js'));
@@ -17,6 +17,12 @@ $this->headMeta()->setName('description', $wordpress->chain(['page' => $query, '
 $this->headMeta()->setName('keywords', $wordpress->call('value', ['meta-fields.keywords'], ''));
 $description = $wordpress->call('value', ['content.rendered'], '');
 
+$title = $wordpress->call('value', ['meta-fields.title'], '');
+$this->headTitle($title ?: $this->translate('Jobs'));
+
+$robots = "noindex,follow";
+if ($description) { $robots = substr($robots, 2); }
+$this->headMeta()->setName('robots', $robots);
 $this->headScript()->captureStart();
 ?>
 (function($) {
@@ -39,9 +45,12 @@ $this->headScript()->captureStart();
         });
 
         $('#jobs-list-filter').on('reset.gastro24', function(ev) { $(ev.target).find('input.facet-param').remove(); });
+
     });
 })(jQuery);
 <?php $this->headScript()->captureEnd();?>
+
+<?php if ($jobs instanceof \Solr\FacetsProviderInterface): $this->headScript()->appendFile($this->basePath('Gastro24/jobs.facets.js')); endif; ?>
 
 <h1 class="text-center">
 
@@ -61,7 +70,11 @@ $this->headScript()->captureStart();
                                                 'attributes' => ['class' => 'facet-param', 'value' => 1]]);
                     endforeach;
                 endif;
-            endforeach;$this->filterForm->setButtonElement('q'); echo $this->searchForm($this->filterForm)  ?>
+            endforeach;$this->filterForm->setButtonElement('q');
+            //$this->filterForm->add( ['type' => 'hidden', 'name' => 'clear', 'attributes' => ['value' => 1]]);
+            $this->filterForm->setAttribute('data-handle-by', 'native');
+            $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
+             echo $this->searchForm($this->filterForm)  ?>
     </div>
 </nav>
 
