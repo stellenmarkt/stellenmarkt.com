@@ -36,6 +36,8 @@ return [
             ],
 
             'jobboard' => [
+                'label' => 'Jobs',
+                'text_domain' => 'do-not-translate',
                 'active_on' => ['lang/jobboard', 'lang/landingPage'],
             ],
             'post-a-job' => [

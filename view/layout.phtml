@@ -20,7 +20,7 @@ $notifications = $this->partial('core/notifications');
 
 // set default page title
 
-$this->headTitle($this->translate('gastrojob24'))->setSeparator(' - ')->setAutoEscape(false);
+$this->headTitle($this->translate('Gastrojob24'))->setSeparator(' | ')->setAutoEscape(false);
 
 // set default keywords
 
@@ -114,78 +114,85 @@ foreach ($languages as $lang) {
 </main>
 <!-- /container -->
 <footer id="footer">
- <div class="container">
-    <div class="row">
-  </div>
          <div class="container">
              <div class="row">
-                 <div class="col-sm-6 col-md-3 col-xs-12">
+			   <div class="col-sm-6 col-md-4 col-xs-12">
                      <div class="footer_block">
+                         Gastrojob24.ch
+						 
+			
 
-                         <h4>Jobsuche</h4>
-                         <ul class="footer-links">
-                             <li><a href="<?=$this->url('lang/content', ['view' => 'regionen'], true)?>">Jobs nach Regionen</a></li>
-                             <li><a href="<?=$this->url('lang/content', ['view' => 'staedte'], true)?>">jobs nach Städten</a></li>
-                         </ul>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <ul class="footer__bankAddress">
+                    <li itemprop="streetAddress">Kastenberg 1</li>
+                    <li>
+                        <div itemprop="postalCode">9312</div>
+                        <div itemprop="addressLocality">Häggenschwil</div>
+                    </li>
+                    <li class="is-hidden" itemprop="addressRegion" aria-hidden="true">SG</li>
+                    <li class="is-hidden" itemprop="addressCountry" aria-hidden="true">CH</li>
+                </ul>
+            </address>
 
+            
+                <ul class="footer__bankContact">
+                    <li itemprop="telephone">Tel. <a href="tel:+41813071111"><span class="footer__bankContactTel">+41813071111</span></a></li>
+                    <li itemprop="faxNumber">Fax <a href="tel:+41813071110"><span class="footer__bankContactFax">+41813071110</span></a></li>
+                    <li itemprop="email"><a class="footer__link" href="mailto:buendner-rheintal@raiffeisen.ch"><span>buendner-rheintal@raiffeisen.ch</span></a></li>
+                 
+                </ul>
+
+                        
+						<div class="footer__copyright" itemscope itemtype="http://schema.org/WebPage">
+							<span itemprop="copyrightYear">2008 - 2017</span>
+							<span itemprop="copyrightHolder">Gastrojob24</span>
+						</div>
+                     
                      </div>
                  </div>
-                 <div class="col-sm-6 col-md-3 col-xs-12">
+
+                 <div class="col-sm-6 col-md-4 col-xs-12">
                      <div class="footer_block">
-                         <h4>Service</h4>
 
                          <ul class="footer-links">
-                             <li> <a href="<?=$this->url('lang/auth', [], true)?>">Kundenlogin</a> </li>
+                             <li> <a href="<?=$this->url('lang/auth', [], true)?>">Arbeitgeber Login</a> </li>
                              <li> <a href="<?=$this->url('lang/auth',[],  true)?>#register">Registrieren</a> </li>
-                             <li> <a href="<?=$this->url('lang/wordpress', ['type' => 'page', 'id' => 'preise'], true)?>">Preise</a> </li>
+                            
                          </ul>
 
 
                      </div>
                  </div>
-                 <div class="col-sm-6 col-md-3 col-xs-12">
+                 <div class="col-sm-6 col-md-4 col-xs-12">
                      <div class="footer_block">
-                         <h4>Information</h4>
 
                          <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
 
                      </div>
                  </div>
-                 <div class="col-sm-6 col-md-3 col-xs-12">
-                     <div class="footer_block">
-                         <h4>Netzwerk</h4>
-
-                         <ul class="footer-links">
-                             <li> <a href="http://haubenhero.de">haubenhero.de</a> </li>
-                             <li> <a href="http://gastrojob24.at">gastrojob24.at</a> </li>
-                         </ul>
-
-                         <?=$this->languageSwitcher()?>
-                     </div>
-                 </div>
-
+               
              </div>
          </div>
-</footer>
-<section class="footer-bottom-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="footer-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <h3>Haben Sie Fragen?</h3>
-                                <h4>Rufen Sie uns an: <strong>+41 71 310 10 08</strong>. Wir helfen Ihnen gerne weiter!</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+		 
+    <div id="social-media">
+	
+  <div class="container">
+             <div class="row">
+			 
+			     <?=$this->languageSwitcher()?>
+			 <ul class="social-media-links">
+                             <li> <a href="http://haubenhero.de"> <span class="fa fa-facebook fa-fw"></span> Facebook  </a> </li>
+							<li> <a href="http://haubenhero.de"> <span class="fa fa-twitter fa-fw"></span> Twitter  </a> </li>
+							<li> <a href="http://haubenhero.de"> <span class="fa fa-twitter fa-fw"></span> weltweit  </a> </li>
+                             <li> <a href="http://gastrojob24.at">gastrojob24.at</a> </li>
+							 
+			 </ul>
+       </div>                 
 
+	
+	</div>
+	</div>
+</footer>
 <?php echo $this->partial("piwik") ?>
 </body>
 </html>

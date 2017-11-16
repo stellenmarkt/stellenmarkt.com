@@ -13,7 +13,7 @@ $form = $this->services('forms.Jobs/JobboardSearch');
 $form->setButtonElement('q');
 $form->setAttribute('action', $this->url('lang/jobboard', [], true));
 
-$this->headTitle('Gastrojob24: Jobs für Gastronomie, Hotel & Tourismus');
+$this->headTitle('Jobs für Gastronomie, Hotel & Tourismus');
 $this->headMeta()->appendName("keywords", "Jobs aus der Gastronomie");
 $this->headMeta()->appendName("description", " Gastronomie Jobbörse mit top-aktuellen Gastro Jobs, Hotel & Tourismus Jobs und mehr. Jetzt Traumjob finden - auf einen Klick!");
 
@@ -71,7 +71,11 @@ endforeach;
 <?php $companies = $queries->getCompanies(); 
 if (count($companies)):
     $companies = array_chunk($companies, 6, true);?>
-<div id="companies-slider" class="carousel slide" data-ride="carousel" style="height: 120px">
+<div id="logos-selected">
+ <div class="container">
+     <div class="row">
+ <h3 class="text-center">Unternehmen mit freien Gastronomie Stellen</h3>
+ <div id="companies-slider" class="carousel slide" data-ride="carousel" style="height: 120px">
     <ol class="carousel-indicators">
         <?php for ($i=0, $c=count($companies); $i<$c; $i+=1):?>
         <li<?=0===$i ? ' class="active"' : '' ?> style="background-color: #666;" data-target="#companies-slider" data-slide-to="<?=$i?>"></li>
@@ -98,5 +102,8 @@ if (count($companies)):
             </div>
         <?php $active = ''; endforeach ?>
     </div>
+   </div>
+ </div>
 </div>
+<div>
 <?php endif ?>
