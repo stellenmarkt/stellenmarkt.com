@@ -18,8 +18,16 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 </div>
 
     <div class="row">
-
-<?php if (true || $hasFacets):?>
+	<div class="container">
+	    <div class="row">
+           <div class="facet-header" style="margin-bottom:20px;">
+	        <strong class="text-left">Insgesamt <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> freie Stellen gefunden</strong>
+	   </div>
+    </div>
+</div>
+    <div class="col-md-3">
+	
+	<?php if (true || $hasFacets):?>
     <?php
     $facets = $jobs->getFacets();
     $activeFacets = $facets->getActiveValues();
@@ -27,7 +35,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
     <?php if ($activeFacets):?>
         <div class="well well-sm">
-            <?=$this->translate('Active filters:')?>
+           <!-- <?=$this->translate('Active filters:')?>-->
             <?php foreach ($activeFacets as $facetName => $facetValues):?>
                 <?php foreach ($facetValues as $facetValue):?>
                     <button type="button" class="btn btn-default btn-sm facet-active"
@@ -35,11 +43,13 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                             title="<?=$this->translate('Remove filter')?>"><?=$facetValue?> <span>&times;</span></button>
                 <?php endforeach;?>
             <?php endforeach;?>
+			<br />
             <button type="button" class="btn btn-link facet-reset"><?=$this->translate('Remove all filters')?></button>
         </div>
     <?php endif;?>
-
-    <div class="col-md-3">
+	
+	
+	
         <?php foreach ($facets as $facetName => $facetValues):?>
             <?php if(count($facetValues)>0): ?>
             <div class="panel panel-default">
@@ -85,7 +95,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
     $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', [], ['query' => ['id' => $job->getId()]], true);
 
     ?>
-    <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="featured-image-box">
             <div class="img-box">
                 <a href="<?=$href?>">
