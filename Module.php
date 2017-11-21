@@ -13,6 +13,8 @@ use Zend\Stdlib\Parameters;
  */
 class Module
 {
+    const TEXT_DOMAIN = __NAMESPACE__;
+
     /**
      * indicates, that the autoload configuration for this module should be loaded.
      * @see

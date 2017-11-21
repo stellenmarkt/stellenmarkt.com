@@ -12,7 +12,9 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 ?>
 <div class="row">
     <div class="col-md-12">
-        <p style="padding-right: 10px;" class="pull-left lead"><?=$this->translate('Similar jobs in your inbox daily:')?></p>
+        <p style="padding-right: 10px;" class="pull-left lead">
+            <?=$this->translate('Täglich ähnliche Jobs in Ihrem Postfach', \Gastro24\Module::TEXT_DOMAIN)?>
+        </p>
         <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
     </div>
 </div>
@@ -21,7 +23,11 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 	<div class="container">
 	    <div class="row">
            <div class="facet-header" style="margin-bottom:20px;">
-	        <strong class="text-left">Insgesamt <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> freie Stellen gefunden</strong>
+	        <strong class="text-left">
+                <?=
+                sprintf($this->translate('Insgesamt %s%d%s freie Stellen gefunden', \Gastro24\Module::TEXT_DOMAIN),
+                        '<span id="job-count">',$this->jobs->getTotalItemCount(),'</span>')?>
+            </strong>
 	   </div>
     </div>
 </div>

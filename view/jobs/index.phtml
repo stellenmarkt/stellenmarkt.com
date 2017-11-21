@@ -56,7 +56,8 @@ $this->headScript()->captureStart();
 
 <h1 class="text-center">
 
-    <?=$wordpress->call('value', ['title.rendered'], '') ?: 'Aktuelle Stellenanzeigen'; ?>
+    <?=$wordpress->call('value', ['title.rendered'], '') ?:
+        $this->translate('Aktuelle Stellenanzeigen',\Gastro24\Module::TEXT_DOMAIN); ?>
 </h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
@@ -82,8 +83,11 @@ $this->headScript()->captureStart();
 
 
 <ul id="search-tabs" class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#jobs-list-container"><span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> Jobs gefunden</a></li>
-    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Beschreibung</a></li><?php endif ?>
+    <li class="active">
+        <a data-toggle="tab" href="#jobs-list-container">
+            <?=sprintf($this->translate('%s%d%s Jobs gefunden', \Gastro24\Module::TEXT_DOMAIN),'<span id="job-count">', $this->jobs->getTotalItemCount() ,'</span>')?>
+    </li>
+    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content"><?=$this->translate('Description')?></a></li><?php endif ?>
 </ul>
 
 <div class="tab-content">

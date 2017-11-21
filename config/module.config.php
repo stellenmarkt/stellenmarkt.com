@@ -52,36 +52,35 @@ return [
     ],
 
     'view_manager' => [
-                 'template_map' => [
-                     'layout/layout' => __DIR__ . '/../view/layout.phtml',
-                     'layout/application-form' => __DIR__ . '/../view/application-form.phtml',
-                     'core/index/index' => __DIR__ . '/../view/index.phtml',
-                     'piwik' => __DIR__ . '/../view/piwik.phtml',
-                     'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
-                     'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
-                     'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
-                     'auth/index/login-info' => __DIR__ . '/../view/login-info.phtml',
-                     'gastro24/wordpress-page/index' => __DIR__ . '/../view/gastro24/wordpress-page/index.phtml',
-                     'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
-                     'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
-                 ],
-             ],
-             'translator' => [
-                 'translation_file_patterns' => [
-                      [
-                          'type' => 'gettext',
-                           'base_dir' => __DIR__ . '/../language',
-                           'pattern' => '%s.mo',
-                            ],
-                      ],
-                 ],
-
-
-             'form_elements' => [
-                 'invokables' => [
-                     'Jobs/Description' => 'Gastro24\Form\JobsDescription',
-                 ],
-             ],
+         'template_map' => [
+             'layout/layout' => __DIR__ . '/../view/layout.phtml',
+             'layout/application-form' => __DIR__ . '/../view/application-form.phtml',
+             'core/index/index' => __DIR__ . '/../view/index.phtml',
+             'piwik' => __DIR__ . '/../view/piwik.phtml',
+             'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
+             'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
+             'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
+             'auth/index/login-info' => __DIR__ . '/../view/login-info.phtml',
+             'gastro24/wordpress-page/index' => __DIR__ . '/../view/gastro24/wordpress-page/index.phtml',
+             'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
+             'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
+         ],
+    ],
+    'translator'   => [
+        'translation_file_patterns' => [
+            [
+                'type'     => 'phparray',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern'  => '%s.php',
+                'text_domain' => \Gastro24\Module::TEXT_DOMAIN,
+            ],
+        ],
+    ],
+    'form_elements' => [
+        'invokables' => [
+            'Jobs/Description' => 'Gastro24\Form\JobsDescription',
+        ],
+    ],
     'router' => [
         'routes' => [
             'lang' => [
