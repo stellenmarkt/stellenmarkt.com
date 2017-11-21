@@ -86,6 +86,7 @@ $this->headScript()->captureStart();
     <li class="active">
         <a data-toggle="tab" href="#jobs-list-container">
             <?=sprintf($this->translate('%s%d%s Jobs gefunden', \Gastro24\Module::TEXT_DOMAIN),'<span id="job-count">', $this->jobs->getTotalItemCount() ,'</span>')?>
+        </a>
     </li>
     <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content"><?=$this->translate('Description')?></a></li><?php endif ?>
 </ul>
