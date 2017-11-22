@@ -54,11 +54,7 @@ $this->headScript()->captureStart();
 
 <?php if ($jobs instanceof \Solr\FacetsProviderInterface): $this->headScript()->appendFile($this->basePath('Gastro24/jobs.facets.js')); endif; ?>
 
-<h1 class="text-center">
 
-    <?=$wordpress->call('value', ['title.rendered'], '') ?:
-        $this->translate('Aktuelle Stellenanzeigen',\Gastro24\Module::TEXT_DOMAIN); ?>
-</h1>
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
@@ -80,19 +76,38 @@ $this->headScript()->captureStart();
              echo $this->searchForm($this->filterForm)  ?>
     </div>
 </nav>
+  <div class="container">
+     <div class="row">
+	     <div class="header-tab-bar" style="padding:25px 0">
+		 
+             <h1 class="text-center"> <?=$wordpress->call('value', ['title.rendered'], '') ?: 'Jobs gefunden'; ?></h1>
+			 
+			 <p class="similar-jobs text-center">Ähnliche Jobs: <a href="">Koch / Köchin St. Gallen</a>,  <a href="">Koch Zürich</a>, <a href="">bla bla</a>, <a href="">bla</a>, <a href="">bla</a> </p>
+			 
+		 </div>
+	 </div>
+ </div>
+<nav class="profession-tab-bar" style="    background-color: #ccc;margin-bottom:20px">
+  <div class="container">
+     <div class="row">
+   <ul id="search-tabs" class="nav nav-tabs" style="padding:0 30px">
+	 <li class="active"><a data-toggle="tab" href="#jobs-list-container"><!-- <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> --> Offene Stellen</a></li>
+    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Tätigkeit</a></li><?php endif ?>
+	    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Lohn</a></li><?php endif ?>
+		    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Karriere & Weiterbildung</a></li><?php endif ?>
+			    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Erfahrungsberichte</a></li><?php endif ?>
+	
+	
 
+   </ul>
+     </div>
+ </div>
+</nav>
+<div class="container">
+ <div class="row">
+   <div class="tab-content">
+    
 
-<ul id="search-tabs" class="nav nav-tabs">
-    <li class="active">
-        <a data-toggle="tab" href="#jobs-list-container">
-            <?=sprintf($this->translate('%s%d%s Jobs gefunden', \Gastro24\Module::TEXT_DOMAIN),'<span id="job-count">', $this->jobs->getTotalItemCount() ,'</span>')?>
-        </a>
-    </li>
-    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content"><?=$this->translate('Description')?></a></li><?php endif ?>
-</ul>
-
-<div class="tab-content">
-    <p></p>
     <div id="jobs-list-container" class="pagination-container tab-pane fade in active"
          data-message="<?php echo $this->escapeHtmlAttr(sprintf(
                                                             $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'),
@@ -100,7 +115,10 @@ $this->headScript()->captureStart();
                                                         ))?>"
          data-uri="<?php
          echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true)?>">
-
+		 
+        <!--   <h3>Insgesamt <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> freie Stellen zur Auswahl</h3>-->
+		 
+		 
         <div class="pagination-content">
             <?php echo $this->render('jobs/jobboard/index.ajax.phtml')?>
         </div>
@@ -111,4 +129,6 @@ $this->headScript()->captureStart();
         <?php if (51 == $query): echo $this->landingpages(); endif; ?>
     </div>
 <?php endif ?>
+  </div>
+ </div>
 </div>
