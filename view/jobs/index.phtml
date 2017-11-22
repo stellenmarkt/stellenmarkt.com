@@ -81,54 +81,74 @@ $this->headScript()->captureStart();
 	     <div class="header-tab-bar" style="padding:25px 0">
 		 
              <h1 class="text-center"> <?=$wordpress->call('value', ['title.rendered'], '') ?: 'Jobs gefunden'; ?></h1>
-			 
-			 <p class="similar-jobs text-center">Ähnliche Jobs: <a href="">Koch / Köchin St. Gallen</a>,  <a href="">Koch Zürich</a>, <a href="">bla bla</a>, <a href="">bla</a>, <a href="">bla</a> </p>
-			 
+             <?php
+             $wpContent = $wordpress->call('value', ['content.rendered'], '');
+             $parts=preg_split('~<!--more-->~' , $wpContent);
+             ?>
+			 <p class="similar-jobs text-center"><?=$parts[0]?></p>
 		 </div>
 	 </div>
  </div>
-<nav class="profession-tab-bar" style="    background-color: #ccc;margin-bottom:20px">
-  <div class="container">
-     <div class="row">
-   <ul id="search-tabs" class="nav nav-tabs" style="padding:0 30px">
-	 <li class="active"><a data-toggle="tab" href="#jobs-list-container"><!-- <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> --> Offene Stellen</a></li>
-    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Tätigkeit</a></li><?php endif ?>
-	    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Lohn</a></li><?php endif ?>
-		    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Karriere & Weiterbildung</a></li><?php endif ?>
-			    <?php if ($description): ?><li><a data-toggle="tab" href="#wp-content">Erfahrungsberichte</a></li><?php endif ?>
-	
-	
-
-   </ul>
-     </div>
- </div>
-</nav>
-<div class="container">
- <div class="row">
-   <div class="tab-content">
-    
-
-    <div id="jobs-list-container" class="pagination-container tab-pane fade in active"
-         data-message="<?php echo $this->escapeHtmlAttr(sprintf(
-                                                            $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'),
-                                                            '<strong>', '</strong>'
-                                                        ))?>"
-         data-uri="<?php
-         echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true)?>">
-		 
-        <!--   <h3>Insgesamt <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> freie Stellen zur Auswahl</h3>-->
-		 
-		 
-        <div class="pagination-content">
-            <?php echo $this->render('jobs/jobboard/index.ajax.phtml')?>
+<nav class="profession-tab-bar" style="background-color: #ccc;margin-bottom:20px">
+    <div class="container">
+        <div class="row">
+            <ul id="search-tabs" class="nav nav-tabs" style="padding:0 30px">
+                <li class="active">
+                    <a data-toggle="tab" href="#jobs-list-container"><!-- <span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> --> Offene Stellen</a>
+                </li>
+                <?php if (isset($parts[1]) && ""!=trim($parts[1])): ?><li><a data-toggle="tab" href="#wp-content1">Tätigkeit</a></li><?php endif ?>
+                <?php if (isset($parts[2]) && ""!=trim($parts[2])): ?><li><a data-toggle="tab" href="#wp-content2">Lohn</a></li><?php endif ?>
+                <?php if (isset($parts[3]) && ""!=trim($parts[3])): ?><li><a data-toggle="tab" href="#wp-content3">Karriere & Weiterbildung</a></li><?php endif ?>
+                <?php if (isset($parts[4]) && ""!=trim($parts[4])): ?><li><a data-toggle="tab" href="#wp-content4">Erfahrungsberichte</a></li><?php endif ?>
+            </ul>
         </div>
     </div>
-<?php if ($description):?>
-    <div id="wp-content" class="tab-pane fade">
-        <?=$description?>
-        <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="tab-content">
+            <div id="jobs-list-container" class="pagination-container tab-pane fade in active"
+                 data-message="<?php echo $this->escapeHtmlAttr(sprintf(
+                                                                    $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'
+                                                                    ),
+                                                                    '<strong>', '</strong>'
+                                                                )
+                 ) ?>"
+                 data-uri="<?php
+                 echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true) ?>">
+
+                <!--   <h3>Insgesamt <span id="job-count"><?= $this->jobs->getTotalItemCount(
+                ) ?></span> freie Stellen zur Auswahl</h3>-->
+
+
+                <div class="pagination-content">
+                    <?php echo $this->render('jobs/jobboard/index.ajax.phtml') ?>
+                </div>
+            </div>
+            <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+                <div id="wp-content1" class="tab-pane fade">
+                    <?= $parts[1] ?>
+                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+                </div>
+            <?php endif ?>
+            <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
+                <div id="wp-content2" class="tab-pane fade">
+                    <?= $parts[2] ?>
+                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+                </div>
+            <?php endif ?>
+            <?php if (isset($parts[3]) && "" != trim($parts[3])): ?>
+                <div id="wp-content3" class="tab-pane fade">
+                    <?= $parts[3] ?>
+                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+                </div>
+            <?php endif ?>
+            <?php if (isset($parts[4]) && "" != trim($parts[4])): ?>
+                <div id="wp-content4" class="tab-pane fade">
+                    <?= $parts[4] ?>
+                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+                </div>
+            <?php endif ?>
+        </div>
     </div>
-<?php endif ?>
-  </div>
- </div>
 </div>
