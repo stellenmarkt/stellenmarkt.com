@@ -118,7 +118,15 @@ class Module
                 if ('lang/landingPage' == $routeMatch->getMatchedRouteName()) {
                     $services = $event->getApplication()->getServiceManager();
                     $options = $services->get(Landingpages::class);
-                    $query = $options->getQueryParameters($routeMatch->getParam('q'));
+                    $term = $routeMatch->getParam('q');
+
+                    if (!$term) {
+                        return;
+                    }
+
+                    $query = $options->getQueryParameters($term);
+                    $routeMatch->setParam('wpId', $options->getIdMap($term));
+                    $routeMatch->setParam('isLandingPage', true);
 
                     if ($query) {
                         $event->getRequest()->setQuery(new Parameters($query));

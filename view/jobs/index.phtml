@@ -12,7 +12,7 @@ $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.
 
 $queryGet = $this->params()->fromQuery();
 unset($queryGet['clear']);
-$query= !count($queryGet) ? $this->params()->fromRoute('q', 304) : 0;
+$query = true === $this->params()->fromRoute('isLandingPage') ? $this->params()->fromRoute('q', 304) : 0;
 $wordpress = $this->proxy('wordpress');
 
 $this->headMeta()->setName('description', $wordpress->chain(['page' => $query, 'value' => 'meta-fields.description'], ''));
@@ -23,7 +23,7 @@ $title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
-if ($description) { $robots = substr($robots, 2); }
+if ($description && count($this->jobs)) { $robots = substr($robots, 2); }
 $this->headMeta()->setName('robots', $robots);
 $this->headScript()->captureStart();
 ?>

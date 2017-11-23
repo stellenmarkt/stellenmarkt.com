@@ -93,9 +93,13 @@ class Landingpages extends AbstractOptions
     /**
      * @return array
      */
-    public function getIdMap()
+    public function getIdMap($term = null, $default = null)
     {
-        return $this->idMap;
+        if (null === $term) {
+            return $this->idMap;
+        }
+
+        return isset($this->idMap[$term]) ? $this->idMap[$term] : $default;
     }
 
     /**
