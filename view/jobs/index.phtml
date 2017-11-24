@@ -23,7 +23,9 @@ $title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
-if (count($this->jobs)) { $robots = substr($robots, 2); }
+if ($this->params()->fromRoute('isLandingPage') && count($this->jobs)) {
+    $robots = substr($robots, 2);
+}
 $this->headMeta()->setName('robots', $robots);
 $this->headScript()->captureStart();
 ?>
