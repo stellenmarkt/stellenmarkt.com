@@ -23,7 +23,7 @@ $title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
-if ($description && count($this->jobs)) { $robots = substr($robots, 2); }
+if (count($this->jobs)) { $robots = substr($robots, 2); }
 $this->headMeta()->setName('robots', $robots);
 $this->headScript()->captureStart();
 ?>
