@@ -157,7 +157,8 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
         </div>
 
         <?=$hasFacets ? '</div>' : '' ?>
+        <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
 <?php endif ?>
 
-<?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
+
 
