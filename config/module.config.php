@@ -64,6 +64,8 @@ return [
              'gastro24/wordpress-page/index' => __DIR__ . '/../view/gastro24/wordpress-page/index.phtml',
              'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
              'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
+             'jobs-by-mail/mail/jobs' => __DIR__ . '/../view/gastro24/jobs-by-mail/mail/jobs.phtml',
+
          ],
     ],
     'translator'   => [
