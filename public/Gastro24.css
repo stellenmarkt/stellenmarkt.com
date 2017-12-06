@@ -2,8 +2,8 @@
  * YAWIK
  *
  * @filesource
- * @copyright (c) 2013 Cross Solution (http://cross-solution.de)
- * @license   GPLv3
+ * @copyright (c) 2013-2017 Cross Solution (http://cross-solution.de)
+ * @license   MIT
  */
 /**
  * we've replaced glyphicons with font-awesome. therefore bootstrap/bootstrap.less from 
@@ -8290,8 +8290,8 @@ button.close {
  * YAWIK
  *
  * @filesource
- * @copyright (c) 2013 Cross Solution (http://cross-solution.de)
- * @license   GPLv3
+ * @copyright (c) 2013-2017 Cross Solution (http://cross-solution.de)
+ * @license   MIT
  */
 /**
 * Pagination
@@ -13187,7 +13187,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 }
 body {
   position: relative;
-  margin-top: 45px;
+  margin-top: calc(75px);
 }
 th {
   background-color: #efefef;
@@ -13323,7 +13323,7 @@ fieldset[disabled] #yk-topbar .btn-link:focus {
   }
 }
 main {
-  margin-bottom: 59px;
+  margin-bottom: calc(59px);
 }
 /*
  * Scrollable modal
@@ -13331,25 +13331,6 @@ main {
 .modal-scrollable .modal-body {
   max-height: 450px;
   overflow-y: auto;
-}
-/**
- * toolbar on the main section
- */
-.yk-toolbar {
-  margin: 0 0 8px;
-  padding: 0;
-  min-height: 0;
-}
-.yk-toolbar .cam-input-group {
-  max-width: 400px;
-  min-width: 250px;
-  float: left;
-}
-.yk-toolbar .cam-action-states {
-  max-width: 400px;
-  min-width: 100px;
-  margin-right: 4px;
-  float: left;
 }
 /**
  * footer on the page
@@ -13816,6 +13797,13 @@ body {
   margin-bottom: 30px;
   position: relative;
 }
+.featured-image-box .img-box {
+  height: 55px;
+}
+.featured-image-box .yk-logo-sm {
+  max-height: 55px;
+  max-width: 150px;
+}
 .featured-image-box .content-area {
   background-color: #ffffff;
   padding: 30px 20px;
@@ -13873,4 +13861,7 @@ body {
   overflow-x: hidden;
   top: 50%;
   right: -105px;
+}
+.carousel-indicators {
+  bottom: -10px;
 }
