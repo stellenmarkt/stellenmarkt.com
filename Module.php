@@ -138,7 +138,21 @@ class Module
                 if ('lang/jobboard' == $routeMatch->getMatchedRouteName()) {
                     $services = $event->getApplication()->getServiceManager();
                     $options = $services->get(Landingpages::class);
-                    $query = $event->getRequest()->getQuery()->toArray();
+                    $query = $event->getRequest()->getQuery();
+
+                    foreach ([
+                        'r' => '__region_MultiString',
+                        'c' => '__organizationTag',
+                        'i' => '__industry_MultiString',
+                        't' => '__employmentType_MultiString',
+                        ] as $shortName => $longName) {
+
+                        if ($v = $query->get($shortName)) {
+                            $query->set($longName, $v);
+                            $query->offsetUnset($shortName);
+                        }
+                    }
+                    $query = $query->toArray();
                     unset($query['clear']);
                     if (isset($query['q'])) {
                         $query['q'] = strtolower($query['q']);

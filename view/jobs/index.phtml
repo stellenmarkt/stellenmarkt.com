@@ -40,6 +40,20 @@ $this->headScript()->captureStart();
             var html = $('#jobs-list-container').find('.pagination-content').html();
 
             if ('' === html.trim()) { $tabbar.hide(); }
+
+            $('#jobs-list-container').find('ul.pagination a').each(function() {
+                var $a = $(this), href = $a.attr('href');
+                console.debug($a, href);
+                if (href) {
+                    href = href.replace(/__region_MultiString/, 'r')
+                               .replace(/__organizationTag/, 'c')
+                               .replace(/__industry_MultiString/, 'i')
+                               .replace(/__employmentType_MultiString/, 't');
+                    $a.attr('href', href);
+                }
+            });
+
+
         }).trigger('g24-jobs:init');
 
         var $jobCount = $('#job-count');
@@ -66,6 +80,11 @@ $this->headScript()->captureStart();
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
+                if (isset($queryParams['__' . $facetName])) {
+                    $facetValues = explode('_', $queryParams['__' . $facetName]);
+                    $facetValues = array_fill_keys($facetValues, '1');
+                    $queryParams[$facetName] = $facetValues;
+                }
                 if (isset($queryParams[$facetName])):
                     foreach (array_keys($queryParams[$facetName]) as $facetValue):
                         $this->filterForm->add(['type' => 'hidden', 'name' => $facetName . '[' . $facetValue . ']',

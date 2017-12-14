@@ -29,44 +29,46 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 	<?php if (true || $hasFacets):?>
     <?php
     $facets = $jobs->getFacets();
-    $activeFacets = $facets->getActiveValues();
     ?>
 
-    <?php if ($activeFacets):?>
-        <div class="well well-sm">
-           <!-- <?=$this->translate('Active filters:')?>-->
-            <?php foreach ($activeFacets as $facetName => $facetValues):?>
-                <?php foreach ($facetValues as $facetValue):?>
-                    <button type="button" class="btn btn-default btn-sm facet-active"
-                            data-name="<?=$this->escapeHtmlAttr($facetName)?>[<?=$this->escapeHtmlAttr($facetValue)?>]"
-                            title="<?=$this->translate('Remove filter')?>"><?=$facetValue?> <span>&times;</span></button>
-                <?php endforeach;?>
-            <?php endforeach;?>
-			<br />
-            <button type="button" class="btn btn-link facet-reset"><?=$this->translate('Remove all filters')?></button>
-        </div>
-    <?php endif;?>
+
 	
-	
+    <div class="panel-group">
 	
         <?php foreach ($facets as $facetName => $facetValues):?>
-            <?php if(count($facetValues)>0): ?>
-            <div class="panel panel-default">
-                <div class="panel-heading"><?=$this->translate($facets->getTitle($facetName))?></div>
+            <?php if(count($facetValues)>0): $atLeastOneActive = false; ob_start();?>
+            <div id="facets-box-<?=$facetName?>" class="panel panel-default">
+                <div class="panel-heading">
+                    <a style="display:block;width: 100%;text-decoration:none;" data-toggle="collapse" data-parent="#facets-box-<?=$facetName?>" href="#facets-box-<?=$facetName?>-content">
+                    <?=$this->translate($facets->getTitle($facetName))?>
+                    </a>
+                </div>
+                <div id="facets-box-<?=$facetName?>-content" class="panel-collapse collapse %in%">
                 <div class="panel-body">
-                    <?php foreach ($facetValues as $facetValue => $facetValueCount):?>
+                    <?php foreach ($facetValues as $facetValue => $facetValueCount):
+                        $activeFacet = $facets->isValueActive($facetName, $facetValue);
+                        $atLeastOneActive = $atLeastOneActive || $activeFacet;?>
                         <div>
-                            <label>
+                            <label<?=$activeFacet ? ' class="text-primary"' : ''?>>
                                 <input type="checkbox" name="<?=$this->escapeHtmlAttr($facetName)?>[<?=$this->escapeHtmlAttr($facetValue)?>]"
-                                       class="facet-checkbox"<?=$facets->isValueActive($facetName, $facetValue)?" checked":""?>>
+                                       class="facet-checkbox"<?=$activeFacet?" checked":""?>>
                                 <?=$facetValue?> (<?=$facetValueCount?>)
                             </label>
                         </div>
                     <?php endforeach;?>
                 </div>
+                </div> <!-- facets-collaps-* -->
             </div>
-            <?php endif; ?>
+            <?php echo str_replace('%in%',  $atLeastOneActive ? 'in' : '', ob_get_clean()); endif; ?>
         <?php endforeach;?>
+
+        <div class="panel panel-default">
+                <div class="panel-body">
+                    <button id="facets-apply" class="btn btn-primary">Anwenden</button>
+                    <button id="facets-reset" class="btn btn-default pull-right">Filter löschen</button>
+                </div>
+        </div>
+    </div>
     </div>
     <div class="col-md-9">
 <?php endif;?>
