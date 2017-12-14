@@ -132,6 +132,32 @@ class Module
                         $event->getRequest()->setQuery(new Parameters($query));
                     }
 
+                    return;
+                }
+
+                if ('lang/jobboard' == $routeMatch->getMatchedRouteName()) {
+                    $services = $event->getApplication()->getServiceManager();
+                    $options = $services->get(Landingpages::class);
+                    $query = $event->getRequest()->getQuery()->toArray();
+                    unset($query['clear']);
+                    if (isset($query['q'])) {
+                        $query['q'] = strtolower($query['q']);
+                    }
+                    $map = $options->getQueryMap();
+
+                    foreach ($map as $term => $spec) {
+                        if (isset($spec['q'])) { $spec['q'] = strtolower($spec['q']); }
+                        if ($spec === $query) {
+                            /* \Zend\Http\PhpEnvironment\Response $response */
+                            $url = $event->getRouter()->assemble(['q' => $term, 'format' => 'html'], ['name' => 'lang/landingPage']);
+                            $response = $event->getResponse();
+                            $response->getHeaders()->addHeaderLine('Location', $url);
+                            $response->setStatusCode(302);
+                            $event->setResult($response);
+                            return $response;
+                        }
+                    }
+
                 }
 
             }, -9999);
