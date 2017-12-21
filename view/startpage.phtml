@@ -130,235 +130,101 @@ foreach ($languages as $lang) {
     </div>
 </div>
 
+<?php
+
+$queries = $this->services(\Gastro24\Options\Landingpages::class);
+$this->headTitle($this->translate('Home'));
+
+?>
+
 <main id="content">
     <?php echo $notifications?>
+    <?php $companies = $queries->getCompanies();?>
+    <?php if (count($companies)):
+    $companies = array_chunk($companies, 6, true);?>
+    <div id="logos-selected">
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center">Unternehmen mit freien Gastronomie Stellen</h3>
+                <div id="companies-slider" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <?php for ($i=0, $c=count($companies); $i<$c; $i+=1):?>
+                            <li<?=0===$i ? ' class="active"' : '' ?> style="background-color: #666;" data-target="#companies-slider" data-slide-to="<?=$i?>"></li>
+                        <?php endfor ?>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <?php $active=" active";
+                        foreach ($companies as $comps):?>
+                            <div class="item<?=$active?> container">
+                                <div class="row">
+                                    <?php foreach ($comps as $term => $spec):?>
+                                        <div class="col-xs-6 col-sm-3  col-md-1">
+                                            <a href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
+                                <div class="frame">
+                                <?php if ($spec[1]): ?>
+                                    <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>"  style="max-width: 120px">
+                                <?php else: ?>
+                                    <?=$spec[0]?>
+                                <?php endif ?>
+                                </div></a>
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
+                            <?php $active = ''; endforeach ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+
+
+    <?php endif ?>
+
+
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="h5 text-center">Unternehmen mit freien Gastronomie Stellen</h2>
-                <div class="row logo-slider">
-
-
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-sm-3  col-md-1">
-                        <a href="">
-                            <div class="frame">
-                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
-                            </div>
-                        </a>
-                    </div>
+        <?php
 
 
 
+        $tabs = [];
+        $sections = [];
+        $active = ' active';
+        $sectionHtml = '';
+        foreach ($queries->getTabs() as $tab => $sections):
+            $tabSlug = strtolower(str_replace(' ', '', $tab));
+            $tabs[$tabSlug] = $tab;
+            $sectionHtml .= '<hr><h2>' . $tab . '</h2><div class="row">';
+            $active='';
+            foreach ($sections as $section => $links):
+                $sectionHtml .= '<div class="col-md-4"><ul>';
+
+                foreach ($links as $spec):
+                    $sectionHtml .= '<li><a href="' .
+                                    $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' .
+                                    $spec[1] .'</a></li>';
+                endforeach;
+                $sectionHtml .= '</ul></div>';
+            endforeach;
+            $sectionHtml .= '</div>';
+        endforeach;
 
 
-
-                </div>
-            </div>
+        ?>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <?php $active=' class="active"'; foreach ($tabs as $slug => $name):?>
+                    <li<?=$active?>><a href="#<?=$slug?>" data-toggle="tab"><?=$name?></a></li>
+                    <?php $active=''; endforeach ?>
+            </ul>
+            <div class="tab-content"><p></p><?=$sectionHtml?></div>
         </div>
 
 
 
-        <hr />
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="h5 text-center">Gastro Jobs nach Berufsfeld</h2>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3 class="h6">Küche & Lebensmittel Jobs</h3>
-                        <nav>
-                            <ul class="list-unstyled">
-                                <li><a href="/de/jobs/diaetkoch.html">Diätkoch / Diätköchin</a></li>
-                                <li><a href="/de/jobs/kuechenchef.html">Küchenchef/-in</a></li>
-                                <li><a href="/de/jobs/sous-chef.html">Sous Chef</a></li>
-                                <li><a href="/de/jobs/jungkoch.html">Jungkoch / Jungköchin</a></li>
-                                <li><a href="/de/jobs/koch.html">Koch / Köchin</a></li>
-                                <li><a href="/de/jobs/hilfskoch.html">Hilfskoch / Hilfsköchin</a></li>
-                                <li><a href="/de/jobs/alleinkoch.html">Alleinkoch / Alleinköchin</a></li>
-                                <li><a href="/de/jobs/konditor-confiseur.html">Konditor / Confiseur</a></li>
-                                <li><a href="/de/jobs/baecker.html">Bäcker/-in</a></li>
-                                <li><a href="/de/jobs/metzger.html">Metzger/-in</a></li>
-                                <li><a href="/de/jobs/ernaehrungsberater.html">Ernährungsberater/-in</a></li>
-                                <li><a href="/de/jobs/lebesmitteltechnologe.html">Lebensmitteltechnologe / Lebensmitteltechnologin</a></li>
-                                <li><a href="/de/jobs/lebensmittelinspektor.html">Lebensmittelinspektor/-in</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="h6">Service & Restaurant Jobs</h3>
-                        <nav>
-                            <ul class="list-unstyled">
-                                <li><a href="/de/jobs/restaurationsfachmann.html">Restaurationsfachmann /-frau</a></li>
-                                <li><a href="/de/jobs/servicemitarbeiter.html">Servicemitarbeiter/-in</a></li>
-                                <li><a href="/de/jobs/chef-de-rang.html">Chef de Rang</a></li>
-                                <li><a href="/de/jobs/barkeeper.html">Barkeeper</a></li><li><a href="/de/jobs/barista.html">Barista</a></li>
-                                <li><a href="/de/jobs/restaurant-manager.html">Restaurant Manager/-in</a></li>
-                                <li><a href="/de/jobs/sommelier.html">Sommelier / Sommelière</a></li>
-
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="h6">Hotel & Tourismus Jobs</h3>
-                        <nav>
-                            <ul class="list-unstyled">
-                                <li><a href="/de/jobs/hotelfachmann.html">Hotelfachmann / Hotelfachfrau</a></li>
-                                <li><a href="/de/jobs/wellness-spa-beauty.html">Wellness / Spa &amp; Beauty</a></li>
-                                <li><a href="/de/jobs/hoteldirektion.html">Hoteldirektion / Hotelleitung</a></li>
-                                <li><a href="/de/jobs/concierge-room-service.html">Concierge / Room Service</a></li>
-                                <li><a href="/de/jobs/housekeeping-zimmermaedchen.html">Housekeeping / Zimmermädchen</a></li>
-                                <li><a href="/de/jobs/hauswirtschaft.html">Hauswirtschaft / Wäscherei</a></li>
-                                <li><a href="/de/jobs/rezeption-hotelempfang.html">Rezeption / Hotelempfang</a></li>
-
-
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="h6">Administration & Saison Jobs</h3>
-                        <nav>
-                            <ul class="list-unstyled">
-                                <li><a href="/de/jobs/marketing-sales.html">Marketing / Sales</a></li>
-                                <li><a href="/de/jobs/administration-back-office.html">Administration / Back Office</a></li>
-                                <li><a href="/de/jobs/reisefuehrer-tourguide.html">Reiseführer / Tour Guide</a></li>
-                                <li><a href="/de/jobs/kreuzfahrt.html">Kreuzfahrt</a></li>
-                                <li><a href="/de/jobs/animation-entertainment.html">Animation / Entertainment</a></li>
-                                <li><a href="/de/jobs/casino.html">Casino</a></li>
-                                <li><a href="/de/jobs/fitness.html">Fitness</a></li>
-                                <li><a href="/de/jobs/studenten.html">Studenten</a></li>
-                                <li><a href="/de/jobs/hilfskraefte.html">Hilfskräfte</a></li>
-                                <li><a href="/de/jobs/teilzeit.html">Teilzeit</a></li>
-                                <li><a href="/de/jobs/saison.html">Saison</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-8 region col-centered text-center">
-                <h2 class="h5 text-center">Gastro Jobs nach Region</h2>
-                <nav>
-                    <ul class="list-inline ">
-                        <li><a href="/de/jobs/region-appenzell-ausserrhoden.html">Appenzell Ausserrhoden</a></li>
-                        <li><a href="/de/jobs/region-appenzell-innerrhoden.html">Appenzell Innerrhoden</a></li>
-                        <li><a href="/de/jobs/region-glarus.html">Glarus</a></li>
-                        <li><a href="/de/jobs/region-liechtenstein.html">Liechtenstein</a></li>
-                        <li><a href="/de/jobs/region-schaffhausen.html">Schaffhausen</a></li>
-                        <li><a href="/de/jobs/region-st-gallen.html">St. Gallen</a></li>
-                        <li><a href="/de/jobs/region-thurgau.html">Thurgau</a></li>
-                        <li><a href="/de/jobs/region-graubuenden.html">Graubünden</a></li>
-                        <li><a href="/de/jobs/region-aargau.html">Aargau</a></li>
-                        <li><a href="/de/jobs/region-basel-landschaft.html">Basel-Landschaft</a></li>
-                        <li><a href="/de/jobs/region-basel-stadt.html">Basel-Stadt</a></li>
-                        <li><a href="/de/jobs/region-bern.html">Bern</a></li>
-                        <li><a href="/de/jobs/region-jura.html">Jura</a></li>
-                        <li><a href="/de/jobs/region-solothurn.html">Solothurn</a></li>
-                        <li><a href="/de/jobs/region-freiburg.html">Freiburg</a></li>
-                        <li><a href="/de/jobs/region-genf.html">Genf</a></li>
-                        <li><a href="/de/jobs/region-neuenburg.html">Neuenburg</a></li>
-                        <li><a href="/de/jobs/region-waadt.html">Waadt</a></li>
-                        <li><a href="/de/jobs/region-wallis.html">Wallis</a></li>
-                        <li><a href="/de/jobs/region-luzern.html">Luzern</a></li>
-                        <li><a href="/de/jobs/region-nidwalden.html">Nidwalden</a></li>
-                        <li><a href="/de/jobs/region-obwalden.html">Obwalden</a></li>
-                        <li><a href="/de/jobs/region-schwyz.html">Schwyz</a></li>
-                        <li><a href="/de/jobs/region-uri.html">Uri</a></li>
-                        <li><a href="/de/jobs/region-zug.html">Zug</a></li>
-                        <li><a href="/de/jobs/region-zuerich.html">Zürich</a></li>
-                        <li><a href="/de/jobs/region-tessin.html">Tessin</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-        </div>
         <hr />
         <div class="row">
             <div class="col-md-12 text-center">
@@ -369,17 +235,17 @@ foreach ($languages as $lang) {
 
                 <div class="col-md-4">
                     <h3 class="h6">Hohe Reichweite</h3>
-                        <p>Ein Job-Inserat, viele Kanäle: Partnernetzwerk, Jobmail-Newsletter, Suchmaschinen und Social Media.</p>
+                    <p>Ein Job-Inserat, viele Kanäle: Partnernetzwerk, Jobmail-Newsletter, Suchmaschinen und Social Media.</p>
 
                 </div>
                 <div class="col-md-4">
                     <h3 class="h6">Bewerbermanagement & Jobprofil</h3>
-                        <p>Umfangreiches Bewerbermanagement-System mit Statistiken, E-Mail Vorlagen für Zu- und Absagen, Job-Templates und Vielem mehr. </p>
+                    <p>Umfangreiches Bewerbermanagement-System mit Statistiken, E-Mail Vorlagen für Zu- und Absagen, Job-Templates und Vielem mehr. </p>
 
                 </div>
                 <div class="col-md-4">
                     <h3 class="h6">Einfach & günstig</h3>
-                        <p>Unkompliziert Jobs inserieren: Bequem mit Kreditkarte, PayPal oder Rechnung bezahlen.</p>
+                    <p>Unkompliziert Jobs inserieren: Bequem mit Kreditkarte, PayPal oder Rechnung bezahlen.</p>
 
                 </div>
             </div>
