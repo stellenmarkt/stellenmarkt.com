@@ -6,9 +6,10 @@
 @brand-primary: #2e5b93;
 @footer-height: 49px;
 @navbar-height: 80px;
-@navbar-default-link-hover-color:  #242424;
-@navbar-default-link-hover-bg: #ffffff;
-
+@navbar-default-link-color: #fff;
+@navbar-default-link-hover-color: #fff;
+@navbar-default-link-hover-bg: transparent;
+@navbar-default-bg: transparent;
 @link-color: #242424;
 @link-hover-color: #242424;
 
@@ -28,18 +29,25 @@ body {
   float: left;
 }
 #main-navigation {
-    font-size: 16px;
+    height: 145px!important;
     font-weight: 600;
+
+
     ul li a.inverted {
-      color: #fff;
-      background-color: @brand-primary;
+        border: 1px solid #fff;
+        background-color: transparent;
     }
     .navbar-nav>li>a {
     	padding-top: 10px;
         padding-bottom: 10px;
         margin-top: 40px;
     }
-
+    a {
+        color: #fff;
+    }
+    a:hover {
+        background-color: transparent;
+    }
 }
 
 .featured-image-box {
