@@ -240,7 +240,9 @@ $this->headTitle($this->translate('Home'));
             <div class="col-md-12 text-center">
                 <h2 class="text-center">Jobs schalten und noch heute geeignete Bewerbungen erhalten</h2>
 
-                <a href="de/wp/page/stellenanzeigen-schalten" class="btn-block-sm margin-top-smaller btn btn-primary btn-large outline"><span>Jetzt Job inserieren</span></a>
+                <a href="de/wp/page/stellenanzeigen-schalten" class="btn-block-sm margin-top-smaller btn btn-primary btn-large outline">
+                    <span>Jetzt Job inserieren</span>
+                </a>
                 <p class="margin-top-small text-small text-muted">Kostenlos bis März 2018 Jobs insieren</p>
 
                 <div class="col-md-4">
@@ -267,57 +269,7 @@ $this->headTitle($this->translate('Home'));
  <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
  <?=$this->languageSwitcher()?>
 -->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <h5>Über Gastrojob24</h5>
-                <nav>
-                    <ul class="list-unstyled">
-                        <li><a title="" href="/de/wp/page/ueber-uns">Wer wir sind</a></li>
-                        <li><a title="" href="/de/wp/page/partnernetzwerk">Partnernetzwerk</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-2">
-                <h5>Social Media</h5>
-                <nav>
-                    <ul class="list-unstyled">
-                        <li><a title="Gastrojob24.ch bei Facebook" href="https://www.facebook.com/gastrojob24.ch/" target="_blank">Facebook</a></li>
-                        <li><a title="Gastrojob24.ch bei Twitter" href="https://twitter.com/Gastrojob24_CH" target="_blank">Twitter</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-2">
-                <h5>Für Arbeitgeber</h5>
-                <nav>
-                    <ul class="list-unstyled">
-                        <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>">Login</a></li>
-                        <li><a title="Registrieren" href="<?=$this->url('lang/auth',[],  true)?>#register">Registieren</a></li>
-                        <li><a title="Preise & Leistungen" href="/de/wp/page/stellenanzeigen-schalten">Preise & Leistungen</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-offset-3 col-md-3">
-                <!--<h5>International</h5>-->
-
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <nav>
-                    <ul class="list-inline">
-                        <li><a title="Impressum" href="/de/wp/page/impressum">Impressum</a></li>
-                        <li><a title="AGB" href="/de/wp/page/agb">AGB</a></li>
-                        <li><a title="Kontakt" href="/de/wp/page/kontakt">Kontakt</a></li>
-                    </ul>
-                </nav>
-                <p>Copyright &copy; Gastrojob24 2003 - 2018</p>
-            </div>
-        </div>
-</footer>
+<?php echo $this->partial("footer") ?>
 <?php echo $this->partial("piwik") ?>
 </body>
 </html>

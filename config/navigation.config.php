@@ -80,7 +80,7 @@ return [
             'logout' => [
                 'label' => 'Logout',
                 'route' => 'auth-logout',
-                'resource' => 'route/logout',  // logou link only for logged in users
+                'resource' => 'route/logout',  // logout link only for logged in users
                 'order' => 150,
                 'class' => 'top-right'
             ],

@@ -1,0 +1,62 @@
+<?php
+/**
+ * YAWIK
+ *
+ * @filesource
+ * @author    Carsten Bleek <bleek@cross-solution.de>
+ * @copyright 2013-2017 Cross Solution (http://cross-solution.de)
+ * @version   GIT: $Id$
+ * @license   https://yawik.org/LICENSE.txt MIT
+ */
+?>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Über Gastrojob24</h5>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a title="" href="/de/wp/page/ueber-uns">Wer wir sind</a></li>
+                        <li><a title="" href="/de/wp/page/partnernetzwerk">Partnernetzwerk</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <h5>Social Media</h5>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a title="Gastrojob24.ch bei Facebook" href="https://www.facebook.com/gastrojob24.ch/" target="_blank">Facebook</a></li>
+                        <li><a title="Gastrojob24.ch bei Twitter" href="https://twitter.com/Gastrojob24_CH" target="_blank">Twitter</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <h5>Für Arbeitgeber</h5>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>">Login</a></li>
+                        <li><a title="Registrieren" href="<?=$this->url('lang/auth',[],  true)?>#register">Registieren</a></li>
+                        <li><a title="Preise & Leistungen" href="/de/wp/page/stellenanzeigen-schalten">Preise & Leistungen</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-offset-3 col-md-3">
+                <?=$this->languageSwitcher()?>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <nav>
+                    <ul class="list-inline">
+                        <li><a title="Impressum" href="/de/wp/page/impressum">Impressum</a></li>
+                        <li><a title="AGB" href="/de/wp/page/agb">AGB</a></li>
+                        <li><a title="Kontakt" href="/de/wp/page/kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <p>Copyright &copy; Gastrojob24 2003 -<?=date('Y')?></p>
+            </div>
+        </div>
+</footer>
