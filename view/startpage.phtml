@@ -61,6 +61,29 @@ foreach ($languages as $lang) {
     <?php echo $this->headMeta() ?>
     <?php echo $this->configHeadScript() ?>
     <?php echo $this->headLink() ?>
+    <script>
+        <!--
+        jQuery( document ).ready(function() {
+            /* Scroll-Icon */
+
+            if (jQuery(document).scrollTop() > 500) {
+                jQuery('.scroll-arrow').fadeOut();
+            }
+            jQuery('.scroll-arrow').click(function(){
+                jQuery('html,body').animate({scrollTop: jQuery('#content').offset().top }, 600, 'linear');
+            });
+        });
+
+        jQuery(window).scroll(function() {
+
+            if (jQuery(document).scrollTop() > 500) {
+                jQuery('.scroll-arrow').fadeOut();
+            }
+        });
+        //-->
+    </script>
+    <?php echo $this->configHeadScript() ?>
+    <?php echo $this->headLink() ?>
     <?php echo $this->headStyle() ?>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -69,6 +92,7 @@ foreach ($languages as $lang) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MCDJ26Q');</script>
     <!-- End Google Tag Manager -->
+
 </head>
 <body class="home">
 <!-- Google Tag Manager (noscript) -->
@@ -125,7 +149,7 @@ foreach ($languages as $lang) {
             </nav>
         </div>
     </header>
-    <div class="scroll-arrow" style="display: none;">
+    <div class="scroll-arrow">
         <span class="arrow-icon"></span>
     </div>
 </div>
