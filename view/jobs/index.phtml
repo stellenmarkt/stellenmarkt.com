@@ -4,7 +4,8 @@ $this->headScript()->appendFile($this->basepath('/Core/js/core.pagination-contai
      ->appendFile($this->basePath('Core/js/core.forms.js'))
      ->appendFile($this->basePath('assets/select2/js/select2.min.js'));
 if ($this->params('lang') != 'en') {
-    $this->headScript()->appendFile($this->basePath('assets/select2/js/i18n/' . $this->params('lang') . '.js'));
+    $this->headScript()->appendFile($this->basePath('assets/select2/js/i18n/' . $this->params('lang') . '.js'))
+        ->appendFile($this->basePath('Gastro24/jquery.matchHeight.js'))->appendFile($this->basePath('Gastro24/jobs.js'));
 }
 $this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
 ?>
@@ -39,6 +40,20 @@ $this->headScript()->captureStart();
             var html = $('#jobs-list-container').find('.pagination-content').html();
 
             if ('' === html.trim()) { $tabbar.hide(); }
+
+            $('#jobs-list-container').find('ul.pagination a').each(function() {
+                var $a = $(this), href = $a.attr('href');
+                console.debug($a, href);
+                if (href) {
+                    href = href.replace(/__region_MultiString/, 'r')
+                               .replace(/__organizationTag/, 'c')
+                               .replace(/__industry_MultiString/, 'i')
+                               .replace(/__employmentType_MultiString/, 't');
+                    $a.attr('href', href);
+                }
+            });
+
+
         }).trigger('g24-jobs:init');
 
         var $jobCount = $('#job-count');
@@ -65,6 +80,11 @@ $this->headScript()->captureStart();
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
+                if (isset($queryParams['__' . $facetName])) {
+                    $facetValues = explode('_', $queryParams['__' . $facetName]);
+                    $facetValues = array_fill_keys($facetValues, '1');
+                    $queryParams[$facetName] = $facetValues;
+                }
                 if (isset($queryParams[$facetName])):
                     foreach (array_keys($queryParams[$facetName]) as $facetValue):
                         $this->filterForm->add(['type' => 'hidden', 'name' => $facetName . '[' . $facetValue . ']',
@@ -109,7 +129,8 @@ $this->headScript()->captureStart();
     <script type="text/javascript">
         ;(function($) {
             $(function() {
-                $('#form-jobsbymail-subscribe-form').find('button.btn-info').click();
+                $('#form-jobsbymail-subscribe-form').find('button.btn-info').click()
+                    .end().find('#job-by-mail-subscribe-label').html('Informiert werden, sobald Jobs zu Ihrer Suchanfrage verfügbar sind.');
             });
         })(jQuery);
     </script>
