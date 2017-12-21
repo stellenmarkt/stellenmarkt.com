@@ -65,7 +65,8 @@ return [
              'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
              'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
              'jobs-by-mail/mail/jobs' => __DIR__ . '/../view/jobs-by-mail/mail/jobs.phtml',         
-             'jobs-by-mail/mail/confirmation' => __DIR__ . '/../view/jobs-by-mail/mail/confirmation.phtml',   
+             'jobs-by-mail/mail/confirmation' => __DIR__ . '/../view/jobs-by-mail/mail/confirmation.phtml',
+             'startpage'  => __DIR__ . '/../view/startpage.phtml',
          ],
     ],
     'translator'   => [

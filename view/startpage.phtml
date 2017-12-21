@@ -1,0 +1,447 @@
+<?php
+/**
+ * Gastrojobs24
+ *
+ * General layout template file. Defines the general layout.
+ *
+ * @copyright (c) 2013 - 2016 Cross Solution (http://cross-solution.de)
+ * @license   Gastrojobs
+ */
+
+/* @var $options \Core\Options\ModuleOptions */
+$options = $this->services('Core/Options');
+$languages = $options->getSupportedLanguages();
+$lang = $this->params('lang');
+
+
+// See: http://yawik.readthedocs.org/en/latest/modules/core/notifications.html
+
+$notifications = $this->partial('core/notifications');
+
+// set default page title
+
+$this->headTitle($this->translate('Gastrojob24'))->setSeparator(' | ')->setAutoEscape(false);
+
+// set default keywords
+
+$this->headMeta()->setCharset("utf-8");
+$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
+
+$this->configHeadScript()->setAllowArbitraryAttributes(true);
+$this->configHeadScript()->prependFile($this->basepath('Core/js/core.init.js'));
+$this->configHeadScript()->prependFile($this->basePath('/assets/pnotify/pnotify.custom.min.js'), 'text/javascript');
+$this->configHeadScript()->prependFile($this->basePath('/assets/bootstrap/js/bootstrap.min.js'));
+$this->configHeadScript()->prependFile($this->basePath('/assets/jquery/jquery.min.js'));
+$this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/select2.min.js'));
+if ($lang!='en') {
+    $this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/i18n/' . $lang . '.js'));
+}
+$this->headLink()->appendStylesheet($this->basePath('/assets/select2/css/select2.css'));
+$this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '";'
+    . 'var basePath="' . $this->basePath() . '";');
+
+$this->headLink()->prependStylesheet($this->basePath() . '/Gastro24/Gastro24.css');
+$this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.custom.min.css'));
+$this->headLink()->prependStylesheet('/blog/wp-content/plugins/dk-pricr-responsive-pricing-table/css/rpt_style.min.css?ver=4.7.5');
+
+foreach ($languages as $lang) {
+    $this->headLink()->appendAlternate(
+        preg_replace('~^'.$this->basepath('/'.$this->params('lang')).'~',
+            $this->basepath('/'.$lang),$_SERVER['REQUEST_URI']),
+        'hreflang',
+        $this->headTitle()->setTranslator()->renderTitle() ,
+        array('hreflang'=>$lang));
+}
+?>
+
+<?php echo $this->doctype(); ?>
+<html lang="<?php echo $this->params('lang') ?>">
+<head>
+    <?php echo $this->headTitle() ?>
+    <?php echo $this->headMeta() ?>
+    <?php echo $this->configHeadScript() ?>
+    <?php echo $this->headLink() ?>
+    <?php echo $this->headStyle() ?>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MCDJ26Q');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body class="home">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCDJ26Q"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="wrapper">
+        <div id="bg-full">
+            <span class="bg-static"></span>
+        </div>
+    <header id="header" role="banner">
+        <div class="navbar">
+            <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse"
+                            type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-xs menu-logo" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">
+                        <img src="<?php echo $this->basepath('/Gastro24/gastrojob24_white.svg') ?>" alt="Gastrojob24 Schweiz" class="menu-logo">
+                    </a>
+                    <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">G24</a>
+                </div>
+
+                <?= $this->loginInfo(array('lang' => $lang ));?>
+                <?= $this->navigation('Core/Navigation')
+                         ->setAcl($this->services('acl'))
+                         ->setRole($this->auth('role'))
+                         ->menu()
+                         ->setMaxDepth(0) // only show the top level entries
+                         ->renderPartial(null, 'main-navigation');
+//                         ->setUlClass('nav navbar-nav pull-right')//renderPartial(null, 'main-navigation')
+                ?>
+            </nav>
+            <!-- /main-navigation -->
+        </div>
+        <?php
+        /* @todo Probably, we should create a dedicated IndexController to inject this dependencies. */
+        $form = $this->services('forms.Jobs/JobboardSearch');
+        $form->setButtonElement('q');
+        $form->setAttribute('action', $this->url('lang/jobboard', [], true));
+
+        ?>
+        <div class="container jumbotron text-center">
+            <h1>Jobs für Gastronomie Fachkräfte</h1>
+            <p class="lead">Spannende Jobs für Gastronomie, Hotellerie und Tourismus auf einen Klick finden</p>
+            <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
+                <div class="search-form-container">
+                    <?=$this->searchForm($form);?>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="scroll-arrow" style="display: none;">
+        <span class="arrow-icon"></span>
+    </div>
+</div>
+
+<main id="content">
+    <?php echo $notifications?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="h5 text-center">Unternehmen mit freien Gastronomie Stellen</h2>
+                <div class="row logo-slider">
+
+
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-3  col-md-1">
+                        <a href="">
+                            <div class="frame">
+                                <img src="https://image.migros.ch/jobs/original/e9b5646942ce52afed859b7e7b687bafdbfcb855/230-de.png"/>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="h5 text-center">Gastro Jobs nach Berufsfeld</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3 class="h6">Küche & Lebensmittel Jobs</h3>
+                        <nav>
+                            <ul class="list-unstyled">
+                                <li><a href="/de/jobs/diaetkoch.html">Diätkoch / Diätköchin</a></li>
+                                <li><a href="/de/jobs/kuechenchef.html">Küchenchef/-in</a></li>
+                                <li><a href="/de/jobs/sous-chef.html">Sous Chef</a></li>
+                                <li><a href="/de/jobs/jungkoch.html">Jungkoch / Jungköchin</a></li>
+                                <li><a href="/de/jobs/koch.html">Koch / Köchin</a></li>
+                                <li><a href="/de/jobs/hilfskoch.html">Hilfskoch / Hilfsköchin</a></li>
+                                <li><a href="/de/jobs/alleinkoch.html">Alleinkoch / Alleinköchin</a></li>
+                                <li><a href="/de/jobs/konditor-confiseur.html">Konditor / Confiseur</a></li>
+                                <li><a href="/de/jobs/baecker.html">Bäcker/-in</a></li>
+                                <li><a href="/de/jobs/metzger.html">Metzger/-in</a></li>
+                                <li><a href="/de/jobs/ernaehrungsberater.html">Ernährungsberater/-in</a></li>
+                                <li><a href="/de/jobs/lebesmitteltechnologe.html">Lebensmitteltechnologe / Lebensmitteltechnologin</a></li>
+                                <li><a href="/de/jobs/lebensmittelinspektor.html">Lebensmittelinspektor/-in</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="h6">Service & Restaurant Jobs</h3>
+                        <nav>
+                            <ul class="list-unstyled">
+                                <li><a href="/de/jobs/restaurationsfachmann.html">Restaurationsfachmann /-frau</a></li>
+                                <li><a href="/de/jobs/servicemitarbeiter.html">Servicemitarbeiter/-in</a></li>
+                                <li><a href="/de/jobs/chef-de-rang.html">Chef de Rang</a></li>
+                                <li><a href="/de/jobs/barkeeper.html">Barkeeper</a></li><li><a href="/de/jobs/barista.html">Barista</a></li>
+                                <li><a href="/de/jobs/restaurant-manager.html">Restaurant Manager/-in</a></li>
+                                <li><a href="/de/jobs/sommelier.html">Sommelier / Sommelière</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="h6">Hotel & Tourismus Jobs</h3>
+                        <nav>
+                            <ul class="list-unstyled">
+                                <li><a href="/de/jobs/hotelfachmann.html">Hotelfachmann / Hotelfachfrau</a></li>
+                                <li><a href="/de/jobs/wellness-spa-beauty.html">Wellness / Spa &amp; Beauty</a></li>
+                                <li><a href="/de/jobs/hoteldirektion.html">Hoteldirektion / Hotelleitung</a></li>
+                                <li><a href="/de/jobs/concierge-room-service.html">Concierge / Room Service</a></li>
+                                <li><a href="/de/jobs/housekeeping-zimmermaedchen.html">Housekeeping / Zimmermädchen</a></li>
+                                <li><a href="/de/jobs/hauswirtschaft.html">Hauswirtschaft / Wäscherei</a></li>
+                                <li><a href="/de/jobs/rezeption-hotelempfang.html">Rezeption / Hotelempfang</a></li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="h6">Administration & Saison Jobs</h3>
+                        <nav>
+                            <ul class="list-unstyled">
+                                <li><a href="/de/jobs/marketing-sales.html">Marketing / Sales</a></li>
+                                <li><a href="/de/jobs/administration-back-office.html">Administration / Back Office</a></li>
+                                <li><a href="/de/jobs/reisefuehrer-tourguide.html">Reiseführer / Tour Guide</a></li>
+                                <li><a href="/de/jobs/kreuzfahrt.html">Kreuzfahrt</a></li>
+                                <li><a href="/de/jobs/animation-entertainment.html">Animation / Entertainment</a></li>
+                                <li><a href="/de/jobs/casino.html">Casino</a></li>
+                                <li><a href="/de/jobs/fitness.html">Fitness</a></li>
+                                <li><a href="/de/jobs/studenten.html">Studenten</a></li>
+                                <li><a href="/de/jobs/hilfskraefte.html">Hilfskräfte</a></li>
+                                <li><a href="/de/jobs/teilzeit.html">Teilzeit</a></li>
+                                <li><a href="/de/jobs/saison.html">Saison</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-8 region col-centered text-center">
+                <h2 class="h5 text-center">Gastro Jobs nach Region</h2>
+                <nav>
+                    <ul class="list-inline ">
+                        <li><a href="/de/jobs/region-appenzell-ausserrhoden.html">Appenzell Ausserrhoden</a></li>
+                        <li><a href="/de/jobs/region-appenzell-innerrhoden.html">Appenzell Innerrhoden</a></li>
+                        <li><a href="/de/jobs/region-glarus.html">Glarus</a></li>
+                        <li><a href="/de/jobs/region-liechtenstein.html">Liechtenstein</a></li>
+                        <li><a href="/de/jobs/region-schaffhausen.html">Schaffhausen</a></li>
+                        <li><a href="/de/jobs/region-st-gallen.html">St. Gallen</a></li>
+                        <li><a href="/de/jobs/region-thurgau.html">Thurgau</a></li>
+                        <li><a href="/de/jobs/region-graubuenden.html">Graubünden</a></li>
+                        <li><a href="/de/jobs/region-aargau.html">Aargau</a></li>
+                        <li><a href="/de/jobs/region-basel-landschaft.html">Basel-Landschaft</a></li>
+                        <li><a href="/de/jobs/region-basel-stadt.html">Basel-Stadt</a></li>
+                        <li><a href="/de/jobs/region-bern.html">Bern</a></li>
+                        <li><a href="/de/jobs/region-jura.html">Jura</a></li>
+                        <li><a href="/de/jobs/region-solothurn.html">Solothurn</a></li>
+                        <li><a href="/de/jobs/region-freiburg.html">Freiburg</a></li>
+                        <li><a href="/de/jobs/region-genf.html">Genf</a></li>
+                        <li><a href="/de/jobs/region-neuenburg.html">Neuenburg</a></li>
+                        <li><a href="/de/jobs/region-waadt.html">Waadt</a></li>
+                        <li><a href="/de/jobs/region-wallis.html">Wallis</a></li>
+                        <li><a href="/de/jobs/region-luzern.html">Luzern</a></li>
+                        <li><a href="/de/jobs/region-nidwalden.html">Nidwalden</a></li>
+                        <li><a href="/de/jobs/region-obwalden.html">Obwalden</a></li>
+                        <li><a href="/de/jobs/region-schwyz.html">Schwyz</a></li>
+                        <li><a href="/de/jobs/region-uri.html">Uri</a></li>
+                        <li><a href="/de/jobs/region-zug.html">Zug</a></li>
+                        <li><a href="/de/jobs/region-zuerich.html">Zürich</a></li>
+                        <li><a href="/de/jobs/region-tessin.html">Tessin</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="h5 text-center">Jobs schalten und noch heute geeignete Bewerbungen erhalten</h3>
+
+                <a href="de/wp/page/stellenanzeigen-schalten" class="btn-block-sm margin-top-smaller btn btn-primary btn-large outline"><span>Jetzt Job inserieren</span></a>
+                <p class="margin-top-small text-small text-muted">Kostenlos bis März 2018 Jobs insieren</p>
+
+                <div class="col-md-4">
+                    <h3 class="h6">Hohe Reichweite</h3>
+                        <p>Ein Job-Inserat, viele Kanäle: Partnernetzwerk, Jobmail-Newsletter, Suchmaschinen und Social Media.</p>
+
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h6">Bewerbermanagement & Jobprofil</h3>
+                        <p>Umfangreiches Bewerbermanagement-System mit Statistiken, E-Mail Vorlagen für Zu- und Absagen, Job-Templates und Vielem mehr. </p>
+
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h6">Einfach & günstig</h3>
+                        <p>Unkompliziert Jobs inserieren: Bequem mit Kreditkarte, PayPal oder Rechnung bezahlen.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- /container -->
+<!--
+ <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
+ <?=$this->languageSwitcher()?>
+-->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <h5>Über Gastrojob24</h5>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a title="" href="/de/wp/page/ueber-uns">Wer wir sind</a></li>
+                        <li><a title="" href="/de/wp/page/partnernetzwerk">Partnernetzwerk</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <h5>Social Media</h5>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a title="Gastrojob24.ch bei Facebook" href="https://www.facebook.com/gastrojob24.ch/" target="_blank">Facebook</a></li>
+                        <li><a title="Gastrojob24.ch bei Twitter" href="https://twitter.com/Gastrojob24_CH" target="_blank">Twitter</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <h5>Für Arbeitgeber</h5>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>">Login</a></li>
+                        <li><a title="Registrieren" href="<?=$this->url('lang/auth',[],  true)?>#register">Registieren</a></li>
+                        <li><a title="Preise & Leistungen" href="/de/wp/page/stellenanzeigen-schalten">Preise & Leistungen</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-offset-3 col-md-3">
+                <!--<h5>International</h5>-->
+
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <nav>
+                    <ul class="list-inline">
+                        <li><a title="Impressum" href="/de/wp/page/impressum">Impressum</a></li>
+                        <li><a title="AGB" href="/de/wp/page/agb">AGB</a></li>
+                        <li><a title="Kontakt" href="/de/wp/page/kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <p>Copyright &copy; Gastrojob24 2003 - 2018</p>
+            </div>
+        </div>
+</footer>
+<?php echo $this->partial("piwik") ?>
+</body>
+</html>
