@@ -79,7 +79,7 @@ foreach ($languages as $lang) {
         <div id="bg-full">
             <span class="bg-static"></span>
         </div>
-    <header id="header" role="banner">
+    <header id="header" class="startpage" role="banner">
         <div class="navbar">
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
                 <div class="navbar-header">
@@ -159,11 +159,11 @@ $this->headTitle($this->translate('Home'));
                             <div class="item<?=$active?> container">
                                 <div class="row">
                                     <?php foreach ($comps as $term => $spec):?>
-                                        <div class="col-xs-6 col-sm-3  col-md-1">
+                                        <div class="col-md-2">
                                             <a href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
                                 <div class="frame">
                                 <?php if ($spec[1]): ?>
-                                    <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>"  style="max-width: 120px">
+                                    <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>" >
                                 <?php else: ?>
                                     <?=$spec[0]?>
                                 <?php endif ?>
