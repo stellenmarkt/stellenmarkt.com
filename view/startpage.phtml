@@ -100,9 +100,9 @@ foreach ($languages as $lang) {
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="wrapper">
-        <div id="bg-full">
-            <span class="bg-static"></span>
-        </div>
+    <div id="bg-full">
+        <span class="bg-static"></span>
+    </div>
     <header id="header" class="startpage" role="banner">
         <div class="navbar">
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
@@ -216,11 +216,15 @@ $this->headTitle($this->translate('Home'));
         foreach ($queries->getTabs() as $tab => $sections):
             $tabSlug = strtolower(str_replace(' ', '', $tab));
             $tabs[$tabSlug] = $tab;
+            $extra_css=($tab=="Jobs in deiner Region")?' region ':'';
             $sectionHtml .= '<hr><h2 class="text-center">' . $tab . '</h2><div class="row">';
             $active='';
             foreach ($sections as $section => $links):
-                $sectionHtml .= '<div class="col-md-4"><h3>'. $section .'</h3><ul>';
-
+                if ($tab == 'Jobs in deiner Region') {
+                    $sectionHtml .= '<div class="region"><ul>';
+                }else {
+                    $sectionHtml .= '<div class="col-md-4' . $extra_css . '"><h3>'. $section .'</h3><ul>';
+                }
                 foreach ($links as $spec):
                     $sectionHtml .= '<li><a href="' .
                                     $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' .
