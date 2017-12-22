@@ -216,14 +216,13 @@ $this->headTitle($this->translate('Home'));
         foreach ($queries->getTabs() as $tab => $sections):
             $tabSlug = strtolower(str_replace(' ', '', $tab));
             $tabs[$tabSlug] = $tab;
-            $extra_css=($tab=="Gastro Jobs nach Region")?' region ':'';
             $sectionHtml .= '<hr><h2 class="text-center">' . $tab . '</h2><div class="row">';
             $active='';
             foreach ($sections as $section => $links):
-                if ($tab == 'Jobs in deiner Region') {
-                    $sectionHtml .= '<div class="region"><ul>';
+                if ($tab == 'Gastro Jobs nach Region') {
+                    $sectionHtml .= '<div class="col-md-12 region"><ul>';
                 }else {
-                    $sectionHtml .= '<div class="col-md-4' . $extra_css . '"><h3>'. $section .'</h3><ul>';
+                    $sectionHtml .= '<div class="col-md-4"><h3>'. $section .'</h3><ul>';
                 }
                 foreach ($links as $spec):
                     $sectionHtml .= '<li><a href="' .
