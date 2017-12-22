@@ -4,14 +4,19 @@
 $searchProfile = $this->searchProfile;
 /** @var \JobsByMail\Service\Hash $hash */
 $hash = $this->hash;
+$width = "600px";
 ?>
+<table class="size margin-auto" style="background-color:#ffffff;max-width:<?=$width?>;width:100%;margin-left: auto;margin-right: auto;">
+    <tr>
+        <td align="center" style="text-align: left;padding: 20px 0; font-family:Helvetica,Arial,sans-serif;">
 <?=$this->partial('mail/header',[
-    'title' => $this->translate('Confirm your search profile.')
+    'title' => 'Suchprofil bestätigen',
+    'width'=>$width
 ])
 ?>
-<h1>Gastro Template</h1>
+
 <p>
     <a href="<?=$this->serverUrl($this->url('lang/jobsbymail/confirm', ['id' => $searchProfile->getId(), 'hash' => $hash->generate($searchProfile)]))?>"><?=$this->translate('Confirm your search profile.')?></a>
 </p>
-
-<?=$this->partial('mail/footer')?>
+</td><tr></table>
+<?=$this->partial('mail/footer',['width'=>$width])?>
