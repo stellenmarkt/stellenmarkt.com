@@ -1,9 +1,12 @@
 @import "../../../less/yawik.less";
 
+@g24-blue: #2e5b93;
+@g24-grey:  #242424;
+
 @font-size-base: 14px;
 @border-radius-base: 0px;
 @headings-font-weight: 600;
-@brand-primary: #2e5b93;
+@brand-primary: @g24-blue;
 @footer-height: 49px;
 @navbar-height: 80px;
 @navbar-default-link-color: #fff;
@@ -13,15 +16,19 @@
 @nav-link-hover-bg: transparent;
 @navbar-inverse-toggle-hover-bg: transparent;
 
-@link-color: #242424;
-@link-hover-color: #242424;
 
-@btn-primary-bg: #2e5b93;
+
+@link-color: @g24-grey;
+@link-hover-color: @g24-grey;
+
+@btn-primary-bg: @g24-blue;
 
 @font-size-h2: 21px;
 @font-size-h3: 14px;
 @font-size-h4: 16px;
 @font-size-h5: 14px;
+
+
 
 html {
     height: 100%;
@@ -217,7 +224,7 @@ body {
         color: #fff;
     }
     hr {
-        border-top: 1px solid #2e5b93;
+        border-top: 1px solid @g24-blue;
     }
 }
 
@@ -358,5 +365,23 @@ main {
                 display: inline-block;
             }
         }
+    }
+}
+
+.home .search-form-container {
+    .btn-default {
+        position: absolute;
+        right: 100px;
+        top: 10px;
+    }
+    .btn-primary {
+        height: 55px;
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    input {
+        height: 55px;
+        font-size: 16px;
+        padding: 0 20px;
     }
 }
