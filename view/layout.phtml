@@ -92,7 +92,6 @@ foreach ($languages as $lang) {
                     </a>
                     <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">G24</a>
                 </div>
-
                 <?= $this->loginInfo(array('lang' => $lang ));?>
                 <?= $this->navigation('Core/Navigation')
                          ->setAcl($this->services('acl'))

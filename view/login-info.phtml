@@ -11,37 +11,34 @@
 <?php $switchUserSession = new \Zend\Session\Container(\Auth\Controller\Plugin\UserSwitcher::SESSION_NAMESPACE);
 $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
 <ul id="yk-login-info" class="nav navbar-nav navbar-collapse collapse navbar-right">
-    <li class="dropdown">
+    <li class="xdropdown">
 
         <?php if ($this->auth()->isLoggedIn()):?>
 
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <?php if ($switchUserSession->isSwitchedUser): ?> [<?=$this->translate('switched')?>]<?php endif ?>
-                (<?php echo $this->translate($this->acl()->getUser()->getRole())?>)
-                <strong><?php echo $this->auth('info')->getDisplayName()?></strong>
+                (<?= $this->translate($this->acl()->getUser()->getRole())?>)
+                <strong><?= $this->auth('info')->getDisplayName()?></strong>
                 <b class="caret"></b>
             </a>
 
             <ul class="dropdown-menu pull-right">
                 <li>
-                    <a href="<?php echo $this->url('lang/my', array('action' => 'profile', 'lang' => $lang, true)) ?>">
-                        <span class="yk-icon yk-icon-user fa-fw"></span> <?php echo $this->translate('My profile')?></a>
+                    <a href="<?=$this->url('lang/my', array('action' => 'profile', 'lang' => $lang, true)) ?>">
+                        <span class="yk-icon yk-icon-user fa-fw"></span> <?=$this->translate('My profile')?></a>
                 </li>
                 <li>
-                    <a href="<?php echo $this->url('lang/my', array('action' => 'password', 'lang' => $lang), true) ?>"><span class="yk-icon yk-icon-password fa-fw"></span> <?php echo $this->translate('Change password')?></a>
+                    <a href="<?=$this->url('lang/my', array('action' => 'password', 'lang' => $lang), true) ?>"><span class="yk-icon yk-icon-password fa-fw"></span> <?=$this->translate('Change password')?></a>
                 </li>
                 <?php if ($this->acl()->isRole(\Auth\Entity\User::ROLE_RECRUITER)): ?>
                     <?php
-                    /*<li>
-                      <a href="<?php echo $this->url('lang/my-groups', array('lang' => $lang)) ?>"><span class="yk-icon yk-icon-group"></span> <?php echo $this->translate('Manage groups') ?></a>
-                      </li>*/
 
                     $user = $this->auth()->getUser(); /* @var $user \Auth\Entity\User */
                     $org  = $user->getOrganization();
                     if ($org): /* An Anonymous user does not have the OrganizationReference */
                         if (!$org->hasAssociation() || $org->isOwner() ):?>
                             <li>
-                            <a href="<?php echo $this->url('lang/my-organization', array('lang' => $lang)) ?>"><span class="yk-icon fa-building fa-fw"></span> <?php
+                            <a href="<?=$this->url('lang/my-organization', array('lang' => $lang)) ?>"><span class="yk-icon fa-building fa-fw"></span> <?php
                                 if (!$org->hasAssociation()) {
                                     echo $this->translate('Create my organization');
                                 } else {
@@ -79,7 +76,6 @@ $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
                                        var $modal = $('#su-select-dialog');
                                        $modal.modal({backdrop:false});
                                        return false;
-
                                    }) ;
                                 });
                             })(jQuery);
@@ -94,7 +90,7 @@ $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
 
 
         <?php else: ?>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo sprintf(
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"><?= sprintf(
                     $this->translate('Hello %s'),
                     '<strong>' . $this->translate('Guest') . '</strong>'
                 )?><b class="caret"></b></a>
@@ -107,16 +103,16 @@ $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
                         'query' => array(
                             'ref' => urlencode($ref),
                         )), true)?>">
-                        <span class="yk-icon yk-icon-login fa-fw"></span> <?php echo $this->translate('Login')?>
+                        <span class="yk-icon yk-icon-login fa-fw"></span> <?= $this->translate('Login')?>
                     </a>
                 </li>
                 <?php if (!isset($this->allowRegister) || $this->allowRegister == true): ?>
                     <li class="divider"></li>
-                    <li class="disabled dropdown-header"><a><?php echo $this->translate('Login via')?>...</a></li>
+                    <li class="disabled dropdown-header"><a><?= $this->translate('Login via')?>...</a></li>
                     <?php foreach ($this->socialButtons() as $provider => $name): ?>
                         <li>
-                            <a class="login-link" title="<?php echo sprintf($this->translate('Login with %s'), $name)?>" href="<?php echo $this->url('auth-provider', array('provider' => $provider), array('query' => array('ref' => urlencode($ref))))?>">
-                                <span class="fa fa-<?php echo $provider?> fa-fw"></span> <?php echo $name?>
+                            <a class="login-link" title="<?= sprintf($this->translate('Login with %s'), $name)?>" href="<?=$this->url('auth-provider', ['provider' => $provider], ['query' => ['ref' => urlencode($ref)]])?>">
+                                <span class="fa fa-<?php echo $provider?> fa-fw"></span> <?= $name?>
                             </a>
                         </li>
                     <?php endforeach ?>

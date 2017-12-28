@@ -2,6 +2,7 @@
 
 @g24-blue: #2e5b93;
 @g24-grey:  #242424;
+@g24-white: #ffffff;
 
 @font-size-base: 14px;
 @border-radius-base: 0px;
@@ -9,8 +10,8 @@
 @brand-primary: @g24-blue;
 @footer-height: 49px;
 @navbar-height: 80px;
-@navbar-default-link-color: #fff;
-@navbar-default-link-hover-color: #fff;
+@navbar-default-link-color: @g24-white;
+@navbar-default-link-hover-color: @g24-white;
 @navbar-default-link-hover-bg: transparent;
 @navbar-default-bg: transparent;
 @nav-link-hover-bg: transparent;
@@ -62,7 +63,7 @@ body {
     }
 
     .content-area {
-        background-color: #ffffff;
+        background-color: @g24-white;
         padding: 30px 20px;
     }
 }
@@ -92,7 +93,6 @@ body {
     .search-form-container {
         background-color: rgba(0, 0, 0, 0.7);
         border-radius: 5px;
-        z-index: 1;
         position: relative;
         color: #fff;
         padding: 20px 20px;
@@ -120,56 +120,37 @@ body {
   max-width: 200px;
 }
 
-#bg-full {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
 
 #wrapper {
     text-align: center;
     min-height: 600px;
-    position: relative;
     height: 100%;
+    #bg-full {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+    .bg-static {
+        background-image: url(/Gastro24/background_gastrojob24_img.jpg);
+        background-color: #999;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: block;
+        height: 100%;
+        min-height: 600px;
+    }
+
 }
 
-.bg-static {
-    background-image: url(/Gastro24/background_gastrojob24_img.jpg);
-    background-color: #999;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: block;
-    height: 100%;
-    min-height: 600px;
-}
 
-.scroll-arrow {
-    position: absolute;
-    bottom: 30px;
-    bottom: 3rem;
-    right: 0;
-    left: 0;
-    width: 55px;
-    width: 5.5rem;
-    margin: auto;
-    cursor: pointer;
-    z-index: 1;
-}
-
-#header {
+.home #header {
     left: 0;
     position: relative;
     right: 0;
     top: 0;
-    z-index: 2;
-    .startpage {
-        height: 350px!important;
-    }
-}
-#header.startpage {
     background-image: linear-gradient( #121212, rgba(0, 0, 0, 0.001));
+    height: 350px!important;
 }
 
 #form-jobsbymail-subscribe-form button.btn-info {
@@ -214,7 +195,6 @@ body {
     width: 5.5rem;
     margin: auto;
     cursor: pointer;
-    z-index: 1;
 
     .arrow-icon {
         position: relative;
@@ -243,7 +223,6 @@ body {
 .jumbotron {
     margin-top: 100px;
     position: relative;
-    z-index: 1;
     margin-bottom: 25px;
     padding: 0;
     color: #fff;
@@ -360,24 +339,25 @@ main {
     }
 }
 
-#yk-login-info {
+.home #yk-login-info {
+    position: relative;
     background-color: transparent;
     a {
-        color: #fff;
+        color: @g24-white;
     }
 }
 
 .collapsed {
     background-color: transparent;
-    border-color: #fff;
+    border-color: @g24-white;
     border-radius: 4px;
     .icon-bar {
-        background-color: #fff;
+        background-color: @g24-white;
     }
 }
 
 .navbar-brand {
-    color: #fff;
+    color: @g24-white;
 }
 
 @media(min-width: @screen-sm) {
@@ -399,9 +379,9 @@ main {
         }
     }
 
-    .startpage #main-navigation {
+    .home #main-navigation {
         a {
-            color: #fff;
+            color: @g24-white;
         }
         a:hover {
             background-color: transparent;
@@ -424,7 +404,7 @@ main {
             color: #22436c;
         }
     }
-    .startpage #main-navigation {
+    .home #main-navigation {
         a {
             color: red;
         }

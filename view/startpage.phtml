@@ -33,6 +33,7 @@ $this->configHeadScript()->prependFile($this->basePath('/assets/pnotify/pnotify.
 $this->configHeadScript()->prependFile($this->basePath('/assets/bootstrap/js/bootstrap.min.js'));
 $this->configHeadScript()->prependFile($this->basePath('/assets/jquery/jquery.min.js'));
 $this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/select2.min.js'));
+$this->configHeadScript()->appendFile($this->basePath('Gastro24/jquery.matchHeight.js'))->appendFile($this->basePath('Gastro24/index.js'));
 if ($lang!='en') {
     $this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/i18n/' . $lang . '.js'));
 }
@@ -82,8 +83,6 @@ foreach ($languages as $lang) {
         });
         //-->
     </script>
-    <?php echo $this->configHeadScript() ?>
-    <?php echo $this->headLink() ?>
     <?php echo $this->headStyle() ?>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -102,7 +101,7 @@ foreach ($languages as $lang) {
     <div id="bg-full">
         <span class="bg-static"></span>
     </div>
-    <header id="header" class="startpage" role="banner">
+    <header id="header" role="banner">
         <div class="navbar">
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#main-navigation" data-toggle="collapse" type="button">
@@ -117,9 +116,7 @@ foreach ($languages as $lang) {
                 <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">G24</a>
             </div>
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
-
-
-                <?= $this->loginInfo(array('lang' => $lang ));?>
+                <?=$this->loginInfo(array('lang' => $lang ));?>
                 <?= $this->navigation('Core/Navigation')
                          ->setAcl($this->services('acl'))
                          ->setRole($this->auth('role'))
@@ -165,42 +162,42 @@ $this->headTitle($this->translate('Home'));
     <?php $companies = $queries->getCompanies();?>
     <?php if (count($companies)):
     $companies = array_chunk($companies, 6, true);?>
-    <div id="logos-selected">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center">Unternehmen mit freien Gastronomie Stellen</h2>
-                <div id="companies-slider" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <?php for ($i=0, $c=count($companies); $i<$c; $i+=1):?>
-                            <li<?=0===$i ? ' class="active"' : '' ?> style="background-color: #666;" data-target="#companies-slider" data-slide-to="<?=$i?>"></li>
-                        <?php endfor ?>
-                    </ol>
+        <div id="logos-selected">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center">Unternehmen mit freien Gastronomie Stellen</h2>
+                    <div id="companies-slider" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <?php for ($i=0, $c=count($companies); $i<$c; $i+=1):?>
+                                <li<?=0===$i ? ' class="active"' : '' ?> style="background-color: #666;" data-target="#companies-slider" data-slide-to="<?=$i?>"></li>
+                            <?php endfor ?>
+                        </ol>
 
-                    <div class="carousel-inner">
-                        <?php $active=" active";
-                        foreach ($companies as $comps):?>
-                            <div class="item<?=$active?> container">
-                                <div class="row">
-                                    <?php foreach ($comps as $term => $spec):?>
-                                        <div class="col-md-2">
-                                            <a href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
-                                <div class="frame">
-                                <?php if ($spec[1]): ?>
-                                    <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>" >
-                                <?php else: ?>
-                                    <?=$spec[0]?>
-                                <?php endif ?>
-                                </div></a>
-                                        </div>
-                                    <?php endforeach ?>
+                        <div class="carousel-inner">
+                            <?php $active=" active";
+                            foreach ($companies as $comps):?>
+                                <div class="item<?=$active?> container">
+                                    <div class="row">
+                                        <?php foreach ($comps as $term => $spec):?>
+                                            <div class="col-md-2">
+                                                <a href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
+                                                    <div class="frame">
+                                                        <?php if ($spec[1]): ?>
+                                                            <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>" >
+                                                        <?php else: ?>
+                                                            <?=$spec[0]?>
+                                                        <?php endif ?>
+                                                    </div></a>
+                                            </div>
+                                        <?php endforeach ?>
+                                    </div>
                                 </div>
-                            </div>
-                            <?php $active = ''; endforeach ?>
+                                <?php $active = ''; endforeach ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-   </div>
     <?php endif ?>
 
 
@@ -267,10 +264,6 @@ $this->headTitle($this->translate('Home'));
     </div>
 </main>
 <!-- /container -->
-<!--
- <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
- <?=$this->languageSwitcher()?>
--->
 <?php echo $this->partial("footer") ?>
 <?php echo $this->partial("piwik") ?>
 </body>
