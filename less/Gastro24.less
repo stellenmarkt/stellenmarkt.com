@@ -12,15 +12,17 @@
 @navbar-height: 80px;
 @navbar-default-link-color: @g24-white;
 @navbar-default-link-hover-color: @g24-white;
-@navbar-default-link-hover-bg: transparent;
+@navbar-default-link-hover-bg: yellow;
 @navbar-default-bg: transparent;
 @nav-link-hover-bg: transparent;
-@navbar-inverse-toggle-hover-bg: transparent;
+@navbar-inverse-toggle-hover-bg: @g24-blue;
+@dropdown-link-active-bg: @g24-blue;
 
 
 
 @link-color: @g24-grey;
 @link-hover-color: @g24-grey;
+@nav-pills-active-link-hover-color: green;
 
 @btn-primary-bg: @g24-blue;
 
@@ -377,6 +379,11 @@ main {
         .dropdown-menu > li > a {
             color: #22436c;
         }
+        .dropdown-menu > li > a:hover {
+            color: @g24-white;
+            background-color: @navbar-inverse-toggle-hover-bg;
+        }
+
     }
 
     .home #main-navigation {
