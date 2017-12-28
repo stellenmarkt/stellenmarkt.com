@@ -44,34 +44,8 @@ body {
         width: 200px;
     }
 }
-#yk-login-info {
-  float: left;
-}
-#main-navigation {
-    height: 145px!important;
-    font-weight: 600;
 
-    ul li a.inverted {
-        border: 1px solid #fff;
-        background-color: transparent;
-    }
-    .navbar-nav>li>a {
-    	padding-top: 10px;
-        padding-bottom: 10px;
-        margin-top: 40px;
-    }
-    .dropdown-menu>li>a {
-        color: #22436c;
-    }
-}
-.startpage #main-navigation {
-    a {
-        color: #fff;
-    }
-    a:hover {
-        background-color: transparent;
-    }
-}
+
 
 .featured-image-box {
     border: 1px solid #ccc;
@@ -385,3 +359,79 @@ main {
         padding: 0 20px;
     }
 }
+
+#yk-login-info {
+    background-color: transparent;
+    a {
+        color: #fff;
+    }
+}
+
+.collapsed {
+    background-color: transparent;
+    border-color: #fff;
+    border-radius: 4px;
+    .icon-bar {
+        background-color: #fff;
+    }
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+@media(min-width: @screen-sm) {
+    #main-navigation {
+        height: 145px !important;
+        font-weight: 600;
+
+        ul li a.inverted {
+            border: 1px solid #fff;
+            background-color: transparent;
+        }
+        .navbar-nav > li > a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .dropdown-menu > li > a {
+            color: #22436c;
+        }
+    }
+
+    .startpage #main-navigation {
+        a {
+            color: #fff;
+        }
+        a:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+@media(max-width: @screen-sm) {
+    #main-navigation {
+        height: inherit;
+        ul li a.inverted {
+            border: 1px solid red;
+            background-color: yellow;
+        }
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .dropdown-menu>li>a {
+            color: #22436c;
+        }
+    }
+    .startpage #main-navigation {
+        a {
+            color: red;
+        }
+        a:hover {
+            background-color: yellow;
+        }
+    }
+
+}
+
