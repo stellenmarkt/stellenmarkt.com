@@ -17,21 +17,21 @@ return [
         'default' => [
             'settings' => [
                 'pages' => [
-                    'my-profile' => [
-                        'label' => /*@translate */ 'My profile',
-                        'route' => 'lang/my',
-                        'order' => 20,
-                    ],
-                    'my-password' => [
-                        'label' => /*@translate */ 'Change password',
-                        'route' => 'lang/my-password',
-                        'order' => 30,
-                    ],
-                    'my-organization' => [
-                        'label' => /*@translate */ 'My organization',
-                        'route' => 'lang/my-organization',
-                        'order' => 30,
-                    ],
+//                    'my-profile' => [
+//                        'label' => /*@translate */ 'My profile',
+//                        'route' => 'lang/my',
+//                        'order' => 20,
+//                    ],
+//                    'my-password' => [
+//                        'label' => /*@translate */ 'Change password',
+//                        'route' => 'lang/my-password',
+//                        'order' => 30,
+//                    ],
+//                    'my-organization' => [
+//                        'label' => /*@translate */ 'My organization',
+//                        'route' => 'lang/my-organization',
+//                        'order' => 30,
+//                    ],
                 ]
             ],
 
@@ -56,6 +56,7 @@ return [
             'ratgeber' => [
                 'label' => 'Ratgeber',
                 'route' => 'lang/wordpress',
+                'resource' => 'resource/ratgeber',
                 'params' => [
                     'type' => 'page',
                     'id' => 'ratgeber',
@@ -97,12 +98,14 @@ return [
         'rules' => [
             'guest' => [
                 'allow' => [
-                    'resource/stellenanzeigen-schalten'
+                    'resource/stellenanzeigen-schalten',
+                    'resource/ratgeber'
                 ]
             ],
             'user' => [
                 'deny' => [
-                    'resource/stellenanzeigen-schalten'
+                    'resource/stellenanzeigen-schalten',
+                    'resource/ratgeber'
                 ]
             ],
             'recruiter' => [
@@ -125,6 +128,6 @@ return [
         'settings' => null,
     ],
     'Core' => [
-        'settings' => null,
+      //  'settings' => null,
     ],
 ];
