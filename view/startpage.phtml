@@ -157,7 +157,7 @@ $this->headTitle($this->translate('Home'));
 
 ?>
 
-<main id="content">
+<main id="content" class="container-fluid">
     <?php echo $notifications?>
     <?php $companies = $queries->getCompanies();?>
     <?php if (count($companies)):

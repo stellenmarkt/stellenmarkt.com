@@ -44,6 +44,7 @@ return [
             'post-a-job' => [
                 'label' => 'Stellenanzeige schalten',
                 'route' => 'lang/wordpress',
+                'resource' => 'resource/stellenanzeigen-schalten',
                 'params' => [
                     'type' => 'page',
                     'id' => 'stellenanzeigen-schalten',
@@ -94,6 +95,16 @@ return [
      */
     'acl' => [
         'rules' => [
+            'guest' => [
+                'allow' => [
+                    'resource/stellenanzeigen-schalten'
+                ]
+            ],
+            'user' => [
+                'deny' => [
+                    'resource/stellenanzeigen-schalten'
+                ]
+            ],
             'recruiter' => [
                 'allow' => [
                     'route/logout'
@@ -101,6 +112,7 @@ return [
                 'deny' => [
                     'route/lang/applications',
                     'route/lang/auth',
+                    'resource/stellenanzeigen-schalten'
                 ],
             ],
         ],
