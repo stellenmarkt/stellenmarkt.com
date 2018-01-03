@@ -94,26 +94,28 @@ foreach ($languages as $lang) {
 
 </head>
 <body class="home">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCDJ26Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCDJ26Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <div id="wrapper">
     <div id="bg-full">
         <span class="bg-static"></span>
     </div>
     <header id="header" role="banner">
-        <div class="navbar">
-            <div class="navbar-header">
+        <div class="container navbar">
+		     <div class="row">
+               <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#main-navigation" data-toggle="collapse" type="button">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand hidden-xs menu-logo" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">
+                <a class="navbar-brand menu-logo" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">
                     <img src="<?php echo $this->basepath('/Gastro24/gastrojob24_white.svg') ?>" alt="Gastrojob24 Schweiz" class="menu-logo">
                 </a>
-                <a class="navbar-brand visible-xs" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">G24</a>
             </div>
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
                 <?=$this->loginInfo(array('lang' => $lang ));?>
@@ -137,13 +139,13 @@ foreach ($languages as $lang) {
         ?>
         <div class="container jumbotron text-center">
             <h1>Jobs für Gastronomie Fachkräfte</h1>
-            <p class="lead">Spannende Jobs für Gastronomie, Hotellerie und Tourismus auf einen Klick finden</p>
             <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
                 <div class="search-form-container">
                     <?=$this->searchForm($form);?>
                 </div>
             </nav>
         </div>
+      </div>
     </header>
     <div class="scroll-arrow">
         <span class="arrow-icon"></span>
