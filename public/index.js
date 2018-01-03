@@ -12,7 +12,7 @@
 ;(function ($) {
 
     $(function() {
-        $('.tab-pane .panel-body').matchHeight({
+        $('.eq_height .rpt_head').matchHeight({
             byRow: true,
             property: 'height',
             target: null,
