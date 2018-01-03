@@ -113,13 +113,15 @@ foreach ($languages as $lang) {
         <div id="formular">
         </div>
     </header>
-    <div class="scroll-arrow" style="display: none;">
-        <span class="arrow-icon"></span>
-    </div>
 
 <main id="content" class="container-fluid">
-    <?php echo $notifications?>
-    <?php echo $this->content; ?>
+    <div class="container">
+        <div class="row">
+           <?php echo $notifications?>
+           <?php echo $this->content; ?>
+        </div>
+    </div>
+
 </main>
 <!-- /container -->
 <!--
