@@ -426,6 +426,24 @@ main {
 
 }
 
+a[data-toggle="collapse"] {
+    &:before {
+        font-family: "FontAwesome";
+        content: "\f077";
+        float: right;
+    }
+    &.collapsed:before {
+        content: "\f078";
+    }
+    span {
+        display: none;
+    }
+    &.collapsed span {
+        display: block;
+    }
+}
+
+
 #rpt_pricr {
     border: solid 1px blue;
     margin-left: auto;
