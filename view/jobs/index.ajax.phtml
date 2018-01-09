@@ -57,7 +57,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                                 <?=$facetValue?> (<?=$facetValueCount?>)
                             </label>
                         </div>
-                    <?php if ($activeFacet): $facetsList[] = $facet; endif; endforeach;?>
+                    <?php if ($activeFacet): $facetsList[] = $facetValue; endif; endforeach;?>
                 </div>
                 </div> <!-- facets-collaps-* -->
             </div>
