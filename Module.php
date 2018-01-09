@@ -115,7 +115,9 @@ class Module
 
                 if (!$routeMatch) { return; }
 
-                if ('lang/landingPage' == $routeMatch->getMatchedRouteName()) {
+                $matchedRouteName = $routeMatch->getMatchedRouteName();
+
+                if ('lang/landingPage' == $matchedRouteName) {
                     $services = $event->getApplication()->getServiceManager();
                     $options = $services->get(Landingpages::class);
                     $term = $routeMatch->getParam('q');
@@ -135,7 +137,7 @@ class Module
                     return;
                 }
 
-                if ('lang/jobboard' == $routeMatch->getMatchedRouteName()) {
+                if ('lang/jobboard' == $matchedRouteName) {
                     $services = $event->getApplication()->getServiceManager();
                     $options = $services->get(Landingpages::class);
                     $query = $event->getRequest()->getQuery();
@@ -173,6 +175,11 @@ class Module
                         }
                     }
 
+                }
+
+                if ('lang/jobs/view' == $matchedRouteName) {
+                    $query = $event->getRequest()->getQuery();
+                    $query->set('id', $routeMatch->getParam('id'));
                 }
 
             }, -9999);
