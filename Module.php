@@ -142,6 +142,7 @@ class Module
 
                     foreach ([
                         'r' => '__region_MultiString',
+                        'l' => '__city_MultiString',
                         'c' => '__organizationTag',
                         'i' => '__industry_MultiString',
                         't' => '__employmentType_MultiString',

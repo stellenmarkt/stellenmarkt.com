@@ -47,6 +47,7 @@ $this->headScript()->captureStart();
                 console.debug($a, href);
                 if (href) {
                     href = href.replace(/__region_MultiString/, 'r')
+                               .replace(/__city_MultiString/, 'l')
                                .replace(/__organizationTag/, 'c')
                                .replace(/__industry_MultiString/, 'i')
                                .replace(/__employmentType_MultiString/, 't');

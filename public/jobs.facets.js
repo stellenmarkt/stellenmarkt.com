@@ -23,7 +23,7 @@
                     $form.append('<input type="hidden" class="facet-param" name="' + name + '">');
                 }
             });
-            var facets={ r: [], c: [], i: [], t: [] };
+            var facets={ r: [], l: [], c: [], i: [], t: [] };
 
             $form.find('.facet-param').each(function(){
                 var $checkbox = $(this);
@@ -31,6 +31,8 @@
                 var value=name.replace(/^[^\[]+\[(.*)\]$/, '$1');
                 if (name.match(/^region/)) {
                     facets.r.push(value);
+                } else if (name.match(/^city/)) {
+                    facets.l.push(value);
                 } else if (name.match(/^organiz/)) {
                     facets.c.push(value);
                 } else if (name.match(/^industry/)) {
