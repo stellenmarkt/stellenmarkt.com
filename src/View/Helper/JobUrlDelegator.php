@@ -10,7 +10,7 @@
 /** */
 namespace Gastro24\View\Helper;
 
-use Jobs\Entity\Job;
+use Jobs\Entity\JobInterface as Job;
 use Jobs\View\Helper\JobUrl;
 use Zend\View\Helper\AbstractHelper;
 

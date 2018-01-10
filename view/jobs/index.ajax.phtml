@@ -98,7 +98,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
     <?php
 
     $org = $job->getOrganization();
-    $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', [], ['query' => ['id' => $job->getId()]], true);
+    $href = $job->getLink() ? $job->getLink() : $this->jobUrl($job, ['linkOnly' => true ]);
 
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">
