@@ -26,8 +26,10 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 </div>
     <div class="col-md-3">
 	
-	<?php if (true || $hasFacets):?>
-    <?php
+	<?php if (true || $hasFacets):
+    if ($this->params()->fromRoute('isLandingPage')):?>
+        <span class="facets-url" data-url="<?=$this->url('lang/landingPage', ['q' => $this->params()->fromRoute('term'), 'format' => 'html'], true)?>"></span>
+    <?php endif;
     $facets = $jobs->getFacets();
     ?>
 

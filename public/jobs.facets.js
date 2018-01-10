@@ -11,6 +11,35 @@
  */
 ;(function ($) {
 
+    function renameFacetsFilter($form)
+    {
+        var facets={ r: [], l: [], c: [], i: [], t: [] };
+
+        $form.find('.facet-param').each(function(){
+            var $checkbox = $(this);
+            var name = $checkbox.attr('name');
+            var value=name.replace(/^[^\[]+\[(.*)\]$/, '$1');
+            if (name.match(/^region/)) {
+                facets.r.push(value);
+            } else if (name.match(/^city/)) {
+                facets.l.push(value);
+            } else if (name.match(/^organiz/)) {
+                facets.c.push(value);
+            } else if (name.match(/^industry/)) {
+                facets.i.push(value);
+            } else if (name.match(/^employ/)) {
+                facets.t.push(value);
+            }
+        }).remove();
+
+        for (var key in facets) {
+            if (facets[key].length) {
+                $form.append('<input class="facet-param" type="hidden" name="' + key + '" value="' + facets[key].join('_') + '">');
+            }
+        }
+
+    }
+
     function onPaginatorLoaded()
     {
         var $form = $('#jobs-list-filter');
@@ -23,32 +52,20 @@
                     $form.append('<input type="hidden" class="facet-param" name="' + name + '">');
                 }
             });
-            var facets={ r: [], l: [], c: [], i: [], t: [] };
 
-            $form.find('.facet-param').each(function(){
-                var $checkbox = $(this);
-                var name = $checkbox.attr('name');
-                var value=name.replace(/^[^\[]+\[(.*)\]$/, '$1');
-                if (name.match(/^region/)) {
-                    facets.r.push(value);
-                } else if (name.match(/^city/)) {
-                    facets.l.push(value);
-                } else if (name.match(/^organiz/)) {
-                    facets.c.push(value);
-                } else if (name.match(/^industry/)) {
-                    facets.i.push(value);
-                } else if (name.match(/^employ/)) {
-                    facets.t.push(value);
-                }
-            }).remove();
+            renameFacetsFilter($form);
 
-            for (var key in facets) {
-                if (facets[key].length) {
-                    $form.append('<input type="hidden" name="' + key + '" value="' + facets[key].join('_') + '">');
-                }
+            var $formUrl = $('.facets-url');
+            if ($formUrl.length) {
+                var origAction = $form.attr('action');
+                $form.attr('action', $formUrl.data('url'));
+                $form.find('input[name="q"]').prop('disabled', true);
+                $form.trigger('submit');
+                $form.attr('action', origAction);
+                $form.find('input[name="q"]').prop('disabled', false);
+            } else {
+                $form.trigger('submit');
             }
-
-            $form.trigger('submit');
         });
 
         $('#facets-reset').click(function() {
@@ -58,6 +75,7 @@
     }
 
     $(function() {
+        renameFacetsFilter($('#jobs-list-filter'));
         onPaginatorLoaded();
         $('#jobs-list-container').on('yk-paginator-container:loaded.jobs-facets', onPaginatorLoaded);
     });

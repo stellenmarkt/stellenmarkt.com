@@ -126,18 +126,24 @@ class Module
                         return;
                     }
 
-                    $query = $options->getQueryParameters($term);
-                    $routeMatch->setParam('wpId', $options->getIdMap($term));
-                    $routeMatch->setParam('isLandingPage', true);
+                        $query = $options->getQueryParameters($term);
+                        $routeMatch->setParam('wpId', $options->getIdMap($term));
+                        $routeMatch->setParam('isLandingPage', true);
+                        $routeMatch->setParam('term', $term);
 
-                    if ($query) {
-                        $event->getRequest()->setQuery(new Parameters($query));
-                    }
-
-                    return;
+                        if ($query) {
+                            $origQuery = $event->getRequest()->getQuery()->toArray();
+                            if (count($origQuery)) {
+                                $routeMatch->setParam('isFilteredLandingPage', true);
+                                $query = array_merge($origQuery, $query);
+                            }
+                            $event->getRequest()->setQuery(new Parameters($query));
+                        } else {
+                            return;
+                        }
                 }
 
-                if ('lang/jobboard' == $matchedRouteName) {
+                if ('lang/jobboard' == $matchedRouteName || 'lang/landingPage' == $matchedRouteName) {
                     $services = $event->getApplication()->getServiceManager();
                     $options = $services->get(Landingpages::class);
                     $query = $event->getRequest()->getQuery();
@@ -155,23 +161,26 @@ class Module
                             $query->offsetUnset($shortName);
                         }
                     }
-                    $query = $query->toArray();
-                    unset($query['clear']);
-                    if (isset($query['q'])) {
-                        $query['q'] = strtolower($query['q']);
-                    }
-                    $map = $options->getQueryMap();
 
-                    foreach ($map as $term => $spec) {
-                        if (isset($spec['q'])) { $spec['q'] = strtolower($spec['q']); }
-                        if ($spec === $query) {
-                            /* \Zend\Http\PhpEnvironment\Response $response */
-                            $url = $event->getRouter()->assemble(['q' => $term, 'format' => 'html'], ['name' => 'lang/landingPage']);
-                            $response = $event->getResponse();
-                            $response->getHeaders()->addHeaderLine('Location', $url);
-                            $response->setStatusCode(302);
-                            $event->setResult($response);
-                            return $response;
+                    if (!$routeMatch->getParam('isLandingPage')) {
+                        $query = $query->toArray();
+                        unset($query['clear']);
+                        if (isset($query['q'])) {
+                            $query['q'] = strtolower($query['q']);
+                        }
+                        $map = $options->getQueryMap();
+
+                        foreach ($map as $term => $spec) {
+                            if (isset($spec['q'])) { $spec['q'] = strtolower($spec['q']); }
+                            if ($spec === $query) {
+                                /* \Zend\Http\PhpEnvironment\Response $response */
+                                $url = $event->getRouter()->assemble(['q' => $term, 'format' => 'html'], ['name' => 'lang/landingPage']);
+                                $response = $event->getResponse();
+                                $response->getHeaders()->addHeaderLine('Location', $url);
+                                $response->setStatusCode(302);
+                                $event->setResult($response);
+                                return $response;
+                            }
                         }
                     }
 
