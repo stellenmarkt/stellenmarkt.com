@@ -324,7 +324,7 @@ main {
     }
 }
 
-.home .search-form-container {
+.search-form-container {
     .btn-default {
         position: absolute;
         right: 100px;
@@ -369,11 +369,10 @@ main {
 
 @media(min-width: @screen-sm) {
     #main-navigation {
-        height: 145px !important;
         font-weight: 600;
 
         ul li a.inverted {
-            border: 1px solid #fff;
+            border: 1px solid @g24-blue;
             background-color: transparent;
         }
         .navbar-nav > li > a {
@@ -388,6 +387,7 @@ main {
     }
 
     .home #main-navigation {
+        height: 145px !important;
         .navbar-nav > li > a {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -396,6 +396,9 @@ main {
         }
         a:hover {
             background-color: transparent;
+        }
+        ul li a.inverted {
+            border: 1px solid @g24-white;
         }
     }
 }
