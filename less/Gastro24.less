@@ -427,87 +427,14 @@ main {
 }
 
 #rpt_pricr {
-    border: solid 1px blue;
-    margin-left: auto;
-    margin-right: auto;
-    color: @g24-white;
-    .rpt_title {
-        padding: @padding-small-vertical;
-        border-radius: @border-radius-base @border-radius-base 0 0;
-        font-weight: bold;
-        font-size: 18px;
-        background-color: @g24-blue;
-    }
     .rpt_head {
-        border-top: #222 solid 2px;
-        background: #333;
         .rpt_price {
-            padding:6px 10px;
-            font-size:30px;
-            line-height:45px;
-            text-align:center;
             strike {
                 transform: rotate(-20deg);
                 color: red;
                 font-size: 16px;
                 display: block;
             }
-            .rpt_currency {
-                position: relative;
-                top: -36px;
-                left: -10px;
-                font-size: 20px;
-                line-height: 0
-            }
         }
-        .rpt_description {
-            padding: @padding-small-vertical;
-            color: lightgray;
-            font-size:10px;
-
-        }
-        .rpt_subtitle {
-            color: yellow;
-            text-align: center;
-        }
-    }
-    a {
-        border: solid 1px darkgreen;
-        margin: 5px 0 5px 0;
-        display: block;
-        text-align: center;
-        background-color: green;
-        text-decoration: none;
-        border-radius: 4px;
-        padding: 5px;
-        color:yellow;
-    }
-    a:hover {
-        color: green;
-        background-color: yellow;
-        -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-        box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-    }
-    .rpt_plan {
-        float: left;
-        height: 100%;
-        width: 23%;
-        padding: 10px;
-        border: solid 1px red;
-        margin: 5px;
-    }
-    .rpt_features {
-        padding: @padding-small-vertical;
-        background-color: lightgray;
-        border-radius: 0 0 @border-radius-base @border-radius-base;
-    }
-    .rpt_yk_active{
-        color:orange;
-        strong {
-            color: black;
-        }
-    }
-    .rpt_yk_inactive{
-        color:#bbbbbb;
     }
 }
