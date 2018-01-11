@@ -25,7 +25,7 @@ $title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
-if (304 === $query || ($this->params()->fromRoute('isLandingPage') && (count($this->jobs) || $description))) {
+if (304 === $query || ($this->params()->fromRoute('isLandingPage') && !$this->params()->fromRoute('isFilteredLandingPage') && (count($this->jobs) || $description))) {
     $robots = substr($robots, 2);
 }
 $this->headMeta()->setName('robots', $robots);
@@ -47,6 +47,7 @@ $this->headScript()->captureStart();
                 console.debug($a, href);
                 if (href) {
                     href = href.replace(/__region_MultiString/, 'r')
+                               .replace(/__city_MultiString/, 'l')
                                .replace(/__organizationTag/, 'c')
                                .replace(/__industry_MultiString/, 'i')
                                .replace(/__employmentType_MultiString/, 't');

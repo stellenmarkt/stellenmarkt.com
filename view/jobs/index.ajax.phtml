@@ -26,8 +26,10 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 </div>
     <div class="col-md-3">
 	
-	<?php if (true || $hasFacets):?>
-    <?php
+	<?php if (true || $hasFacets):
+    if ($this->params()->fromRoute('isLandingPage')):?>
+        <span class="facets-url" data-url="<?=$this->url('lang/landingPage', ['q' => $this->params()->fromRoute('term'), 'format' => 'html'], true)?>"></span>
+    <?php endif;
     $facets = $jobs->getFacets();
     ?>
 
@@ -35,15 +37,17 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 	
     <div class="panel-group">
 	
-        <?php foreach ($facets as $facetName => $facetValues):?>
-            <?php if(count($facetValues)>0): $atLeastOneActive = false; ob_start();?>
+        <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
+            <?php if(count($facetValues)>0): $atLeastOneActive = false; $facetsList = []; ob_start();?>
             <div id="facets-box-<?=$facetName?>" class="panel panel-default">
                 <div class="panel-heading">
-                    <a style="display:block;width: 100%;text-decoration:none;" data-toggle="collapse" data-parent="#facets-box-<?=$facetName?>" href="#facets-box-<?=$facetName?>-content">
+                    <a class="<?=$isFirstFacet ?  '%firstCollapsed% ' : '%collapsed%'?>" style="display:block;width: 100%;text-decoration:none;" data-toggle="collapse" data-parent="#facets-box-<?=$facetName?>" href="#facets-box-<?=$facetName?>-content">
                     <?=$this->translate($facets->getTitle($facetName))?>
+                        <span class="small">%facetsList%</span>
                     </a>
+
                 </div>
-                <div id="facets-box-<?=$facetName?>-content" class="panel-collapse collapse %in%">
+                <div id="facets-box-<?=$facetName?>-content" class="panel-collapse collapse <?=$isFirstFacet ? '%firstIn%' : '%in%' ?>">
                 <div class="panel-body">
                     <?php foreach ($facetValues as $facetValue => $facetValueCount):
                         $activeFacet = $facets->isValueActive($facetName, $facetValue);
@@ -55,12 +59,28 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                                 <?=$facetValue?> (<?=$facetValueCount?>)
                             </label>
                         </div>
-                    <?php endforeach;?>
+                    <?php if ($activeFacet): $facetsList[] = $facetValue; endif; endforeach;?>
                 </div>
                 </div> <!-- facets-collaps-* -->
             </div>
-            <?php echo str_replace('%in%',  $atLeastOneActive ? 'in' : '', ob_get_clean()); endif; ?>
-        <?php endforeach;?>
+            <?php $facetsHtml .= str_replace(
+                    ['%in%', '%firstIn%', '%firstCollapsed%', '%collapsed%', '%facetsList%' ],
+                    [
+                            $atLeastOneActive ? 'in' : '',
+                            $atLeastOneActive ? 'in' : '%firstIn%',
+                            $atLeastOneActive ? '' : '%firstCollapsed%',
+                            $atLeastOneActive ? '' : 'collapsed',
+                            join(', ', $facetsList),
+                    ],
+                    ob_get_clean()
+                ); $atLeastOneTotalActive = $atLeastOneTotalActive || $atLeastOneActive; endif; $isFirstFacet = false;?>
+        <?php endforeach;
+            echo str_replace(
+                    ['%firstCollapsed%', '%firstIn%'],
+                    [$atLeastOneTotalActive ? 'collapsed' : '', $atLeastOneTotalActive ? '' : 'in'],
+                    $facetsHtml
+            );
+        ?>
 
         <div class="panel panel-default">
                 <div class="panel-body">
@@ -80,7 +100,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
     <?php
 
     $org = $job->getOrganization();
-    $href = $job->getLink() ? $job->getLink() : $this->url('lang/jobs/view', [], ['query' => ['id' => $job->getId()]], true);
+    $href = $job->getLink() ? $job->getLink() : $this->jobUrl($job, ['linkOnly' => true ]);
 
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">

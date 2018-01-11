@@ -49,6 +49,11 @@ return [
             'wordpress' => WordpressApi\View\Helper\WordpressContent::class,
             'landingpages' => View\Helper\LandingpagesList::class,
         ],
+        'delegators' => [
+            'jobUrl' => [
+                Factory\View\Helper\JobUrlDelegatorFactory::class,
+            ],
+        ],
     ],
 
     'view_manager' => [
@@ -109,6 +114,16 @@ return [
                     'jobs' => [
                         'options' => [
                             'route' => '/job',
+                        ],
+                        'child_routes' => [
+                            'view' => [
+                                'type' => 'regex',
+                                'options' => [
+                                    'regex' => '-(?<id>[a-f0-9]+)\.html',
+                                    'spec' => '-%id%.html',
+                                    'route' => null,
+                                ],
+                            ],
                         ],
                     ],
                     'jobboard' => [
