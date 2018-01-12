@@ -40,7 +40,7 @@ class JobUrlDelegator extends AbstractHelper
 
         if (false !== strpos($link, '.html')) {
             if (isset($options['linkOnly']) && $options['linkOnly']) {
-                $link = preg_replace('\?.*$~', '', $link);
+                $link = preg_replace('~\?.*$~', '', $link);
             } else {
                 $link = preg_replace('~\?[^"\']*~', '', $link);
             }
