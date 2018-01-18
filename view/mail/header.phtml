@@ -13,13 +13,11 @@ $homepageUrl=$this->serverUrl($this->basePath('/'));
 <span style="display:none!important;color:#f3f3f3;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden">
         <?=$this->title?>
 </span>
-<table class="size margin-auto" style="background-color:#295990;max-width:<?=$this->width?>;width:100%;margin-left: auto;margin-right: auto;">
+<table class="size margin-auto" style="background-color:<?= $this->mail_blue_color ?>;max-width:<?=$this->width?>;width:100%;margin-left: auto;margin-right: auto;">
     <tr>
-        <td align="center" style="text-align: left;padding: 20px 0; font-family:Helvetica,Arial,sans-serif;">
-            <a href="<?=$homepageUrl?>" style="text-decoration:none;font-weight:bold;color:#333333;font-size:22px;text-decoration:none;float:right">
-                <p style="color:#fff;text-align:center;font-size:20px;font-weight:600;">
-<?=$this->title?>
-		</p>
+        <td align="center" style="text-align: left;font-family:Helvetica,Arial,sans-serif;">
+            <a href="<?=$homepageUrl?>">
+                <p style="color:<?= $this->mail_white_color  ?>;text-align:center;font-size:30px;font-weight:600;"><?=$this->title?></p>
             </a>
         </td>
     </tr>
