@@ -35,7 +35,10 @@
 @font-size-h4: 16px;
 @font-size-h5: 14px;
 
-
+@yk-tab-bg: lightgray;
+@yk-tab-color: @g24-blue;
+@yk-tab-active-bg: @g24-blue;
+@yk-tab-active-color: lightgray;
 
 html {
     height: 100%;
@@ -51,7 +54,6 @@ body {
         width: 200px;
     }
 }
-
 
 
 .featured-image-box {
@@ -104,9 +106,14 @@ body {
         margin-left: auto;
         display: table;
         width: 100%;
-        margin-bottom: 30px;
         margin-right: auto;
         max-width: 800px;
+    }
+}
+
+.home #jobs-list-filter-wrapper {
+    .search-form-container {
+         margin-bottom: 30px;
     }
 }
 
@@ -403,6 +410,7 @@ main {
     }
 }
 
+// Menü auf Handy
 @media(max-width: @screen-sm) {
     #main-navigation {
         height: inherit;
@@ -429,6 +437,7 @@ main {
 
 }
 
+// Aufklappbare Kategorien
 a[data-toggle="collapse"] {
     &:before {
         font-family: "FontAwesome";
@@ -446,7 +455,7 @@ a[data-toggle="collapse"] {
     }
 }
 
-
+// Preistabellen
 #rpt_pricr {
     .rpt_head {
         .rpt_price {
@@ -473,5 +482,15 @@ a[data-toggle="collapse"] {
     }
     .rpt_yk_inactive {
         color: gray;
+    }
+}
+
+// links im Wordpress-Bereich
+#wp-content1 {
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        background-color: lightgray;
     }
 }

@@ -106,19 +106,7 @@ $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
                         <span class="yk-icon yk-icon-login fa-fw"></span> <?= $this->translate('Login')?>
                     </a>
                 </li>
-                <?php if (!isset($this->allowRegister) || $this->allowRegister == true): ?>
-                    <li class="divider"></li>
-                    <li class="disabled dropdown-header"><a><?= $this->translate('Login via')?>...</a></li>
-                    <?php foreach ($this->socialButtons() as $provider => $name): ?>
-                        <li>
-                            <a class="login-link" title="<?= sprintf($this->translate('Login with %s'), $name)?>" href="<?=$this->url('auth-provider', ['provider' => $provider], ['query' => ['ref' => urlencode($ref)]])?>">
-                                <span class="fa fa-<?php echo $provider?> fa-fw"></span> <?= $name?>
-                            </a>
-                        </li>
-                    <?php endforeach ?>
-                <?php endif; ?>
             </ul>
-
         <?php endif ?>
     </li>
 </ul>

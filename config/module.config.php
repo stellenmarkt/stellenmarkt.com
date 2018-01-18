@@ -77,6 +77,10 @@ return [
              'mail/forgotPassword' =>  __DIR__ . '/../view/mail/forgot-password.phtml',
              'mail/forgotPassword.en' =>  __DIR__ . '/../view/mail/forgot-password.en.phtml',
              'startpage'  => __DIR__ . '/../view/startpage.phtml',
+             'templates/default/index' => __DIR__ . '/../view/templates/default/index.phtml',
+             'templates/classic/index' => __DIR__ . '/../view/templates/classic/index.phtml',
+             'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
+
          ],
     ],
     'translator'   => [
