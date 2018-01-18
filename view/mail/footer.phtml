@@ -17,29 +17,23 @@ $siteName = $options->getSiteName();
 $operator = $options->getOperator();
 
 ?>
-<table class="size margin-auto" style="background-color:#ffffff;max-width:<?= $this->width ?>; width:100%;margin-left: auto;margin-right: auto;">
+<table class="size margin-auto" style="background-color:<?= $this->mail_white_color ?>;max-width:<?= $this->width ?>; width:100%;margin-left: auto;margin-right: auto;">
     <tr>
         <td align="center" style="text-align: left;padding: 20px 0; font-family:Helvetica,Arial,sans-serif;">
 <p>Mit freundlichen Grüßen,</p>
 
 <p>Ihr Gastrojob24.ch Team</p>
 
-<p>
-    Diese Mail wurde Ihnen gesendet von:<br>
-    <?php echo $operator['companyShortName'] ?><br>
-    <?php echo $operator['street'] ?><br>
-    <?php echo $operator['postalCode'] . ' ' . $operator['city'] ?><br>
-    <?php echo $operator['homepage']  ?><br>
-</p>
 </td></tr></table>
-<table class="size margin-auto" style="background-color:#2D3638;max-width:100%;width:100%;margin-left: auto;margin-right: auto;">
+</div><!-- Close div from forgot-password.phtml with class-seprate_footer -->
+<table class="size margin-auto" style="background-color:#2D3638;max-width:<?= $this->width ?>;width:100%;margin-left: auto;margin-right: auto;">
     <tr>
-        <td align="center" style="text-align: left;padding: 20px 0; font-family:Helvetica,Arial,sans-serif;">
-            <p style="color:#fff;text-align:center;">Ein Dienst von gastrojob24.ch | Kastenberg 1 | 9312 Haggenschwil</p>
+        <td align="center" style="text-align: left;padding: 0 10px; font-family:Helvetica,Arial,sans-serif;">
+            <p style="color:<?= $this->mail_white_color ?>;font-size:14px;">Ein Dienst von gastrojob24.ch | Kastenberg 1 | 9312 Haggenschwil</p>
         </td>
     </tr>
 </table>
-<table class="size margin-auto" style="background-color:#fff;max-width:100%;width:100%;margin-left: auto;margin-right: auto;">
+<table class="size margin-auto" style="background-color:<?= $this->mail_white_color ?>;max-width:<?= $this->width ?>;width:100%;margin-left: auto;margin-right: auto;">
     <tr>
         <td align="center" style="text-align: left;font-family:Helvetica,Arial,sans-serif;">
             <p style="color:#9FADB1;text-align:center;font-size:12px;">Dies ist eine automatisch generierte E-mail. Antworten Stie bitte nicht auf diese E-mail.</p>
