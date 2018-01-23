@@ -60,7 +60,6 @@ return [
     'view_manager' => [
          'template_map' => [
              'layout/layout' => __DIR__ . '/../view/layout.phtml',
-             'layout/application-form' => __DIR__ . '/../view/application-form.phtml',
              'core/index/index' => __DIR__ . '/../view/index.phtml',
              'piwik' => __DIR__ . '/../view/piwik.phtml',
              'footer' => __DIR__ . '/../view/footer.phtml',
@@ -83,6 +82,7 @@ return [
              'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
+             'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
          ],
     ],
     'translator'   => [
