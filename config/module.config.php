@@ -80,7 +80,7 @@ return [
              'templates/default/index' => __DIR__ . '/../view/templates/default/index.phtml',
              'templates/classic/index' => __DIR__ . '/../view/templates/classic/index.phtml',
              'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
-
+             'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
          ],
     ],
     'translator'   => [
