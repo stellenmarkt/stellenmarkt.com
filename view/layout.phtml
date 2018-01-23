@@ -10,9 +10,7 @@
 
 /* @var $options \Core\Options\ModuleOptions */
 $options = $this->services('Core/Options');
-$languages = $options->getSupportedLanguages();
 $lang = $this->params('lang');
-
 
 // See: http://yawik.readthedocs.org/en/latest/modules/core/notifications.html
 
@@ -45,14 +43,7 @@ $this->headLink()->prependStylesheet($this->basePath() . '/Gastro24/Gastro24.css
 $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.custom.min.css'));
 
 
-foreach ($languages as $lang) {
-    $this->headLink()->appendAlternate(
-        preg_replace('~^'.$this->basepath('/'.$this->params('lang')).'~',
-            $this->basepath('/'.$lang),$_SERVER['REQUEST_URI']),
-        'hreflang',
-        $this->headTitle()->setTranslator()->renderTitle() ,
-        array('hreflang'=>$lang));
-}
+
 ?>
 
 <?php echo $this->doctype(); ?>
@@ -95,7 +86,6 @@ foreach ($languages as $lang) {
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
 
                     
-                
                 <?= $this->loginInfo(array('lang' => $lang ));?>
                 <?= $this->navigation('Core/Navigation')
                          ->setAcl($this->services('acl'))
