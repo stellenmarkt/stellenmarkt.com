@@ -47,20 +47,24 @@ foreach ($languages as $lang) {
 }
 ?>
 <?php echo $this->doctype(); ?>
-<html lang="<?php echo $this->params('lang') ?>">
+<html lang="<?=$this->params('lang') ?>">
 <head>
-    <?php echo $this->headTitle() ?>
-    <?php echo $this->headMeta() ?>
-    <?php echo $this->configHeadScript() ?>
-    <?php echo $this->headLink() ?>
-    <?php echo $this->headStyle() ?>
+    <?=$this->headTitle() ?>
+    <?=$this->headMeta() ?>
+    <?=$this->configHeadScript() ?>
+    <?=$this->headLink() ?>
+    <?=$this->headStyle() ?>
 </head>
 <body>
-<main id="content" class="col-md-12">
-    <?php echo $notifications?>
-    <?php echo $this->content; ?>
+<div class="container">
+<main id="content" class="row col-md-12">
+    <div class="container">
+    <?=$notifications?>
+    <?=$this->content;?>
+    </div>
 </main>
+</div>
 <!-- /container -->
-<?php echo $this->partial("footer") ?>
+<?=$this->partial("footer") ?>
 </body>
 </html>
