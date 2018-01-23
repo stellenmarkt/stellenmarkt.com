@@ -31,6 +31,7 @@ return [
     'controllers' => [
         'factories' => [
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
+            Controller\RedirectExternalJobs::class => InvokableFactory::class,
         ],
     ],
 
@@ -81,6 +82,7 @@ return [
              'templates/classic/index' => __DIR__ . '/../view/templates/classic/index.phtml',
              'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
+             'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
          ],
     ],
     'translator'   => [
@@ -126,6 +128,18 @@ return [
                                     'regex' => '-(?<id>[a-f0-9]+)\.html',
                                     'spec' => '-%id%.html',
                                     'route' => null,
+                                ],
+                            ],
+                            'view-extern' => [
+                                'type' => 'regex',
+                                'options' => [
+                                    'regex' => '-x(?<id>[a-f0-9]+)\.html',
+                                    'spec' => '-x%id%.html',
+                                    'route' => null,
+                                    'defaults' => [
+                                        'controller' => Controller\RedirectExternalJobs::class,
+                                        'action' => 'index',
+                                    ],
                                 ],
                             ],
                         ],

@@ -1,0 +1,37 @@
+<?php
+/**
+ * YAWIK
+ *
+ * @filesource
+ * @license MIT
+ * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
+ */
+
+$this->headMeta()->setName('robots', 'index,nofollow');
+$this->headTitle($this->job->getTitle());
+
+$this->headScript()->captureStart();?>
+;(function($, w) {
+    $(function() {
+        w.setTimeout(
+            function() { w.location.href='<?=$this->job->getLink()?>'; },
+            5000
+        );
+    });
+})(jQuery, window);
+<?php $this->headScript()->captureEnd();
+
+?>
+
+<div class="well well-lg text-center">
+
+
+
+<h1><?=$this->job->getOrganization()->getOrganizationName()->getName() ?> / <?=$this->job->getTitle()?></h1>
+
+    <p class="lead">Sie werden in Kürze auf die Stellenanzeige weitergeleitet.</p>
+    <p><a href="<?=$this->job->getLink()?>"><?=$this->job->getLink()?></a></p>
+
+
+</div>
+
