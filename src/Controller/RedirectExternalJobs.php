@@ -11,6 +11,7 @@
 namespace Gastro24\Controller;
 
 use Core\Entity\Exception\NotFoundException;
+use Gastro24\Session\VisitedJobsContainer;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -40,9 +41,17 @@ class RedirectExternalJobs extends AbstractActionController
             ];
         }
 
-        $response->getHeaders()->addHeaderLine('Refresh', '8;' . $job->getLink());
+        $visitedJobsContainer = new VisitedJobsContainer();
+        $isVisited            = $visitedJobsContainer->isVisited($job);
+
+        if (!$isVisited) {
+            $response->getHeaders()->addHeaderLine('Refresh', '8;' . $job->getLink());
+            $visitedJobsContainer->add($job);
+        }
+
         $model = new ViewModel([
             'job' => $job,
+            'isVisited' => $isVisited,
         ]);
         $model->setTemplate('gastro24/jobs/view-extern');
 
