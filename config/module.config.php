@@ -63,6 +63,7 @@ return [
              'core/index/index' => __DIR__ . '/../view/index.phtml',
              'piwik' => __DIR__ . '/../view/piwik.phtml',
              'footer' => __DIR__ . '/../view/footer.phtml',
+             'footer-application' => __DIR__ . '/../view/footer-application.phtml',
              'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
              'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
              'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
