@@ -84,6 +84,7 @@ return [
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
+             'contactform.view' => __DIR__ . '/../view/contactform.phtml',
          ],
     ],
     'translator'   => [
