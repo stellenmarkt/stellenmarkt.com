@@ -34,5 +34,8 @@ return [
     =>
     'Latest Jobs',
 
+    'Es sind nur Ziffern, "/" und "+" erlaubt'
+    =>
+    'Please enter only numbers, "/" and "+"',
 
 ];
