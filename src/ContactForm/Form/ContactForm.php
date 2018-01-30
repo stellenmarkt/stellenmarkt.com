@@ -101,4 +101,58 @@ class ContactForm extends Form implements InputFilterProviderInterface, Customiz
         $this->setName('contact-form');
         $this->setAttribute('data-handle-by', 'native');
     }
+
+    protected function getDefaultInputFilterSpecification()
+    {
+        return [
+            'organization' => [
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+            ],
+            'name' => [
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+            ],
+            'phonenumber' => [
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+                'validators' => [
+                    ['name' => 'regex', 'options' => [
+                        'pattern' => '~^[0-9 /\+]*$~',
+                        'message' => 'Es sind nur Ziffern, "/" und "+" erlaubt',
+                        'translatorTextDomain' => 'Gastro24',
+                    ]],
+                ],
+            ],
+            'email' => [
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+                'validators' => [
+                    ['name' => 'emailaddress']
+                ],
+            ],
+            'website' => [
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+            ],
+            'message' => [
+                'filters' => [
+                    [
+                        'name' => 'StripTags',
+                        'options' => [
+                            'allowTags' => ['b', 'i', 'em', 'strong', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'a', 'img'],
+                            'allowAttribs' => ['href', 'src'],
+                        ],
+                    ],
+                ],
+            ],
+        ];
+    }
+
+
 }
