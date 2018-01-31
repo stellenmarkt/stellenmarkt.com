@@ -45,10 +45,12 @@ return [
         'factories' => [
             WordpressApi\View\Helper\WordpressContent::class => WordpressApi\Factory\View\Helper\WordpressContentFactory::class,
             View\Helper\LandingpagesList::class => Factory\View\Helper\LandingpagesListFactory::class,
+            View\Helper\JobboardApplyUrl::class => Factory\View\Helper\JobboardApplyUrlFactory::class,
         ],
         'aliases' => [
             'wordpress' => WordpressApi\View\Helper\WordpressContent::class,
             'landingpages' => View\Helper\LandingpagesList::class,
+            'gastroApplyUrl' => View\Helper\JobboardApplyUrl::class,
         ],
         'delegators' => [
             'jobUrl' => [
