@@ -66,5 +66,5 @@
         onPagiantorLoaded();
     });
 
-})(jQuery); 
+})(jQuery, window); 
  
