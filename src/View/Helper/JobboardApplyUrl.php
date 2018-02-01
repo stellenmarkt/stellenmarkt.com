@@ -33,10 +33,9 @@ class JobboardApplyUrl extends AbstractHelper
         $ats = $job->getAtsMode();
 
         if ($ats->isDisabled()) {
-            return '';
-        }
-
-        if ($ats->isIntern() || $ats->isEmail()) {
+            $url = $job->getLink();
+            $class = "no-apply-link";
+        } else if ($ats->isIntern() || $ats->isEmail()) {
 
             $route = 'lang/apply';
             $params = [
@@ -45,12 +44,12 @@ class JobboardApplyUrl extends AbstractHelper
             ];
 
             $url  = $this->urlHelper->__invoke($route, $params);
-            $class = ' class="internal-apply-link"';
+            $class = 'internal-apply-link';
         } else {
             $url = $ats->getUri();
-            $class = '';
+            $class = 'external-apply-link';
         }
 
-        return sprintf('<a href="%s"%s>%s</a>', $url, $class, 'Bewerben');
+        return sprintf('<a href="%s" class="%s">%s</a>', $url, $class, 'Bewerben');
     }
 }

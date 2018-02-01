@@ -9,7 +9,7 @@
  *
  * Author: Mathias Gelhausen <gelhausen@cross-solution.de>
  */
-;(function ($) {
+;(function ($, window) {
 
     function onPagiantorLoaded()
     {
@@ -19,6 +19,31 @@
             target: null,
             remove: false
         });
+    }
+
+    function onApplyLinkClicked(event)
+    {
+        var $link = $(event.currentTarget);
+        var isExternal = $link.hasClass('external-apply-link');
+        var message = (isExternal ? '' : '<p>Bitte nutzen Sie die Bewerbungsmöglichkeit im Inserat, um sich zu bewerben.</p>')
+                    + '<p><strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf <em>gastro24</em></strong></p>';
+        var uri = $link.attr('href');
+
+        BootstrapDialog.show({
+            title: $('<h5 class="modal-title">Jetzt bewerben</h5>'),
+            type: BootstrapDialog.TYPE_DEFAULT,
+            message: $(message),
+            closable: true,
+            buttons: [
+                {
+                    label: 'Weiter',
+                    action: function() { window.location.href = uri; },
+                    cssClass: 'btn-primary'
+                }
+            ]
+        });
+
+        return false;
     }
 
     function onInternalApplyLinkClicked(event)
@@ -34,7 +59,10 @@
 
     $(function() {
         $('#jobs-list-container').on('yk-paginator-container:loaded.jobboard', onPagiantorLoaded)
-            .on('click.jobboard', '.internal-apply-link', onInternalApplyLinkClicked);
+            .on('click.jobboard', '.internal-apply-link', onInternalApplyLinkClicked)
+            .on('click.jobboard', '.external-apply-link, .no-apply-link', onApplyLinkClicked);
+
+
         onPagiantorLoaded();
     });
 
