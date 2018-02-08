@@ -43,7 +43,7 @@ $this->headScript()->captureStart();
 
             if ('' === html.trim()) { $tabbar.hide(); }
 
-            $('#jobs-list-container').find('ul.pagination a').each(function() {
+            $('#jobs-list-container ul.pagination a, link[rel="prev"], link[rel="next"]').each(function() {
                 var $a = $(this), href = $a.attr('href');
                 console.debug($a, href);
                 if (href) {
