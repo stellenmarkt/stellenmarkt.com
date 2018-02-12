@@ -26,7 +26,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 </div>
     <div class="col-md-3">
 	
-	<?php if (true || $hasFacets):
+	<?php if ($hasFacets):
     if ($this->params()->fromRoute('isLandingPage')):?>
         <span class="facets-url" data-url="<?=$this->url('lang/landingPage', ['q' => $this->params()->fromRoute('term'), 'format' => 'html'], true)?>"></span>
     <?php endif;
@@ -107,7 +107,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
             <div class="img-box">
                 <a href="<?=$href?>">
                 <?php
-                $logo = $job->getSolrValue('companyLogo');
+                $logo = $hasFacets ? $job->getSolrValue('companyLogo') : '';
                
                 if (preg_match("/^(https?:)?\/\//",$logo)) { 
                     echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
