@@ -31,6 +31,7 @@ return [
     'controllers' => [
         'factories' => [
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
+            Controller\RedirectExternalJobs::class => InvokableFactory::class,
         ],
     ],
 
@@ -44,10 +45,12 @@ return [
         'factories' => [
             WordpressApi\View\Helper\WordpressContent::class => WordpressApi\Factory\View\Helper\WordpressContentFactory::class,
             View\Helper\LandingpagesList::class => Factory\View\Helper\LandingpagesListFactory::class,
+            View\Helper\JobboardApplyUrl::class => Factory\View\Helper\JobboardApplyUrlFactory::class,
         ],
         'aliases' => [
             'wordpress' => WordpressApi\View\Helper\WordpressContent::class,
             'landingpages' => View\Helper\LandingpagesList::class,
+            'gastroApplyUrl' => View\Helper\JobboardApplyUrl::class,
         ],
         'delegators' => [
             'jobUrl' => [
@@ -59,10 +62,10 @@ return [
     'view_manager' => [
          'template_map' => [
              'layout/layout' => __DIR__ . '/../view/layout.phtml',
-             'layout/application-form' => __DIR__ . '/../view/application-form.phtml',
              'core/index/index' => __DIR__ . '/../view/index.phtml',
              'piwik' => __DIR__ . '/../view/piwik.phtml',
              'footer' => __DIR__ . '/../view/footer.phtml',
+             'footer-application' => __DIR__ . '/../view/footer-application.phtml',
              'jobs/jobboard/index.ajax.phtml' => __DIR__ . '/../view/jobs/index.ajax.phtml',
              'jobs/jobboard/index' => __DIR__ . '/../view/jobs/index.phtml',
              'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
@@ -77,6 +80,13 @@ return [
              'mail/forgotPassword' =>  __DIR__ . '/../view/mail/forgot-password.phtml',
              'mail/forgotPassword.en' =>  __DIR__ . '/../view/mail/forgot-password.en.phtml',
              'startpage'  => __DIR__ . '/../view/startpage.phtml',
+             'templates/default/index' => __DIR__ . '/../view/templates/default/index.phtml',
+             'templates/classic/index' => __DIR__ . '/../view/templates/classic/index.phtml',
+             'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
+             'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
+             'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
+             'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
+             'contactform.view' => __DIR__ . '/../view/contactform.phtml',
          ],
     ],
     'translator'   => [
@@ -122,6 +132,18 @@ return [
                                     'regex' => '-(?<id>[a-f0-9]+)\.html',
                                     'spec' => '-%id%.html',
                                     'route' => null,
+                                ],
+                            ],
+                            'view-extern' => [
+                                'type' => 'regex',
+                                'options' => [
+                                    'regex' => '-x(?<id>[a-f0-9]+)\.html',
+                                    'spec' => '-x%id%.html',
+                                    'route' => null,
+                                    'defaults' => [
+                                        'controller' => Controller\RedirectExternalJobs::class,
+                                        'action' => 'index',
+                                    ],
                                 ],
                             ],
                         ],

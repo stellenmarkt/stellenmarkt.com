@@ -1,0 +1,46 @@
+<?php
+/**
+ * YAWIK
+ *
+ * @filesource
+ * @license MIT
+ * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
+ *
+ * Variables:
+ *             $job         JobInterface    Job Entity
+ *             $isVisited   bool            Has the user already visited this job in the current session
+ */
+
+$this->headMeta()->setName('robots', 'noindex,nofollow');
+$this->headTitle($this->job->getTitle());
+if (!$this->isVisited):
+$this->headScript()->captureStart();?>
+;(function($, w) {
+    $(function() {
+        w.setTimeout(
+            function() { w.location.href='<?=$this->job->getLink()?>'; },
+            5000
+        );
+    });
+})(jQuery, window);
+<?php $this->headScript()->captureEnd();
+endif;
+
+?>
+
+<div class="well well-lg text-center">
+
+
+
+<h1><?=$this->job->getOrganization()->getOrganizationName()->getName() ?> / <?=$this->job->getTitle()?></h1>
+
+    <p class="lead"><?php if ($this->isVisited): ?>
+                        Sie haben sich diese Stellenanzeige bereits angesehen.
+                    <?php else: ?>
+                        Sie werden in Kürze auf die Stellenanzeige weitergeleitet.
+                    <?php endif ?>
+    </p>
+    <p><a href="<?=$this->job->getLink()?>"><?=$this->job->getLink()?></a></p>
+
+</div>
+

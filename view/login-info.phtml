@@ -90,35 +90,14 @@ $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
 
 
         <?php else: ?>
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"><?= sprintf(
-                    $this->translate('Hello %s'),
-                    '<strong>' . $this->translate('Guest') . '</strong>'
-                )?><b class="caret"></b></a>
-
-            <ul class="dropdown-menu pull-right">
-                <li><a href="<?php
-
-                    $ref = $this->buildReferer(array('logout', 'ref'));
-                    echo $this->url('lang/auth', array(), array(
-                        'query' => array(
-                            'ref' => urlencode($ref),
-                        )), true)?>">
-                        <span class="yk-icon yk-icon-login fa-fw"></span> <?= $this->translate('Login')?>
-                    </a>
-                </li>
-                <?php if (!isset($this->allowRegister) || $this->allowRegister == true): ?>
-                    <li class="divider"></li>
-                    <li class="disabled dropdown-header"><a><?= $this->translate('Login via')?>...</a></li>
-                    <?php foreach ($this->socialButtons() as $provider => $name): ?>
-                        <li>
-                            <a class="login-link" title="<?= sprintf($this->translate('Login with %s'), $name)?>" href="<?=$this->url('auth-provider', ['provider' => $provider], ['query' => ['ref' => urlencode($ref)]])?>">
-                                <span class="fa fa-<?php echo $provider?> fa-fw"></span> <?= $name?>
-                            </a>
-                        </li>
-                    <?php endforeach ?>
-                <?php endif; ?>
-            </ul>
-
+            <a href="<?php
+            $ref = $this->buildReferer(array('logout', 'ref'));
+            echo $this->url('lang/auth', array(), array(
+                'query' => array(
+                    'ref' => urlencode($ref),
+                )), true)?>">
+                <span class="yk-icon yk-icon-login fa-fw"></span> <?= $this->translate('Login')?>
+            </a>
         <?php endif ?>
     </li>
 </ul>

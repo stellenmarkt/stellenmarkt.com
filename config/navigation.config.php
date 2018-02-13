@@ -53,16 +53,16 @@ return [
                 'class' => 'inverted'
             ],
 
-            'ratgeber' => [
-                'label' => 'Ratgeber',
-                'route' => 'lang/wordpress',
-                'resource' => 'resource/ratgeber',
-                'params' => [
-                    'type' => 'page',
-                    'id' => 'ratgeber',
-                ],
-                'order' => 1000,
-            ],
+//            'ratgeber' => [
+//                'label' => 'Ratgeber',
+//                'route' => 'lang/wordpress',
+//                'resource' => 'resource/ratgeber',
+//                'params' => [
+//                    'type' => 'page',
+//                    'id' => 'ratgeber',
+//                ],
+//                'order' => 1000,
+//            ],
 
             'resume-recruiter' => [
                 'visible' => false,
