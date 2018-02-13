@@ -15,13 +15,14 @@ $this->configHeadScript()->appendFile($this->basePath('/Gastro24/index.js'));
     <div class="container">
         <div class="row">
 
+         <div class="col-md-8">
+           <h1><?=$this->article->title->rendered?></h1>
+             <hr />
 
-     <h1><?=$this->article->title->rendered?></h1>
-     <hr />
-
-   <div class="wp-content">
-    <?=$this->article->content->rendered;?>
-  </div>
+            <div class="wp-content">
+            <?=$this->article->content->rendered;?>
+           </div>
+         </div>
   </div>
   </div>
 </div>
