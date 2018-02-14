@@ -11,11 +11,16 @@ $this->configHeadScript()->appendFile($this->basePath('/Gastro24/jquery.matchHei
 $this->configHeadScript()->appendFile($this->basePath('/Gastro24/index.js'));
 
 ?>
-
 <div class="container">
-<h1><?=$this->article->title->rendered?></h1>
+    <div class="container">
+        <div class="row">
 
-<div class="wp-content">
-    <?=$this->article->content->rendered;?>
-</div>
+           <h1><?=$this->article->title->rendered?></h1>
+             <hr />
+
+            <div class="wp-content">
+            <?=$this->article->content->rendered;?>
+           </div>
+  </div>
+  </div>
 </div>
