@@ -94,7 +94,7 @@ body {
 }
 
 #jobs-list-filter-wrapper {
-    padding: 0 15px;
+    padding: 0;
 
     .input-group {
         margin-left: auto;
@@ -103,8 +103,8 @@ body {
         margin-bottom: 0;
     }
     .search-form-container {
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 5px;
+        background-color: @g24-blue;
+        border-radius: 0;
         position: relative;
         color: #fff;
         padding: 20px 20px;
@@ -112,13 +112,34 @@ body {
         display: table;
         width: 100%;
         margin-right: auto;
-        max-width: 800px;
+        .btn-primary {
+            background-color: @btn-info-bg;
+            border-color: @btn-info-border;
+            color: @btn-info-color;
+        }
+        .btn-primary:hover {
+            background-color: darken(@btn-info-bg,10%);
+        }
+
     }
 }
 
 .home #jobs-list-filter-wrapper {
     .search-form-container {
-         margin-bottom: 30px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        border: none;
+        padding: 20px 20px;
+        max-width: 770px;
+        margin-bottom: 30px;
+        .btn-primary {
+            background-color: @btn-primary-bg;
+            border-color: @btn-primary-border;
+            color: @btn-primary-color;
+        }
+        .btn-primary:hover {
+            background-color: darken(@btn-primary-bg,10%);
+        }
     }
 }
 
