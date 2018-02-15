@@ -32,9 +32,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
     <?php endif;
     $facets = $jobs->getFacets();
     ?>
-
-
-	
+    <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
     <div class="panel-group">
 	
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
@@ -90,6 +88,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
         </div>
     </div>
     </div>
+
     <div class="col-md-9">
 <?php endif;?>
 
@@ -166,7 +165,6 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
         </div>
 
         <?=$hasFacets ? '</div>' : '' ?>
-        <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
 <?php endif ?>
 
 
