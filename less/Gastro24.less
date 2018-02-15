@@ -408,7 +408,11 @@ body {
 
             ul li a.inverted {
                 border: 1px solid @g24-blue;
-                background-color: transparent;
+                background-color: @g24-blue;
+                color: @g24-white;
+            }
+            ul li a.inverted:hover {
+                background-color: darken(@g24-blue,10%);
             }
             .navbar-nav > li > a {
                 padding-top: 10px;
@@ -434,6 +438,7 @@ body {
             }
             ul li a.inverted {
                 border: 1px solid @g24-white;
+                background-color: transparent;
             }
         }
     }
@@ -533,4 +538,3 @@ body {
             list-style: inside;
         }
     }
-}
