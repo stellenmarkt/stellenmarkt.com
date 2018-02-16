@@ -79,10 +79,7 @@ $this->headScript()->captureStart();
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="search-form-container">
+    <div class="search-form-container">
 
         <?php
             $queryParams = $this->params()->fromQuery();
@@ -103,9 +100,7 @@ $this->headScript()->captureStart();
             $this->filterForm->setAttribute('data-handle-by', 'native');
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
              echo $this->searchForm($this->filterForm)  ?>
-            </div>
-		 </div>
-	 </div>
+       
   </div>
 </nav>
 
