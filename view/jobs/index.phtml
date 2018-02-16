@@ -78,8 +78,12 @@ $this->headScript()->captureStart();
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
-<nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
-    <div class="search-form-container">
+<div class="jobs-search-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="search-form-container">
+
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
@@ -99,8 +103,12 @@ $this->headScript()->captureStart();
             $this->filterForm->setAttribute('data-handle-by', 'native');
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
              echo $this->searchForm($this->filterForm)  ?>
-    </div>
-</nav>
+            </div>
+		 </div>
+	 </div>
+  </div>
+</div>
+
   <div class="container">
      <div class="row">
 	     <div class="header-tab-bar" style="padding:25px 0">
