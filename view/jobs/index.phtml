@@ -80,6 +80,9 @@ $this->headScript()->captureStart();
 
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
     <div class="search-form-container">
+        <div class="container">
+            <div class="row">
+
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
@@ -100,6 +103,8 @@ $this->headScript()->captureStart();
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
              echo $this->searchForm($this->filterForm)  ?>
     </div>
+        </div>
+            </div>
 </nav>
   <div class="container">
      <div class="row">
