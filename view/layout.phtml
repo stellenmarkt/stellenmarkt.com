@@ -119,12 +119,15 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
         </div>
     </header>
 
-
-    
+<main id="content" class="container-fluid">
+    <div class="container">
+        <div class="row">
            <?php echo $notifications?>
            <?php echo $this->content;?>
-       
+        </div>
+    </div>
 
+</main>
 <!-- /container -->
 <!--
  <?= $this->wordpress()->menu('YAWIK-Seiten') ?>
