@@ -10,7 +10,7 @@
 ?>
 <?php $switchUserSession = new \Zend\Session\Container(\Auth\Controller\Plugin\UserSwitcher::SESSION_NAMESPACE);
 $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
-<ul id="yk-login-info" class="nav navbar-nav navbar-collapse collapse navbar-right">
+<ul id="yk-login-info" class="nav navbar-nav collapse navbar-right">
     <li class="dropdown">
 
         <?php if ($this->auth()->isLoggedIn()):?>
