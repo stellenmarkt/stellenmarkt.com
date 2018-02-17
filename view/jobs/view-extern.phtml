@@ -32,8 +32,8 @@ endif;
 
 
 
-<h1><?=$this->job->getOrganization()->getOrganizationName()->getName() ?> / <?=$this->job->getTitle()?></h1>
-<h2><?=$this->job->getTitle()?></h2>
+<h1><?=$this->job->getTitle()?></h1>
+<h2>Unternehmen: <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h2>
 
     <p class="lead"><?php if ($this->isVisited): ?>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
