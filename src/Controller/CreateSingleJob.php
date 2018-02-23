@@ -92,7 +92,7 @@ class CreateSingleJob extends AbstractActionController
             ];
         }
 
-        $session->getStorage()->clear('Gastro24_SingleJobData');
+        $session->getManager()->getStorage()->clear('Gastro24_SingleJobData');
 
         return [ 'isSuccess' => true ];
 
