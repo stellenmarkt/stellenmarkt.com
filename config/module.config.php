@@ -78,6 +78,7 @@ return [
              'main-navigation' => __DIR__ . '/../view/main-navigation.phtml',
              'auth/index/login-info' => __DIR__ . '/../view/login-info.phtml',
              'gastro24/wordpress-page/index' => __DIR__ . '/../view/gastro24/wordpress-page/index.phtml',
+             'gastro24/wordpress-page/index.ajax' => __DIR__ . '/../view/gastro24/wordpress-page/index.ajax.phtml',
              'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
              'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
              'jobs-by-mail/mail/jobs' => __DIR__ . '/../view/mail/jobs.phtml',
@@ -110,11 +111,13 @@ return [
     'form_elements' => [
         'invokables' => [
             'Jobs/Description' => 'Gastro24\Form\JobsDescription',
+            'Jobs/PreviewFieldset' => Form\JobPreviewFieldsetDelegator::class,
         ],
         'factories' => [
             Form\CreateSingleJobForm::class => InvokableFactory::class,
         ],
     ],
+
     'router' => [
         'routes' => [
             'lang' => [
