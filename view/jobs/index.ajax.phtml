@@ -13,17 +13,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
 
     <div class="row">
-	<div class="container">
-	    <div class="row">
-           <div class="facet-header" style="margin-bottom:20px;">
-	        <strong class="text-left">
-                <?=
-                sprintf($this->translate('Insgesamt %s%d%s freie Stellen gefunden', \Gastro24\Module::TEXT_DOMAIN),
-                        '<span id="job-count">',$this->jobs->getTotalItemCount(),'</span>')?>
-            </strong>
-	   </div>
-    </div>
-</div>
+
     <div class="col-md-3">
 	
 	<?php if ($hasFacets):
