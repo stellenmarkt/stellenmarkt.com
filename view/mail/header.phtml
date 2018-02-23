@@ -1,23 +1,30 @@
 <?php
 /* @var \Core\Options\ModuleOptions $options */
-$options = $this->services('Core/Options');
-$logoUrl="https://gastro24.yawik.org/Gastro24/background_gastrojob24_img.jpg";
-$homepageUrl=$this->serverUrl($this->basePath('/'));
+$options     = $this->services('Core/Options');
+$logoUrl     = "https://gastro24.yawik.org/Gastro24/background_gastrojob24_img.jpg";
+$homepageUrl = $this->serverUrl($this->basePath('/'));
 ?>
-<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<meta http-equiv="Content-type" name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 <!--[if mso]>
 <style type="text/css">
-    body, table, td, th, h1, h2, h3 {font-family: Helvetica, Arial, sans-serif !important;}
+    body, table, td, th, h1, h2, h3 {
+        font-family: Helvetica, Arial, sans-serif !important;
+    }
 </style>
 <![endif]-->
-<span style="display:none!important;color:#f3f3f3;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden">
-        <?=$this->title?>
+<span
+    style="display:none!important;color:#f3f3f3;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden">
+        <?= $this->title ?>
 </span>
-<table class="size margin-auto" style="background-color:<?= $this->mail_blue_color ?>;max-width:<?=$this->width?>;width:100%;margin-left: auto;margin-right: auto;">
+<table class="size margin-auto"
+       style="background-color:<?= $this->mail_blue_color ?>;max-width:<?= $this->width ?>;width:100%;margin-left: auto;margin-right: auto;">
     <tr>
         <td align="center" style="text-align: left;font-family:Helvetica,Arial,sans-serif;">
-            <a href="<?=$homepageUrl?>" style="text-decoration: none;">
-                <p style="color:<?= $this->mail_white_color  ?>;text-align:center;font-size:30px;font-weight:600;">GASTROJOB24.CH</p>
+            <a href="<?= $homepageUrl ?>" style="text-decoration: none;">
+                <p style="color:<?= $this->mail_white_color ?>;text-align:center;font-size:30px;font-weight:600;">
+                    GASTROJOB24.CH
+                </p>
             </a>
         </td>
     </tr>
