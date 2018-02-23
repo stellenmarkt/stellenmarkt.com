@@ -4,11 +4,10 @@
 $searchProfile = $this->searchProfile;
 /** @var \JobsByMail\Service\Hash $hash */
 $hash             = $this->hash;
-$width            = "600px";
-/** @var \Auth\Entity\User $user */
-#$user             = $this->user;
-$mail_blue_color  = "#295990";
-$mail_white_color = "#fff";
+
+// shared vars used in mails
+include_once( __DIR__ . '/' . 'vars.inc.phtml');
+
 ?>
 <div style="background: #eee;width: 100%;height: 100vh;">
     <div class="size margin-auto"
