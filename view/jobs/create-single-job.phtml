@@ -1,0 +1,64 @@
+<?php
+/**
+ * YAWIK
+ *
+ * @filesource
+ * @license MIT
+ * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
+ */
+
+
+$this->headTitle('Einzelinserat aufgeben');
+?>
+
+<h1>Einzelinserat aufgeben</h1>
+
+<?php if ($this->isProcessed):?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7"><h2><?=$this->title?><br><small><?= $this->invoiceAddress['company']?></small></h2></div>
+            <div class="col-md-5"><p><?php
+
+                foreach ($this->locations as $loc) {
+                    $location = new \Jobs\Entity\Location($loc);
+                    echo $location . '<br>';
+                }
+                    ?></p></div>
+        </div>
+        <div class="row">
+            <div class="col-md-5"><?= $this->link($this->uri) ?></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"><h3>Rechnungsanschrift</h3></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <address>
+                    <?=$this->invoiceAddress['company']?><br>
+                    <?=$this->invoiceAddress['name']?> ( <?=$this->link($this->invoiceAddress['email']) ?> )<br><br>
+                    <?=$this->invoiceAddress['street']?> <?=$this->invoiceAddress['houseNumber']?><br>
+                    <?=$this->invoiceAddress['zipCode']?> <?=$this->invoiceAddress['city']?><br><br>
+                    <?=$this->invoiceAddress['region'] ?>, <?=$this->invoiceAddress['country']?>
+                </address>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="btn btn-primary" href="?do=complete">Inserat jetzt schalten!</a>
+            </div>
+        </div>
+    </div>
+<?php elseif ($this->isSuccess): ?>
+    <?=$this->alert()->success('Inserat erfolgreich angelegt.');?>
+    <p class="lead">Vielen Dank</p>
+    <p>Ihre Anzeige wurde angelegt. Nach der Prüfung ... wird sie freigeschaltet.</p>
+<?php elseif ($this->isError): ?>
+    <?=$this->alert()->danger('Inserat anlegen fehlgeschlagen');?>
+    <p class="lead">Das Inserat konnte nicht angelegt werden.</p>
+<p>Es ist ein Fehler aufgetreten. Versuchen Sie es <a href="">erneut</a> ...</p>
+<?php else: ?>
+<div class="container"><div class="row"><div class="col-md-12">
+            <?=$this->form($this->form->setAttribute('data-handle-by', 'native'))?>
+</div></div></div>
+<?php endif ?>
+

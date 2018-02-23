@@ -32,6 +32,13 @@ return [
         'factories' => [
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
             Controller\RedirectExternalJobs::class => InvokableFactory::class,
+            Controller\CreateSingleJob::class => Factory\Controller\CreateSingleJobFactory::class,
+        ],
+    ],
+
+    'controller_plugins' => [
+        'factories' => [
+            Controller\Plugin\CreateSingleJob::class => Factory\Controller\Plugin\CreateSingleJobFactory::class,
         ],
     ],
 
@@ -85,6 +92,7 @@ return [
              'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
+             'gastro24/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
              'contactform.view' => __DIR__ . '/../view/contactform.phtml',
          ],
@@ -102,6 +110,9 @@ return [
     'form_elements' => [
         'invokables' => [
             'Jobs/Description' => 'Gastro24\Form\JobsDescription',
+        ],
+        'factories' => [
+            Form\CreateSingleJobForm::class => InvokableFactory::class,
         ],
     ],
     'router' => [
@@ -144,6 +155,17 @@ return [
                                         'controller' => Controller\RedirectExternalJobs::class,
                                         'action' => 'index',
                                     ],
+                                ],
+                            ],
+                            'single' => [
+                                'type' => 'Literal',
+                                'options' => [
+                                    'route' => '/single',
+                                    'defaults' => [
+                                        'controller' => Controller\CreateSingleJob::class,
+                                        'action' => 'index',
+                                    ],
+                                    'may_terminate' => true,
                                 ],
                             ],
                         ],
