@@ -18,7 +18,7 @@ $this->headScript()->captureStart();?>
 ;(function($, w) {
     $(function() {
         w.setTimeout(
-            function() { w.location.href='<?=$this->job->getLink()?>'; },
+            function() { w.location.href='<?=$this->job->getLink()?>';,'_blank' },
             5000
         );
     });
