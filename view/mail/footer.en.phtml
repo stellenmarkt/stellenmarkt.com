@@ -17,14 +17,25 @@ $siteName = $options->getSiteName();
 $operator = $options->getOperator();
 
 ?>
-<p>regards,</p>
-
-<p>your <?php echo $siteName ?>-Team</p>
-
-<p>
-    This mail was brought to you by:<br>
-    <?php echo $operator['companyShortName'] ?><br>
-    <?php echo $operator['street'] ?><br>
-    <?php echo $operator['postalCode'] . ' ' . $operator['city'] ?><br>
-    <?php echo $operator['homepage']  ?><br>
-</p>
+<table class="size margin-auto" style="background-color:<?= $this->mail_white_color ?>;max-width:<?= $this->width ?>; width:100%;margin-left: auto;margin-right: auto;">
+    <tr>
+        <td align="center" style="text-align: left;padding: 20px 0;">
+            <p>Sincerely,</p>
+            <p>Your Gastrojob24.ch Team</p><p>
+        </td>
+    </tr>
+</table>
+<table class="size margin-auto" style="background-color:#2D3638;max-width:<?= $this->width ?>;width:100%;margin-left: auto;margin-right: auto;">
+    <tr>
+        <td align="center" style="text-align: left;padding: 20px 0px; font-family:Helvetica,Arial,sans-serif;">
+            <p style="color:<?= $this->mail_white_color ?>;text-align:center;">a service by gastrojob24.ch | Kastenberg 1 | 9312 Haggenschwil</p>
+        </td>
+    </tr>
+</table>
+<table class="size margin-auto" style="background-color:<?= $this->mail_white_color ?>;max-width:<?= $this->width ?>;width:100%;margin-left: auto;margin-right: auto;">
+    <tr>
+        <td align="center" style="text-align: left;font-family:Helvetica,Arial,sans-serif;">
+            <p style="color:#9FADB1;text-align:center;font-size:12px;">This is an automatically generated e-mail. Please do not reply to this e-mail.</p>
+        </td>
+    </tr>
+</table>
