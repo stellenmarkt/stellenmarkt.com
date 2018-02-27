@@ -28,8 +28,10 @@ class JobUrlDelegatorFactory implements DelegatorFactoryInterface
     public function __invoke(ContainerInterface $container, $name, callable $callback, array $options = null)
     {
         $originalHelper = $callback();
-        $urlHelper = $container->get('ViewHelperManager')->get('url');
-        $delegator      = new JobUrlDelegator($originalHelper, $urlHelper);
+        $helpers   = $container->get('ViewHelperManager');
+        $urlHelper = $helpers->get('url');
+        $serverUrlHelper = $helpers->get('serverUrl');
+        $delegator      = new JobUrlDelegator($originalHelper, $urlHelper, $serverUrlHelper);
 
         return $delegator;
     }

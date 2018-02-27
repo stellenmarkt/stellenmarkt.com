@@ -25,11 +25,13 @@ class JobUrlDelegator extends AbstractHelper
 
     private $jobUrlHelper;
     private $urlHelper;
+    private $serverUrlHelper;
 
-    public function __construct(JobUrl $jobUrlHelper, $urlHelper)
+    public function __construct(JobUrl $jobUrlHelper, $urlHelper, $serverUrlHelper)
     {
         $this->jobUrlHelper = $jobUrlHelper;
         $this->urlHelper = $urlHelper;
+        $this->serverUrlHelper = $serverUrlHelper;
     }
 
     public function __invoke(Job $jobEntity, $options = [], $urlParams = [])
@@ -39,11 +41,14 @@ class JobUrlDelegator extends AbstractHelper
         }
 
         if ($jobEntity->getLink()) {
-            $url = $this->urlHelper->__invoke('lang/jobs/view-extern', ['id' => $jobEntity->getId()], true);
+            $url = $this->urlHelper->__invoke('lang/jobs/view-extern', $urlParams, true);
             /* Unfortunately, we need to copy this portion from the jobUrlHelper
              * but simplified, as some options are implied */
 
-            if ($options['linkOnly']){
+            if (isset($options['linkOnly']) && $options['linkOnly']){
+                if (isset($options['absolute']) && $options['absolute']) {
+                    $url = $this->serverUrlHelper->__invoke($url);
+                }
                 $result = $url;
             }else{
                 $result = sprintf('<a href="%s">%s</a>',
