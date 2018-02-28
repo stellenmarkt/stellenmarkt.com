@@ -192,6 +192,23 @@ class Module
                 }
 
             }, -9999);
+
+            $eventManager->attach(MvcEvent::EVENT_DISPATCH, function(MvcEvent $e) {
+                $controller = $e->getTarget();
+                if ( (\Auth\Controller\RegisterController::class == get_class($controller)
+                      || \CompanyRegistration\Controller\RegistrationController::class == get_class($controller)
+                     )
+                    && (($pt = $e->getRequest()->getQuery('pt')) || ($pt = $e->getRequest()->getPost('pt')))
+                ) {
+                    $result = $e->getResult();
+                    $form   = $result->getVariable('form');
+                    $form->add([
+                        'type' => 'hidden',
+                        'name' => 'pt',
+                        'attributes' => [ 'value' => $pt ],
+                    ]);
+                }
+            }, -10);
         }
 
     }

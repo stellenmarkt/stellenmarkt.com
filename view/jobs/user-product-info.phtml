@@ -1,0 +1,30 @@
+<?php
+/**
+ * YAWIK
+ *
+ * @filesource
+ * @license MIT
+ * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
+ */
+
+$job = $this->element->getObject();
+$company = $job->getOrganization();
+if (!$company) { return; }
+
+$owner = $company->getUser();
+
+if (!$owner) { return; }
+
+$product = $owner->getAttachedEntity(\Gastro24\Entity\UserProduct::class);
+$product = $product ? $product->getProduct() : null;
+
+if (!$product) { return; }
+
+?>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3><?=$product instanceOf \Gastro24\Entity\Product\Basic ? 'Basic' : 'Plus' ?></h3>
+        <p>Sie haben <?=($count = $product->getJobCount()) ? 'bereits ' . $count : 'noch keine '?> Jobs geschaltet.</p>
+
+    </div>
+</div>
