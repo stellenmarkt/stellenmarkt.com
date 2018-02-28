@@ -20,11 +20,32 @@ $idMap = [
 ];
 
 return [
+
+    'doctrine' => [
+        'driver' => [
+            'odm_default' => [
+                'drivers' => [
+                    'Gastro24\Entity' => 'annotation',
+                ],
+            ],
+            'annotation' => [
+                /*
+                 * All drivers (except DriverChain) require paths to work on. You
+                 * may set this value as a string (for a single path) or an array
+                 * for multiple paths.
+                 * example https://github.com/doctrine/DoctrineORMModule
+                 */
+                'paths' => [ __DIR__ . '/../src/Entity'],
+            ],
+        ],
+    ],
+
     'service_manager' => [
         'factories' => [
             'Auth/Dependency/Manager' => 'Gastro24\Factory\Dependency\ManagerFactory',
             WordpressApi\Service\WordpressClient::class => WordpressApi\Factory\Service\WordpressClientFactory::class,
             WordpressApi\Listener\WordpressContentSnippet::class => WordpressApi\Factory\Listener\WordpressContentSnippetFactory::class,
+            Listener\UserRegisteredListener::class => Listener\UserRegisteredListenerFactory::class,
         ],
     ],
 
@@ -100,8 +121,10 @@ return [
              'gastro24/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
              'contactform.view' => __DIR__ . '/../view/contactform.phtml',
+             'gastro24/jobs/user-product-info' => __DIR__ . '/../view/jobs/user-product-info.phtml',
          ],
     ],
+
     'translator'   => [
         'translation_file_patterns' => [
             [
@@ -119,6 +142,7 @@ return [
         ],
         'factories' => [
             Form\CreateSingleJobForm::class => InvokableFactory::class,
+            Form\UserProductInfo::class => InvokableFactory::class,
         ],
     ],
 
@@ -234,6 +258,14 @@ return [
         'Core/ViewSnippets/Events' => [ 'listeners' => [
             WordpressApi\Listener\WordpressContentSnippet::class => ['wordpress-page', true],
         ]],
-    ],
 
+        'Auth/Events' => [ 'listeners' => [
+            Listener\UserRegisteredListener::class => [ \Auth\Listener\Events\AuthEvent::EVENT_USER_REGISTERED, true ],
+        ]],
+
+        'Jobs/JobContainer/Events' => [ 'listeners' => [
+            Listener\ValidateUserProduct::class => 'ValidateJob',
+            Listener\InjectUserProductInfo::class => \Core\Form\Event\FormEvent::EVENT_INIT,
+        ]],
+    ],
 ];
