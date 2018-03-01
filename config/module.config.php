@@ -112,6 +112,8 @@ return [
              'mail/forgotPassword.en' =>  __DIR__ . '/../view/mail/forgot-password.en.phtml',
              'mail/register' =>  __DIR__ . '/../view/mail/register.phtml',
              'mail/register.en' =>  __DIR__ . '/../view/mail/register.en.phtml',
+             'mail/job-accepted.en' => __DIR__ . '/../view/mail/job-accepted.en.phtml',
+             'mail/job-accepted' => __DIR__ . '/../view/mail/job-accepted.phtml',
              'mail/job-pending.en' => __DIR__ . '/../view/mail/job-pending.en.phtml',
              'mail/job-pending' => __DIR__ . '/../view/mail/job-pending.phtml',
              'startpage'  => __DIR__ . '/../view/startpage.phtml',

@@ -31,11 +31,11 @@ include_once(__DIR__ . '/' . 'vars.inc.phtml');
         ); ?>
 
         <div class="seprate_footer" style="padding:10px;">
-            <p><?php echo 'male' == $info->getGender()
+            <h3><?php echo 'male' == $info->getGender()
                     ? 'Dear Mr '
                     : 'Dear Mrs ' ?> <?php echo $info->getDisplayName(/*emailIfEmpty*/
                     false
-                ); ?>,</p>
+                ); ?>,</h3>
 
             <p>
                 We hereby acknowledge receipt of your job announcement with the headline <b><?= $job->getTitle() ?></b>

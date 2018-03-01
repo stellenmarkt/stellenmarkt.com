@@ -31,12 +31,12 @@ include_once(__DIR__ . '/' . 'vars.inc.phtml');
         ); ?>
 
         <div class="seprate_footer" style="padding:10px;">
-            <p><?php echo 'male' == $info->getGender()
+            <h3><?php echo 'male' == $info->getGender()
                     ? 'Sehr geehrter Herr'
                     : 'Sehr geehrte Frau' ?>
                 <?= $info->getDisplayName(/*emailIfEmpty*/
                     false
-                ); ?>,</p>
+                ); ?>,</h3>
 
             <p>
                 hiermit bestätigen wir Ihnen den Eingang Ihrer Stellenanzeige <b><?= $job->getTitle() ?></b> mit der
