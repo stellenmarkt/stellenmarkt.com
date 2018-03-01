@@ -3,13 +3,17 @@
  * YAWIK
  *
  * @filesource
- * @copyright (c) 2013 - 2016 Cross Solution (http://cross-solution.de)
- * @author        bleek@cross-solution.de
- * @license       MIT
+ * @license    MIT
+ * @copyright  2013 - 2015 Cross Solution <http://cross-solution.de>
  */
+?>
+<?php
 /*
- * Confirmation Mail to the Customer
+ * Available variables:
+ * $this->job : The job entity
+ * $this->siteName: The site name (from Core/AbstractOptions)
  */
+
 $job = $this->job;
 /* @var \Jobs\Entity\Job $job */
 $user = $job->getUser();
@@ -32,22 +36,20 @@ include_once(__DIR__ . '/' . 'vars.inc.phtml');
 
         <div class="seprate_footer" style="padding:10px;">
             <h3><?php echo 'male' == $info->getGender()
-                    ? 'Dear Mr '
-                    : 'Dear Mrs ' ?> <?php echo $info->getDisplayName(/*emailIfEmpty*/
+                    ? 'Dear Mr'
+                    : 'Dear Mrs' ?> <?php echo $info->getDisplayName(/*emailIfEmpty*/
                     false
                 ); ?>,</h3>
 
             <p>
-                We hereby acknowledge receipt of your job announcement with the headline <b><?= $job->getTitle() ?></b>
-                and the reference <b><?= $job->getReference() ?></b>. You will receive a message as soon as the ad is
-                approved and published.
+                Your job opening "<?= $job->getTitle() ?>" referenced by <?= $job->getReference() ?>.
+                was rejected.
             </p>
 
             <p>
-                You can follow the actual status of your job opening on the <a
-                    href="<?php echo $this->serverUrl() . $this->url('lang/jobs', array('lang' => 'de')) ?>">job
-                    overview</a>.
+                Please correct your job opening
             </p>
+
             <?= $this->partial('mail/footer', ['width' => $width, 'mail_white_color' => $mail_white_color]); ?>
         </div>
     </div>

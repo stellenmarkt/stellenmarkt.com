@@ -3,21 +3,12 @@
  * YAWIK
  *
  * @filesource
- * @copyright (c) 2013 - 2016 Cross Solution (http://cross-solution.de)
- * @author        bleek@cross-solution.de
- * @license       MIT
+ * @license    MIT
+ * @copyright  2013 - 2015 Cross Solution <http://cross-solution.de>
  */
-/*
- * Confirmation Mail to the Customer
- */
-$job = $this->job;
-/* @var \Jobs\Entity\Job $job */
-$user = $job->getUser();
-$info = $user->getInfo();
 
 // shared vars used in mails
 include_once(__DIR__ . '/' . 'vars.inc.phtml');
-
 ?>
 <div style="background: #eee;width: 100%;height: 100vh;">
     <div class="size margin-auto"
@@ -31,24 +22,29 @@ include_once(__DIR__ . '/' . 'vars.inc.phtml');
         ); ?>
 
         <div class="seprate_footer" style="padding:10px;">
+            <?php
+            /*
+             * Available variables:
+             * $this->job : The job entity
+             * $this->siteName: The site name (from Core/AbstractOptions)
+             */
+
+            $job = $this->job;
+            /* @var \Jobs\Entity\Job $job */
+            $user = $job->getUser();
+            $info = $user->getInfo();
+            ?>
             <h3><?php echo 'male' == $info->getGender()
                     ? 'Sehr geehrter Herr'
-                    : 'Sehr geehrte Frau' ?>
-                <?= $info->getDisplayName(/*emailIfEmpty*/
+                    : 'Sehr geehrte Frau' ?> <?php echo $info->getDisplayName(/*emailIfEmpty*/
                     false
                 ); ?>,</h3>
 
             <p>
-                hiermit bestätigen wir Ihnen den Eingang Ihrer Stellenanzeige <b><?= $job->getTitle() ?></b> mit der
-                Referenz <b><?= $job->getReference() ?></b>. Sie erhalten von uns eine Nachricht, sobald die Anzeige von
-                freigegeben und veröffentlicht wurde.
+                Ihre Stellenanzeige "<?= $job->getTitle() ?>" mit der Referenz <?= $job->getReference() ?>.
+                wurde freigeschaltet.
             </p>
 
-            <p>
-                Den aktuellen Status können Sie in der <a
-                    href="<?php echo $this->serverUrl() . $this->url('lang/jobs', array('lang' => 'de')) ?>">Job-Übersicht</a>
-                verfolgen.
-            </p>
 
             <?= $this->partial('mail/footer', ['width' => $width, 'mail_white_color' => $mail_white_color]); ?>
         </div>
