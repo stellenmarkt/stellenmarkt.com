@@ -116,6 +116,8 @@ return [
              'mail/job-accepted' => __DIR__ . '/../view/mail/job-accepted.phtml',
              'mail/job-pending.en' => __DIR__ . '/../view/mail/job-pending.en.phtml',
              'mail/job-pending' => __DIR__ . '/../view/mail/job-pending.phtml',
+             'mail/job-rejected.en' => __DIR__ . '/../view/mail/job-rejected.en.phtml',
+             'mail/job-rejected' => __DIR__ . '/../view/mail/job-rejected.phtml',
              'startpage'  => __DIR__ . '/../view/startpage.phtml',
              'templates/default/index' => __DIR__ . '/../view/templates/default/index.phtml',
              'templates/classic/index' => __DIR__ . '/../view/templates/classic/index.phtml',
