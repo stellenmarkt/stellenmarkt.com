@@ -114,6 +114,8 @@ return [
              'mail/register.en' =>  __DIR__ . '/../view/mail/register.en.phtml',
              'mail/job-accepted.en' => __DIR__ . '/../view/mail/job-accepted.en.phtml',
              'mail/job-accepted' => __DIR__ . '/../view/mail/job-accepted.phtml',
+             'mail/job-created.en' => __DIR__ . '/../view/mail/job-created.en.phtml',
+             'mail/job-created' => __DIR__ . '/../view/mail/job-created.phtml',
              'mail/job-pending.en' => __DIR__ . '/../view/mail/job-pending.en.phtml',
              'mail/job-pending' => __DIR__ . '/../view/mail/job-pending.phtml',
              'mail/job-rejected.en' => __DIR__ . '/../view/mail/job-rejected.en.phtml',
