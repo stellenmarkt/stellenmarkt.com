@@ -22,18 +22,5 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
  */
 class Basic extends AbstractProduct
 {
-    public function increaseJobCount()
-    {
-        if (10 == $this->jobCount) {
-            throw new \Exception('Maximum amount of jobs exceeded.');
-        }
-
-        parent::increaseJobCount();
-    }
-
-    public function hasAvailableJobAmount()
-    {
-        return 0 < ( 10 - $this->jobCount );
-    }
-
+    protected $jobAmount = 10;
 }

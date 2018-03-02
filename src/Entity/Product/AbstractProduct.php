@@ -45,10 +45,29 @@ abstract class AbstractProduct implements ProductInterface
      */
     protected $jobCount = 0;
 
+    protected $jobAmount;
+
     public function __construct()
     {
         $this->startDate = new \DateTime();
         $this->endDate   = new \DateTime(static::ENDDATE);
+    }
+
+    public function isExpired()
+    {
+        $now = new \DateTime();
+
+        return $now > $this->endDate;
+    }
+
+    public function getAvailableJobAmount()
+    {
+        return $this->jobAmount;
+    }
+
+    public function hasAvailableJobAmount()
+    {
+        return null === $this->jobAmount || $this->jobAmount > $this->jobCount;
     }
 
     public function getStartDate()
@@ -68,6 +87,10 @@ abstract class AbstractProduct implements ProductInterface
 
     public function increaseJobCount()
     {
+        if (!$this->hasAvailableJobAmount()) {
+            throw new \Exception('Job amount exceeded.');
+        }
+
         $this->jobCount += 1;
     }
 

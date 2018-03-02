@@ -37,11 +37,18 @@ class ValidateUserProduct
 
         $product = $owner->getAttachedEntity(UserProduct::class);
 
-        if (!$product || $product->getProduct()->hasAvailableJobAmount()) {
+        if (!$product) {
             return;
         }
 
-        return 'Sie haben bereits alle Ihre Job-Slots verbraucht.';
+        $product = $product->getProduct();
 
+        if (!$product->hasAvailableJobAmount()) {
+            return 'Sie haben bereits alle Ihre Job-Slots verbraucht.';
+        }
+
+        if ($product->isExpired()) {
+            return 'Ihr Job-Abonnement ist abgelaufen.';
+        }
     }
 }

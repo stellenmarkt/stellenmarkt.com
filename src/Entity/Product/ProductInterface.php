@@ -35,6 +35,13 @@ interface ProductInterface
     /**
      *
      *
+     * @return bool
+     */
+    public function isExpired();
+
+    /**
+     *
+     *
      * @return int
      */
     public function getJobCount();
@@ -49,6 +56,13 @@ interface ProductInterface
     /**
      *
      *
+     * @return int
+     */
+    public function getAvailableJobAmount();
+
+    /**
+     *
+     *
      * @return void
      */
     public function decreaseJobCount();
@@ -59,4 +73,6 @@ interface ProductInterface
      * @return void
      */
     public function increaseJobCount();
+
+
 }

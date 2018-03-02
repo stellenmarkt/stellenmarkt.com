@@ -22,8 +22,5 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
  */
 class Plus extends AbstractProduct
 {
-    public function hasAvailableJobAmount()
-    {
-        return true;
-    }
+
 }

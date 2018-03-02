@@ -2,6 +2,7 @@
 namespace Gastro24;
 
 use Gastro24\Options\Landingpages;
+use Jobs\Listener\Events\JobEvent;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 Module::$isLoaded = true;
@@ -272,8 +273,12 @@ return [
         ]],
 
         'Jobs/JobContainer/Events' => [ 'listeners' => [
-            Listener\ValidateUserProduct::class => 'ValidateJob',
-            Listener\InjectUserProductInfo::class => \Core\Form\Event\FormEvent::EVENT_INIT,
+            Listener\ValidateUserProduct::class => [ 'ValidateJob', true ],
+            Listener\InjectUserProductInfo::class => [ \Core\Form\Event\FormEvent::EVENT_INIT, true ],
+        ]],
+
+        'Jobs/Events' => [ 'listeners' => [
+            Listener\IncreaseJobCount::class => [ JobEvent::EVENT_JOB_CREATED, true ],
         ]],
     ],
 ];
