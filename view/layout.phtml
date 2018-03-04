@@ -118,10 +118,13 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
         <div id="formular">
         </div>
     </header>
-
-
-       <?php echo $notifications?>
-       <?php echo $this->content;?>
+    
+<main id="content">
+ <div class="container">
+        <?php echo $notifications?>
+           <?php echo $this->content;?>
+ </div>
+</main>
 
 <!-- /container -->
 <!--
