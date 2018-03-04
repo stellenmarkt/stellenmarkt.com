@@ -235,8 +235,8 @@ $this->headTitle($this->translate('Home'));
             $sectionHtml .= '<hr><h2 class="text-center">' . $tab . '</h2><div class="row">';
             $active='';
             foreach ($sections as $section => $links):
-                if ($tab == 'Gastro Jobs in Schweizer Regionen') {
-                    $sectionHtml .= '<div class="col-sm-offset-2 col-sm-8 region"><ul>';
+                    if ($tab == 'Gastro Jobs nach Region') {
+                    $sectionHtml .= '<div class="col-md-12 region"><ul>';
                 }else {
                     $sectionHtml .= '<div class="col-md-4"><h3>'. $section .'</h3><ul>';
                 }
