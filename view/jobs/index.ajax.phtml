@@ -130,7 +130,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                     }
                     ?>
                     <p>
-                        <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'fulltime' ?>
+                        <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'Vollzeit' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
                     </p>
                     <p><?=$job->getLocation()?></p>
