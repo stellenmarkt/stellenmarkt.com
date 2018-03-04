@@ -177,7 +177,7 @@ $this->headTitle($this->translate('Home'));
 
 ?>
 
-<main id="content" class="container-fluid">
+<main id="content">
     <?php echo $notifications?>
     <?php $companies = $queries->getCompanies();?>
     <?php if (count($companies)):
@@ -251,9 +251,9 @@ $this->headTitle($this->translate('Home'));
         endforeach;
 
         ?>
-        <div class="container">
+
             <?=$sectionHtml?>
-        </div>
+
         <hr />
         <div class="row">
             <div class="col-md-12 text-center">
