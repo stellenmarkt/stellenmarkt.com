@@ -47,6 +47,15 @@ return [
             WordpressApi\Service\WordpressClient::class => WordpressApi\Factory\Service\WordpressClientFactory::class,
             WordpressApi\Listener\WordpressContentSnippet::class => WordpressApi\Factory\Listener\WordpressContentSnippetFactory::class,
             Listener\UserRegisteredListener::class => Listener\UserRegisteredListenerFactory::class,
+            Listener\VoidListener::class => InvokableFactory::class,
+            Listener\CreateJobOrder::class => Listener\CreateJobOrderFactory::class,
+        ],
+        'aliases' => [
+            'Orders\Form\Listener\InjectInvoiceAddressInJobContainer' => Listener\VoidListener::class,
+            'Orders\Form\Listener\ValidateJobInvoiceAddress' => Listener\VoidListener::class,
+            'Orders\Form\Listener\DisableJobInvoiceAddress' => Listener\VoidListener::class,
+            'Orders/Listener/BindInvoiceAddressEntity' => Listener\VoidListener::class,
+            'Orders/Listener/CreateJobOrder' => Listener\CreateJobOrder::class,
         ],
     ],
 
