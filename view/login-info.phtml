@@ -91,7 +91,7 @@ $lang = isset($this->lang)?$this->lang:$this->params('lang'); ?>
 
         <?php else: ?>
             <a href="<?php
-            $ref = $this->buildReferer(array('logout', 'ref'));
+            $ref = $this->url('lang/dashboard', [], true);
             echo $this->url('lang/auth', array(), array(
                 'query' => array(
                     'ref' => urlencode($ref),
