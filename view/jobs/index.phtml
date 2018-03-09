@@ -136,14 +136,6 @@ $this->headScript()->captureStart();
     </script>
 <?php endif ?>
 
-        <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
-                <div id="taetigkeit" >
-                    <?= $parts[1] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
-
-
 <div class="container">
     <div class="row">
         <div class="tab-content">
@@ -177,7 +169,15 @@ $this->headScript()->captureStart();
                     
                 </div>
             </div>
-           
+            
+        <div class="col-md-3">
+               <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+                <div id="taetigkeit" >
+                    <?= $parts[1] ?>
+                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+                </div>
+            <?php endif ?>
+
             <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
                 <div id="lohn" >
                     <?= $parts[2] ?>
@@ -196,6 +196,10 @@ $this->headScript()->captureStart();
                     <?php if (51 == $query): echo $this->landingpages(); endif; ?>
                 </div>
             <?php endif ?>
+            </div>
+            
+            
+            
         </div>
     </div>
 </div>
