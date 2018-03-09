@@ -135,6 +135,15 @@ $this->headScript()->captureStart();
         })(jQuery);
     </script>
 <?php endif ?>
+
+        <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+                <div id="taetigkeit" >
+                    <?= $parts[1] ?>
+                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+                </div>
+            <?php endif ?>
+
+
 <div class="container">
     <div class="row">
         <div class="tab-content">
@@ -162,12 +171,7 @@ $this->headScript()->captureStart();
                 <div class="pagination-content">
                     <?php echo $this->render('jobs/jobboard/index.ajax.phtml') ?>
                     
-                     <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
-                <div id="taetigkeit" >
-                    <?= $parts[1] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
+             
                     
                     
                     
