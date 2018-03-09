@@ -106,7 +106,6 @@ $this->headScript()->captureStart();
 	     <div class="header-tab-bar" style="padding:25px 0">
 		 
              <h1 class="text-center"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
-             <?php $parts=preg_split('~<!--more-->~' , $description);?>
 			 <p class="similar-jobs text-center"><?=$parts[0]?></p>
 		 </div>
 	 </div>
