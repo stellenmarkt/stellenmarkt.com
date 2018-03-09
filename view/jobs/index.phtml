@@ -101,16 +101,12 @@ $this->headScript()->captureStart();
              echo $this->searchForm($this->filterForm)  ?>
     </div>
 </nav>
-  <div class="container">
-     <div class="row">
-	     <div class="header-tab-bar" style="padding:25px 0">
+
 		 
              <h1> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
 			 
 			 <hr />
-		 </div>
-	 </div>
- </div>
+
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
     <script type="text/javascript">
