@@ -10,7 +10,6 @@ if (count($jobs)): // We only want to render something, if there are items.
 ?><div class="hidden" id="update-job-count"><?=$this->jobs->getTotalItemCount()?></div><?php
 $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 ?>
- <div class="container">
 
     <div class="row">
 
@@ -156,7 +155,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
  
     </div>
         </div>
- </div>
+
         <?=$hasFacets ? '</div>' : '' ?>
 <?php endif ?>
 
