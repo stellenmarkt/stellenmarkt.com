@@ -144,13 +144,16 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
      </div>
     <?php endforeach?>
 
-
-    <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control',
+    <div class="container">
+        
+           <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control',
                                  [
                                      'lang' => $this->params('lang'),
                                      'route' => 'lang/jobboard'
                                  ]);
     ?>
+    </div>
+ 
     </div>
         </div>
   
