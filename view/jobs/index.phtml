@@ -111,19 +111,6 @@ $this->headScript()->captureStart();
 		 </div>
 	 </div>
  </div>
-<div class="container" style="margin-bottom: 20px;">
-    <div class="row">
-            <ul id="search-tabs" class="nav nav-pills" style="padding:0 30px">
-                <li class="active">
-                    <a data-toggle="tab" href="#jobs-list-container"><span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> Offene Stellen</a>
-                </li>
-                <?php if (isset($parts[1]) && ""!=trim($parts[1])): ?><li><a href="#taetigkeit">Tätigkeit</a></li><?php endif ?>
-                <?php if (isset($parts[2]) && ""!=trim($parts[2])): ?><li><a href="#lohn">Lohn</a></li><?php endif ?>
-                <?php if (isset($parts[3]) && ""!=trim($parts[3])): ?><li><a href="#karriere-weiterbildung">Karriere & Weiterbildung</a></li><?php endif ?>
-                <?php if (isset($parts[4]) && ""!=trim($parts[4])): ?><li><a href="#erfahrungsberichte">Erfahrungsberichte</a></li><?php endif ?>
-            </ul>
-    </div>
-</div>
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
     <script type="text/javascript">
@@ -170,31 +157,7 @@ $this->headScript()->captureStart();
                 </div>
             </div>
              
-               <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
-                <div id="taetigkeit" >
-                    <?= $parts[1] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
-
-            <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
-                <div id="lohn" >
-                    <?= $parts[2] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
-            <?php if (isset($parts[3]) && "" != trim($parts[3])): ?>
-                <div id="karriere-weiterbildung" >
-                    <?= $parts[3] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
-            <?php if (isset($parts[4]) && "" != trim($parts[4])): ?>
-                <div id="erfahrungsberichte >
-                    <?= $parts[4] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
+            
            
   
             
