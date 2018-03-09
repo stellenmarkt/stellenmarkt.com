@@ -161,14 +161,19 @@ $this->headScript()->captureStart();
 
                 <div class="pagination-content">
                     <?php echo $this->render('jobs/jobboard/index.ajax.phtml') ?>
-                </div>
-            </div>
-            <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+                    
+                     <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
                 <div id="taetigkeit" >
                     <?= $parts[1] ?>
                     <?php if (51 == $query): echo $this->landingpages(); endif; ?>
                 </div>
             <?php endif ?>
+                    
+                    
+                    
+                </div>
+            </div>
+           
             <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
                 <div id="lohn" >
                     <?= $parts[2] ?>
