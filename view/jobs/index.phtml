@@ -102,11 +102,12 @@ $this->headScript()->captureStart();
     </div>
 </nav>
 
+	     <div class="header-tab-bar" style="padding:25px 0">
 		 
-             <h1> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
-			 
-			 <hr />
-
+             <h1 class="text-center"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+             <?php $parts=preg_split('~<!--more-->~' , $description);?>
+			 <p class="similar-jobs text-center"><?=$parts[0]?></p>
+       </div>
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
     <script type="text/javascript">
