@@ -140,11 +140,11 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
                 <?=$this->gastroApplyUrl($job);?>
             </div>
         </div>
-    </div>
+ 
     
     <?php endforeach?>
 
-    <div class="clear"></div>
+
     <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control',
                                  [
                                      'lang' => $this->params('lang'),
@@ -153,7 +153,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
     ?>
     </div>
         </div>
-
+   </div>
         <?=$hasFacets ? '</div>' : '' ?>
 <?php endif ?>
 
