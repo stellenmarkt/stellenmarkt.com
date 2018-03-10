@@ -26,7 +26,8 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
     <div class="col-md-3">
 
-    
+               <h1 class="h4" style="margin-top:0px!important"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+
 	
 	<?php if ($hasFacets):
     if ($this->params()->fromRoute('isLandingPage')):?>
@@ -95,7 +96,6 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <div class="col-md-9">
         <div class="col-md-12">
         
-           <h1 class="h2" style="margin-top:0px!important"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
              
             <?php $parts=preg_split('~<!--more-->~' , $description);?>
 			<?=$parts[0]?>
