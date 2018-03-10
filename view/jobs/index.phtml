@@ -102,7 +102,7 @@ $this->headScript()->captureStart();
         
 </div>
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
-    <div class="search-form-container">
+    <div class="search-form-container container">
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
