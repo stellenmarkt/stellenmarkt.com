@@ -86,21 +86,7 @@ $this->headScript()->captureStart();
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
-<div class="container">
-    
-    
-    
 
-
-        <h1 style="font-weight:300!important;"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
-             
-            <?php $parts=preg_split('~<!--more-->~' , $description);?>
-			<?=$parts[0]?>
-            <hr />
-            
-          <div id="share"></div>
-        
-</div>
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
     <div class="search-form-container ">
         <div class="container">
