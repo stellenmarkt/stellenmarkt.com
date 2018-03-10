@@ -78,8 +78,10 @@ $this->headScript()->captureStart();
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
-        <h1 class=" h2"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
-             <hr />
+        <h1 style="font-weight:300!important;"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+             
+             
+            <hr />
 
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
     <div class="search-form-container">
