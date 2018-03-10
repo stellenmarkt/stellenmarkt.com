@@ -28,7 +28,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
         <div style="margin-bottom:30px">
             
       
-         <strong class="h4" style="color:#22436c"><?=$this->jobs->getTotalItemCount()?> Treffer für</strong>  <h1 style="display:inline;color:#22436c" class="h4"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1> 
+         <strong class="h4" style="color:#22436c"><?=$this->jobs->getTotalItemCount()?> Treffer für</strong>  <h1 style="display:inline;color:#22436c" class="h4"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Ihre Job-Suche' : 'Leider keine passenden Jobs gefunden'); ?></h1> 
 
 	  </div>
 	<?php if ($hasFacets):
