@@ -89,7 +89,7 @@ $wordpress = $this->proxy('wordpress');
     <div class="col-md-9">
         <div class="col-md-12">
         
-           <h1 style="font-weight:300!important;"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+           <h1 style="font-weight:300!important;margin-top:0px!important"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
              
             <?php $parts=preg_split('~<!--more-->~' , $description);?>
 			<?=$parts[0]?>
