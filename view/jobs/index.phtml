@@ -102,7 +102,8 @@ $this->headScript()->captureStart();
         
 </div>
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
-    <div class="search-form-container container">
+    <div class="search-form-container ">
+        <div class="container">
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
@@ -123,6 +124,7 @@ $this->headScript()->captureStart();
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
              echo $this->searchForm($this->filterForm)  ?>
     </div>
+</div>
 </nav>
  <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
  
