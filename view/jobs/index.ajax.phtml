@@ -26,7 +26,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
     <div class="col-md-3">
 
-               <h1 class="h4> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+               <h1 class="h4"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
 
 	
 	<?php if ($hasFacets):
