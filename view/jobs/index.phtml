@@ -116,15 +116,19 @@ $this->headScript()->captureStart();
 
 		 <?php $parts=preg_split('~<!--more-->~' , $description);?>
 	
-   
-
- <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
- 
    <style>
+   
       #jobs-list-filter-wrapper .input-group {
 
     width: 100%;
 } 
+   
+   </style>
+
+ <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+ 
+   <style>
+   
    #similar {
       margin-top: -20px;
     padding: 5px 0;
