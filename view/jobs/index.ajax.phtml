@@ -21,11 +21,6 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
 
 
-if (304 === $query || ($this->params()->fromRoute('isLandingPage') && !$this->params()->fromRoute('isFilteredLandingPage') && (count($this->jobs) || $description))) {
-    $robots = substr($robots, 2);
-}
-
-
 
 
 ?>
