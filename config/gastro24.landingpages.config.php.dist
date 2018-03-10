@@ -270,6 +270,15 @@ $options = [
           'panel' => 'Aushilfe & Saison Jobs',
           'text' => 'Saison'
      ],
+       'saison' => [
+          'id' => 2444,
+          'tab' => '',
+          'panel' => ' ',
+          'text' => 'Saison'
+     ],
+     
+     
+     
     'konditor-bei-spruengli' => [ 
           'id' => 48,
           'text' => 'Konditor/in bei Sprüngli',
