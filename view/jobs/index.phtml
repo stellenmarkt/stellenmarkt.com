@@ -116,15 +116,12 @@ $this->headScript()->captureStart();
              echo $this->searchForm($this->filterForm)  ?>
     </div>
 </nav>
-
-		   <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
-                <div id="taetigkeit" >
-                    <?= $parts[1] ?>
-                    <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-                </div>
-            <?php endif ?>
-     
-    
+ <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+         <div id="similiar" >
+            <?= $parts[1] ?>
+            <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+          </div>
+<?php endif ?>
     
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
