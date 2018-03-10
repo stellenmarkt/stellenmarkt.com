@@ -132,6 +132,7 @@ $this->headScript()->captureStart();
        
    #similar {
     padding-bottom:10px;
+    background-color:#fff;
 }
        
     #similar a {
@@ -141,10 +142,15 @@ $this->headScript()->captureStart();
 }
    </style>
  
-   <div id="similar" class="container">
-            <?= $parts[1] ?>
+   <div id="similar">
+        <div class="container">
+           <?= $parts[1] ?>
             <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+        </div>
    </div>
+        
+ 
+   
 <?php endif ?>
     
 <?php if (!count($this->jobs)):?>
