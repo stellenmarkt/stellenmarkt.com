@@ -106,7 +106,8 @@ $this->headScript()->captureStart();
 		 
              <h1 class="h2"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
              <hr />
-                 <?php $parts=preg_split('~<!--more-->~' , $description);?>
+                   <?php $parts=preg_split('~<!--more-->~' , $description);?>
+			 <?=$parts[0]?>
        </div>
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
