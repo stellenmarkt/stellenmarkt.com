@@ -95,7 +95,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <div class="col-md-9">
         <div class="col-md-12">
         
-           <h1 style="font-weight:300!important;margin-top:0px!important"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+           <h1 style="color: #0c2577;font-size:16px;font-weight:300!important;margin-top:0px!important"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
              
             <?php $parts=preg_split('~<!--more-->~' , $description);?>
 			<?=$parts[0]?>
