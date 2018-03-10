@@ -272,8 +272,8 @@ $options = [
      ],
        '1234' => [
           'id' => 722,
-          'tab' => '',
-          'panel' => ' ',
+          'tab' => 'Jobs nach Berufsfelder',
+          'panel' => 'Aushilfe & Saison Jobs',
           'text' => 'Saison'
      ],
      
