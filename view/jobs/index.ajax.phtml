@@ -20,11 +20,7 @@ $wordpress = $this->proxy('wordpress');
 
     <div class="col-md-3">
 
-<h1 style="font-weight:300!important;"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
-             
-            <?php $parts=preg_split('~<!--more-->~' , $description);?>
-			<?=$parts[0]?>
-            <hr />
+    
 	
 	<?php if ($hasFacets):
     if ($this->params()->fromRoute('isLandingPage')):?>
@@ -89,7 +85,17 @@ $wordpress = $this->proxy('wordpress');
     </div>
     </div>
 
+
     <div class="col-md-9">
+        <div class="col-md-12">
+        
+           <h1 style="font-weight:300!important;"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Jobs gefunden' : 'Leider keine passenden Jobs gefunden'); ?></h1>
+             
+            <?php $parts=preg_split('~<!--more-->~' , $description);?>
+			<?=$parts[0]?>
+            <hr />
+          </div> 
+            
 <?php endif;?>
 
 
