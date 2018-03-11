@@ -145,6 +145,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                             <?=strip_tags($job->getTitle())?>
                         </a>
                     </h4>
+                    <p>&nbsp;</p>
                     <?php
                     if ($job->getCompany()) {
 			            echo $job->getCompany();
@@ -161,7 +162,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                         if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
-                    </p> <p><?=$job->getLocation()?> </p>
+                    <br /><?=$job->getLocation()?> </p>
                    
                 </div>
             </div>
