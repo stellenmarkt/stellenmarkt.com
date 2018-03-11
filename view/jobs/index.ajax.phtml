@@ -138,12 +138,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
             </div>
             <div class="content-area">
                 <div class="top-cnt">
-                    <p class="date">
-                        <?php
-                        if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
-                        elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
-                        endif?>
-                    </p>
+        
                     <h4>
                         <a title="<?=strip_tags($job->getTitle())?>"
                            href="<?=$href?>">
@@ -162,6 +157,12 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
                     </p>
                     <p><?=$job->getLocation()?></p>
+                    <p class="date">Publiziert am:
+                        <?php
+                        if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
+                        elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
+                        endif?>
+                    </p>
                 </div>
             </div>
             <div class="apply">
