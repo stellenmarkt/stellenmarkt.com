@@ -33,15 +33,14 @@
                 </nav>
             </div>
             <div class="col-md-2">
-                <?php if (!$this->auth()->isLoggedIn()):?>
                 <h5>Für Arbeitgeber</h5>
-                <?php endif ?>
                 <nav>
                     <ul class="list-unstyled">
                         <?php if (!$this->auth()->isLoggedIn()):?>
                         <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>?ref=<?= urlencode($this->url('lang/dashboard', [], true)) ?>">Einloggen</a></li>
                         <?php endif ?>
                        <?php /*<!-- <li><a title="Registrieren" href="<?=$this->url('lang/auth',[],  true)?>#register">Registrieren</a></li>-->*/?>
+                       
                         <?php if (!$this->auth()->isLoggedIn()):?> <li><a title="Preise & Leistungen" href="/de/wp/page/stellenanzeigen-schalten">Jobs inserieren & Preise</a></li>   <?php endif ?>
                     </ul>
                 </nav>
