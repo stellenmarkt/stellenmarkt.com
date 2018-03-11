@@ -33,7 +33,9 @@
                 </nav>
             </div>
             <div class="col-md-2">
+                <?php if (!$this->auth()->isLoggedIn()):?>
                 <h5>Für Arbeitgeber</h5>
+                <?php endif ?>
                 <nav>
                     <ul class="list-unstyled">
                         <?php if (!$this->auth()->isLoggedIn()):?>
