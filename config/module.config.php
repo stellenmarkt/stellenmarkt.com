@@ -140,6 +140,7 @@ return [
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
              'contactform.view' => __DIR__ . '/../view/contactform.phtml',
              'gastro24/jobs/user-product-info' => __DIR__ . '/../view/jobs/user-product-info.phtml',
+             'pagination-control' => __DIR__ . '/../view/pagination-control.phtml',
          ],
     ],
 
