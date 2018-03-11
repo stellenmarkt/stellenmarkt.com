@@ -145,7 +145,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                             <?=strip_tags($job->getTitle())?>
                         </a>
                     </h4>
-                    <p>&nbsp;</p>
+                    <p>
                     <?php
                     if ($job->getCompany()) {
 			            echo $job->getCompany();
@@ -153,6 +153,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                         echo $org->getOrganizationName()->getName();
                     }
                     ?>
+                    </p>
                <!--     <p>
                         <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'Vollzeit' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
