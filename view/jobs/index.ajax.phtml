@@ -156,13 +156,13 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                         <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'Vollzeit' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
                     </p>-->
-                    <p><?=$job->getLocation()?> |
-                    Publiziert am:
+                   <p> Publiziert am:
                         <?php
                         if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
-                    </p>
+                    </p> <p><?=$job->getLocation()?> </p>
+                   
                 </div>
             </div>
             <div class="apply">
