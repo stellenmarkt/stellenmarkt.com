@@ -37,8 +37,7 @@ endif;
 
 
 
-<h2><?=$this->job->getTitle()?>, von <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h2>
-<h3>Job-Inserat von: <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h3>
+<h2><?=$this->job->getTitle()?><br /> von <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h2>
 <hr />
 <?php if ($this->isVisited): ?>
                     
