@@ -39,13 +39,14 @@ endif;
 
 <h2><?=$this->job->getTitle()?>, von <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h2>
 <hr />
+<h3>Job-Inserat von: <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h3>
 <?php if ($this->isVisited): ?>
                     
                     <?php else: ?>
                     <p> <strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf Gastrojob24.ch</strong></p> 
                     <?php endif ?>
 
-<!--<h2>Job-Inserat von: <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></h2>-->
+
 
     <p class="lead"><?php if ($this->isVisited): ?>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
