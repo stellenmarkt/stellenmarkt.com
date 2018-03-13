@@ -41,7 +41,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <div class="panel-group">
 	
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
-            <?php if(false && count($facetValues)>0): $atLeastOneActive = false; $facetsList = []; ob_start();?>
+            <?php if(count($facetValues)>0): $atLeastOneActive = false; $facetsList = []; ob_start();?>
             <div id="facets-box-<?=$facetName?>" class="panel panel-default">
                 <div class="panel-heading">
                     <a class="<?=$isFirstFacet ?  '%firstCollapsed% ' : '%collapsed%'?>" style="display:block;width: 100%;text-decoration:none;" data-toggle="collapse" data-parent="#facets-box-<?=$facetName?>" href="#facets-box-<?=$facetName?>-content">
