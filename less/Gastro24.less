@@ -452,24 +452,28 @@ body {
         #main-navigation {
             height: inherit;
             ul li a.inverted {
-                border: 1px solid red;
-                background-color: yellow;
-            }
-            .navbar-nav>li>a {
-                padding-top: 10px;
-                padding-bottom: 10px;
+                border: 1px solid @g24-grey;
+                background-color: @g24-blue;
+                color: @g24-white;
             }
             .dropdown-menu>li>a {
-                color: #22436c;
+                color: @g24-white;
+            }
+            a:hover {
+                background-color: @g24-blue;
             }
         }
         .home #main-navigation {
             a {
-                color: red;
+                color: @g24-white;
             }
             a:hover {
-                background-color: yellow;
+                background-color: @g24-blue;
             }
+        }
+        button.collapsed {
+            border-color: @g24-grey;
+            background-color: @g24-blue;
         }
 
     }
