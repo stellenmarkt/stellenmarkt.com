@@ -98,17 +98,20 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <div class="col-md-9">
         <div class="pull-right">
             <style>
-                .round-shares .jssocials-share-link {
-                    border-radius: 50%;
-                }
+                
+                .jssocials-share-logo {
+
+    font-size: 16px;
+}
             </style>
+            
             <div id="share" class="round-shares"></div>
             <script src="<?=$this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials.js') ?>"></script>
             <script>
                 $("#share").jsSocials({
                     showLabel: false,
                     showCount: false,
-                    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+                    shares: ["email", "twitter", "facebook", "whatsapp"]
                 });
             </script>
         </div>

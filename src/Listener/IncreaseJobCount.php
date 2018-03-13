@@ -42,6 +42,11 @@ class IncreaseJobCount
         }
 
         $productWrapper = $owner->getAttachedEntity(UserProduct::class);
+
+        if (!$productWrapper) {
+            return;
+        }
+        
         $product        = $productWrapper->getProduct();
 
         $product->increaseJobCount();
