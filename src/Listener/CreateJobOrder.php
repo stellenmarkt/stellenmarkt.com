@@ -80,11 +80,11 @@ class CreateJobOrder
         $org = $job->getOrganization()->isHiringOrganization() ? $job->getOrganization()->getParent() : $job->getOrganization();
         $user = $org->getUser();
         $productWrapper = $user->getAttachedEntity(UserProduct::class);
-        $userProduct = $productWrapper->getProduct();
 
-        if ($userProduct) {
+        if ($productWrapper) {
 
-            $product = new Product();
+            $userProduct = $productWrapper->getProduct();
+            $product     = new Product();
 
             $product->setName(str_replace('Gastro24\Entity\Product\\', '', get_class($userProduct)))
                     ->setQuantity(1);
