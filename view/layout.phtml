@@ -36,6 +36,9 @@ if ($lang!='en') {
     $this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/i18n/' . $lang . '.js'));
 }
 $this->headLink()->appendStylesheet($this->basePath('/assets/select2/css/select2.css'));
+$this->headLink()->appendStylesheet($this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials.css'));
+$this->headLink()->appendStylesheet($this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials-theme-classic.css'));
+
 $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '";'
     . 'var basePath="' . $this->basePath() . '";');
 

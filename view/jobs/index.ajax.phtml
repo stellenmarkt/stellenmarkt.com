@@ -96,12 +96,16 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
 
     <div class="col-md-9">
-          <div class="pull-right">
-                 sharing buttons
-              
-          </div>
-          <div class="clearfix"></div>
-        
+        <div class="pull-right">
+            <div id="share"></div>
+            <script src="<?=$this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials.js') ?>"></script>
+            <script>
+                $("#share").jsSocials({
+                    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+                });
+            </script>
+        </div>
+        <div class="clearfix"></div>
         <hr />
         <div class="row">
     
