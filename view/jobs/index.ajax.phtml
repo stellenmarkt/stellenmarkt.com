@@ -26,10 +26,10 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
     <div class="col-md-3">
         <div style="margin-bottom:30px">
-            
-      
-         <strong class="h4" style="color:#22436c"><?=$this->jobs->getTotalItemCount()?> Treffer für</strong>  <h1 style="display:inline;color:#22436c" class="h4"> <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Ihre Job-Suche' : 'Leider keine passenden Jobs gefunden'); ?></h1> 
-
+            <strong class="h4" style="color:#22436c"><?=$this->jobs->getTotalItemCount()?> Treffer für</strong>
+            <h1 style="display:inline;color:#22436c" class="h4">
+                <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Ihre Job-Suche' : 'Leider keine passenden Jobs gefunden'); ?>
+            </h1>
 	  </div>
 	<?php if ($hasFacets):
     if ($this->params()->fromRoute('isLandingPage')):?>
@@ -41,7 +41,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <div class="panel-group">
 	
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
-            <?php if(count($facetValues)>0): $atLeastOneActive = false; $facetsList = []; ob_start();?>
+            <?php if(false && count($facetValues)>0): $atLeastOneActive = false; $facetsList = []; ob_start();?>
             <div id="facets-box-<?=$facetName?>" class="panel panel-default">
                 <div class="panel-heading">
                     <a class="<?=$isFirstFacet ?  '%firstCollapsed% ' : '%collapsed%'?>" style="display:block;width: 100%;text-decoration:none;" data-toggle="collapse" data-parent="#facets-box-<?=$facetName?>" href="#facets-box-<?=$facetName?>-content">
@@ -175,19 +175,17 @@ $description = $wordpress->call('value', ['content.rendered'], '');
      </div>
     <?php endforeach?>
 
-
-        
-           <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control',
-                                 [
-                                     'lang' => $this->params('lang'),
-                                     'route' => 'lang/jobboard'
-                                 ]);
-    ?>
-   
- 
     </div>
+
         </div>
-        </div>
+        <?= $this->paginationControl($jobs, 'Sliding', 'pagination-control',
+                                     [
+                                         'lang' => $this->params('lang'),
+                                         'route' => 'lang/jobboard'
+                                     ]);
+        ?>
+
+    </div>
         <?=$hasFacets ? '</div>' : '' ?>
 <?php endif ?>
 
