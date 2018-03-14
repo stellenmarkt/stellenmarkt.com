@@ -26,6 +26,7 @@ $this->headScript()->captureStart();?>
 <?php $this->headScript()->captureEnd();
 endif;
 
+$orgName = $this->jobOrganizationName($this->job);
 ?>
 
 <div class="container">
@@ -39,13 +40,13 @@ endif;
 
 <h2><?=$this->job->getTitle()?></h2>
 <hr />
-<p>Job-Inserat von: <?=$this->job->getOrganization()->getOrganizationName()->getName() ?></p>
+<p>Job-Inserat von: <?= $orgName ?></p>
 
 
     <p><?php if ($this->isVisited): ?>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
                     <?php else: ?>
-                        Sie werden in Kürze automatisch auf das Job-Inserat von <?=$this->job->getOrganization()->getOrganizationName()->getName() ?> weitergeleitet...
+                        Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...
                         <br />
                          <strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf Gastrojob24.ch.</strong>
                          
