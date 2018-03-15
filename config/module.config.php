@@ -138,6 +138,7 @@ return [
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
              'gastro24/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
+             'gastro24/form/create-single-job' => __DIR__ . '/../view/jobs/create-single-job-form.phtml',
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
              'contactform.view' => __DIR__ . '/../view/contactform.phtml',
              'gastro24/jobs/user-product-info' => __DIR__ . '/../view/jobs/user-product-info.phtml',
