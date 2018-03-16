@@ -11,6 +11,7 @@
 namespace Gastro24\Controller\Plugin;
 
 use Core\Entity\Collection\ArrayCollection;
+use Jobs\Entity\AtsMode;
 use Jobs\Entity\Location;
 use Jobs\Entity\Status;
 use Orders\Entity\InvoiceAddress;
@@ -57,6 +58,7 @@ class CreateSingleJob extends AbstractPlugin
         $job->setLink($values['uri']);
         $job->setTitle($values['title']);
         $job->setStatus(Status::CREATED);
+        $job->setAtsMode(new AtsMode(AtsMode::MODE_NONE));
 
         $locations = $job->getLocations();
 

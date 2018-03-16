@@ -12,6 +12,7 @@ namespace Gastro24\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Session\Container;
+use Zend\View\Helper\ServerUrl;
 use Zend\View\Model\JsonModel;
 
 /**
@@ -53,7 +54,7 @@ class CreateSingleJob extends AbstractActionController
 
     private function process()
     {
-        $data = $this->getRequest()->getPost();
+        $data = array_merge_recursive($this->getRequest()->getPost()->toArray(), $this->getRequest()->getFiles()->toArray());
         $this->form->setData($data);
 
         if (!$this->form->isValid()) {
@@ -64,6 +65,14 @@ class CreateSingleJob extends AbstractActionController
         }
 
         $values = $this->form->getData();
+
+        if ('pdf' == $values['mode']) {
+            $serverUrl = new ServerUrl();
+            $basePath  = $this->getRequest()->getBasePath();
+
+            $values['uri'] = $serverUrl('/' . $basePath . str_replace('public/', '', $values['pdf']['tmp_name']));
+        }
+
         $session = new Container('Gastro24_SingleJobData');
         $session->data = serialize($data);
         $session->values = serialize($values);
