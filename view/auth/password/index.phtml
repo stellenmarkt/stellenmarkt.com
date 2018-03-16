@@ -23,5 +23,12 @@ $this->form->setDescription($this->translate('Here you can change your password'
 
 ?>
 <h1>Passwort ändern</h1>
+<style>
+    
+    legend {
+        
+        display:none;
+    }
+</style>
 <?php echo  $this->form($this->form, Core\Form\View\Helper\Form::LAYOUT_HORIZONTAL); ?>
 <?php echo  $this->inlineScript()->appendFile($this->basePath('/Auth/js/form.change-password.js')); ?>
