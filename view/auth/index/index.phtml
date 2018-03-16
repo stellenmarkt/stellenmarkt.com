@@ -10,10 +10,11 @@
 <?php if ($this->required): ?>
     <?php $this->headTitle($this->translate('Login required')); ?>
     <h1><?php echo $this->translate('Please authenticate yourself to proceed') ?></h1>
+    <hr />
 <?php else: ?>
     <?php $this->headTitle($this->translate('Login')); ?>
-    <h1><?php echo $this->translate('Login'); ?></h1>
-    <hr />
+<!-- <h1><?php echo $this->translate('Login'); ?></h1>
+    <hr />-->
 <?php endif; ?>
 
 <?php $this->headScript()->captureStart() ?>
