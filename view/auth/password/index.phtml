@@ -22,8 +22,6 @@ $this->form->setIsDescriptionsEnabled(true);
 $this->form->setDescription($this->translate('Here you can change your password'));
 
 ?>
-<h1>GASTRO <?php echo $this->translate('My password') ?></h1>
-<div class="col-md-12">
+<h1>Passwort ändern</h1>
 <?php echo  $this->form($this->form, Core\Form\View\Helper\Form::LAYOUT_HORIZONTAL); ?>
 <?php echo  $this->inlineScript()->appendFile($this->basePath('/Auth/js/form.change-password.js')); ?>
-</div>
