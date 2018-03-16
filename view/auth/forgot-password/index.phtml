@@ -1,5 +1,5 @@
 <?php $this->headTitle($this->translate("Reset your password")); ?>
-    <h1>GASTRO <?php echo $this->translate("Reset your password"); ?></h1>
+    <h1>Passwort vergessen</h1>
 <?php
 /** @var \Auth\Form\ForgotPassword $form */
 $form = $this->form;
@@ -8,6 +8,12 @@ $form->setDescription($this->translate('Please enter your username or email addr
 $form->setLabel("Reset your password");
 $form->setAttribute('action', $this->url('lang/forgot-password'));
 ?>
-<div class="col-md-12">
+<style>
+    
+    .form-headline {
+        
+        display:none;
+    }
+</style>
+
 <?php echo $this->form($form); ?>
-</div>
