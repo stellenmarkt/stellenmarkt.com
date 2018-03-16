@@ -148,6 +148,8 @@ return [
              'gastro24/jobs/user-product-info' => __DIR__ . '/../view/jobs/user-product-info.phtml',
              'pagination-control' => __DIR__ . '/../view/pagination-control.phtml',
              'auth/index/index' => __DIR__ . '/../view/auth/index/index.phtml',
+             'auth/password/index' => __DIR__ . '/../view/auth/password/index.phtml',
+             'auth/forgot-password/index' => __DIR__ . '/../view/auth/forgot-password/index.phtml',
          ],
     ],
 
