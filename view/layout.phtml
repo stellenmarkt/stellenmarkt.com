@@ -122,7 +122,16 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
         </div>
     </header>
     
-<main id="content" style="background-color:#f6f6f6;margin-bottom:0;padding-bottom:50px;min-height:65vh;padding-top:15px;">
+ <style>
+     
+     #content .navbar {
+         
+         position:static!important;
+         
+     }
+ </style>   
+    
+<main id="content" style="background-color:#f6f6f6;margin-bottom:0;padding-bottom:50px;min-height:65vh;padding-top:15px;position:relative;">
 <div class="container">
         <?php echo $notifications?>
          <?php echo $this->content;?>
