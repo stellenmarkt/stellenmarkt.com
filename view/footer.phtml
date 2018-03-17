@@ -17,7 +17,6 @@
                 <nav>
                     <ul class="list-unstyled">
                         <li><a title="" href="/de/wp/page/ueber-uns">Wer wir sind</a></li>
-                        <!-- <li><a title="" href="/de/wp/page/faq">FAQ</a></li>-->
                         <!-- <li><a title="" href="/de/wp/page/partnernetzwerk">Partnernetzwerk</a></li>-->
                     </ul>
                 </nav>
@@ -36,6 +35,7 @@
                 <h5>Für Arbeitgeber</h5>
                 <nav>
                     <ul class="list-unstyled">
+                         <!-- <li><a title="" href="/de/wp/page/faq">FAQ</a></li>-->
                         <?php if (!$this->auth()->isLoggedIn()):?>
                         <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>?ref=<?= urlencode($this->url('lang/dashboard', [], true)) ?>">Einloggen</a></li>
                         <?php endif ?>
