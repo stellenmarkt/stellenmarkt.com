@@ -84,7 +84,7 @@ $this->headScript()->captureStart();
 
 
 
-<?php echo $this->flashMessenger()->render('default', array('', 'alert-success')) ?>
+<?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
 
 <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
@@ -175,7 +175,7 @@ $this->headScript()->captureStart();
                  echo $this->url('lang/jobboard', array(), array('query' => $this->params()->fromQuery()), true) ?>">
 
                <div class="col-md-12">
-                <div class="pagination-message alert alert-warning">
+                <div class="pagination-message alert alert-warning" style="display:none">
                     <?=sprintf(
                            $this->translate('%sSorry%s, there are not any jobs matching your search criteria.'
                            ),
