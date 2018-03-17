@@ -53,6 +53,7 @@ html {
 body {
   margin-top: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .navbar-header {
@@ -120,9 +121,11 @@ body {
         position: relative;
         color: #fff;
         padding: 20px 0;
-        margin-left: auto;
-        width: 100%;
-        margin-right: auto;
+        left: 50%;
+        margin-right: -50vw;
+        margin-left: -50vw;
+        right: 50%;
+        width: 100vw;
         .btn-primary {
             background-color: @btn-info-bg;
             border-color: @btn-info-border;
