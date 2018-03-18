@@ -134,24 +134,23 @@ $this->headScript()->captureStart();
     color: #3a434f;
     margin-left: 8px;
 }
+
+  .jssocials-share-logo {
+
+    font-size: 16px;
+}
+
    </style>
  
    <div id="similar">
        <div class="row">
-         <div class="col-md-10">
+         <div class="col-md-9">
            
              <?= $parts[1] ?>
             <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-       </div>
-          <div class="col-md-2">
+         </div>
+          <div class="col-md-3">
            <div class="pull-right">
-            <style>
-                
-                .jssocials-share-logo {
-
-    font-size: 16px;
-}
-            </style>
             
             <div id="share" class="round-shares"></div>
             <script src="<?=$this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials.js') ?>"></script>
@@ -163,6 +162,7 @@ $this->headScript()->captureStart();
                 });
             </script>
         </div>
+        <hr />
         <div class="clearfix"></div>
            
        </div>
