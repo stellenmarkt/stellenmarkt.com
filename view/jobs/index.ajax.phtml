@@ -38,6 +38,8 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     $facets = $jobs->getFacets();
     ?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
+    
+    DSADASD
     <div class="panel-group">
 	
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
