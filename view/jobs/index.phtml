@@ -137,11 +137,13 @@ $this->headScript()->captureStart();
    </style>
  
    <div id="similar">
-
+       <div class="col-md-10">
+           
              <?= $parts[1] ?>
             <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-           
-   <div class="pull-right">
+       </div>
+          <div class="col-md-2">
+           <div class="pull-right">
             <style>
                 
                 .jssocials-share-logo {
@@ -161,6 +163,12 @@ $this->headScript()->captureStart();
             </script>
         </div>
         <div class="clearfix"></div>
+           
+       </div>
+       
+      
+           
+   
         <hr />
    </div>
         
