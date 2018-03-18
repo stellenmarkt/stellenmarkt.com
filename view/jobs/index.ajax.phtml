@@ -41,7 +41,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     
   <button type="button" class="hidden visible-sm visible-xs pull-right btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
               </button>
-
+<div class="panel-group collapse dont-collapse-sm">
     <div class="panel-group">
 	
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
@@ -96,6 +96,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                 </div>
         </div>
     </div>
+</div>
     </div>
 
 
