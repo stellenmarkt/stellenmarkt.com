@@ -141,7 +141,27 @@ $this->headScript()->captureStart();
              <?= $parts[1] ?>
             <?php if (51 == $query): echo $this->landingpages(); endif; ?>
            
+   <div class="pull-right">
+            <style>
+                
+                .jssocials-share-logo {
 
+    font-size: 16px;
+}
+            </style>
+            
+            <div id="share" class="round-shares"></div>
+            <script src="<?=$this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials.js') ?>"></script>
+            <script>
+                $("#share").jsSocials({
+                    showLabel: false,
+                    showCount: true,
+                    shares: ["email", "twitter", "facebook", "whatsapp"]
+                });
+            </script>
+        </div>
+        <div class="clearfix"></div>
+        <hr />
    </div>
         
  
