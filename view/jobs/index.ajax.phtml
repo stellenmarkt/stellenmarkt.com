@@ -48,7 +48,10 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     $facets = $jobs->getFacets();
     ?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
-
+          
+     <button type="button" class="hidden visible-sm visible-xs btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
+    </button>
+  
     <div class="panel-group collapse dont-collapse-sm">
 	
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
@@ -128,9 +131,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
         </div>
         <div class="clearfix"></div>
         <hr />
-        
-             <button type="button" class="hidden visible-sm visible-xs btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
-              </button>
+  
         <div class="row">
     
         
