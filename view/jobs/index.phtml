@@ -118,7 +118,7 @@ $this->headScript()->captureStart();
 	
 
 
- <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+ 
  
    <style>
    
@@ -153,9 +153,12 @@ $this->headScript()->captureStart();
    <div id="similar">
        <div class="row">
          <div class="col-md-9">
-           
+           <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
              <?= $parts[1] ?>
             <?php if (51 == $query): echo $this->landingpages(); endif; ?>
+               
+<?php endif ?>
+            
          </div>
           <div class="col-md-3">
            <div class="pull-right">
@@ -177,8 +180,7 @@ $this->headScript()->captureStart();
   <hr />
 </div>        
  
-   
-<?php endif ?>
+
     
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
