@@ -44,7 +44,6 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
 
 $this->headLink()->prependStylesheet($this->basePath() . '/Gastro24/Gastro24.css');
 $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.custom.min.css'));
-$this->headLink()->prependStylesheet('/blog/wp-content/plugins/dk-pricr-responsive-pricing-table/css/rpt_style.min.css?ver=4.7.5');
 
 foreach ($languages as $lang) {
     $this->headLink()->appendAlternate(
