@@ -22,7 +22,19 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
 ?>
   <button type="button" class="hidden visible-sm visible-xs pull-right btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
-              </button>
+              </button><style>
+                   @media (min-width: 992px) {
+    .collapse.dont-collapse-sm {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+  }
+
+                  
+              </style>
+              
+             
     <div class="row">
 
     <div class="col-md-3">
