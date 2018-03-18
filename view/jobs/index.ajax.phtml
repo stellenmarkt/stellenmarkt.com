@@ -21,7 +21,8 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
 
 ?>
-
+  <button type="button" class="hidden visible-sm visible-xs pull-right btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
+              </button>
     <div class="row">
 
     <div class="col-md-3">
@@ -39,8 +40,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     ?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
     
-  <button type="button" class="hidden visible-sm visible-xs pull-right btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
-              </button>
+
 
     <div class="panel-group collapse dont-collapse-sm">
 	
