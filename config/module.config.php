@@ -70,6 +70,11 @@ return [
     'controller_plugins' => [
         'factories' => [
             Controller\Plugin\CreateSingleJob::class => Factory\Controller\Plugin\CreateSingleJobFactory::class,
+            Controller\Plugin\Url::class => InvokableFactory::class,
+        ],
+        'aliases' => [
+            'url' => Controller\Plugin\Url::class,
+            'Url' => Controller\Plugin\Url::class,
         ],
     ],
 
