@@ -41,6 +41,17 @@ return [
         ],
     ],
 
+    'Gastro24' => [
+        'dashboard' => [
+            'enabled' => true,
+            'widgets' => [
+                'productInfo' => [
+                    'script' => 'gastro24/dashboard',
+                ],
+            ],
+        ],
+    ],
+
     'service_manager' => [
         'factories' => [
             'Auth/Dependency/Manager' => 'Gastro24\Factory\Dependency\ManagerFactory',
@@ -156,6 +167,7 @@ return [
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
              'gastro24/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'gastro24/form/create-single-job' => __DIR__ . '/../view/jobs/create-single-job-form.phtml',
+             'gastro24/dashboard' => __DIR__ . '/../view/gastro24/dashboard.phtml',
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
              'contactform.view' => __DIR__ . '/../view/contactform.phtml',
              'gastro24/jobs/user-product-info' => __DIR__ . '/../view/jobs/user-product-info.phtml',
