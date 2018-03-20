@@ -102,6 +102,14 @@ return [
         ],
     ],
 
+    'view_helper_config' => [
+        'headscript' => [
+            'lang/jobs/manage' => [
+                [\Zend\View\Helper\HeadScript::SCRIPT, ';(function($) { $(function() { $("#sf-general-portalForm").hide(); }); })(jQuery);'],
+            ],
+        ],
+    ],
+
     'view_manager' => [
          'template_map' => [
              'layout/layout' => __DIR__ . '/../view/layout.phtml',
