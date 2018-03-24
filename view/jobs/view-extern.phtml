@@ -47,12 +47,6 @@ $orgName = $this->jobOrganizationName($this->job);
     margin-top:80px;">
 
 
-
-
-
-<p>Job-Inserat von: <?= $orgName ?></p>
-
-
     <p><?php if ($this->isVisited): ?>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
                     <?php else: ?>
@@ -65,7 +59,6 @@ $orgName = $this->jobOrganizationName($this->job);
                          Viel Erfolg bei der Bewerbung!
                     <?php endif ?>
     </p>
-   <!-- <p>Direkt zum Inserat: <a style="text-decoration:underline" href="<?=$this->job->getLink()?>"><?=$this->job->getLink()?></a></p> -->
 <p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
 
 
