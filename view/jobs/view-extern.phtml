@@ -29,13 +29,15 @@ endif;
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
-<div class="container">
+
+<h1> <?=$this->job->getTitle()?></h11>
+
+
           <div class="apply">
                 <?=$this->gastroApplyUrl($job);?>
             </div>
             
         
- <iframe src="<?=$this->job->getLink()?>" />
  
  
 
@@ -44,7 +46,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 
-<h2><?=$this->job->getTitle()?></h2>
+
 <hr />
 <p>Job-Inserat von: <?= $orgName ?></p>
 
@@ -66,4 +68,5 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 </div>
-</div>
+
+
