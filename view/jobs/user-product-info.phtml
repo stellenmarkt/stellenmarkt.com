@@ -21,7 +21,7 @@ $product = $product ? $product->getProduct() : null;
 if (!$product) { return; }
 
 ?>
-<div class="panel panel-default">
+<div class="panel panel-default" style="margin-left:-15px;">
     <div class="panel-body">
         <h3><?=$product instanceOf \Gastro24\Entity\Product\Basic ? 'Basic' : 'Plus' ?></h3>
         <?php if ($product->isExpired()): ?>
