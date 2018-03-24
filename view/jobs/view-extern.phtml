@@ -30,8 +30,10 @@ $orgName = $this->jobOrganizationName($this->job);
 ?>
 
 
-<h1> <?=$this->job->getTitle()?></h11>
 
+     <h6 class="h4"><?= $orgName ?></h6>
+     <h1> <?=$this->job->getTitle()?></h11>
+      <hr />
 
           <div class="apply">
                 <?=$this->gastroApplyUrl($job);?>
@@ -47,7 +49,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 
-<hr />
+
 <p>Job-Inserat von: <?= $orgName ?></p>
 
 
