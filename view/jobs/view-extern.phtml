@@ -56,7 +56,11 @@ $orgName = $this->jobOrganizationName($this->job);
                         endif?>
                    
                    
-         | <?=$job->getLocation()?> </p>
+         | <?=$job->getLocation()?>
+         
+         | <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'Vollzeit' ?>
+                        <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
+   </p>
 
           <div class="apply-view-extern">
                 <?=$this->gastroApplyUrl($job);?>
