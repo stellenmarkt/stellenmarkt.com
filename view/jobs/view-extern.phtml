@@ -61,18 +61,7 @@ $orgName = $this->jobOrganizationName($this->job);
          | <?php $typeOfContract = $job->getTemplateValues()->get('types')?:'Vollzeit' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
                         
-                        <?php 
- 
-session_start();
   
-if(isset($_SESSION['views']))
-    $_SESSION['views'] = $_SESSION['views']+1;
-else
-    $_SESSION['views']=1;
-     
-echo"views = ".$_SESSION['views'];
- 
-?>
    </p>
 
           <div class="apply-view-extern">
