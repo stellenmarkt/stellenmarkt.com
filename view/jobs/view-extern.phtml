@@ -54,7 +54,9 @@ $orgName = $this->jobOrganizationName($this->job);
                         if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
-                    <br /><?=$job->getLocation()?> </p>
+                   
+                   
+         | <?=$job->getLocation()?> </p>
 
           <div class="apply-view-extern">
                 <?=$this->gastroApplyUrl($job);?>
