@@ -9,9 +9,8 @@ $hash             = $this->hash;
 include( __DIR__ . '/' . 'vars.inc.phtml');
 
 ?>
-<div style="background: #eee;width: 100%;height: 100vh;">
-    <div class="size margin-auto"
-         style="background-color:<?= $mail_white_color ?>;max-width:<?= $width ?>;width:100%;margin-left: auto;margin-right: auto;">
+
+         
         <?= $this->partial('mail/header', [
             'title'            => 'Suchprofil bestätigen',
             'width'            => $width,
@@ -19,8 +18,7 @@ include( __DIR__ . '/' . 'vars.inc.phtml');
             'mail_white_color' => $mail_white_color
         ]
         ); ?>
-        <div class="seprate_footer" style="padding:10px;">
-            <h3>Guten Tag,</h3>
+        
 
             <p>
                 Ein "Jobs per Email"-Service wurde angelegt. Nach Bestätigung erhalten sie neue Jobs per Email
@@ -35,7 +33,7 @@ include( __DIR__ . '/' . 'vars.inc.phtml');
                 )
                 ) ?>"><?= $this->translate('Confirm your search profile.') ?></a>
             </p>
-            <?= $this->partial('mail/footer', ['width' => $width, 'mail_white_color' => $mail_white_color]); ?>
-        </div>
-    </div>
-</div>
+            
+            
+         <?= $this->partial('mail/footer', ['width' => $width, 'mail_white_color' => $mail_white_color]); ?>
+      
