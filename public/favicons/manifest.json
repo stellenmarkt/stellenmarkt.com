@@ -1,5 +1,8 @@
 {
- "name": "App",
+  "name": "Gastrojob24 Schweiz",
+  "short_name": "Gastrojob24 Schweiz",
+   "start_url": "/",
+   "display": "standalone",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
