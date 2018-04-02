@@ -137,6 +137,7 @@ return [
              'gastro24/wordpress-page/index.ajax' => __DIR__ . '/../view/gastro24/wordpress-page/index.ajax.phtml',
              'content/regionen' => __DIR__ . '/../view/gastro24/content/index.phtml',
              'content/staedte' => __DIR__ . '/../view/gastro24/content/index.phtml',
+             'jobs-by-mail/form/subscribe/form' => __DIR__ . '/../view/jobs-by-mail/form.phtml',
              'jobs-by-mail/mail/jobs' => __DIR__ . '/../view/mail/jobs.phtml',
              'jobs-by-mail/mail/confirmation' => __DIR__ . '/../view/mail/confirmation.phtml',
              'jobs-by-mail/mail/confirmation.en' => __DIR__ . '/../view/mail/confirmation.en.phtml',
