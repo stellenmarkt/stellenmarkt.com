@@ -6,14 +6,15 @@ $form = $this->element;
 $facets = $this->facets;
 $modalId = 'job-by-mail-subscribe-modal';
 ?>
+<button type="button" class="pull-right hidden visible-sm visible-xs btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
+    </button>
 <p>
     <button class="btn btn-info" data-title="<?=$this->translate('Jobs By Mail')?>" data-toggle="modal" data-target="#<?=$modalId?>" title="<?=$this->translate('Jobs By Mail')?>">
         <i class="yk-icon yk-icon-envelope"></i>
         <?php echo $this->translate("Jobs By Mail");?>
     </button>
 </p>
-<button type="button" class="pull-right hidden visible-sm visible-xs btn btn-secondary" aria-expanded="false" data-toggle="collapse" data-target=".panel-group">Filter anzeigen
-    </button>
+
 <div id="<?=$modalId?>" class="modal fade" role="dialog" aria-labelledby="job-by-mail-subscribe-label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
