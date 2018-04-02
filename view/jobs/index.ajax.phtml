@@ -31,8 +31,6 @@ $description = $wordpress->call('value', ['content.rendered'], '');
   }
 </style>
               
-             
-    <div class="row">
 
     <div class="col-md-3">
         <div style="margin-bottom:15px">
@@ -47,9 +45,6 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <?php endif;
     $facets = $jobs->getFacets();
     ?>
-    
-<div>
-    
     
 
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
