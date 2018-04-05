@@ -70,6 +70,9 @@ return [
             'resume-user' => [
                 'visible' => false,
             ],
+            'apply' => [
+                'visible' => false,
+            ],
         ],
         'login' => [
             'login' => [
@@ -113,7 +116,6 @@ return [
                     'route/logout'
                 ],
                 'deny' => [
-                    'route/lang/applications',
                     'route/lang/auth',
                     'resource/stellenanzeigen-schalten'
                 ],
