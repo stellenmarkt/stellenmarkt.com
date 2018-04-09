@@ -30,7 +30,8 @@ class CreateSingleJobFactory implements FactoryInterface
         $jobRepository= $repositories->get('Jobs');
         $orderRepository = $repositories->get('Orders');
         $orderOptions = $container->get('Orders/Options/Module');
-        $plugin = new CreateSingleJob($jobRepository, $orderRepository, $orderOptions);
+        $mailer = $container->get('Core/MailService');
+        $plugin = new CreateSingleJob($jobRepository, $orderRepository, $orderOptions, $mailer);
 
         return $plugin;
     }

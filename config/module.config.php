@@ -60,6 +60,7 @@ return [
             Listener\UserRegisteredListener::class => Listener\UserRegisteredListenerFactory::class,
             Listener\VoidListener::class => InvokableFactory::class,
             Listener\CreateJobOrder::class => Listener\CreateJobOrderFactory::class,
+            Listener\SingleJobAcceptedListener::class => Listener\SingleJobAcceptedListenerFactory::class,
         ],
         'aliases' => [
             'Orders\Form\Listener\InjectInvoiceAddressInJobContainer' => Listener\VoidListener::class,
@@ -156,6 +157,9 @@ return [
              'mail/job-pending' => __DIR__ . '/../view/mail/job-pending.phtml',
              'mail/job-rejected.en' => __DIR__ . '/../view/mail/job-rejected.en.phtml',
              'mail/job-rejected' => __DIR__ . '/../view/mail/job-rejected.phtml',
+             'gastro24/mail/single-job-created' => __DIR__ . '/../view/mail/single-job-created.phtml',
+             'gastro24/mail/single-job-pending' => __DIR__ . '/../view/mail/single-job-pending.phtml',
+             'gastro24/mail/single-job-accepted' => __DIR__ . '/../view/mail/single-job-accepted.phtml',
              'auth/mail/new-registration.en' => __DIR__ . '/../view/mail/new-registration.en.phtml',
              'auth/mail/new-registration' => __DIR__ . '/../view/mail/new-registration.phtml',
              'auth/mail/user-confirmed.en' => __DIR__ . '/../view/mail/user-confirmed.en.phtml',
@@ -197,6 +201,12 @@ return [
         'factories' => [
             Form\CreateSingleJobForm::class => InvokableFactory::class,
             Form\UserProductInfo::class => InvokableFactory::class,
+        ],
+    ],
+
+    'mails' => [
+        'factories' => [
+            'Gastro24/SingleJobMail' => Mail\SingleJobMailFactory::class,
         ],
     ],
 
@@ -324,6 +334,7 @@ return [
 
         'Jobs/Events' => [ 'listeners' => [
             Listener\IncreaseJobCount::class => [ JobEvent::EVENT_JOB_CREATED, true ],
+            Listener\SingleJobAcceptedListener::class => [ JobEvent::EVENT_JOB_ACCEPTED, true ],
         ]],
     ],
 ];
