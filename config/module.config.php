@@ -124,6 +124,9 @@ return [
 
     'view_manager' => [
          'template_map' => [
+             'error/404' => __DIR__ . '/../view/error/404.phtml',
+             'error/403' => __DIR__ . '/../view/error/403.phtml',
+             'error/index' => __DIR__ . '/../view/error/index.phtml',
              'layout/layout' => __DIR__ . '/../view/layout.phtml',
              'core/index/index' => __DIR__ . '/../view/index.phtml',
              'piwik' => __DIR__ . '/../view/piwik.phtml',
