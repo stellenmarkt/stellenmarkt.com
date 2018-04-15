@@ -13,6 +13,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
 
 <h1>Einzelinserat aufgeben</h1>
 <hr />
+<div class="row">
 <?php if ($this->isProcessed):?>
         <div class="row">
             <div class="col-md-7"><h2><?=$this->title?><br><small><?= $this->invoiceAddress['company']?></small></h2></div>
@@ -59,4 +60,6 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
             <?=$this->form($this->form->setAttribute('data-handle-by', 'native'))?>
 </div></div></div>
 <?php endif ?>
+
+</div>
 
