@@ -16,7 +16,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
 <div class="row">
 <?php if ($this->isProcessed):?>
         <div class="row">
-            <div class="col-md-7"><h2><?=$this->title?><br><small><?= $this->invoiceAddress['company']?></small></h2></div>
+            
             <div class="col-md-5"><p><?php
 
                 foreach ($this->locations as $loc) {
@@ -24,6 +24,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                     echo $location . '<br>';
                 }
                     ?></p></div>
+                    <div class="col-md-7"><h2><?=$this->title?><br><small><?= $this->invoiceAddress['company']?></small></h2></div>
         </div>
         <div class="row">
             <div class="col-md-12"><?= $this->link($this->uri) ?></div>
