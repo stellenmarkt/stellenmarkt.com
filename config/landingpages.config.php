@@ -489,17 +489,14 @@ $options = [
         'tab' => 'Gastro Jobs nach Region',
         'panel' => 'Schweiz',
     ],
-	
-		/* not visible on homepage */
-	 'suchbegriff' => [
-        'id' => 1234,
-        'query' => ['q' => 'Koch St.Gallen'],
-    ],
 	'koch-in-zurich' => [
         'text' => 'Zürich',
         'id' => 368,
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
     ],
+	
+	
+	
 	
 	
 	
