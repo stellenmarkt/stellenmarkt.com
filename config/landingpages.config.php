@@ -489,13 +489,77 @@ $options = [
         'tab' => 'Gastro Jobs nach Region',
         'panel' => 'Schweiz',
     ],
-	'koch-in-zurich' => [
+	'koch-in-zuerich' => [
         'text' => 'Zürich',
         'id' => 370,
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
     ],
-	
-	
+	'koch-in-wallisellen' => [
+        'text' => 'Wallisellen',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Wallisellen' => 1]]
+    ],
+	'koch-in-basel' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],	
+	'koch-in-stgallen' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],	
+   'koch-in-bern' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],	
+   'koch-in-chur' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],	
+   'koch-in-kloten' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],	
+   'koch-in-luzern' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],	
+   'koch-in-wohlen' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],							
+   'koch-in-solothurn' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],							
+   'koch-in-zug' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],							
+   'koch-in-kriens' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],			
+   'koch-in-winterthur' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],			
+   'koch-in-waedendswil' => [
+        'text' => 'Zürich',
+        'id' => 370,
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+    ],			
+				
 	
 	
 	
