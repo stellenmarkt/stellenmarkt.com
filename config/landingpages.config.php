@@ -492,7 +492,7 @@ $options = [
 	'koch-in-zuerich' => [
         'text' => 'Zürich',
         'id' => 766,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch Zürich', 'region_MultiString' => ['Zürich' => 1]]
     ],
 	'koch-in-wallisellen' => [
         'text' => 'Wallisellen',
@@ -502,17 +502,17 @@ $options = [
 	'koch-in-basel' => [
         'text' => 'Basel',
         'id' => 770,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Basel-Stadt' => 1]]
+        'query' => [ 'q' => 'Koch Basel', 'region_MultiString' => ['Basel-Stadt' => 1]]
     ],	
 	'koch-in-stgallen' => [
         'text' => 'Sankt Gallen',
         'id' => 764,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Sankt Gallen' => 1]]
+        'query' => [ 'q' => 'Koch St.Gallen', 'region_MultiString' => ['Sankt Gallen' => 1]]
     ],	
    'koch-in-bern' => [
         'text' => 'Bern',
         'id' => 768,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Bern' => 1]]
+        'query' => [ 'q' => 'Koch Bern', 'region_MultiString' => ['Bern' => 1]]
     ],	
    'koch-in-chur' => [
         'text' => 'Chur',
@@ -527,7 +527,7 @@ $options = [
    'koch-in-luzern' => [
         'text' => 'Luzern',
         'id' => 772,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Luzern' => 1]]
+        'query' => [ 'q' => 'Koch Luzern', 'region_MultiString' => ['Luzern' => 1]]
     ],	
    'koch-in-wohlen' => [
         'text' => 'Wohlen',
@@ -542,7 +542,7 @@ $options = [
    'koch-in-zug' => [
         'text' => 'Zug',
         'id' => 774,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zug' => 1]]
+        'query' => [ 'q' => 'Koch Zug', 'region_MultiString' => ['Zug' => 1]]
     ],							
    'koch-in-kriens' => [
         'text' => 'Kriens',
