@@ -502,10 +502,10 @@ $options = [
 	'koch-in-basel' => [
         'text' => 'Basel',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Basel' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Basel-Stadt' => 1]]
     ],	
 	'koch-in-stgallen' => [
-        'text' => 'St.Gallen',
+        'text' => 'Sankt Gallen',
         'id' => 370,
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Sankt Gallen' => 1]]
     ],	
