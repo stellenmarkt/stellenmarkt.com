@@ -506,7 +506,7 @@ $options = [
     ],	
 	'koch-in-stgallen' => [
         'text' => 'Sankt Gallen',
-        'id' => 370,
+        'id' => 764,
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Sankt Gallen' => 1]]
     ],	
    'koch-in-bern' => [
