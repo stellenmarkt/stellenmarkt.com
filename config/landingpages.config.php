@@ -491,7 +491,7 @@ $options = [
     ],
 	'koch-in-zuerich' => [
         'text' => 'Zürich',
-        'id' => 370,
+        'id' => 766,
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
     ],
 	'koch-in-wallisellen' => [
