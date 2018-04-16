@@ -520,44 +520,44 @@ $options = [
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Chur' => 1]]
     ],	
    'koch-in-kloten' => [
-        'text' => 'Zürich',
+        'text' => 'Kloten',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Kloten' => 1]]
     ],	
    'koch-in-luzern' => [
-        'text' => 'Zürich',
+        'text' => 'Luzern',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Luzern' => 1]]
     ],	
    'koch-in-wohlen' => [
-        'text' => 'Zürich',
+        'text' => 'Wohlen',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Wohlen' => 1]]
     ],							
    'koch-in-solothurn' => [
-        'text' => 'Zürich',
+        'text' => 'Solothurn',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Solothurn' => 1]]
     ],							
    'koch-in-zug' => [
-        'text' => 'Zürich',
+        'text' => 'Zug',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zug' => 1]]
     ],							
    'koch-in-kriens' => [
-        'text' => 'Zürich',
+        'text' => 'Kriens',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Kriens' => 1]]
     ],			
    'koch-in-winterthur' => [
-        'text' => 'Zürich',
+        'text' => 'Winterthur',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Winterthur' => 1]]
     ],			
    'koch-in-waedendswil' => [
-        'text' => 'Zürich',
+        'text' => 'Wädenswil',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Wädenswil' => 1]]
     ],			
 				
 	
