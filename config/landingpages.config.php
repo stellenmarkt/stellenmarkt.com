@@ -500,14 +500,14 @@ $options = [
         'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Wallisellen' => 1]]
     ],
 	'koch-in-basel' => [
-        'text' => 'Zürich',
+        'text' => 'Basel',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Basel' => 1]]
     ],	
 	'koch-in-stgallen' => [
-        'text' => 'Zürich',
+        'text' => 'St.Gallen',
         'id' => 370,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]]
+        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['St.Gallen' => 1]]
     ],	
    'koch-in-bern' => [
         'text' => 'Zürich',
