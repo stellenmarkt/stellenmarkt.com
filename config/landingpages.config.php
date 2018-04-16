@@ -498,9 +498,9 @@ $options = [
 	'koch-in-zurich' => [
         'text' => 'Zürich',
         'id' => 368,
-        'query' => [ 'q' => 'Koch', 'region_MultiString' => ['Zürich' => 1]],
-        'tab' => 'Gastro Jobs nach Region',
-        'panel' => 'Schweiz',
+        'query' => [ 'q' => 'Koch Zürich', 'region_MultiString' => ['Zürich' => 1]],
+        'tab' => '',
+        'panel' => '',
     ],
 	
 	
