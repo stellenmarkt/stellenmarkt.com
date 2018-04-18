@@ -50,6 +50,7 @@ class CreateSingleJob extends AbstractPlugin
     {
         $job   = $this->createJob($values);
         $order = $this->createOrder($job, $values);
+        $this->sendMails($job, $order, $values);
     }
 
 
@@ -72,6 +73,12 @@ class CreateSingleJob extends AbstractPlugin
 
         $this->jobRepository->store($job);
 
+        return $job;
+    }
+
+    private function sendMails($job, $order, $values)
+    {
+
         $this->mailer->send($this->mailer->get(
             'Gastro24/SingleJobMail',
             [
@@ -81,7 +88,7 @@ class CreateSingleJob extends AbstractPlugin
                 'subject'  => 'Ihre Anzeige wartet auf Freischaltung.',
                 'vars'     => [
                     'job' => $job,
-                    'invoice' => $values['invoiceAddress'],
+                    'invoice' => $order->getInvoiceAddress(),
                 ],
             ]
         ));
@@ -94,12 +101,11 @@ class CreateSingleJob extends AbstractPlugin
                 'subject'  => 'Eine Einzelanzeige wurde erstellt.',
                 'vars'     => [
                     'job' => $job,
-                    'invoice' => $values['invoiceAddress'],
+                    'order' => $order,
                 ],
             ]
         ));
 
-        return $job;
     }
 
     private function createOrder(\Jobs\Entity\Job $job, $values)
