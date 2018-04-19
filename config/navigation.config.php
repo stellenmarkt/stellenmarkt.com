@@ -16,6 +16,7 @@ return [
          */
         'default' => [
             'settings' => [
+                'visible' => false,
                 'pages' => [
 //                    'my-profile' => [
 //                        'label' => /*@translate */ 'My profile',
@@ -34,6 +35,15 @@ return [
 //                    ],
                 ]
             ],
+
+            'settings-orders' => [
+                'label'    => 'Rechnungsanschrift',
+                'route'    => 'lang/settings',
+                'resource' => 'route/lang/settings',
+                'order'    => 100,
+                'params'   => ['module' => 'Orders'],
+            ],
+
 
             'jobboard' => [
                 'label' => 'Jobs',
