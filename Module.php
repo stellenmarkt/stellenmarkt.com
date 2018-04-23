@@ -209,6 +209,23 @@ class Module
                     ]);
                 }
             }, -10);
+
+            $eventManager->attach(MvcEvent::EVENT_RENDER, function(MvcEvent $e) {
+                $services     = $e->getApplication()->getServiceManager();
+                $navigation   = $services->get('Core/Navigation');
+
+                $page = [
+                    'label'      => 'Rechnungsanschrift',
+                    'order'      => 100,
+                    'resource'   => 'route/lang/settings',
+                    'route'      => 'lang/settings',
+                    'router'     => $e->getRouter(),
+                    'action'     => 'index',
+                    'controller' => 'index',
+                    'params'     => ['module' => 'Orders'],
+                ];
+                $navigation->addPage($page);
+            }, 5);
         }
 
     }
