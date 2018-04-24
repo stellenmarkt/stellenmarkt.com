@@ -205,7 +205,11 @@ return [
         'factories' => [
             Form\CreateSingleJobForm::class => InvokableFactory::class,
             Form\UserProductInfo::class => InvokableFactory::class,
+            Form\InvoiceAddressSettingsFieldset::class => \Settings\Form\Factory\SettingsFieldsetFactory::class,
         ],
+        'aliases' => [
+            'Orders/InvoiceAddressSettingsFieldset' => Form\InvoiceAddressSettingsFieldset::class,
+        ]
     ],
 
     'mails' => [
