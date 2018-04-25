@@ -45,6 +45,10 @@ $orgName = $this->jobOrganizationName($this->job);
 </style>
 
 
+<?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */ ?>
+    <?php
+
+
 
      <h6 style="color:#31b0d5; text-transform:uppercase" class="h3"><?= $orgName ?></h6>
      <h1 style="margin-top:0px;"> <?=$this->job->getTitle()?></h1>
