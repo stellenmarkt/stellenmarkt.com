@@ -13,6 +13,9 @@
 
 $this->headMeta()->setName('robots', 'index,nofollow');
 $this->headTitle($this->job->getTitle());
+$hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
+
+
 if (!$this->isVisited):
 $this->headScript()->captureStart();?>
 ;(function($, w) {
