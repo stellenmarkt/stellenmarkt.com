@@ -31,7 +31,7 @@ class InvoiceAddressSettingsFieldset extends SettingsFieldset
         'city' => /*@translate*/ 'City',
         'region' => /*@translate*/ 'Region',
         'country' => /*@translate*/ 'Country',
-        'vatId' => /*@translate*/ 'Value added tax ID',
+        //'vatId' => /*@translate*/ 'Value added tax ID',
         'email' =>  [/*@translate*/ 'Email Address', -30]
     ];
 
@@ -60,6 +60,11 @@ class InvoiceAddressSettingsFieldset extends SettingsFieldset
             ],
             ['priority'=>-10]
         );
+
+        $this->add([
+            'name' => 'vatId',
+            'type' => 'hidden',
+        ]);
 
 
     }
