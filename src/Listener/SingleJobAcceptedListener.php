@@ -47,7 +47,7 @@ class SingleJobAcceptedListener
         $this->mailer->send($this->mailer->get(
             'Gastro24/SingleJobMail',
             [
-                'template' => 'gastro24/single-job-accepted',
+                'template' => 'gastro24/mail/single-job-accepted',
                 'subject'  => 'Ihre Anzeige wurde veröffentlicht.',
                 'email'    => $invoice->getEmail(),
                 'name'     => $invoice->getName(),

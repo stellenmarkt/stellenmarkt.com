@@ -56,8 +56,9 @@ include(__DIR__ . '/' . 'vars.inc.phtml');
                 ); ?>
 </h3>
 <div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
-  Hiermit bestätigen wir den Eingang Ihrer Stellenanzeige <b><?= $job->getTitle() ?></b> mit der
-                Referenz <b><?= $job->getReference() ?></b>. Sie erhalten von uns eine Nachricht, sobald das Stellen-Inserat veröffentlicht wurde. 
+  Hiermit bestätigen wir den Eingang Ihrer Stellenanzeige <b><?= $job->getTitle() ?></b> 
+    <?php if ($job->getReference()): ?> mit der
+                Referenz <b><?= $job->getReference() ?></b><?php endif ?>. Sie erhalten von uns eine Nachricht, sobald das Stellen-Inserat veröffentlicht wurde.
 																					    
 																					    </div>
 																				</td>
