@@ -31,22 +31,6 @@ endif;
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
-<style>
-    
-    
-   .apply-view-extern>a {
-    padding: 10px 15px;
-    margin-top: 25px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
-    color:#fff;
-    background-color:#31b0d5;
-    display:inline-block;
-}
-</style>
-
-
 
      <h6 style="color:#31b0d5; text-transform:uppercase" class="h3"><?= $orgName ?></h6>
      <h1 style="margin-top:0px;"> <?=$this->job->getTitle()?></h1>
@@ -69,9 +53,9 @@ $orgName = $this->jobOrganizationName($this->job);
   
    </p>
 
-          <div class="apply-view-extern">
                 <?=$this->gastroApplyUrl($job);?>
-            </div>
+
+
       <hr />
 
             

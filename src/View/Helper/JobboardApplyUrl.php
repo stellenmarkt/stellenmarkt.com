@@ -32,9 +32,12 @@ class JobboardApplyUrl extends AbstractHelper
     {
         $ats = $job->getAtsMode();
 
+
         if ($ats->isDisabled()) {
             $url = $job->getLink();
             $class = "no-apply-link";
+            $text = '.pdf' == substr($url, -4) ? 'PDF downloaden' : 'Bewerben';
+            $pdflink = null;
         } else if ($ats->isIntern() || $ats->isEmail()) {
 
             $route = 'lang/apply';
@@ -45,11 +48,20 @@ class JobboardApplyUrl extends AbstractHelper
 
             $url  = $this->urlHelper->__invoke($route, $params);
             $class = 'internal-apply-link';
+            $text = 'Bewerben';
+            $pdflink = '.pdf' == substr($job->getLink(), -4) ?$job->getLink() : null;
+
         } else {
             $url = $ats->getUri();
             $class = 'external-apply-link';
+            $text = 'Bewerben';
+            $pdflink = '.pdf' == substr($job->getLink(), -4) ?$job->getLink() : null;
         }
 
-        return sprintf('<a href="%s" class="%s">%s</a>', $url, $class, 'Bewerben');
+        if ($pdflink) {
+            $pdflink = ' <a href="' . $pdflink . '" class="btn btn-primary">PDF downloaden</a>';
+        }
+
+        return sprintf('<a href="%s" class="btn btn-primary %s">%s</a>%s', $url, $class, $text, $pdflink);
     }
 }
