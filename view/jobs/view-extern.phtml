@@ -13,15 +13,17 @@
 
 $this->headMeta()->setName('robots', 'index,nofollow');
 $this->headTitle($this->job->getTitle());
+$iframeValidator = $this->services('ValidatorManager')->get(\Gastro24\Validator\IframeEmbeddableUri::class);
+$link = $this->job->getLink();
+$isEmbeddable = $iframeValidator->isValid($link);
 
-
-if (!$this->isVisited):
+if (!$this->isVisited && !$isEmbeddable):
 $this->headScript()->captureStart();?>
 ;(function($, w) {
     $(function() {
         w.setTimeout(
             function() { w.location.href='<?=$this->job->getLink()?>'; },
-            7500
+            3000
         );
     });
 })(jQuery, window);
@@ -68,7 +70,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
     <p><?php if ($this->isVisited): ?>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
-                    <?php else: ?>
+                    <?php elseif (!$isEmbeddable): ?>
                         Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...
                         <br />
                          <strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf Gastrojob24.ch.</strong>
@@ -82,7 +84,10 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 </div>
+
+<?php if ($isEmbeddable):?>
 <iframe style="border:0" class="col-md-12"  height="1000px" src="<?=$this->job->getLink()?>" scrolling="yes">
 </iframe>
+<?php endif; ?>
 
 

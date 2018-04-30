@@ -96,6 +96,12 @@ return [
         ],
     ],
 
+    'validators' => [
+        'factories' => [
+            Validator\IframeEmbeddableUri::class => InvokableFactory::class,
+        ],
+    ],
+
     'view_helpers' => [
         'factories' => [
             WordpressApi\View\Helper\WordpressContent::class => WordpressApi\Factory\View\Helper\WordpressContentFactory::class,
