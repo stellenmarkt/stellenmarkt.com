@@ -17,7 +17,7 @@ $iframeValidator = $this->services('ValidatorManager')->get(\Gastro24\Validator\
 $link = $this->job->getLink();
 $isEmbeddable = $iframeValidator->isValid($link);
 
-if (!$this->isVisited && $isEmbeddable):
+if (!$this->isVisited && !$isEmbeddable):
 $this->headScript()->captureStart();?>
 ;(function($, w) {
     $(function() {
