@@ -11,7 +11,7 @@
  *             $isVisited   bool            Has the user already visited this job in the current session
  */
 
-$this->headMeta()->setName('robots', 'index,nofollow');
+$this->headMeta()->setName('robots', 'index,follow');
 $this->headTitle($this->job->getTitle());
 $iframeValidator = $this->services('ValidatorManager')->get(\Gastro24\Validator\IframeEmbeddableUri::class);
 $link = $this->job->getLink();
