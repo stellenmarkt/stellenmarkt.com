@@ -70,7 +70,6 @@ $orgName = $this->jobOrganizationName($this->job);
 
     <p><?php if ($this->isVisited): ?>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
-                        <p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
                     <?php elseif (!$isEmbeddable): ?>
                         Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...
                         <br />
@@ -83,12 +82,11 @@ $orgName = $this->jobOrganizationName($this->job);
                     <?php endif ?>
     </p>
 
-
+<p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
 
 </div>
 
 <?php if ($isEmbeddable):?>
-<p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
 <script type="text/javascript">
 $(function(){var d=15,a=$("#preload").removeClass("hidden"),e=$(".frame-content iframe").addClass("hidden"),c=$(window),g=$("header"),f=$("footer"),b=$(".box.intro");setTimeout(function(){a.addClass("hidden");e.removeClass("hidden")},2000);c.resize(function(){e.height(c.height()-g.outerHeight(true)-f.outerHeight(true)-b.outerHeight(true)-d)}).resize()});
 </script>
