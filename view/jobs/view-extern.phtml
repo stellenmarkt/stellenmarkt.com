@@ -255,6 +255,11 @@ function setIframeSrc() {
 }
 setTimeout(setIframeSrc, 5);
 </script>
+
+ <div style="background-color: #fff;padding:15px">
+   <p>Direkt zum Inserat: <?=$this->job->getLink()?></p> 
+
+</div>
 <div class="frame-content ">
      <div id="preload" class="loading hidden text-center">
          
@@ -267,6 +272,10 @@ setTimeout(setIframeSrc, 5);
          <p>Das inserat wird geladen, bitte haben Sie einem Moment Geduld</p>
 
       </div>
+      
+      
+      
+      
 <iframe id="iframe1" frameborder="0" allowfullscreen src=""></iframe>
 
 </div>
