@@ -89,7 +89,25 @@ $orgName = $this->jobOrganizationName($this->job);
 <?php if ($isEmbeddable):?>
 <style>
     
-    .frame-content,.frame-content iframe{position:relative;width:100%;height:100%;margin:0;padding:0;border:0 none;background:none #ffffff}
+    .frame-content {
+        
+        
+        position: relative; 
+  padding-bottom: 56.25%; /* ratio 16x9 */
+  height: 0; 
+  overflow: hidden; 
+  width: 100%;
+  height: auto;
+    }
+    
+    .frame-content iframe {
+        
+         position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+    }
 
 </style>
 
