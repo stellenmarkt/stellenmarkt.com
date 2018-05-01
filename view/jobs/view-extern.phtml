@@ -65,10 +65,12 @@ $orgName = $this->jobOrganizationName($this->job);
  
  
 
-<div style="background-color: #fff;padding:15px">
 
 
-    <p><?php if ($this->isVisited): ?>
+
+    <?php if ($this->isVisited): ?>
+    <div style="background-color: #fff;padding:15px">
+        <p>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
                         
                         <p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
@@ -79,14 +81,16 @@ $orgName = $this->jobOrganizationName($this->job);
                          
                          <br />
                          <br />
-                         Viel Erfolg bei der Bewerbung!
+                         Viel Erfolg bei der Bewerbung!</p>
+                         
+                         </div>
                          
                     <?php endif ?>
-    </p>
+    
 
 
 
-</div>
+
 
 <?php if ($isEmbeddable):?>
 <style>
