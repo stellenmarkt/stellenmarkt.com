@@ -71,17 +71,21 @@ $orgName = $this->jobOrganizationName($this->job);
  
      <?php if ($this->isVisited): ?>
   
-                        
-                    <?php elseif (!$isEmbeddable): ?>
-                      
-                      
-                     <!-- <div style="background-color: #fff;padding:15px">
+  
+      <div style="background-color: #fff;padding:15px">
                           
                                 <p>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
                         
                         <p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
-                    -->
+                        
+                        </div>
+                
+                        
+                    <?php elseif (!$isEmbeddable): ?>
+                      
+                      
+                 
                     <div style="background-color: #fff;padding:15px">
                         <p>
                         Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...
