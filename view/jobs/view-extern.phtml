@@ -68,13 +68,21 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 
-    <?php if ($this->isVisited): ?>
-    <div style="background-color: #fff;padding:15px">
-        <p>
+ 
+     <?php if ($this->isVisited): ?>
+  
+                        
+                    <?php elseif (!$isEmbeddable): ?>
+                      
+                      
+                     <!-- <div style="background-color: #fff;padding:15px">
+                          
+                                <p>
                         Sie haben sich diese Stellenanzeige bereits angesehen.
                         
                         <p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
-                    <?php elseif (!$isEmbeddable): ?>
+                    -->
+                    
                         Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...
                         <br />
                          <strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf Gastrojob24.ch.</strong>
