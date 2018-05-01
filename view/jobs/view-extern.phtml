@@ -69,7 +69,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
  
-     <?php if ($this->isVisited): ?>
+     <?php if ($this->isVisited && !$isEmbeddable): ?>
   
   
       <div style="background-color: #fff;padding:15px">
