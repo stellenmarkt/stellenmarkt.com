@@ -87,6 +87,12 @@ $orgName = $this->jobOrganizationName($this->job);
 </div>
 
 <?php if ($isEmbeddable):?>
+<style>
+    
+    *IFRAME*/.frame-content,.frame-content iframe{position:relative;width:100%;height:100%;margin:0;padding:0;border:0 none;background:none #ffffff}.frame-content iframe{margin-bottom:-3px}
+</style>
+
+
 <script type="text/javascript">
 $(function(){var d=15,a=$("#preload").removeClass("hidden"),e=$(".frame-content iframe").addClass("hidden"),c=$(window),g=$("header"),f=$("footer"),b=$(".box.intro");setTimeout(function(){a.addClass("hidden");e.removeClass("hidden")},2000);c.resize(function(){e.height(c.height()-g.outerHeight(true)-f.outerHeight(true)-b.outerHeight(true)-d)}).resize()});
 </script>
