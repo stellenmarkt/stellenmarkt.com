@@ -182,7 +182,7 @@ $orgName = $this->jobOrganizationName($this->job);
         
         border: 1px solid #ccc;
 
-
+ background-color:#fff;
         
        
         margin:10px 0;
@@ -242,19 +242,7 @@ $orgName = $this->jobOrganizationName($this->job);
 $(function(){var d=15,a=$("#preload").removeClass("hidden"),e=$(".frame-content iframe").addClass("hidden"),c=$(window),g=$("header"),f=$("footer"),b=$(".box.intro");setTimeout(function(){a.addClass("hidden");e.removeClass("hidden")},3000);c.resize(function(){e.height(c.height()-g.outerHeight(true)-f.outerHeight(true)-b.outerHeight(true)-d)}).resize()});
 </script>
 
-<script>
-function setIframeSrc() {
-  var s = "";
-  var iframe1 = document.getElementById('iframe1');
-  if ( -1 == navigator.userAgent.indexOf("MSIE") ) {
-    iframe1.src = s;
-  }
-  else {
-    iframe1.location = s;
-  }
-}
-setTimeout(setIframeSrc, 5);
-</script>
+
 
  <div class="hidden-sm hidden-md hidden-lg text-center" style="background-color: #fff;padding:15px">
    <a href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a>
