@@ -244,7 +244,7 @@ $(function(){var d=15,a=$("#preload").removeClass("hidden"),e=$(".frame-content 
 
 <script>
 function setIframeSrc() {
-  var s = "<?=$this->job->getLink()?>";
+  var s = "";
   var iframe1 = document.getElementById('iframe1');
   if ( -1 == navigator.userAgent.indexOf("MSIE") ) {
     iframe1.src = s;
@@ -276,7 +276,7 @@ setTimeout(setIframeSrc, 5);
       
       
       
-<iframe id="iframe1" frameborder="0" allowfullscreen src=""></iframe>
+<iframe id="iframe1" frameborder="0" allowfullscreen src="<?=$this->job->getLink()?>"></iframe>
 
 </div>
 
