@@ -241,7 +241,7 @@ $orgName = $this->jobOrganizationName($this->job);
 <script type="text/javascript">
 $(function(){var d=15,a=$("#preload").removeClass("hidden"),e=$(".frame-content iframe").addClass("hidden"),c=$(window),g=$("header"),f=$("footer"),b=$(".box.intro");setTimeout(function(){a.addClass("hidden");e.removeClass("hidden")},3000);c.resize(function(){e.height(c.height()-g.outerHeight(true)-f.outerHeight(true)-b.outerHeight(true)-d)}).resize()});
 </script>
-<script>
+<!--PRELOAD<script>
 function setIframeSrc() {
   var s = "<?=$this->job->getLink()?>";
   var iframe1 = document.getElementById('iframe1');
@@ -253,7 +253,7 @@ function setIframeSrc() {
   }
 }
 setTimeout(setIframeSrc, 5);
-</script>
+</script>-->
 
 
  <div class="hidden-sm hidden-md hidden-lg text-center" style="background-color: #fff;padding:15px">
@@ -274,7 +274,7 @@ setTimeout(setIframeSrc, 5);
       </div>
       
       
-<iframe id="iframe1" title="<?=$this->job->getTitle()?>" frameborder="0" allowfullscreen src=""></iframe>
+<iframe id="iframe1" title="<?=$this->job->getTitle()?>" frameborder="0" allowfullscreen src="<?=$this->job->getLink()?>"></iframe>
       
 
 
