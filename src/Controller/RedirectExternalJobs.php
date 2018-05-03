@@ -24,6 +24,19 @@ use Zend\View\Model\ViewModel;
  */
 class RedirectExternalJobs extends AbstractActionController
 {
+
+    /**
+     *
+     *
+     * @var \Gastro24\Validator\IframeEmbeddableUri
+     */
+    private $validator;
+
+    public function __construct(\Gastro24\Validator\IframeEmbeddableUri $validator)
+    {
+        $this->validator = $validator;
+    }
+
     public function indexAction()
     {
         /* @var Response $response */
@@ -43,15 +56,17 @@ class RedirectExternalJobs extends AbstractActionController
 
         $visitedJobsContainer = new VisitedJobsContainer();
         $isVisited            = $visitedJobsContainer->isVisited($job);
+        $isEmbeddable         = $this->validator->isValid($job->getLink());
 
-        if (!$isVisited) {
-            $response->getHeaders()->addHeaderLine('Refresh', '8;' . $job->getLink());
+        if (!$isVisited && !$isEmbeddable) {
+            $response->getHeaders()->addHeaderLine('Refresh', '4;' . $job->getLink());
             $visitedJobsContainer->add($job);
         }
 
         $model = new ViewModel([
             'job' => $job,
             'isVisited' => $isVisited,
+            'isEmbeddable' => $isEmbeddable,
         ]);
         $model->setTemplate('gastro24/jobs/view-extern');
 

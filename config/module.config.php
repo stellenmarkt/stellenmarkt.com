@@ -74,7 +74,7 @@ return [
     'controllers' => [
         'factories' => [
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
-            Controller\RedirectExternalJobs::class => InvokableFactory::class,
+            Controller\RedirectExternalJobs::class => Controller\RedirectExternalJobsFactory::class,
             Controller\CreateSingleJob::class => Factory\Controller\CreateSingleJobFactory::class,
         ],
     ],

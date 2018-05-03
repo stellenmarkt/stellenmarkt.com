@@ -13,11 +13,10 @@
 
 $this->headMeta()->setName('robots', 'index,follow');
 $this->headTitle($this->job->getTitle());
-$iframeValidator = $this->services('ValidatorManager')->get(\Gastro24\Validator\IframeEmbeddableUri::class);
 $link = $this->job->getLink();
-$isEmbeddable = $iframeValidator->isValid($link);
 
-if (!$this->isVisited && !$isEmbeddable):
+
+if (!$this->isVisited && !$this->isEmbeddable):
 $this->headScript()->captureStart();?>
 ;(function($, w) {
     $(function() {
@@ -69,7 +68,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
  
-     <?php if ($this->isVisited && !$isEmbeddable): ?>
+     <?php if ($this->isVisited && !$this->isEmbeddable): ?>
   
   
       <div style="background-color: #fff;padding:15px">
@@ -82,7 +81,7 @@ $orgName = $this->jobOrganizationName($this->job);
                         </div>
                 
                         
-                    <?php elseif (!$isEmbeddable): ?>
+                    <?php elseif (!$this->isEmbeddable): ?>
                     
                     <style>
                         
@@ -157,7 +156,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 
-<?php if ($isEmbeddable):?>
+<?php if ($this->isEmbeddable):?>
 <style>
 #preload {
     
