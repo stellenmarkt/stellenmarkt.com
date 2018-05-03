@@ -62,7 +62,11 @@ class CreateSingleJob extends AbstractPlugin
         $job->setLink($values['uri']);
         $job->setTitle($values['title']);
         $job->setStatus(Status::CREATED);
-        $job->setAtsMode(new AtsMode(AtsMode::MODE_NONE));
+        if ($values['invoiceAddress']['email']) {
+            $job->setAtsMode(new AtsMode(AtsMode::MODE_EMAIL, $values['invoiceAddress']['email']));
+        } else {
+            $job->setAtsMode(new AtsMode(AtsMode::MODE_NONE));
+        }
 
         $locations = $job->getLocations();
 
