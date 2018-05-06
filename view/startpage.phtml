@@ -162,7 +162,36 @@ $this->headTitle($this->translate('Home'));
                 <div class="row">
                     <h2 class="text-center">Unternehmen mit freien Jobs im Gastrogewerbe</h2>
                     
-                     <strong style="COLOR:red">@CARSTEN: HIER KOMMEN DIE LOGOS DER FIRMEN HIN (ABO BASIC, PLUS UND AUTOPILOT)</strong>
+                    <h3 class="text-center">Unternehmen mit freien Gastronomie Stellen</h3>
+ <div id="companies-slider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <?php for ($i=0, $c=count($companies); $i<$c; $i+=1):?>
+        <li<?=0===$i ? ' class="active"' : '' ?> style="background-color: #666;" data-target="#companies-slider" data-slide-to="<?=$i?>"></li>
+        <?php endfor ?>
+    </ol>
+
+    <div class="carousel-inner">
+        <?php $active=" active"; foreach ($companies as $comps):?>
+            <div class="item<?=$active?> container">
+                <div class="row">
+                    <?php foreach ($comps as $term => $spec):?>
+                        <div class="col-md-2">
+                            <a style="display: flex; align-items: center; height: 80px; width: 100%" class="text-center" href="<?=$this->url('lang/landingPage', ['q' => $term, 'format' => 'html' ], true) ?>">
+                                <span style="display:inline-block; width: 100%; text-align: center;">
+                                <?php if ($spec[1]): ?>
+                            <img src="<?=$spec[1]?>" alt="<?=$spec[0]?>"  style="max-width: 120px">
+                                <?php else: ?>
+                                    <?=$spec[0]?>
+                                <?php endif ?>
+                                </span></a>
+                        </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
+        <?php $active = ''; endforeach ?>
+    </div>
+   </div>
+
                     
                 </div>
             </div>
