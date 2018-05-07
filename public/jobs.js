@@ -58,12 +58,20 @@
     }
 
     $(function() {
-        $('#jobs-list-container').on('yk-paginator-container:loaded.jobboard', onPagiantorLoaded)
-            .on('click.jobboard', '.internal-apply-link', onInternalApplyLinkClicked)
-            .on('click.jobboard', '.external-apply-link, .no-apply-link', onApplyLinkClicked);
+        var $container = $('#jobs-list-container');
+
+        if ($container.length) {
+            $('#jobs-list-container').on('yk-paginator-container:loaded.jobboard', onPagiantorLoaded)
+                .on('click.jobboard', '.internal-apply-link', onInternalApplyLinkClicked)
+                .on('click.jobboard', '.external-apply-link, .no-apply-link', onApplyLinkClicked);
 
 
-        onPagiantorLoaded();
+            onPagiantorLoaded();
+
+        } else {
+            $('a.internal-apply-link').click(onInternalApplyLinkClicked);
+            $('a.external-apply-link, a.no-apply-link').click(onApplyLinkClicked);
+        }
     });
 
 })(jQuery, window); 

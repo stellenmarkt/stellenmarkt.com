@@ -28,7 +28,7 @@ $this->headScript()->captureStart();?>
 })(jQuery, window);
 <?php $this->headScript()->captureEnd();
 endif;
-
+$this->headScript()->appendFile($this->basePath('Gastro24/jobs.js'));
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
@@ -44,7 +44,7 @@ $orgName = $this->jobOrganizationName($this->job);
                    
                    
          | <?php $location = $job->getLocations()->current();
-            echo $Location ? $location->getCity() : $job->getLocation();?> |
+            echo $location ? $location->getCity() : $job->getLocation();?> |
                         <?php $typeOfContract = $job->getClassifications()->getEmploymentTypes()->__toString() ?:'Vollzeit' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
               
@@ -286,3 +286,14 @@ setTimeout(setIframeSrc, 5);
 <?php endif; ?>
 
 
+<div class="modal fade" id="job-apply-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" style="width: 90%; height: 90%" role="document">
+        <div class="modal-content" style="height: 100%">
+            <div class="modal-body" style="height: calc(100% - 65px)">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button>
+            </div>
+        </div>
+    </div>
