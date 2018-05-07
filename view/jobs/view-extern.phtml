@@ -28,7 +28,8 @@ $this->headScript()->captureStart();?>
 })(jQuery, window);
 <?php $this->headScript()->captureEnd();
 endif;
-$this->headScript()->appendFile($this->basePath('Gastro24/jobs.js'));
+$this->headScript()->appendFile($this->basePath('Gastro24/jobs.js'))
+    ->appendFile($this->basePath('/assets/bootstrap3-dialog/js/bootstrap-dialog.min.js'));;
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
