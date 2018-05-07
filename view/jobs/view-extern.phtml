@@ -43,7 +43,8 @@ $orgName = $this->jobOrganizationName($this->job);
                         endif?>
                    
                    
-         | <?=$job->getLocation()?> | 
+         | <?php $location = $job->getLocations()->current();
+            echo $Location ? $location->getCity() : $job->getLocation();?> |
                         <?php $typeOfContract = $job->getClassifications()->getEmploymentTypes()->__toString() ?:'Vollzeit' ?>
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
               
