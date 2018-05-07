@@ -15,6 +15,7 @@ $job = $this->job;
 $user = $job->getUser();
 $info = $user->getInfo();
 
+$this->setSubject('Bestätigung Eingang Stellenanzeige');
 // shared vars used in mails
 include(__DIR__ . '/' . 'vars.inc.phtml');
 

@@ -13,6 +13,9 @@
  * $this->job : The job entity
  * $this->siteName: The site name (from Core/AbstractOptions)
  */
+
+$this->setSubject('Stellenanzeige wurde abgelehnt');
+
 $job = $this->job;
 /* @var \Jobs\Entity\Job $job */
 $user = $job->getUser();
