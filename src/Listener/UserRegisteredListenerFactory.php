@@ -32,8 +32,9 @@ class UserRegisteredListenerFactory implements FactoryInterface
         $router      = $container->get('router');
         $response    = $application->getResponse();
         $auth        = $container->get('AuthenticationService');
+        $events      = $application->getEventManager();
 
-        $service     = new UserRegisteredListener($type, $router, $response, $auth);
+        $service     = new UserRegisteredListener($type, $router, $response, $auth, $events);
         
         return $service;
     }

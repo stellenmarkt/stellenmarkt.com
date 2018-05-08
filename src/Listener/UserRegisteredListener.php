@@ -12,6 +12,8 @@ namespace Gastro24\Listener;
 
 use Auth\Listener\Events\AuthEvent;
 use Gastro24\Entity\UserProduct;
+use Zend\EventManager\EventManager;
+use Zend\Mvc\MvcEvent;
 
 /**
  * ${CARET}
@@ -49,12 +51,22 @@ class UserRegisteredListener
      */
     private $authService;
 
-    public function __construct($productType = null, $router, $response, $authService)
+    /**
+     *
+     *
+     * @var \Auth\Entity\User
+     */
+    private $user;
+
+    public function __construct($productType = null, $router, $response, $authService, EventManager $eventManager)
     {
         $this->productType = ucfirst($productType);
         $this->router      = $router;
         $this->response    = $response;
         $this->authService = $authService;
+
+        // run before Core\Repository\DoctrineMongoODM\PersistenceListener
+        $eventManager->attach(MvcEvent::EVENT_FINISH, [$this, 'onMvcFinish'], 200);
     }
 
     public function __invoke(AuthEvent $event)
@@ -81,5 +93,29 @@ class UserRegisteredListener
         $this->response->getHeaders()->addHeaderLine('Location', $uri);
 
         $this->authService->getStorage()->write($user->getId());
+
+        $this->user = $user;
+    }
+
+    public function onMvcFinish(MvcEvent $event)
+    {
+        if (!$this->user) {
+            return;
+        }
+
+        /* @var \Orders\Entity\InvoiceAddressSettings $settings */
+        $info = $this->user->getInfo();
+        $settings = $this->user->getSettings('Orders')->getInvoiceAddress();
+
+        $settings->setGender($info->getGender());
+        $settings->setName($info->getDisplayName(false));
+        $settings->setCompany($this->user->getOrganization()->getOrganization()->getOrganizationName());
+        $settings->setStreet($info->getStreet());
+        $settings->setHouseNumber($info->getHouseNumber());
+        $settings->setZipCode($info->getPostalCode());
+        $settings->setCity($info->getCity());
+        $settings->setCountry($info->getCountry());
+        $settings->setEmail($info->getEmail());
+
     }
 }
