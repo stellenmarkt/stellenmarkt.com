@@ -105,17 +105,23 @@ class UserRegisteredListener
 
         /* @var \Orders\Entity\InvoiceAddressSettings $settings */
         $info = $this->user->getInfo();
-        $settings = $this->user->getSettings('Orders')->getInvoiceAddress();
+        $settings = $this->user->getSettings('Orders');
+        $settings->enableWriteAccess(true);
+        $settings = $settings->getInvoiceAddress();
 
         $settings->setGender($info->getGender());
         $settings->setName($info->getDisplayName(false));
-        $settings->setCompany($this->user->getOrganization()->getOrganization()->getOrganizationName());
+        $settings->setCompany($this->user->getOrganization()->getOrganization()->getOrganizationName()->getName());
         $settings->setStreet($info->getStreet());
         $settings->setHouseNumber($info->getHouseNumber());
         $settings->setZipCode($info->getPostalCode());
         $settings->setCity($info->getCity());
         $settings->setCountry($info->getCountry());
         $settings->setEmail($info->getEmail());
+
+        $repos = $event->getApplication()->getServiceManager()->get('repositories');
+        $repos->store($this->user);
+        $repos->flush();
 
     }
 }
