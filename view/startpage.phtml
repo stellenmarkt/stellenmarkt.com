@@ -26,7 +26,6 @@ $this->headTitle($this->translate('Gastrojob24'))->setSeparator(' | ')->setAutoE
 
 $this->headMeta()->setCharset("utf-8");
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
-$this->headMeta()->appendName($this->basePath);
 
 $this->configHeadScript()->setAllowArbitraryAttributes(true);
 $this->configHeadScript()->prependFile($this->basepath('Core/js/core.init.js'));
@@ -74,6 +73,8 @@ foreach ($languages as $lang) {
     <link rel="manifest" href="<?=$this->basepath('Gastro24/favicons/manifest.json')?>">
     <meta name="msapplication-TileColor" content="#2e5b93">
     <meta name="msapplication-TileImage" content="<?=$this->basepath('Gastro24/favicons/ms-icon-144x144.png')?>">
+    <meta name="dsfdsfdsf" content="<?=$this->basepath('')?>">
+
     <meta name="theme-color" content="#2e5b93">
     <?php echo $this->headTitle() ?>
     <?php echo $this->headMeta() ?>
