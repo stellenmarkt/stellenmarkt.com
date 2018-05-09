@@ -10,8 +10,17 @@
  *             $job         JobInterface    Job Entity
  *             $isVisited   bool            Has the user already visited this job in the current session
  */
+ 
+ if (!$this->isEmbeddable):
+  
+        $this->headMeta()->setName('robots', 'index,follow');
 
-$this->headMeta()->setName('robots', 'index,follow');
+  elseif ($this->isEmbeddable):
+      
+      $this->headMeta()->setName('robots', 'noindex,nofollow');
+   
+endif;
+
 $this->headTitle($this->job->getTitle());
 $link = $this->job->getLink();
 
