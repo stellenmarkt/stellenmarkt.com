@@ -21,7 +21,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
 
                 foreach ($this->locations as $loc) {
                     $location = new \Jobs\Entity\Location($loc);
-                    echo $location . '<br>';
+                    echo $location->getCity() . '<br>';
                 }
                     ?></p></div>
                     
