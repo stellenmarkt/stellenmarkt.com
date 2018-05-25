@@ -25,10 +25,13 @@ class JobsDescription extends ParentJobDescription
         parent::init();
 
         $this->setForms([
-            'classification' => [
-                'type' => 'Gastro24/ClassificationForm',
-                'property' => 'templateValues',
-            ]
+            'details' => [
+                'type' => JobDetailsForm::class,
+                'property' => true,
+                'options' => [
+                    'use_files_array' => true,
+                ],
+            ],
         ]);
     }
 }

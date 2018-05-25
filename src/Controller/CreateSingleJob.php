@@ -66,11 +66,11 @@ class CreateSingleJob extends AbstractActionController
 
         $values = $this->form->getData();
 
-        if ('pdf' == $values['mode']) {
+        if ('pdf' == $values['details']['mode']) {
             $serverUrl = new ServerUrl();
             $basePath  = $this->getRequest()->getBasePath();
 
-            $values['uri'] = $serverUrl('/' . $basePath . str_replace('public/', '', $values['pdf']['tmp_name']));
+            $values['details']['uri'] = $serverUrl('/' . $basePath . str_replace('public/', '', $values['details']['pdf']['tmp_name']));
         }
 
         $session = new Container('Gastro24_SingleJobData');

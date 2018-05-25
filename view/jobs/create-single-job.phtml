@@ -27,8 +27,30 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                     
         </div>
         <div class="row">
+            <?php if ('html' == $this->details['mode']):?>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Stellenbeschreibung</h3>
+                        </div>
+                        <div class="panel-body">
+                            <?=$this->details['position']?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Unternehmensbeschreibung</h3>
+                        </div>
+                        <div class="panel-body">
+                            <?=$this->details['description']?>
+                        </div>
+                    </div>
+                </div>
+            <?php else: ?>
             <div class="col-md-12"><?= $this->uri ?></div>
-            
+            <?php endif ?>
         </div>
         <div class="row">
             <div class="col-md-12"><h3>Rechnungsanschrift</h3></div>

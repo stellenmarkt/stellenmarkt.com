@@ -59,7 +59,11 @@ class CreateSingleJob extends AbstractPlugin
         /* @var \Jobs\Entity\Job $job */
         $job = $this->jobRepository->create();
         $job->setCompany($values['invoiceAddress']['company']);
-        $job->setLink($values['uri']);
+        if ('html' == $values['details']['mode']) {
+            $job->getTemplateValues()->setDescription($values['details']['description']);
+            $job->getTemplateValues()->setHtml($values['details']['position']);
+        }
+        $job->setLink($values['details']['uri']);
         $job->setTitle($values['title']);
         $job->setStatus(Status::CREATED);
         if ($values['invoiceAddress']['email']) {

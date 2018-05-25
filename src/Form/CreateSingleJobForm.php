@@ -65,45 +65,13 @@ class CreateSingleJobForm extends Form implements InputFilterProviderInterface, 
         ]);
 
         $this->add([
-            'type' => 'radio',
-            'name' => 'mode',
+            'name' => 'details',
+            'type' => JobDetails::class,
             'options' => [
-                'value_options' => [
-                    'uri' => 'uri',
-                    'pdf' => 'pdf',
-                ],
-            ],
-            'attributes' => [
-                'value' => 'uri',
+                'label' => 'Details',
             ],
         ]);
 
-        $this->add([
-            'type' => 'Text',
-            'name' => 'uri',
-            'options' => [
-                'description' => 'Geben Sie die Online-Addresse des Inserats an.',
-                'label' => 'Online-Inserat',
-                'rowClass' => 'csj-uri-wrapper'
-            ],
-            'attributes' => [
-                'placeholder' => 'http://',
-                'id' => 'csj-uri',
-            ]
-        ]);
-
-        $this->add([
-            'type' => 'File',
-            'name' => 'pdf',
-            'options' => [
-                'description' => 'Selektieren Sie hier das PDF-Dokument Ihres Jobs.',
-                'label' => 'PDF-Datei',
-                'rowClass' => 'csj-pdf-wrapper',
-            ],
-            'attributes' => [
-                'id' => 'csj-pdf',
-            ],
-        ]);
 
         $this->add([
             'type' => 'Orders/InvoiceAddressFieldset',
@@ -136,40 +104,7 @@ class CreateSingleJobForm extends Form implements InputFilterProviderInterface, 
 
         ];
 
-        if (isset($this->data['mode'])) {
-            if ('pdf' == $this->data['mode']) {
-                $spec['pdf'] = [
-                    'require' => true,
-                    'validators' => [
-                        [
-                            'name' => 'FileMimeType',
-                            'options' => [
-                                'mimeType' => 'application/pdf',
-                                'disableMagicFile' => true,
-                                'magicFile' => false,
-                            ]
-                        ],
-                        [
-                            'name' => 'FileExtension',
-                            'options' => [
-                                'extension' => 'pdf',
-                            ],
-                        ],
-                    ],
-                    'filters' => [
-                        [
-                            'name' => 'FileRenameUpload',
-                            'options' => [
-                                'target' =>  'public/static/jobs/job.pdf',
-                                'randomize' => true,
-                            ],
-                        ],
-                    ],
-                ];
-            } else {
-                $spec['uri'] = [ 'require' => true ];
-            }
-        }
+
 
         return $spec;
     }

@@ -61,6 +61,7 @@ return [
             Listener\VoidListener::class => InvokableFactory::class,
             Listener\CreateJobOrder::class => Listener\CreateJobOrderFactory::class,
             Listener\SingleJobAcceptedListener::class => Listener\SingleJobAcceptedListenerFactory::class,
+            Listener\JobDetailFileUpload::class => Listener\JobDetailFileUploadFactory::class,
         ],
         'aliases' => [
             'Orders\Form\Listener\InjectInvoiceAddressInJobContainer' => Listener\VoidListener::class,
@@ -93,6 +94,7 @@ return [
     'filters' => [
         'factories' => [
             WordpressApi\Filter\PageIdMap::class => Factory\Filter\WpApiPageIdMapFactory::class,
+            Filter\PdfFileUri::class => Filter\PdfFileUriFactory::class,
         ],
     ],
 
@@ -182,6 +184,7 @@ return [
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
              'gastro24/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'gastro24/form/create-single-job' => __DIR__ . '/../view/jobs/create-single-job-form.phtml',
+             'gastro24/form/job-details-fieldset' => __DIR__ . '/../view/jobs/job-details-fieldset.phtml',
              'gastro24/dashboard' => __DIR__ . '/../view/gastro24/dashboard.phtml',
              'layout/application-form' => __DIR__ . '/../view/layout-application-form.phtml',
              'contactform.view' => __DIR__ . '/../view/contactform.phtml',
@@ -212,6 +215,9 @@ return [
             Form\CreateSingleJobForm::class => InvokableFactory::class,
             Form\UserProductInfo::class => InvokableFactory::class,
             Form\InvoiceAddressSettingsFieldset::class => \Settings\Form\Factory\SettingsFieldsetFactory::class,
+            Form\JobDetails::class => InvokableFactory::class,
+            Form\JobDetailsForm::class => InvokableFactory::class,
+            'Gastro24/JobPdfUpload' => Form\JobPdfFactory::class
         ],
         'aliases' => [
             'Orders/InvoiceAddressSettingsFieldset' => Form\InvoiceAddressSettingsFieldset::class,
@@ -349,6 +355,13 @@ return [
         'Jobs/Events' => [ 'listeners' => [
             Listener\IncreaseJobCount::class => [ JobEvent::EVENT_JOB_CREATED, true ],
             Listener\SingleJobAcceptedListener::class => [ JobEvent::EVENT_JOB_ACCEPTED, true ],
+        ]],
+
+        'Core/Ajax/Events' => [ 'listeners' => [
+            Listener\JobDetailFileUpload::class  => [
+                'events' => ['jobdetailsupload', 'jobdetailsdelete' => 'deletePdfFile'],
+                'lazy'   => true
+            ],
         ]],
     ],
 ];
