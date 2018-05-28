@@ -58,7 +58,7 @@
                             $context.find('.file-working').hide();
                             $context.find('.file-info').html(data.result.content);
                             $context.find('.file-delete').on('click', function(e) {
-                                $.get($(e.currentTarget).attr('href')).done(function() {
+                                $.get($(e.currentTarget).attr('href')).always(function() {
                                     $context.find('.file-working, .file-info, .errors *').remove();
                                     $('#' + $input.attr('id')).show();
                                 });
@@ -77,16 +77,28 @@
                        $context.find('.file-info').html('<p class="text-warning">Fehler beim Upload.</p>');
                    }
                });
+               $input.parent().find('.file-info .file-delete').one('click', function(e) {
+                  $.get($(e.currentTarget).attr('href')).always(function() {
+                      $input.parent().find('.file-info').remove();
+                      $('#' + $input.attr('id')).show();
+                  });
+               });
            });
-       })
+       });
 
-        // $('#description-descriptionForm-details').on('yk:forms:success.jobpdfupload', function(e) {
-        //     var iframeUrl = basePath + '/' + lang + '/job-'
-        //                         + ($(e.currentTarget).find('.csj-mode-uri, .csj-mode-pdf').prop('checked') ? 'x' : '')
-        //                         + $(e.currentTarget).find('input[name="job"]').attr('value');
-        //
-        //     $('#previewJob').attr('src', iframeUrl);
-        // })
+        $('#description-descriptionForm-details').on('yk:forms:success.jobpdfupload', function(e) {
+            var iframeUrl;
+            if ($(e.currentTarget).find('#csj-mode-uri').prop('checked')) {
+                iframeUrl = $('#details-uri').val();
+            } else if ($(e.currentTarget).find('#csj-mode-pdf').prop('checked')) {
+                iframeUrl = $(e.currentTarget).find('input[name="pdf_uri"]').val();
+            } else {
+                iframeUrl = basePath + '/' + lang + '/job-' + $(e.currentTarget).find('input[name="job"]').val() + '.html';
+            }
+
+            $('#previewJob').attr('src', iframeUrl);
+        }).find('#details-description-span').parent().hide()
+
 
 
     });

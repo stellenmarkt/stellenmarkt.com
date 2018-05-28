@@ -11,6 +11,10 @@ $fieldset = $this->element;
 $mode = $fieldset->get('mode'); $isUri = 'uri' == $mode->getValue(); $isPdf = 'pdf' == $mode->getValue();
 ?>
 <?php if (isset($this->renderSummary) && $this->renderSummary): ?>
+    <style type="text/css">
+        .mce-content-body { min-height: 100px; }
+        
+    </style>
 <div class="row">
     <?php if ($isUri): ?>
         <div class="col-md-3 yk-label">Online-Inserat</div>
@@ -60,7 +64,23 @@ $mode = $fieldset->get('mode'); $isUri = 'uri' == $mode->getValue(); $isPdf = 'p
     </div>
 </div>
 <?=$this->formRow($fieldset->get('uri'))?>
-<?=$this->formRow($fieldset->get('pdf'))?>
+<?php $input = $this->formRow($fieldset->get('pdf'));
+    if ($value = $fieldset->get('pdf')->getValue()) {
+        $input = str_replace(
+                '<div class="col-md-9" id="details-pdf-span">',
+                '<div class="col-md-9" id="details-pdf-span"><div class="file-info"><a href="' . $value . '" target="_blank">' . basename($value) . '</a>
+                <a href="?ajax=jobdetailsdelete&file=' .basename($value). '" class="file-delete btn btn-default btn-xs">
+        <span class="yk-icon yk-icon-minus"></span>
+    </a>
+    <input type="hidden" value="' . $value . '" name="pdf_uri"></div>',
+                $input
+        );
+        $input = str_replace('<input type="file"', '<input type="file" style="display:none;"', $input);
+
+    }
+    echo $input;
+
+?>
         <div class="csj-html-wrapper">
 <?=$this->formRow($fieldset->get('description'))?>
 <?=$this->formRow($fieldset->get('logo')) ?>

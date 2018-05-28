@@ -27,7 +27,10 @@ class JobDetailFileUploadFactory implements FactoryInterface
     {
         $form = $container->get('forms')->get(JobDetailsForm::class);
         $form->setName('details');
-        $service = new JobDetailFileUpload($form);
+
+        $repository = $container->get('repositories')->get('Gastro24/TemplateImage');
+
+        $service = new JobDetailFileUpload($form, $repository);
         
         return $service;    
     }

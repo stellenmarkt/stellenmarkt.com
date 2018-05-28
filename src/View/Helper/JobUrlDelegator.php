@@ -40,7 +40,7 @@ class JobUrlDelegator extends AbstractHelper
             $urlParams['id'] = $jobEntity->getId();
         }
 
-        if ($jobEntity->getLink()) {
+        if ($jobEntity->getLink() && (!isset($options['preview']) || false === $options['preview'])) {
             $url = $this->urlHelper->__invoke('lang/jobs/view-extern', $urlParams, true);
             /* Unfortunately, we need to copy this portion from the jobUrlHelper
              * but simplified, as some options are implied */

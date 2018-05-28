@@ -34,7 +34,8 @@ class JobDetailsHydrator implements HydratorInterface
         return [
             'mode' => $mode,
             'uri' => $mode == 'uri' ? $link : '',
-            'description' => $object->getTemplateValues()->getDescription(),
+            'pdf' => $mode == 'pdf' ? $link : '',
+            //'description' => $object->getTemplateValues()->getDescription(),
             'position' => $object->getTemplateValues()->get('position'),
         ];
     }
@@ -42,6 +43,10 @@ class JobDetailsHydrator implements HydratorInterface
     public function hydrate(array $data, $object)
     {
         if ('html' == $data['mode']) {
+            $link = $object->getLink();
+            if ('.pdf' == substr($link, -4)) {
+                @unlink('public/' . $link);
+            }
             $object->setLink('');
             $object->getTemplateValues()->setDescription($data['description']);
             $object->getTemplateValues()->position = $data['position'];

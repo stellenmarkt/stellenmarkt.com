@@ -176,6 +176,28 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             $spec += [
                 'description' => [ 'require' => true ],
                 'position'    => [ 'require' => true ],
+                'logo' => [
+                    'allow_empty' => true,
+                    'validators' => [
+                        [
+                            'name' => 'FileMimeType',
+                            'options' => [
+                                'mimeType' => 'image',
+                                'disableMagicFile' => true,
+                                'magicFile' => false,
+                            ],
+                        ],
+                    ],
+                    'filters' => [
+                        [
+                            'name' => \Core\Filter\File\Entity::class,
+                            'options' => [
+                                'file_entity' => \Gastro24\Entity\TemplateImage::class,
+                                'repository' => true,
+                            ],
+                        ],
+                    ],
+                ],
             ];
         }
 

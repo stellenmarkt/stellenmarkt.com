@@ -11,8 +11,8 @@
 namespace Gastro24\Listener;
 
 use Core\Listener\Events\AjaxEvent;
+use Doctrine\ODM\MongoDB\DocumentRepository;
 use Gastro24\Form\JobDetailsForm;
-use Zend\Http\PhpEnvironment\Request;
 use Zend\Stdlib\ArrayUtils;
 
 /**
@@ -26,8 +26,12 @@ class JobDetailFileUpload
 
     private $form;
 
-    public function __construct(JobDetailsForm $form) {
+    private $repository;
+
+    public function __construct(JobDetailsForm $form, DocumentRepository $repository)
+    {
         $this->form = $form;
+        $this->repository = $repository;
     }
 
     public function __invoke(AjaxEvent $event)
@@ -38,8 +42,7 @@ class JobDetailFileUpload
             return;
         }
 
-        $request = new Request();
-        $files   = $request->getFiles()->toArray();
+        $files   = $event->getRequest()->getFiles()->toArray();
         $data    = ArrayUtils::merge($_POST, $files);
 
 
@@ -47,7 +50,7 @@ class JobDetailFileUpload
             return $this->uploadPdf($event, $data);
         }
 
-        return $this->uploadTemplateImage($event, $mode, $data);
+        return $this->uploadTemplateImage($event, $data);
     }
 
     public function uploadPdf($event, $data)
@@ -77,5 +80,35 @@ class JobDetailFileUpload
         @unlink('public/static/jobs/' . $file);
 
         return ['ok' => true];
+    }
+
+    public function uploadTemplateImage($event, $data)
+    {
+        $name = isset($data['details']['logo']) && !empty($data['details']['logo']) ? 'logo' : 'image';
+        $this->form->setData($data);
+        $this->form->setValidationGroup(['details' => ['mode', $name]]);
+
+        if ($this->form->isValid()) {
+            $values = $this->form->getData();
+            $file = $values['details'][$name]['entity'];
+
+            return [
+                'valid' => true,
+                'content' => '
+                    <a href="/' . $file->getUri() . '" target="_blank">'
+                    . $file->getName() . '</a>'
+                    . '<a href="/' . $file->getUri() . '?do=delete" class="file-delete btn btn-default btn-xs">
+                    <span class="yk-icon yk-icon-minus"></span>
+                        </a>
+                        <input type="hidden" value="' . $file->getId() . '" name="details[logo_id]">'
+            ];
+        }
+
+        $values = $this->form->getData();
+        if (isset($values['details'][$name]['entity']) && !empty($values['details'][$name]['entity'])) {
+            $this->repository->getDocumentManager()->remove($values['details'][$name]['entity']);
+        }
+
+        return ['valid' => false, 'errors' => $this->form->getMessages() ];
     }
 }
