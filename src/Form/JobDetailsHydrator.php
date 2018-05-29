@@ -10,6 +10,8 @@
 /** */
 namespace Gastro24\Form;
 
+use Gastro24\Entity\Template;
+use Gastro24\Entity\TemplateImage;
 use Zend\Hydrator\HydratorInterface;
 
 /**
@@ -20,6 +22,13 @@ use Zend\Hydrator\HydratorInterface;
  */
 class JobDetailsHydrator implements HydratorInterface
 {
+    private $repositories;
+
+    public function __construct($repositories)
+    {
+        $this->repositories = $repositories;
+    }
+
     public function extract($object)
     {
         $link = $object->getLink();
@@ -31,17 +40,22 @@ class JobDetailsHydrator implements HydratorInterface
             $mode = 'html';
         }
 
+        $template = $object->getAttachedEntity('gastro24-template');
+        $image    = $template ? $template->getImage()->getUri() : null;
+
         return [
             'mode' => $mode,
             'uri' => $mode == 'uri' ? $link : '',
             'pdf' => $mode == 'pdf' ? $link : '',
             //'description' => $object->getTemplateValues()->getDescription(),
             'position' => $object->getTemplateValues()->get('position'),
+            'image' => $image,
         ];
     }
 
     public function hydrate(array $data, $object)
     {
+        /* @var \Jobs\Entity\Job $object */
         if ('html' == $data['mode']) {
             $link = $object->getLink();
             if ('.pdf' == substr($link, -4)) {
@@ -50,6 +64,22 @@ class JobDetailsHydrator implements HydratorInterface
             $object->setLink('');
             $object->getTemplateValues()->setDescription($data['description']);
             $object->getTemplateValues()->position = $data['position'];
+            $template = $object->getAttachedEntity('gastro24-template');
+            $repository = $this->repositories->get(TemplateImage::class);
+            if (!$template) {
+                $template = new Template();
+                $this->repositories->store($template);
+                $object->addAttachedEntity($template, 'gastro24-template');
+            }
+            if (isset($_POST['details']['logo_id'])) {
+                $file = $repository->find($_POST['details']['logo_id']);
+                $template->setLogo($file);
+            }
+            if (isset($_POST['details']['image_id'])) {
+                $file = $repository->find($_POST['details']['image_id']);
+                $template->setImage($file);
+            }
+
         } else {
             $object->setLink('uri' == $data['mode'] ? $data['uri'] : (isset($_POST['pdf_uri']) ? $_POST['pdf_uri'] : $data['pdf']));
         }

@@ -65,12 +65,23 @@ class CreateSingleJob extends AbstractActionController
         }
 
         $values = $this->form->getData();
+        $sessionValues = $values;
 
         if ('pdf' == $values['details']['mode']) {
             $serverUrl = new ServerUrl();
             $basePath  = $this->getRequest()->getBasePath();
 
             $values['details']['uri'] = $serverUrl('/' . $basePath . str_replace('public/', '', $values['details']['pdf']['tmp_name']));
+        }
+
+        if (is_array($values['details']['logo'])) {
+            $sessionValues['details']['logo_id'] = $values['details']['logo']['entity']->getId();
+            unset($sessionValues['details']['logo']['entity']);
+        }
+
+        if (is_array($values['details']['image'])) {
+            $sessionValues['details']['image_id'] = $values['details']['image']['entity']->getId();
+            unset($sessionValues['details']['image']['entity']);
         }
 
         $session = new Container('Gastro24_SingleJobData');

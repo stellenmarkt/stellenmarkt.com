@@ -35,6 +35,13 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                         </div>
                         <div class="panel-body">
                             <?=$this->details['position']?>
+
+                            <?php $image=isset($this->details['image']['entity'])
+                                         ? $this->details['image']['entity'] : null;
+                            if ($image):?>
+                                <hr>
+                                <img src="<?=$this->basePath($image->getUri())?>">
+                                <?php endif?>
                         </div>
                     </div>
                 </div>
@@ -45,6 +52,12 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                         </div>
                         <div class="panel-body">
                             <?=$this->details['description']?>
+                            <?php $logo=isset($this->details['logo']['entity'])
+                                ? $this->details['logo']['entity'] : null;
+                            if ($logo):?>
+                                <hr>
+                                <img src="<?=$this->basePath($logo->getUri())?>">
+                            <?php endif?>
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,8 @@
 namespace Gastro24\Controller\Plugin;
 
 use Core\Entity\Collection\ArrayCollection;
+use Gastro24\Entity\Template;
+use Gastro24\Entity\TemplateImage;
 use Jobs\Entity\AtsMode;
 use Jobs\Entity\Location;
 use Jobs\Entity\Status;
@@ -31,17 +33,20 @@ class CreateSingleJob extends AbstractPlugin
 
     private $jobRepository;
     private $orderRepository;
+    private $templateImageRepository;
     private $orderOptions;
     private $mailer;
 
     public function __construct(
         \Jobs\Repository\Job $jobRepository,
         \Orders\Repository\Orders $orderRespository,
+        $templateImageRepository,
         \Orders\Options\ModuleOptions $orderOptions,
         \Core\Mail\MailService $mailer
     ) {
         $this->jobRepository = $jobRepository;
         $this->orderRepository = $orderRespository;
+        $this->templateImageRepository = $templateImageRepository;
         $this->orderOptions = $orderOptions;
         $this->mailer  = $mailer;
     }
@@ -62,6 +67,19 @@ class CreateSingleJob extends AbstractPlugin
         if ('html' == $values['details']['mode']) {
             $job->getTemplateValues()->setDescription($values['details']['description']);
             $job->getTemplateValues()->setHtml($values['details']['position']);
+            $template = new Template();
+            $this->jobRepository->getDocumentManager()->persist($template);
+            $this->jobRepository->getDocumentManager()->flush($template);
+            $job->addAttachedEntity($template, 'gastro24-template');
+            if (isset($values['details']['image_id'])) {
+                $image = $this->templateImageRepository->find($values['details']['image_id']);
+                $template->setImage($image);
+            }
+            if (isset($values['details']['logo_id'])) {
+                $logo = $this->templateImageRepository->find($values['details']['logo_id']);
+                $template->setLogo($logo);
+            }
+
         }
         $job->setLink($values['details']['uri']);
         $job->setTitle($values['title']);

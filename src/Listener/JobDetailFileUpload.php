@@ -100,7 +100,7 @@ class JobDetailFileUpload
                     . '<a href="/' . $file->getUri() . '?do=delete" class="file-delete btn btn-default btn-xs">
                     <span class="yk-icon yk-icon-minus"></span>
                         </a>
-                        <input type="hidden" value="' . $file->getId() . '" name="details[logo_id]">'
+                        <input type="hidden" value="' . $file->getId() . '" name="details[' . $name . '_id]">'
             ];
         }
 

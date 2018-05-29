@@ -29,9 +29,10 @@ class CreateSingleJobFactory implements FactoryInterface
         $repositories = $container->get('repositories');
         $jobRepository= $repositories->get('Jobs');
         $orderRepository = $repositories->get('Orders');
+        $templateImageRepository = $repositories->get('Gastro24/TemplateImage');
         $orderOptions = $container->get('Orders/Options/Module');
         $mailer = $container->get('Core/MailService');
-        $plugin = new CreateSingleJob($jobRepository, $orderRepository, $orderOptions, $mailer);
+        $plugin = new CreateSingleJob($jobRepository, $orderRepository, $templateImageRepository, $orderOptions, $mailer);
 
         return $plugin;
     }

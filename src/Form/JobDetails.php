@@ -32,7 +32,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
     public function getHydrator()
     {
         if (!$this->hydrator) {
-            $hydrator = new JobDetailsHydrator();
+            $hydrator = new EntityHydrator();
             $this->setHydrator($hydrator);
         }
         return $this->hydrator;
@@ -174,9 +174,31 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             $spec['uri'] = [ 'require' => true ];
         } else {
             $spec += [
-                'description' => [ 'require' => true ],
+                //'description' => [ 'require' => true ],
                 'position'    => [ 'require' => true ],
                 'logo' => [
+                    'allow_empty' => true,
+                    'validators' => [
+                        [
+                            'name' => 'FileMimeType',
+                            'options' => [
+                                'mimeType' => 'image',
+                                'disableMagicFile' => true,
+                                'magicFile' => false,
+                            ],
+                        ],
+                    ],
+                    'filters' => [
+                        [
+                            'name' => \Core\Filter\File\Entity::class,
+                            'options' => [
+                                'file_entity' => \Gastro24\Entity\TemplateImage::class,
+                                'repository' => true,
+                            ],
+                        ],
+                    ],
+                ],
+                'image' => [
                     'allow_empty' => true,
                     'validators' => [
                         [

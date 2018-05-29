@@ -1,6 +1,8 @@
 <?php
 namespace Gastro24;
 
+use Gastro24\Form\JobDetailsHydrator;
+use Gastro24\Form\JobDetailsHydratorFactory;
 use Gastro24\Options\Landingpages;
 use Jobs\Listener\Events\JobEvent;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -101,6 +103,12 @@ return [
     'validators' => [
         'factories' => [
             Validator\IframeEmbeddableUri::class => InvokableFactory::class,
+        ],
+    ],
+
+    'hydrators' => [
+        'factories' => [
+            JobDetailsHydrator::class => JobDetailsHydratorFactory::class,
         ],
     ],
 
@@ -215,7 +223,7 @@ return [
             Form\CreateSingleJobForm::class => InvokableFactory::class,
             Form\UserProductInfo::class => InvokableFactory::class,
             Form\InvoiceAddressSettingsFieldset::class => \Settings\Form\Factory\SettingsFieldsetFactory::class,
-            Form\JobDetails::class => InvokableFactory::class,
+            Form\JobDetails::class => Form\JobDetailsFactory::class,
             Form\JobDetailsForm::class => InvokableFactory::class,
             'Gastro24/JobPdfUpload' => Form\JobPdfFactory::class
         ],
