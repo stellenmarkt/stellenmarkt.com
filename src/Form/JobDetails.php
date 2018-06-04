@@ -83,6 +83,14 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
         ]);
 
         $this->add([
+            'type' => 'File',
+            'name' => 'logo',
+            'options' => [
+                'label' => 'Unternehmenslogo',
+            ],
+        ]);
+
+        $this->add([
             'type' => 'TextEditor',
             'name' => 'description',
             'options' => [
@@ -98,12 +106,14 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             ],
         ]);
 
+
+
         $this->add([
             'type' => 'File',
-            'name' => 'logo',
+            'name' => 'image',
             'options' => [
-                'label' => 'Unternehmenslogo',
-            ],
+                'label' => 'Bild',
+            ]
         ]);
 
         $this->add([
@@ -123,12 +133,23 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
         ]);
 
         $this->add([
-            'type' => 'File',
-            'name' => 'image',
+            'type' => 'TextEditor',
+            'name' => 'requirements',
             'options' => [
-                'label' => 'Bild',
-            ]
+                'description' => 'Geben Sie die Anforderungen an die Bewerber an.',
+                'label' => 'Anforderungen',
+                'rowClass' => 'csj-html-input',
+                'no-submit' => true,
+            ],
+            'attributes' => [
+                'data-toggle' => 'description',
+                'data-target' => 'details-requirements',
+                'style' => 'height: auto;',
+            ],
         ]);
+
+
+
     }
 
     public function getInputFilterSpecification()
@@ -176,6 +197,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             $spec += [
                 //'description' => [ 'require' => true ],
                 'position'    => [ 'require' => true ],
+                'requirements' => [ 'require' => true ],
                 'logo' => [
                     'allow_empty' => true,
                     'validators' => [
@@ -189,6 +211,13 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                         ],
                     ],
                     'filters' => [
+                        [
+                            'name' => \Core\Filter\File\Resize::class,
+                            'options' => [
+                                'max-width' => '350',
+                                'max-height' => '150',
+                            ],
+                        ],
                         [
                             'name' => \Core\Filter\File\Entity::class,
                             'options' => [
@@ -211,6 +240,13 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                         ],
                     ],
                     'filters' => [
+                        [
+                            'name' => \Core\Filter\File\Resize::class,
+                            'options' => [
+                                'max-width' => '600',
+                                'max-height' => '400',
+                            ],
+                        ],
                         [
                             'name' => \Core\Filter\File\Entity::class,
                             'options' => [

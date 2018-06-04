@@ -66,7 +66,8 @@ class CreateSingleJob extends AbstractPlugin
         $job->setCompany($values['invoiceAddress']['company']);
         if ('html' == $values['details']['mode']) {
             $job->getTemplateValues()->setDescription($values['details']['description']);
-            $job->getTemplateValues()->setHtml($values['details']['position']);
+            $job->getTemplateValues()->set('position', $values['details']['position']);
+            $job->getTemplateValues()->setRequirements($values['details']['requirements']);
             $template = new Template();
             $this->jobRepository->getDocumentManager()->persist($template);
             $this->jobRepository->getDocumentManager()->flush($template);

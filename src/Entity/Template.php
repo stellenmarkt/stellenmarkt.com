@@ -62,6 +62,11 @@ class Template implements EntityInterface, IdentifiableEntityInterface
         return $this;
     }
 
+    public function clearLogo()
+    {
+        $this->logo = null;
+    }
+
     /**
      * @return TemplateImage
      */
@@ -80,6 +85,10 @@ class Template implements EntityInterface, IdentifiableEntityInterface
         $this->image = $image;
 
         return $this;
+    }
+
+    public function clearImage() {
+        $this->image = null;
     }
 
 

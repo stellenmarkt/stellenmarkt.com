@@ -82,6 +82,7 @@
                       $input.parent().find('.file-info').remove();
                       $('#' + $input.attr('id')).show();
                   });
+                  return false;
                });
            });
        });
@@ -97,7 +98,7 @@
             }
 
             $('#previewJob').attr('src', iframeUrl);
-        }).find('#details-description-span').parent().hide()
+        }).find('#details-description-span, #details-logo-span').parent().hide()
 
 
 

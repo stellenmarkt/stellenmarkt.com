@@ -41,7 +41,7 @@ class JobDetailsHydrator implements HydratorInterface
         }
 
         $template = $object->getAttachedEntity('gastro24-template');
-        $image    = $template ? $template->getImage()->getUri() : null;
+        $image    = $template && ($image = $template->getImage()) ? $image->getUri() : null;
 
         return [
             'mode' => $mode,
@@ -49,6 +49,7 @@ class JobDetailsHydrator implements HydratorInterface
             'pdf' => $mode == 'pdf' ? $link : '',
             //'description' => $object->getTemplateValues()->getDescription(),
             'position' => $object->getTemplateValues()->get('position'),
+            'requirements' => $object->getTemplateValues()->getRequirements(),
             'image' => $image,
         ];
     }
@@ -64,6 +65,7 @@ class JobDetailsHydrator implements HydratorInterface
             $object->setLink('');
             $object->getTemplateValues()->setDescription($data['description']);
             $object->getTemplateValues()->position = $data['position'];
+            $object->getTemplateValues()->setRequirements($data['requirements']);
             $template = $object->getAttachedEntity('gastro24-template');
             $repository = $this->repositories->get(TemplateImage::class);
             if (!$template) {

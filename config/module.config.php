@@ -64,6 +64,7 @@ return [
             Listener\CreateJobOrder::class => Listener\CreateJobOrderFactory::class,
             Listener\SingleJobAcceptedListener::class => Listener\SingleJobAcceptedListenerFactory::class,
             Listener\JobDetailFileUpload::class => Listener\JobDetailFileUploadFactory::class,
+            Listener\DeleteTemplateImage::class => Listener\DeleteTemplateImageFactory::class,
         ],
         'aliases' => [
             'Orders\Form\Listener\InjectInvoiceAddressInJobContainer' => Listener\VoidListener::class,
@@ -370,6 +371,10 @@ return [
                 'events' => ['jobdetailsupload', 'jobdetailsdelete' => 'deletePdfFile'],
                 'lazy'   => true
             ],
+        ]],
+
+        'Core/File/Events' => [ 'listeners' => [
+            Listener\DeleteTemplateImage::class => [ \Core\Listener\Events\FileEvent::EVENT_DELETE, true ]
         ]],
     ],
 ];
