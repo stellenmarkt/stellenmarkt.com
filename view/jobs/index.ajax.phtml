@@ -167,7 +167,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                         if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
-                    <br /><?=$job->getLocation()?> </p>
+                    <br /><?=preg_replace('~\(.*?\)$~', '', (string) $job->getLocation())?> </p>
                    
                 </div>
             </div>
