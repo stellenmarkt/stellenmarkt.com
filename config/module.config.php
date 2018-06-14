@@ -86,12 +86,12 @@ return [
     'controller_plugins' => [
         'factories' => [
             Controller\Plugin\CreateSingleJob::class => Factory\Controller\Plugin\CreateSingleJobFactory::class,
-            Controller\Plugin\Url::class => InvokableFactory::class,
+            //Controller\Plugin\Url::class => InvokableFactory::class,
         ],
-        'aliases' => [
-            'url' => Controller\Plugin\Url::class,
-            'Url' => Controller\Plugin\Url::class,
-        ],
+//        'aliases' => [
+//            'url' => Controller\Plugin\Url::class,
+//            'Url' => Controller\Plugin\Url::class,
+//        ],
     ],
 
     'filters' => [
@@ -262,18 +262,18 @@ return [
                         ],
                         'child_routes' => [
                             'view' => [
-                                'type' => 'regex',
+                                //'type' => 'regex',
                                 'options' => [
-                                    'regex' => '-(?<id>[a-f0-9]+)\.html',
-                                    'spec' => '-%id%.html',
-                                    'route' => null,
+                                  //  'regex' => '-(?<id>[a-f0-9]+)\.html',
+                                  //  'spec' => '-%id%.html',
+                                  //  'route' => null,
                                 ],
                             ],
                             'view-extern' => [
                                 'type' => 'regex',
                                 'options' => [
-                                    'regex' => '-x(?<id>[a-f0-9]+)\.html',
-                                    'spec' => '-x%id%.html',
+                                    'regex' => '-(?<id>[a-f0-9]+)\.html',
+                                    'spec' => '-%id%.html',
                                     'route' => null,
                                     'defaults' => [
                                         'controller' => Controller\RedirectExternalJobs::class,

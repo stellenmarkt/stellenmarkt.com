@@ -86,7 +86,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'type' => 'File',
             'name' => 'logo',
             'options' => [
-                'label' => 'Unternehmenslogo',
+                'label' => 'Unternehmenslogo (max. 350x150)',
             ],
         ]);
 
@@ -112,7 +112,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'type' => 'File',
             'name' => 'image',
             'options' => [
-                'label' => 'Bild',
+                'label' => 'Bannerbild (600x400)',
             ]
         ]);
 

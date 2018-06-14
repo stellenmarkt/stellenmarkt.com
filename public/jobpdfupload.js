@@ -94,7 +94,7 @@
             } else if ($(e.currentTarget).find('#csj-mode-pdf').prop('checked')) {
                 iframeUrl = $(e.currentTarget).find('input[name="pdf_uri"]').val();
             } else {
-                iframeUrl = basePath + '/' + lang + '/job-' + $(e.currentTarget).find('input[name="job"]').val() + '.html';
+                iframeUrl = basePath + '/' + lang + '/job/view?id=' + $(e.currentTarget).find('input[name="job"]').val();
             }
 
             $('#previewJob').attr('src', iframeUrl);

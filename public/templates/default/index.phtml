@@ -4,7 +4,7 @@
     $basePathHelper = $this->plugin('basePath');
     $replaceImage = function($str) use ($template, $basePathHelper)
     {
-        $image = $template->getImage();
+        $image = $template ? $template->getImage() : null;
         if ($image) {
             $imageUri = $basePathHelper($image->getUri());
             $imageHtml = '<img src="' . $imageUri . '">';
@@ -42,42 +42,58 @@
     <main itemscope itemtype="http://schema.org/JobPosting">
         <div class="row">
             <div class="one-half column" itemscope itemtype="http://schema.org/Organization">
+
+                <?php /* Firmenlogo */ ?>
+
                 <div itemprop="logo">
                     <img src="<?= $template && ($logo = $template->getLogo())
                         ? $this->basePath($logo->getUri())
                         : $this->uriLogo?>" alt="<?= $this->organizationName?>">
                 </div>
+
             </div>
             <div class="one-half column right">
             </div>
         </div>
 
+        <?php /* Unternehmensbeschreibung */ ?>
         <p ><?=$this->descriptionEditable ?></p>
+
         <div class="row">
             <div class="twelve columns" itemprop="title">
-                <?php echo $this->title; ?>
+                <h1><?php echo $this->title; ?></h1>
             </div>
         </div>
+
+        <?php /* Bannerbild */ ?>
+
+        <?php if ($template && ($image = $template->getImage())):?>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="<?=$this->basePath($image->getUri())?>">
+            </div>
+        </div>
+        <?php endif ?>
+
+        <?php /* Stellenbeschreibung */ ?>
+
         <div class="row">
             <div class="col-md-12 position">
                 <?= $replaceImage($this->job->getTemplateValues()->get('position'));?>
             </div>
-            <div class="two-thirds column">
-                <div class="panel">
-                    <div class="panel-heading"><h4><?=$this->translate($this->labelRequirements);?></h4></div>
-                    <div class="panel-body" itemprop="responsibilities"><?=$this->requirements;?></div>
-                </div>
-                <div class="panel">
-                    <div class="panel-heading"><h4><?=$this->translate($this->labelQualifications);?></h4></div>
-                    <div class="panel-body" itemprop="qualifications"><?=$this->qualifications;?></div>
-                </div>
+        </div>
 
+        <?php /* Anforderungen */ ?>
+        <div class="row">
+            <div class="col-md12">
+
+                <h4>Anforderungen</h4>
+
+                <?=$this->requirements;?>
             </div>
-            <div class="one-third column">
-                <div class="panel">
-                    <div class="panel-heading"><h4><?=$this->translate($this->labelBenefits);?></h4></div>
-                    <div class="panel-body" itemprop="jobBenefits"><?=$this->benefits;?></div>
-                </div>
+        </div>
+
+            <div class="row">
                 <div itemscope itemtype="http://schema.org/Organization">
                     <strong itemprop="name">
                         <?= $this->organizationName?>
@@ -91,11 +107,8 @@
                     </address>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="twelve columns">
-            </div>
-        </div>
+
+
         <?=$this->jobApplyButtons(
             $this->applyData,
             [

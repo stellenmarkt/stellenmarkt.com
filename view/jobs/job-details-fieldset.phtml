@@ -30,8 +30,8 @@ $mode = $fieldset->get('mode'); $isUri = 'uri' == $mode->getValue(); $isPdf = 'p
             </div>
             <div class="panel-body">
                 <?=$fieldset->get('position')->getValue()?>
-                <?php $image = $fieldset->getObject()->getAttachedEntity('gastro24-template')->getImage();
-                if ($image):?>
+                <?php $template = $fieldset->getObject()->getAttachedEntity('gastro24-template');
+                if ($template && ($image = $template->getImage())):?>
                     <hr>
                     <img src="<?=$this->basePath($image->getUri())?>">
                 <?php endif ?>

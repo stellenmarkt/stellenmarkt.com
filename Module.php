@@ -188,7 +188,7 @@ class Module
 
                 if ('lang/jobs/view' == $matchedRouteName) {
                     $query = $event->getRequest()->getQuery();
-                    $query->set('id', $routeMatch->getParam('id'));
+                    $query->set('id', $routeMatch->getParam('id') ?: $event->getRequest()->getQuery('id'));
                 }
 
             }, -9999);
