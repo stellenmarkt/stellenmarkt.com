@@ -54,20 +54,31 @@ class RedirectExternalJobs extends AbstractActionController
             ];
         }
 
-        $visitedJobsContainer = new VisitedJobsContainer();
-        $isVisited            = $visitedJobsContainer->isVisited($job);
-        $isEmbeddable         = $this->validator->isValid($job->getLink());
+        $model = new ViewModel(['job' => $job]);
+        if (!$job->getLink()) {
+            $appModel = $this->getEvent()->getViewModel();
+            $appTemplate = $appModel->getTemplate();
+            $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
+            $internModel->setTemplate('gastro24/jobs/view-intern');
+            $model->addChild($internModel, 'internalJob');
+            $model->setVariable('isIntern', true);
+            // restore application models' template
+            $appModel->setTemplate($appTemplate);
+        } else {
+            $visitedJobsContainer = new VisitedJobsContainer();
+            $isVisited            = $visitedJobsContainer->isVisited($job);
+            $isEmbeddable         = $this->validator->isValid($job->getLink());
 
-        if (!$isVisited && !$isEmbeddable) {
-            $response->getHeaders()->addHeaderLine('Refresh', '4;' . $job->getLink());
-            $visitedJobsContainer->add($job);
+            if (!$isVisited && !$isEmbeddable) {
+                $response->getHeaders()->addHeaderLine('Refresh', '4;' . $job->getLink());
+                $visitedJobsContainer->add($job);
+            }
+            $model->setVariables([
+                'isVisited' => $isVisited,
+                'isEmbeddable' => $isEmbeddable,
+            ]);
+
         }
-
-        $model = new ViewModel([
-            'job' => $job,
-            'isVisited' => $isVisited,
-            'isEmbeddable' => $isEmbeddable,
-        ]);
         $model->setTemplate('gastro24/jobs/view-extern');
 
         return $model;

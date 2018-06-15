@@ -17,12 +17,12 @@ $this->headMeta()->setName('robots', 'noindex,follow');
 $this->headTitle($this->job->getTitle());
 $link = $this->job->getLink();
 
-if (!$link) {
-    $link = $this->jobUrl($job, ['preview' => true, 'linkOnly' => true]);
-    $this->isEmbeddable = true;
-}
+//if (!$link) {
+//    $link = $this->jobUrl($job, ['preview' => true, 'linkOnly' => true]);
+//    $this->isEmbeddable = true;
+//}
 
-if (!$this->isVisited && !$this->isEmbeddable):
+if (!$this->isIntern && !$this->isVisited && !$this->isEmbeddable):
 $this->headScript()->captureStart();?>
 ;(function($, w) {
     $(function() {
@@ -76,7 +76,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
  
-     <?php if ($this->isVisited && !$this->isEmbeddable): ?>
+     <?php if (!$this->isIntern && $this->isVisited && !$this->isEmbeddable): ?>
   
   
       <div style="background-color: #fff;padding:15px">
@@ -89,7 +89,7 @@ $orgName = $this->jobOrganizationName($this->job);
                         </div>
                 
                         
-                    <?php elseif (!$this->isEmbeddable): ?>
+                    <?php elseif (!$this->isIntern && !$this->isEmbeddable): ?>
                     
                     <style>
                         
@@ -160,7 +160,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
 
 
-<?php if ($this->isEmbeddable):?>
+<?php if (!$this->isIntern && $this->isEmbeddable):?>
 <style>
 #preload {
     
@@ -284,7 +284,9 @@ setTimeout(setIframeSrc, 5);
 
 <?php endif; ?>
 
-
+<?php if ($this->isIntern):?>
+    <?=$this->internalJob?>
+<?php endif ?>
 <div class="modal fade" id="job-apply-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" style="width: 90%; height: 90%" role="document">
         <div class="modal-content" style="height: 100%">
