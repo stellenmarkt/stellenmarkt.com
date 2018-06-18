@@ -10,9 +10,14 @@
  *             $job         JobInterface    Job Entity
  *             $isVisited   bool            Has the user already visited this job in the current session
  */
- 
 
-$this->headMeta()->setName('robots', 'noindex,follow');
+if ($this->isIntern):
+
+         $this->headMeta()->setName('robots', 'index,follow');
+ 
+         
+endif;      
+    
    
 $this->headTitle($this->job->getTitle());
 $link = $this->job->getLink();
