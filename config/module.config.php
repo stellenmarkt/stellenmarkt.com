@@ -345,6 +345,7 @@ return [
             ]],
         ],
         Landingpages::class => [],
+        Options\JobDetailsForm::class => [],
     ],
 
     'event_manager' => [

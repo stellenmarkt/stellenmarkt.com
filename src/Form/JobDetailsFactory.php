@@ -25,8 +25,10 @@ class JobDetailsFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $hydrator = $container->get('HydratorManager')->get(JobDetailsHydrator::class);
+        $detailsOptions = $container->get(\Gastro24\Options\JobDetailsForm::class);
         $service = new JobDetails();
         $service->setHydrator($hydrator);
+        $service->setGastroOptions($detailsOptions);
         
         return $service;    
     }

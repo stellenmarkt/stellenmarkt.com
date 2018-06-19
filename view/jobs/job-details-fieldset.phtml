@@ -9,6 +9,8 @@
 
 $fieldset = $this->element;
 $mode = $fieldset->get('mode'); $isUri = 'uri' == $mode->getValue(); $isPdf = 'pdf' == $mode->getValue();
+$modeLabels = $mode->getOption('labels');
+
 ?>
 <?php if (isset($this->renderSummary) && $this->renderSummary): ?>
     <style type="text/css">
@@ -59,13 +61,13 @@ $mode = $fieldset->get('mode'); $isUri = 'uri' == $mode->getValue(); $isPdf = 'p
     <div class="col-md-3 yk-label">&nbsp;</div>
     <div class="col-md-9">
     <div class="pull-left" style="margin-right: 15px;" id="csj-mode-uri-span">
-        <input type="radio" id="csj-mode-uri" name="<?=$mode->getName()?>" value="uri" <?=$isUri ? 'checked' : ''?>> <label for="csj-mode-uri">URL angeben.</label>
+        <input type="radio" id="csj-mode-uri" name="<?=$mode->getName()?>" value="uri" <?=$isUri ? 'checked' : ''?>> <label for="csj-mode-uri"> <?=$modeLabels['uri']?></label>
     </div>
     <div class="pull-left" style="margin-right: 15px;" id="csj-mode-pdf-span">
-        <input type="radio" id="csj-mode-pdf" name="<?=$mode->getName()?>" value="pdf" <?=$isPdf ? 'checked' : '' ?>> <label for="csj-mode-pdf"> PDF-Datei hochladen.</label>
+        <input type="radio" id="csj-mode-pdf" name="<?=$mode->getName()?>" value="pdf" <?=$isPdf ? 'checked' : '' ?>> <label for="csj-mode-pdf"> <?=$modeLabels['pdf']?></label>
     </div>
     <div class="pull-left" id="csj-mode-html-span">
-        <input type="radio" id="csj-mode-html" name="<?=$mode->getName()?>" value="html" <?=$isUri || $isPdf ? '' : 'checked' ?>> <label for="csj-mode-html">Direkt eingeben</label>
+        <input type="radio" id="csj-mode-html" name="<?=$mode->getName()?>" value="html" <?=$isUri || $isPdf ? '' : 'checked' ?>> <label for="csj-mode-html"> <?=$modeLabels['html']?></label>
     </div>
     </div>
 </div>

@@ -29,6 +29,8 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
 
     private $defaultPartial = 'gastro24/form/job-details-fieldset';
 
+    private $gastroOptions;
+
     public function getHydrator()
     {
         if (!$this->hydrator) {
@@ -38,8 +40,21 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
         return $this->hydrator;
     }
 
+    /**
+     * @param mixed $gastroOptions
+     *
+     * @return self
+     */
+    public function setGastroOptions($gastroOptions)
+    {
+        $this->gastroOptions = $gastroOptions;
+
+        return $this;
+    }
+
     public function init()
     {
+
         $this->add([
             'type' => 'radio',
             'name' => 'mode',
@@ -49,6 +64,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                     'pdf' => 'pdf',
                     'html' => 'html'
                 ],
+                'labels' => $this->gastroOptions->getLabel('mode'),
             ],
             'attributes' => [
                 'value' => 'uri',
@@ -60,7 +76,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'name' => 'uri',
             'options' => [
                 'description' => 'Geben Sie die Online-Addresse des Inserats an.',
-                'label' => 'Online-Inserat',
+                'label' => $this->gastroOptions->getLabel('uri'),
                 'rowClass' => 'csj-uri-wrapper'
             ],
             'attributes' => [
@@ -74,7 +90,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'name' => 'pdf',
             'options' => [
                 'description' => 'Selektieren Sie hier das PDF-Dokument Ihres Jobs.',
-                'label' => 'PDF-Datei',
+                'label' => $this->gastroOptions->getLabel('pdf'),
                 'rowClass' => 'csj-pdf-wrapper',
             ],
             'attributes' => [
@@ -86,7 +102,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'type' => 'File',
             'name' => 'logo',
             'options' => [
-                'label' => 'Unternehmenslogo (max. 350x150)',
+                'label' => $this->gastroOptions->getLabel('logo'),
             ],
         ]);
 
@@ -95,7 +111,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'name' => 'description',
             'options' => [
                 'description' => 'Geben Sie die Beschreibung Ihres Unternehmens ein.',
-                'label' => 'Unternehmensbeschreibung',
+                'label' => $this->gastroOptions->getLabel('description'),
                 'rowClass' => 'csj-html-input',
                 'no-submit' => true,
             ],
@@ -112,7 +128,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'type' => 'File',
             'name' => 'image',
             'options' => [
-                'label' => 'Bannerbild (600x400)',
+                'label' => $this->gastroOptions->getLabel('image'),
             ]
         ]);
 
@@ -121,7 +137,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'name' => 'position',
             'options' => [
                 'description' => 'Geben Sie die Beschreibung der beworbenen Stelle ein.',
-                'label' => 'Stellenbeschreibung',
+                'label' => $this->gastroOptions->getLabel('position'),
                 'rowClass' => 'csj-html-input',
                 'no-submit' => true,
             ],
@@ -137,7 +153,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
             'name' => 'requirements',
             'options' => [
                 'description' => 'Geben Sie die Anforderungen an die Bewerber an.',
-                'label' => 'Anforderungen',
+                'label' => $this->gastroOptions->getLabel('requirements'),
                 'rowClass' => 'csj-html-input',
                 'no-submit' => true,
             ],
@@ -213,10 +229,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                     'filters' => [
                         [
                             'name' => \Core\Filter\File\Resize::class,
-                            'options' => [
-                                'max-width' => '350',
-                                'max-height' => '150',
-                            ],
+                            'options' => $this->gastroOptions->getLogoSize(),
                         ],
                         [
                             'name' => \Core\Filter\File\Entity::class,
@@ -242,10 +255,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                     'filters' => [
                         [
                             'name' => \Core\Filter\File\Resize::class,
-                            'options' => [
-                                'max-width' => '600',
-                                'max-height' => '400',
-                            ],
+                            'options' => $this->gastroOptions->getImageSize(),
                         ],
                         [
                             'name' => \Core\Filter\File\Entity::class,
