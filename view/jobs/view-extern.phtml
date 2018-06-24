@@ -73,39 +73,18 @@ $orgName = $this->jobOrganizationName($this->job);
         
     </div>
 </div>
-
-
-
-
-
-
-            
-        
- 
- 
-
-
-
-
- 
-     <?php if (!$this->isIntern && $this->isVisited && !$this->isEmbeddable): ?>
-  
-  
-      <div style="background-color: #fff;padding:15px">
-                          
-                                <p>
-                        Sie haben sich diese Stellenanzeige bereits angesehen.
-                        
+    <?php if (!$this->isIntern && $this->isVisited && !$this->isEmbeddable): ?>
+         <div class="panel panel-default">
+                 <div class="panel-body">
+                        <p> Sie haben sich diese Stellenanzeige bereits angesehen.</p>
                         <p><a style="text-decoration:underline" href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a></p>
-                        
-                        </div>
-                
-                        
-                    <?php elseif (!$this->isIntern && !$this->isEmbeddable): ?>
+                 </div>
+         </div>
+ <?php elseif (!$this->isIntern && !$this->isEmbeddable): ?>
                     
-                    <style>
+<style>
                         
-                         .spinner {
+ .spinner {
   margin: 0 auto;
   width: 70px;
   text-align: center;
@@ -147,30 +126,20 @@ $orgName = $this->jobOrganizationName($this->job);
   }
 }
 
-                    </style>
-                      
-                      
-                 
-                    <div style="background-color: #fff;padding:15px">
-                        
-                           <div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div><br /><br />
-                        <p style="text-align:center;">
-                        Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...
-                 
-                      </p>
-                         
-                         </div>
-                         
-                    <?php endif ?>
+</style>
+<div class="panel panel-default">
+    <div class="panel-body">               
+            <div class="spinner">    
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+             </div>
+             <br /><br />
+             <p style="text-align:center;">Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...</p>
+    </div>
+</div>
+ <?php endif ?>
     
-
-
-
-
 
 <?php if (!$this->isIntern && $this->isEmbeddable):?>
 <style>
@@ -265,14 +234,15 @@ function setIframeSrc() {
 }
 setTimeout(setIframeSrc, 5);
 </script>-->
-
-
- <div class="hidden-sm hidden-md hidden-lg text-center" style="background-color: #fff;padding:15px">
-   <a href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a>
-
+<div class="panel panel-default hidden-sm hidden-md hidden-lg text-center">
+    <div class="panel-body">
+          <a href="<?=$this->job->getLink()?>">&raquo; Direkt zum Inserat</a>
+    </div>
 </div>
-<div class="hidden-xs frame-content ">
-     <div id="preload" class="loading hidden text-center">
+<div class="panel panel-default hidden-xs frame-content">
+    <div class="panel-body">
+        
+            <div id="preload" class="loading hidden text-center">
          
          <div class="spinner">
   <div class="bounce1"></div>
@@ -283,6 +253,12 @@ setTimeout(setIframeSrc, 5);
          <p>Das Inserat wird geladen, bitte haben Sie einem Moment Geduld</p>
 
       </div>
+    </div>
+</div>
+
+
+
+ 
       
       
 <iframe id="iframe1" title="<?=$this->job->getTitle()?>" frameborder="0" allowfullscreen src="<?=$link?>"></iframe>
