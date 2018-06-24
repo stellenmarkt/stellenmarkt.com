@@ -43,8 +43,9 @@ $this->headScript()->appendFile($this->basePath('Gastro24/jobs.js'))
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
-
-     <h6 style="color:#31b0d5; text-transform:uppercase" class="h3"><?= $orgName ?></h6>
+<div class="panel panel-default">
+    
+         <h6 style="color:#31b0d5; text-transform:uppercase" class="h3"><?= $orgName ?></h6>
      <h1 style="margin-top:0px;"> <?=$this->job->getTitle()?></h1>
      
      <p> Publiziert am:
@@ -67,9 +68,13 @@ $orgName = $this->jobOrganizationName($this->job);
    </p>
 
                 <?=$this->gastroApplyUrl($job);?>
+    
+</div>
 
 
-      <hr />
+
+
+
 
             
         
