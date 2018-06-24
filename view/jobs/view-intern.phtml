@@ -27,7 +27,15 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 <div class="panel panel-default">
     <div class="panel-body">
         
-        fgfg
+              <?php /* Firmenlogo */ ?>
+
+                <div itemprop="logo">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
+  
+  
     </div>
 </div>
 
@@ -36,13 +44,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
         <div class="row">
             <div class="one-half column" itemscope itemtype="http://schema.org/Organization">
 
-                <?php /* Firmenlogo */ ?>
-
-                <div itemprop="logo">
-                    <img src="<?= $template && ($logo = $template->getLogo())
-                        ? $this->basePath($logo->getUri())
-                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
-                </div>
+               
 
             </div>
             <div class="one-half column right">
