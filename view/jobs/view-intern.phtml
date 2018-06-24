@@ -36,24 +36,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
                 </div>
   
   
-    </div>
-</div>
-
-<div class="container">
-    <main itemscope itemtype="http://schema.org/JobPosting">
-        <div class="row">
-            <div class="one-half column" itemscope itemtype="http://schema.org/Organization">
-
-               
-
-            </div>
-            <div class="one-half column right">
-            </div>
-        </div>
-
-       
-
-        <?php /* Bannerbild */ ?>
+     <?php /* Bannerbild */ ?>
 
         <?php if ($template && ($image = $template->getImage())):?>
             <div class="row">
@@ -80,15 +63,26 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
 
 
-        <?php /* Anforderungen */ ?>
-        <div class="row">
-            <div class="col-md12">
+                  <?php /* Anforderungen */ ?>
+    
 
                 <h4>Anforderungen fdf</h4>
 
                 <?=$this->requirements;?>
-            </div>
-        </div>
+                
+                
+                
+  
+    </div>
+</div>
+
+
+
+     
+       
+       
+       
+       
 
         <div class="row">
             <div itemscope itemtype="http://schema.org/Organization">
