@@ -42,14 +42,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
             </div>
         </div>
 
-        <?php /* Unternehmensbeschreibung */ ?>
-        <p ><?=$this->descriptionEditable ?></p>
-
-        <div class="row">
-            <div class="twelve columns" itemprop="title">
-                <h1><?php echo $this->title; ?></h1>
-            </div>
-        </div>
+       
 
         <?php /* Bannerbild */ ?>
 
@@ -68,6 +61,12 @@ $replaceImage = function($str) use ($template, $basePathHelper)
                 <?= $replaceImage($this->job->getTemplateValues()->get('position'));?>
             </div>
         </div>
+
+
+        <?php /* Unternehmensbeschreibung */ ?>
+        <p ><?=$this->descriptionEditable ?></p>
+
+
 
         <?php /* Anforderungen */ ?>
         <div class="row">
