@@ -39,11 +39,11 @@ $replaceImage = function($str) use ($template, $basePathHelper)
      <?php /* Bannerbild */ ?>
 
         <?php if ($template && ($image = $template->getImage())):?>
-            <div class="row">
-                <div class="col-md-12 text-center">
+        
+                <div class="text-center">
                     <img src="<?=$this->basePath($image->getUri())?>">
                 </div>
-            </div>
+            
         <?php endif ?>
 
         <h4>Stellenbeschreibung</h4>
