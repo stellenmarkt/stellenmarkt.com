@@ -23,8 +23,10 @@ $replaceImage = function($str) use ($template, $basePathHelper)
     return str_replace('#image#', $imageHtml, $str);
 };
 ?>
+<div class="col-md-9">
+  <div class="row">
 
-<div class="panel panel-default">
+  <div class="panel panel-default">
     <div class="panel-body">
         
               <?php /* Firmenlogo */ ?>
@@ -104,4 +106,8 @@ $replaceImage = function($str) use ($template, $basePathHelper)
            <?=$this->gastroApplyUrl($job);?> 
            
     </div>
+  </div>
+</div>
+<!-- ENDE COL MD 9-->
+
 
