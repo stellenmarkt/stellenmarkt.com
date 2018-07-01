@@ -40,7 +40,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
         <?php if ($template && ($image = $template->getImage())):?>
         
-                <div class="text-center">
+                <div class="row text-center">
                     <img style="width:100%" src="<?=$this->basePath($image->getUri())?>">
                 </div>
             
@@ -89,7 +89,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
     </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-body text-center">
            <?=$this->gastroApplyUrl($job);?> 
            
     </div>
