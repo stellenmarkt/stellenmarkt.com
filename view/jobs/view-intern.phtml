@@ -46,8 +46,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
             
         <?php endif ?>
 
-        <h4>Stellenbeschreibung</h4>
-        
+   
         <?php /* Stellenbeschreibung */ ?>
 
         <div class="row">
@@ -55,6 +54,11 @@ $replaceImage = function($str) use ($template, $basePathHelper)
                 <?= $replaceImage($this->job->getTemplateValues()->get('position'));?>
             </div>
         </div>
+        
+        
+        
+        
+        
 
     <h4>Firmenbeschreibung</h4>
     
