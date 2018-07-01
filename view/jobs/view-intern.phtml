@@ -25,22 +25,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
-<div class="col-md-3">
-  <div class="panel panel-default">
-    <div class="panel-body">
-        
-   <?php /* Firmenlogo */ ?>
 
-                <div itemprop="logo" style="text-align:center; margin-bottom:15px">
-                    <img src="<?= $template && ($logo = $template->getLogo())
-                        ? $this->basePath($logo->getUri())
-                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
-                </div>
-                
-                <h2><?= $orgName ?></h2>
-       </div>
-    </div>
-</div>
 
 
 <div class="col-md-9">
@@ -122,7 +107,22 @@ $orgName = $this->jobOrganizationName($this->job);
 </div>
 <!-- ENDE COL MD 9-->
 
+<div class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+        
+   <?php /* Firmenlogo */ ?>
 
+                <div itemprop="logo" style="text-align:center; margin-bottom:15px">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
+                
+                <h2><?= $orgName ?></h2>
+       </div>
+    </div>
+</div>
 
 
 
