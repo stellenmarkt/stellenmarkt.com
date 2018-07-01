@@ -251,7 +251,26 @@ setTimeout(setIframeSrc, 5);
 </div>
 
 
-<div class="col-md-3">dfdf</div>
+<div class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+        
+   <?php /* Firmenlogo */ ?>
+
+                <div itemprop="logo" style="text-align:center; margin-bottom:15px">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
+                
+                <h2 class="text-center"><?= $orgName ?></h2>
+                
+                <div style="margin-bottom:5px" class=""><a href="" class="btn btn-default btn-block company-jobs-btn"><strong>Unternehmensporträt</strong></a></div>
+                 <div class=""><a href="" class="btn btn-default btn-block company-jobs-btn">3 Jobs</a></div>
+       </div>
+    </div>
+</div>
+
 
      
  
