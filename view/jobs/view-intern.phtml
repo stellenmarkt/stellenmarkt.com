@@ -25,7 +25,13 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 ?>
 
 <div class="col-md-3">
-    gfcb
+   <?php /* Firmenlogo */ ?>
+
+                <div itemprop="logo" style="text-align:center; margin-bottom:15px">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
     
     
 </div>
