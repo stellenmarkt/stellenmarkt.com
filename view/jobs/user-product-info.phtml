@@ -33,7 +33,7 @@ if (!$product) { return; }
         <?php if ($product->hasAvailableJobAmount()): ?>
             <p>Sie haben <?=($count = $product->getJobCount()) ? 'bereits ' . $count : 'noch keine '?> Ihrer <?=$product->getAvailableJobAmount()?> Jobs geschaltet.</p>
         <?php else:?>
-            <p>Sie haben bereits alle Ihrer <?=$product->getAvailableJobAmount()?> Jobs geschaltet.</p>
+            <p>Sie haben bereits alle <?=$product->getAvailableJobAmount()?> Jobs geschaltet.</p>
         <?php endif ?>
 
     </div>
