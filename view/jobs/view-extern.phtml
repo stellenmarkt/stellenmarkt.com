@@ -43,7 +43,8 @@ $this->headScript()->appendFile($this->basePath('Gastro24/jobs.js'))
 $orgName = $this->jobOrganizationName($this->job);
 ?>
 
-<div class="panel panel-default col-md-8">
+<div class="col-md-8">
+<div class="panel panel-default">
     <div class="panel-body">
        
          
@@ -268,15 +269,17 @@ setTimeout(setIframeSrc, 5);
 
 
 <?php if ($this->isIntern):?>
- <div class="col-md-8">
-     <div class="row">
+
             <?=$this->internalJob?> 
          
-     </div>
+   
 
-    
-    </div>
 <?php endif ?>
+
+  </div>
+  
+  
+  
 <div class="modal fade" id="job-apply-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" style="width: 90%; height: 90%" role="document">
         <div class="modal-content" style="height: 100%">
