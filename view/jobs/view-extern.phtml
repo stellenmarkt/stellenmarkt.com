@@ -141,7 +141,11 @@ $orgName = $this->jobOrganizationName($this->job);
              <p style="text-align:center;">Sie werden in Kürze automatisch auf das Job-Inserat von <?=$orgName?> weitergeleitet...</p>
     </div>
 </div>
- <?php endif ?>
+<?php endif ?>
+
+
+
+
     
 
 <?php if (!$this->isIntern && $this->isEmbeddable):?>
@@ -265,22 +269,24 @@ setTimeout(setIframeSrc, 5);
       
 
 
-       </div>
- </div>
+     
  
 <?php endif; ?>
 
-
+<!-- Ende COL-MD-9 -->
+  
+  </div>
+ </div>
+ 
+<!-- Ende COL-MD-9 -->
 
 <?php if ($this->isIntern):?>
 
             <?=$this->internalJob?> 
          
-         
+        
  
 <?php endif ?>
-
-
 
 
 
