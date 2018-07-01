@@ -25,6 +25,9 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 ?>
 
 <div class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+        
    <?php /* Firmenlogo */ ?>
 
                 <div itemprop="logo" style="text-align:center; margin-bottom:15px">
@@ -32,8 +35,8 @@ $replaceImage = function($str) use ($template, $basePathHelper)
                         ? $this->basePath($logo->getUri())
                         : $this->uriLogo?>" alt="<?= $this->organizationName?>">
                 </div>
-    
-    
+       </div>
+    </div>
 </div>
 
 
@@ -42,15 +45,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
   <div class="panel panel-default">
     <div class="panel-body">
-        
-              <?php /* Firmenlogo */ ?>
-
-                <div itemprop="logo" style="text-align:center; margin-bottom:15px">
-                    <img src="<?= $template && ($logo = $template->getLogo())
-                        ? $this->basePath($logo->getUri())
-                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
-                </div>
-  
+    
   
      <?php /* Bannerbild */ ?>
 
