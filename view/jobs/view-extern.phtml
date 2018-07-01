@@ -241,22 +241,10 @@ setTimeout(setIframeSrc, 5);
 </div>
 <div class="hidden-xs frame-content">
       <div id="preload" class="loading hidden text-center panel panel-default">
-         
-         <div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>
-         
+         <div class="spinner"><div class="bounce1"></div> <div class="bounce2"></div><div class="bounce3"></div></div>
          <p>Das Inserat wird geladen, bitte haben Sie einem Moment Geduld</p>
-
       </div>
-
-
-
-      
-<iframe class="panel panel-default" id="iframe1" title="<?=$this->job->getTitle()?>" frameborder="0" allowfullscreen src="<?=$link?>"></iframe>
-
+   <iframe class="panel panel-default" id="iframe1" title="<?=$this->job->getTitle()?>" frameborder="0" allowfullscreen src="<?=$link?>"></iframe>
 </div>
 
       
