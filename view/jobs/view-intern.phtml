@@ -29,7 +29,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
         
               <?php /* Firmenlogo */ ?>
 
-                <div itemprop="logo">
+                <div itemprop="logo" style="text-align:center">
                     <img src="<?= $template && ($logo = $template->getLogo())
                         ? $this->basePath($logo->getUri())
                         : $this->uriLogo?>" alt="<?= $this->organizationName?>">
