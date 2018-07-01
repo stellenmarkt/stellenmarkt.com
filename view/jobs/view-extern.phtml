@@ -17,7 +17,22 @@ if ($this->isIntern):
           $this->headMeta()->setName('robots', 'noindex,nofollow');
 endif;      
     
-   
+  $template = $this->job->getAttachedEntity('gastro24-template');
+$basePathHelper = $this->plugin('basePath');
+$replaceImage = function($str) use ($template, $basePathHelper)
+{
+    $image = $template ? $template->getImage() : null;
+    if ($image) {
+        $imageUri = $basePathHelper($image->getUri());
+        $imageHtml = '<img src="' . $imageUri . '">';
+    } else {
+        $imageHtml = '';
+    }
+
+    return str_replace('#image#', $imageHtml, $str);
+};
+
+ 
 $this->headTitle($this->job->getTitle());
 $link = $this->job->getLink();
 
@@ -47,7 +62,12 @@ $orgName = $this->jobOrganizationName($this->job);
     <div class="row">
     <div class="panel panel-default">
       <div class="panel-body">
-   
+   <div itemprop="logo" style="text-align:center">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
+
          
          <h6 style="color:#31b0d5; text-transform:uppercase" class="h3"><?= $orgName ?></h6>
      <h1 style="margin-top:0px;"> <?=$this->job->getTitle()?></h1>
