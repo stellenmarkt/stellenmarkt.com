@@ -68,21 +68,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
                 <?=$this->requirements;?>
                 
-                
-            <div itemscope itemtype="http://schema.org/Organization">
-                <strong itemprop="name">
-                    <?= $this->organizationName?>
-                </strong><br/>
-                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress"><?=$this->street?></span><br>
-                    <span itemprop="postalCode"><?=$this->postalCode?></span>
-                    <span itemprop="addressLocality"><?=$this->city?></span>
-                    <br><br>
-                    <span itemprop="telephone"><?=$this->phone?></span>
-                </address>
-            </div>
-  
-                
+        
   
     </div>
 </div>
@@ -97,6 +83,19 @@ $replaceImage = function($str) use ($template, $basePathHelper)
     
         <?php /* Unternehmensbeschreibung */ ?>
         <p ><?=$this->descriptionEditable ?></p>
+        
+            <div itemscope itemtype="http://schema.org/Organization">
+                <strong itemprop="name">
+                    <?= $this->organizationName?>
+                </strong><br/>
+                <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress"><?=$this->street?></span><br>
+                    <span itemprop="postalCode"><?=$this->postalCode?></span>
+                    <span itemprop="addressLocality"><?=$this->city?></span>
+                    <br><br>
+                    <span itemprop="telephone"><?=$this->phone?></span>
+                </address>
+            </div>
 
    </div>
 </div>
