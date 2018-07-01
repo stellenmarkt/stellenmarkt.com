@@ -47,7 +47,12 @@ $orgName = $this->jobOrganizationName($this->job);
     <div class="row">
     <div class="panel panel-default">
       <div class="panel-body">
-       
+       <div itemprop="logo" style="text-align:center">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
+
          
          <h6 style="color:#31b0d5; text-transform:uppercase" class="h3"><?= $orgName ?></h6>
      <h1 style="margin-top:0px;"> <?=$this->job->getTitle()?></h1>
