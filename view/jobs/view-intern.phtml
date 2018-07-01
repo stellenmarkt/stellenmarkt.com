@@ -57,18 +57,8 @@ $replaceImage = function($str) use ($template, $basePathHelper)
         
        </div>
 </div>     
-        
-<div class="panel panel-default">
-    <div class="panel-body">
-        
 
-    <h4>Firmenbeschreibung</h4>
-    
-        <?php /* Unternehmensbeschreibung */ ?>
-        <p ><?=$this->descriptionEditable ?></p>
 
-   </div>
-</div>     
 <div class="panel panel-default">
     <div class="panel-body">
                   <?php /* Anforderungen */ ?>
@@ -96,6 +86,23 @@ $replaceImage = function($str) use ($template, $basePathHelper)
   
     </div>
 </div>
+
+
+        
+<div class="panel panel-default">
+    <div class="panel-body">
+        
+
+    <h4>Firmenbeschreibung</h4>
+    
+        <?php /* Unternehmensbeschreibung */ ?>
+        <p ><?=$this->descriptionEditable ?></p>
+
+   </div>
+</div>
+
+
+
 
     <div class="text-center">
            <?=$this->gastroApplyUrl($job);?> 
