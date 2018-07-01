@@ -41,7 +41,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
         <?php if ($template && ($image = $template->getImage())):?>
         
                 <div class="text-center">
-                    <img style="wisth:100%" src="<?=$this->basePath($image->getUri())?>">
+                    <img style="width:100%" src="<?=$this->basePath($image->getUri())?>">
                 </div>
             
         <?php endif ?>
