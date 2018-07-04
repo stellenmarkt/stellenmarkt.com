@@ -212,8 +212,8 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
         } else {
             $spec += [
                 //'description' => [ 'require' => true ],
-                'position'    => [ 'require' => true ],
-                'requirements' => [ 'require' => true ],
+                'position'    => [ 'require' => false ],
+                'requirements' => [ 'require' => false ],
                 'logo' => [
                     'allow_empty' => true,
                     'validators' => [
