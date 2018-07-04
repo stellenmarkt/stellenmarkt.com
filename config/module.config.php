@@ -41,6 +41,14 @@ return [
                 'paths' => [ __DIR__ . '/../src/Entity'],
             ],
         ],
+
+        'eventmanager' => [
+            'odm_default' => [
+                'subscribers' => [
+                    Repository\Events\InjectJobSnapshotHydratorSubscriber::class,
+                ],
+            ],
+        ],
     ],
 
     'Gastro24' => [
