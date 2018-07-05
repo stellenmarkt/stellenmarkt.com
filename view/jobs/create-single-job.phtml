@@ -119,7 +119,8 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
        
        
        
-       
+ <div class="panel panel-default">     
+    <div class="panel-body">    
        
 <?php elseif ($this->isSuccess): ?>
     <?=$this->alert()->success('Inserat erfolgreich angelegt.');?>
@@ -129,6 +130,9 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
     <?=$this->alert()->danger('Inserat anlegen fehlgeschlagen');?>
     <p class="lead">Das Inserat konnte nicht angelegt werden.</p>
 <p>Es ist ein Fehler aufgetreten. Versuchen Sie es <a href="">erneut</a> ...</p>
+
+     </div>
+           </div>
 <?php else: ?>
 <div class="container"><div class="row"><div class="col-md-12">
             <?=$this->form($this->form->setAttribute('data-handle-by', 'native'))?>
