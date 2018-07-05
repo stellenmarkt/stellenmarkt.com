@@ -23,7 +23,13 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                   <h1 style="margin-top:0px;font-size: 30px;font-weight: 700;">
                     <?=$this->title?>
                   </h1>
- 
+                  <p><?php
+
+                foreach ($this->locations as $loc) {
+                    $location = new \Jobs\Entity\Location($loc);
+                    echo $location->getCity() . '<br>';
+                }
+                    ?></p>
                   <a class="btn btn-primary" href="?do=complete">Einzelinserat jetzt schalten</a>
       
                   
@@ -33,14 +39,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
             
             
             
-            <div class="col-md-7"><h2><br><small></small></h2></div>
-            <div class="col-md-5"><p><?php
-
-                foreach ($this->locations as $loc) {
-                    $location = new \Jobs\Entity\Location($loc);
-                    echo $location->getCity() . '<br>';
-                }
-                    ?></p></div>
+         
                     
         </div>
         <div class="row">
