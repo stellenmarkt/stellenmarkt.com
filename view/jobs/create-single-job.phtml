@@ -55,9 +55,22 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                 
                     </div>
                  </div>
-                 
-                 
-                 
+              
+   <div class="panel panel-default">     
+    <div class="panel-body">
+         <h3>Rechnungsanschrift </h3>
+        
+        
+                <address>
+                    <?=$this->invoiceAddress['company']?><br>
+                    <?=$this->invoiceAddress['name']?> ( <?=$this->link($this->invoiceAddress['email']) ?> )<br><br>
+                    <?=$this->invoiceAddress['street']?> <?=$this->invoiceAddress['houseNumber']?><br>
+                    <?=$this->invoiceAddress['zipCode']?> <?=$this->invoiceAddress['city']?><br>
+                    <?=$this->invoiceAddress['region'] ?>, <?=$this->invoiceAddress['country']?>
+                </address>
+       </div>
+     </div>
+        
                  
                  
                  
@@ -80,7 +93,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
               </div>
            </div>
          </div>
-            
+        
             
          
                     
@@ -100,22 +113,13 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
      
      
      
-     
-        <div class="row">
-            <div class="col-md-12"><h3>Rechnungsanschrift </h3></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <address>
-                    <?=$this->invoiceAddress['company']?><br>
-                    <?=$this->invoiceAddress['name']?> ( <?=$this->link($this->invoiceAddress['email']) ?> )<br><br>
-                    <?=$this->invoiceAddress['street']?> <?=$this->invoiceAddress['houseNumber']?><br>
-                    <?=$this->invoiceAddress['zipCode']?> <?=$this->invoiceAddress['city']?><br>
-                    <?=$this->invoiceAddress['region'] ?>, <?=$this->invoiceAddress['country']?>
-                </address>
-            </div>
-        </div>
-        
+
+       
+       
+       
+       
+       
+       
        
 <?php elseif ($this->isSuccess): ?>
     <?=$this->alert()->success('Inserat erfolgreich angelegt.');?>
