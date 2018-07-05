@@ -65,8 +65,9 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
             <div class="col-md-12"><?= $this->uri ?></div>
             <?php endif ?>
         </div>
+        <hr />
         <div class="row">
-            <div class="col-md-12"><h3>Rechnungsanschrift</h3></div>
+            <div class="col-md-12"><h3>Rechnungsanschrift </h3></div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -74,7 +75,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                     <?=$this->invoiceAddress['company']?><br>
                     <?=$this->invoiceAddress['name']?> ( <?=$this->link($this->invoiceAddress['email']) ?> )<br><br>
                     <?=$this->invoiceAddress['street']?> <?=$this->invoiceAddress['houseNumber']?><br>
-                    <?=$this->invoiceAddress['zipCode']?> <?=$this->invoiceAddress['city']?><br><br>
+                    <?=$this->invoiceAddress['zipCode']?> <?=$this->invoiceAddress['city']?><br>
                     <?=$this->invoiceAddress['region'] ?>, <?=$this->invoiceAddress['country']?>
                 </address>
             </div>
