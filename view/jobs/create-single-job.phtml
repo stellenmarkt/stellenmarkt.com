@@ -122,11 +122,13 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
        
        
        
-       
- <div class="panel panel-default">     
-    <div class="panel-body">    
+  
        
 <?php elseif ($this->isSuccess): ?>
+
+       
+ <div class="panel panel-default">     
+    <div class="panel-body">  
     <?=$this->alert()->success('Inserat erfolgreich angelegt.');?>
     <p class="lead">Vielen Dank.</p>
     <p>Ihre Anzeige wurde angelegt. Nach der Prüfung wird sie freigeschaltet.</p>
