@@ -10,10 +10,10 @@
 
 $this->headTitle('Kostenlos Einzelinserat aufgeben');
 ?>
-
-<h1>Einzelinserat aufgeben</h1>
-<hr />
-
+<?php if (!$this->isProcessed):?>
+   <h1>Einzelinserat aufgeben</h1>
+   <hr />
+ <?php endif?>
 <?php if ($this->isProcessed):?>
         <div class="row">
             <div class="col-md-7"><h2><?=$this->title?><br><small><?= $this->invoiceAddress['company']?></small></h2></div>
@@ -87,8 +87,8 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
         </div>
 <?php elseif ($this->isSuccess): ?>
     <?=$this->alert()->success('Inserat erfolgreich angelegt.');?>
-    <p class="lead">Vielen Dank</p>
-    <p>Ihre Anzeige wurde angelegt. Nach der Prüfung ... wird sie freigeschaltet.</p>
+    <p class="lead">Vielen Dank.</p>
+    <p>Ihre Anzeige wurde angelegt. Nach der Prüfung wird sie freigeschaltet.</p>
 <?php elseif ($this->isError): ?>
     <?=$this->alert()->danger('Inserat anlegen fehlgeschlagen');?>
     <p class="lead">Das Inserat konnte nicht angelegt werden.</p>
