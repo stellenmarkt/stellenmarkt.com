@@ -23,6 +23,10 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                   <h1 style="margin-top:0px;font-size: 30px;font-weight: 700;">
                     <?=$this->title?>
                   </h1>
+ 
+                  <a class="btn btn-primary" href="?do=complete">Einzelinserat jetzt schalten</a>
+      
+                  
                 </div>
              </div> 
           </div>  
@@ -93,11 +97,8 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                 </address>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <a class="btn btn-primary" href="?do=complete">Einzelinserat jetzt schalten</a>
-            </div>
-        </div>
+        
+       
 <?php elseif ($this->isSuccess): ?>
     <?=$this->alert()->success('Inserat erfolgreich angelegt.');?>
     <p class="lead">Vielen Dank.</p>
