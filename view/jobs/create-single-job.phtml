@@ -41,7 +41,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
              </div>
                  <div class="panel panel-default">
                      
-                       <?php if ('html' == $this->details['mode']):?>
+                
                            <?php $image=isset($this->details['image']['entity'])
                                          ? $this->details['image']['entity'] : null;
                             if ($image):?>
@@ -112,12 +112,8 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
       
       
       
-          
+    <?php if ('html' == $this->details['mode']):?>
            
-            <?php else: ?>
-            <div class="col-md-12"><?= $this->uri ?></div>
-            <?php endif ?>
-            
             
      
      
