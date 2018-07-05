@@ -19,6 +19,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
         <div class="row">
             <div class="panel panel-default">
                 <div class="panel-body"
+                 <h6 style="color:#31b0d5; text-transform:uppercase; margin-bottom:5px" class="h3"><?= $this->invoiceAddress['company']?></h6>
                   <h1 style="margin-top:0px;font-size: 30px;font-weight: 700;">
                     <?=$this->title?>
                   </h1>
@@ -28,7 +29,7 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
             
             
             
-            <div class="col-md-7"><h2><br><small><?= $this->invoiceAddress['company']?></small></h2></div>
+            <div class="col-md-7"><h2><br><small></small></h2></div>
             <div class="col-md-5"><p><?php
 
                 foreach ($this->locations as $loc) {
