@@ -17,7 +17,6 @@ if ($this->isIntern):
           $this->headMeta()->setName('robots', 'noindex,nofollow');
 endif;      
     
-$hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
  
 $this->headTitle($this->job->getTitle());
@@ -66,25 +65,8 @@ $orgName = $this->jobOrganizationName($this->job);
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
               
           </p>
-          
-          
-          <?php
-                $logo = $hasFacets ? $job->getSolrValue('companyLogo') : '';
-               
-                if (preg_match("/^(https?:)?\/\//",$logo)) { 
-                    echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
-		        } elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
-                    echo '<img class="yk-logo-sm center-block" src="';
-		            echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
-                } 
-                ?>
-           
-           
-          
-          
-          
-          
-          <?=$this->gastroApplyUrl($job);?> 
+         
+           <?=$this->gastroApplyUrl($job);?> 
         
     </div>
 </div>
