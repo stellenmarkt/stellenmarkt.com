@@ -67,17 +67,13 @@ $orgName = $this->jobOrganizationName($this->job);
           </p>
           
           
-          <?php
-                $logo = $job->getSolrValue('companyLogo') : '';
-               
-                if (preg_match("/^(https?:)?\/\//",$logo)) { 
-                    echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
-		        } elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
-                    echo '<img class="yk-logo-sm center-block" src="';
-		            echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
-                } 
-                ?>
-          
+           <?php /* Firmenlogo */ ?>
+
+                <div itemprop="logo" style="text-align:center; margin-bottom:15px">
+                    <img src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                </div>
           
           
           
