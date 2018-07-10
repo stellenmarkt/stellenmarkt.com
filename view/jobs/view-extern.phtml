@@ -67,7 +67,12 @@ $orgName = $this->jobOrganizationName($this->job);
           </p>
           
           
-           <?=$this->job->getImage()?>
+       <?php
+           
+                    echo '<img class="yk-logo-sm center-block" src="';
+		            echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
+                
+                ?>
            
            
            
