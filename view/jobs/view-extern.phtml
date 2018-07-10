@@ -17,6 +17,21 @@ if ($this->isIntern):
           $this->headMeta()->setName('robots', 'noindex,nofollow');
 endif;      
     
+$replaceImage = function($str) use ($template, $basePathHelper)
+{
+    $image = $template ? $template->getImage() : null;
+    if ($image) {
+        $imageUri = $basePathHelper($image->getUri());
+        $imageHtml = '<img src="' . $imageUri . '">';
+    } else {
+        $imageHtml = '';
+    }
+
+    return str_replace('#image#', $imageHtml, $str);
+};
+$orgName = $this->jobOrganizationName($this->job);
+
+
 
  
 $this->headTitle($this->job->getTitle());
