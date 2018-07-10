@@ -84,7 +84,7 @@ class CreateSingleJobForm extends Form implements InputFilterProviderInterface, 
             'type' => 'DefaultButtonsFieldset',
             'name' => 'buttons',
             'options' => [
-                'save_label' => 'Inserat anlegen',
+                'save_label' => 'Weiter zur Vorschau',
             ]
         ]);
 
