@@ -143,6 +143,20 @@ $orgName = $this->jobOrganizationName($this->job);
     
 
 <?php if (!$this->isIntern && $this->isEmbeddable):?>
+
+
+
+<script>
+    
+    $('#iframe1').load(function () {
+    $(this).height($(this).contents().height());
+    $(this).width($(this).contents().width());
+});
+    
+    
+</script>
+
+
 <style>
 #preload {
     
@@ -152,7 +166,7 @@ $orgName = $this->jobOrganizationName($this->job);
     margin:10px 0;
 }
     
-    .frame-content {
+  .frame-content {
         
 
   width: 100%;
