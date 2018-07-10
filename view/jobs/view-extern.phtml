@@ -67,11 +67,7 @@ $orgName = $this->jobOrganizationName($this->job);
           </p>
           
           
-           <?php
-           
-           $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) 
-                
-             ?>
+          <?=$this->job->organizationImageCache()?>
            
            
            
