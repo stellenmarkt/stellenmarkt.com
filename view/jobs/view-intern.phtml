@@ -92,13 +92,18 @@ $orgName = $this->jobOrganizationName($this->job);
            <?=$this->gastroApplyUrl($job);?> 
            
     </div>
+     <style>
+        .round-shares .jssocials-share-link {
+            border-radius: 50%;
+        }
+    </style>
+</head>
     
-    
-    <div id="share" class="text-center round-shares"></div>
+         <div id="share" class="text-center round-shares"></div>
             <script src="/Gastro24/jssocials-1.4.0/dist/jssocials.js"></script>
             <script>
                 $("#share").jsSocials({
-                    showLabel: true,
+                    showLabel: false,
                     showCount: true,
                     shares: ["email", "twitter", "facebook", "whatsapp"]
                 });
