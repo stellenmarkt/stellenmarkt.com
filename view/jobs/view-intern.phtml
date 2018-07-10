@@ -92,6 +92,19 @@ $orgName = $this->jobOrganizationName($this->job);
            <?=$this->gastroApplyUrl($job);?> 
            
     </div>
+    
+    
+    <div id="share" class="round-shares"></div>
+            <script src="/Gastro24/jssocials-1.4.0/dist/jssocials.js"></script>
+            <script>
+                $("#share").jsSocials({
+                    showLabel: false,
+                    showCount: true,
+                    shares: ["email", "twitter", "facebook", "whatsapp"]
+                });
+            </script>
+    
+    
   </div>
 </div>
 <!-- ENDE COL MD 9-->
