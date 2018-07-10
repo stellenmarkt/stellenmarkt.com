@@ -17,6 +17,7 @@ if ($this->isIntern):
           $this->headMeta()->setName('robots', 'noindex,nofollow');
 endif;      
     
+$hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
  
 $this->headTitle($this->job->getTitle());
