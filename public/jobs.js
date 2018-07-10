@@ -26,7 +26,7 @@
         var $link = $(event.currentTarget);
         var isExternal = $link.hasClass('external-apply-link');
         var message = (isExternal ? '' : '<p>Um Ihre Bewerbung zu senden, nutzen Sie bitte die Möglichkeit im Inserat</p>')
-                    + '<p><strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf <em>Gastrojob24.ch</em></strong></p>';
+                    + '<p><strong>Bitte beziehen Sie sich bei Ihrer Bewerbung auf Gastrojob24.ch</strong>. Vielen Dank.</p>';
         var uri = $link.attr('href');
 
         BootstrapDialog.show({
