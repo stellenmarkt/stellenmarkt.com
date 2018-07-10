@@ -44,14 +44,6 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
 $this->headLink()->prependStylesheet($this->basePath() . '/Gastro24/Gastro24.css');
 $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.custom.min.css'));
 
-foreach ($languages as $lang) {
-    $this->headLink()->appendAlternate(
-        preg_replace('~^'.$this->basepath('/'.$this->params('lang')).'~',
-            $this->basepath('/'.$lang),$_SERVER['REQUEST_URI']),
-        'hreflang',
-        $this->headTitle()->setTranslator()->renderTitle() ,
-        array('hreflang'=>$lang));
-}
 ?>
 
 <?php echo $this->doctype(); ?>
