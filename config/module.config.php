@@ -73,6 +73,7 @@ return [
             Listener\SingleJobAcceptedListener::class => Listener\SingleJobAcceptedListenerFactory::class,
             Listener\JobDetailFileUpload::class => Listener\JobDetailFileUploadFactory::class,
             Listener\DeleteTemplateImage::class => Listener\DeleteTemplateImageFactory::class,
+            Listener\AutoApproveChangedJobs::class => Listener\AutoApproveChangedJobsFactory::class,
         ],
         'aliases' => [
             'Orders\Form\Listener\InjectInvoiceAddressInJobContainer' => Listener\VoidListener::class,
@@ -374,6 +375,7 @@ return [
         'Jobs/Events' => [ 'listeners' => [
             Listener\IncreaseJobCount::class => [ JobEvent::EVENT_JOB_CREATED, true ],
             Listener\SingleJobAcceptedListener::class => [ JobEvent::EVENT_JOB_ACCEPTED, true ],
+            Listener\AutoApproveChangedJobs::class => [JobEvent::EVENT_STATUS_CHANGED, true],
         ]],
 
         'Core/Ajax/Events' => [ 'listeners' => [
