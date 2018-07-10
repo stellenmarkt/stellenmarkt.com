@@ -22,9 +22,9 @@ class JobDetailsForm extends AbstractOptions
 {
     private $labels = [
         'mode' => [
-            'uri' => 'URL angeben.',
-            'pdf' => 'PDF-Datei hochladen',
-            'html' => 'Direkt eingeben',
+            'uri' => 'Direktlink-Inserat',
+            'pdf' => 'PDF-Inserat',
+            'html' => 'Standard-Inserat',
         ],
         'uri' => 'Online-Inserat',
         'pdf' => 'PDF-Datei',
