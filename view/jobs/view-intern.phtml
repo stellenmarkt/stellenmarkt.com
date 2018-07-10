@@ -85,13 +85,19 @@ $orgName = $this->jobOrganizationName($this->job);
    </div>
 </div>
 
-
+  <div class="panel panel-default"> 
+      <div class="panel-body"> 
+         <div id="share" class="text-center round-shares"></div>
+       </div >
+   </div>
 
 
     <div class="text-center">
            <?=$this->gastroApplyUrl($job);?> 
            
     </div>
+    
+    
      <style>
         .round-shares .jssocials-share-link {
             border-radius: 50%;
@@ -99,11 +105,7 @@ $orgName = $this->jobOrganizationName($this->job);
     </style>
 </head>
     
-  <div class="panel panel-default"> 
-      <div class="panel-body"> 
-         <div id="share" class="text-center round-shares"></div>
-       </div >
-   </div>
+
             <script src="/Gastro24/jssocials-1.4.0/dist/jssocials.js"></script>
             <script>
                 $("#share").jsSocials({
