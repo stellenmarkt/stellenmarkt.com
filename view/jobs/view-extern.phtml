@@ -251,6 +251,38 @@ setTimeout(setIframeSrc, 5);
          <div id="share" class="text-center round-shares"></div>
        </div >
    </div>
+ <style>
+       
+       
+.jssocials-share-whatsapp .jssocials-share-link,
+.jssocials-share-facebook .jssocials-share-link,
+.jssocials-share-email .jssocials-share-link,
+.jssocials-share-twitter .jssocials-share-link
+    {
+    background: #ccc;
+}
+
+.jssocials-shares a {
+    
+    color:#fff!important;
+}
+
+
+    </style>
+    
+
+            <script src="/Gastro24/jssocials-1.4.0/dist/jssocials.js"></script>
+            <script>
+                $("#share").jsSocials({
+                    showLabel: false,
+                    showCount: true,
+                    shares: ["email", "twitter", "facebook", "whatsapp"]
+                });
+            </script>
+    
+
+
+
 
       </div>
 </div>
