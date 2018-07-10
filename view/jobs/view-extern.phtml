@@ -68,7 +68,7 @@ $orgName = $this->jobOrganizationName($this->job);
           
           
           <?php
-                $logo = $hasFacets ? $job->getSolrValue('companyLogo') : '';
+                $logo = $job->getSolrValue('companyLogo') : '';
                
                 if (preg_match("/^(https?:)?\/\//",$logo)) { 
                     echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
