@@ -71,7 +71,7 @@ class CreateSingleJob extends AbstractPlugin
             $template = new Template();
             $this->jobRepository->getDocumentManager()->persist($template);
             $this->jobRepository->getDocumentManager()->flush($template);
-            $job->addAttachedEntity($template, 'gastro24-template');
+
             if (isset($values['details']['image_id'])) {
                 $image = $this->templateImageRepository->find($values['details']['image_id']);
                 $template->setImage($image);
@@ -80,6 +80,7 @@ class CreateSingleJob extends AbstractPlugin
                 $logo = $this->templateImageRepository->find($values['details']['logo_id']);
                 $template->setLogo($logo);
             }
+            $job->addAttachedEntity($template, 'gastro24-template');
 
         }
         $job->setLink($values['details']['uri']);
