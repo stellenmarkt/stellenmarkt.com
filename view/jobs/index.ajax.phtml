@@ -136,7 +136,9 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 		        } elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
                     echo '<img class="yk-logo-sm center-block" src="';
 		            echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
-                } 
+                } else if ( ($template = $job->getAttachedEntity('gastro24-template')) && ($logo = $template->getLogo())) {
+                    echo '<img class="yk-logo-sm center-block" src="' . $this->basePath($logo->getUri()) . '">"';
+                }
                 ?>
                 </a>
             </div>
