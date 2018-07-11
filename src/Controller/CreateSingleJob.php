@@ -73,14 +73,12 @@ class CreateSingleJob extends AbstractActionController
             $values['details']['uri'] = $serverUrl('/' . $basePath . str_replace('public/', '', $values['details']['pdf']['tmp_name']));
         }
 
-        if (is_array($values['details']['logo'])) {
+        if (is_array($values['details']['logo']) && UPLOAD_ERR_NO_FILE != $values['details']['logo']['error']) {
             $values['details']['logo_id'] = $values['details']['logo']['entity']->getId();
-            unset($values['details']['logo']['entity']);
         }
 
-        if (is_array($values['details']['image'])) {
+        if (is_array($values['details']['image']) && UPLOAD_ERR_NO_FILE != $values['details']['image']['error']) {
             $values['details']['image_id'] = $values['details']['image']['entity']->getId();
-            unset($values['details']['image']['entity']);
         }
 
         $session = new Container('Gastro24_SingleJobData');
