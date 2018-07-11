@@ -65,7 +65,6 @@ class CreateSingleJob extends AbstractActionController
         }
 
         $values = $this->form->getData();
-        $sessionValues = $values;
 
         if ('pdf' == $values['details']['mode']) {
             $serverUrl = new ServerUrl();
@@ -75,13 +74,13 @@ class CreateSingleJob extends AbstractActionController
         }
 
         if (is_array($values['details']['logo'])) {
-            $sessionValues['details']['logo_id'] = $values['details']['logo']['entity']->getId();
-            unset($sessionValues['details']['logo']['entity']);
+            $values['details']['logo_id'] = $values['details']['logo']['entity']->getId();
+            unset($values['details']['logo']['entity']);
         }
 
         if (is_array($values['details']['image'])) {
-            $sessionValues['details']['image_id'] = $values['details']['image']['entity']->getId();
-            unset($sessionValues['details']['image']['entity']);
+            $values['details']['image_id'] = $values['details']['image']['entity']->getId();
+            unset($values['details']['image']['entity']);
         }
 
         $session = new Container('Gastro24_SingleJobData');
