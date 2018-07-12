@@ -25,11 +25,13 @@ class AutoApproveChangedJobs
 {
     private $snapshotRepository;
     private $jobRepository;
+    private $response;
 
-    public function __construct($jobRepository, $snapshotRepository)
+    public function __construct($jobRepository, $snapshotRepository, $response)
     {
         $this->snapshotRepository = $snapshotRepository;
         $this->jobRepository = $jobRepository;
+        $this->response = $response;
     }
 
     public function __invoke(JobEvent $event)
@@ -48,6 +50,9 @@ class AutoApproveChangedJobs
         $entity->changeStatus(Status::ACTIVE, 'Auto approved.');
 
         $this->jobRepository->store($entity);
+
+        $this->response->getHeaders()->addHeaderLine('Location', '/de/job');
+        $this->response->setStatusCode(302);
     }
 
 }

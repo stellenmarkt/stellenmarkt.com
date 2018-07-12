@@ -27,7 +27,9 @@ class AutoApproveChangedJobsFactory implements FactoryInterface
         $repositories = $container->get('repositories');
         $snaphots     = $repositories->get('Jobs/JobSnapshot');
         $jobs         = $repositories->get('Jobs');
-        $service      = new AutoApproveChangedJobs($jobs, $snaphots);
+        $app          = $container->get('Application');
+        $response     = $app->getResponse();
+        $service      = new AutoApproveChangedJobs($jobs, $snaphots, $response);
         
         return $service;    
     }
