@@ -223,6 +223,11 @@ return [
                 'pattern'  => '%s.php',
                 'text_domain' => \Gastro24\Module::TEXT_DOMAIN,
             ],
+            [
+                'type'     => 'phparray',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern'  => '%s-override.php',
+            ],
         ],
     ],
     'form_elements' => [
