@@ -54,9 +54,10 @@ class RedirectExternalJobs extends AbstractActionController
             ];
         }
 
+        $appModel = $this->getEvent()->getViewModel();
         $model = new ViewModel(['job' => $job]);
         if (!$job->getLink()) {
-            $appModel = $this->getEvent()->getViewModel();
+
             $appTemplate = $appModel->getTemplate();
             $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
             $internModel->setTemplate('gastro24/jobs/view-intern');
@@ -66,7 +67,7 @@ class RedirectExternalJobs extends AbstractActionController
             $appModel->setTemplate($appTemplate);
         } else {
             $visitedJobsContainer = new VisitedJobsContainer();
-            $isVisited            = $visitedJobsContainer->isVisited($job);
+            $isVisited            = $this->params()->fromRoute('isPreview') ? false : $visitedJobsContainer->isVisited($job);
             $isEmbeddable         = $this->validator->isValid($job->getLink());
 
             if (!$isVisited && !$isEmbeddable) {
@@ -80,6 +81,11 @@ class RedirectExternalJobs extends AbstractActionController
 
         }
         $model->setTemplate('gastro24/jobs/view-extern');
+
+        if ($this->params()->fromRoute('isPreview')) {
+            $appModel->setVariable('noHeader', true);
+            $appModel->setVariable('noFooter', true);
+        }
 
         return $model;
     }

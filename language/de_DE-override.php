@@ -29,5 +29,5 @@ return [
     'Rejected'
     =>
     'Abgelehnt',
-    
+
 ];

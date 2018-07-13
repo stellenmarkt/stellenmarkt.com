@@ -103,7 +103,7 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCDJ26Q"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
+<?php if (!$this->noHeader):?>
     <header id="header" role="banner">
           <div class="container navbar">
 		     <div class="row">
@@ -139,7 +139,7 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
         <div id="formular">
         </div>
     </header>
-    
+    <?php endif ?>
  <style>
      
      #content .navbar {
@@ -164,6 +164,6 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
 </div>
 </main>
 
-<?php echo $this->partial("footer") ?>
+<?php if (!$this->noFooter): echo $this->partial("footer"); endif; ?>
 </body>
 </html>
