@@ -129,16 +129,11 @@ $description = $wordpress->call('value', ['content.rendered'], '');
             <div class="img-box">
                 <a href="<?=$href?>">
                 <?php
-                $logo = $hasFacets ? $job->getSolrValue('companyLogo') : '';
-               
-                if (preg_match("/^(https?:)?\/\//",$logo)) { 
-                    echo '<img class="yk-logo-sm center-block" src="' . $logo .'">';
-		        } elseif ($org && $org->getImage() &&  $org->getOrganizationName()) {
-                    echo '<img class="yk-logo-sm center-block" src="';
-		            echo $this->basePath($this->organizationImageCache->getUri($job->getOrganization()->getImage(true))) . '">';
-                } else if ( ($template = $job->getAttachedEntity('gastro24-template')) && ($logo = $template->getLogo())) {
-                    echo '<img class="yk-logo-sm center-block" src="' . $this->basePath($logo->getUri()) . '">';
+                $logo = $this->gastroLogoUri($job);
+                if ($logo) {
+                    echo '<img class="yk-logo-sm center-block" src="' . $logo . '">';
                 }
+
                 ?>
                 </a>
             </div>
