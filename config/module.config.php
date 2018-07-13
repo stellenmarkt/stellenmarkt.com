@@ -320,6 +320,25 @@ return [
                         'options' => [
                             'route' => '/jobs',
                         ]
+                    ],
+                    'organizations-profiles' => [
+
+
+                                'type' => 'Regex',
+                                'options' => [
+                                    'regex' => '/profile-(?<name>.*?)-(?<id>[a-f0-9]+)$',
+                                    'spec' => '/profile-%name%-%id%',
+                                    'route' => '/',
+                                    'constraints' => [
+                                        'id' => '\w+',
+                                    ],
+                                    'defaults' => [
+                                        'action' => 'detail',
+                                        'controller' => 'Organizations/Profile'
+                                    ],
+                                ],
+
+
                     ]
                 ],
             ],

@@ -148,10 +148,17 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                     </h4>
                     <p>
                     <?php
-                    if ($job->getCompany()) {
-			            echo $job->getCompany();
-                    } elseif ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
-                        echo $org->getOrganizationName()->getName();
+
+                    if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
+                        if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
+                            echo sprintf('<a href="%s">%s</a>',
+                                $this->url('lang/organizations-profiles', ['id' => $org->getId(), 'name' => preg_replace(['~[^a-zA-Z0-9äüöÄÜÖ]~', '~--?~'], ['-', '-'], $org->getOrganizationName()->getName())], true),
+                                $org->getOrganizationName()->getName());
+                        } else {
+                            echo $org->getOrganizationName()->getName();
+                        }
+                    } else if ($job->getCompany()) {
+                        echo $job->getCompany();
                     }
                     ?>
                     </p>
