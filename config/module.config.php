@@ -282,6 +282,11 @@ return [
                                   //  'regex' => '-(?<id>[a-f0-9]+)\.html',
                                   //  'spec' => '-%id%.html',
                                   //  'route' => null,
+                                    'defaults' => [
+                                        'controller' => Controller\RedirectExternalJobs::class,
+                                        'action' => 'index',
+                                        'isPreview' => true,
+                                    ],
                                 ],
                             ],
                             'view-extern' => [
