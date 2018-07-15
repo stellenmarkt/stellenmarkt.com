@@ -293,8 +293,9 @@ setTimeout(setIframeSrc, 5);
         
         
    <?php /* Firmenlogo */ ?>
-   
-   <?php if (!$this->isIntern): ?>
+    $logo = $this->gastroLogoUri($job);
+    
+   <?php if ($logo): ?>
      
      <div itemprop="logo" style="text-align:center; margin-bottom:15px">
                     <div style=" 
@@ -323,8 +324,7 @@ setTimeout(setIframeSrc, 5);
                    </div>
        </div>
        
- <?php   endif; 
-  ?>
+ <?php   endif; ?>
  
  
  
