@@ -153,8 +153,6 @@ $orgName = $this->jobOrganizationName($this->job);
                 <h2 class="text-center"><?= $orgName ?></h2>
                 
                 
-                 <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */ ?>
-                
                 <?php
 
                     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
