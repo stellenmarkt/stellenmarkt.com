@@ -292,6 +292,35 @@ setTimeout(setIframeSrc, 5);
     <div class="panel-body">
         
    <?php /* Firmenlogo */ ?>
+   
+      <div itemprop="logo" style="text-align:center; margin-bottom:15px">
+                    <div  style=" 
+                      margin: 0 auto;
+                      width: 95px;
+                      height: 95px;   
+                      transition: border .2s ease-in-out;
+                      position: relative;
+                      display: block;
+                      padding: 4px;
+                      line-height: 1.5;
+                      background-color: #fff;
+                      border: 1px solid #ddd;
+                      border-radius: 3px;
+                    overflow: hidden;">
+                         <img style="
+                         margin-bottom: auto;
+                         text-align: center;
+                         width: 65%;
+                         position: absolute;
+                         top: 5%;
+                         bottom: 5%;
+                         left: 5%;
+                         right: 5%;
+                         margin: auto;" src="<?= $template && ($logo = $template->getLogo())
+                        ? $this->basePath($logo->getUri())
+                        : $this->uriLogo?>" alt="<?= $this->organizationName?>">
+                   </div>
+
 
                 <div itemprop="logo" style="text-align:center; margin-bottom:15px">
                     <img src="<?= $this->gastroLogoUri($this->job)?>">
