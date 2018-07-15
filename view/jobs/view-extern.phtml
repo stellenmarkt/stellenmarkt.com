@@ -297,7 +297,7 @@ setTimeout(setIframeSrc, 5);
                 $logo = $this->gastroLogoUri($job);
                 if ($logo) {
                     
-                    echo '   <img src="<?= $this->gastroLogoUri($this->job)?>">';
+                    <?= $this->gastroLogoUri($this->job)?>
                 
                 }
 
