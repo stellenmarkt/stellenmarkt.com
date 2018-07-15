@@ -294,7 +294,7 @@ setTimeout(setIframeSrc, 5);
         
    <?php /* Firmenlogo */ ?>
    
-   <?php if ($this->isIntern && isEmbeddable): ?>
+   <?php if (!$this->isIntern): ?>
      
      <div itemprop="logo" style="text-align:center; margin-bottom:15px">
                     <div style=" 
