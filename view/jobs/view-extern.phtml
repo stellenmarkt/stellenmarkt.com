@@ -323,14 +323,24 @@ setTimeout(setIframeSrc, 5);
                          margin: auto;" src="<?= $this->gastroLogoUri($this->job)?>" alt="<?= $orgName ?>">
                    </div>
        </div>
-       <div style="margin-bottom:5px" class=""><a href="" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
-          <!--<div class=""><a href="" class="btn btn-default btn-block company-jobs-btn">3 Jobs</a></div>-->
+
  <?php   endif; ?>
  
- 
- 
         
-                <h2 class="text-center"><?= $orgName ?></h2>
+              <h2 class="text-center"><?= $orgName ?></h2>
+        
+                 <?php
+                $logo = $this->gastroLogoUri($job);
+                if ($logo) {
+                 echo '<div style="margin-bottom:5px" class=""><a href="" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
+                ';
+                    
+                } ?>
+                
+        
+                
+                 <!--<div class=""><a href="" class="btn btn-default btn-block company-jobs-btn">3 Jobs</a></div>-->
+
                 
               
        </div>
