@@ -25,7 +25,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
 $orgName = $this->jobOrganizationName($this->job);
 
-    $org = $this->getOrganization($this->job);
+$org = $this->getOrganization($this->job);
 
 
 
@@ -164,8 +164,6 @@ $orgName = $this->jobOrganizationName($this->job);
                         } else {
                             echo $org->getOrganizationName()->getName();
                         }
-                    } else if ($job->getCompany()) {
-                        echo $job->getCompany();
                     }
                     ?>
 
