@@ -145,7 +145,7 @@ $orgName = $this->jobOrganizationName($this->job);
    <?php /* Firmenlogo */ ?>
 
                 <div itemprop="logo" style="text-align:center; margin-bottom:15px">
-                    <div  style="     margin: 0 auto;
+                    <div  style=" margin: 0 auto;
     width: 115px;
     height: 115px;   transition: border .2s ease-in-out;
     position: relative;
@@ -157,24 +157,18 @@ $orgName = $this->jobOrganizationName($this->job);
     border: 1px solid #ddd;
     border-radius: 3px;
     overflow: hidden;">
-	<img style="margin-bottom: auto;text-align: center;width: 65%;
+            <img style="margin-bottom: auto;text-align: center;width: 65%;
     position: absolute;
     top: 5%;
     bottom: 5%;
     left: 5%;
     right: 5%;
-    margin: auto;" src="
-https://gastro24.yawik.org/file/Gastro24.TemplateImage/5b463aa47bb2b55e087b23c6/list-style.jpg"></div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    <img src="<?= $template && ($logo = $template->getLogo())
+    margin: auto; src="<?= $template && ($logo = $template->getLogo())
                         ? $this->basePath($logo->getUri())
                         : $this->uriLogo?>" alt="<?= $this->organizationName?>">
-                </div>
+</div>
+                    
+              
                 
                 <h2 class="text-center"><?= $orgName ?></h2>
                 
