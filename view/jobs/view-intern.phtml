@@ -22,10 +22,10 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
     return str_replace('#image#', $imageHtml, $str);
 };
+
 $orgName = $this->jobOrganizationName($this->job);
 
-    $org = $job->getOrganization();
-    $href = $this->jobUrl($job, ['linkOnly' => true ]);
+
 
 
 ?>
