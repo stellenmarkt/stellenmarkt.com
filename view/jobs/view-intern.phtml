@@ -25,7 +25,7 @@ $replaceImage = function($str) use ($template, $basePathHelper)
 
 $orgName = $this->jobOrganizationName($this->job);
 
-    $org = $job->getOrganization();
+    $org = $this->getOrganization();
     $href = $this->jobUrl($job, ['linkOnly' => true ]);
 
 
