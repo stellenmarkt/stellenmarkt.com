@@ -293,9 +293,9 @@ setTimeout(setIframeSrc, 5);
         
         
    <?php /* Firmenlogo */ ?>
-    $logo = $this->gastroLogoUri($job);
     
-   <?php if ($logo): ?>
+    
+   <?php if ($logo = $this->gastroLogoUri($job)): ?>
      
      <div itemprop="logo" style="text-align:center; margin-bottom:15px">
                     <div style=" 
