@@ -146,7 +146,21 @@ $orgName = $this->jobOrganizationName($this->job);
                 </div>
                 
                 <h2 class="text-center"><?= $orgName ?></h2>
-                
+                <?php
+
+                    if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
+                        if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
+                            echo sprintf('<a href="%s">%s</a>',
+                                $this->url('lang/organizations-profiles', ['id' => $org->getId(), 'name' => preg_replace(['~[^a-zA-Z0-9äüöÄÜÖ]~', '~--?~'], ['-', '-'], $org->getOrganizationName()->getName())], true),
+                                $org->getOrganizationName()->getName());
+                        } else {
+                            echo $org->getOrganizationName()->getName();
+                        }
+                    } else if ($job->getCompany()) {
+                        echo $job->getCompany();
+                    }
+                    ?>
+
                 <!--<div style="margin-bottom:5px" class=""><a href="" class="btn btn-default btn-block company-jobs-btn"><strong>Unternehmensporträt</strong></a></div>
                  <div class=""><a href="" class="btn btn-default btn-block company-jobs-btn">3 Jobs</a></div>-->
        </div>
