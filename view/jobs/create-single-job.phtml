@@ -60,7 +60,12 @@ $this->headTitle('Kostenlos Einzelinserat aufgeben');
                          
                           <?=$this->details['description']?>
                           
-                
+                     <?php else: ?>
+    
+     <iframe class="panel panel-default" frameborder="0" allowfullscreen="" src="<?= $this->details['uri'] ?>"></iframe>
+     
+    <?php endif ?>  
+                 
 
 
                      </div>
