@@ -152,7 +152,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                         if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
                             echo sprintf('<a href="%s">%s</a>',
-                                $this->url('lang/organizations-profiles', ['id' => $org->getId(), 'name' => preg_replace(['~[^a-zA-Z0-9äüöÄÜÖ]~', '~--?~'], ['-', '-'], $org->getOrganizationName()->getName())], true),
+                                $this->orgProfileUrl($org),
                                 $org->getOrganizationName()->getName());
                         } else {
                             echo $org->getOrganizationName()->getName();

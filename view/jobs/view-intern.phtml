@@ -88,7 +88,7 @@ $orgName = $this->jobOrganizationName($this->job);
                     <span itemprop="telephone"><?=$this->phone?></span>
                     <?php endif ?>
                 </address>
-                <?endif?>
+                <?php endif?>
             </div>
 
    </div>
@@ -179,12 +179,12 @@ $orgName = $this->jobOrganizationName($this->job);
               
                 
                 <h2 class="text-center"><?= $orgName ?></h2>
-                
-                
-              
 
-                <div style="margin-bottom:5px" class=""><a title="Firmenprofil" href="" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
-                <!-- <div class=""><a href="" class="btn btn-default btn-block company-jobs-btn">3 Jobs</a></div>-->
+
+                    <?php if ($org = $this->job->getOrganization()): ?>
+                        <div style="margin-bottom:5px" class=""><a href="<?= $this->orgProfileUrl($org)?>" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
+                    <?php endif ?>
+
        </div>
     </div>
 </div>

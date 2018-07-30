@@ -128,12 +128,14 @@ return [
             View\Helper\LandingpagesList::class => Factory\View\Helper\LandingpagesListFactory::class,
             View\Helper\JobboardApplyUrl::class => Factory\View\Helper\JobboardApplyUrlFactory::class,
             View\Helper\LogoUri::class => View\Helper\LogoUriFactory::class,
+            View\Helper\OrgProfileUrl::class => InvokableFactory::class,
         ],
         'aliases' => [
             'wordpress' => WordpressApi\View\Helper\WordpressContent::class,
             'landingpages' => View\Helper\LandingpagesList::class,
             'gastroApplyUrl' => View\Helper\JobboardApplyUrl::class,
             'gastroLogoUri' => View\Helper\LogoUri::class,
+            'orgProfileUrl' => View\Helper\OrgProfileUrl::class,
         ],
         'delegators' => [
             'jobUrl' => [
