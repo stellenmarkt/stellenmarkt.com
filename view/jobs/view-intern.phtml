@@ -78,13 +78,17 @@ $orgName = $this->jobOrganizationName($this->job);
                 <strong itemprop="name">
                     <?= $this->organizationName?>
                 </strong><br/>
+                <?php if ($this->street || $this->postalCode || $this->city || $this->phone):?>
                 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress"><?=$this->street?></span><br>
-                    <span itemprop="postalCode"><?=$this->postalCode?></span>
-                    <span itemprop="addressLocality"><?=$this->city?></span>
+                    <?php if ($this->street): ?><span itemprop="streetAddress"><?=$this->street?></span><br><?php endif ?>
+                    <?php if ($this->postalCode): ?><span itemprop="postalCode"><?=$this->postalCode?></span><?php endif ?>
+                    <?php if ($this->city): ?><span itemprop="addressLocality"><?=$this->city?></span><?php endif ?>
+                    <?php if ($this->phone): ?>
                     <br><br>
                     <span itemprop="telephone"><?=$this->phone?></span>
+                    <?php endif ?>
                 </address>
+                <?endif?>
             </div>
 
    </div>
