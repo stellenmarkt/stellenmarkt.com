@@ -216,6 +216,7 @@ return [
              'auth/index/index' => __DIR__ . '/../view/auth/index/index.phtml',
              'auth/password/index' => __DIR__ . '/../view/auth/password/index.phtml',
              'auth/forgot-password/index' => __DIR__ . '/../view/auth/forgot-password/index.phtml',
+             'content/applications-privacy-policy' => __DIR__ . '/../view/application-disclaimer.phtml',
          ],
     ],
 
