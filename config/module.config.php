@@ -217,6 +217,8 @@ return [
              'auth/password/index' => __DIR__ . '/../view/auth/password/index.phtml',
              'auth/forgot-password/index' => __DIR__ . '/../view/auth/forgot-password/index.phtml',
              'content/applications-privacy-policy' => __DIR__ . '/../view/application-disclaimer.phtml',
+             'organizations/profile/detail' => __DIR__ . '/../view/organizations/profile-detail.phtml',
+             'organizations/profile/detail.ajax' => __DIR__ . '/../view/organizations/profile-detail.ajax.phtml',
          ],
     ],
 
