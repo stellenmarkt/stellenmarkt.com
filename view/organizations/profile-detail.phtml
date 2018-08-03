@@ -42,7 +42,19 @@ $contact = $organization->getContact();
            </div>
            
            <div style="border-top: 1px solid #dcdfe2;" class="panel-body">
-               Jobs <?=$this->jobs->getTotalItemCount()?>
+               Jobs <span style="display: inline-block;
+    min-width: 10px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+        background-color: #4088ee;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 6px 4px 6px;"><?=$this->jobs->getTotalItemCount()?></span>
                
            </div>
        </div>
