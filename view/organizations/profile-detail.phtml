@@ -9,6 +9,19 @@ $contact = $organization->getContact();
     <div class="col-md-12">
        <div class="panel panel-default">
            <div class="panel-body">
+               
+                <div class="col-md-2">
+                    
+                    logo
+                    
+                </div>
+                
+                 <div class="col-md-10">
+                    
+                    logo
+                    
+                </div>
+                
                   
         <?php if($organization->getImages()->notEmpty('images')): ?>
             <img src="<?php echo $this->basePath($this->organizationImageCache->getUri($organization->getImages()->get('thumbnail'))) ?>">
