@@ -184,7 +184,7 @@ $orgName = $this->jobOrganizationName($this->job);
                     <?php if ($org = $this->job->getOrganization()): ?>
                         <div style="margin-bottom:5px" class=""><a href="<?= $this->orgProfileUrl($org)?>?clear=1" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
                     
-                    <div class="hidden" id="update-job-count"><?=$this->Organization->getTotalItemCount()?></div>
+                    <div class="hidden" id="update-job-count"><?=$org = $this->job->getOrganization()->getTotalItemCount()?></div>
                     <?php endif ?>
 
        </div>
