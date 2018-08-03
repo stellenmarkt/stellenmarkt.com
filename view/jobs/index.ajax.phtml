@@ -151,7 +151,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
                     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                         if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
-                            echo sprintf('<a href="%s">%s?clear=1</a>',
+                            echo sprintf('<a href="%s?clear=1">%s</a>',
                                 $this->orgProfileUrl($org),
                                 $org->getOrganizationName()->getName());
                         } else {
