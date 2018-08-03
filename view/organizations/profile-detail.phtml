@@ -7,6 +7,15 @@ $contact = $organization->getContact();
 ?>
 <div class="row">
     <div class="col-md-2">
+       <div class="panel panel-default">
+           <div class="panel-body">
+               
+           
+           </div>
+       </div>
+
+        
+        
         <?php if($organization->getImages()->notEmpty('images')): ?>
             <img src="<?php echo $this->basePath($this->organizationImageCache->getUri($organization->getImages()->get('thumbnail'))) ?>">
         <?php else: ?>
