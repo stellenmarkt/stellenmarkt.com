@@ -325,10 +325,10 @@ setTimeout(setIframeSrc, 5);
  <?php   endif; ?>
  
         
-              <h2 class="text-center"><?= $orgName ?> TEST</h2>
+              <h2 class="text-center"><?= $orgName ?></h2>
         
                 <?php if ($org = $this->job->getOrganization()): ?>
-             <div style="margin-bottom:5px" class=""><a href="<?= $this->orgProfileUrl($org)?>" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
+             <div style="margin-bottom:5px" class=""><a href="<?= $this->orgProfileUrl($org)?>?clear=1" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
                 <?php endif ?>
             <!--<div class=""><a href="" class="btn btn-default btn-block company-jobs-btn">3 Jobs</a></div>-->
 
