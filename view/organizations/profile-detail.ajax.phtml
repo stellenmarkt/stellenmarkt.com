@@ -99,7 +99,7 @@ $activeFacets = $facets->getActiveValues();
                     
                         </p>
                         
-                    <?= $this->applyUrl($job); ?>
+                   <!-- <?= $this->applyUrl($job); ?>-->
                             
                             <?php if ($this->auth()->isAdmin()):?>
                             <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><strong><?=$this->translate('Edit')?></strong></a>
