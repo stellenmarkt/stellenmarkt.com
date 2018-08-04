@@ -73,9 +73,7 @@ $activeFacets = $facets->getActiveValues();
      <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */?>
      
      
-      <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="content-area">
-                <div class="top-cnt">
+
         
                     <h4><?=$this->jobUrl($job, [ 'target' => '_new' ]) ?> </h4>
                     <p>
@@ -103,16 +101,11 @@ $activeFacets = $facets->getActiveValues();
                             <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
                                 
                    
-                </div>
-       
-        
- 
-    
+               
 
 
     <?php endif ?>
-          </div>     
-               </div>
+
   <?php endforeach?>
             
             
