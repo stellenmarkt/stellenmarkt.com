@@ -84,7 +84,7 @@ $contact = $organization->getContact();
        <div class="tab-content ">
 			  <div class="tab-pane row" id="profil">
 			      <div class="col-md-8">
-			            <?php if($organization->getdescription()->notEmpty()): ?>
+			            <?php if($organization->getdescription()): ?>
                          <p><?php echo $organization->getdescription()?></p>
                          
                             <?php else: ?>
