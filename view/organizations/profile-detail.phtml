@@ -70,9 +70,9 @@ $contact = $organization->getContact();
        <div class="tab-content ">
 			  <div class="tab-pane" id="profil">
 			    <div class="panel panel-default">
-			        
-			        
-			            <p><?php echo $organization->getdescription()?></p>
+			        <div class="panel-body">
+			            
+			              <p><?php echo $organization->getdescription()?></p>
        
                              <address>
                                 <?php echo $contact->getStreet()?> <?php echo $contact->getHouseNumber()?><br/>
@@ -81,7 +81,11 @@ $contact = $organization->getContact();
                                 <?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?>
                                 <?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?>
                              </address>
-			    </div>  
+			        </div>
+			        
+			        
+			          
+			       </div>  
 			      
 			      
                       
