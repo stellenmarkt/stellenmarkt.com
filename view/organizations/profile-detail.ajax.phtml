@@ -80,7 +80,7 @@ $activeFacets = $facets->getActiveValues();
 
         
                     <h4><?=$this->jobUrl($job, [ 'target' => '_new' ]) ?> </h4>
-                    <p>
+                  <!--  <p>
                         <a href="<?php echo $this->url('lang/organizations/profileDetail',['id'=>$job->getOrganization()->getId()]) ?>">
                                 <?php
                                 if (is_object($job->getOrganization()) && is_object($job->getOrganization()->getOrganizationName()) && $job->getOrganization()->getOrganizationName()->getName()) {
@@ -88,7 +88,7 @@ $activeFacets = $facets->getActiveValues();
                                 }
                                 ?>
                             </a>
-                    </p>
+                    </p>-->
                
                    <p> Publiziert am:      
                               <?php
