@@ -96,7 +96,6 @@ $activeFacets = $facets->getActiveValues();
         </div>
  
      </div>
-           <  
     
         
         
@@ -104,22 +103,11 @@ $activeFacets = $facets->getActiveValues();
         
         
         
-        
-        
-        
-        
-        
-        
-  
-
-          
-                
-                
-                
-                    <tr>
-                        <td>
+       
                             <?=$this->jobUrl($job, [ 'target' => '_new' ]) ?>
-                            <br/>
+                       
+                       
+                       
                             <a href="<?php echo $this->url('lang/organizations/profileDetail',['id'=>$job->getOrganization()->getId()]) ?>">
                                 <?php
                                 if (is_object($job->getOrganization()) && is_object($job->getOrganization()->getOrganizationName()) && $job->getOrganization()->getOrganizationName()->getName()) {
@@ -127,26 +115,25 @@ $activeFacets = $facets->getActiveValues();
                                 }
                                 ?>
                             </a>
-                        </td>
-                        <td>
-                            <div><?php echo $job->getLocation()?></div>
-                            <small>
+                        <?php echo $job->getLocation()?>
+                           
                                 <?php
                                 if ($job->getDatePublishStart()): echo $this->dateFormat($job->getdatePublishStart(), 'short', 'none');
                                 elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                                 endif
                                 ?>
-                            </small>
-                        </td>
+                         
                         <td>
                             <?= $this->applyUrl($job); ?>
                             <?php if ($this->auth()->isAdmin()):?>
                                 <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
                             <?php endif ?>
-                        </td>
-                    </tr>
+                       
+                       
                 <?php endforeach?>
-            </table>
+            
+            
+            
 
             <?php
             $paginationControlRoute = is_null($paginationControlRoute) ? 'lang/jobboard':$paginationControlRoute;
