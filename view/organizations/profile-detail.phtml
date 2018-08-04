@@ -87,18 +87,14 @@ $contact = $organization->getContact();
 			            <?php if($organization->getdescription()): ?>
                         
                          <div class="panel panel-default">
-			           <h4 class="organizationtitle">Über uns</h4>
-
-			              <div class="panel-body">
+			               <h4 class="organizationtitle">Über uns</h4>
+			               <div class="panel-body">
                             <p><?php echo $organization->getdescription()?></p>
       			          </div>
-			          </div> 
-                        
-                            <?php else: ?>
-                             
-                         <?php endif;?>
-			          
-			          
+			             </div> 
+                       <?php else: ?>
+                       <?php endif;?>
+
 			        <div class="panel panel-default">
 			           <h4 class="organizationtitle">Adresse</h4>
 			             <div class="panel-body">
