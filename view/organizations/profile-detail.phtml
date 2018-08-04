@@ -42,6 +42,19 @@ $contact = $organization->getContact();
            </div>
            
            <div style="border-top: 1px solid #dcdfe2;" class="panel-body">
+               <ul id="search-tabs" class="nav nav-pills" style="padding:0 30px">
+                <li class="active">
+                    <a data-toggle="tab" href="#jobs-list-container"><span id="job-count"><?=$this->jobs->getTotalItemCount()?></span> Offene Stellen</a>
+                </li>
+                <?php if (isset($parts[1]) && ""!=trim($parts[1])): ?><li><a href="#wp-content1">Tätigkeit</a></li><?php endif ?>
+                <?php if (isset($parts[2]) && ""!=trim($parts[2])): ?><li><a href="#wp-content2">Lohn</a></li><?php endif ?>
+                <?php if (isset($parts[3]) && ""!=trim($parts[3])): ?><li><a href="#wp-content3">Karriere & Weiterbildung</a></li><?php endif ?>
+                <?php if (isset($parts[4]) && ""!=trim($parts[4])): ?><li><a href="#wp-content4">Erfahrungsberichte</a></li><?php endif ?>
+            </ul>
+
+               
+               
+              
                Jobs <span style="display: inline-block;
                     min-width: 15px;
                     font-size: 14px;
