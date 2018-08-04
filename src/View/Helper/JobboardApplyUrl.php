@@ -36,7 +36,7 @@ class JobboardApplyUrl extends AbstractHelper
         if ($ats->isDisabled()) {
             $url = $job->getLink();
             $class = "no-apply-link";
-            $text = '.pdf' == substr($url, -4) ? 'PDF downloaden' : 'Bewerben';
+            $text = '.pdf' == substr($url, -4) ? 'PDF downloaden' : 'Jetzt bewerben';
             $pdflink = null;
         } else if ($ats->isIntern() || $ats->isEmail()) {
 
