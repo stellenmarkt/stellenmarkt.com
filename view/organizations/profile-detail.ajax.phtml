@@ -88,7 +88,8 @@ $activeFacets = $facets->getActiveValues();
                             </a>
                     </p>
                
-                   <p> Publiziert am:      <?php
+                   <p> Publiziert am:      
+                              <?php
                                 if ($job->getDatePublishStart()): echo $this->dateFormat($job->getdatePublishStart(), 'short', 'none');
                                 elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                                 endif
@@ -122,6 +123,7 @@ $activeFacets = $facets->getActiveValues();
 
         <?php endif ?>
         <?php if ($hasFacets):?>
-
+    </div>
+</div>
 <?php endif;?>
 
