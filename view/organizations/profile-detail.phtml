@@ -94,8 +94,11 @@ $contact = $organization->getContact();
 			             </div> 
                        <?php else: ?>
                        <?php endif;?>
-
-			        <div class="panel panel-default">
+                       
+                       
+                    <?php if($organization->getStreet()): ?>
+                        
+                      <div class="panel panel-default">
 			           <h4 class="organizationtitle">Adresse</h4>
 			             <div class="panel-body">
 			            
@@ -112,7 +115,13 @@ $contact = $organization->getContact();
 			        
 			        
 			          
-			       </div> 
+			       </div>
+                      
+                      
+                       <?php else: ?>
+                       <?php endif;?>
+
+			         
 			        <div class="panel panel-default">
 			           <h4 class="organizationtitle">Standort</h4>
 			            
