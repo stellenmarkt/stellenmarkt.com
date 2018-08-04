@@ -71,12 +71,9 @@ $activeFacets = $facets->getActiveValues();
   
      
      <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */?>
+     
+     
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="featured-image-box">
-            <div class="img-box">
-               
-               
-            </div>
             <div class="content-area">
                 <div class="top-cnt">
         
@@ -92,11 +89,7 @@ $activeFacets = $facets->getActiveValues();
                     </p>
                
                    <p> Publiziert am:   
-                       <?php
-                                if ($job->getDatePublishStart()): echo $this->dateFormat($job->getdatePublishStart(), 'short', 'none');
-                                elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
-                                endif
-                                ?>
+                    
                         </p>
                         
                     
@@ -107,7 +100,7 @@ $activeFacets = $facets->getActiveValues();
                    
                 </div>
             </div>
-        </div>
+        
  
      </div>
     
