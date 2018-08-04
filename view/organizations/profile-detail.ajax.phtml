@@ -80,12 +80,15 @@ $activeFacets = $facets->getActiveValues();
             <div class="content-area">
                 <div class="top-cnt">
         
-                    <h4><?=$this->jobUrl($job, [ 'target' => '_new' ]) ?>
-                        
-                        
-                    </h4>
+                    <h4><?=$this->jobUrl($job, [ 'target' => '_new' ]) ?> </h4>
                     <p>
-                    
+                        <a href="<?php echo $this->url('lang/organizations/profileDetail',['id'=>$job->getOrganization()->getId()]) ?>">
+                                <?php
+                                if (is_object($job->getOrganization()) && is_object($job->getOrganization()->getOrganizationName()) && $job->getOrganization()->getOrganizationName()->getName()) {
+                                    echo $job->getOrganization()->getOrganizationName()->getName();
+                                }
+                                ?>
+                            </a>
                     </p>
                
                    <p> Publiziert am:
@@ -108,13 +111,7 @@ $activeFacets = $facets->getActiveValues();
                        
                        
                        
-                            <a href="<?php echo $this->url('lang/organizations/profileDetail',['id'=>$job->getOrganization()->getId()]) ?>">
-                                <?php
-                                if (is_object($job->getOrganization()) && is_object($job->getOrganization()->getOrganizationName()) && $job->getOrganization()->getOrganizationName()->getName()) {
-                                    echo $job->getOrganization()->getOrganizationName()->getName();
-                                }
-                                ?>
-                            </a>
+                        
                             
                             
                             
@@ -126,10 +123,15 @@ $activeFacets = $facets->getActiveValues();
                                 endif
                                 ?>
                          
-                        <td>
+                      
                             <?= $this->applyUrl($job); ?>
                             <?php if ($this->auth()->isAdmin()):?>
-                                <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
+                            <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
+                                
+                                
+                                
+                                
+                                
                             <?php endif ?>
                        
                        
