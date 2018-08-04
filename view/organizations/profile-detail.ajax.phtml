@@ -88,12 +88,16 @@ $activeFacets = $facets->getActiveValues();
                             </a>
                     </p>
                
-                   <p> Publiziert am:   
+                   <p> Publiziert am:      <?php
+                                if ($job->getDatePublishStart()): echo $this->dateFormat($job->getdatePublishStart(), 'short', 'none');
+                                elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
+                                endif
+                                ?>
                     
                         </p>
                         
                     
-                            <?= $this->applyUrl($job); ?>
+                            
                             <?php if ($this->auth()->isAdmin()):?>
                             <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
                                 
