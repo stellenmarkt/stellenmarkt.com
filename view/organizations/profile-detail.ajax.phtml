@@ -80,7 +80,7 @@ $activeFacets = $facets->getActiveValues();
             <div class="content-area">
                 <div class="top-cnt">
         
-                    <h4>
+                    <h4><?=$this->jobUrl($job, [ 'target' => '_new' ]) ?>
                         
                         
                     </h4>
@@ -104,7 +104,7 @@ $activeFacets = $facets->getActiveValues();
         
         
        
-                            <?=$this->jobUrl($job, [ 'target' => '_new' ]) ?>
+                            
                        
                        
                        
@@ -115,6 +115,9 @@ $activeFacets = $facets->getActiveValues();
                                 }
                                 ?>
                             </a>
+                            
+                            
+                            
                         <?php echo $job->getLocation()?>
                            
                                 <?php
