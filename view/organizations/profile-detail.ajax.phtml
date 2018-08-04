@@ -69,54 +69,25 @@ $activeFacets = $facets->getActiveValues();
         <?php endif;?>
         <?php if (count($jobs)):?>
         
-          <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="featured-image-box">
             <div class="img-box">
-                <a href="<?=$href?>">
-                <?php
-                $logo = $this->gastroLogoUri($job);
-                if ($logo) {
-                    echo '<img class="yk-logo-sm center-block" src="' . $logo . '">';
-                }
-
-                ?>
-                </a>
+               
+               
             </div>
             <div class="content-area">
                 <div class="top-cnt">
         
                     <h4>
-                        <a title="<?=strip_tags($job->getTitle())?>"
-                           href="<?=$href?>">
-                            <?=strip_tags($job->getTitle())?>
-                        </a>
+                        
+                        
                     </h4>
                     <p>
-                    <?php
-
-                    if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
-                        if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
-                            echo sprintf('<a href="%s?clear=1">%s</a>',
-                                $this->orgProfileUrl($org),
-                                $org->getOrganizationName()->getName());
-                        } else {
-                            echo $org->getOrganizationName()->getName();
-                        }
-                    } else if ($job->getCompany()) {
-                        echo $job->getCompany();
-                    }
-                    ?>
+                    
                     </p>
-               <!--     <p>
-                        <?php $typeOfContract = $job->getClassifications()->getEmploymentTypes()->__toString()?:'Vollzeit' ?>
-                        <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
-                    </p>-->
+               
                    <p> Publiziert am:
-                        <?php
-                        if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
-                        elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
-                        endif?>
-                    <br /><?=preg_replace('~\(.*?\)$~', '', (string) $job->getLocation())?> </p>
+                        </p>
                    
                 </div>
             </div>
