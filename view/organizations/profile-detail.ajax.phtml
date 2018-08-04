@@ -68,8 +68,10 @@ $activeFacets = $facets->getActiveValues();
     <div class="col-md-9">
         <?php endif;?>
         <?php if (count($jobs)):?>
-        
-    <div class="col-md-4 col-sm-6 col-xs-12">
+  
+           <div class="row">
+     <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */?>
+      <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="featured-image-box">
             <div class="img-box">
                
@@ -94,6 +96,8 @@ $activeFacets = $facets->getActiveValues();
         </div>
  
      </div>
+           </div>     
+    
         
         
         
@@ -106,27 +110,12 @@ $activeFacets = $facets->getActiveValues();
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          ghgh
-        
-            <table class="pagination-content table table-striped table-bordered table-hover" id="jobs-list">
-                <thead>
-                <tr>
-                    <th><?php echo $this->translate('Title of the job')?></th>
-                    <th><?php echo $this->translate('Location')?> / <?php echo $this->translate('Date of receipt')?></th>
-                    <th><?php echo $this->translate('Apply')?></th>
-                </tr>
-                </thead>
+  
 
-                <?php foreach ($jobs as $job): /* @var \Jobs\Entity\Job $job */?>
+          
+                
+                
+                
                     <tr>
                         <td>
                             <?=$this->jobUrl($job, [ 'target' => '_new' ]) ?>
