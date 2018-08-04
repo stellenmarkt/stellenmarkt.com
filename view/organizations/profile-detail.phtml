@@ -11,7 +11,7 @@ $contact = $organization->getContact();
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
-#content1 {
+section {
   display: none;
   padding: 20px 0 0;
   border-top: 1px solid #ddd;
@@ -58,7 +58,7 @@ input:checked + label {
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
 #tab4:checked ~ #content4 {
-  display: block;
+  display: block!important;
 }
 
 @media screen and (max-width: 650px) {
