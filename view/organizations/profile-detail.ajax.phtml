@@ -91,8 +91,18 @@ $activeFacets = $facets->getActiveValues();
                             </a>
                     </p>
                
-                   <p> Publiziert am:
+                   <p> Publiziert am:    <?php
+                                if ($job->getDatePublishStart()): echo $this->dateFormat($job->getdatePublishStart(), 'short', 'none');
+                                elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
+                                endif
+                                ?>
                         </p>
+                        
+                    
+                            <?= $this->applyUrl($job); ?>
+                            <?php if ($this->auth()->isAdmin()):?>
+                            <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
+                                
                    
                 </div>
             </div>
@@ -100,42 +110,9 @@ $activeFacets = $facets->getActiveValues();
  
      </div>
     
-        
-        
-        
-        
-        
-        
-       
-                            
+<?php endif ?>
                        
-                       
-                       
-                        
-                            
-                            
-                            
-                        <?php echo $job->getLocation()?>
-                           
-                                <?php
-                                if ($job->getDatePublishStart()): echo $this->dateFormat($job->getdatePublishStart(), 'short', 'none');
-                                elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
-                                endif
-                                ?>
-                         
-                      
-                            <?= $this->applyUrl($job); ?>
-                            <?php if ($this->auth()->isAdmin()):?>
-                            <a class="pull-right" href="<?=$this->plugin('Jobs/AdminEditLink')->__invoke($job)?>"><?=$this->translate('Edit')?></a>
-                                
-                                
-                                
-                                
-                                
-                            <?php endif ?>
-                       
-                       
-                <?php endforeach?>
+  <?php endforeach?>
             
             
             
