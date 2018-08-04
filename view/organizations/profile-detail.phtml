@@ -47,17 +47,19 @@ $contact = $organization->getContact();
            <div style="border-top: 1px solid #dcdfe2;" class="panel-body">
                
                <ul class="nav nav-tabs">
-			<li class="active">
-        <a  href="#1" data-toggle="tab">Overview</a>
-			</li>
-			<li><a href="#2" data-toggle="tab">Without clearfix</a>
-			</li>
-			<li><a href="#3" data-toggle="tab">Solution</a>
-			</li>
-		</ul>
+			         <li>
+                       <a href="#1" data-toggle="tab">Overview</a>
+		             </li>
+			         <li class="active">
+			            <a href="#2" data-toggle="tab">Jobs <span class="badge" style="background-color: #243b84;"><?=$this->jobs->getTotalItemCount()?></span>x</a>
+		           	</li>
+			        <li>
+			           <a href="#3" data-toggle="tab">Solution</a>
+		          	</li>
+		          </ul>
              
                     
-               Jobs <span class="badge" style="background-color: #243b84;"><?=$this->jobs->getTotalItemCount()?></span>
+               
                
         
                
