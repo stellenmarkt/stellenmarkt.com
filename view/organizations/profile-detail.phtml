@@ -84,6 +84,13 @@ $contact = $organization->getContact();
        <div class="tab-content ">
 			  <div class="tab-pane row" id="profil">
 			      <div class="col-md-8">
+			            <?php if($organization->getdescription()->notEmpty()): ?>
+                         1
+                         
+                            <?php else: ?>
+                             2
+                         <?php endif;?>
+			          
 			          <div class="panel panel-default">
 			           <h4 class="organizationtitle">Über uns</h4>
 
