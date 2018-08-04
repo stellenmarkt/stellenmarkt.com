@@ -6,8 +6,6 @@ $this->headScript()->appendFile($this->basePath('Core/js/core.pagination.js'));
 $contact = $organization->getContact();
 ?>
 
-    
-
 <div class="row">
     <div class="col-md-12">
        <div class="panel panel-default">
@@ -26,21 +24,9 @@ $contact = $organization->getContact();
                 </div>
                 
                  <div class="col-md-10">
-                    
-                    
                       <h1 style="font-weight:700;"><?php echo $organization->getName()?></h1>
-        
-                          <p><?php echo $organization->getdescription()?></p>
-       
-                             <address>
-                                <?php echo $contact->getStreet()?> <?php echo $contact->getHouseNumber()?><br/>
-                                <?php echo $contact->getCity()?> <?php echo $contact->getPostalcode()?><br/>
-                                <?php echo $contact->getCountry()?><br/>
-                                <?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?>
-                                <?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?>
-                             </address>
-                   
-                      </div>
+                      <p><?php echo $contact->getCity()?> </p>
+                 </div>
                </div>   
            </div>
            
@@ -63,7 +49,15 @@ $contact = $organization->getContact();
 			      
 			      
 			      
-                   <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+                          <p><?php echo $organization->getdescription()?></p>
+       
+                             <address>
+                                <?php echo $contact->getStreet()?> <?php echo $contact->getHouseNumber()?><br/>
+                                <?php echo $contact->getCity()?> <?php echo $contact->getPostalcode()?><br/>
+                                <?php echo $contact->getCountry()?><br/>
+                                <?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?>
+                                <?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?>
+                             </address>
                    
                    
                    
