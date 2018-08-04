@@ -120,16 +120,20 @@ $contact = $organization->getContact();
                       
                        <?php else: ?>
                        <?php endif;?>
-
-			         
-			        <div class="panel panel-default">
-			           <h4 class="organizationtitle">Standort</h4>
+                       
+                       
+                     <?php if($contact->getStreet()): ?>
+                    
+                       <div class="panel panel-default">
+			               <h4 class="organizationtitle">Standort</h4>
 			            
 			        
 			        
 			          
 			         </div> 
-      
+                       <?php else: ?>
+                       <?php endif;?>
+
 			      </div>
 				</div>
 				<div class="tab-pane active" id="jobs">
