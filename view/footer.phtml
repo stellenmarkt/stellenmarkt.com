@@ -39,7 +39,7 @@
                         <?php if (!$this->auth()->isLoggedIn()):?>
                         <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>?ref=<?= urlencode($this->url('lang/dashboard', [], true)) ?>">Einloggen</a></li>
                         <?php endif ?>
-                       <?php /*<!-- <li><a title="Registrieren" href="<?=$this->url('lang/auth',[],  true)?>#register">Registrieren</a></li>-->*/?>
+                       <li><a title="Registrieren" href="<?=$this->url('lang/auth',[],  true)?>#register">Registrieren</a></li>
                        
                         <?php if (!$this->auth()->isLoggedIn()):?> <li><a title="Preise & Leistungen" href="/de/wp/page/stellenanzeigen-schalten">Leistungen & Preise</a></li>   <?php endif ?>
                     </ul>
