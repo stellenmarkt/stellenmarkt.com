@@ -38,10 +38,7 @@
                          <li><a title="" href="/de/wp/page/faq">FAQ</a></li>
                         <?php if (!$this->auth()->isLoggedIn()):?>
                         <li><a title="Login für Arbeitgeber" href="<?=$this->url('lang/auth', [], true)?>?ref=<?= urlencode($this->url('lang/dashboard', [], true)) ?>">Einloggen</a></li>
-                        <li><a title="Registrieren" href="/de/auth/register?pt=plus">Registrieren</a></li>
                         <?php endif ?>
-                    
-                       
                         <?php if (!$this->auth()->isLoggedIn()):?> <li><a title="Preise & Leistungen" href="/de/wp/page/stellenanzeigen-schalten">Leistungen & Preise</a></li>   <?php endif ?>
                     </ul>
                 </nav>
