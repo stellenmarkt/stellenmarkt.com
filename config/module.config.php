@@ -219,6 +219,7 @@ return [
              'content/applications-privacy-policy' => __DIR__ . '/../view/application-disclaimer.phtml',
              'organizations/profile/detail' => __DIR__ . '/../view/organizations/profile-detail.phtml',
              'organizations/profile/detail.ajax' => __DIR__ . '/../view/organizations/profile-detail.ajax.phtml',
+             'organizations/mail/invite-employee.phtml' => __DIR__ . '/../view/mail/invite-employee.phtml',
          ],
     ],
 
