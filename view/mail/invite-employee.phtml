@@ -53,22 +53,8 @@
 </h3>
 <div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
 <?= sprintf($this->translate('%s invited you to join the team of %s'), $this->inviter, $this->organization) ?>
-																					  <br /><br />
-																					  <?php if ($this->hasAssociation): ?>
-    <?php if ($this->isOwner):
-        echo sprintf(
-           $this->translate('<strong>Please note: </strong> You are currently the owner of <b>%s</b>. Accepting this invitation will delete your organization.'),
-           $this->currentOrganization
-        );
-
-        else:
-            echo sprintf(
-                    $this->translate('<strong>Please note: </strong> You are currently assigned as an employee to <b>%s</b>. Accepting this invitation will remove this association.'),
-                    $this->currentOrganization
-                 );
-        endif; ?>
-
-<?php endif ?>
+																					  
+	
 
 																					    </div>
 																				</td>
@@ -107,6 +93,22 @@
 																	<td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
 <a style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="<?= $this->link($this->serverUrl($this->url)) ?>" target="_blank"><?= $this->translate('You can accept this invitation by visiting the following link') ?></a>
 																	</td>
+																	
+																																					  <?php if ($this->hasAssociation): ?>
+    <?php if ($this->isOwner):
+        echo sprintf(
+           $this->translate('<strong>Please note: </strong> You are currently the owner of <b>%s</b>. Accepting this invitation will delete your organization.'),
+           $this->currentOrganization
+        );
+
+        else:
+            echo sprintf(
+                    $this->translate('<strong>Please note: </strong> You are currently assigned as an employee to <b>%s</b>. Accepting this invitation will remove this association.'),
+                    $this->currentOrganization
+                 );
+        endif; ?>
+
+<?php endif ?>
 																</tr>
 															</table>
 															<!-- // CONTENT TABLE -->
