@@ -38,6 +38,14 @@ $description = $wordpress->call('value', ['content.rendered'], '');
             <h1 style="display:inline;color:#22436c" class="h2">
                 <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Ihre Job-Suche' : 'Leider keine passenden Jobs gefunden'); ?>
             </h1>
+            
+                        
+           <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
+             <?= $parts[2] ?>
+         
+               
+            <?php endif ?>
+            
 	  </div>
 	<?php if ($hasFacets):
     if ($this->params()->fromRoute('isLandingPage')):?>
