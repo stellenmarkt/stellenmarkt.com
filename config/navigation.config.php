@@ -103,7 +103,8 @@ return [
             'guest' => [
                 'allow' => [
                     'resource/stellenanzeigen-schalten',
-                    'resource/ratgeber'
+                    'resource/ratgeber',
+                    'route/lang/organizations-profiles',
                 ]
             ],
             'user' => [
