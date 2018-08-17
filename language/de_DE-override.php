@@ -30,4 +30,8 @@ return [
     =>
     'Abgelehnt',
 
+    'This profile is disabled.'
+    =>
+    'Dieses Firmen-Profil ist deaktiviert.'
+
 ];
