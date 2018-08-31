@@ -107,7 +107,11 @@ return [
         'factories' => [
             WordpressApi\Filter\PageIdMap::class => Factory\Filter\WpApiPageIdMapFactory::class,
             Filter\PdfFileUri::class => Filter\PdfFileUriFactory::class,
+            Filter\OrganizationJobsListQuery::class => InvokableFactory::class,
         ],
+        'aliases' => [
+            'Organizations/ListJobQuery' => Filter\OrganizationJobsListQuery::class,
+        ]
     ],
 
     'validators' => [
