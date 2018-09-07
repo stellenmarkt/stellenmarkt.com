@@ -74,7 +74,6 @@ $orgName = $this->jobOrganizationName($this->job);
         <?php /* Unternehmensbeschreibung */ ?>
         <hr />
         <p ><?=($org = $this->job->getOrganization()) && ($desc = $org->getDescription()) ? $desc : $this->descriptionEditable ?></p>
-         <hr />
             <div itemscope itemtype="http://schema.org/Organization">
                 <strong itemprop="name">
                     <?= $this->organizationName?>
