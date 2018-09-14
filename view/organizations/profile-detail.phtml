@@ -112,12 +112,12 @@ main .nav-tabs>li>a:hover {
                                 <?php echo $contact->getStreet()?> <?php echo $contact->getHouseNumber()?><br/>
                                 <?php echo $contact->getPostalcode()?> <?php echo $contact->getCity()?> <br/>
                                 <?php if ($contact->getCountry()): ?><?php echo $contact->getCountry()?><br/> <?php endif ?>
-                                <?php if ($contact->getPhone()): ?><?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?><?php endif ?>
+                                <?php if ($contact->getPhone()): ?><?php echo is_null($contact->getPhone()) ? "":"Telefon: <a href="tel:"".$contact->getPhone().">".$contact->getPhone()."<br/>" ?><?php endif ?>
                                 <?php if ($contact->getFax()): ?><?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?><?php endif ?>
                              </address>
 			        </div>
 			        
-			        
+			        <a href="tel:+41798627857">T <span itemprop="telephone">+41 71 411 68 66</span></a>
 			          
 			       </div>
                       
