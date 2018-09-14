@@ -27,7 +27,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 $title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
-$robots = "noindex,follow";
+$robots = "no3index,follow";
 if (304 === $query || ($this->params()->fromRoute('isLandingPage') && !$this->params()->fromRoute('isFilteredLandingPage') && (count($this->jobs) || $description))) {
     $robots = substr($robots, 2);
 }
