@@ -81,7 +81,11 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
     <!-- End Google Tag Manager -->
     
     <style>
-        
+     @media (max-width: 768px)
+        #main-navigation a:hover {
+            background-color: #243b84;
+            color: #fff;
+        }
         #yk-login .nav .active a, #wizardcontainer-jobs-form-categoriescontainer .nav .active a, #wizardcontainer-jobs-form-job .nav .active a {color: #fff;}
         #jobsbymail-subscribe-form .row {margin-bottom:10px;}
         iframe {border:0}
