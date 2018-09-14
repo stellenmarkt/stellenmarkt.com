@@ -111,7 +111,10 @@ main .nav-tabs>li>a:hover {
                              <address>
                                 <?php echo $contact->getStreet()?> <?php echo $contact->getHouseNumber()?><br/>
                                <?php echo $contact->getPostalcode()?> <?php echo $contact->getCity()?> <br/>
-                                <?php echo $contact->getCountry()?><br/>
+                               
+                               
+                               
+                                <?php echo is_null($contact->getCountry() ? "":"".$contact->getCountry()."<br/>" ?>
                                 <?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?>
                                 <?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?>
                              </address>
