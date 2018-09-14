@@ -15,7 +15,6 @@ $modeLabels = $mode->getOption('labels');
 <?php if (isset($this->renderSummary) && $this->renderSummary): ?>
     <style type="text/css">
         .mce-content-body { min-height: 100px; }
-        .panel-body img  {width:100%;}
         
     </style>
 <div class="row">
@@ -29,17 +28,15 @@ $modeLabels = $mode->getOption('labels');
     <div class="col-md-12">
         <div class="panel panel-default">
             
-            <div class="panel-body">
+           
                 
-                 <?php $template = $fieldset->getObject()->getAttachedEntity('gastro24-template');
+             <?php $template = $fieldset->getObject()->getAttachedEntity('gastro24-template');
                 if ($template && ($image = $template->getImage())):?>
                  
-                    <img src="<?=$this->basePath($image->getUri());?>">
+                    <img style="width:100%" src="<?=$this->basePath($image->getUri());?>">
                 <?php endif ?>
-            </div>
-            
            
-           
+
              <div class="panel-heading">
                 <h3 class="panel-title">Stellenbeschreibung</h3>
             </div>
