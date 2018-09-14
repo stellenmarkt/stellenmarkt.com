@@ -83,7 +83,7 @@ $orgName = $this->jobOrganizationName($this->job);
                     <?php if ($this->street): ?><span itemprop="streetAddress"><?=$this->street?></span><br><?php endif ?>
                     <?php if ($this->postalCode): ?><span itemprop="postalCode"><?=$this->postalCode?></span><?php endif ?>
                     <?php if ($this->city): ?><span itemprop="addressLocality"><?=$this->city?></span><br /><?php endif ?>
-                    <?php if ($this->phone): ?> <span itemprop="telephone"><?=$this->phone?></span><?php endif ?>
+                    <?php if ($this->phone): ?>Telefon: <span itemprop="telephone"><?=$this->phone?></span><?php endif ?>
                 </address>
                 <?php endif?>
             </div>
