@@ -114,7 +114,7 @@ main .nav-tabs>li>a:hover {
                                
                                
                                
-                                <?php echo is_null($contact->getCountry() ? "":" ".$contact->getCountry()."<br/>" ?>
+                                <?php echo is_null($contact->getCountry()) ? "":" ".$contact->getCountry()."<br/>" ?>
                                 <?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?>
                                 <?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?>
                              </address>
