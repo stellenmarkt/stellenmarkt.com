@@ -113,10 +113,11 @@ main .nav-tabs>li>a:hover {
                                <?php echo $contact->getPostalcode()?> <?php echo $contact->getCity()?> <br/>
                                
                                
-                                      <?php echo $contact->getCountry()?><br/>   
+                              <?php if ($contact->getCountry()): ?> <?php echo $contact->getCountry()?><br/> <?php endif ?>
+
                                
     
-                                <?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?>
+                                <?php if ($contact->getPhone()): ?><?php echo is_null($contact->getPhone()) ? "":"Telefon: ".$contact->getPhone()."<br/>" ?><?php endif ?>
                                 <?php echo is_null($contact->getFax()) ? "":"Fax: ".$contact->getFax()."<br/>" ?>
                              </address>
 			        </div>
