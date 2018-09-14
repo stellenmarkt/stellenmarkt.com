@@ -81,7 +81,7 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
     <!-- End Google Tag Manager -->
     
     <style>
-     @media (max-width: 768px)
+     @media (max-width: 768px){
         .navbar-nav>li>a:hover {
             color: #fff;
            }
@@ -100,7 +100,10 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
           box-shadow: none!important;
         }
         
-       
+   
+#main-navigation .dropdown-menu>li>a {
+    color: #000;
+}
         
         }
         #yk-login .nav .active a, #wizardcontainer-jobs-form-categoriescontainer .nav .active a, #wizardcontainer-jobs-form-job .nav .active a {color: #fff;}
