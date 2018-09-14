@@ -29,20 +29,26 @@ $modeLabels = $mode->getOption('labels');
     <div class="col-md-12">
         <div class="panel panel-default">
             
-            
-            
-           
             <div class="panel-body">
-                <?=$fieldset->get('position')->getValue()?>
-                <?php $template = $fieldset->getObject()->getAttachedEntity('gastro24-template');
+                
+                 <?php $template = $fieldset->getObject()->getAttachedEntity('gastro24-template');
                 if ($template && ($image = $template->getImage())):?>
                  
                     <img src="<?=$this->basePath($image->getUri());?>">
                 <?php endif ?>
             </div>
+            
+           
+            <div class="panel-body">
+                <?=$fieldset->get('position')->getValue()?>
+               
+            </div>
              <div class="panel-heading">
                 <h3 class="panel-title">Stellenbeschreibung</h3>
             </div>
+            
+            
+            
             
         </div>
     </div>
