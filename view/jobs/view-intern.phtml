@@ -55,13 +55,18 @@ $orgName = $this->jobOrganizationName($this->job);
                 <?= $replaceImage($this->job->getTemplateValues()->get('position'));?>
             </div>
         </div>
- 
+        <?php /* Anforderungen */ ?>
+        <div class="row">
+            <div class="col-md-12 position">
+                <?=$this->requirements;?>
+            </div>
+        </div>
 
 
-                  <?php /* Anforderungen */ ?>
+                 
     
 
-                <?=$this->requirements;?>
+                
                 
         
   
