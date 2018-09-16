@@ -55,8 +55,8 @@ $orgName = $this->jobOrganizationName($this->job);
      <p> Publiziert am:
      
       <?php
-                        if ($job->getDatePublishStart()): echo $this->$job->getDatePublishStart();
-                        elseif ($job->getDateCreated()): echo $this->$job->getDateCreated();
+                        if ($job->getDatePublishStart()): echo ($this->$job->getDatePublishStart());
+                        elseif ($job->getDateCreated()): echo ($this->$job->getDateCreated());
                         endif?>
                    
                    
