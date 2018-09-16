@@ -54,28 +54,14 @@ $orgName = $this->jobOrganizationName($this->job);
             <div class="col-md-12 position">
                 <?= $replaceImage($this->job->getTemplateValues()->get('position'));?>
             </div>
-        </div>
+
         <?php /* Anforderungen */ ?>
-        <div class="row">
             <div class="col-md-12 position">
                 <?=$this->requirements;?>
             </div>
         </div>
 
 
-                 
-    
-
-                
-                
-        
-  
-
-
-        
-
-        
-    
         <?php /* Unternehmensbeschreibung */ ?>
         <hr />
         <p ><?=($org = $this->job->getOrganization()) && ($desc = $org->getDescription()) ? $desc : $this->descriptionEditable ?></p>
