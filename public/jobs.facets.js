@@ -13,7 +13,7 @@
 
     function renameFacetsFilter($form)
     {
-        var facets={ r: [], l: [], c: [], i: [], t: [] };
+        var facets={ r: [], l: [], c: [], p: [], i: [], t: [] };
 
         $form.find('.facet-param').each(function(){
             var $checkbox = $(this);
@@ -25,6 +25,8 @@
                 facets.l.push(value);
             } else if (name.match(/^organiz/)) {
                 facets.c.push(value);
+            } else if (name.match(/^profession/)) {
+                facets.p.push(value);
             } else if (name.match(/^industry/)) {
                 facets.i.push(value);
             } else if (name.match(/^employ/)) {
