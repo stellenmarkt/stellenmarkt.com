@@ -25,10 +25,34 @@
 return [
     'name' => 'Industries',
     'children' => [
-        'Hotel (4 Sterne)',
-        'Krankenhaus',
-        'Schiff',
-        'Kantine'
-        ]
+        'Swiss Lodge',
+        '1-Stern Hotel',
+        '2-Sterne Hotel',
+        '3-Sterne Hotel',
+        '4-Sterne Hotel',
+        '5-Sterne Hotel',
+        'Superior Hotel',
+        'Tourismus',
+        'Restauration',
+        'Systemgastronomie',
+        'Gourmet',
+        'Catering',
+        'Casino',
+        'Bar / Lokal / Café / Bistro',
+        'Erlebnisgastronomie',
+        'Catering / Event / Partyservice',
+        'Ferienclubs / Animation',
+        'Kliniken / Praxen / Seniorenheim',
+        'Kreuzfahrtschiffe / Schifffahrt',
+        'Spa / Fitness / Wellness',
+        'Ferienhof / Gasthof / Pension',
+        'Zulieferer / Handel',
+        'Jugendherberge / Hostel / Camping',
+        'Soziale Einrichtungen',
+        'Kaderstellen',
+        'Fachkräfte',
+        'Hilfskräfte',
+        'Sonstiges'
+    ]
 ];
 
