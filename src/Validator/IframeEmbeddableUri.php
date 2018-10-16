@@ -36,6 +36,7 @@ class IframeEmbeddableUri extends AbstractValidator
         'invalidUriStart' => [
             'http:',
             'https://www.adecco.ch/',
+            'https://jobs.mcdonalds.ch',
         ],
     ];
 
