@@ -19,7 +19,11 @@ endif;
     
 
  
-$this->headTitle($this->job->getTitle());
+//$this->headTitle($this->job->getTitle());
+
+$this->headTitle($this->job->getTitle().$this->job->getTitle());
+
+
 $link = $this->job->getLink();
 
 //if (!$link) {
