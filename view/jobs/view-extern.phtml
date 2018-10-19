@@ -21,7 +21,7 @@ endif;
  
 //$this->headTitle($this->job->getTitle());
 
-$this->headTitle($this->job->getTitle()." von ".$orgName = $this->jobOrganizationName($this->job));
+$this->headTitle($this->job->getTitle()." von ".$orgName = $this->jobOrganizationName($this->job).$location = $job->getLocations());
 
 
 $link = $this->job->getLink();
