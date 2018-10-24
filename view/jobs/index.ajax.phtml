@@ -160,7 +160,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                        if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
                             
-                       // if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
+                             echo $org->getOrganizationName()->getName();
                            
                         } else {
                            // echo $org->getOrganizationName()->getName();
