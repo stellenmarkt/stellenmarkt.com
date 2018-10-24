@@ -54,10 +54,27 @@ $orgName = $this->jobOrganizationName($this->job);
                 <?= $replaceImage($this->job->getTemplateValues()->get('position'));?>
             </div>
 
-        <?php /* Anforderungen */ ?>
+          <?php  /* Anforderungen */ ?>
+          <div class="col-md-12 position">
+            <?php if($this->benefits): ?>
+              <div><b><?=$this->labelRequirements?></b></div>
+            <?php endif;?>
+            <?=$this->requirements;?>
+          </div>
+
+          <?php if ($this->qualifications): ?>
             <div class="col-md-12 position">
-                <?=$this->requirements;?>
+              <div><b><?=$this->labelQualifications?></b></div>
+              <?=$this->qualifications;?>
             </div>
+          <?php endif;?>
+
+          <?php if ($this->benefits): ?>
+            <div class="col-md-12 position">
+              <div><b><?=$this->labelBenefits?></b></div>
+              <?=$this->benefits;?>
+            </div>
+          <?php endif;?>
         </div>
 
 
