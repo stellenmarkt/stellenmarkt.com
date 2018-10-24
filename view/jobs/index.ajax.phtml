@@ -160,13 +160,13 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                        if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
                             
-                             echo $org->getOrganizationName()->getName();
-                           
-                        } else {
-                           // echo $org->getOrganizationName()->getName();
-                             echo sprintf('<a href="%s?clear=1">%s</a>',
+                              echo sprintf('<a href="%s?clear=1">%s</a>',
                                 $this->orgProfileUrl($org),
                                 $org->getOrganizationName()->getName());
+                           
+                        } else {
+                           echo $org->getOrganizationName()->getName();
+                            
                         }
                     } else if ($job->getCompany()) {
                         echo $job->getCompany();
