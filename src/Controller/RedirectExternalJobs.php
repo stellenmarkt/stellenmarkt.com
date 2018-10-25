@@ -11,6 +11,7 @@
 namespace Gastro24\Controller;
 
 use Core\Entity\Exception\NotFoundException;
+use Gastro24\Options\CompanyTemplatesMap;
 use Gastro24\Session\VisitedJobsContainer;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -32,9 +33,17 @@ class RedirectExternalJobs extends AbstractActionController
      */
     private $validator;
 
-    public function __construct(\Gastro24\Validator\IframeEmbeddableUri $validator)
+    /**
+     *
+     *
+     * @var CompanyTemplatesMap
+     */
+    private $templatesMap;
+
+    public function __construct(\Gastro24\Validator\IframeEmbeddableUri $validator, CompanyTemplatesMap $templatesMap)
     {
         $this->validator = $validator;
+        $this->templatesMap = $templatesMap;
     }
 
     public function indexAction()
@@ -60,7 +69,8 @@ class RedirectExternalJobs extends AbstractActionController
 
             $appTemplate = $appModel->getTemplate();
             $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
-            $internModel->setTemplate('gastro24/jobs/view-intern');
+            $jobTemplate = $this->templatesMap->getTemplate($job->getOrganization()) ?: 'gastro24/jobs/view-intern';
+            $internModel->setTemplate($jobTemplate);
             $model->addChild($internModel, 'internalJob');
             $model->setVariable('isIntern', true);
             // restore application models' template

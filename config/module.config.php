@@ -218,6 +218,7 @@ return [
              'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
              'gastro24/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
+             'gastro24/jobs/view-mcdonalds' => __DIR__ . '/../view/jobs/view-mcdonalds.phtml',
              'gastro24/jobs/view-intern' => __DIR__ . '/../view/jobs/view-intern.phtml',
              'gastro24/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'gastro24/form/create-single-job' => __DIR__ . '/../view/jobs/create-single-job-form.phtml',
@@ -407,6 +408,13 @@ return [
         ],
         Landingpages::class => [],
         Options\JobDetailsForm::class => [],
+        Options\CompanyTemplatesMap::class => [[
+            /* Firmen-Id => View-Template-Name */
+            'map' => [
+                // McDonald's Suisse Restaurants
+                '5bcf612fb6428b0b1008db60' => 'gastro24/jobs/view-mcdonalds',
+            ],
+        ]],
     ],
 
     'event_manager' => [

@@ -10,6 +10,7 @@
 /** */
 namespace Gastro24\Controller;
 
+use Gastro24\Options\CompanyTemplatesMap;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
@@ -26,7 +27,8 @@ class RedirectExternalJobsFactory implements FactoryInterface
     {
         $validators = $container->get('ValidatorManager');
         $validator  = $validators->get(\Gastro24\Validator\IframeEmbeddableUri::class);
-        $service    = new RedirectExternalJobs($validator);
+        $templatesMap = $container->get(CompanyTemplatesMap::class);
+        $service    = new RedirectExternalJobs($validator, $templatesMap);
         
         return $service;    
     }
