@@ -65,12 +65,12 @@ class RedirectExternalJobs extends AbstractActionController
 
         $appModel = $this->getEvent()->getViewModel();
         $model = new ViewModel(['job' => $job]);
-        if (!$job->getLink()) {
+        $jobTemplate = $this->templatesMap->getTemplate($job->getOrganization());
+        if (!$job->getLink() || $jobTemplate) {
 
             $appTemplate = $appModel->getTemplate();
             $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
-            $jobTemplate = $this->templatesMap->getTemplate($job->getOrganization()) ?: 'gastro24/jobs/view-intern';
-            $internModel->setTemplate($jobTemplate);
+            $internModel->setTemplate($jobTemplate ?: 'gastro24/jobs/view-intern');
             $model->addChild($internModel, 'internalJob');
             $model->setVariable('isIntern', true);
             // restore application models' template

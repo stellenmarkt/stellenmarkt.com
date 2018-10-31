@@ -35,7 +35,7 @@ class CompanyTemplatesMap extends AbstractOptions
         }
 
         if (!is_string($organization)) {
-            throw new \InvalidArgumentException('Expect $organization to be an instance of ' . Organization::class . ' or a string.');
+            return null;
         }
 
         return isset($this->map[$organization]) ? $this->map[$organization] : null;
