@@ -25,47 +25,46 @@ $this->headTitle($this->translate('Gastrojob24'))->setSeparator(' | ')->setAutoE
 $this->headMeta()->setCharset("utf-8");
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
 
-$this->configHeadScript()->setAllowArbitraryAttributes(true);
-$this->configHeadScript()->prependFile($this->basepath('Core/js/core.init.js'));
-$this->configHeadScript()->prependFile($this->basePath('/assets/pnotify/pnotify.custom.min.js'), 'text/javascript');
-$this->configHeadScript()->prependFile($this->basePath('/assets/bootstrap/js/bootstrap.min.js'));
-$this->configHeadScript()->prependFile($this->basePath('/assets/jquery/jquery.min.js'));
-$this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/select2.min.js'));
+$this->configHeadScript()->prependScript('var lang="' . $lang . '";'
+                                         . 'var basePath="' . $this->basePath() . '";');
 
-if ($lang!='en') {
-    $this->configHeadScript()->appendFile($this->basePath('/assets/select2/js/i18n/' . $lang . '.js'));
-}
-$this->headLink()->appendStylesheet($this->basePath('/assets/select2/css/select2.css'));
-$this->headLink()->appendStylesheet($this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials.css'));
-$this->headLink()->appendStylesheet($this->basePath('/Gastro24/jssocials-1.4.0/dist/jssocials-theme-flat.css'));
+$this->headLink()->prependStylesheet($this->basePath() . '/modules/Gastro24/Gastro24.css');
+$this->headLink()->prependStylesheet($this->basePath('dist/css/core.min.css'));
+$this->configHeadScript()->prependFile($this->basepath('dist/js/core.js'));
+$this->configHeadScript()->appendFile($this->basePath('modules/Gastro24/jquery.matchHeight.js'))->appendFile($this->basePath('modules/Gastro24/index.js'));
+
+$langScript = 'dist/locales/' . $lang . '.js';
+$this->configHeadScript()->appendFile($this->basePath($langScript));
+
+$this->headLink()->appendStylesheet($this->basePath('/modules/Gastro24/jssocials-1.4.0/dist/jssocials.css'));
+$this->headLink()->appendStylesheet($this->basePath('/modules/Gastro24/jssocials-1.4.0/dist/jssocials-theme-flat.css'));
 
 $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '";'
     . 'var basePath="' . $this->basePath() . '";');
 
-$this->headLink()->prependStylesheet($this->basePath() . '/Gastro24/Gastro24.css');
-$this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.custom.min.css'));
+
 
 ?>
 
 <?php echo $this->doctype(); ?>
 <html lang="<?php echo $this->params('lang') ?>">
 <head>
-    <link rel="apple-touch-icon" sizes="57x57" href="<?=$this->basepath('Gastro24/favicons/apple-icon-57x57.png')?>">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?=$this->basepath('Gastro24/favicons/apple-icon-60x60.png')?>">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?=$this->basepath('Gastro24/favicons/apple-icon-72x72.png')?>">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?=$this->basepath('Gastro24/favicons/apple-icon-76x76.png')?>">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?=$this->basepath('Gastro24/favicons/apple-icon-114x114.png')?>">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?=$this->basepath('Gastro24/favicons/apple-icon-120x120.png')?>">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?=$this->basepath('Gastro24/favicons/apple-icon-144x144.png')?>">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?=$this->basepath('Gastro24/favicons/apple-icon-152x152.png')?>">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?=$this->basepath('Gastro24/favicons/apple-icon-180x180.png')?>">
-    <link rel="icon" type="image/png" sizes="192x192"  href="<?=$this->basepath('Gastro24/favicons/android-icon-192x192.png')?>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?=$this->basepath('Gastro24/favicons/favicon-32x32.png')?>">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?=$this->basepath('Gastro24/favicons/favicon-96x96.png')?>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?=$this->basepath('Gastro24/favicons/favicon-16x16.png')?>">
-    <link rel="manifest" href="<?=$this->basepath('Gastro24/favicons/manifest.json')?>">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-57x57.png')?>">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-60x60.png')?>">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-72x72.png')?>">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-76x76.png')?>">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-114x114.png')?>">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-120x120.png')?>">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-144x144.png')?>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-152x152.png')?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=$this->basepath('modules/Gastro24/favicons/apple-icon-180x180.png')?>">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<?=$this->basepath('modules/Gastro24/favicons/android-icon-192x192.png')?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?=$this->basepath('modules/Gastro24/favicons/favicon-32x32.png')?>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?=$this->basepath('modules/Gastro24/favicons/favicon-96x96.png')?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?=$this->basepath('modules/Gastro24/favicons/favicon-16x16.png')?>">
+    <link rel="manifest" href="<?=$this->basepath('modules/Gastro24/favicons/manifest.json')?>">
     <meta name="msapplication-TileColor" content="#2e5b93">
-    <meta name="msapplication-TileImage" content="<?=$this->basepath('Gastro24/favicons/ms-icon-144x144.png')?>">
+    <meta name="msapplication-TileImage" content="<?=$this->basepath('modules/Gastro24/favicons/ms-icon-144x144.png')?>">
     <meta name="theme-color" content="#2e5b93">
     <?php echo $this->headTitle() ?>
     <?php echo $this->headMeta() ?>
@@ -256,7 +255,7 @@ $this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.cu
                     <span class="icon-bar"></span>
                   </button>
                     <a class="navbar-brand menu-logo" href="/de">
-                        <img src="<?php echo $this->basepath('/Gastro24/gastrojob24_blue.svg') ?>" alt="Gastrojob24 Schweiz" class="menu-logo">
+                        <img src="<?php echo $this->basepath('/modules/Gastro24/gastrojob24_blue.svg') ?>" alt="Gastrojob24 Schweiz" class="menu-logo">
                     </a>
                  </div>
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">

@@ -27,15 +27,16 @@ $this->headMeta()->appendName("keywords", "Open Surce Bewerbermanagement System,
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
 
 $this->configHeadScript()->setAllowArbitraryAttributes(true);
-$this->configHeadScript()->prependFile($this->basepath('Core/js/core.init.js'));
-$this->configHeadScript()->prependFile($this->basePath('/assets/pnotify/pnotify.custom.min.js'), 'text/javascript');
-$this->configHeadScript()->prependFile($this->basePath('/assets/bootstrap/js/bootstrap.min.js'));
-$this->configHeadScript()->prependFile($this->basePath('/assets/jquery/jquery.min.js'));
-$this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '";'
-    . 'var basePath="' . $this->basePath() . '";');
+$this->configHeadScript()->prependScript('var lang="' . $lang . '";'
+                                         . 'var basePath="' . $this->basePath() . '";');
 
-$this->headLink()->prependStylesheet($this->basePath() . '/Gastro24/Gastro24.css');
-$this->headLink()->prependStylesheet($this->basePath('/assets/pnotify/pnotify.custom.min.css'));
+$this->headLink()->prependStylesheet($this->basePath() . '/modules/Gastro24/Gastro24.css');
+$this->headLink()->prependStylesheet($this->basePath('dist/css/core.min.css'));
+$this->configHeadScript()->prependFile($this->basepath('dist/js/core.js'));
+$this->configHeadScript()->appendFile($this->basePath('modules/Gastro24/jquery.matchHeight.js'))->appendFile($this->basePath('modules/Gastro24/index.js'));
+
+$langScript = 'dist/locales/' . $lang . '.js';
+$this->configHeadScript()->appendFile($this->basePath($langScript));
 
 foreach ($languages as $lang) {
     $this->headLink()->appendAlternate(
