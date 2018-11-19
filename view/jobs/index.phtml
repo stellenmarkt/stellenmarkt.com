@@ -1,15 +1,13 @@
 <?php //description: Renders the list of public jobs. ?>
 <?php
-$this->headScript()->appendFile($this->basepath('/Core/js/core.pagination-container.js'))
-     ->appendFile($this->basePath('Core/js/core.forms.js'))
-     ->appendFile($this->basePath('assets/select2/js/select2.min.js'))
-     ->appendFile($this->basePath('Gastro24/jquery.matchHeight.js'))
-     ->appendFile($this->basePath('Gastro24/jobs.js'));;
-if ($this->params('lang') != 'en') {
-    $this->headScript()->appendFile($this->basePath('assets/select2/js/i18n/' . $this->params('lang') . '.js'))
-                       ->appendFile($this->basePath('/assets/bootstrap3-dialog/js/bootstrap-dialog.min.js'));
-}
-$this->headLink()->appendStylesheet($this->basePath('assets/select2/css/select2.css'))
+$this->headScript()->appendFile($this->basepath('/modules/Core/js/core.pagination-container.js'))
+     ->appendFile($this->basePath('modules/Core/js/core.forms.js'))
+
+     ->appendFile($this->basePath('modules/Gastro24/jquery.matchHeight.js'))
+     ->appendFile($this->basePath('modules/Gastro24/jobs.js'));;
+
+    $this->headScript()
+                       ->appendFile($this->basePath('/dist/js/bootstrap-dialog.min.js'));
 
 ?>
 
