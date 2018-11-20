@@ -14,15 +14,6 @@ Module::$isLoaded = true;
  * create a config/autoload/Gastro24.global.php and put modifications there
  */
 
-$idMap = [
-    'hotelfachmann' => 2,
-    'koch' => 7,
-    'cuisinier' => 23,
-    'barkeeper' => 43,
-    'rezeption' => 45,
-    'konditor' => 48,
-];
-
 return [
 
     'doctrine' => [
@@ -368,21 +359,11 @@ return [
     ],
 
     'options' => [
+
         'Gastro24/WordpressApiOptions' => [
             'class' => WordpressApi\Options\WordpressApiOptions::class,
-            'options' => [
-                'baseUrl' => 'https://gastro24.yawik.org/blog/wp-json',
-                'httpClientOptions' => [
-                    'auth' => ['gastro', 'jobs.ch'],
-                ],
-                'idMap' => $idMap
-            ],
         ],
-        WordpressApi\Options\WordpressContentSnippetOptions::class => [
-            'options' => [
-                'idMap' => $idMap
-            ],
-        ],
+
         Options\JobsearchQueries::class => [[
             'config' => [
                 'Kategorien' => [

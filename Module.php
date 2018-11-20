@@ -2,6 +2,7 @@
 
 namespace Gastro24;
 
+use Core\Asset\AssetProviderInterface;
 use Core\ModuleManager\ModuleConfigLoader;
 use Gastro24\Options\Landingpages;
 use Zend\Console\Console;
@@ -11,7 +12,7 @@ use Zend\Stdlib\Parameters;
 /**
  * Bootstrap class of our demo skin
  */
-class Module
+class Module implements AssetProviderInterface
 {
     const TEXT_DOMAIN = __NAMESPACE__;
 
@@ -22,6 +23,12 @@ class Module
      * @var bool
      */
     public static $isLoaded=false;
+
+    public function getPublicDir()
+    {
+        return __DIR__ . '/public';
+    }
+
 
     /**
      * Tells the autoloader, where to search for the Gastro24 classes
