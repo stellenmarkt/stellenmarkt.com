@@ -2,7 +2,7 @@
 
 namespace Gastro24;
 
-use Core\Asset\AssetProviderInterface;
+use Yawik\Composer\AssetProviderInterface;
 use Core\ModuleManager\ModuleConfigLoader;
 use Gastro24\Options\Landingpages;
 use Zend\Console\Console;
