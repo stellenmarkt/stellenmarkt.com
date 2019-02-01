@@ -32,7 +32,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 </style>
               
 
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div style="margin-bottom:15px">
             <strong class="h2" style="color:#22436c"><?=$this->jobs->getTotalItemCount()?> Treffer für</strong>
             <h1 style="display:inline;color:#22436c" class="h2">
@@ -114,7 +114,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     </div>
 
 
-    <div class="col-md-9">
+    <div class="col-md-8">
         <div class="row">
     
         
@@ -132,24 +132,13 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     $href = $this->jobUrl($job, ['linkOnly' => true ]);
 
     ?>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-12 col-sm-6 col-xs-12">
         <div class="featured-image-box">
-           <!--<div class="img-box">
-                <a href="<?=$href?>">
-                <?php
-                $logo = $this->gastroLogoUri($job);
-                if ($logo) {
-                    echo '<img class="yk-logo-sm center-block" src="' . $logo . '">';
-                }
-
-                ?>
-                </a>
-            </div>-->
             <div class="content-area">
                 <div class="top-cnt">
         
                     <h4>
-                        <a title="<?=strip_tags($job->getTitle())?>"
+                        <a style="color:#243b84" title="<?=strip_tags($job->getTitle())?>"
                            href="<?=$href?>">
                             <?=strip_tags($job->getTitle())?>
                         </a>
@@ -173,11 +162,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                     }
                     ?>
                     </p>
-               <!--     <p>
-                        <?php $typeOfContract = $job->getClassifications()->getEmploymentTypes()->__toString()?:'Vollzeit' ?>
-                        <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
-                    </p>-->
-                   <p> Publiziert am:
+                   <p> Publiziert:
                         <?php
                         if ($job->getDatePublishStart()): echo $this->dateFormat($job->getDatePublishStart(), 'short', 'none');
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
