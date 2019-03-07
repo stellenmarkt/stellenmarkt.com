@@ -21,7 +21,7 @@ deploy_master:
  only: 
    - master
  script:
-   - dep deploy
+   - dep deploy -vvv
 
 deploy_staging:
  stage: deploy
