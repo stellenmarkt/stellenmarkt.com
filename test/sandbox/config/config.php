@@ -6,10 +6,13 @@ return [
     'modules' => [
         'Core',
         'Auth',
+        'Geo',
+        'Organizations',
         'Jobs',
         'Settings',
         'Applications',
         'Cv',
         'Orders',
+        'Gastro24'
     ],
 ];

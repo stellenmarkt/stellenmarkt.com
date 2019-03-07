@@ -26,7 +26,7 @@ class Module implements AssetProviderInterface
 
     public function getPublicDir()
     {
-        return __DIR__ . '/public';
+        return __DIR__ . '/../public';
     }
 
 
@@ -41,7 +41,7 @@ class Module implements AssetProviderInterface
         return array(
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src',
+                    __NAMESPACE__ => __DIR__ . '/../src',
                 ),
             ),
         );
@@ -54,7 +54,7 @@ class Module implements AssetProviderInterface
      */
     public function getConfig()
     {
-        return ModuleConfigLoader::load(__DIR__ . '/config');
+        return ModuleConfigLoader::load(__DIR__ . '/../config');
     }
 
     function onBootstrap(MvcEvent $e)

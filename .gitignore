@@ -5,3 +5,9 @@ public/Gastro24.css
 
 vendor/
 node_modules/
+
+public/templates/classic/job.css
+public/templates/default/job.css
+public/templates/modern/job.css
+
+test/sandbox/.env

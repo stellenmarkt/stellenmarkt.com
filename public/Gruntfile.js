@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   var targetDir = grunt.config.get('targetDir');
-  var moduleDir = "./module/Gastro24";
+  var moduleDir = targetDir + "/modules/Gastro24";
   
   grunt.config.merge({
     less: {
@@ -15,9 +15,9 @@ module.exports = function(grunt) {
               dest: targetDir + "/modules/Gastro24/Gastro24.css",
               src: moduleDir + "/less/Gastro24.less"
             },
-            { dest: moduleDir + "/public/templates/default/job.css", src: moduleDir + "/public/templates/default/less/job.less"}, // destination file and source file
-            { dest: moduleDir + "/public/templates/modern/job.css", src: moduleDir + "public/templates/modern/less/job.less"}, // destination file and source file
-            { dest: moduleDir + "/public/templates/classic/job.css", src: moduleDir + "public/templates/classic/less/job.less"} // destination file and source file
+            { dest: moduleDir + "/templates/default/job.css", src: moduleDir + "/templates/default/less/job.less"}, // destination file and source file
+            { dest: moduleDir + "/templates/modern/job.css", src: moduleDir + "/templates/modern/less/job.less"}, // destination file and source file
+            { dest: moduleDir + "/templates/classic/job.css", src: moduleDir + "/templates/classic/less/job.less"} // destination file and source file
           ]
         
       }
