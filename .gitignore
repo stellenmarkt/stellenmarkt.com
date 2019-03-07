@@ -2,3 +2,6 @@
 build.properties
 view/.*
 public/Gastro24.css
+
+vendor/
+node_modules/

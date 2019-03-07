@@ -26,7 +26,9 @@
         "yawik/core": "^0.32",
         "yawik/orders": "dev-develop@dev",
         "yawik/jobs-by-mail": "dev-develop@dev",
-        "yawik/solr": "dev-develop@dev"
+        "yawik/solr": "dev-develop@dev",
+        "yawik/simple-import": "dev-develop@dev",
+        "yawik/composer-plugin": "^0.32@dev"
     },
     "autoload": {
         "psr-4": {
@@ -40,7 +42,6 @@
     },
     "scripts": {
         "auto-scripts": [
-            "./vendor/bin/yawik assets-install --relative",
             "npm install"
         ],
         "post-install-cmd": [
