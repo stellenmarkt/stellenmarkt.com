@@ -9,6 +9,7 @@ return [
         'Geo',
         'Organizations',
         'Jobs',
+        'Solr',
         'Settings',
         'Applications',
         'Cv',

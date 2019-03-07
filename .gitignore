@@ -5,6 +5,7 @@ public/Gastro24.css
 
 vendor/
 node_modules/
+dist/
 
 public/templates/classic/job.css
 public/templates/default/job.css
