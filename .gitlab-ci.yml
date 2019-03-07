@@ -20,7 +20,7 @@ deploy_master:
  only: 
    - master
  script:
-   - ssh yawik@php7.gastrojob24.ch -c "ls -l"
+   - ssh yawik@php7.gastrojob24.ch -C "ls -l"
    - dep deploy -vvv
 
 deploy_staging:
