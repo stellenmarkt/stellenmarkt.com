@@ -27,6 +27,7 @@ set('default_stage', 'prod');
 
 host('php7.gastrojob24.ch')
     ->stage('prod')
+    ->multiplexing(false) 
     ->set('deploy_path', '/var/www/production');    
     
 // Tasks
