@@ -26,6 +26,7 @@ set('default_stage', 'prod');
 // Hosts
 
 host('php7.gastrojob24.ch')
+    ->user('yawik')
     ->stage('prod')
     ->multiplexing(false) 
     ->set('deploy_path', '/var/www/production');    
