@@ -2,3 +2,13 @@
 build.properties
 view/.*
 public/Gastro24.css
+
+vendor/
+node_modules/
+dist/
+
+public/templates/classic/job.css
+public/templates/default/job.css
+public/templates/modern/job.css
+
+test/sandbox/.env

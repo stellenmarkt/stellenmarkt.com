@@ -1,31 +1,16 @@
 module.exports = function(grunt) {
-  require('jit-grunt')(grunt);
+    require('load-grunt-tasks')(grunt);
 
-  grunt.initConfig({
-    less: {
-      development: {
-        options: {
-          compress: true,
-          optimization: 2
-        },
-        files: {
-          "public/Gastro24.css": "less/Gastro24.less",
-          "public/templates/default/job.css": "public/templates/default/less/job.less", // destination file and source file
-          "public/templates/modern/job.css": "public/templates/modern/less/job.less", // destination file and source file
-          "public/templates/classic/job.css": "public/templates/classic/less/job.less" // destination file and source file
-        }
-      }
-    },
-    watch: {
-      styles: {
-        files: ['less/**/*.less'], // which files to watch
-        tasks: ['less'],
-        options: {
-          nospawn: true
-        }
-      }
-    }
-  });
+    grunt.config.init({
+        targetDir: './test/sandbox/public',
+        nodeModulesPath: __dirname + "/node_modules"
+    });
 
-  grunt.registerTask('default', ['less', 'watch']);
+    grunt.file.recurse('./test/sandbox/public/modules',function(absPath,rootDir,subDir,fileName){
+        if('Gruntfile.js' === fileName){
+            grunt.loadTasks(rootDir+'/'+subDir);
+        }
+    });
+
+    grunt.registerTask('default',['copy','less','concat','cssmin','uglify']);
 };
