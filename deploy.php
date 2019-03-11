@@ -26,13 +26,7 @@ host('upcoming.stellenmarkt.com')
     ->user('yawik')
     ->stage('prod')
     ->multiplexing(false) 
-    ->set('deploy_path', '/var/www/production');
-
-host('upcoming.stellenmarkt.com')
-    ->user('yawik')
-    ->stage('staging')
-    ->multiplexing(false) 
-    ->set('deploy_path', '/var/www/staging');    
+    ->set('deploy_path', '/var/www/production');   
     
 before('deploy:symlink', 'deploy:build');
 
