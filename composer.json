@@ -19,12 +19,13 @@
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "yawik/core": "^0.32",
+        "yawik/core": "dev-develop as 0.32",
         "yawik/orders": "dev-develop@dev",
         "yawik/jobs-by-mail": "dev-develop@dev",
         "yawik/solr": "dev-develop@dev",
         "yawik/simple-import": "dev-develop@dev",
         "yawik/organizations": "^0.32",
+        "yawik/pdf": "^0.32",
         "yawik/composer-plugin": "^0.32@dev"
     },
     "autoload": {
