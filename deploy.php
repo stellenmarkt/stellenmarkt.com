@@ -4,13 +4,10 @@ namespace Deployer;
 require 'recipe/zend_framework.php';
 
 // Project name
-set('application', 'Gastro24');
+set('application', 'stellenmarkt.com');
 
 // Project repository
-set('repository', 'https://github.com/gastro24/gastro24.git');
-
-// [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', false); 
+set('repository', 'https://github.com/stellenmarkt/stellenmarkt.com.git');
 
 // Shared files/dirs between deploys 
 add('shared_files', []);
@@ -25,18 +22,18 @@ set('default_stage', 'prod');
 
 // Hosts
 
-host('php7.gastrojob24.ch')
+host('upcoming.stellenmarkt.com')
     ->user('yawik')
     ->stage('prod')
     ->multiplexing(false) 
-    ->set('deploy_path', '/var/www/production');    
-    
-// Tasks
-task('pwd', function () {
-    $result = run('pwd');
-    writeln("Current dir: $result");
-});
+    ->set('deploy_path', '/var/www/production');
 
+host('upcoming.stellenmarkt.com')
+    ->user('yawik')
+    ->stage('staging')
+    ->multiplexing(false) 
+    ->set('deploy_path', '/var/www/staging');    
+    
 before('deploy:symlink', 'deploy:build');
 
 task('deploy:build', function () {
