@@ -1,10 +1,10 @@
-# Gastro24
+# Stellenmarkt.com
 
 
 ## Intruduction
 
-This is the Yawik Skin used at Gastrojobs24.ch. This module uses Wordpress for content on the landing pages. Also 
-otherwise many things are hard coded. So just as Gastrojob24.ch needs it.
+This is the Yawik Skin used at stellenmarkt.com. This module uses Wordpress for content on the landing pages. Also 
+otherwise many things are hard coded.
 
 ## Installation using composer
 
