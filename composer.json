@@ -57,7 +57,7 @@
             "dev-develop": "0.32-dev"
         },
         "zf": {
-            "module": "stellenmarkt"
+            "module": "Gastro24"
         }
     }
 }
