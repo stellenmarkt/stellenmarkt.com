@@ -31,7 +31,7 @@ host('upcoming.stellenmarkt.com')
 before('deploy:symlink', 'deploy:build');
 
 task('deploy:build', function () {
-    run('cd {{release_path}}/test/sandbox && rm -R config var && ln -s ../../../../shared/shared/var/ && ln -s ../../../../shared/shared/config/ && cd public && ln -s ../../../../../shared/test/sandbox/public/.htaccess');
+    run('cd {{release_path}}/test/sandbox && rm -R config/autoload var && ln -s ../../../../shared/shared/var/ && cd config && ln -s ../../../../../shared/shared/config/autoload && cd ../public && ln -s ../../../../../shared/test/sandbox/public/.htaccess');
 });
 
 // [Optional] if deploy fails automatically unlock.
