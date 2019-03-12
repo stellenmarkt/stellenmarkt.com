@@ -20,6 +20,7 @@
     "minimum-stability": "dev",
     "require": {
         "yawik/core": "dev-develop as 0.32",
+        "yawik/jobs": "dev-develop as 0.32",
         "yawik/orders": "dev-develop@dev",
         "yawik/jobs-by-mail": "dev-develop@dev",
         "yawik/solr": "dev-develop@dev",
