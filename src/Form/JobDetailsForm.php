@@ -6,7 +6,7 @@
  * @license MIT
  * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
  */
-  
+
 /** */
 namespace Gastro24\Form;
 
@@ -17,9 +17,9 @@ use Zend\Stdlib\ArrayUtils;
 
 /**
  * ${CARET}
- * 
+ *
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
- * @todo write test 
+ * @todo write test
  */
 class JobDetailsForm extends SummaryForm implements HeadscriptProviderInterface
 {
@@ -34,7 +34,7 @@ class JobDetailsForm extends SummaryForm implements HeadscriptProviderInterface
             'assets/blueimp-file-upload/js/vendor/jquery.ui.widget.js',
             'assets/blueimp-file-upload/js/jquery.iframe-transport.js',
             'assets/blueimp-file-upload/js/jquery.fileupload.js',
-            'Gastro24/jobpdfupload.js'
+            'Gastro24/js/jobpdfupload.js'
         ];
     }
 

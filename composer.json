@@ -1,6 +1,6 @@
 {
     "type": "yawik-module",
-    "name": "stellenmarkt/stellenmarkt",
+    "name": "stellenmarkt/stellenmarkt-com",
     "description": "Creates a nice Yawik skin used at https://www.stellenmarkt.com/",
     "license": "MIT",
     "authors": [

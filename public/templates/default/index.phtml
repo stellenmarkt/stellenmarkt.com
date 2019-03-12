@@ -8,7 +8,7 @@
     <meta property="og:url" content="<?= $this->uriJob;?>" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="<?= $this->headTitle; ?> - <?= $this->organizationName;?>" />
-     <link rel="stylesheet" href="<?php echo $this->basePath("/Gastro24/Gastro24.css")?>" type="text/css">
+     <link rel="stylesheet" href="<?php echo $this->basePath("/Gastro24/layout.css")?>" type="text/css">
     <style>
         .col-md-3, .internal-apply-link {display:none;}
         .panel {margin-bottom: 0px;border: 1px solid transparent;box-shadow:none;}
@@ -21,11 +21,11 @@
     <div class=container >
       <div class="row">
        <div class="col-md-9" style="float:none;margin:0 auto;height:100%; background-color:#fff;" >
-           
-           
+
+
                 <?=$this->render('gastro24/jobs/view-intern');?>
-                
-                
+
+
 
         </div>
     </div>

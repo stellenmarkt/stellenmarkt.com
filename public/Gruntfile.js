@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   var targetDir = grunt.config.get('targetDir');
   var moduleDir = targetDir + "/modules/Gastro24";
-  
+
   grunt.config.merge({
     less: {
       gastro24: {
@@ -12,18 +12,17 @@ module.exports = function(grunt) {
         },
         files: [
             {
-              dest: targetDir + "/modules/Gastro24/Gastro24.css",
-              src: moduleDir + "/less/Gastro24.less"
+              dest: targetDir + "/modules/Gastro24/layout.css",
+              src: moduleDir + "/less/layout.less"
             },
             { dest: moduleDir + "/templates/default/job.css", src: moduleDir + "/templates/default/less/job.less"}, // destination file and source file
             { dest: moduleDir + "/templates/modern/job.css", src: moduleDir + "/templates/modern/less/job.less"}, // destination file and source file
             { dest: moduleDir + "/templates/classic/job.css", src: moduleDir + "/templates/classic/less/job.less"} // destination file and source file
           ]
-        
+
       }
     }
   });
 
   grunt.registerTask('yawik:gastro24', ['less:gastro24']);
 };
-

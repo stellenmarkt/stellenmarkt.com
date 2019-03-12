@@ -8,7 +8,7 @@
  */
 
 $form = $this->element;
-$this->headScript()->appendFile($this->basePath('modules/Gastro24/create-single-job.js'));
+$this->headScript()->appendFile($this->basePath('modules/Gastro24/js/create-single-job.js'));
 ?>
 
 
@@ -22,6 +22,3 @@ $this->headScript()->appendFile($this->basePath('modules/Gastro24/create-single-
         <?=$this->formCollection($form->get('buttons'))?>
     </div></div>
 <?=$this->form()->closeTag($form)?>
-
-
-

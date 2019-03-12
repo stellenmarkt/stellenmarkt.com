@@ -13,15 +13,15 @@ $form = $this->services('forms.Jobs/JobboardSearch');
 $form->setButtonElement('q');
 $form->setAttribute('action', $this->url('lang/jobboard', [], true));
 
-$this->headTitle('Jobs für Gastronomie, Hotel & Tourismus');
-$this->headMeta()->appendName("keywords", "Jobs aus der Gastronomie");
-$this->headMeta()->appendName("description", " Gastronomie Jobbörse mit top-aktuellen Gastro Jobs, Hotel & Tourismus Jobs und mehr. Jetzt Traumjob finden - auf einen Klick!");
-$this->headScript()->appendFile($this->basePath('modules/Gastro24/jquery.matchHeight.js'))->appendFile($this->basePath('modules/Gastro24/index.js'));
+$this->headTitle('Jobs');
+$this->headMeta()->appendName("keywords", "Jobs");
+$this->headMeta()->appendName("description", "Jobs");
+$this->headScript()->appendFile($this->basePath('modules/Gastro24/js/jquery.matchHeight.js'))->appendFile($this->basePath('modules/Gastro24/js/index.js'));
 
 ?>
 
 <div id="searchform-wrapper" class="row jumbotron text-center">
-    <h1>Jobs für Gastronomie Fachkräfte</h1>
+    <h1>Jobs für Fachkräfte</h1>
     <p class="lead">Spannende Jobs für Gastronomie, Hotellerie und Tourismus auf einen Klick finden</p>
     <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
         <div class="search-form-container">
@@ -57,7 +57,7 @@ foreach ($queries->getTabs() as $tab => $sections):
     endforeach;
     $sectionHtml .= '</div></div>';
 endforeach;
-                
+
 
 ?>
 
@@ -70,7 +70,7 @@ endforeach;
     </ul>
     <div class="tab-content"><p></p><?=$sectionHtml?></div>
 </div>
-<?php $companies = $queries->getCompanies(); 
+<?php $companies = $queries->getCompanies();
 if (count($companies)):
     $companies = array_chunk($companies, 6, true);?>
 <div id="logos-selected">
@@ -106,9 +106,7 @@ if (count($companies)):
             </div>
         <?php $active = ''; endforeach ?>
     </div>
-   </div>
-
-
+  </div>
  </div>
 </div>
 <div>

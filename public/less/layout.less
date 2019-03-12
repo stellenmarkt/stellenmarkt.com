@@ -1,6 +1,6 @@
 @import "../../../modules/Core/less/yawik.less";
 
-@g24-blue: #243b84;
+@g24-blue: #af5f3d;
 @g24-grey:  #242424;
 @g24-white: #ffffff;
 
@@ -88,8 +88,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         vertical-align: top;
     }
 
-
-
     .content-area {
         background-color: @g24-white;
         padding: 20px;
@@ -104,7 +102,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     position: relative;
 }
 .center-block {
-      max-width: 100%;
+    max-width: 100%;
     position: absolute;
     max-height: 100%;
     margin: auto;
@@ -115,30 +113,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     left: 0;
 }
 
-     .input-group .form-control  {
-             border-radius:0
-
-         }
+.input-group .form-control  {
+     border-radius: 0;
+}
 
 #jobs-list-filter-wrapper {
     padding: 0;
 
-
     .input-group {
         margin-left: auto;
-    	margin-right: auto;
+       	margin-right: auto;
         margin-top: 0;
         margin-bottom: 0;
-        width:100%
     }
 
 
     .search-form-container {
-        background-color: @g24-blue;
+        background-color: @brand-primary;
         border-radius: 0;
         position: relative;
         color: #fff;
-        padding: 20px 0;
+        padding: 10px 0;
         .btn-primary {
             background-color: @btn-info-bg;
             border-color: @btn-info-border;
@@ -154,9 +149,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .home #jobs-list-filter-wrapper {
     .search-form-container {
         background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 5px;
+        border-radius: 10px;
         border: none;
-        padding: 20px 20px;
+        padding: 10px 10px;
         .btn-primary {
             background-color: @btn-primary-bg;
             border-color: @btn-primary-border;
@@ -191,7 +186,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         width: 100%;
     }
     .bg-static {
-        background-image: url(background_gastrojob24_img.jpg);
+        background-image: url(background.jpg);
         background-color: #999;
         background-size: cover;
         background-repeat: no-repeat;
@@ -222,7 +217,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
     #footer {
-        background-color: #243b84;
+        background-color: @brand-primary;
         padding: 25px 0;
         font-size: 15px;
         line-height: 24px;
@@ -387,20 +382,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     }
 
     .search-form-container {
+        font-size: 16px;
+
         .btn-default {
             position: absolute;
             right: 100px;
             top: 10px;
         }
-        .btn-primary {
+        input,
+        .btn-primary,
+        {
             height: 55px;
-            font-size: 16px;
             padding: 0 20px;
         }
-        input {
-            height: 55px;
-            font-size: 16px;
-            padding: 0 20px;
+        .select2-selection--single
+         {
+            height: 55px !important;
+            padding: 16px 20px 16px 20px !important;
         }
     }
 

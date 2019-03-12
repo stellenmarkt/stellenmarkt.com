@@ -335,8 +335,6 @@ return [
                         ]
                     ],
                     'organizations-profiles' => [
-
-
                                 'type' => 'Regex',
                                 'options' => [
                                     'regex' => '/profile-(?<name>.*?)-(?<id>[a-f0-9]+)$',
