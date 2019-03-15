@@ -22,13 +22,6 @@ deploy_master:
  script:
    - dep deploy
 
-deploy_staging:
- stage: deploy
- except: 
-   - master
- script:
-   - dep deploy staging
-
 test:
  stage: test
  script:
