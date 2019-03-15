@@ -7,16 +7,21 @@ require 'recipe/zend_framework.php';
 set('application', 'stellenmarkt.com');
 
 // Project repository
-set('repository', 'https://github.com/stellenmarkt/stellenmarkt.com.git');
+set('repository', 'git@gitlab.cross-solution.de:cbleek/Stellenmarkt.com.git');
 
 // Shared files/dirs between deploys 
-add('shared_files', []);
+add('shared_files', ['test/sandbox/public/.htaccess']);
 add('shared_dirs', [
-   'shared',
+    'test/sandbox/var/log',
+    'test/sandbox/var/cache',
+    'test/sandbox/config/autoload',
 ]);
 
 // Writable dirs by web server 
-add('writable_dirs', []);
+add('writable_dirs', [
+    'test/sandbox/var/cache',
+    'test/sandbox/var/log',
+]);
 
 set('default_stage', 'prod');
 
@@ -28,12 +33,6 @@ host('upcoming.stellenmarkt.com')
     ->multiplexing(false) 
     ->set('deploy_path', '/var/www/production');   
     
-before('deploy:symlink', 'deploy:build');
-
-task('deploy:build', function () {
-    run('cd {{release_path}}/test/sandbox && rm -R config/autoload var && ln -s ../../../../shared/shared/var/ && cd config && ln -s ../../../../../shared/shared/config/autoload && cd ../public && ln -s ../../../../../shared/test/sandbox/public/.htaccess');
-});
-
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
