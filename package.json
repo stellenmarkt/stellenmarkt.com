@@ -1,6 +1,12 @@
 {
-  "name": "yawik-orders",
+  "name": "yawik-stellenmarkt",
   "version": "0.32.0",
+  "description": "build assets",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.cross-solution.de/cbleek/Stellenmarkt.com"
+  },
   "scripts": {
     "postinstall": "grunt"
   },

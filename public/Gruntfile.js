@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
   grunt.config.merge({
     less: {
-      gastro24: {
+      stellenmarkt: {
         options: {
           compress: true,
           optimization: 2
