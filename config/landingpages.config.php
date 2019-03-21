@@ -35,10 +35,10 @@ $options = [
         'panel' => 'A',
         'text' => 'ABAP Developer'
     ],
-    'ABAP Programmierer' => [
+    'ABAP-Programmierer' => [
         'id' => 2,
         'query' => ['q' => 'ABAP Programmierer'],
-        'tab' => 'DEF',
+        'tab' => 'Job ABC',
         'panel' => 'A',
         'text' => 'ABAP Programmierer'
     ],
