@@ -1,7 +1,7 @@
 @import "../../../modules/Core/less/yawik.less";
 
-@g24-blue: #af5f3d;
-@g24-grey:  #242424;
+@brand-primary: #0018a8;
+@g24-grey: #242424;
 @g24-white: #ffffff;
 
 @fa-font-path: '/dist/fonts';
@@ -10,7 +10,6 @@
 @font-family-sans-serif: sans-serif;
 @border-radius-base: 0px;
 @headings-font-weight: 600;
-@brand-primary: @g24-blue;
 @footer-height: 49px;
 @navbar-height: 80px;
 @navbar-default-link-color: green;
@@ -19,8 +18,8 @@
 @nav-link-hover-bg: transparent;
 @navbar-inverse-toggle-hover-bg: @gray-lighter;
 @dropdown-link-active-bg: @gray-lighter;
-@dropdown-link-active-color: @g24-blue;
-@dropdown-link-hover-color: @g24-blue;
+@dropdown-link-active-color: @brand-primary;
+@dropdown-link-hover-color: @brand-primary;
 
 @panel-border-radius: 0px;
 @panel-primary-heading-bg: #fff;
@@ -34,7 +33,7 @@
 @link-hover-color: @g24-grey;
 @nav-pills-active-link-hover-color: green;
 
-@btn-primary-bg: @g24-blue;
+@btn-primary-bg: @brand-primary;
 
 @jumbotron-padding: 0px;
 
@@ -44,8 +43,8 @@
 @font-size-h5: 14px;
 
 @yk-tab-bg: lightgray;
-@yk-tab-color: @g24-blue;
-@yk-tab-active-bg: @g24-blue;
+@yk-tab-color: @brand-primary;
+@yk-tab-active-bg: @brand-primary;
 @yk-tab-active-color: lightgray;
 
 html {
@@ -60,7 +59,7 @@ body {
 
 .navbar-header {
     .menu-logo {
-        width: 200px;
+        width: 290px;
     }
 }
 
@@ -418,7 +417,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         color: @g24-white;
     }
     .home .navbar-brand {
-        color: @g24-blue;
+        color: @brand-primary;
     }
     .navbar-brand {
        display: block;
@@ -434,12 +433,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
             font-weight: 600;
 
             ul li a.inverted {
-                border: 1px solid @g24-blue;
-                background-color: @g24-blue;
+                border: 1px solid @brand-primary;
+                background-color: @brand-primary;
                 color: @g24-white;
             }
             ul li a.inverted:hover {
-                background-color: darken(@g24-blue,10%);
+                background-color: darken(@brand-primary,10%);
             }
             .navbar-nav > li > a {
                 padding-top: 10px;
@@ -478,14 +477,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
             height: inherit;
             ul li a.inverted {
                 border: 1px solid @g24-grey;
-                background-color: @g24-blue;
+                background-color: @brand-primary;
                 color: @g24-white;
             }
             .dropdown-menu>li>a {
                 color: @g24-white;
             }
             a:hover {
-                background-color: @g24-blue;
+                background-color: @brand-primary;
             }
         }
         .home #main-navigation {
@@ -493,12 +492,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
                 color: @g24-white;
             }
             a:hover {
-                background-color: @g24-blue;
+                background-color: @brand-primary;
             }
         }
         button.collapsed {
             border-color: @g24-grey;
-            background-color: @g24-blue;
+            background-color: @brand-primary;
         }
 
     }
