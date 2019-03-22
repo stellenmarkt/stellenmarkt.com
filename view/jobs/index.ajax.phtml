@@ -30,7 +30,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     }
   }
 </style>
-              
+
 
     <div class="col-md-3">
         <div style="margin-bottom:15px">
@@ -38,14 +38,14 @@ $description = $wordpress->call('value', ['content.rendered'], '');
             <h1 style="display:inline;color:#22436c" class="h2">
                 <?=$wordpress->call('value', ['title.rendered'], '') ?: (count($this->jobs) ? 'Ihre Job-Suche' : 'Leider keine passenden Jobs gefunden'); ?>
             </h1>
-            
+
                          <?php $parts=preg_split('~<!--more-->~' , $description);?>
            <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
-            <p><?= $parts[2] ?></p> 
-         
-               
+            <p><?= $parts[2] ?></p>
+
+
             <?php endif ?>
-            
+
 	  </div>
 	<?php if ($hasFacets):
     if ($this->params()->fromRoute('isLandingPage')):?>
@@ -53,12 +53,12 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <?php endif;
     $facets = $jobs->getFacets();
     ?>
-    
+
 
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
 
     <div class="panel-group collapse dont-collapse-sm">
-	
+
         <?php $facetsHtml = ''; $isFirstFacet = true; $atLeastOneTotalActive = false; foreach ($facets as $facetName => $facetValues):?>
             <?php if(count($facetValues)>0): $atLeastOneActive = false; $facetsList = []; ob_start();?>
             <div id="facets-box-<?=$facetName?>" class="panel panel-default">
@@ -116,10 +116,10 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
     <div class="col-md-9">
         <div class="row">
-    
-        
-     
-            
+
+
+
+
       <?php endif;?>
 
 
@@ -129,7 +129,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <?php
 
     $org = $job->getOrganization();
-    $href = $this->jobUrl($job, ['linkOnly' => true ]);
+    $href = $this->jobUrl($job, ['linkOnly' => true], ['ref' => 'nofollow' ]);
 
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">
@@ -147,7 +147,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
             </div>
             <div class="content-area">
                 <div class="top-cnt">
-        
+
                     <h4>
                         <a title="<?=strip_tags($job->getTitle())?>"
                            href="<?=$href?>">
@@ -159,14 +159,14 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
                     if ($org && $org->getOrganizationName() && $org->getOrganizationName()->getName()) {
                        if (\Organizations\Entity\Organization::PROFILE_DISABLED !== $org->getProfileSetting()) {
-                            
+
                               echo sprintf('<a href="%s?clear=1">%s</a>',
                                 $this->orgProfileUrl($org),
                                 $org->getOrganizationName()->getName());
-                           
+
                         } else {
                            echo $org->getOrganizationName()->getName();
-                            
+
                         }
                     } else if ($job->getCompany()) {
                         echo $job->getCompany();
@@ -183,11 +183,11 @@ $description = $wordpress->call('value', ['content.rendered'], '');
                         elseif ($job->getDateCreated()): echo $this->dateFormat($job->getDateCreated(), 'short', 'none');
                         endif?>
                     <br /><?=preg_replace('~\(.*?\)$~', '', (string) $job->getLocation())?> </p>
-                   
+
                 </div>
             </div>
         </div>
- 
+
      </div>
     <?php endforeach?>
 
@@ -204,6 +204,3 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     </div>
         <?=$hasFacets ? '</div>' : '' ?>
 <?php endif ?>
-
-
-

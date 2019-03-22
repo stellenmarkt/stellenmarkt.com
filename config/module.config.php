@@ -140,9 +140,9 @@ return [
             'orgProfileUrl' => View\Helper\OrgProfileUrl::class,
         ],
         'delegators' => [
-            'jobUrl' => [
-                Factory\View\Helper\JobUrlDelegatorFactory::class,
-            ],
+//            'jobUrl' => [
+//                Factory\View\Helper\JobUrlDelegatorFactory::class,
+//            ],
         ],
     ],
 
