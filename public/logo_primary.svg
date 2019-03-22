@@ -69,7 +69,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="485.9078"
+     inkscape:cx="311.47718"
      inkscape:cy="40.02924"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -111,10 +111,10 @@
          id="tspan2987"
          x="206.07112"
          y="408.89502"
-         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#0018a8;fill-opacity:1;font-family:TeX Gyre Bonum;-inkscape-font-specification:TeX Gyre Bonum"><tspan
-   style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Bonum;-inkscape-font-specification:TeX Gyre Bonum;fill:#0018a8;fill-opacity:1"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#001858;fill-opacity:1;font-family:TeX Gyre Bonum;-inkscape-font-specification:TeX Gyre Bonum"><tspan
+   style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Bonum;-inkscape-font-specification:TeX Gyre Bonum;fill:#001858;fill-opacity:1"
    id="tspan3898">StellenMarkt</tspan>.<tspan
-   style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans;fill:#0018a8;fill-opacity:1"
+   style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Sans;-inkscape-font-specification:Sans;fill:#001858;fill-opacity:1"
    id="tspan3851">com</tspan></tspan></text>
     <flowRoot
        xml:space="preserve"
@@ -137,7 +137,7 @@
            height="151.52289"
            x="-33.335033"
            y="-72.477997" /></flowRegion><flowPara
-         id="flowPara3833"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3833" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3835"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -148,7 +148,7 @@
            height="102.02541"
            x="-28.284271"
            y="-76.518608" /></flowRegion><flowPara
-         id="flowPara3841"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3841" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3843"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -159,7 +159,7 @@
            height="267.69043"
            x="-64.649765"
            y="-104.80288" /></flowRegion><flowPara
-         id="flowPara3849"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3849" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3853"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -170,5 +170,5 @@
            height="226.27417"
            x="-69.700523"
            y="-92.681053" /></flowRegion><flowPara
-         id="flowPara3859"></flowPara></flowRoot>  </g>
+         id="flowPara3859" /></flowRoot>  </g>
 </svg>
