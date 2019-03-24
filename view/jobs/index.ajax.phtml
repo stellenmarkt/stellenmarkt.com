@@ -129,13 +129,13 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <?php
 
     $org = $job->getOrganization();
-    $href = $this->jobUrl($job, ['linkOnly' => true], ['ref' => 'nofollow' ]);
+    $href = $this->jobUrl($job, ['linkOnly' => true]);
 
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="featured-image-box">
             <div class="img-box">
-                <a href="<?=$href?>">
+                <a href="<?=$href?>" rel="nofollow" target="_blank">
                 <?php
                 $logo = $this->gastroLogoUri($job);
                 if ($logo) {
@@ -150,7 +150,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
                     <h4>
                         <a title="<?=strip_tags($job->getTitle())?>"
-                           href="<?=$href?>">
+                           href="<?=$href?>" ref="nofollow" target="_blank">
                             <?=strip_tags($job->getTitle())?>
                         </a>
                     </h4>
