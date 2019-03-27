@@ -85,7 +85,7 @@ $this->headScript()->captureStart();
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
-<nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
+<div id="jobs-list-filter-wrapper">
     <div class="search-form-container ">
             <div class="container ">
         <?php
@@ -102,14 +102,25 @@ $this->headScript()->captureStart();
                                                 'attributes' => ['class' => 'facet-param', 'value' => 1]]);
                     endforeach;
                 endif;
-            endforeach;$this->filterForm->setButtonElement('d');
+            endforeach;
+            $this->filterForm->setButtonElement('d');
             //$this->filterForm->add( ['type' => 'hidden', 'name' => 'clear', 'attributes' => ['value' => 1]]);
             $this->filterForm->setAttribute('data-handle-by', 'native');
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
-             echo $this->searchForm($this->filterForm)  ?>
+             ?>
+             <div class="search-form-container">
+                 <?=$this->searchForm()->openTag($filterForm)?>
+                 <div class="row">
+                 <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($filterForm->get('q'))?></div>
+                 <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($filterForm->get('l'))?></div>
+                 <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($filterForm->get('d'))?></div>
+                 <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($filterForm->getButtons())?></div>
+                 </div>
+                 <?=$this->searchForm()->closeTag()?>
+             </div>
   </div>
  </div>
-</nav>
+</div>
 
 
 		 <?php $parts=preg_split('~<!--more-->~' , $description);?>

@@ -20,12 +20,19 @@ $this->headScript()->appendFile($this->basePath('modules/Gastro24/js/jquery.matc
 
 ?>
 
-<div id="searchform-wrapper" class="row jumbotron text-center">
+<div id="searchform-wrapper" class="row text-center">
     <h1>Jobs für Fachkräfte</h1>
     <p class="lead">Spannende Jobs für Gastronomie, Hotellerie und Tourismus auf einen Klick finden</p>
-    <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
+    <nav class="navbar" id="jobs-list-filter-wrapper">
         <div class="search-form-container">
-            <?=$this->searchForm($form);?>
+          <?=$this->form()->openTag($form)?>
+          <div class="row">
+            <div class="input-group col-md-6 col-xs-12"><?=$this->formElement($form->get('q'))?></div>
+            <div class="input-group col-md-2 col-xs-6"><?=$this->formElement($form->get('l'))?></div>
+            <div class="input-group col-md-2 col-xs-6"><?=$this->formElement($form->get('d'))?></div>
+            <div class="input-group col-md-2 col-xs-12"><?=$this->searchForm()->renderButtons($form->getButtons())?></div>
+         </div>
+          <?=$this->form()->closeTag()?>
         </div>
     </nav>
 </div>

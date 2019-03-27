@@ -34,7 +34,8 @@ $this->headLink()->prependStylesheet($this->basePath('modules/Gastro24/layout.cs
 $this->headLink()->prependStylesheet($this->basePath('dist/css/core.min.css'));
 $this->configHeadScript()->prependFile($this->basepath('dist/js/core.js'));
 $this->configHeadScript()->appendFile($this->basePath('modules/Gastro24/js/jquery.matchHeight.js'))
-                         ->appendFile($this->basePath('modules/Gastro24/js/index.js'));
+                         ->appendFile($this->basePath('modules/Gastro24/js/index.js'))
+                         ->appendFile($this->basePath('modules/Core/js/core.forms.js'));
 
 $langScript = 'dist/locales/' . $lang . '.js';
 $this->configHeadScript()->appendFile($this->basePath($langScript));
@@ -118,17 +119,24 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
         <?php
         /* @todo Probably, we should create a dedicated IndexController to inject this dependencies. */
         $form = $this->services('forms.Jobs/JobboardSearch');
-        $form->setButtonElement('d');
+        $form->setAttribute('data-handle-by', 'native');
         $form->setAttribute('action', $this->url('lang/jobboard', [], true));
 
         ?>
-        <div class="row jumbotron text-center">
+        <div class="row text-center">
             <h1>finden Sie Ihren Traumjob</h1>
-            <nav class="navbar yk-toolbar" id="jobs-list-filter-wrapper">
+            <div id="jobs-list-filter-wrapper">
                 <div class="search-form-container">
-                    <?=$this->searchForm($form);?>
+                    <?=$this->searchForm()->openTag($form)?>
+                    <div class="row">
+                    <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($form->get('q'))?></div>
+                    <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($form->get('l'))?></div>
+                    <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($form->get('d'))?></div>
+                    <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($form->getButtons())?></div>
+                    </div>
+                    <?=$this->searchForm()->closeTag()?>
                 </div>
-            </nav>
+            </div>
         </div>
       </div>
     </header>
