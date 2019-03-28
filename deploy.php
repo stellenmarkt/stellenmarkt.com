@@ -10,7 +10,11 @@ set('application', 'stellenmarkt.com');
 set('repository', 'git@gitlab.cross-solution.de:cbleek/Stellenmarkt.com.git');
 
 // Shared files/dirs between deploys 
-add('shared_files', ['test/sandbox/public/.htaccess']);
+add('shared_files', [
+    'test/sandbox/public/.htaccess',
+    'test/sandbox/public/robots.txt',
+]);
+
 add('shared_dirs', [
     'test/sandbox/var/log',
     'test/sandbox/var/cache',
