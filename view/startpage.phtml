@@ -105,8 +105,8 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
                       <?=$this->searchForm()->openTag($form)?>
                       <div class="row">
                       <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($form->get('q'))?></div>
-                      <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($form->get('l'))?></div>
-                      <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($form->get('d'))?></div>
+                      <div class="input-group col-md-4 col-xs-6 col-sm-10 pull-left"><?=$this->formElement($form->get('l'))?></div>
+                      <div class="input-group col-md-1 col-xs-6 col-sm-2 pull-left"><?=$this->formElement($form->get('d'))?></div>
                       <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($form->getButtons())?></div>
                       </div>
                       <?=$this->searchForm()->closeTag()?>

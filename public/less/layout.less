@@ -257,18 +257,30 @@ main {
 // IPad und größer
 @media screen {
 	@media(min-width: @screen-sm) {
-		.home {
-			#jobs-list-filter-wrapper {
-				padding: 15px 30px 15px 30px;
-				background-color: #000;
-				border-radius: 30px;
-			}
-		}
+
 		.navbar-header {
 			.menu-logo {
 				width: 290px;
 			}
 		}
+    #wrapper {
+	    text-align: center;
+	    min-height: 600px;
+	    #bg-full {
+	     	position: absolute;
+		    width: 100%;
+	    }
+      .bg-static {
+		    background-image: url(background.jpg);
+		    background-color: #999;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+	  	  background-position: center center;
+	 	    display: block;
+	 	    min-height: 600px;
+	    }
+    }
+
 		.search-form-container {
 			input[type=text] {
 				border-top-left-radius: 15px !important;
@@ -286,7 +298,14 @@ main {
 				padding-right: 45px !important;
 			}
 		}
+
 		.home {
+      #jobs-list-filter-wrapper {
+        padding: 15px 30px 15px 30px;
+        background-color: #000;
+        border-radius: 30px;
+      }
+
 			h1 {
 				color: #fff;
 				font-size: 31px;
@@ -331,6 +350,26 @@ main {
 			}
 		}
 	}
+  // Ipad
+  @media(max-width: @screen-sm) {
+    .search-form-container {
+      input[type=text] {
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-left-radius: 0px !important;
+      }
+      .btn-default {
+        width: 16.66% !important;
+        border-bottom-right-radius: 15px !important;
+        border-top-right-radius: 0px !important;
+
+      }
+      .btn-primary {
+        width: 83.33% !important;
+        border-bottom-left-radius: 15px !important;
+      }
+    }
+  }
 	// Menü auf Handy max 480px
 	@media(max-width: @screen-xs) {
 		.home {
