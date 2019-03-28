@@ -93,7 +93,7 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
     <div id="bg-full">
         <span class="bg-static"></span>
     </div>
-    <div id="header" role="banner" class="container-fluid">
+    <header id="header" role="banner" class="container-fluid">
 		     <div class="row navbar">
                <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#main-navigation" data-toggle="collapse" type="button">
@@ -142,7 +142,7 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
                   </div>
               </div>
         </div>
-    </div>
+    </header>
 </div>
 <?php
 
@@ -150,7 +150,7 @@ $queries = $this->services(\Gastro24\Options\Landingpages::class);
 $this->headTitle($this->translate('Home'));
 
 ?>
-<div id="content" class="container-fluid">
+<main id="content" class="container-fluid">
     <?php echo $notifications?>
         <?php
 
@@ -210,7 +210,7 @@ $this->headTitle($this->translate('Home'));
             </div>
         </div>
     </div>
-</div>
+</main>
 <!-- /container -->
 <?php echo $this->partial("footer") ?>
 <?php echo $this->partial("piwik") ?>
