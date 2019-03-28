@@ -25,7 +25,11 @@ $this->headTitle($this->translate('Stellenmarkt.com'))->setSeparator(' | ')->set
 // set default keywords
 
 $this->headMeta()->setCharset("utf-8");
+
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
+$this->headMeta()->appendName("keywords", "jobs, stellenmarkt, stellenangebote, job, stellenanzeigen, jobbörse");
+$this->headMeta()->appendName("description", "Stellenmarkt.com | Aktuelle Jobs und Stellenangebote bei Stellenmarkt.com | Der Stellenmarkt für Fach- und Führungskräfte | Online den besten Job finden und sofort bewerben!");
+$this->headMeta()->appendName("robots", "index.follow");
 
 $this->configHeadScript()->prependScript('var lang="' . $lang . '";'
                                          . 'var basePath="' . $this->basePath() . '";');
@@ -89,9 +93,8 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
     <div id="bg-full">
         <span class="bg-static"></span>
     </div>
-    <header id="header" role="banner">
-        <div class="container navbar">
-		     <div class="row">
+    <header id="header" role="banner" class="container-fluid">
+		     <div class="row navbar">
                <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#main-navigation" data-toggle="collapse" type="button">
                     <span class="sr-only">Toggle navigation</span>
@@ -125,20 +128,20 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
         ?>
         <div class="row text-center">
             <h1>finden Sie Ihren Traumjob</h1>
-            <div id="jobs-list-filter-wrapper">
-                <div class="search-form-container">
-                    <?=$this->searchForm()->openTag($form)?>
-                    <div class="row">
-                    <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($form->get('q'))?></div>
-                    <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($form->get('l'))?></div>
-                    <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($form->get('d'))?></div>
-                    <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($form->getButtons())?></div>
-                    </div>
-                    <?=$this->searchForm()->closeTag()?>
-                </div>
-            </div>
+            <div class="container">
+              <div id="jobs-list-filter-wrapper">
+                  <div class="search-form-container">
+                      <?=$this->searchForm()->openTag($form)?>
+                      <div class="row">
+                      <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($form->get('q'))?></div>
+                      <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($form->get('l'))?></div>
+                      <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($form->get('d'))?></div>
+                      <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($form->getButtons())?></div>
+                      </div>
+                      <?=$this->searchForm()->closeTag()?>
+                  </div>
+              </div>
         </div>
-      </div>
     </header>
 </div>
 <?php
@@ -147,9 +150,8 @@ $queries = $this->services(\Gastro24\Options\Landingpages::class);
 $this->headTitle($this->translate('Home'));
 
 ?>
-<main id="content">
+<main id="content" class="container-fluid">
     <?php echo $notifications?>
-    <div class="container">
         <?php
 
         $tabs = [];
