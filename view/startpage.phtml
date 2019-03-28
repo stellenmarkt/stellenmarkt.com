@@ -24,25 +24,22 @@ $this->headTitle($this->translate('Stellenmarkt.com'))->setSeparator(' | ')->set
 
 // set default keywords
 
-$this->headMeta()->setCharset("utf-8");
+$this->headMeta()->setCharset("utf-8")
+                 ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                 ->appendName('keywords', 'jobs, stellenmarkt, stellenangebote, job, stellenanzeigen, jobbörse')
+                 ->appendName('description', 'Stellenmarkt.com | Aktuelle Jobs und Stellenangebote bei Stellenmarkt.com | Der Stellenmarkt für Fach- und Führungskräfte | Online den besten Job finden und sofort bewerben!')
+                 ->appendName('robots', 'index,follow');
 
-$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
-$this->headMeta()->appendName("keywords", "jobs, stellenmarkt, stellenangebote, job, stellenanzeigen, jobbörse");
-$this->headMeta()->appendName("description", "Stellenmarkt.com | Aktuelle Jobs und Stellenangebote bei Stellenmarkt.com | Der Stellenmarkt für Fach- und Führungskräfte | Online den besten Job finden und sofort bewerben!");
-$this->headMeta()->appendName("robots", "index.follow");
-
-$this->configHeadScript()->prependScript('var lang="' . $lang . '";'
-                                         . 'var basePath="' . $this->basePath() . '";');
-
-$this->headLink()->prependStylesheet($this->basePath('modules/Gastro24/layout.css'));
-$this->headLink()->prependStylesheet($this->basePath('dist/css/core.min.css'));
-$this->configHeadScript()->prependFile($this->basepath('dist/js/core.js'));
-$this->configHeadScript()->appendFile($this->basePath('modules/Gastro24/js/jquery.matchHeight.js'))
-                         ->appendFile($this->basePath('modules/Gastro24/js/index.js'))
-                         ->appendFile($this->basePath('modules/Core/js/core.forms.js'));
+$this->headLink()->prependStylesheet($this->basePath('modules/Gastro24/layout.css'))
+                 ->prependStylesheet($this->basePath('dist/css/core.min.css'));
 
 $langScript = 'dist/locales/' . $lang . '.js';
-$this->configHeadScript()->appendFile($this->basePath($langScript));
+
+$this->configHeadScript()->prependFile($this->basepath('dist/js/core.js'))
+                         ->appendFile($this->basePath('modules/Gastro24/js/jquery.matchHeight.js'))
+                         ->appendFile($this->basePath('modules/Gastro24/js/index.js'))
+                         ->appendFile($this->basePath('modules/Core/js/core.forms.js'))
+                         ->appendFile($this->basePath($langScript));
 
 $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '";'
     . 'var basePath="' . $this->basePath() . '";');
