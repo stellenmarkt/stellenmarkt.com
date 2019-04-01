@@ -500,7 +500,13 @@ $options = [
     'Gesundheitsberater' => ['id' => 396, 'query' => ['q' => 'Gesundheitsberater'], 'tab' => 'Job ABC', 'panel' => 'G', 'text' => 'Gesundheitsberater'],
     'GIS-Spezialist' => ['id' => 397, 'query' => ['q' => 'GIS Spezialist'], 'tab' => 'Job ABC', 'panel' => 'G', 'text' => 'GIS Spezialist'],
     'Glaser' => ['id' => 398, 'query' => ['q' => 'Glaser'], 'tab' => 'Job ABC', 'panel' => 'G', 'text' => 'Glaser'],
-    'Grafikdesigner' => ['id' => 399, 'query' => ['q' => 'Grafikdesigner'], 'tab' => 'Job ABC', 'panel' => 'G', 'text' => 'Grafikdesigner'],
+    'Grafikdesigner' => [
+        'id' => 918, 
+        'query' => ['q' => 'Grafikdesigner'], 
+        'tab' => 'Job ABC', 
+        'panel' => 'G', 
+        'text' => 'Grafikdesigner'
+    ],
     'Grafiker' => ['id' => 400, 'query' => ['q' => 'Grafiker'], 'tab' => 'Job ABC', 'panel' => 'G', 'text' => 'Grafiker'],
     'Grosshandelskaufmann' => ['id' => 401, 'query' => ['q' => 'Großhandelskaufmann'], 'tab' => 'Job ABC', 'panel' => 'G', 'text' => 'Großhandelskaufmann'],
     'Hardwareentwickler' => ['id' => 402, 'query' => ['q' => 'Hardwareentwickler'], 'tab' => 'Job ABC', 'panel' => 'H', 'text' => 'Hardwareentwickler'],
