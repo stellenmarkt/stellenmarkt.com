@@ -126,22 +126,22 @@ $this->headTitle($this->translate('Home'));
         $sections = [];
         $active = ' active';
         $sectionHtml = '';
-        foreach ($queries->getTabs() as $tab => $sections):
-            $tabSlug = strtolower(str_replace(' ', '', $tab));
-            $tabs[$tabSlug] = $tab;
-            $sectionHtml .= '<hr><h2 class="text-center">' . $tab . '</h2><div class="row">';
-            $active='';
-            foreach ($sections as $section => $links):
-                $sectionHtml .= '<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2"><h3>'. $section .'</h3><ul>';
-                foreach ($links as $spec):
-                    $sectionHtml .= '<li><a href="' .
-                                    $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' .
-                                    $spec[1] .'</a></li>';
-                endforeach;
-                $sectionHtml .= '</ul></div>';
-            endforeach;
-            $sectionHtml .= '</div>';
-        endforeach;
+#        foreach ($queries->getTabs() as $tab => $sections):
+#            $tabSlug = strtolower(str_replace(' ', '', $tab));
+#            $tabs[$tabSlug] = $tab;
+#            $sectionHtml .= '<hr><h2 class="text-center">' . $tab . '</h2><div class="row">';
+#            $active='';
+#            foreach ($sections as $section => $links):
+#                $sectionHtml .= '<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2"><h3>'. $section .'</h3><ul>';
+#                foreach ($links as $spec):
+#                    $sectionHtml .= '<li><a href="' .
+#                                    $this->url('lang/landingPage', ['q' => $spec[0], 'format' => 'html' ], true) . '">' .
+#                                    $spec[1] .'</a></li>';
+#                endforeach;
+#                $sectionHtml .= '</ul></div>';
+#            endforeach;
+#            $sectionHtml .= '</div>';
+#        endforeach;
 
         ?>
         <?=$sectionHtml?>
