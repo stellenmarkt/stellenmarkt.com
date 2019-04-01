@@ -40,8 +40,8 @@ $description = $wordpress->call('value', ['content.rendered'], '');
             </h1>
 
                          <?php $parts=preg_split('~<!--more-->~' , $description);?>
-           <?php if (isset($parts[2]) && "" != trim($parts[2])): ?>
-            <p><?= $parts[2] ?></p>
+           <?php if (isset($parts[1]) && "" != trim($parts[1])): ?>
+            <p><?= $parts[1] ?></p>
 
 
             <?php endif ?>
