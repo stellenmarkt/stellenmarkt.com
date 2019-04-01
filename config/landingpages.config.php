@@ -1074,7 +1074,7 @@ $options = [
     ],
     'Vorsitzender' => ['id' => 919, 'query' => ['q' => 'Vorsitzender'], 'tab' => 'Job ABC', 'panel' => 'V', 'text' => 'Vorsitzender'],
     'Vorstandsassistent' => ['id' => 920, 'query' => ['q' => 'Vorstandsassistent'], 'tab' => 'Job ABC', 'panel' => 'V', 'text' => 'Vorstandsassistent'],
-    'Webdesigner' => ['id' => 921, 'query' => ['q' => 'Webdesigner'], 'tab' => 'Job ABC', 'panel' => 'W', 'text' => 'Webdesigner'],
+    'Webdesigner' => ['id' => 929, 'query' => ['q' => 'Webdesigner'], 'tab' => 'Job ABC', 'panel' => 'W', 'text' => 'Webdesigner'],
     'Webentwickler' => ['id' => 922, 'query' => ['q' => 'Webentwickler'], 'tab' => 'Job ABC', 'panel' => 'W', 'text' => 'Webentwickler'],
     'Webmaster' => ['id' => 923, 'query' => ['q' => 'Webmaster'], 'tab' => 'Job ABC', 'panel' => 'W', 'text' => 'Webmaster'],
     'Wellness Manager' => ['id' => 924, 'query' => ['q' => 'Wellness Manager'], 'tab' => 'Job ABC', 'panel' => 'W', 'text' => 'Wellness Manager'],
