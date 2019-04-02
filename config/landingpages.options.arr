@@ -1,33 +1,4 @@
-<?php
-/**
- * YAWIK
- *
- * @filesource
- * @license MIT
- * @copyright  2013 - 2017 Cross Solution <http://cross-solution.de>
- */
-/*
-  * Konfiguration der Landingpages.
-  *
-  * Format is:
-  * [ <term> => [spec] ]
-  *
-  * Available keys in [spec]:
-  *
-  * id:      Map to a wordpress page to get title, description and meta-data
-  * text:    Text to show in the link
-  * query:   [query]
-  * tab:     Name of the Tab to show this link in
-  * panel:   Name of the panel to show this link in
-  * company: Name of a company. This link is shown in the slider underneath the tabs
-  * logo:    Url to an company logo, which is then shown instead of the company name.
-  *
-  * [query]:
-  *  q:     Search term for the freetext field.
-  *  region_MultiString: Region-Facets.
-  *  organizationTag:    Company-Facets.
-  */
-$options = array (
+array (
   'ABAP-Developer' => 
   array (
     'id' => 936,
@@ -10291,7 +10262,4 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zweiradmechaniker',
   ),
-);
-/* Do not edit below this line */
-
-return ['options' => [\Gastro24\Options\Landingpages::class => [$options]]];
+)
