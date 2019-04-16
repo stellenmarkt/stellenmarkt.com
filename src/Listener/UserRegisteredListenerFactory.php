@@ -8,13 +8,13 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\Listener\UserRegisteredListener
+ * Factory for \Stellenmarkt\Listener\UserRegisteredListener
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

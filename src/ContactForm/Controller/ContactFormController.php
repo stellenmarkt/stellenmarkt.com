@@ -8,10 +8,10 @@
  */
   
 /** */
-namespace Gastro24\ContactForm\Controller;
+namespace Stellenmarkt\ContactForm\Controller;
 
-use Gastro24\ContactForm\Controller\Plugin\ContactMailSender;
-use Gastro24\ContactForm\Form\ContactForm;
+use Stellenmarkt\ContactForm\Controller\Plugin\ContactMailSender;
+use Stellenmarkt\ContactForm\Form\ContactForm;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 

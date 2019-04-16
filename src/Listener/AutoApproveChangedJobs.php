@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 
 use Jobs\Entity\JobSnapshotStatus;

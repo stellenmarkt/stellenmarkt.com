@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Factory\Filter;
+namespace Stellenmarkt\WordpressApi\Factory\Filter;
 
-use Gastro24\WordpressApi\Filter\PageIdMap;
+use Stellenmarkt\WordpressApi\Filter\PageIdMap;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
@@ -35,7 +35,7 @@ class PageIdMapFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $options = $container->get('Gastro24/WordpressApiOptions');
+        $options = $container->get('Stellenmarkt/WordpressApiOptions');
         $map     = $options->getIdMap();
         $filter  = new PageIdMap($map);
 

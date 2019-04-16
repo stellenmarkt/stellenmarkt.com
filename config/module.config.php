@@ -1,9 +1,9 @@
 <?php
-namespace Gastro24;
+namespace Stellenmarkt;
 
-use Gastro24\Form\JobDetailsHydrator;
-use Gastro24\Form\JobDetailsHydratorFactory;
-use Gastro24\Options\Landingpages;
+use Stellenmarkt\Form\JobDetailsHydrator;
+use Stellenmarkt\Form\JobDetailsHydratorFactory;
+use Stellenmarkt\Options\Landingpages;
 use Jobs\Listener\Events\JobEvent;
 use SimpleImport\Entity\Crawler;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -11,7 +11,7 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 Module::$isLoaded = true;
 
 /**
- * create a config/autoload/Gastro24.global.php and put modifications there
+ * create a config/autoload/Stellenmarkt.global.php and put modifications there
  */
 
 return [
@@ -20,7 +20,7 @@ return [
         'driver' => [
             'odm_default' => [
                 'drivers' => [
-                    'Gastro24\Entity' => 'annotation',
+                    'Stellenmarkt\Entity' => 'annotation',
                 ],
             ],
             'annotation' => [
@@ -43,7 +43,7 @@ return [
         ],
     ],
 
-    'Gastro24' => [
+    'Stellenmarkt' => [
         'dashboard' => [
             'enabled' => true,
             'widgets' => [
@@ -56,7 +56,7 @@ return [
 
     'service_manager' => [
         'factories' => [
-            'Auth/Dependency/Manager' => 'Gastro24\Factory\Dependency\ManagerFactory',
+            'Auth/Dependency/Manager' => 'Stellenmarkt\Factory\Dependency\ManagerFactory',
             WordpressApi\Service\WordpressClient::class => WordpressApi\Factory\Service\WordpressClientFactory::class,
             WordpressApi\Listener\WordpressContentSnippet::class => WordpressApi\Factory\Listener\WordpressContentSnippetFactory::class,
             Listener\UserRegisteredListener::class => Listener\UserRegisteredListenerFactory::class,
@@ -236,7 +236,7 @@ return [
                 'type'     => 'phparray',
                 'base_dir' => __DIR__ . '/../language',
                 'pattern'  => '%s.php',
-                'text_domain' => \Gastro24\Module::TEXT_DOMAIN,
+                'text_domain' => \Stellenmarkt\Module::TEXT_DOMAIN,
             ],
             [
                 'type'     => 'phparray',
@@ -247,7 +247,7 @@ return [
     ],
     'form_elements' => [
         'invokables' => [
-            'Jobs/Description' => 'Gastro24\Form\JobsDescription',
+            'Jobs/Description' => 'Stellenmarkt\Form\JobsDescription',
             'Jobs/PreviewFieldset' => Form\JobPreviewFieldsetDelegator::class,
         ],
         'factories' => [
@@ -256,7 +256,7 @@ return [
             Form\InvoiceAddressSettingsFieldset::class => \Settings\Form\Factory\SettingsFieldsetFactory::class,
             Form\JobDetails::class => Form\JobDetailsFactory::class,
             Form\JobDetailsForm::class => InvokableFactory::class,
-            'Gastro24/JobPdfUpload' => Form\JobPdfFactory::class
+            'Stellenmarkt/JobPdfUpload' => Form\JobPdfFactory::class
         ],
         'aliases' => [
             'Orders/InvoiceAddressSettingsFieldset' => Form\InvoiceAddressSettingsFieldset::class,
@@ -265,7 +265,7 @@ return [
 
     'mails' => [
         'factories' => [
-            'Gastro24/SingleJobMail' => Mail\SingleJobMailFactory::class,
+            'Stellenmarkt/SingleJobMail' => Mail\SingleJobMailFactory::class,
         ],
     ],
 
@@ -364,7 +364,7 @@ return [
 
     'options' => [
 
-        'Gastro24/WordpressApiOptions' => [
+        'Stellenmarkt/WordpressApiOptions' => [
             'class' => WordpressApi\Options\WordpressApiOptions::class,
         ],
 

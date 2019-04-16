@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Entity\Product;
+namespace Stellenmarkt\Entity\Product;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 

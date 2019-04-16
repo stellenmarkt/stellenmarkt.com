@@ -8,11 +8,11 @@
  */
   
 /** */
-namespace Gastro24\Controller;
+namespace Stellenmarkt\Controller;
 
 use Core\Entity\Exception\NotFoundException;
-use Gastro24\Options\CompanyTemplatesMap;
-use Gastro24\Session\VisitedJobsContainer;
+use Stellenmarkt\Options\CompanyTemplatesMap;
+use Stellenmarkt\Session\VisitedJobsContainer;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -29,7 +29,7 @@ class RedirectExternalJobs extends AbstractActionController
     /**
      *
      *
-     * @var \Gastro24\Validator\IframeEmbeddableUri
+     * @var \Stellenmarkt\Validator\IframeEmbeddableUri
      */
     private $validator;
 
@@ -40,7 +40,7 @@ class RedirectExternalJobs extends AbstractActionController
      */
     private $templatesMap;
 
-    public function __construct(\Gastro24\Validator\IframeEmbeddableUri $validator, CompanyTemplatesMap $templatesMap)
+    public function __construct(\Stellenmarkt\Validator\IframeEmbeddableUri $validator, CompanyTemplatesMap $templatesMap)
     {
         $this->validator = $validator;
         $this->templatesMap = $templatesMap;
@@ -70,7 +70,7 @@ class RedirectExternalJobs extends AbstractActionController
 
             $appTemplate = $appModel->getTemplate();
             $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
-            $internModel->setTemplate($jobTemplate ?: 'gastro24/jobs/view-intern');
+            $internModel->setTemplate($jobTemplate ?: 'stellenmarkt/jobs/view-intern');
             $model->addChild($internModel, 'internalJob');
             $model->setVariable('isIntern', true);
             // restore application models' template
@@ -90,7 +90,7 @@ class RedirectExternalJobs extends AbstractActionController
             ]);
 
         }
-        $model->setTemplate('gastro24/jobs/view-extern');
+        $model->setTemplate('stellenmarkt/jobs/view-extern');
 
         if ($this->params()->fromRoute('isPreview')) {
             $appModel->setVariable('noHeader', true);

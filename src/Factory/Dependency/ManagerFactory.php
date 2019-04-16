@@ -4,7 +4,7 @@
  */
 
 /**  */
-namespace Gastro24\Factory\Dependency;
+namespace Stellenmarkt\Factory\Dependency;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
@@ -23,11 +23,11 @@ class ManagerFactory implements FactoryInterface
 	 * @param string $requestedName
 	 * @param array|null $options
 	 *
-	 * @return \Gastro24\Dependency\Manager
+	 * @return \Stellenmarkt\Dependency\Manager
 	 */
 	public function __invoke( ContainerInterface $container, $requestedName, array $options = null )
 	{
-		$manager = new \Gastro24\Dependency\Manager($container->get('Core/DocumentManager'));
+		$manager = new \Stellenmarkt\Dependency\Manager($container->get('Core/DocumentManager'));
 		$manager->setEventManager($container->get('Auth/Dependency/Manager/Events'));
 		
 		return $manager;

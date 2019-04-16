@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\View\Helper;
+namespace Stellenmarkt\View\Helper;
 
 use Organizations\Entity\OrganizationInterface;
 use Zend\View\Helper\AbstractHelper;

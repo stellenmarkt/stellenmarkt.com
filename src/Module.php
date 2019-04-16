@@ -1,10 +1,10 @@
 <?php
 
-namespace Gastro24;
+namespace Stellenmarkt;
 
 use Yawik\Composer\AssetProviderInterface;
 use Core\ModuleManager\ModuleConfigLoader;
-use Gastro24\Options\Landingpages;
+use Stellenmarkt\Options\Landingpages;
 use Zend\Console\Console;
 use Zend\Mvc\MvcEvent;
 use Zend\Stdlib\Parameters;
@@ -31,7 +31,7 @@ class Module implements AssetProviderInterface
 
 
     /**
-     * Tells the autoloader, where to search for the Gastro24 classes
+     * Tells the autoloader, where to search for the Stellenmarkt classes
      *
      * @return array
      */

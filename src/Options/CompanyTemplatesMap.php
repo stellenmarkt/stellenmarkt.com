@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Options;
+namespace Stellenmarkt\Options;
 
 use Organizations\Entity\Organization;
 use Zend\Stdlib\AbstractOptions;

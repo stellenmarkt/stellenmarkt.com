@@ -8,13 +8,13 @@
  */
   
 /** */
-namespace Gastro24\Filter;
+namespace Stellenmarkt\Filter;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\Filter\PdfFileUri
+ * Factory for \Stellenmarkt\Filter\PdfFileUri
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

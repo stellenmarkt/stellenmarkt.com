@@ -8,11 +8,11 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 use Core\Entity\Collection\ArrayCollection;
 use Core\Entity\Hydrator\EntityHydrator;
-use Gastro24\Entity\UserProduct;
+use Stellenmarkt\Entity\UserProduct;
 use Jobs\Listener\Events\JobEvent;
 use Orders\Entity\Order;
 use Orders\Entity\OrderInterface;
@@ -86,7 +86,7 @@ class CreateJobOrder
             $userProduct = $productWrapper->getProduct();
             $product     = new Product();
 
-            $product->setName(str_replace('Gastro24\Entity\Product\\', '', get_class($userProduct)))
+            $product->setName(str_replace('\Stellenmarkt\Entity\Product\\', '', get_class($userProduct)))
                     ->setQuantity(1);
 
             $products->add($product);

@@ -8,11 +8,11 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 use Core\Listener\Events\FileEvent;
 use Doctrine\ODM\MongoDB\DocumentRepository;
-use Gastro24\Entity\TemplateImage;
+use Stellenmarkt\Entity\TemplateImage;
 
 /**
  * ${CARET}
@@ -41,7 +41,7 @@ class DeleteTemplateImage
         $imageId = new \MongoId($file->getId());
 
         foreach ($this->repository->findBy(['image' => $imageId]) as $template) {
-            /* @var \Gastro24\Entity\Template $template */
+            /* @var \Stellenmarkt\Entity\Template $template */
             $template->clearImage();
         }
 

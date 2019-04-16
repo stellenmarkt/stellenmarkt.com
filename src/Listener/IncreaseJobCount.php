@@ -9,9 +9,9 @@
 
 /** */
 
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
-use Gastro24\Entity\UserProduct;
+use Stellenmarkt\Entity\UserProduct;
 use Jobs\Listener\Events\JobEvent;
 
 /**
@@ -26,7 +26,7 @@ class IncreaseJobCount
     public function __invoke(JobEvent $event)
     {
         /* @var \Auth\Entity\User $owner
-         * @var \Gastro24\Entity\UserProduct $productWrapper
+         * @var \Stellenmarkt\Entity\UserProduct $productWrapper
          */
         $job     = $event->getJobEntity();
         $company = $job->getOrganization();

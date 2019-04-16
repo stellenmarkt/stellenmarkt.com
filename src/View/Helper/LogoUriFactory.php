@@ -8,13 +8,13 @@
  */
   
 /** */
-namespace Gastro24\View\Helper;
+namespace Stellenmarkt\View\Helper;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\View\Helper\LogoUri
+ * Factory for \Stellenmarkt\View\Helper\LogoUri
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

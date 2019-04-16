@@ -8,14 +8,14 @@
  */
   
 /** */
-namespace Gastro24\Factory\View\Helper;
+namespace Stellenmarkt\Factory\View\Helper;
 
-use Gastro24\View\Helper\JobboardApplyUrl;
+use Stellenmarkt\View\Helper\JobboardApplyUrl;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\View\Helper\JobboardApplyUrl
+ * Factory for \Stellenmarkt\View\Helper\JobboardApplyUrl
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

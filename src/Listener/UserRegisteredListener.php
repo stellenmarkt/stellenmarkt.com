@@ -8,10 +8,10 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 use Auth\Listener\Events\AuthEvent;
-use Gastro24\Entity\UserProduct;
+use Stellenmarkt\Entity\UserProduct;
 use Zend\EventManager\EventManager;
 use Zend\Mvc\MvcEvent;
 
@@ -75,14 +75,14 @@ class UserRegisteredListener
             return;
         }
 
-        $productClass = '\Gastro24\Entity\Product\\' . $this->productType;
+        $productClass = '\Stellenmarkt\Entity\Product\\' . $this->productType;
 
         if (!class_exists($productClass)) {
             return;
         }
 
         /* @var \Auth\Entity\User $user
-         * @var \Gastro24\Entity\UserProduct $wrapper */
+         * @var \Stellenmarkt\Entity\UserProduct $wrapper */
         $user    = $event->getUser();
         $wrapper = $user->createAttachedEntity(UserProduct::class);
         $product = new $productClass();

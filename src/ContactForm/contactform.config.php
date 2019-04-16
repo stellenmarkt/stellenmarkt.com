@@ -7,9 +7,9 @@
  * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
  */
 
-namespace Gastro24\ContactForm;
+namespace Stellenmarkt\ContactForm;
 
-use Gastro24\ContactForm\View\Helper\SetSubject;
+use Stellenmarkt\ContactForm\View\Helper\SetSubject;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 $options = [

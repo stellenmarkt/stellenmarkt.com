@@ -8,11 +8,11 @@
  */
   
 /** */
-namespace Gastro24\Controller\Plugin;
+namespace Stellenmarkt\Controller\Plugin;
 
 use Core\Entity\Collection\ArrayCollection;
-use Gastro24\Entity\Template;
-use Gastro24\Entity\TemplateImage;
+use Stellenmarkt\Entity\Template;
+use Stellenmarkt\Entity\TemplateImage;
 use Jobs\Entity\AtsMode;
 use Jobs\Entity\Location;
 use Jobs\Entity\Status;
@@ -80,7 +80,7 @@ class CreateSingleJob extends AbstractPlugin
                 $logo = $this->templateImageRepository->find($values['details']['logo_id']);
                 $template->setLogo($logo);
             }
-            $job->addAttachedEntity($template, 'gastro24-template');
+            $job->addAttachedEntity($template, 'stellenmarkt-template');
 
         }
         $job->setLink($values['details']['uri']);
@@ -108,9 +108,9 @@ class CreateSingleJob extends AbstractPlugin
     {
 
         $this->mailer->send($this->mailer->get(
-            'Gastro24/SingleJobMail',
+            'Stellenmarkt/SingleJobMail',
             [
-                'template' => 'gastro24/mail/single-job-pending',
+                'template' => 'stellenmarkt/mail/single-job-pending',
                 'email'    => $values['invoiceAddress']['email'],
                 'name'     => $values['invoiceAddress']['name'],
                 'subject'  => 'Ihre Anzeige wartet auf Freischaltung.',
@@ -122,9 +122,9 @@ class CreateSingleJob extends AbstractPlugin
         ));
 
         $this->mailer->send($this->mailer->get(
-            'Gastro24/SingleJobMail',
+            'Stellenmarkt/SingleJobMail',
             [
-                'template' => 'gastro24/mail/single-job-created',
+                'template' => 'stellenmarkt/mail/single-job-created',
                 'admin'    => true,
                 'subject'  => 'Eine Einzelanzeige wurde erstellt.',
                 'vars'     => [

@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Controller;
+namespace Stellenmarkt\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Session\Container;
@@ -25,7 +25,7 @@ class CreateSingleJob extends AbstractActionController
 {
     /**
      *
-     * @var \Gastro24\Form\CreateSingleJobForm
+     * @var \Stellenmarkt\Form\CreateSingleJobForm
      */
     private $form;
 
@@ -81,7 +81,7 @@ class CreateSingleJob extends AbstractActionController
             $values['details']['image_id'] = $values['details']['image']['entity']->getId();
         }
 
-        $session = new Container('Gastro24_SingleJobData');
+        $session = new Container('Stellenmarkt_SingleJobData');
         $session->data = serialize($data);
         $session->values = serialize($values);
 
@@ -92,7 +92,7 @@ class CreateSingleJob extends AbstractActionController
 
     private function complete()
     {
-        $session = new Container('Gastro24_SingleJobData');
+        $session = new Container('Stellenmarkt_SingleJobData');
         $values  = $session->values;
 
         if (!$values) {
@@ -109,7 +109,7 @@ class CreateSingleJob extends AbstractActionController
             ];
         }
 
-        $session->getManager()->getStorage()->clear('Gastro24_SingleJobData');
+        $session->getManager()->getStorage()->clear('Stellenmarkt_SingleJobData');
 
         return [ 'isSuccess' => true ];
 

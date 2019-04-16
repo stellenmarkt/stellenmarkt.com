@@ -8,15 +8,15 @@
  */
   
 /** */
-namespace Gastro24\Factory\Controller;
+namespace Stellenmarkt\Factory\Controller;
 
-use Gastro24\Controller\CreateSingleJob;
-use Gastro24\Form\CreateSingleJobForm;
+use Stellenmarkt\Controller\CreateSingleJob;
+use Stellenmarkt\Form\CreateSingleJobForm;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\Controller\CreateSingleJob
+ * Factory for \Stellenmarkt\Controller\CreateSingleJob
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

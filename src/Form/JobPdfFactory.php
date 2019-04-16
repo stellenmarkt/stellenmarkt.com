@@ -8,7 +8,7 @@
  */
 
 /**  */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Core\Form\FileUploadFactory;
 use Core\Form\Element\FileUpload;
@@ -56,7 +56,7 @@ class JobPdfFactory extends FileUploadFactory
      *
      * @var string
      */
-    protected $options='Gastro24/WordpressApiOptions';
+    protected $options='Stellenmarkt/WordpressApiOptions';
 
 
 

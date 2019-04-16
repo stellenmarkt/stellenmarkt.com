@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Entity;
+namespace Stellenmarkt\Entity;
 
 use Core\Entity\EntityInterface;
 use Core\Entity\EntityTrait;
@@ -19,7 +19,7 @@ use \Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 /**
  * ${CARET}
  *
- * @ODM\Document(collection="gastro24.templates")
+ * @ODM\Document(collection="stellenmarkt.templates")
  *
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test 
@@ -30,14 +30,14 @@ class Template implements EntityInterface, IdentifiableEntityInterface
 
     /**
      *
-     * @ODM\ReferenceOne(targetDocument="\Gastro24\Entity\TemplateImage", storeAs="id")
+     * @ODM\ReferenceOne(targetDocument="\Stellenmarkt\Entity\TemplateImage", storeAs="id")
      * @var TemplateImage
      */
     private $logo;
 
     /**
      *
-     * @ODM\ReferenceOne(targetDocument="\Gastro24\Entity\TemplateImage", storeAs="id")
+     * @ODM\ReferenceOne(targetDocument="\Stellenmarkt\Entity\TemplateImage", storeAs="id")
      * @var TemplateImage
      */
     private $image;

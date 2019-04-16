@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Session;
+namespace Stellenmarkt\Session;
 
 use Jobs\Entity\JobInterface;
 
@@ -24,7 +24,7 @@ class VisitedJobsContainer
 {
     private $container;
 
-    public function __construct($namespace = 'gastro24_visitedjobs')
+    public function __construct($namespace = 'stellenmarkt_visitedjobs')
     {
         $this->container = new \Zend\Session\Container($namespace);
         if (!isset($this->container->visitedJobs)) {

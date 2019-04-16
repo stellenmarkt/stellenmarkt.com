@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\SimpleImport;
+namespace Stellenmarkt\SimpleImport;
 
 use Core\Entity\Tree\AbstractLeafs;
 use Core\Entity\Tree\EmbeddedLeafs;

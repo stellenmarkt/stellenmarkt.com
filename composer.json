@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gastro24\\": "src/"
+            "Stellenmarkt\\": "src/"
         }
     },
     "config": {
@@ -58,7 +58,7 @@
             "dev-develop": "0.32-dev"
         },
         "zf": {
-            "module": "Gastro24"
+            "module": "Stellenmarkt"
         }
     }
 }

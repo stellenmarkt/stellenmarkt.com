@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\View\Helper;
+namespace Stellenmarkt\View\Helper;
 
 use Jobs\Entity\JobInterface as Job;
 use Jobs\View\Helper\JobUrl;

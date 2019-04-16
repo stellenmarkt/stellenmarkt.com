@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\Factory\View\Helper;
+namespace Stellenmarkt\Factory\View\Helper;
 
-use Gastro24\View\Helper\JobUrlDelegator;
+use Stellenmarkt\View\Helper\JobUrlDelegator;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;

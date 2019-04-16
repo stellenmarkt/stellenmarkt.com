@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Options;
+namespace Stellenmarkt\WordpressApi\Options;
 
 use Zend\Stdlib\AbstractOptions;
 

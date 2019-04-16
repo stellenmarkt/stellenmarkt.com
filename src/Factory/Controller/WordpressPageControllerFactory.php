@@ -8,15 +8,15 @@
  */
   
 /** */
-namespace Gastro24\Factory\Controller;
+namespace Stellenmarkt\Factory\Controller;
 
-use Gastro24\Controller\WordpressPageController;
-use Gastro24\WordpressApi\Service\WordpressClient;
+use Stellenmarkt\Controller\WordpressPageController;
+use Stellenmarkt\WordpressApi\Service\WordpressClient;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\Controller\WordpressPageController
+ * Factory for \Stellenmarkt\Controller\WordpressPageController
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @author Anthonius Munthi <me@itstoni.com>

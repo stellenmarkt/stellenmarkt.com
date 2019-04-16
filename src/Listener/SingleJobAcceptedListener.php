@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 use Jobs\Listener\Events\JobEvent;
 
@@ -45,9 +45,9 @@ class SingleJobAcceptedListener
         $invoice = $order->getInvoiceAddress();
 
         $this->mailer->send($this->mailer->get(
-            'Gastro24/SingleJobMail',
+            'Stellenmarkt/SingleJobMail',
             [
-                'template' => 'gastro24/mail/single-job-accepted',
+                'template' => 'stellenmarkt/mail/single-job-accepted',
                 'subject'  => 'Ihre Anzeige wurde veröffentlicht.',
                 'email'    => $invoice->getEmail(),
                 'name'     => $invoice->getName(),

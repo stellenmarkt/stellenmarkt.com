@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Validator;
+namespace Stellenmarkt\Validator;
 
 use Zend\Validator\AbstractValidator;
 use Zend\Validator\ValidatorInterface;

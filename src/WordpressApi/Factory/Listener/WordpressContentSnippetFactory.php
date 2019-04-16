@@ -8,11 +8,11 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Factory\Listener;
+namespace Stellenmarkt\WordpressApi\Factory\Listener;
 
-use Gastro24\WordpressApi\Filter\PageIdMap;
-use Gastro24\WordpressApi\Listener\WordpressContentSnippet;
-use Gastro24\WordpressApi\Service\WordpressClient;
+use Stellenmarkt\WordpressApi\Filter\PageIdMap;
+use Stellenmarkt\WordpressApi\Listener\WordpressContentSnippet;
+use Stellenmarkt\WordpressApi\Service\WordpressClient;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 

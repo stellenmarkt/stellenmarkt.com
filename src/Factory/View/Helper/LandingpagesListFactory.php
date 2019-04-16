@@ -8,15 +8,15 @@
  */
   
 /** */
-namespace Gastro24\Factory\View\Helper;
+namespace Stellenmarkt\Factory\View\Helper;
 
-use Gastro24\View\Helper\LandingpagesList;
-use Gastro24\WordpressApi\Service\WordpressClient;
+use Stellenmarkt\View\Helper\LandingpagesList;
+use Stellenmarkt\WordpressApi\Service\WordpressClient;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\View\Helper\LandingpagesList
+ * Factory for \Stellenmarkt\View\Helper\LandingpagesList
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @author Anthonius Munthi <me@itstoni.com>
@@ -34,7 +34,7 @@ class LandingpagesListFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $client  = $container->get(WordpressClient::class);
-        $options = $container->get('Gastro24/WordpressApiOptions');
+        $options = $container->get('Stellenmarkt/WordpressApiOptions');
         $idMap   = $options->getIdMap();
 
         return new LandingpagesList($client, $idMap);

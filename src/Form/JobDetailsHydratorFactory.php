@@ -8,13 +8,13 @@
  */
   
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\Form\JobDetailsHydrator
+ * Factory for \Stellenmarkt\Form\JobDetailsHydrator
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

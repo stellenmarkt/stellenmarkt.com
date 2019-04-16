@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\ContactForm\Options;
+namespace Stellenmarkt\ContactForm\Options;
 
 use Core\Options\FieldsetCustomizationOptions;
 

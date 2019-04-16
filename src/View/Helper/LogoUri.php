@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\View\Helper;
+namespace Stellenmarkt\View\Helper;
 
 use Solr\Entity\JobProxy;
 use Zend\Form\View\Helper\AbstractHelper;
@@ -34,7 +34,7 @@ class LogoUri extends AbstractHelper
         $uri = null;
 
         if (
-            ($template = $job->getAttachedEntity('gastro24-template'))
+            ($template = $job->getAttachedEntity('stellenmarkt-template'))
             && ($logo = $template->getLogo())
         ) {
             return $this->getView()->plugin('basepath')->__invoke($logo->getUri());

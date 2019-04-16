@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\View\Helper;
+namespace Stellenmarkt\View\Helper;
 
-use Gastro24\WordpressApi\Service\WordpressClient;
+use Stellenmarkt\WordpressApi\Service\WordpressClient;
 use Zend\View\Helper\AbstractHelper;
 
 /**
@@ -25,7 +25,7 @@ class LandingpagesList extends AbstractHelper
     /**
      *
      *
-     * @var \Gastro24\WordpressApi\Service\WordpressClient
+     * @var \Stellenmarkt\WordpressApi\Service\WordpressClient
      */
     private $client;
 

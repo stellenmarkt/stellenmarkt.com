@@ -8,12 +8,12 @@
  */
   
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Core\Entity\Hydrator\EntityHydrator;
 use Core\Form\ViewPartialProviderInterface;
 use Core\Form\ViewPartialProviderTrait;
-use Gastro24\Filter\PdfFileUri;
+use Stellenmarkt\Filter\PdfFileUri;
 use Zend\Form\Fieldset;
 use Zend\InputFilter\InputFilterProviderInterface;
 
@@ -27,7 +27,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
 {
     use ViewPartialProviderTrait;
 
-    private $defaultPartial = 'gastro24/form/job-details-fieldset';
+    private $defaultPartial = 'stellenmarkt/form/job-details-fieldset';
 
     private $gastroOptions;
 
@@ -234,7 +234,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                         [
                             'name' => \Core\Filter\File\Entity::class,
                             'options' => [
-                                'file_entity' => \Gastro24\Entity\TemplateImage::class,
+                                'file_entity' => \Stellenmarkt\Entity\TemplateImage::class,
                                 'repository' => true,
                             ],
                         ],
@@ -260,7 +260,7 @@ class JobDetails extends Fieldset implements InputFilterProviderInterface, ViewP
                         [
                             'name' => \Core\Filter\File\Entity::class,
                             'options' => [
-                                'file_entity' => \Gastro24\Entity\TemplateImage::class,
+                                'file_entity' => \Stellenmarkt\Entity\TemplateImage::class,
                                 'repository' => true,
                             ],
                         ],

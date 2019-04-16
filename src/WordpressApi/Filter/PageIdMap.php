@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Filter;
+namespace Stellenmarkt\WordpressApi\Filter;
 
 use Zend\Filter\Exception;
 use Zend\Filter\FilterInterface;

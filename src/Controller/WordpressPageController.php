@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\Controller;
+namespace Stellenmarkt\Controller;
 
-use Gastro24\WordpressApi\Service\Plugin\WordpressV2;
+use Stellenmarkt\WordpressApi\Service\Plugin\WordpressV2;
 use Zend\Mvc\Controller\AbstractActionController;
 
 /**

@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Service;
+namespace Stellenmarkt\WordpressApi\Service;
 
-use Gastro24\WordpressApi\Service\Plugin;
+use Stellenmarkt\WordpressApi\Service\Plugin;
 use Zend\ServiceManager\AbstractPluginManager;
 use Zend\ServiceManager\Exception;
 use Zend\ServiceManager\Exception\RuntimeException;
@@ -29,8 +29,8 @@ class WordpressClientPluginManager extends AbstractPluginManager
         Plugin\MenusV1::class     => InvokableFactory::class,
 
         /* this is needed, because we still are not on zf3 */
-        'gastro24wordpressapiservicepluginwordpressv2' => InvokableFactory::class,
-        'gastro24wordpressapiservicepluginmenusv1'     => InvokableFactory::class,
+        'stellenmarktwordpressapiservicepluginwordpressv2' => InvokableFactory::class,
+        'stellenmarktwordpressapiservicepluginmenusv1'     => InvokableFactory::class,
     ];
 
     protected $aliases = [
@@ -68,7 +68,7 @@ class WordpressClientPluginManager extends AbstractPluginManager
         $this->client = $client;
 
         $this->addInitializer(function($sm,$instance) use ($client) {
-                /* @var \Gastro24\WordpressApi\Service\Plugin\PluginInterface $instance */
+                /* @var \Stellenmarkt\WordpressApi\Service\Plugin\PluginInterface $instance */
                 $instance->setClient($client);
         });
 

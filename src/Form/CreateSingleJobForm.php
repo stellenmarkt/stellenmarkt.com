@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Core\Form\Form;
 use Core\Form\ViewPartialProviderInterface;
@@ -25,7 +25,7 @@ use Zend\InputFilter\InputFilterProviderInterface;
  */
 class CreateSingleJobForm extends Form implements InputFilterProviderInterface, ViewPartialProviderInterface
 {
-    private $defaultPartial = 'gastro24/form/create-single-job';
+    private $defaultPartial = 'stellenmarkt/form/create-single-job';
 
     use ViewPartialProviderTrait;
 

@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Filter;
+namespace Stellenmarkt\Filter;
 
 use Zend\Filter\Exception;
 use Zend\Filter\FilterInterface;

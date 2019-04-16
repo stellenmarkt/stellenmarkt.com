@@ -15,6 +15,6 @@ return [
         'Cv',
         'Orders',
         'JobsByMail',
-        'Gastro24'
+        'Stellenmarkt'
     ],
 ];

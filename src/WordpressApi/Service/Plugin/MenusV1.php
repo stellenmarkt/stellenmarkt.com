@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Service\Plugin;
+namespace Stellenmarkt\WordpressApi\Service\Plugin;
 
 /**
  * ${CARET}

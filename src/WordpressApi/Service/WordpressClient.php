@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Service;
+namespace Stellenmarkt\WordpressApi\Service;
 
 use Zend\Cache\Storage\StorageInterface;
 use Zend\Cache\StorageFactory;

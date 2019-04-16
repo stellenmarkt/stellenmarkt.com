@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Entity;
+namespace Stellenmarkt\Entity;
 
 
 use Core\Entity\FileEntity;
@@ -18,7 +18,7 @@ use \Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 /**
  * ${CARET}
  *
- * @ODM\Document(collection="gastro24.templateimages")
+ * @ODM\Document(collection="stellenmarkt.templateimages")
  *
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test
@@ -27,7 +27,7 @@ class TemplateImage extends FileEntity
 {
     public function getUri()
     {
-        return 'file/Gastro24.TemplateImage/' . $this->id . '/' .urlencode($this->name);
+        return 'file/Stellenmarkt.TemplateImage/' . $this->id . '/' .urlencode($this->name);
     }
 
     public function getPermissions()

@@ -8,14 +8,14 @@
  */
   
 /** */
-namespace Gastro24\ContactForm\Controller\Plugin;
+namespace Stellenmarkt\ContactForm\Controller\Plugin;
 
-use Gastro24\ContactForm\Options\ContactFormOptions;
+use Stellenmarkt\ContactForm\Options\ContactFormOptions;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\ContactForm\Controller\Plugin\ContactMailSender
+ * Factory for \Stellenmarkt\ContactForm\Controller\Plugin\ContactMailSender
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

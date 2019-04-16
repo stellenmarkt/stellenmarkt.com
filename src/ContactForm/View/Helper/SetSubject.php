@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\ContactForm\View\Helper;
+namespace Stellenmarkt\ContactForm\View\Helper;
 
 use Zend\View\Helper\AbstractHelper;
 

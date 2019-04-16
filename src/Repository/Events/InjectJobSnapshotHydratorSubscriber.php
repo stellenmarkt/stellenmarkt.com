@@ -8,12 +8,12 @@
  */
   
 /** */
-namespace Gastro24\Repository\Events;
+namespace Stellenmarkt\Repository\Events;
 
 use Core\Repository\SnapshotRepository;
 use Doctrine\Common\EventSubscriber;
 use \Core\Repository\DoctrineMongoODM\Event\EventArgs;
-use Gastro24\Entity\Hydrator\JobHydrator;
+use Stellenmarkt\Entity\Hydrator\JobHydrator;
 use Jobs\Entity\JobSnapshot;
 
 /**
@@ -40,7 +40,7 @@ class InjectJobSnapshotHydratorSubscriber implements EventSubscriber
             $snapshot = new \ReflectionClass(JobSnapshot::class);
             $props    = $snapshot->getDefaultProperties();
             $attributes = $props['snapshotAttributes'];
-            $attributes[] = 'gastro24-template';
+            $attributes[] = 'stellenmarkt-template';
 
             $repository->setSnapshotAttributes($attributes);
         }

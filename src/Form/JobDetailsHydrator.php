@@ -8,10 +8,10 @@
  */
   
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
-use Gastro24\Entity\Template;
-use Gastro24\Entity\TemplateImage;
+use Stellenmarkt\Entity\Template;
+use Stellenmarkt\Entity\TemplateImage;
 use Zend\Hydrator\HydratorInterface;
 
 /**
@@ -40,7 +40,7 @@ class JobDetailsHydrator implements HydratorInterface
             $mode = 'html';
         }
 
-        $template = $object->getAttachedEntity('gastro24-template');
+        $template = $object->getAttachedEntity('stellenmarkt-template');
         $image    = $template && ($image = $template->getImage()) ? $image->getUri() : null;
 
         return [
@@ -66,12 +66,12 @@ class JobDetailsHydrator implements HydratorInterface
             $object->getTemplateValues()->setDescription($data['description']);
             $object->getTemplateValues()->position = $data['position'];
             $object->getTemplateValues()->setRequirements($data['requirements']);
-            $template = $object->getAttachedEntity('gastro24-template');
+            $template = $object->getAttachedEntity('stellenmarkt-template');
             $repository = $this->repositories->get(TemplateImage::class);
             if (!$template) {
                 $template = new Template();
                 $this->repositories->store($template);
-                $object->addAttachedEntity($template, 'gastro24-template');
+                $object->addAttachedEntity($template, 'stellenmarkt-template');
             }
             if (isset($_POST['details']['logo_id'])) {
                 $file = $repository->find($_POST['details']['logo_id']);

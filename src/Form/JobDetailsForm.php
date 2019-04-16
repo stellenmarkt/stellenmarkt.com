@@ -8,7 +8,7 @@
  */
 
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Core\Form\HeadscriptProviderInterface;
 use Core\Form\SummaryForm;
@@ -34,7 +34,7 @@ class JobDetailsForm extends SummaryForm implements HeadscriptProviderInterface
             'assets/blueimp-file-upload/js/vendor/jquery.ui.widget.js',
             'assets/blueimp-file-upload/js/jquery.iframe-transport.js',
             'assets/blueimp-file-upload/js/jquery.fileupload.js',
-            'Gastro24/js/jobpdfupload.js'
+            'Stellenmarkt/js/jobpdfupload.js'
         ];
     }
 

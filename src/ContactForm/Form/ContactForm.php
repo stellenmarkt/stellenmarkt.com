@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\ContactForm\Form;
+namespace Stellenmarkt\ContactForm\Form;
 
 use Core\Form\CustomizableFieldsetInterface;
 use Core\Form\CustomizableFieldsetTrait;
@@ -123,7 +123,7 @@ class ContactForm extends Form implements InputFilterProviderInterface, Customiz
                     ['name' => 'regex', 'options' => [
                         'pattern' => '~^[0-9 /\+]*$~',
                         'message' => 'Es sind nur Ziffern, "/" und "+" erlaubt',
-                        'translatorTextDomain' => 'Gastro24',
+                        'translatorTextDomain' => 'Stellenmarkt',
                     ]],
                 ],
             ],

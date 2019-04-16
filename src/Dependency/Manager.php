@@ -4,7 +4,7 @@
  */
 
 /** */
-namespace Gastro24\Dependency;
+namespace Stellenmarkt\Dependency;
 
 use Auth\Dependency\Manager as AuthDependencyManager;
 use Auth\Entity\User;

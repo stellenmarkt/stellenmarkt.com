@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Core\Form\Form;
 use Core\Form\ViewPartialProviderInterface;
@@ -25,7 +25,7 @@ class UserProductInfo extends Form implements ViewPartialProviderInterface
 {
     use ViewPartialProviderTrait;
 
-    private $defaultPartial = 'gastro24/jobs/user-product-info';
+    private $defaultPartial = 'stellenmarkt/jobs/user-product-info';
 
     public function setObject($object)
     {

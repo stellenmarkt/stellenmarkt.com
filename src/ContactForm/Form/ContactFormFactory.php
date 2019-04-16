@@ -8,13 +8,13 @@
  */
   
 /** */
-namespace Gastro24\ContactForm\Form;
+namespace Stellenmarkt\ContactForm\Form;
 
 use Core\Factory\Form\AbstractCustomizableFieldsetFactory;
-use Gastro24\ContactForm\Options\ContactFormFormOptions;
+use Stellenmarkt\ContactForm\Options\ContactFormFormOptions;
 
 /**
- * Factory for \Gastro24\ContactForm\Form\ContactForm
+ * Factory for \Stellenmarkt\ContactForm\Form\ContactForm
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  

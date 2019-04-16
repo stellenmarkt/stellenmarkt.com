@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Entity;
+namespace Stellenmarkt\Entity;
 
 use Core\Entity\EntityInterface;
 use Core\Entity\EntityTrait;
@@ -19,7 +19,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 /**
  * ${CARET}
  *
- * @ODM\Document(collection="gastro24.userproducts", repositoryClass="\Core\Repository\DefaultRepository")
+ * @ODM\Document(collection="stellenmarkt.userproducts", repositoryClass="\Core\Repository\DefaultRepository")
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test 

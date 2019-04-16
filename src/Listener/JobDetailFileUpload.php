@@ -8,11 +8,11 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
 use Core\Listener\Events\AjaxEvent;
 use Doctrine\ODM\MongoDB\DocumentRepository;
-use Gastro24\Form\JobDetailsForm;
+use Stellenmarkt\Form\JobDetailsForm;
 use Zend\Stdlib\ArrayUtils;
 
 /**

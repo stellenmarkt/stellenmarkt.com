@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Form;
+namespace Stellenmarkt\Form;
 
 use Settings\Form\SettingsFieldset;
 

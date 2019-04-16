@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Mail;
+namespace Stellenmarkt\Mail;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;

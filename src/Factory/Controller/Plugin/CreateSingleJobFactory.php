@@ -8,15 +8,15 @@
  */
   
 /** */
-namespace Gastro24\Factory\Controller\Plugin;
+namespace Stellenmarkt\Factory\Controller\Plugin;
 
-use Gastro24\Controller\Plugin\CreateSingleJob;
+use Stellenmarkt\Controller\Plugin\CreateSingleJob;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 
 /**
- * Factory for \Gastro24\Controller\Plugin\CreateSingleJob
+ * Factory for \Stellenmarkt\Controller\Plugin\CreateSingleJob
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  
@@ -29,7 +29,7 @@ class CreateSingleJobFactory implements FactoryInterface
         $repositories = $container->get('repositories');
         $jobRepository= $repositories->get('Jobs');
         $orderRepository = $repositories->get('Orders');
-        $templateImageRepository = $repositories->get('Gastro24/TemplateImage');
+        $templateImageRepository = $repositories->get('Stellenmarkt/TemplateImage');
         $orderOptions = $container->get('Orders/Options/Module');
         $mailer = $container->get('Core/MailService');
         $plugin = new CreateSingleJob($jobRepository, $orderRepository, $templateImageRepository, $orderOptions, $mailer);

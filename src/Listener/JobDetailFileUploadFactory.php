@@ -8,14 +8,14 @@
  */
   
 /** */
-namespace Gastro24\Listener;
+namespace Stellenmarkt\Listener;
 
-use Gastro24\Form\JobDetailsForm;
+use Stellenmarkt\Form\JobDetailsForm;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
- * Factory for \Gastro24\Listener\JobDetailFileUpload
+ * Factory for \Stellenmarkt\Listener\JobDetailFileUpload
  * 
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
  * @todo write test  
@@ -28,7 +28,7 @@ class JobDetailFileUploadFactory implements FactoryInterface
         $form = $container->get('forms')->get(JobDetailsForm::class);
         $form->setName('details');
 
-        $repository = $container->get('repositories')->get('Gastro24/TemplateImage');
+        $repository = $container->get('repositories')->get('Stellenmarkt/TemplateImage');
 
         $service = new JobDetailFileUpload($form, $repository);
         

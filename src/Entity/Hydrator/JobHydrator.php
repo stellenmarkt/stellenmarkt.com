@@ -8,7 +8,7 @@
  */
   
 /** */
-namespace Gastro24\Entity\Hydrator;
+namespace Stellenmarkt\Entity\Hydrator;
 
 use Core\Entity\Hydrator\EntityHydrator;
 use Jobs\Entity\JobSnapshot;
@@ -25,10 +25,10 @@ class JobHydrator extends EntityHydrator
     {
         $data = parent::extract($object);
 
-        $template = $object->getAttachedEntity('gastro24-template');
+        $template = $object->getAttachedEntity('stellenmarkt-template');
 
         if ($template) {
-            $data['gastro24-template'] = $template;
+            $data['stellenmarkt-template'] = $template;
         }
 
         return $data;
@@ -36,22 +36,22 @@ class JobHydrator extends EntityHydrator
 
     public function hydrate(array $data, $object)
     {
-        if (isset($data['gastro24-template'])) {
-            /* @var \Gastro24\Entity\Template $template */
-            $template = $data['gastro24-template'];
+        if (isset($data['stellenmarkt-template'])) {
+            /* @var \Stellenmarkt\Entity\Template $template */
+            $template = $data['stellenmarkt-template'];
             $logo = $template->getLogo();
             $image = $template->getImage();
 
-            $newTemplate = $object->getAttachedEntity('gastro24-template');
+            $newTemplate = $object->getAttachedEntity('stellenmarkt-template');
             if (!$newTemplate) {
-                $newTemplate = new \Gastro24\Entity\Template();
-                $object->addAttachedEntity($template, 'gastro24-template');
+                $newTemplate = new \Stellenmarkt\Entity\Template();
+                $object->addAttachedEntity($template, 'stellenmarkt-template');
             }
 
             $logo  && $newTemplate->setLogo($logo);
             $image && $newTemplate->setImage($image);
 
-            unset($data['gastro24-template']);
+            unset($data['stellenmarkt-template']);
         }
 
         return parent::hydrate($data, $object);

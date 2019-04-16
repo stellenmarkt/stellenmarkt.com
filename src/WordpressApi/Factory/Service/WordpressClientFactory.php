@@ -8,10 +8,10 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Factory\Service;
+namespace Stellenmarkt\WordpressApi\Factory\Service;
 
-use Gastro24\WordpressApi\Service\WordpressClient;
-use Gastro24\WordpressApi\Service\WordpressClientPluginManager;
+use Stellenmarkt\WordpressApi\Service\WordpressClient;
+use Stellenmarkt\WordpressApi\Service\WordpressClientPluginManager;
 use Interop\Container\ContainerInterface;
 use Zend\Cache\StorageFactory;
 use Zend\Http\Client;
@@ -27,7 +27,7 @@ class WordpressClientFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $options       = $container->get('Gastro24/WordpressApiOptions');
+        $options       = $container->get('Stellenmarkt/WordpressApiOptions');
         $pluginsConfig = $container->get('Config');
         $pluginsConfig = isset($pluginsConfig['wordpressclient_plugins']) ? $pluginsConfig['wordpressclient_plugins'] : [];
         $plugins       = new WordpressClientPluginManager($container, $pluginsConfig);
@@ -35,15 +35,15 @@ class WordpressClientFactory implements FactoryInterface
 
         $plugins->setClient($client);
 
-        if ($container->has('Gastro24/WordpressApiClient')) {
-            $client->setHttpClient($container->get('Gastro24/WordpressApiClient'));
+        if ($container->has('Stellenmarkt/WordpressApiClient')) {
+            $client->setHttpClient($container->get('Stellenmarkt/WordpressApiClient'));
         } else if ($clientOptions = $options->getHttpClientOptions()) {
             $httpClient = $this->setupHttpClient($clientOptions);
             $client->setHttpClient($httpClient);
         }
 
-        if ($container->has('Gastro24/WordpressApiCache')) {
-            $client->setCache($container->get('Gastro24/WordpressApiCache'));
+        if ($container->has('Stellenmarkt/WordpressApiCache')) {
+            $client->setCache($container->get('Stellenmarkt/WordpressApiCache'));
         } else if ($cacheOptions = $options->getCacheOptions()) {
             $cache = StorageFactory::factory($cacheOptions);
             $client->setCache($cache);

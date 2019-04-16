@@ -8,9 +8,9 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\Service\Plugin;
+namespace Stellenmarkt\WordpressApi\Service\Plugin;
 
-use Gastro24\WordpressApi\Service\WordpressClientInterface;
+use Stellenmarkt\WordpressApi\Service\WordpressClientInterface;
 use Zend\Http\Request;
 
 /**

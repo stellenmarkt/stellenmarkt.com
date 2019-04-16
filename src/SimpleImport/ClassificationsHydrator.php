@@ -6,7 +6,7 @@
  * @author Miroslav Fedeleš <miroslav.fedeles@gmail.com>
  * @since 0.30
  */
-namespace Gastro24\SimpleImport;
+namespace Stellenmarkt\SimpleImport;
 
 use Jobs\Repository\Categories;
 use Jobs\Entity\Classifications;

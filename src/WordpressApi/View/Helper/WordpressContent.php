@@ -8,10 +8,10 @@
  */
   
 /** */
-namespace Gastro24\WordpressApi\View\Helper;
+namespace Stellenmarkt\WordpressApi\View\Helper;
 
-use Gastro24\WordpressApi\Filter\PageIdMap;
-use Gastro24\WordpressApi\Service\WordpressClient;
+use Stellenmarkt\WordpressApi\Filter\PageIdMap;
+use Stellenmarkt\WordpressApi\Service\WordpressClient;
 use Zend\Stdlib\ArrayUtils;
 use Zend\View\Helper\AbstractHelper;
 
@@ -47,7 +47,7 @@ class WordpressContent extends AbstractHelper
 
     private $client;
 
-    /* @var $idMap \Gastro24\WordpressApi\Filter\PageIdMap */
+    /* @var $idMap \Stellenmarkt\WordpressApi\Filter\PageIdMap */
     private $idMap;
 
     public function __construct(WordpressClient $client, PageIdMap $idMap)
