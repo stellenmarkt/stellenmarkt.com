@@ -8,7 +8,7 @@
  */
 
 
-$template = $this->job->getAttachedEntity('gastro24-template');
+$template = $this->job->getAttachedEntity('stellenmarkt-template');
 $basePathHelper = $this->plugin('basePath');
 $replaceImage = function($str) use ($template, $basePathHelper)
 {
@@ -141,7 +141,7 @@ $orgName = $this->jobOrganizationName($this->job);
     </style>
     
 
-            <script src="/modules/Gastro24/jssocials-1.4.0/dist/jssocials.js"></script>
+            <script src="/modules/Stellenmarkt/jssocials-1.4.0/dist/jssocials.js"></script>
             <script>
                 $("#share").jsSocials({
                     showLabel: false,

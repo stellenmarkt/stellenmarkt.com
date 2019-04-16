@@ -11,12 +11,12 @@ $user = $this->auth()->getUser();
 
 if (!$user) { return; }
 
-$productWrapper = $user->getAttachedEntity(\Gastro24\Entity\UserProduct::class);
+$productWrapper = $user->getAttachedEntity(\Stellenmarkt\Entity\UserProduct::class);
 
 if (!$productWrapper) { return; }
 
 $product = $productWrapper->getProduct();
-$name    = str_replace('Gastro24\Entity\Product\\', '', get_class($product));
+$name    = str_replace('Stellenmarkt\Entity\Product\\', '', get_class($product));
 ?>
 <div class="panel panel-default">
     <div class="panel-heading">

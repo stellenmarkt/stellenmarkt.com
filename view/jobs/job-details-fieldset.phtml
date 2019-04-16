@@ -30,7 +30,7 @@ $modeLabels = $mode->getOption('labels');
             
            
                 
-             <?php $template = $fieldset->getObject()->getAttachedEntity('gastro24-template');
+             <?php $template = $fieldset->getObject()->getAttachedEntity('stellenmarkt-template');
                 if ($template && ($image = $template->getImage())):?>
                  
                     <img style="width:100%" src="<?=$this->basePath($image->getUri());?>">

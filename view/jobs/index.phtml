@@ -3,8 +3,8 @@
 $this->headScript()->appendFile($this->basepath('/modules/Core/js/core.pagination-container.js'))
      ->appendFile($this->basePath('modules/Core/js/core.forms.js'))
 
-     ->appendFile($this->basePath('modules/Gastro24/js/jquery.matchHeight.js'))
-     ->appendFile($this->basePath('modules/Gastro24/js/jobs.js'));;
+     ->appendFile($this->basePath('modules/Stellenmarkt/js/jquery.matchHeight.js'))
+     ->appendFile($this->basePath('modules/Stellenmarkt/js/jobs.js'));;
 
     $this->headScript()
                        ->appendFile($this->basePath('/dist/js/bootstrap-dialog.min.js'));
@@ -40,7 +40,7 @@ $this->headScript()->captureStart();
     $(function() {
         var $tabbar = $('#search-tabs');
 
-        $('#jobs-list-container').on('yk-paginator-container:loaded.gastro24 g24-jobs:init', function(ev) {
+        $('#jobs-list-container').on('yk-paginator-container:loaded.stellenmarkt g24-jobs:init', function(ev) {
             $tabbar.show();
             var html = $('#jobs-list-container').find('.pagination-content').html();
 
@@ -65,12 +65,12 @@ $this->headScript()->captureStart();
 
         var $jobCount = $('#job-count');
 
-        $('#jobs-list-container').on('yk-paginator-container:loaded.gastro24-job-count', function(ev) {
+        $('#jobs-list-container').on('yk-paginator-container:loaded.stellenmarkt-job-count', function(ev) {
             var count = $('#update-job-count').text();
             $jobCount.text(count);
         });
 
-        $('#jobs-list-filter').on('reset.gastro24', function(ev) { $(ev.target).find('input.facet-param').remove(); });
+        $('#jobs-list-filter').on('reset.stellenmarkt', function(ev) { $(ev.target).find('input.facet-param').remove(); });
 
     });
 })(jQuery);
@@ -78,7 +78,7 @@ $this->headScript()->captureStart();
 
 
 
-<?php if ($jobs instanceof \Solr\FacetsProviderInterface): $this->headScript()->appendFile($this->basePath('modules/Gastro24/js/jobs.facets.js')); endif; ?>
+<?php if ($jobs instanceof \Solr\FacetsProviderInterface): $this->headScript()->appendFile($this->basePath('modules/Stellenmarkt/js/jobs.facets.js')); endif; ?>
 
 
 

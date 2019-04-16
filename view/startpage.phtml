@@ -30,14 +30,14 @@ $this->headMeta()->setCharset("utf-8")
                  ->appendName('description', 'Stellenmarkt.com | Aktuelle Jobs und Stellenangebote bei Stellenmarkt.com | Der Stellenmarkt für Fach- und Führungskräfte | Online den besten Job finden und sofort bewerben!')
                  ->appendName('robots', 'index,follow');
 
-$this->headLink()->prependStylesheet($this->basePath('modules/Gastro24/layout.css'))
+$this->headLink()->prependStylesheet($this->basePath('modules/Stellenmarkt/layout.css'))
                  ->prependStylesheet($this->basePath('dist/css/core.min.css'));
 
 $langScript = 'dist/locales/' . $lang . '.js';
 
 $this->configHeadScript()->prependFile($this->basepath('dist/js/core.js'))
-                         ->appendFile($this->basePath('modules/Gastro24/js/jquery.matchHeight.js'))
-                         ->appendFile($this->basePath('modules/Gastro24/js/index.js'))
+                         ->appendFile($this->basePath('modules/Stellenmarkt/js/jquery.matchHeight.js'))
+                         ->appendFile($this->basePath('modules/Stellenmarkt/js/index.js'))
                          ->appendFile($this->basePath('modules/Core/js/core.forms.js'))
                          ->appendFile($this->basePath($langScript));
 
@@ -71,7 +71,7 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand menu-logo" href="<?php echo $this->basepath('/' . $this->params('lang')) ?>">
-                    <img src="<?php echo $this->basepath('/modules/Gastro24/logo_white.svg') ?>" alt="Stellenmarkt.com" class="menu-logo">
+                    <img src="<?php echo $this->basepath('/modules/Stellenmarkt/logo_white.svg') ?>" alt="Stellenmarkt.com" class="menu-logo">
                 </a>
             </div>
             <nav id="main-navigation" class="navbar-collapse collapse navbar-collapse" role="navigation">
@@ -114,7 +114,7 @@ $this->configHeadScript()->appendScript('var lang="' . $this->params('lang') . '
 </div>
 <?php
 
-$queries = $this->services(\Gastro24\Options\Landingpages::class);
+$queries = $this->services(\Stellenmarkt\Options\Landingpages::class);
 $this->headTitle($this->translate('Home'));
 
 ?>

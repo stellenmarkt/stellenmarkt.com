@@ -77,4 +77,4 @@ $logoSize = [
 /*
  * AB HIER NICHTS MEHR ÄNDERN!
  */
-return [ 'options' => [ \Gastro24\Options\JobDetailsForm::class => [ 'options' => compact('labels', 'imageSize', 'logoSize') ]]];
+return [ 'options' => [ \Stellenmarkt\Options\JobDetailsForm::class => [ 'options' => compact('labels', 'imageSize', 'logoSize') ]]];

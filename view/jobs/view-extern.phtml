@@ -44,7 +44,7 @@ $this->headScript()->captureStart();?>
 })(jQuery, window);
 <?php $this->headScript()->captureEnd();
 endif;
-$this->headScript()->appendFile($this->basePath('modules/Gastro24/js/jobs.js'))
+$this->headScript()->appendFile($this->basePath('modules/Stellenmarkt/js/jobs.js'))
     ->appendFile($this->basePath('/dist/js/bootstrap-dialog.min.js'));;
 $orgName = $this->jobOrganizationName($this->job);
 ?>
@@ -277,7 +277,7 @@ setTimeout(setIframeSrc, 5);
     </style>
 
 
-            <script src="/modules/Gastro24/jssocials-1.4.0/dist/jssocials.js"></script>
+            <script src="/modules/Stellenmarkt/jssocials-1.4.0/dist/jssocials.js"></script>
             <script>
                 $("#share").jsSocials({
                     showLabel: false,

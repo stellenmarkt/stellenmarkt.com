@@ -37,8 +37,8 @@ $types = [
 
 return [
     'options' => [
-        'Gastro24/ClassificationOptions' => [
-            'class' => '\Gastro24\Form\ClassificationOptions',
+        'Stellenmarkt/ClassificationOptions' => [
+            'class' => '\GStellenmarkt\Form\ClassificationOptions',
             'options' => [
                 'professions' => $professions,
                 'types'       => $types,

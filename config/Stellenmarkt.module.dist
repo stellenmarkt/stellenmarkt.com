@@ -15,8 +15,8 @@
  * this option depends on the order of the loaded modules
  */
 
-if ((!array_key_exists('APPLICATION_HOST', $_SERVER) || $_SERVER['APPLICATION_HOST'] != "gastro24") && !$allModules) {
+if ((!array_key_exists('APPLICATION_HOST', $_SERVER) || $_SERVER['APPLICATION_HOST'] != "stellenmarkt") && !$allModules) {
 //    return array();
 }
 
-return array("Gastro24");
+return array("Stellenmarkt");
