@@ -24,6 +24,7 @@ $this->headTitle($this->translate('Stellenmarkt.com'))->setSeparator(' | ')->set
 
 $this->headMeta()->setCharset("utf-8");
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
+$this->headMeta()->appendName('google-site-verification', 'o0TTS13dmp-nNHnPD0FF-6YyCzC9KjS7UdNj4hANH20');
 
 $this->configHeadScript()->prependScript('var lang="' . $lang . '";'
                                          . 'var basePath="' . $this->basePath() . '";');
