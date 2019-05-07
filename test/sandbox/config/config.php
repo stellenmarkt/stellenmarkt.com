@@ -15,6 +15,7 @@ return [
         'Cv',
         'Orders',
         'JobsByMail',
-        'Stellenmarkt'
+        'Stellenmarkt',
+        'Landingpages',
     ],
 ];

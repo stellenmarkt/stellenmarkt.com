@@ -207,6 +207,20 @@ $this->headScript()->captureStart();
         </div>
     </div>
 
+    <?php 
+    if ($lp=$this->landingpage()){
+        if (!$lp->isCombined() && $lp->getCategory()){
+            echo $lp->getCategory()->getName();
+            if ($lp->getCategory()->getSlug() === 'jobs-by-city' ) {
+                 echo $this->landingpages([$lp->getSlug(),'berufe']);
+            } else {
+                echo $this->landingpages([$lp->getSlug(),'jobs-by-city']);
+            }
+        }
+    }else{
+        echo $this->landingpages();
+    } 
+    ?>
 
 
 <div class="modal fade" id="job-apply-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">

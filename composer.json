@@ -27,7 +27,8 @@
         "yawik/simple-import": "^0.1",
         "yawik/organizations": "^0.33",
         "yawik/pdf": "^0.33",
-        "yawik/composer-plugin": "^0.32@dev"
+        "yawik/composer-plugin": "^0.32@dev",
+        "yawik/landingpages": "dev-master"
     },
     "autoload": {
         "psr-4": {
