@@ -3252,12 +3252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/landingpages.git",
-                "reference": "83da9307516a36405ba207b10060b53aac80ce6b"
+                "reference": "203ffeabbbc70d14cd22aeb4acc8b02c1001340e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/landingpages/zipball/83da9307516a36405ba207b10060b53aac80ce6b",
-                "reference": "83da9307516a36405ba207b10060b53aac80ce6b",
+                "url": "https://api.github.com/repos/yawik/landingpages/zipball/203ffeabbbc70d14cd22aeb4acc8b02c1001340e",
+                "reference": "203ffeabbbc70d14cd22aeb4acc8b02c1001340e",
                 "shasum": ""
             },
             "require": {
@@ -3303,7 +3303,7 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-05-03T15:31:32+00:00"
+            "time": "2019-05-07T15:22:28+00:00"
         },
         {
             "name": "yawik/orders",
