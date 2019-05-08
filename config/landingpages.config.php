@@ -10294,4 +10294,4 @@ $options = array (
 );
 /* Do not edit below this line */
 
-return ['options' => [\Gastro24\Options\Landingpages::class => [$options]]];
+return []; #'options' => [\Gastro24\Options\Landingpages::class => [$options]]];
