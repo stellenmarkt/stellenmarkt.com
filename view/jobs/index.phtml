@@ -210,10 +210,10 @@ $this->headScript()->captureStart();
     if ($lp=$this->landingpage()){
         if (!$lp->isCombined() && $lp->getCategory()){
             echo $lp->getCategory()->getName();
-            if ($lp->getCategory()->getSlug() === 'jobs-by-city' ) {
+            if ($lp->getCategory()->getSlug() === 'by-city' ) {
                  echo $this->landingpages([$lp->getSlug(),'berufe']);
             } else {
-                echo $this->landingpages([$lp->getSlug(),'jobs-by-city']);
+                echo $this->landingpages([$lp->getSlug(),'by-city']);
             }
         }
     }else{
