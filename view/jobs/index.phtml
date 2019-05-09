@@ -32,6 +32,7 @@ if ($this->landingpage()){
     $text = join(' in der Nähe von ', array_values($query));
     $this->headMeta()->setName('description', sprintf('Stellenanzeigen %1$s finden und einfach bewerben mit stellenmarkt.com', $text));
     $this->headMeta()->setName('keywords', sprintf('Stellenanzeigen %1$s, Stellenangebote %1$s , jobs %1$s', $text));
+    $this->headTitle($text);
 }
 
 $this->headMeta()->setName('robots', $robots);
