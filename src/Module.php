@@ -8,6 +8,7 @@ use Stellenmarkt\Options\Landingpages;
 use Zend\Console\Console;
 use Zend\Mvc\MvcEvent;
 use Zend\Stdlib\Parameters;
+use Landingpages\Controller\CategoryController;
 
 /**
  * Bootstrap class of our demo skin
@@ -86,12 +87,12 @@ class Module implements AssetProviderInterface
 	            $viewModel  = $event->getViewModel();
 	            $template   = 'layout/application-form';
 	            $controller = $event->getTarget();
-	
+
 	            if ($controller instanceof \Applications\Controller\ApplyController) {
 		            $viewModel->setTemplate($template);
 		            return;
 	            }
-	
+
 	            if ($controller instanceof \Applications\Controller\ManageController
 	                && 'detail' == $event->getRouteMatch()->getParam('action')
 	                && 200 == $event->getResponse()->getStatusCode()
@@ -104,9 +105,9 @@ class Module implements AssetProviderInterface
 			            $viewModel->setTemplate($template);
 		            }
 	            }
-	
+
             };
-            
+
             $sharedManager->attach(
                 'Applications',
                 MvcEvent::EVENT_DISPATCH,$listener,
@@ -115,7 +116,19 @@ class Module implements AssetProviderInterface
             $sharedManager->attach(
             	'CamMediaintown',
 	            MvcEvent::EVENT_DISPATCH,$listener,
-	            -2);
+                -2);
+
+            /*
+             * Set meta name="robots" für Landingpage Kategorien-Seiten
+             */
+            $sharedManager->attach(
+                CategoryController::class,
+                MvcEvent::EVENT_DISPATCH,
+                function ($event) use ($services) {
+                    $headMeta = $services->get('ViewHelperManager')->get('headmeta');
+                    $headMeta->setName('robots', 'index,follow');
+                }
+            );
 
             $eventManager->attach(MvcEvent::EVENT_ROUTE, function(MvcEvent $event) {
                 $routeMatch = $event->getRouteMatch();

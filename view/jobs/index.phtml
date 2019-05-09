@@ -26,8 +26,14 @@ $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
 if ($this->landingpage()){
-    $robots = "index,nofollow";
+    $robots = "index,follow";
+    $query = $this->landingpage()->getQuery();
+    unset($query['d']);
+    $text = join(' in der Nähe von ', array_values($query));
+    $this->headMeta()->setName('description', sprintf('Stellenanzeigen %1$s finden und einfach bewerben mit stellenmarkt.com', $text));
+    $this->headMeta()->setName('keywords', sprintf('Stellenanzeigen %1$s, Stellenangebote %1$s , jobs %1$s', $text));
 }
+
 $this->headMeta()->setName('robots', $robots);
 $this->headScript()->captureStart();
 
@@ -206,7 +212,7 @@ $this->headScript()->captureStart();
 
         </div>
 <hr>
-    <?php 
+    <?php
     if ($lp=$this->landingpage()){
         if (!$lp->isCombined() && $lp->getCategory()){
             echo $lp->getCategory()->getName();
@@ -218,7 +224,7 @@ $this->headScript()->captureStart();
         }
     }else{
         echo $this->landingpages();
-    } 
+    }
     ?>
 
 
