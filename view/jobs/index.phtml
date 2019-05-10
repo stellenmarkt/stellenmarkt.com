@@ -15,13 +15,6 @@ $this->headScript()->appendFile($this->basepath('/modules/Core/js/core.paginatio
 $queryGet = $this->params()->fromQuery();
 unset($queryGet['clear']);
 $query = $this->params()->fromRoute('wpId') ?: (count($queryGet) ? 0 : 304);
-$wordpress = $this->proxy('wordpress');
-
-$this->headMeta()->setName('description', $wordpress->chain(['page' => $query, 'value' => 'meta-fields.description'], ''));
-$this->headMeta()->setName('keywords', $wordpress->call('value', ['meta-fields.keywords'], ''));
-$description = $wordpress->call('value', ['content.rendered'], '');
-
-$title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
@@ -33,6 +26,10 @@ if ($this->landingpage()){
     $this->headMeta()->setName('description', sprintf('Stellenanzeigen %1$s finden und einfach bewerben mit stellenmarkt.com', $text));
     $this->headMeta()->setName('keywords', sprintf('Stellenanzeigen %1$s, Stellenangebote %1$s , jobs %1$s', $text));
     $this->headTitle($text);
+} else {
+    $robots = "index,follow";
+    $this->headMeta()->setName('description', 'Stellenanzeigen finden und einfach bewerben mit stellenmarkt.com');
+    $this->headMeta()->setName('keywords', 'Stellenanzeigen, Stellenangebote, jobs');
 }
 
 $this->headMeta()->setName('robots', $robots);
