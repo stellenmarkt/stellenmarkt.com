@@ -71,7 +71,7 @@ if ('-' == $sort{0}) {
               <img class="yk-logo-sm" src="<?php echo $this->basePath($this->organizationImageCache->getUri($organization->getImage(true))) ?>">
           </div>
       <?php endif ?>
-      <a href="<?= $this->orgProfileUrl($org);?>?clear=1">
+      <a href="<?= $this->orgProfileUrl($organization);?>?clear=1">
     <?php
         $nameEntity = $organization->getOrganizationName();
         echo isset($nameEntity)?$nameEntity->getName():'**** DRAFT ****';
