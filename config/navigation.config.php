@@ -42,6 +42,12 @@ return [
                 'active_on' => ['lang/jobboard', 'lang/landingPage'],
                 'query' => [ 'clear' => 1 ],
             ],
+            'organizations-profiles' => [
+                'label' => 'Firmen',
+                'text_domain' => 'do-not-translate',
+                'route' => 'lang/organizations/profile',
+                'order' => 1960,
+            ],
             'post-a-job' => [
                 'label' => 'Stellenanzeige schalten',
                 'route' => 'lang/wordpress',
