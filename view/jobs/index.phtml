@@ -110,6 +110,8 @@ $this->headScript()->captureStart();
             //$this->filterForm->add( ['type' => 'hidden', 'name' => 'clear', 'attributes' => ['value' => 1]]);
             $this->filterForm->setAttribute('data-handle-by', 'native');
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
+            $this->filterForm->getButtons()->get('clear')->setAttribute('onclick', 'location.href=\'?clear=1\';');
+
              ?>
              <div class="search-form-container">
                  <?=$this->searchForm()->openTag($filterForm)?>
