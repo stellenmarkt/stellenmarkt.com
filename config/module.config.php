@@ -401,6 +401,7 @@ return [
                 '5cd94e820fc61f76a506cf9c' => 'stellenmarkt/jobs/view-ics', // icsag
                 '5b84e64900c05016061616a2' => 'stellenmarkt/jobs/view-ics', // transporeon
                 '5c98fbd20fc61f60d7574e62' => 'stellenmarkt/jobs/view-ics', // arwa
+                '5c5aad0f0fc61f78f770bcb2' => 'stellenmarkt/jobs/view-ics', // persona
             ],
         ]],
     ],
