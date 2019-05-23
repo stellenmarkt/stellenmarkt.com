@@ -399,7 +399,7 @@ return [
             /* Firmen-Id => View-Template-Name */
             'map' => [
                 // ICS
-                '5bcf612fb6428b0b1008db60' => 'stellenmarkt/jobs/view-ics',
+                '5cd94e820fc61f76a506cf9c' => 'stellenmarkt/jobs/view-ics',
             ],
         ]],
     ],
