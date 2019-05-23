@@ -396,10 +396,10 @@ return [
         Landingpages::class => [],
         Options\JobDetailsForm::class => [],
         Options\CompanyTemplatesMap::class => [[
-            /* Firmen-Id => View-Template-Name */
+            /* organizationId => View-Template-Name */
             'map' => [
-                // ICS
-                '5cd94e820fc61f76a506cf9c' => 'stellenmarkt/jobs/view-ics',
+                '5cd94e820fc61f76a506cf9c' => 'stellenmarkt/jobs/view-ics', // icsag
+                '5b84e64900c05016061616a2' => 'stellenmarkt/jobs/view-ics', // transporeon
             ],
         ]],
     ],
