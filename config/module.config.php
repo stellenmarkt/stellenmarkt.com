@@ -140,9 +140,9 @@ return [
             'orgProfileUrl' => View\Helper\OrgProfileUrl::class,
         ],
         'delegators' => [
-//            'jobUrl' => [
-//                Factory\View\Helper\JobUrlDelegatorFactory::class,
-//            ],
+            'jobUrl' => [
+                Factory\View\Helper\JobUrlDelegatorFactory::class,
+            ],
         ],
     ],
 
@@ -209,7 +209,7 @@ return [
              'templates/modern/index' => __DIR__ . '/../view/templates/modern/index.phtml',
              'iframe/iFrame.phtml' => __DIR__ . '/../view/jobs/iframe/iFrame.phtml',
              'stellenmarkt/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
-             'stellenmarkt/jobs/view-mcdonalds' => __DIR__ . '/../view/jobs/view-mcdonalds.phtml',
+             'stellenmarkt/jobs/view-ics' => __DIR__ . '/../view/jobs/inline/ics.phtml',
              'stellenmarkt/jobs/view-intern' => __DIR__ . '/../view/jobs/view-intern.phtml',
              'stellenmarkt/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'stellenmarkt/form/create-single-job' => __DIR__ . '/../view/jobs/create-single-job-form.phtml',
@@ -398,8 +398,8 @@ return [
         Options\CompanyTemplatesMap::class => [[
             /* Firmen-Id => View-Template-Name */
             'map' => [
-                // McDonald's Suisse Restaurants
-                '5bcf612fb6428b0b1008db60' => 'stellenmarkt/jobs/view-mcdonalds',
+                // ICS
+                '5bcf612fb6428b0b1008db60' => 'stellenmarkt/jobs/view-ics',
             ],
         ]],
     ],
