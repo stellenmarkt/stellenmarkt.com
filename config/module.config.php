@@ -402,6 +402,9 @@ return [
                 '5b84e64900c05016061616a2' => 'stellenmarkt/jobs/view-ics', // transporeon
                 '5c98fbd20fc61f60d7574e62' => 'stellenmarkt/jobs/view-ics', // arwa
                 '5c5aad0f0fc61f78f770bcb2' => 'stellenmarkt/jobs/view-ics', // persona
+                '5c5aac860fc61f78f96cf2b3' => 'stellenmarkt/jobs/view-ics', // orizon
+                '5c6d5c640fc61f6eeb1c0ca2' => 'stellenmarkt/jobs/view-ics', // rosinke
+ 
             ],
         ]],
     ],
