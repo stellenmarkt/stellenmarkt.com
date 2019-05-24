@@ -84,7 +84,7 @@ $activeFacets = $facets->getActiveValues();
                 <?php
                 $org = $job->getOrganization();
                 $options = $this->services('Stellenmarkt\Options\CompanyTemplatesMap');
-                $link = $options->hasTemplate($org) ?  $this->jobUrl($job, ['linkOnly' => true]) : $job->getLink();
+                $href = $options->hasTemplate($org) ?  $this->jobUrl($job, ['linkOnly' => true]) : $job->getLink();
                 ?>
                 <h4>
                     <a title="<?=strip_tags($job->getTitle())?>"
