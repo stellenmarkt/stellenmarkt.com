@@ -404,7 +404,9 @@ return [
                 '5c5aad0f0fc61f78f770bcb2' => 'stellenmarkt/jobs/view-ics', // persona
                 '5c5aac860fc61f78f96cf2b3' => 'stellenmarkt/jobs/view-ics', // orizon
                 '5c6d5c640fc61f6eeb1c0ca2' => 'stellenmarkt/jobs/view-ics', // rosinke
- 
+                '5c50665600c050c815ee91b6' => 'stellenmarkt/jobs/view-ics', // universaljob
+                '5bd3261f00c050db5fdfe212' => 'stellenmarkt/jobs/view-ics', // swisselect                
+                '5c0e7ea400c0505160053488' => 'stellenmarkt/jobs/view-ics', // careforce
             ],
         ]],
     ],
