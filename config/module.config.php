@@ -74,6 +74,14 @@ return [
             'Orders/Listener/BindInvoiceAddressEntity' => Listener\VoidListener::class,
             'Orders/Listener/CreateJobOrder' => Listener\CreateJobOrder::class,
         ],
+        'delegators' => [
+            \Sitemap\Event\FetchJobLinksListener::class => [
+                Listener\FetchJobLinksForSitemapDelegatorFactory::class
+            ],
+            \Sitemap\Options\SitemapOptions::class => [
+                Factory\Delegator\SitemapOptionsDelegator::class,
+            ],
+        ],
     ],
 
     'controllers' => [
@@ -395,6 +403,9 @@ return [
                 ],
             ]],
         ],
+        \Sitemap\Options\SitemapOptions::class => [
+            'baseUrl' => 'https://www.stellenmarkt.com/',
+        ],
         Landingpages::class => [],
         Options\JobDetailsForm::class => [],
         Options\CompanyTemplatesMap::class => [[
@@ -407,7 +418,7 @@ return [
                 '5c5aac860fc61f78f96cf2b3' => 'stellenmarkt/jobs/view-default', // orizon
                 '5c6d5c640fc61f6eeb1c0ca2' => 'stellenmarkt/jobs/view-default', // rosinke
                 '5c50665600c050c815ee91b6' => 'stellenmarkt/jobs/view-default', // universaljob
-                '5bd3261f00c050db5fdfe212' => 'stellenmarkt/jobs/view-default', // swisselect                
+                '5bd3261f00c050db5fdfe212' => 'stellenmarkt/jobs/view-default', // swisselect
                 '5c0e7ea400c0505160053488' => 'stellenmarkt/jobs/view-default', // careforce
                 '5c2d1ea000c0508439ec4126' => 'stellenmarkt/jobs/view-default',
                 '5c8fc00b0fc61f2bed39f368' => 'stellenmarkt/jobs/view-default',
@@ -647,4 +658,3 @@ return [
         ]],
     ],
 ];
-  
