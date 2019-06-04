@@ -211,6 +211,7 @@ return [
              'stellenmarkt/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
              'stellenmarkt/jobs/view-default' => __DIR__ . '/../view/jobs/inline/default.phtml',
              'stellenmarkt/jobs/view-ics' => __DIR__ . '/../view/jobs/inline/ics.phtml',
+             'stellenmarkt/jobs/view-mr-datentechnik' => __DIR__ . '/../view/jobs/inline/mr-datentechnik.phtml',
              'stellenmarkt/jobs/view-intern' => __DIR__ . '/../view/jobs/view-intern.phtml',
              'stellenmarkt/create-single-job/index' => __DIR__ . '/../view/jobs/create-single-job.phtml',
              'stellenmarkt/form/create-single-job' => __DIR__ . '/../view/jobs/create-single-job-form.phtml',
@@ -521,7 +522,7 @@ return [
                 '5c8bda810fc61f4a4b7e9802' => 'stellenmarkt/jobs/view-default',
                 '5cd95def0fc61f179b020f06' => 'stellenmarkt/jobs/view-default',
                 '5c90beee0fc61f2ac810c842' => 'stellenmarkt/jobs/view-default',
-                '5cc057450fc61f0dde321052' => 'stellenmarkt/jobs/view-default',
+                '5cc057450fc61f0dde321052' => 'stellenmarkt/jobs/view-mr-datentechnik', // mr-datentechnik
                 '5c2d261300c0500a3bec4128' => 'stellenmarkt/jobs/view-default',
                 '5bdaeb6300c050a154626303' => 'stellenmarkt/jobs/view-default',
                 '5c768b250fc61f4122727948' => 'stellenmarkt/jobs/view-default',
