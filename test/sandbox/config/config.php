@@ -5,6 +5,7 @@ chdir(dirname(__DIR__));
 return [
     'modules' => [
         'Core',
+        'SlmQueue',
         'Auth',
         'Geo',
         'Organizations',
@@ -17,5 +18,6 @@ return [
         'JobsByMail',
         'Stellenmarkt',
         'Landingpages',
+        'Sitemap'
     ],
 ];
