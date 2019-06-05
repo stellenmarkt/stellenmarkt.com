@@ -2406,7 +2406,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -2818,7 +2818,7 @@
         },
         {
             "name": "yawik/applications",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/applications.git",
@@ -2875,16 +2875,16 @@
         },
         {
             "name": "yawik/auth",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/auth.git",
-                "reference": "b29955ebb9a5fd2b858f8b0a7646775ddcf1b3da"
+                "reference": "dcf1c1f67452c24b7316deaee6310fd5575db87f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/auth/zipball/b29955ebb9a5fd2b858f8b0a7646775ddcf1b3da",
-                "reference": "b29955ebb9a5fd2b858f8b0a7646775ddcf1b3da",
+                "url": "https://api.github.com/repos/yawik/auth/zipball/dcf1c1f67452c24b7316deaee6310fd5575db87f",
+                "reference": "dcf1c1f67452c24b7316deaee6310fd5575db87f",
                 "shasum": ""
             },
             "require": {
@@ -2930,7 +2930,7 @@
                 "yawik",
                 "zf"
             ],
-            "time": "2019-04-09T06:04:08+00:00"
+            "time": "2019-06-04T09:46:31+00:00"
         },
         {
             "name": "yawik/composer-plugin",
@@ -3000,16 +3000,16 @@
         },
         {
             "name": "yawik/core",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/core.git",
-                "reference": "0b06f702e7fc763cb9f4eec1b531fc56bbe6f0ee"
+                "reference": "3a4b380702596438de0f7c3fc8813b0dbf57de1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/core/zipball/0b06f702e7fc763cb9f4eec1b531fc56bbe6f0ee",
-                "reference": "0b06f702e7fc763cb9f4eec1b531fc56bbe6f0ee",
+                "url": "https://api.github.com/repos/yawik/core/zipball/3a4b380702596438de0f7c3fc8813b0dbf57de1d",
+                "reference": "3a4b380702596438de0f7c3fc8813b0dbf57de1d",
                 "shasum": ""
             },
             "require": {
@@ -3100,11 +3100,11 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-04-12T08:21:01+00:00"
+            "time": "2019-06-05T08:13:32+00:00"
         },
         {
             "name": "yawik/cv",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/cv.git",
@@ -3218,16 +3218,16 @@
         },
         {
             "name": "yawik/jobs",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/jobs.git",
-                "reference": "50c124152e9de98bd789bf7593d152019269ff7b"
+                "reference": "88f18bc556b14ff2323e3dc2238803ed75970b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/jobs/zipball/50c124152e9de98bd789bf7593d152019269ff7b",
-                "reference": "50c124152e9de98bd789bf7593d152019269ff7b",
+                "url": "https://api.github.com/repos/yawik/jobs/zipball/88f18bc556b14ff2323e3dc2238803ed75970b54",
+                "reference": "88f18bc556b14ff2323e3dc2238803ed75970b54",
                 "shasum": ""
             },
             "require": {
@@ -3271,7 +3271,7 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-04-09T06:04:08+00:00"
+            "time": "2019-05-31T17:41:46+00:00"
         },
         {
             "name": "yawik/jobs-by-mail",
@@ -3469,7 +3469,7 @@
         },
         {
             "name": "yawik/organizations",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/organizations.git",
@@ -3526,7 +3526,7 @@
         },
         {
             "name": "yawik/pdf",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/pdf.git",
@@ -3584,7 +3584,7 @@
         },
         {
             "name": "yawik/settings",
-            "version": "v0.33.13",
+            "version": "v0.33.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/settings.git",
@@ -3715,16 +3715,16 @@
         },
         {
             "name": "yawik/sitemap",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/sitemap.git",
-                "reference": "1f84d2308c4ed8e643a55ff073e84db17b6cf7fc"
+                "reference": "a2858b5ae291952018a8bfccea54462121a8edad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/sitemap/zipball/1f84d2308c4ed8e643a55ff073e84db17b6cf7fc",
-                "reference": "1f84d2308c4ed8e643a55ff073e84db17b6cf7fc",
+                "url": "https://api.github.com/repos/yawik/sitemap/zipball/a2858b5ae291952018a8bfccea54462121a8edad",
+                "reference": "a2858b5ae291952018a8bfccea54462121a8edad",
                 "shasum": ""
             },
             "require": {
@@ -3770,7 +3770,7 @@
                 "seo",
                 "yawik"
             ],
-            "time": "2019-06-04T08:51:33+00:00"
+            "time": "2019-06-05T09:08:12+00:00"
         },
         {
             "name": "yawik/solr",
@@ -5734,6 +5734,11 @@
         {
             "name": "zendframework/zend-mvc-plugins",
             "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-mvc-plugins.git",
+                "reference": "b00cda46b0a95cbd32ea0743d6d7dc3fd2263f1b"
+            },
             "require": {
                 "php": "^5.6 || ^7.0",
                 "zendframework/zend-mvc-plugin-fileprg": "^1.0",
