@@ -3715,16 +3715,16 @@
         },
         {
             "name": "yawik/sitemap",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/sitemap.git",
-                "reference": "a2858b5ae291952018a8bfccea54462121a8edad"
+                "reference": "b6db64df11ed7f4599d232bb55aac01623cb1f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/sitemap/zipball/a2858b5ae291952018a8bfccea54462121a8edad",
-                "reference": "a2858b5ae291952018a8bfccea54462121a8edad",
+                "url": "https://api.github.com/repos/yawik/sitemap/zipball/b6db64df11ed7f4599d232bb55aac01623cb1f3d",
+                "reference": "b6db64df11ed7f4599d232bb55aac01623cb1f3d",
                 "shasum": ""
             },
             "require": {
@@ -3770,7 +3770,7 @@
                 "seo",
                 "yawik"
             ],
-            "time": "2019-06-05T09:08:12+00:00"
+            "time": "2019-06-05T14:49:58+00:00"
         },
         {
             "name": "yawik/solr",
