@@ -621,6 +621,7 @@ return [
                 '5c37353800c0502b4019463f' => 'stellenmarkt/jobs/view-default',
                 '5c1c059900c050d3037b23c6' => 'stellenmarkt/jobs/view-default',
                 '5c5af7950fc61f1a941542b2' => 'stellenmarkt/jobs/view-default',
+                '5c9e171c0fc61f5ff823c012' => 'stellenmarkt/jobs/view-default',
             ],
         ]],
     ],
