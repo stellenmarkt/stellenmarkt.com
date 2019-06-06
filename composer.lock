@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcd8560e87e9db855145ab98a6c52668",
+    "content-hash": "bbfb85a9eed0352824e08416fd3be0cb",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -3715,16 +3715,16 @@
         },
         {
             "name": "yawik/sitemap",
-            "version": "0.2.2",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/sitemap.git",
-                "reference": "b6db64df11ed7f4599d232bb55aac01623cb1f3d"
+                "reference": "99ef4aa9a9b2b80181a67940444af8895efe5d6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/sitemap/zipball/b6db64df11ed7f4599d232bb55aac01623cb1f3d",
-                "reference": "b6db64df11ed7f4599d232bb55aac01623cb1f3d",
+                "url": "https://api.github.com/repos/yawik/sitemap/zipball/99ef4aa9a9b2b80181a67940444af8895efe5d6c",
+                "reference": "99ef4aa9a9b2b80181a67940444af8895efe5d6c",
                 "shasum": ""
             },
             "require": {
@@ -3770,7 +3770,7 @@
                 "seo",
                 "yawik"
             ],
-            "time": "2019-06-05T14:49:58+00:00"
+            "time": "2019-06-06T13:10:35+00:00"
         },
         {
             "name": "yawik/solr",

@@ -29,7 +29,7 @@
         "yawik/pdf": "^0.33",
         "yawik/composer-plugin": "^0.32@dev",
         "yawik/landingpages": "^0.1.0",
-        "yawik/sitemap": "^0.2.0"
+        "yawik/sitemap": "^0.3.0"
     },
     "autoload": {
         "psr-4": {

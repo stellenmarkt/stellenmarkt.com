@@ -38,18 +38,26 @@ class FetchJobLinksForSitemapListener
     public function __invoke(GenerateSitemapEvent $event)
     {
         $collection = $event->getLinkCollection();
-        $jobs = $this->repository->findBy(['status.name' => \Jobs\Entity\StatusInterface::ACTIVE]);
+        $qb = $this->repository->createQueryBuilder();
+        $qb->select('organization')->select('dateModified');
+        $qb->field('status.name')->equals(\Jobs\Entity\StatusInterface::ACTIVE);
+        $qb->hydrate(false);
 
-        /** @var \Jobs\Entity\Job $job */
-        foreach ($jobs as $job) {
-            if (!$this->map->hasTemplate($job->getOrganization())) {
+        $result = $qb->getQuery()->execute()->toArray();
+
+        foreach ($result as $jobId => $data) {
+            if ($this->map->hasTemplate((string) $data['organization'])) {
                 continue;
             }
 
             $link = new RouteLink();
             $link->setName('lang/jobs/view-extern');
-            $link->setParams(['id' => $job->getId()]);
-            $link->setLastModified($job->getDateModified());
+            $link->setParams(['id' => $jobId]);
+            $link->setLastModified(
+                $data['dateModified']['date']
+                ->toDateTime()
+                ->setTimezone(new \DateTimeZone($data['dateModified']['tz'])
+            ));
             $link->setChangeFrequency(Sitemap::MONTHLY);
 
             $collection->addLink($link);
