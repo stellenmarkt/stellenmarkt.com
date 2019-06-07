@@ -212,22 +212,7 @@ $this->headScript()->captureStart();
 
         </div>
 <hr>
-    <?php
-    if ($lp=$this->landingpage()){
-        if (!$lp->isCombined() && $lp->getCategory()){
-            
-            if ($lp->getCategory()->getSlug() === 'by-city' ) {
-                echo $lp->getCategory()->getName();
-                echo $this->landingpages([$lp->getSlug(),'berufe']);
-            } else {
-                // Kombination mit 1000 Städten wird ausgeblendet
-                //echo $this->landingpages([$lp->getSlug(),'by-city']);
-            }
-        }
-    }else{
-        echo $this->landingpages();
-    }
-    ?>
+    <?= $this->landingpages(); ?>
 
 
     </div>
