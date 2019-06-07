@@ -46,7 +46,7 @@ class FetchJobLinksForSitemapListener
         $result = $qb->getQuery()->execute()->toArray();
 
         foreach ($result as $jobId => $data) {
-            if ($this->map->hasTemplate((string) $data['organization'])) {
+            if (!$this->map->hasTemplate((string) $data['organization'])) {
                 continue;
             }
 
