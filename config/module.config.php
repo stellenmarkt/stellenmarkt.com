@@ -623,6 +623,7 @@ return [
                 '5c5af7950fc61f1a941542b2' => 'stellenmarkt/jobs/view-default',
                 '5c9e171c0fc61f5ff823c012' => 'stellenmarkt/jobs/view-default',
                 '5cd40a420fc61f1b60304a52' => 'stellenmarkt/jobs/view-default', // VOLKE - Entwicklungsring SE
+                '5d29cf510fc61f070347e6a2' => 'stellenmarkt/jobs/view-default', // Hays
             ],
         ]],
     ],
