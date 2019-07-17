@@ -2,12 +2,10 @@
 <?php
 $this->headScript()->appendFile($this->basepath('/modules/Core/js/core.pagination-container.js'))
      ->appendFile($this->basePath('modules/Core/js/core.forms.js'))
-
      ->appendFile($this->basePath('modules/Stellenmarkt/js/jquery.matchHeight.js'))
      ->appendFile($this->basePath('modules/Stellenmarkt/js/jobs.js'));;
 
-    $this->headScript()
-                       ->appendFile($this->basePath('/dist/js/bootstrap-dialog.min.js'));
+$this->headScript()->appendFile($this->basePath('/dist/js/bootstrap-dialog.min.js'));
 
 ?>
 <?php
@@ -15,36 +13,28 @@ $this->headScript()->appendFile($this->basepath('/modules/Core/js/core.paginatio
 $queryGet = $this->params()->fromQuery();
 unset($queryGet['clear']);
 $query = $this->params()->fromRoute('wpId') ?: (count($queryGet) ? 0 : 304);
+$wordpress = $this->proxy('wordpress');
+
+$this->headMeta()->setName('description', $wordpress->chain(['page' => $query, 'value' => 'meta-fields.description'], ''));
+$this->headMeta()->setName('keywords', $wordpress->call('value', ['meta-fields.keywords'], ''));
+$description = $wordpress->call('value', ['content.rendered'], '');
+
+$title = $wordpress->call('value', ['meta-fields.title'], '');
 $this->headTitle($title ?: $this->translate('Jobs'));
 
 $robots = "noindex,follow";
-if ($this->landingpage()){
-    $robots = "index,follow";
-    $query = $this->landingpage()->getQuery();
-    unset($query['d']);
-    $text = join(' in der Nähe von ', array_values($query));
-    $this->headMeta()->setName('description', sprintf('Stellenanzeigen %1$s finden und einfach bewerben mit stellenmarkt.com', $text));
-    $this->headMeta()->setName('keywords', sprintf('Stellenanzeigen %1$s, Stellenangebote %1$s , jobs %1$s', $text));
-    $this->headTitle($text);
-} else {
-    $robots = "index,follow";
-    $this->headMeta()->setName('description', 'Stellenanzeigen finden und einfach bewerben mit stellenmarkt.com');
-    $this->headMeta()->setName('keywords', 'Stellenanzeigen, Stellenangebote, jobs');
+if (304 === $query || ($this->params()->fromRoute('isLandingPage') && !$this->params()->fromRoute('isFilteredLandingPage') && (count($this->jobs) || $description))) {
+    $robots = substr($robots, 2);
 }
-
 $this->headMeta()->setName('robots', $robots);
 $this->headScript()->captureStart();
-
 ?>
-
-
-
 (function($) {
 
     $(function() {
         var $tabbar = $('#search-tabs');
 
-        $('#jobs-list-container').on('yk-paginator-container:loaded.stellenmarkt g24-jobs:init', function(ev) {
+        $('#jobs-list-container').on('yk-paginator-container:loaded.gastro24 g24-jobs:init', function(ev) {
             $tabbar.show();
             var html = $('#jobs-list-container').find('.pagination-content').html();
 
@@ -64,33 +54,28 @@ $this->headScript()->captureStart();
                 }
             });
 
-
         }).trigger('g24-jobs:init');
 
         var $jobCount = $('#job-count');
 
-        $('#jobs-list-container').on('yk-paginator-container:loaded.stellenmarkt-job-count', function(ev) {
+        $('#jobs-list-container').on('yk-paginator-container:loaded.gastro24-job-count', function(ev) {
             var count = $('#update-job-count').text();
             $jobCount.text(count);
         });
 
-        $('#jobs-list-filter').on('reset.stellenmarkt', function(ev) { $(ev.target).find('input.facet-param').remove(); });
+        $('#jobs-list-filter').on('reset.gastro24', function(ev) { $(ev.target).find('input.facet-param').remove(); });
 
     });
 })(jQuery);
 <?php $this->headScript()->captureEnd();?>
 
-
-
 <?php if ($jobs instanceof \Solr\FacetsProviderInterface): $this->headScript()->appendFile($this->basePath('modules/Stellenmarkt/js/jobs.facets.js')); endif; ?>
-
-
 
 <?php echo $this->flashMessenger()->render('default', array('alert', 'alert-success')) ?>
 
 <div id="jobs-list-filter-wrapper">
-    <div class="search-form-container ">
-            <div class="container ">
+    <div class="search-form-container bg-static">
+        <div class="container ">
         <?php
             $queryParams = $this->params()->fromQuery();
             foreach (array_keys($this->jobs->getFacets()->toArray()) as $facetName):
@@ -111,62 +96,45 @@ $this->headScript()->captureStart();
             $this->filterForm->setAttribute('data-handle-by', 'native');
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
             $this->filterForm->getButtons()->get('clear')->setAttribute('onclick', 'location.href=\'?clear=1\';');
-
-             ?>
-             <div class="search-form-container">
-                 <?=$this->searchForm()->openTag($filterForm)?>
-                 <div class="row">
-                 <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($filterForm->get('q'))?></div>
-                 <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($filterForm->get('l'))?></div>
-                 <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($filterForm->get('d'))?></div>
-                 <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($filterForm->getButtons())?></div>
-                 </div>
-                 <?=$this->searchForm()->closeTag()?>
-             </div>
-  </div>
- </div>
+            ?>    
+            <div class="searchform">
+                <?=$this->searchForm()->openTag($filterForm)?>
+                <div class="row">
+                <div class="input-group col-md-5 col-xs-12 pull-left"><?=$this->formElement($filterForm->get('q'))?></div>
+                <div class="input-group col-md-4 col-xs-6 pull-left"><?=$this->formElement($filterForm->get('l'))?></div>
+                <div class="input-group col-md-1 col-xs-6 pull-left"><?=$this->formElement($filterForm->get('d'))?></div>
+                <div class="input-group col-md-2 col-xs-12 pull-left"><?=$this->searchForm()->renderButtons($filterForm->getButtons())?></div>
+                </div>
+                <?=$this->searchForm()->closeTag()?>
+            </div>
+        </div>
+    </div>
 </div>
 
+<?php $parts=preg_split('~<!--more-->~' , $description);?>
 
-		 <?php $parts=preg_split('~<!--more-->~' , $description);?>
-
-
-
-
-
-   <style>
-
-
-
+<style>
     #similar a {
     text-decoration: underline;
     color: #3a434f;
     margin-left: 8px;
 }
+</style>
 
-
-
-   </style>
-
-   <div id="similar">
-       <div class="row">
-         <div class="col-md-9">
-           <?php if (isset($parts[0]) && "" != trim($parts[0])): ?>
-             <?= $parts[0] ?>
-                 <?php if (51 == $query): echo $this->landingpages(); endif; ?>
-
+<div id="similar">
+   <div class="row">
+        <div class="col-md-9">
+            <?php if (isset($parts[0]) && "" != trim($parts[0])): ?>
+            <?= $parts[0] ?>
+            <?php if (51 == $query): echo $this->landingpages(); endif; ?>
             <?php endif ?>
-         </div>
-          <div class="col-md-3">
-
-
+        </div>
+        <div class="col-md-3">
         <div class="clearfix"></div>
       </div>
    </div>
   <hr />
 </div>
-
-
 
 <?php if (!count($this->jobs)):?>
     <?=$this->proxy('jobsByMailSubscriptionForm')->render($jobs)?>
@@ -211,12 +179,7 @@ $this->headScript()->captureStart();
             </div>
 
         </div>
-<hr>
-    <?= $this->landingpages(); ?>
-
-
     </div>
-
 
 
 
