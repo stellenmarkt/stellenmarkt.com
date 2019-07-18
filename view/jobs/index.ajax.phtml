@@ -124,7 +124,8 @@ $description = $wordpress->call('value', ['content.rendered'], '');
     <?php
 
     $org = $job->getOrganization();
-    $href = $this->jobUrl($job, ['linkOnly' => true]);
+    $options = $this->services('Stellenmarkt\Options\CompanyTemplatesMap');
+    $href = $options->hasTemplate($org) ? $this->jobUrl($job, ['linkOnly' => true]) : $job->getLink();
 
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">
