@@ -12,7 +12,6 @@ declare(strict_types=1);
 namespace Stellenmarkt\Listener;
 
 use Zend\ServiceManager\Factory\DelegatorFactoryInterface;
-use Stellenmarkt\Options\CompanyTemplatesMap;
 
 /**
  * TODO: description
@@ -30,8 +29,7 @@ class FetchJobLinksForSitemapDelegatorFactory implements DelegatorFactoryInterfa
         ?array $options = null
     ) {
         return new FetchJobLinksForSitemapListener(
-            $container->get('repositories')->get('Jobs'),
-            $container->get(CompanyTemplatesMap::class)
+            $container->get('repositories')->get('Jobs')
         );
     }
 }
