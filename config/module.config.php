@@ -89,6 +89,7 @@ return [
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
             Controller\RedirectExternalJobs::class => Controller\RedirectExternalJobsFactory::class,
             Controller\CreateSingleJob::class => Factory\Controller\CreateSingleJobFactory::class,
+            Controller\ConsoleController::class => Controller\ConsoleControllerFactory::class,
         ],
     ],
 
@@ -375,6 +376,22 @@ return [
                                 ],
 
 
+                    ]
+                ],
+            ],
+        ],
+    ],
+
+    'console' => [
+        'router' => [
+            'routes' => [
+                'stellenmarkt-migrate-liquiddesign' => [
+                    'options' => [
+                        'route' => 'stellenmarkt migrate-ld',
+                        'defaults' => [
+                            'controller' => Controller\ConsoleController::class,
+                            'action' => 'index',
+                        ]
                     ]
                 ],
             ],
