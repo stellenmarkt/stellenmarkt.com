@@ -83,8 +83,10 @@ $activeFacets = $facets->getActiveValues();
                 <div class="top-cnt">
                 <?php
                 $org = $job->getOrganization();
-                $options = $this->services('Stellenmarkt\Options\CompanyTemplatesMap');
-                $href = $options->hasTemplate($org) ?  $this->jobUrl($job, ['linkOnly' => true]) : $job->getLink();
+                $href = $org->hasMetaData('liquiddesign') && $org->getMetaData('liquiddesign') != '_disabled_'
+                    ? $this->jobUrl($job, ['linkOnly' => true])
+                    : $job->getLink()
+                ;
                 ?>
                 <h4>
                     <a title="<?=strip_tags($job->getTitle())?>"

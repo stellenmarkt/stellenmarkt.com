@@ -89,6 +89,7 @@ return [
             Controller\WordpressPageController::class => Factory\Controller\WordpressPageControllerFactory::class,
             Controller\RedirectExternalJobs::class => Controller\RedirectExternalJobsFactory::class,
             Controller\CreateSingleJob::class => Factory\Controller\CreateSingleJobFactory::class,
+            Controller\ConsoleController::class => Controller\ConsoleControllerFactory::class,
         ],
     ],
 
@@ -268,11 +269,18 @@ return [
             Form\InvoiceAddressSettingsFieldset::class => \Settings\Form\Factory\SettingsFieldsetFactory::class,
             Form\JobDetails::class => Form\JobDetailsFactory::class,
             Form\JobDetailsForm::class => InvokableFactory::class,
-            'Stellenmarkt/JobPdfUpload' => Form\JobPdfFactory::class
+            'Stellenmarkt/JobPdfUpload' => Form\JobPdfFactory::class,
+            Form\OrganizationsLiquidDesignFieldset::class => Form\OrganizationsLiquidDesignFieldsetFactory::class,
+            Form\OrganizationsLiquidDesignForm::class => InvokableFactory::class
         ],
         'aliases' => [
             'Orders/InvoiceAddressSettingsFieldset' => Form\InvoiceAddressSettingsFieldset::class,
-        ]
+        ],
+        'delegators' => [
+            \Organizations\Form\Organizations::class => [
+                Form\OrganizationsFormDelegatorFactory::class
+            ],
+        ],
     ],
 
     'mails' => [
@@ -374,6 +382,22 @@ return [
         ],
     ],
 
+    'console' => [
+        'router' => [
+            'routes' => [
+                'stellenmarkt-migrate-liquiddesign' => [
+                    'options' => [
+                        'route' => 'stellenmarkt migrate-ld',
+                        'defaults' => [
+                            'controller' => Controller\ConsoleController::class,
+                            'action' => 'index',
+                        ]
+                    ]
+                ],
+            ],
+        ],
+    ],
+
     'options' => [
 
         'Stellenmarkt/WordpressApiOptions' => [
@@ -408,6 +432,14 @@ return [
         ],
         Landingpages::class => [],
         Options\JobDetailsForm::class => [],
+
+        Options\LiquidDesignTemplatesMap::class => [[
+            'map' => [
+                'default' => 'stellenmarkt/jobs/view-default',
+                'ICS' => 'stellenmarkt/jobs/view-ics',
+                'MR Datentechnik' => 'stellenmarkt/jobs/view-mr-datentechnik',
+            ],
+        ]],
         Options\CompanyTemplatesMap::class => [[
             /* organizationId => View-Template-Name */
             'map' => [

@@ -6,12 +6,11 @@
  * @license MIT
  * @copyright  2013 - 2018 Cross Solution <http://cross-solution.de>
  */
-  
+
 /** */
 namespace Stellenmarkt\Controller;
 
 use Core\Entity\Exception\NotFoundException;
-use Stellenmarkt\Options\CompanyTemplatesMap;
 use Stellenmarkt\Session\VisitedJobsContainer;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -19,9 +18,9 @@ use Zend\View\Model\ViewModel;
 
 /**
  * ${CARET}
- * 
+ *
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
- * @todo write test 
+ * @todo write test
  */
 class RedirectExternalJobs extends AbstractActionController
 {
@@ -33,17 +32,9 @@ class RedirectExternalJobs extends AbstractActionController
      */
     private $validator;
 
-    /**
-     *
-     *
-     * @var CompanyTemplatesMap
-     */
-    private $templatesMap;
-
-    public function __construct(\Stellenmarkt\Validator\IframeEmbeddableUri $validator, CompanyTemplatesMap $templatesMap)
+    public function __construct(\Stellenmarkt\Validator\IframeEmbeddableUri $validator)
     {
         $this->validator = $validator;
-        $this->templatesMap = $templatesMap;
     }
 
     public function indexAction()
@@ -65,7 +56,11 @@ class RedirectExternalJobs extends AbstractActionController
 
         $appModel = $this->getEvent()->getViewModel();
         $model = new ViewModel(['job' => $job]);
-        $jobTemplate = $this->templatesMap->getTemplate($job->getOrganization());
+        $jobTemplate = $job->getOrganization()->hasMetaData('liquiddesign') && $job->getOrganization()->getMetaData('liquiddesign') != '_disabled_'
+            ? $job->getOrganization()->getMetaData('liquiddesign')
+            : false
+        ;
+
         if (!$job->getLink() || $jobTemplate) {
 
             $appTemplate = $appModel->getTemplate();
