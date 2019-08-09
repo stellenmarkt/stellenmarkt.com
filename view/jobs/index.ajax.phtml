@@ -125,7 +125,7 @@ $description = $wordpress->call('value', ['content.rendered'], '');
 
     $org = $job->getOrganization();
     //$options = $this->services('Stellenmarkt\Options\CompanyTemplatesMap');
-    $href = $org->hasMetaData('liquiddesign') && $org->getMetaData('liquiddesign') != '_disabled_'
+    $href = $org && $org->hasMetaData('liquiddesign') && $org->getMetaData('liquiddesign') != '_disabled_'
         ? $this->jobUrl($job, ['linkOnly' => true])
         : $job->getLink()
     ;

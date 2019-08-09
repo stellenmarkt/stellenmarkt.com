@@ -32,11 +32,17 @@ class ConsoleController extends AbstractConsoleController
 
     public function indexAction()
     {
+        $i = 0;
         foreach ($this->map as $orgId => $templ) {
             /** @var \Organizations\Entity\Organization $org */
             $org = $this->repository->find($orgId);
             $org->setMetaData('liquiddesign', $templ);
+            if ($i % 10 == 0) {
+                $this->repository->getDocumentManager()->flush();
+                $this->repository->getDocumentManager()->clear();
+            }
             echo sprintf("%s (%s) => %s\n", $org->getOrganizationName()->getName(), $orgId, $templ);
+            $i++;
         }
     }
 }
