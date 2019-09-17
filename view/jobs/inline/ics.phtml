@@ -142,46 +142,10 @@ $orgName = $this->jobOrganizationName($this->job);
       <div class="panel-body"> 
          <div id="share" class="pull-left round-shares"></div>
            <div class="pull-right" style="margin-top:7px">
-           <?=$this->gastroApplyUrl($job);?> 
-           
+           <?=$this->jobboardApplyUrl($job);?> 
     </div>
        </div>
    </div>
-
-
-  
-    
-    
-     <style>
-       
-       
-.jssocials-share-whatsapp .jssocials-share-link,
-.jssocials-share-facebook .jssocials-share-link,
-.jssocials-share-email .jssocials-share-link,
-.jssocials-share-twitter .jssocials-share-link
-    {
-    background: #ccc;
-}
-
-.jssocials-shares a {
-    
-    color:#fff!important;
-}
-
-
-    </style>
-    
-
-            <script src="/modules/Stellenmarkt/jssocials-1.4.0/dist/jssocials.js"></script>
-            <script>
-                $("#share").jsSocials({
-                    showLabel: false,
-                    showCount: true,
-                    shares: ["email", "twitter", "facebook", "whatsapp"]
-                });
-            </script>
-    
-    
   </div>
 
 <!-- ENDE COL MD 9-->
@@ -220,15 +184,10 @@ $orgName = $this->jobOrganizationName($this->job);
                         : $this->uriLogo?>" alt="<?= $this->organizationName?>">
                    </div>
                     
-              
-                
                 <h2 class="text-center"><?= $orgName ?></h2>
-
-
-                    <?php if ($org = $this->job->getOrganization()): ?>
-                        <div style="margin-bottom:5px" class=""><a title="Aktuelle Jobs bei <?= $this->organizationName?>" href="<?= $this->orgProfileUrl($org)?>?clear=1" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
-                    <?php endif ?>
-
+               <?php if ($org = $this->job->getOrganization()): ?>
+                                     <div style="margin-bottom:5px" class=""><a title="Aktuelle Jobs bei <?= $orgName?>" href="<?= $this->orgProfileUrl($org)?>?clear=1" class="btn btn-default btn-block company-jobs-btn"><strong>Firmenprofil</strong></a></div>
+               <?php endif ?>
        </div>
     </div>
 </div>
