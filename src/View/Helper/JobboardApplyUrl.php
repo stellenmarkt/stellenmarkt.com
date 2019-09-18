@@ -40,7 +40,7 @@ class JobboardApplyUrl extends AbstractHelper
             if (strpos($url,"http")) {
                 $text = '.pdf' == substr($url, -4) ? 'PDF downloaden' : 'Jetzt bewerben';
             } else {
-                $url = null;
+                $text = "zur original Anzeige";
             }
         } else if ($ats->isIntern() || $ats->isEmail()) {
 
