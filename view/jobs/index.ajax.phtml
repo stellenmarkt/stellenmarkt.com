@@ -12,7 +12,7 @@ $hasFacets = $jobs instanceof \Solr\FacetsProviderInterface;
 
 $queryGet = $this->params()->fromQuery();
 unset($queryGet['clear']);
-$query = $this->params()->fromRoute('wpId') ?: (count($queryGet) ? 0 : 304);
+$query = $this->params()->fromRoute('wpId') ?: (count($queryGet) ? 0 : 2813);
 $wordpress = $this->proxy('wordpress');
 
 $this->headMeta()->setName('description', $wordpress->chain(['page' => $query, 'value' => 'meta-fields.description'], ''));
