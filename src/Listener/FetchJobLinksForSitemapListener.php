@@ -51,7 +51,7 @@ class FetchJobLinksForSitemapListener
             $link->setName('lang/jobs/view-extern');
             $link->setParams(['id' => $job->getId()]);
             $link->setLastModified(
-                $job->getDatePublishStart()
+                $job->getDateModified()
             );
             $link->setChangeFrequency(Sitemap::DAILY);
             $link->setPriority(0.6);
