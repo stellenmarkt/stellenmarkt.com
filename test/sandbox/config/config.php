@@ -18,6 +18,7 @@ return [
         'JobsByMail',
         'Stellenmarkt',
         'Landingpages',
-        'Sitemap'
+        'Sitemap',
+        'ExportBA',
     ],
 ];

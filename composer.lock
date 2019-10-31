@@ -3235,12 +3235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/export-ba.git",
-                "reference": "2359b30da493fbddd6cc528cc8b6c88e2f5f205b"
+                "reference": "788bbc7a13b8b4ebe638289c52d7f950ba363d85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/export-ba/zipball/2359b30da493fbddd6cc528cc8b6c88e2f5f205b",
-                "reference": "2359b30da493fbddd6cc528cc8b6c88e2f5f205b",
+                "url": "https://api.github.com/repos/yawik/export-ba/zipball/788bbc7a13b8b4ebe638289c52d7f950ba363d85",
+                "reference": "788bbc7a13b8b4ebe638289c52d7f950ba363d85",
                 "shasum": ""
             },
             "require": {
@@ -3293,7 +3293,7 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-10-31T11:12:01+00:00"
+            "time": "2019-10-31T11:41:15+00:00"
         },
         {
             "name": "yawik/geo",
