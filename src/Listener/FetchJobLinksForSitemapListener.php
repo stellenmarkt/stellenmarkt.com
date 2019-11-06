@@ -35,7 +35,7 @@ class FetchJobLinksForSitemapListener
     {
         $collection = $event->getLinkCollection();
         $qb = $this->repository->createQueryBuilder();
-        $qb->select('organization')->select('dateModified');
+        $qb->select('organization')->select('dateCreated');
         $qb->field('status.name')->equals(\Jobs\Entity\StatusInterface::ACTIVE);
         $qb->hydrate(true);
 
@@ -51,7 +51,7 @@ class FetchJobLinksForSitemapListener
             $link->setName('lang/jobs/view-extern');
             $link->setParams(['id' => $job->getId()]);
             $link->setLastModified(
-                $job->getDateModified()
+                $job->getDateCreated()
             );
             $link->setChangeFrequency(Sitemap::DAILY);
             $link->setPriority(0.6);
