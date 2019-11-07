@@ -220,6 +220,7 @@ return [
              'stellenmarkt/jobs/view-extern' => __DIR__ . '/../view/jobs/view-extern.phtml',
              'stellenmarkt/jobs/view-default' => __DIR__ . '/../view/jobs/inline/default.phtml',
              'stellenmarkt/jobs/view-ics' => __DIR__ . '/../view/jobs/inline/ics.phtml',
+             'stellenmarkt/jobs/view-hochtaunus-kliniken' => __DIR__ . '/../view/jobs/inline/hochtaunus-kliniken.phtml',
              'stellenmarkt/jobs/view-mr-datentechnik' => __DIR__ . '/../view/jobs/inline/mr-datentechnik.phtml',
              'stellenmarkt/jobs/view-1a-aerztevermittlung' => __DIR__ . '/../view/jobs/inline/1a-aerztevermittlung.phtml',
              'stellenmarkt/jobs/view-intern' => __DIR__ . '/../view/jobs/view-intern.phtml',
@@ -438,6 +439,7 @@ return [
             'map' => [
                 'default' => 'stellenmarkt/jobs/view-default',
                 'ICS' => 'stellenmarkt/jobs/view-ics',
+                'Hochtaunus-Kliniken' => 'stellenmarkt/jobs/view-hochtaunus-kliniken',
                 'MR Datentechnik' => 'stellenmarkt/jobs/view-mr-datentechnik',
                 '1A Ärztevermittlung' => 'stellenmarkt/jobs/view-1a-aerztevermittlung',
             ],
