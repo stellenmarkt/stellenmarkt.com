@@ -83,7 +83,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
             <?php if ($this->html): ?>
                  <div class="col-md-12 position">
-                   <?=$this->html?>
+                    <?=removeDomNodes($this->html,'//div[contains(@class,"downloadPDF")]')?>
                  </div>
             <?php else: ?>
               <div class="col-md-12 position">
@@ -193,4 +193,17 @@ $orgName = $this->jobOrganizationName($this->job);
     </div>
 </div>
 
+<?php
 
+function removeDomNodes($html, $xpathString)
+{
+    $dom = new DOMDocument;
+    $dom->loadHtml('<?xml charset="utf-8"?>'.$html);
+
+    $xpath = new DOMXPath($dom);
+    while ($node = $xpath->query($xpathString)->item(0))
+    {
+        $node->parentNode->removeChild($node);
+    }
+    return $dom->saveHTML();
+}
