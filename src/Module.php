@@ -149,7 +149,7 @@ class Module implements AssetProviderInterface
 
                     foreach ([
                         'r' => '__region_MultiString',
-                        'l' => '__city_MultiString',
+                        'loc' => '__city_MultiString',
                         'c' => '__organizationTag',
                         'p' => '__profession_MultiString',
                         'i' => '__industry_MultiString',

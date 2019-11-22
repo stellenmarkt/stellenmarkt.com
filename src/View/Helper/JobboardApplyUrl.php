@@ -57,7 +57,7 @@ class JobboardApplyUrl extends AbstractHelper
 
         } else {
             $url = $ats->getUri();
-            $class = 'external-apply-link';
+            $class = 'disabled-external-apply-link';
             $text = 'Jetzt bewerben';
             $pdflink = '.pdf' == substr($job->getLink(), -4) ?$job->getLink() : null;
         }
