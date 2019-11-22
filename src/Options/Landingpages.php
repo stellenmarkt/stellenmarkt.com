@@ -6,7 +6,7 @@
  * @license MIT
  * @copyright  2013 - 2017 Cross Solution <http://cross-solution.de>
  */
-  
+
 /** */
 namespace Stellenmarkt\Options;
 
@@ -14,9 +14,9 @@ use Zend\Stdlib\AbstractOptions;
 
 /**
  * ${CARET}
- * 
+ *
  * @author Mathias Gelhausen <gelhausen@cross-solution.de>
- * @todo write test 
+ * @todo write test
  */
 class Landingpages extends AbstractOptions
 {
@@ -26,7 +26,7 @@ class Landingpages extends AbstractOptions
     private $queryMap = [];
 
     private $tabs = [];
-    
+
     private $companies = [];
 
     public function setFromArray($options)
@@ -37,8 +37,9 @@ class Landingpages extends AbstractOptions
         $companies = [];
 
         foreach ($options as $term => $spec) {
+
             if (isset($spec['id'])) {
-                $idMap[$term] = $spec['id'];
+                $idMap[strtolower($term)] = $spec['id'];
             }
 
             if (isset($spec['company'])) {
@@ -47,7 +48,7 @@ class Landingpages extends AbstractOptions
                 } else if (!isset($spec['query']['organizationTag'])) {
                     $spec['query']['organizationTag'] = [$spec['company'] => 1];
                 }
-                
+
                 $companies[$term] = [isset($spec['text'])?$spec['text'] : $term, isset($spec['logo']) ? $spec['logo'] : false];
             }
 
@@ -55,13 +56,13 @@ class Landingpages extends AbstractOptions
                 $spec['query']['q'] = '';
             }
 
-            $queryMap[ $term ] = isset($spec[ 'query' ]) ? $spec[ 'query' ] : ['q' => $term];
+            $queryMap[ strtolower($term) ] = isset($spec[ 'query' ]) ? $spec[ 'query' ] : ['q' => $term];
 
             if (isset($spec['tab']) && isset($spec['panel'])) {
                 $tabs[ $spec[ 'tab' ] ][ $spec[ 'panel' ] ][] = [$term, $spec[ 'text' ]];
             }
-            
-            
+
+
 
         }
 
@@ -98,7 +99,7 @@ class Landingpages extends AbstractOptions
         if (null === $term) {
             return $this->idMap;
         }
-
+        $term = strtolower($term);
         return isset($this->idMap[$term]) ? $this->idMap[$term] : $default;
     }
 
@@ -124,6 +125,7 @@ class Landingpages extends AbstractOptions
 
     public function getQueryParameters($term)
     {
+        $term = strtolower($term);
         return isset($this->queryMap[$term]) ? $this->queryMap[$term] : [];
     }
 

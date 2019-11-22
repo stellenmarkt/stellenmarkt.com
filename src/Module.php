@@ -166,9 +166,6 @@ class Module implements AssetProviderInterface
                     } else {
                         return;
                     }
-
-                    $container->landingPageTerm = $term;
-                    $container->landingPageSearchQuery = $query['q'];
                 }
 
 
@@ -179,7 +176,7 @@ class Module implements AssetProviderInterface
 
                     foreach ([
                         'r' => '__region_MultiString',
-                        'loc' => '__city_MultiString',
+                        'l' => '__city_MultiString',
                         'c' => '__organizationTag',
                         'p' => '__profession_MultiString',
                         'i' => '__industry_MultiString',

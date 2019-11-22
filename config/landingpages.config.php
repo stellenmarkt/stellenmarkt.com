@@ -28,10 +28,10 @@
   *  organizationTag:    Company-Facets.
   */
 $options = array (
-  'ABAP-Developer' => 
+  'ABAP-Developer' =>
   array (
     'id' => 936,
-    'query' => 
+    'query' =>
     array (
       'q' => 'ABAP Developer',
     ),
@@ -39,10 +39,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'ABAP Developer',
   ),
-  'ABAP-Programmierer' => 
+  'ABAP-Programmierer' =>
   array (
     'id' => 937,
-    'query' => 
+    'query' =>
     array (
       'q' => 'ABAP Programmierer',
     ),
@@ -50,10 +50,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'ABAP Programmierer',
   ),
-  'Abfalltechniker' => 
+  'Abfalltechniker' =>
   array (
     'id' => '938',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Abfalltechniker',
     ),
@@ -61,10 +61,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Abfalltechniker',
   ),
-  'Abfueller' => 
+  'Abfueller' =>
   array (
     'id' => 939,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Abfüller',
     ),
@@ -72,10 +72,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Abfüller',
   ),
-  'Abkanter' => 
+  'Abkanter' =>
   array (
     'id' => '940',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Abkanter',
     ),
@@ -83,10 +83,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Abkanter',
   ),
-  'Abrechner' => 
+  'Abrechner' =>
   array (
     'id' => '941',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Abrechner',
     ),
@@ -94,10 +94,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Abrechner',
   ),
-  'Absolvent' => 
+  'Absolvent' =>
   array (
     'id' => '942',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Absolvent',
     ),
@@ -105,10 +105,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Absolvent',
   ),
-  'Abteilungsleiter' => 
+  'Abteilungsleiter' =>
   array (
     'id' => '943',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Abteilungsleiter',
     ),
@@ -116,10 +116,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Abteilungsleiter',
   ),
-  'Accountant' => 
+  'Accountant' =>
   array (
     'id' => '944',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Accountant',
     ),
@@ -127,10 +127,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Accountant',
   ),
-  'Accountmanager' => 
+  'Accountmanager' =>
   array (
     'id' => '945',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Accountmanager',
     ),
@@ -138,10 +138,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Accountmanager',
   ),
-  'Administrator' => 
+  'Administrator' =>
   array (
     'id' => '946',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Administrator',
     ),
@@ -149,10 +149,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Administrator',
   ),
-  'Agent' => 
+  'Agent' =>
   array (
     'id' => '947',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Agent',
     ),
@@ -160,10 +160,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Agent',
   ),
-  'Akquisiteur' => 
+  'Akquisiteur' =>
   array (
     'id' => '948',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Akquisiteur',
     ),
@@ -171,10 +171,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Akquisiteur',
   ),
-  'Aktuar' => 
+  'Aktuar' =>
   array (
     'id' => '949',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Aktuar',
     ),
@@ -182,10 +182,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Aktuar',
   ),
-  'Akustiker' => 
+  'Akustiker' =>
   array (
     'id' => '950',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Akustiker',
     ),
@@ -193,10 +193,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Akustiker',
   ),
-  'Akustikingenieur' => 
+  'Akustikingenieur' =>
   array (
     'id' => '951',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Akustikingenieur',
     ),
@@ -204,10 +204,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Akustikingenieur',
   ),
-  'Alias-Designer' => 
+  'Alias-Designer' =>
   array (
     'id' => 952,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Alias Designer',
     ),
@@ -215,10 +215,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Alias Designer',
   ),
-  'Alleinbuchhalter' => 
+  'Alleinbuchhalter' =>
   array (
     'id' => '953',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Alleinbuchhalter',
     ),
@@ -226,10 +226,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Alleinbuchhalter',
   ),
-  'Allrounder' => 
+  'Allrounder' =>
   array (
     'id' => '954',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Allrounder',
     ),
@@ -237,10 +237,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Allrounder',
   ),
-  'Altenpfleger' => 
+  'Altenpfleger' =>
   array (
     'id' => '955',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Altenpfleger',
     ),
@@ -248,10 +248,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Altenpfleger',
   ),
-  'Ambulante-Krankenpflege' => 
+  'Ambulante-Krankenpflege' =>
   array (
     'id' => 956,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ambulante Krankenpflege',
     ),
@@ -259,10 +259,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Ambulante Krankenpflege',
   ),
-  'Ambulante-Pflege' => 
+  'Ambulante-Pflege' =>
   array (
     'id' => 957,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ambulante Pflege',
     ),
@@ -270,10 +270,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Ambulante Pflege',
   ),
-  'Amtschef' => 
+  'Amtschef' =>
   array (
     'id' => '958',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Amtschef',
     ),
@@ -281,10 +281,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Amtschef',
   ),
-  'Analyst' => 
+  'Analyst' =>
   array (
     'id' => '959',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Analyst',
     ),
@@ -292,10 +292,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Analyst',
   ),
-  'Analytiker' => 
+  'Analytiker' =>
   array (
     'id' => '960',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Analytiker',
     ),
@@ -303,10 +303,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Analytiker',
   ),
-  'Anaesthesiepfleger' => 
+  'Anaesthesiepfleger' =>
   array (
     'id' => 961,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anästhesiepfleger',
     ),
@@ -314,10 +314,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anästhesiepfleger',
   ),
-  'Anaesthesist' => 
+  'Anaesthesist' =>
   array (
     'id' => 962,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anästhesist',
     ),
@@ -325,10 +325,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anästhesist',
   ),
-  'Animateur' => 
+  'Animateur' =>
   array (
     'id' => '963',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Animateur',
     ),
@@ -336,10 +336,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Animateur',
   ),
-  'Anlageberater' => 
+  'Anlageberater' =>
   array (
     'id' => '964',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlageberater',
     ),
@@ -347,10 +347,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlageberater',
   ),
-  'Anlagenbauer' => 
+  'Anlagenbauer' =>
   array (
     'id' => '965',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagenbauer',
     ),
@@ -358,10 +358,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagenbauer',
   ),
-  'Anlagenfahrer' => 
+  'Anlagenfahrer' =>
   array (
     'id' => '966',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagenfahrer',
     ),
@@ -369,10 +369,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagenfahrer',
   ),
-  'Anlagenfuehrer' => 
+  'Anlagenfuehrer' =>
   array (
     'id' => 967,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagenführer',
     ),
@@ -380,10 +380,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagenführer',
   ),
-  'Anlagenkonstrukteur' => 
+  'Anlagenkonstrukteur' =>
   array (
     'id' => '968',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagenkonstrukteur',
     ),
@@ -391,10 +391,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagenkonstrukteur',
   ),
-  'Anlagenmechaniker' => 
+  'Anlagenmechaniker' =>
   array (
     'id' => '969',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagenmechaniker',
     ),
@@ -402,10 +402,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagenmechaniker',
   ),
-  'Anlagenmonteur' => 
+  'Anlagenmonteur' =>
   array (
     'id' => '970',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagenmonteur',
     ),
@@ -413,10 +413,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagenmonteur',
   ),
-  'Anlagentechniker' => 
+  'Anlagentechniker' =>
   array (
     'id' => '971',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anlagentechniker',
     ),
@@ -424,10 +424,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anlagentechniker',
   ),
-  'Anwalt' => 
+  'Anwalt' =>
   array (
     'id' => '972',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anwalt',
     ),
@@ -435,10 +435,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anwalt',
   ),
-  'Anwaltssekretaer' => 
+  'Anwaltssekretaer' =>
   array (
     'id' => 973,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anwaltssekretär',
     ),
@@ -446,10 +446,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anwaltssekretär',
   ),
-  'Anwendungsadministrator' => 
+  'Anwendungsadministrator' =>
   array (
     'id' => '974',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anwendungsadministrator',
     ),
@@ -457,10 +457,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anwendungsadministrator',
   ),
-  'Anwendungsberater' => 
+  'Anwendungsberater' =>
   array (
     'id' => '975',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anwendungsberater',
     ),
@@ -468,10 +468,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anwendungsberater',
   ),
-  'Anwendungsentwickler' => 
+  'Anwendungsentwickler' =>
   array (
     'id' => '976',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anwendungsentwickler',
     ),
@@ -479,10 +479,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anwendungsentwickler',
   ),
-  'Anwendungstechniker' => 
+  'Anwendungstechniker' =>
   array (
     'id' => '977',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Anwendungstechniker',
     ),
@@ -490,10 +490,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Anwendungstechniker',
   ),
-  'Apotheker' => 
+  'Apotheker' =>
   array (
     'id' => '978',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Apotheker',
     ),
@@ -501,10 +501,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Apotheker',
   ),
-  'Application-Engineer' => 
+  'Application-Engineer' =>
   array (
     'id' => 979,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Application Engineer',
     ),
@@ -512,10 +512,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Application Engineer',
   ),
-  'Application-Manager' => 
+  'Application-Manager' =>
   array (
     'id' => 980,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Application Manager',
     ),
@@ -523,10 +523,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Application Manager',
   ),
-  'Applikations-Support-Ingenieur' => 
+  'Applikations-Support-Ingenieur' =>
   array (
     'id' => 981,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Applikations Support Ingenieur',
     ),
@@ -534,10 +534,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Applikations Support Ingenieur',
   ),
-  'Applikationsingenieur' => 
+  'Applikationsingenieur' =>
   array (
     'id' => '982',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Applikationsingenieur',
     ),
@@ -545,10 +545,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Applikationsingenieur',
   ),
-  'Arbeiter' => 
+  'Arbeiter' =>
   array (
     'id' => '983',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arbeiter',
     ),
@@ -556,10 +556,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arbeiter',
   ),
-  'Arbeitsvorbereiter' => 
+  'Arbeitsvorbereiter' =>
   array (
     'id' => '984',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arbeitsvorbereiter',
     ),
@@ -567,10 +567,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arbeitsvorbereiter',
   ),
-  'Archaeologe' => 
+  'Archaeologe' =>
   array (
     'id' => 985,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Archäologe',
     ),
@@ -578,10 +578,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Archäologe',
   ),
-  'Architekt' => 
+  'Architekt' =>
   array (
     'id' => '986',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Architekt',
     ),
@@ -589,10 +589,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Architekt',
   ),
-  'Area-Manager' => 
+  'Area-Manager' =>
   array (
     'id' => 987,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Area Manager',
     ),
@@ -600,10 +600,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Area Manager',
   ),
-  'Area-Sales Manager' => 
+  'Area-Sales Manager' =>
   array (
     'id' => 988,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Area Sales Manager',
     ),
@@ -611,10 +611,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Area Sales Manager',
   ),
-  'Art-Director' => 
+  'Art-Director' =>
   array (
     'id' => 989,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Art Director',
     ),
@@ -622,10 +622,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Art Director',
   ),
-  'Arzt' => 
+  'Arzt' =>
   array (
     'id' => '990',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arzt',
     ),
@@ -633,10 +633,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arzt',
   ),
-  'Arzthelfer' => 
+  'Arzthelfer' =>
   array (
     'id' => '991',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arzthelfer',
     ),
@@ -644,10 +644,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arzthelfer',
   ),
-  'Arzthelferin' => 
+  'Arzthelferin' =>
   array (
     'id' => '992',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arzthelferin',
     ),
@@ -655,10 +655,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arzthelferin',
   ),
-  'Arztsekretär' => 
+  'Arztsekretär' =>
   array (
     'id' => '993',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arztsekretär',
     ),
@@ -666,10 +666,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arztsekretär',
   ),
-  'Arztsekretaerin' => 
+  'Arztsekretaerin' =>
   array (
     'id' => 994,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Arztsekretärin',
     ),
@@ -677,10 +677,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Arztsekretärin',
   ),
-  'Asphaltbauer' => 
+  'Asphaltbauer' =>
   array (
     'id' => '995',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Asphaltbauer',
     ),
@@ -688,10 +688,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Asphaltbauer',
   ),
-  'Assessment-Experte' => 
+  'Assessment-Experte' =>
   array (
     'id' => 996,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assessment Experte',
     ),
@@ -699,10 +699,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assessment Experte',
   ),
-  'Asset-Manager' => 
+  'Asset-Manager' =>
   array (
     'id' => 997,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Asset Manager',
     ),
@@ -710,10 +710,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Asset Manager',
   ),
-  'Assistant-Manager' => 
+  'Assistant-Manager' =>
   array (
     'id' => 998,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistant Manager',
     ),
@@ -721,10 +721,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistant Manager',
   ),
-  'Assistent' => 
+  'Assistent' =>
   array (
     'id' => '999',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent',
     ),
@@ -732,10 +732,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent',
   ),
-  'Assistent-Ausbildung' => 
+  'Assistent-Ausbildung' =>
   array (
     'id' => 1000,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Ausbildung',
     ),
@@ -743,10 +743,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Ausbildung',
   ),
-  'Assistent-Buchhaltung' => 
+  'Assistent-Buchhaltung' =>
   array (
     'id' => 1001,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Buchhaltung',
     ),
@@ -754,10 +754,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Buchhaltung',
   ),
-  'Assistent-der-Geschaeftsleitung' => 
+  'Assistent-der-Geschaeftsleitung' =>
   array (
     'id' => 1002,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent der Geschäftsleitung',
     ),
@@ -765,10 +765,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent der Geschäftsleitung',
   ),
-  'Assistent-Einkauf' => 
+  'Assistent-Einkauf' =>
   array (
     'id' => 1003,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Einkauf',
     ),
@@ -776,10 +776,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Einkauf',
   ),
-  'Assistent-Finance' => 
+  'Assistent-Finance' =>
   array (
     'id' => 1004,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Finance',
     ),
@@ -787,10 +787,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Finance',
   ),
-  'Assistent-Management' => 
+  'Assistent-Management' =>
   array (
     'id' => 1005,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Management',
     ),
@@ -798,10 +798,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Management',
   ),
-  'Assistent-Personalberatung' => 
+  'Assistent-Personalberatung' =>
   array (
     'id' => 1006,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Personalberatung',
     ),
@@ -809,10 +809,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Personalberatung',
   ),
-  'Assistent-Projektleitung' => 
+  'Assistent-Projektleitung' =>
   array (
     'id' => 1007,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Projektleitung',
     ),
@@ -820,10 +820,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Projektleitung',
   ),
-  'Assistent-Rechnungswesen' => 
+  'Assistent-Rechnungswesen' =>
   array (
     'id' => 1008,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Rechnungswesen',
     ),
@@ -831,10 +831,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Rechnungswesen',
   ),
-  'Assistent-Reporting' => 
+  'Assistent-Reporting' =>
   array (
     'id' => 1009,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Reporting',
     ),
@@ -842,10 +842,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Reporting',
   ),
-  'Assistent-technischer-Einkauf' => 
+  'Assistent-technischer-Einkauf' =>
   array (
     'id' => 1010,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent technischer Einkauf',
     ),
@@ -853,10 +853,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent technischer Einkauf',
   ),
-  'Assistent Vorstand' => 
+  'Assistent Vorstand' =>
   array (
     'id' => '1011',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistent Vorstand',
     ),
@@ -864,10 +864,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistent Vorstand',
   ),
-  'Assistentin' => 
+  'Assistentin' =>
   array (
     'id' => '1012',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistentin',
     ),
@@ -875,10 +875,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistentin',
   ),
-  'Assistenzarzt' => 
+  'Assistenzarzt' =>
   array (
     'id' => '1013',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Assistenzarzt',
     ),
@@ -886,10 +886,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Assistenzarzt',
   ),
-  'Associate Scientist' => 
+  'Associate Scientist' =>
   array (
     'id' => '1014',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Associate Scientist',
     ),
@@ -897,10 +897,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Associate Scientist',
   ),
-  'Audio Ingenieur' => 
+  'Audio Ingenieur' =>
   array (
     'id' => '1015',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Audio Ingenieur',
     ),
@@ -908,10 +908,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Audio Ingenieur',
   ),
-  'Auditor' => 
+  'Auditor' =>
   array (
     'id' => '1016',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Auditor',
     ),
@@ -919,10 +919,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Auditor',
   ),
-  'Auftragsabwickler' => 
+  'Auftragsabwickler' =>
   array (
     'id' => '1017',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Auftragsabwickler',
     ),
@@ -930,10 +930,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Auftragsabwickler',
   ),
-  'Auftragssachbearbeiter' => 
+  'Auftragssachbearbeiter' =>
   array (
     'id' => '1018',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Auftragssachbearbeiter',
     ),
@@ -941,10 +941,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Auftragssachbearbeiter',
   ),
-  'Aufzugsmonteur' => 
+  'Aufzugsmonteur' =>
   array (
     'id' => '1019',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Aufzugsmonteur',
     ),
@@ -952,10 +952,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Aufzugsmonteur',
   ),
-  'Augenarzt' => 
+  'Augenarzt' =>
   array (
     'id' => '1020',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Augenarzt',
     ),
@@ -963,10 +963,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Augenarzt',
   ),
-  'Augenoptiker' => 
+  'Augenoptiker' =>
   array (
     'id' => '1021',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Augenoptiker',
     ),
@@ -974,10 +974,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Augenoptiker',
   ),
-  'Augenoptikermeister' => 
+  'Augenoptikermeister' =>
   array (
     'id' => '1022',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Augenoptikermeister',
     ),
@@ -985,10 +985,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Augenoptikermeister',
   ),
-  'Ausbilder' => 
+  'Ausbilder' =>
   array (
     'id' => '1023',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ausbilder',
     ),
@@ -996,10 +996,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Ausbilder',
   ),
-  'Ausbildungsberuf' => 
+  'Ausbildungsberuf' =>
   array (
     'id' => '1024',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ausbildungsberuf',
     ),
@@ -1007,10 +1007,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Ausbildungsberuf',
   ),
-  'Aushilfe' => 
+  'Aushilfe' =>
   array (
     'id' => '1025',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Aushilfe',
     ),
@@ -1018,10 +1018,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Aushilfe',
   ),
-  'Auslieferungsfahrer' => 
+  'Auslieferungsfahrer' =>
   array (
     'id' => '1026',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Auslieferungsfahrer',
     ),
@@ -1029,10 +1029,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Auslieferungsfahrer',
   ),
-  'Aussendienstmitarbeiter' => 
+  'Aussendienstmitarbeiter' =>
   array (
     'id' => 1027,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Außendienstmitarbeiter',
     ),
@@ -1040,10 +1040,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Außendienstmitarbeiter',
   ),
-  'Aussenhandelskaufmann' => 
+  'Aussenhandelskaufmann' =>
   array (
     'id' => 1028,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Außenhandelskaufmann',
     ),
@@ -1051,10 +1051,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Außenhandelskaufmann',
   ),
-  'Auszubildender' => 
+  'Auszubildender' =>
   array (
     'id' => '1029',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Auszubildender',
     ),
@@ -1062,10 +1062,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Auszubildender',
   ),
-  'Automations-Ingenieur' => 
+  'Automations-Ingenieur' =>
   array (
     'id' => 1030,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automations Ingenieur',
     ),
@@ -1073,10 +1073,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automations Ingenieur',
   ),
-  'Automatisierungstechniker' => 
+  'Automatisierungstechniker' =>
   array (
     'id' => '1031',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automatisierungstechniker',
     ),
@@ -1084,10 +1084,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automatisierungstechniker',
   ),
-  'Automechaniker' => 
+  'Automechaniker' =>
   array (
     'id' => '1032',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automechaniker',
     ),
@@ -1095,10 +1095,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automechaniker',
   ),
-  'Automobilingenieur' => 
+  'Automobilingenieur' =>
   array (
     'id' => '1033',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automobilingenieur',
     ),
@@ -1106,10 +1106,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automobilingenieur',
   ),
-  'Automobilkaufmann' => 
+  'Automobilkaufmann' =>
   array (
     'id' => '1034',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automobilkaufmann',
     ),
@@ -1117,10 +1117,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automobilkaufmann',
   ),
-  'Automobilverkaeufer' => 
+  'Automobilverkaeufer' =>
   array (
     'id' => 1035,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automobilverkäufer',
     ),
@@ -1128,10 +1128,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automobilverkäufer',
   ),
-  'Automotive-Ingenieur' => 
+  'Automotive-Ingenieur' =>
   array (
     'id' => 1036,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Automotive Ingenieur',
     ),
@@ -1139,10 +1139,10 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automotive Ingenieur',
   ),
-  'Back-Office' => 
+  'Back-Office' =>
   array (
     'id' => 1037,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Back Office',
     ),
@@ -1150,10 +1150,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Back Office',
   ),
-  'Baecker' => 
+  'Baecker' =>
   array (
     'id' => 1038,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bäcker',
     ),
@@ -1161,10 +1161,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bäcker',
   ),
-  'Bademeister' => 
+  'Bademeister' =>
   array (
     'id' => '1039',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bademeister',
     ),
@@ -1172,10 +1172,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bademeister',
   ),
-  'Baggerfuehrer' => 
+  'Baggerfuehrer' =>
   array (
     'id' => 1040,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baggerführer',
     ),
@@ -1183,10 +1183,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baggerführer',
   ),
-  'Bankangestellter' => 
+  'Bankangestellter' =>
   array (
     'id' => '1041',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bankangestellter',
     ),
@@ -1194,10 +1194,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bankangestellter',
   ),
-  'Bankkauffrau' => 
+  'Bankkauffrau' =>
   array (
     'id' => '1042',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bankkauffrau',
     ),
@@ -1205,10 +1205,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bankkauffrau',
   ),
-  'Bankkaufmann' => 
+  'Bankkaufmann' =>
   array (
     'id' => '1043',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bankkaufmann',
     ),
@@ -1216,10 +1216,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bankkaufmann',
   ),
-  'Barkeeper' => 
+  'Barkeeper' =>
   array (
     'id' => '1044',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Barkeeper',
     ),
@@ -1227,10 +1227,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Barkeeper',
   ),
-  'Baugeraetefuehrer' => 
+  'Baugeraetefuehrer' =>
   array (
     'id' => 1045,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baugeräteführer',
     ),
@@ -1238,10 +1238,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baugeräteführer',
   ),
-  'Bauhelfer' => 
+  'Bauhelfer' =>
   array (
     'id' => '1046',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauhelfer',
     ),
@@ -1249,10 +1249,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauhelfer',
   ),
-  'Bauingenieur' => 
+  'Bauingenieur' =>
   array (
     'id' => '1047',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauingenieur',
     ),
@@ -1260,10 +1260,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauingenieur',
   ),
-  'Bauklemptner' => 
+  'Bauklemptner' =>
   array (
     'id' => '1048',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauklemptner',
     ),
@@ -1271,10 +1271,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauklemptner',
   ),
-  'Baukonstrukteur' => 
+  'Baukonstrukteur' =>
   array (
     'id' => '1049',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baukonstrukteur',
     ),
@@ -1282,10 +1282,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baukonstrukteur',
   ),
-  'Baukontrolleur' => 
+  'Baukontrolleur' =>
   array (
     'id' => '1050',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baukontrolleur',
     ),
@@ -1293,10 +1293,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baukontrolleur',
   ),
-  'Baukostenkalkulator' => 
+  'Baukostenkalkulator' =>
   array (
     'id' => '1051',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baukostenkalkulator',
     ),
@@ -1304,10 +1304,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baukostenkalkulator',
   ),
-  'Bauleiter' => 
+  'Bauleiter' =>
   array (
     'id' => '1052',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauleiter',
     ),
@@ -1315,10 +1315,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauleiter',
   ),
-  'Baumaschinenfuehrer' => 
+  'Baumaschinenfuehrer' =>
   array (
     'id' => 1053,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baumaschinenführer',
     ),
@@ -1326,10 +1326,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baumaschinenführer',
   ),
-  'Bauprojektleiter' => 
+  'Bauprojektleiter' =>
   array (
     'id' => '1054',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauprojektleiter',
     ),
@@ -1337,10 +1337,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauprojektleiter',
   ),
-  'Bauschlosser' => 
+  'Bauschlosser' =>
   array (
     'id' => '1055',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauschlosser',
     ),
@@ -1348,10 +1348,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauschlosser',
   ),
-  'Baustoffpruefer' => 
+  'Baustoffpruefer' =>
   array (
     'id' => 1056,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Baustoffprüfer',
     ),
@@ -1359,10 +1359,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Baustoffprüfer',
   ),
-  'Bautechniker' => 
+  'Bautechniker' =>
   array (
     'id' => '1057',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bautechniker',
     ),
@@ -1370,10 +1370,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bautechniker',
   ),
-  'Bauzeichner' => 
+  'Bauzeichner' =>
   array (
     'id' => '1058',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bauzeichner',
     ),
@@ -1381,10 +1381,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bauzeichner',
   ),
-  'Behaelterbauer' => 
+  'Behaelterbauer' =>
   array (
     'id' => 1059,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Behälterbauer',
     ),
@@ -1392,10 +1392,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Behälterbauer',
   ),
-  'Beleuchter' => 
+  'Beleuchter' =>
   array (
     'id' => '1060',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Beleuchter',
     ),
@@ -1403,10 +1403,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Beleuchter',
   ),
-  'Berater' => 
+  'Berater' =>
   array (
     'id' => '1061',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Berater',
     ),
@@ -1414,10 +1414,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Berater',
   ),
-  'Beraterin' => 
+  'Beraterin' =>
   array (
     'id' => '1062',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Beraterin',
     ),
@@ -1425,10 +1425,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Beraterin',
   ),
-  'Beratungsingenieur' => 
+  'Beratungsingenieur' =>
   array (
     'id' => '1063',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Beratungsingenieur',
     ),
@@ -1436,10 +1436,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Beratungsingenieur',
   ),
-  'Berechnungsingenieur' => 
+  'Berechnungsingenieur' =>
   array (
     'id' => '1064',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Berechnungsingenieur',
     ),
@@ -1447,10 +1447,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Berechnungsingenieur',
   ),
-  'Bereichsleiter' => 
+  'Bereichsleiter' =>
   array (
     'id' => '1065',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bereichsleiter',
     ),
@@ -1458,10 +1458,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bereichsleiter',
   ),
-  'Bergbauingenieur' => 
+  'Bergbauingenieur' =>
   array (
     'id' => '1066',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bergbauingenieur',
     ),
@@ -1469,10 +1469,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bergbauingenieur',
   ),
-  'Berufseinsteiger' => 
+  'Berufseinsteiger' =>
   array (
     'id' => '1067',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Berufseinsteiger',
     ),
@@ -1480,10 +1480,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Berufseinsteiger',
   ),
-  'Berufskraftfahrer' => 
+  'Berufskraftfahrer' =>
   array (
     'id' => '1068',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Berufskraftfahrer',
     ),
@@ -1491,10 +1491,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Berufskraftfahrer',
   ),
-  'Beschichter ' => 
+  'Beschichter ' =>
   array (
     'id' => 1069,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Beschichter ',
     ),
@@ -1502,10 +1502,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Beschichter ',
   ),
-  'Bestuecker' => 
+  'Bestuecker' =>
   array (
     'id' => 1070,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bestücker',
     ),
@@ -1513,10 +1513,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bestücker',
   ),
-  'Beteiligungscontroller' => 
+  'Beteiligungscontroller' =>
   array (
     'id' => '1071',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Beteiligungscontroller',
     ),
@@ -1524,10 +1524,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Beteiligungscontroller',
   ),
-  'Betonbauer' => 
+  'Betonbauer' =>
   array (
     'id' => '1072',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betonbauer',
     ),
@@ -1535,10 +1535,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betonbauer',
   ),
-  'Betriebsassistent' => 
+  'Betriebsassistent' =>
   array (
     'id' => '1073',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebsassistent',
     ),
@@ -1546,10 +1546,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebsassistent',
   ),
-  'Betriebselektriker' => 
+  'Betriebselektriker' =>
   array (
     'id' => '1074',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebselektriker',
     ),
@@ -1557,10 +1557,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebselektriker',
   ),
-  'Betriebsingenieur' => 
+  'Betriebsingenieur' =>
   array (
     'id' => '1075',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebsingenieur',
     ),
@@ -1568,10 +1568,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebsingenieur',
   ),
-  'Betriebsleiter' => 
+  'Betriebsleiter' =>
   array (
     'id' => '1076',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebsleiter',
     ),
@@ -1579,10 +1579,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebsleiter',
   ),
-  'Betriebsmittelkonstrukteur' => 
+  'Betriebsmittelkonstrukteur' =>
   array (
     'id' => '1077',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebsmittelkonstrukteur',
     ),
@@ -1590,10 +1590,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebsmittelkonstrukteur',
   ),
-  'Betriebsschlosser' => 
+  'Betriebsschlosser' =>
   array (
     'id' => '1078',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebsschlosser',
     ),
@@ -1601,10 +1601,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebsschlosser',
   ),
-  'Betriebstechniker' => 
+  'Betriebstechniker' =>
   array (
     'id' => '1079',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebstechniker',
     ),
@@ -1612,10 +1612,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebstechniker',
   ),
-  'Betriebswirt' => 
+  'Betriebswirt' =>
   array (
     'id' => '1080',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Betriebswirt',
     ),
@@ -1623,10 +1623,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Betriebswirt',
   ),
-  'Bewaehrungshelfer' => 
+  'Bewaehrungshelfer' =>
   array (
     'id' => 1081,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bewaehrungshelfer',
     ),
@@ -1634,10 +1634,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bewährungshelfer',
   ),
-  'Bezirksleiter' => 
+  'Bezirksleiter' =>
   array (
     'id' => '1082',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bezirksleiter',
     ),
@@ -1645,10 +1645,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bezirksleiter',
   ),
-  'Bibliothekar' => 
+  'Bibliothekar' =>
   array (
     'id' => '1083',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bibliothekar',
     ),
@@ -1656,10 +1656,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bibliothekar',
   ),
-  'Bilanzbuchhalter' => 
+  'Bilanzbuchhalter' =>
   array (
     'id' => '1084',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bilanzbuchhalter',
     ),
@@ -1667,10 +1667,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bilanzbuchhalter',
   ),
-  'Bildbearbeiter' => 
+  'Bildbearbeiter' =>
   array (
     'id' => '1085',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bildbearbeiter',
     ),
@@ -1678,10 +1678,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bildbearbeiter',
   ),
-  'Bildhauer' => 
+  'Bildhauer' =>
   array (
     'id' => '1086',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bildhauer',
     ),
@@ -1689,10 +1689,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bildhauer',
   ),
-  'Bildungsberater' => 
+  'Bildungsberater' =>
   array (
     'id' => '1087',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bildungsberater',
     ),
@@ -1700,10 +1700,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bildungsberater',
   ),
-  'Binnenschiffer' => 
+  'Binnenschiffer' =>
   array (
     'id' => '1088',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Binnenschiffer',
     ),
@@ -1711,10 +1711,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Binnenschiffer',
   ),
-  'Biochemiker' => 
+  'Biochemiker' =>
   array (
     'id' => '1089',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biochemiker',
     ),
@@ -1722,10 +1722,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biochemiker',
   ),
-  'Bioinformatiker' => 
+  'Bioinformatiker' =>
   array (
     'id' => '1090',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bioinformatiker',
     ),
@@ -1733,10 +1733,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bioinformatiker',
   ),
-  'Biologe' => 
+  'Biologe' =>
   array (
     'id' => '1091',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biologe',
     ),
@@ -1744,10 +1744,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biologe',
   ),
-  'Biologielaborant' => 
+  'Biologielaborant' =>
   array (
     'id' => '1092',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biologielaborant',
     ),
@@ -1755,10 +1755,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biologielaborant',
   ),
-  'Biologin' => 
+  'Biologin' =>
   array (
     'id' => '1093',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biologin',
     ),
@@ -1766,10 +1766,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biologin',
   ),
-  'Biologisch-Technischer-Assistent' => 
+  'Biologisch-Technischer-Assistent' =>
   array (
     'id' => 1094,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biologisch Technischer Assistent',
     ),
@@ -1777,10 +1777,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biologisch Technischer Assistent',
   ),
-  'Biostatistician' => 
+  'Biostatistician' =>
   array (
     'id' => '1095',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biostatistician',
     ),
@@ -1788,10 +1788,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biostatistician',
   ),
-  'Biotechnologe' => 
+  'Biotechnologe' =>
   array (
     'id' => '1096',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Biotechnologe',
     ),
@@ -1799,10 +1799,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Biotechnologe',
   ),
-  'Blechschlosser' => 
+  'Blechschlosser' =>
   array (
     'id' => '1097',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Blechschlosser',
     ),
@@ -1810,10 +1810,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Blechschlosser',
   ),
-  'Blogger' => 
+  'Blogger' =>
   array (
     'id' => '1098',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Blogger',
     ),
@@ -1821,10 +1821,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Blogger',
   ),
-  'Bodenleger' => 
+  'Bodenleger' =>
   array (
     'id' => '1099',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bodenleger',
     ),
@@ -1832,10 +1832,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bodenleger',
   ),
-  'Bodensteward' => 
+  'Bodensteward' =>
   array (
     'id' => '1100',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bodensteward',
     ),
@@ -1843,10 +1843,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bodensteward',
   ),
-  'Bootsbauer' => 
+  'Bootsbauer' =>
   array (
     'id' => '1101',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bootsbauer',
     ),
@@ -1854,10 +1854,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bootsbauer',
   ),
-  'Botschafter' => 
+  'Botschafter' =>
   array (
     'id' => '1102',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Botschafter',
     ),
@@ -1865,10 +1865,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Botschafter',
   ),
-  'Brand-Consultant' => 
+  'Brand-Consultant' =>
   array (
     'id' => 1103,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Brand Consultant',
     ),
@@ -1876,10 +1876,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Brand Consultant',
   ),
-  'Brandschutzfachmann' => 
+  'Brandschutzfachmann' =>
   array (
     'id' => '1104',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Brandschutzfachmann',
     ),
@@ -1887,10 +1887,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Brandschutzfachmann',
   ),
-  'Brauer' => 
+  'Brauer' =>
   array (
     'id' => '1105',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Brauer',
     ),
@@ -1898,10 +1898,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Brauer',
   ),
-  'Briefsortierer' => 
+  'Briefsortierer' =>
   array (
     'id' => '1106',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Briefsortierer',
     ),
@@ -1909,10 +1909,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Briefsortierer',
   ),
-  'Buchbinder' => 
+  'Buchbinder' =>
   array (
     'id' => '1107',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Buchbinder',
     ),
@@ -1920,10 +1920,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Buchbinder',
   ),
-  'Buchhalter' => 
+  'Buchhalter' =>
   array (
     'id' => '1108',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Buchhalter',
     ),
@@ -1931,10 +1931,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Buchhalter',
   ),
-  'Buchhalterin' => 
+  'Buchhalterin' =>
   array (
     'id' => '1109',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Buchhalterin',
     ),
@@ -1942,10 +1942,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Buchhalterin',
   ),
-  'Buchhaendler' => 
+  'Buchhaendler' =>
   array (
     'id' => 1110,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Buchhändler',
     ),
@@ -1953,10 +1953,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Buchhändler',
   ),
-  'Bueroangestellte' => 
+  'Bueroangestellte' =>
   array (
     'id' => 1111,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Büroangestellte',
     ),
@@ -1964,10 +1964,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Büroangestellte',
   ),
-  'Buerohilfskraft' => 
+  'Buerohilfskraft' =>
   array (
     'id' => 1112,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bürohilfskraft',
     ),
@@ -1975,10 +1975,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bürohilfskraft',
   ),
-  'Buerokauffrau' => 
+  'Buerokauffrau' =>
   array (
     'id' => 1113,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bürokauffrau',
     ),
@@ -1986,10 +1986,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bürokauffrau',
   ),
-  'Buerokaufmann' => 
+  'Buerokaufmann' =>
   array (
     'id' => 1114,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bürokaufmann',
     ),
@@ -1997,10 +1997,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bürokaufmann',
   ),
-  'Buerokraft' => 
+  'Buerokraft' =>
   array (
     'id' => 1115,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Bürokraft',
     ),
@@ -2008,10 +2008,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Bürokraft',
   ),
-  'Busfahrer' => 
+  'Busfahrer' =>
   array (
     'id' => '1116',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Busfahrer',
     ),
@@ -2019,10 +2019,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Busfahrer',
   ),
-  'Business' => 
+  'Business' =>
   array (
     'id' => '1117',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business',
     ),
@@ -2030,10 +2030,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business',
   ),
-  'Business-Manager' => 
+  'Business-Manager' =>
   array (
     'id' => 1118,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business Manager',
     ),
@@ -2041,10 +2041,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business Manager',
   ),
-  'Business-Unit-Manager' => 
+  'Business-Unit-Manager' =>
   array (
     'id' => 1119,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business Unit Manager',
     ),
@@ -2052,10 +2052,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business Unit Manager',
   ),
-  'Business-Analyst' => 
+  'Business-Analyst' =>
   array (
     'id' => 1120,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business Analyst',
     ),
@@ -2063,10 +2063,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business Analyst',
   ),
-  'Business-Consultant' => 
+  'Business-Consultant' =>
   array (
     'id' => 1121,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business Consultant',
     ),
@@ -2074,10 +2074,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business Consultant',
   ),
-  'Business-Development-Manager' => 
+  'Business-Development-Manager' =>
   array (
     'id' => 1122,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business Development Manager',
     ),
@@ -2085,10 +2085,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business Development Manager',
   ),
-  'Business-Process Analyst' => 
+  'Business-Process Analyst' =>
   array (
     'id' => 1123,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Business Process Analyst',
     ),
@@ -2096,10 +2096,10 @@ $options = array (
     'panel' => 'B',
     'text' => 'Business Process Analyst',
   ),
-  'CAD-Konstrukteur' => 
+  'CAD-Konstrukteur' =>
   array (
     'id' => 1124,
-    'query' => 
+    'query' =>
     array (
       'q' => 'CAD Konstrukteur',
     ),
@@ -2107,10 +2107,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'CAD Konstrukteur',
   ),
-  'Callcenter-Agent' => 
+  'Callcenter-Agent' =>
   array (
     'id' => 1125,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Callcenter Agent',
     ),
@@ -2118,10 +2118,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Callcenter Agent',
   ),
-  'Case-Manager' => 
+  'Case-Manager' =>
   array (
     'id' => 1126,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Case Manager',
     ),
@@ -2129,10 +2129,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Case Manager',
   ),
-  'Category-Manager' => 
+  'Category-Manager' =>
   array (
     'id' => 1127,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Category Manager',
     ),
@@ -2140,10 +2140,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Category Manager',
   ),
-  'Change-Manager' => 
+  'Change-Manager' =>
   array (
     'id' => 1128,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Change Manager',
     ),
@@ -2151,10 +2151,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Change Manager',
   ),
-  'Channel-Account-Manager' => 
+  'Channel-Account-Manager' =>
   array (
     'id' => 1120,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Channel Account Manager',
     ),
@@ -2162,10 +2162,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Channel Account Manager',
   ),
-  'Chauffeur' => 
+  'Chauffeur' =>
   array (
     'id' => '1130',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chauffeur',
     ),
@@ -2173,10 +2173,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chauffeur',
   ),
-  'Chefarzt' => 
+  'Chefarzt' =>
   array (
     'id' => '1131',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chefarzt',
     ),
@@ -2184,10 +2184,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chefarzt',
   ),
-  'Chefkoch' => 
+  'Chefkoch' =>
   array (
     'id' => '1132',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chefkoch',
     ),
@@ -2195,10 +2195,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chefkoch',
   ),
-  'Chefsekretaerin' => 
+  'Chefsekretaerin' =>
   array (
     'id' => 1133,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chefsekretärin',
     ),
@@ -2206,10 +2206,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chefsekretärin',
   ),
-  'Chemieingenieur' => 
+  'Chemieingenieur' =>
   array (
     'id' => '1134',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chemieingenieur',
     ),
@@ -2217,10 +2217,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chemieingenieur',
   ),
-  'Chemielaborant' => 
+  'Chemielaborant' =>
   array (
     'id' => '1135',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chemielaborant',
     ),
@@ -2228,10 +2228,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chemielaborant',
   ),
-  'Chemikant' => 
+  'Chemikant' =>
   array (
     'id' => '1136',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chemikant',
     ),
@@ -2239,10 +2239,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chemikant',
   ),
-  'Chemiker' => 
+  'Chemiker' =>
   array (
     'id' => '1137',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chemiker',
     ),
@@ -2250,10 +2250,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chemiker',
   ),
-  'Chief Operating Officer' => 
+  'Chief Operating Officer' =>
   array (
     'id' => '1138',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chief Operating Officer',
     ),
@@ -2261,10 +2261,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chief Operating Officer',
   ),
-  'Chirurg' => 
+  'Chirurg' =>
   array (
     'id' => '1139',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chirurg',
     ),
@@ -2272,10 +2272,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chirurg',
   ),
-  'Chirurgiemechaniker' => 
+  'Chirurgiemechaniker' =>
   array (
     'id' => '1140',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Chirurgiemechaniker',
     ),
@@ -2283,10 +2283,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Chirurgiemechaniker',
   ),
-  'Choreograph' => 
+  'Choreograph' =>
   array (
     'id' => '1141',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Choreograph',
     ),
@@ -2294,10 +2294,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Choreograph',
   ),
-  'Clinical Research Manager' => 
+  'Clinical Research Manager' =>
   array (
     'id' => '1142',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Clinical Research Manager',
     ),
@@ -2305,10 +2305,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Clinical Research Manager',
   ),
-  'Clubmanager' => 
+  'Clubmanager' =>
   array (
     'id' => '1143',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Clubmanager',
     ),
@@ -2316,10 +2316,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Clubmanager',
   ),
-  'CNC-Abkanter' => 
+  'CNC-Abkanter' =>
   array (
     'id' => 1144,
-    'query' => 
+    'query' =>
     array (
       'q' => 'CNC Abkanter',
     ),
@@ -2327,10 +2327,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'CNC Abkanter',
   ),
-  'CNC-Bohrer' => 
+  'CNC-Bohrer' =>
   array (
     'id' => 1145,
-    'query' => 
+    'query' =>
     array (
       'q' => 'CNC Bohrer',
     ),
@@ -2338,10 +2338,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'CNC Bohrer',
   ),
-  'CNC-Dreher' => 
+  'CNC-Dreher' =>
   array (
     'id' => 1146,
-    'query' => 
+    'query' =>
     array (
       'q' => 'CNC Dreher',
     ),
@@ -2349,10 +2349,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'CNC Dreher',
   ),
-  'CNC-Schleifer' => 
+  'CNC-Schleifer' =>
   array (
     'id' => 1147,
-    'query' => 
+    'query' =>
     array (
       'q' => 'CNC Schleifer',
     ),
@@ -2360,10 +2360,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'CNC Schleifer',
   ),
-  'CNC-Fraeser' => 
+  'CNC-Fraeser' =>
   array (
     'id' => 1148,
-    'query' => 
+    'query' =>
     array (
       'q' => 'CNC Fräser',
     ),
@@ -2371,10 +2371,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'CNC Fräser',
   ),
-  'Coach' => 
+  'Coach' =>
   array (
     'id' => '1149',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Coach',
     ),
@@ -2382,10 +2382,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Coach',
   ),
-  'Coaching' => 
+  'Coaching' =>
   array (
     'id' => '1150',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Coaching',
     ),
@@ -2393,10 +2393,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Coaching',
   ),
-  'Commercial-Manager' => 
+  'Commercial-Manager' =>
   array (
     'id' => 1151,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Commercial Manager',
     ),
@@ -2404,10 +2404,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Commercial Manager',
   ),
-  'Community-Manager' => 
+  'Community-Manager' =>
   array (
     'id' => 1152,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Community Manager',
     ),
@@ -2415,10 +2415,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Community Manager',
   ),
-  'Compliance Officer' => 
+  'Compliance Officer' =>
   array (
     'id' => '1153',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Compliance Officer',
     ),
@@ -2426,10 +2426,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Compliance Officer',
   ),
-  'Configuration-Management-Engineer' => 
+  'Configuration-Management-Engineer' =>
   array (
     'id' => 1154,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Configuration Management Engineer',
     ),
@@ -2437,10 +2437,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Configuration Management Engineer',
   ),
-  'Consultant' => 
+  'Consultant' =>
   array (
     'id' => '1155',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Consultant',
     ),
@@ -2448,10 +2448,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Consultant',
   ),
-  'Consultant-SAP' => 
+  'Consultant-SAP' =>
   array (
     'id' => 1156,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Consultant SAP',
     ),
@@ -2459,10 +2459,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Consultant SAP',
   ),
-  'Content-Manager' => 
+  'Content-Manager' =>
   array (
     'id' => 1157,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Content Manager',
     ),
@@ -2470,10 +2470,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Content Manager',
   ),
-  'Contract-Manager' => 
+  'Contract-Manager' =>
   array (
     'id' => 1158,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Contract Manager',
     ),
@@ -2481,10 +2481,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Contract Manager',
   ),
-  'Controller' => 
+  'Controller' =>
   array (
     'id' => '1159',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Controller',
     ),
@@ -2492,10 +2492,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Controller',
   ),
-  'Country-Manager' => 
+  'Country-Manager' =>
   array (
     'id' => 1169,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Country Manager',
     ),
@@ -2503,10 +2503,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Country Manager',
   ),
-  'Creative-Director' => 
+  'Creative-Director' =>
   array (
     'id' => 1161,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Creative Director',
     ),
@@ -2514,10 +2514,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Creative Director',
   ),
-  'Customer-Relationship-Manager' => 
+  'Customer-Relationship-Manager' =>
   array (
     'id' => 1162,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Customer Relationship Manager',
     ),
@@ -2525,10 +2525,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Customer Relationship Manager',
   ),
-  'Customer-Service Manager' => 
+  'Customer-Service Manager' =>
   array (
     'id' => 1163,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Customer Service Manager',
     ),
@@ -2536,10 +2536,10 @@ $options = array (
     'panel' => 'C',
     'text' => 'Customer Service Manager',
   ),
-  'Dachdecker' => 
+  'Dachdecker' =>
   array (
     'id' => '1164',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dachdecker',
     ),
@@ -2547,10 +2547,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dachdecker',
   ),
-  'Data-Mining-Spezialist' => 
+  'Data-Mining-Spezialist' =>
   array (
     'id' => 233,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Data Mining Spezialist',
     ),
@@ -2558,10 +2558,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Data Mining Spezialist',
   ),
-  'Datenbankadministrator' => 
+  'Datenbankadministrator' =>
   array (
     'id' => '1166',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Datenbankadministrator',
     ),
@@ -2569,10 +2569,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Datenbankadministrator',
   ),
-  'Datenerfasser' => 
+  'Datenerfasser' =>
   array (
     'id' => '1167',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Datenerfasser',
     ),
@@ -2580,10 +2580,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Datenerfasser',
   ),
-  'Datenschutzbeauftragter' => 
+  'Datenschutzbeauftragter' =>
   array (
     'id' => '1168',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Datenschutzbeauftragter',
     ),
@@ -2591,10 +2591,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Datenschutzbeauftragter',
   ),
-  'Datentechnischer-Assistent' => 
+  'Datentechnischer-Assistent' =>
   array (
     'id' => 237,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Datentechnischer Assistent',
     ),
@@ -2602,10 +2602,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Datentechnischer Assistent',
   ),
-  'Datentypist' => 
+  'Datentypist' =>
   array (
     'id' => '1170',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Datentypist',
     ),
@@ -2613,10 +2613,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Datentypist',
   ),
-  'Debitoren-Manager' => 
+  'Debitoren-Manager' =>
   array (
     'id' => 239,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Debitoren Manager',
     ),
@@ -2624,10 +2624,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Debitoren Manager',
   ),
-  'Debitorenbuchhalter' => 
+  'Debitorenbuchhalter' =>
   array (
     'id' => '1172',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Debitorenbuchhalter',
     ),
@@ -2635,10 +2635,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Debitorenbuchhalter',
   ),
-  'Dentalassistent' => 
+  'Dentalassistent' =>
   array (
     'id' => '1173',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dentalassistent',
     ),
@@ -2646,10 +2646,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dentalassistent',
   ),
-  'Design-Manager' => 
+  'Design-Manager' =>
   array (
     'id' => 242,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Design Manager',
     ),
@@ -2657,10 +2657,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Design Manager',
   ),
-  'Designer' => 
+  'Designer' =>
   array (
     'id' => '1175',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Designer',
     ),
@@ -2668,10 +2668,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Designer',
   ),
-  'Design-Ingenieur' => 
+  'Design-Ingenieur' =>
   array (
     'id' => 244,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Design Ingenieur',
     ),
@@ -2679,10 +2679,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Design Ingenieur',
   ),
-  'Detektiv' => 
+  'Detektiv' =>
   array (
     'id' => '1177',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Detektiv',
     ),
@@ -2690,10 +2690,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Detektiv',
   ),
-  'Developer' => 
+  'Developer' =>
   array (
     'id' => '1178',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Developer',
     ),
@@ -2701,10 +2701,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Developer',
   ),
-  'Diabetesfachberater' => 
+  'Diabetesfachberater' =>
   array (
     'id' => '1179',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Diabetesfachberater',
     ),
@@ -2712,10 +2712,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Diabetesfachberater',
   ),
-  'Diakon' => 
+  'Diakon' =>
   array (
     'id' => '1180',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Diakon',
     ),
@@ -2723,10 +2723,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Diakon',
   ),
-  'Dipl-Ingenieur' => 
+  'Dipl-Ingenieur' =>
   array (
     'id' => 249,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dipl Ingenieur',
     ),
@@ -2734,10 +2734,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dipl Ingenieur',
   ),
-  'Diplom' => 
+  'Diplom' =>
   array (
     'id' => '1182',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Diplom',
     ),
@@ -2745,10 +2745,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Diplom',
   ),
-  'Director-Human-Resource' => 
+  'Director-Human-Resource' =>
   array (
     'id' => 251,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Director Human Resource',
     ),
@@ -2756,10 +2756,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Director Human Resource',
   ),
-  'Disponent' => 
+  'Disponent' =>
   array (
     'id' => '1184',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Disponent',
     ),
@@ -2767,10 +2767,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Disponent',
   ),
-  'Dokumentalist' => 
+  'Dokumentalist' =>
   array (
     'id' => '1185',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dokumentalist',
     ),
@@ -2778,10 +2778,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dokumentalist',
   ),
-  'Dolmetscher' => 
+  'Dolmetscher' =>
   array (
     'id' => '1186',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dolmetscher',
     ),
@@ -2789,10 +2789,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dolmetscher',
   ),
-  'Dozent' => 
+  'Dozent' =>
   array (
     'id' => '1187',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dozent',
     ),
@@ -2800,10 +2800,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dozent',
   ),
-  'Dramaturg' => 
+  'Dramaturg' =>
   array (
     'id' => '1188',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dramaturg',
     ),
@@ -2811,10 +2811,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dramaturg',
   ),
-  'Dreher' => 
+  'Dreher' =>
   array (
     'id' => '1189',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Dreher',
     ),
@@ -2822,10 +2822,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Dreher',
   ),
-  'Drogist' => 
+  'Drogist' =>
   array (
     'id' => '1190',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Drogist',
     ),
@@ -2833,10 +2833,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Drogist',
   ),
-  'Drucker' => 
+  'Drucker' =>
   array (
     'id' => '1191',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Drucker',
     ),
@@ -2844,10 +2844,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Drucker',
   ),
-  'Drucktechniker' => 
+  'Drucktechniker' =>
   array (
     'id' => '1192',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Drucktechniker',
     ),
@@ -2855,10 +2855,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Drucktechniker',
   ),
-  'Drug-Safety-Officer' => 
+  'Drug-Safety-Officer' =>
   array (
     'id' => 261,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Drug Safety Officer',
     ),
@@ -2866,10 +2866,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Drug Safety Officer',
   ),
-  'Drug-Safty-Spezialist' => 
+  'Drug-Safty-Spezialist' =>
   array (
     'id' => 262,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Drug Safty Spezialist',
     ),
@@ -2877,10 +2877,10 @@ $options = array (
     'panel' => 'D',
     'text' => 'Drug Safty Spezialist',
   ),
-  'E-Commerce-Manager' => 
+  'E-Commerce-Manager' =>
   array (
     'id' => 263,
-    'query' => 
+    'query' =>
     array (
       'q' => 'E Commerce Manager',
     ),
@@ -2888,10 +2888,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'E Commerce Manager',
   ),
-  'EDV-Administrator' => 
+  'EDV-Administrator' =>
   array (
     'id' => 264,
-    'query' => 
+    'query' =>
     array (
       'q' => 'EDV Administrator',
     ),
@@ -2899,10 +2899,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'EDV Administrator',
   ),
-  'Einkaeufer' => 
+  'Einkaeufer' =>
   array (
     'id' => 265,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einkäufer',
     ),
@@ -2910,10 +2910,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einkäufer',
   ),
-  'Einkaufsassistent' => 
+  'Einkaufsassistent' =>
   array (
     'id' => '1198',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einkaufsassistent',
     ),
@@ -2921,10 +2921,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einkaufsassistent',
   ),
-  'Einkaufscontroller' => 
+  'Einkaufscontroller' =>
   array (
     'id' => '1199',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einkaufscontroller',
     ),
@@ -2932,10 +2932,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einkaufscontroller',
   ),
-  'Einkaufsleiter' => 
+  'Einkaufsleiter' =>
   array (
     'id' => '1200',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einkaufsleiter',
     ),
@@ -2943,10 +2943,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einkaufsleiter',
   ),
-  'Einkaufssachbearbeiter' => 
+  'Einkaufssachbearbeiter' =>
   array (
     'id' => '1201',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einkaufssachbearbeiter',
     ),
@@ -2954,10 +2954,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einkaufssachbearbeiter',
   ),
-  'Einzelhandelskauffrau' => 
+  'Einzelhandelskauffrau' =>
   array (
     'id' => '1202',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einzelhandelskauffrau',
     ),
@@ -2965,10 +2965,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einzelhandelskauffrau',
   ),
-  'Einzelhandelskaufleute' => 
+  'Einzelhandelskaufleute' =>
   array (
     'id' => '1203',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einzelhandelskaufleute',
     ),
@@ -2976,10 +2976,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einzelhandelskaufleute',
   ),
-  'Einzelhandelskaufmann' => 
+  'Einzelhandelskaufmann' =>
   array (
     'id' => '1204',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einzelhandelskaufmann',
     ),
@@ -2987,10 +2987,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einzelhandelskaufmann',
   ),
-  'Einzelhaendler' => 
+  'Einzelhaendler' =>
   array (
     'id' => 273,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Einzelhändler',
     ),
@@ -2998,10 +2998,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Einzelhändler',
   ),
-  'Eisenbahner' => 
+  'Eisenbahner' =>
   array (
     'id' => '1206',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Eisenbahner',
     ),
@@ -3009,10 +3009,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Eisenbahner',
   ),
-  'E-Learning-Spezialist' => 
+  'E-Learning-Spezialist' =>
   array (
     'id' => 275,
-    'query' => 
+    'query' =>
     array (
       'q' => 'E Learning Spezialist',
     ),
@@ -3020,10 +3020,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'E Learning Spezialist',
   ),
-  'Elektriker' => 
+  'Elektriker' =>
   array (
     'id' => '1208',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektriker',
     ),
@@ -3031,10 +3031,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektriker',
   ),
-  'Elektroanlagenmonteur' => 
+  'Elektroanlagenmonteur' =>
   array (
     'id' => '1209',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektroanlagenmonteur',
     ),
@@ -3042,10 +3042,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektroanlagenmonteur',
   ),
-  'Elektroingenieur' => 
+  'Elektroingenieur' =>
   array (
     'id' => '1210',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektroingenieur',
     ),
@@ -3053,10 +3053,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektroingenieur',
   ),
-  'Elektroinstallateur' => 
+  'Elektroinstallateur' =>
   array (
     'id' => '1211',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektroinstallateur',
     ),
@@ -3064,10 +3064,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektroinstallateur',
   ),
-  'Elektrokonstrukteur' => 
+  'Elektrokonstrukteur' =>
   array (
     'id' => '1212',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektrokonstrukteur',
     ),
@@ -3075,10 +3075,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektrokonstrukteur',
   ),
-  'Elektromonteur' => 
+  'Elektromonteur' =>
   array (
     'id' => '1213',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektromonteur',
     ),
@@ -3086,10 +3086,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektromonteur',
   ),
-  'Elektroniker' => 
+  'Elektroniker' =>
   array (
     'id' => '1214',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektroniker',
     ),
@@ -3097,10 +3097,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektroniker',
   ),
-  'Elektroniker-Energie-Gebaeudetechnik' => 
+  'Elektroniker-Energie-Gebaeudetechnik' =>
   array (
     'id' => 284,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektroniker Energie und Gebäudetechnik',
     ),
@@ -3108,10 +3108,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektroniker Energie  und Gebäudetechnik',
   ),
-  'Elektroniker-Betriebstechnik' => 
+  'Elektroniker-Betriebstechnik' =>
   array (
     'id' => 285,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektroniker für Betriebstechnik',
     ),
@@ -3119,10 +3119,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektroniker für Betriebstechnik',
   ),
-  'Elektrotechniker' => 
+  'Elektrotechniker' =>
   array (
     'id' => '1217',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Elektrotechniker',
     ),
@@ -3130,10 +3130,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Elektrotechniker',
   ),
-  'Empfangsassistent' => 
+  'Empfangsassistent' =>
   array (
     'id' => '1218',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Empfangsassistent',
     ),
@@ -3141,10 +3141,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Empfangsassistent',
   ),
-  'Empfangsdame' => 
+  'Empfangsdame' =>
   array (
     'id' => '1219',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Empfangsdame',
     ),
@@ -3152,10 +3152,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Empfangsdame',
   ),
-  'Empfangskraft' => 
+  'Empfangskraft' =>
   array (
     'id' => '1220',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Empfangskraft',
     ),
@@ -3163,10 +3163,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Empfangskraft',
   ),
-  'Empfangsmitarbeiter' => 
+  'Empfangsmitarbeiter' =>
   array (
     'id' => '1221',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Empfangsmitarbeiter',
     ),
@@ -3174,10 +3174,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Empfangsmitarbeiter',
   ),
-  'Energieanlageneletroniker' => 
+  'Energieanlageneletroniker' =>
   array (
     'id' => '1222',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Energieanlageneletroniker',
     ),
@@ -3185,10 +3185,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Energieanlageneletroniker',
   ),
-  'Energieberater' => 
+  'Energieberater' =>
   array (
     'id' => '1223',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Energieberater',
     ),
@@ -3196,10 +3196,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Energieberater',
   ),
-  'Energieingenieur' => 
+  'Energieingenieur' =>
   array (
     'id' => '1224',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Energieingenieur',
     ),
@@ -3207,10 +3207,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Energieingenieur',
   ),
-  'Engineer' => 
+  'Engineer' =>
   array (
     'id' => '1225',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Engineer',
     ),
@@ -3218,10 +3218,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Engineer',
   ),
-  'Engineering Manager' => 
+  'Engineering Manager' =>
   array (
     'id' => '1226',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Engineering Manager',
     ),
@@ -3229,10 +3229,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Engineering Manager',
   ),
-  'Entbindungspfleger' => 
+  'Entbindungspfleger' =>
   array (
     'id' => '1227',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Entbindungspfleger',
     ),
@@ -3240,10 +3240,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Entbindungspfleger',
   ),
-  'Entwickler' => 
+  'Entwickler' =>
   array (
     'id' => '1228',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Entwickler',
     ),
@@ -3251,10 +3251,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Entwickler',
   ),
-  'Entwicklungsingenieur' => 
+  'Entwicklungsingenieur' =>
   array (
     'id' => '1229',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Entwicklungsingenieur',
     ),
@@ -3262,10 +3262,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Entwicklungsingenieur',
   ),
-  'Entwicklungsleiter' => 
+  'Entwicklungsleiter' =>
   array (
     'id' => '1230',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Entwicklungsleiter',
     ),
@@ -3273,10 +3273,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Entwicklungsleiter',
   ),
-  'Ergotherapeut' => 
+  'Ergotherapeut' =>
   array (
     'id' => '1231',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ergotherapeut',
     ),
@@ -3284,10 +3284,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Ergotherapeut',
   ),
-  'Erlebnispaedagoge' => 
+  'Erlebnispaedagoge' =>
   array (
     'id' => 301,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Erlebnispädagoge',
     ),
@@ -3295,10 +3295,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Erlebnispädagoge',
   ),
-  'Ernaehrungsberater' => 
+  'Ernaehrungsberater' =>
   array (
     'id' => 302,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ernährungsberater',
     ),
@@ -3306,10 +3306,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Ernährungsberater',
   ),
-  'Erzieher' => 
+  'Erzieher' =>
   array (
     'id' => '1234',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Erzieher',
     ),
@@ -3317,10 +3317,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Erzieher',
   ),
-  'Erzieherin' => 
+  'Erzieherin' =>
   array (
     'id' => '1235',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Erzieherin',
     ),
@@ -3328,10 +3328,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Erzieherin',
   ),
-  'Europasekretaer' => 
+  'Europasekretaer' =>
   array (
     'id' => 305,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Europasekretär',
     ),
@@ -3339,10 +3339,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Europasekretär',
   ),
-  'Event-Manager' => 
+  'Event-Manager' =>
   array (
     'id' => 307,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Event Manager',
     ),
@@ -3350,10 +3350,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Event Manager',
   ),
-  'Executive-Assistant' => 
+  'Executive-Assistant' =>
   array (
     'id' => 308,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Executive Assistant',
     ),
@@ -3361,10 +3361,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Executive Assistant',
   ),
-  'Experte' => 
+  'Experte' =>
   array (
     'id' => '1239',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Experte',
     ),
@@ -3372,10 +3372,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Experte',
   ),
-  'Exportsachbearbeiter' => 
+  'Exportsachbearbeiter' =>
   array (
     'id' => '1240',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Exportsachbearbeiter',
     ),
@@ -3383,10 +3383,10 @@ $options = array (
     'panel' => 'E',
     'text' => 'Exportsachbearbeiter',
   ),
-  'Facharzt' => 
+  'Facharzt' =>
   array (
     'id' => '1241',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt',
     ),
@@ -3394,10 +3394,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt',
   ),
-  'Facharzt-Anaesthesiologie' => 
+  'Facharzt-Anaesthesiologie' =>
   array (
     'id' => 312,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Anästhesiologie',
     ),
@@ -3405,10 +3405,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Anästhesiologie',
   ),
-  'Facharzt-Dermatologie' => 
+  'Facharzt-Dermatologie' =>
   array (
     'id' => 313,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Dermatologie',
     ),
@@ -3416,10 +3416,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Dermatologie',
   ),
-  'Facharzt-Innere-Medizin' => 
+  'Facharzt-Innere-Medizin' =>
   array (
     'id' => 314,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt für Innere Medizin',
     ),
@@ -3427,10 +3427,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt für Innere Medizin',
   ),
-  'Facharzt-Gynaekologie' => 
+  'Facharzt-Gynaekologie' =>
   array (
     'id' => 315,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Gynäkologie',
     ),
@@ -3438,10 +3438,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Gynäkologie',
   ),
-  'Facharzt-Ophthalmologie' => 
+  'Facharzt-Ophthalmologie' =>
   array (
     'id' => 316,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Ophthalmologie',
     ),
@@ -3449,10 +3449,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Ophthalmologie',
   ),
-  'Facharzt-Orthopaedie' => 
+  'Facharzt-Orthopaedie' =>
   array (
     'id' => 317,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Orthopädie',
     ),
@@ -3460,10 +3460,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Orthopädie',
   ),
-  'Facharzt-Paediatrie' => 
+  'Facharzt-Paediatrie' =>
   array (
     'id' => 318,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Pädiatrie',
     ),
@@ -3471,10 +3471,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Pädiatrie',
   ),
-  'Facharzt-Psychiatrie' => 
+  'Facharzt-Psychiatrie' =>
   array (
     'id' => 319,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Psychiatrie',
     ),
@@ -3482,10 +3482,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Psychiatrie',
   ),
-  'Facharzt-Radiologie' => 
+  'Facharzt-Radiologie' =>
   array (
     'id' => 320,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facharzt Radiologie',
     ),
@@ -3493,10 +3493,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facharzt Radiologie',
   ),
-  'Fachaerztin-Chirurgie' => 
+  'Fachaerztin-Chirurgie' =>
   array (
     'id' => 321,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachärztin Chirurgie',
     ),
@@ -3504,10 +3504,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachärztin Chirurgie',
   ),
-  'Fachinformatiker' => 
+  'Fachinformatiker' =>
   array (
     'id' => '1252',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachinformatiker',
     ),
@@ -3515,10 +3515,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachinformatiker',
   ),
-  'Fachingenieur' => 
+  'Fachingenieur' =>
   array (
     'id' => '1253',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachingenieur',
     ),
@@ -3526,10 +3526,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachingenieur',
   ),
-  'Fachkraft' => 
+  'Fachkraft' =>
   array (
     'id' => '1254',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachkraft ',
     ),
@@ -3537,10 +3537,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachkraft ',
   ),
-  'Fachkraft-Lagerlogistik' => 
+  'Fachkraft-Lagerlogistik' =>
   array (
     'id' => 325,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachkraft für Lagerlogistik',
     ),
@@ -3548,10 +3548,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachkraft für Lagerlogistik',
   ),
-  'Fachkraft-Lebensmitteltechnik' => 
+  'Fachkraft-Lebensmitteltechnik' =>
   array (
     'id' => 326,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachkraft für Lebensmitteltechnik',
     ),
@@ -3559,10 +3559,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachkraft für Lebensmitteltechnik',
   ),
-  'Fachkraft-Schutz-Sicherheit' => 
+  'Fachkraft-Schutz-Sicherheit' =>
   array (
     'id' => 327,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachkraft für Schutz und Sicherheit',
     ),
@@ -3570,10 +3570,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachkraft für Schutz und Sicherheit',
   ),
-  'Fachkraft-Veranstaltungstechnik' => 
+  'Fachkraft-Veranstaltungstechnik' =>
   array (
     'id' => 328,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachkraft für Veranstaltungstechnik',
     ),
@@ -3581,10 +3581,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachkraft für Veranstaltungstechnik',
   ),
-  'Fachmann' => 
+  'Fachmann' =>
   array (
     'id' => '1259',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachmann',
     ),
@@ -3592,10 +3592,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachmann',
   ),
-  'Fachverkaeufer' => 
+  'Fachverkaeufer' =>
   array (
     'id' => 330,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fachverkäufer',
     ),
@@ -3603,10 +3603,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fachverkäufer',
   ),
-  'Facilitator' => 
+  'Facilitator' =>
   array (
     'id' => '1261',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facilitator',
     ),
@@ -3614,10 +3614,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facilitator',
   ),
-  'Facility-Manager' => 
+  'Facility-Manager' =>
   array (
     'id' => 332,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Facility Manager',
     ),
@@ -3625,10 +3625,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Facility Manager',
   ),
-  'Fahrer' => 
+  'Fahrer' =>
   array (
     'id' => '1263',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fahrer',
     ),
@@ -3636,10 +3636,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fahrer',
   ),
-  'Fahrzeuglackierer' => 
+  'Fahrzeuglackierer' =>
   array (
     'id' => '1264',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fahrzeuglackierer',
     ),
@@ -3647,10 +3647,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fahrzeuglackierer',
   ),
-  'Fassadenmonteur' => 
+  'Fassadenmonteur' =>
   array (
     'id' => '1265',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fassadenmonteur',
     ),
@@ -3658,10 +3658,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fassadenmonteur',
   ),
-  'Feinmechaniker' => 
+  'Feinmechaniker' =>
   array (
     'id' => '1266',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Feinmechaniker',
     ),
@@ -3669,10 +3669,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Feinmechaniker',
   ),
-  'Feinwerkmechaniker' => 
+  'Feinwerkmechaniker' =>
   array (
     'id' => '1267',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Feinwerkmechaniker',
     ),
@@ -3680,10 +3680,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Feinwerkmechaniker',
   ),
-  'Fensterbauer' => 
+  'Fensterbauer' =>
   array (
     'id' => '1268',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fensterbauer',
     ),
@@ -3691,10 +3691,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fensterbauer',
   ),
-  'Fernseh-Journalist' => 
+  'Fernseh-Journalist' =>
   array (
     'id' => 340,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fernseh Journalist',
     ),
@@ -3702,10 +3702,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fernseh Journalist',
   ),
-  'Fertigungsingenieur' => 
+  'Fertigungsingenieur' =>
   array (
     'id' => '1270',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fertigungsingenieur',
     ),
@@ -3713,10 +3713,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fertigungsingenieur',
   ),
-  'Fertigungsmechaniker' => 
+  'Fertigungsmechaniker' =>
   array (
     'id' => '1271',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fertigungsmechaniker',
     ),
@@ -3724,10 +3724,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fertigungsmechaniker',
   ),
-  'Filialleiter' => 
+  'Filialleiter' =>
   array (
     'id' => '1272',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Filialleiter',
     ),
@@ -3735,10 +3735,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Filialleiter',
   ),
-  'Financial-Analyst' => 
+  'Financial-Analyst' =>
   array (
     'id' => 344,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Financial Analyst',
     ),
@@ -3746,10 +3746,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Financial Analyst',
   ),
-  'Finanz-Rechnungswesenfachmann' => 
+  'Finanz-Rechnungswesenfachmann' =>
   array (
     'id' => 345,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Finanz  und Rechnungswesenfachmann',
     ),
@@ -3757,10 +3757,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Finanz  und Rechnungswesenfachmann',
   ),
-  'Finanzberater' => 
+  'Finanzberater' =>
   array (
     'id' => '1275',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Finanzberater',
     ),
@@ -3768,10 +3768,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Finanzberater',
   ),
-  'Finanzbuchhalter' => 
+  'Finanzbuchhalter' =>
   array (
     'id' => '1276',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Finanzbuchhalter',
     ),
@@ -3779,10 +3779,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Finanzbuchhalter',
   ),
-  'Finanzleiter' => 
+  'Finanzleiter' =>
   array (
     'id' => '1277',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Finanzleiter',
     ),
@@ -3790,10 +3790,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Finanzleiter',
   ),
-  'Finanzplaner' => 
+  'Finanzplaner' =>
   array (
     'id' => '1278',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Finanzplaner',
     ),
@@ -3801,10 +3801,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Finanzplaner',
   ),
-  'Firmenkundenberater' => 
+  'Firmenkundenberater' =>
   array (
     'id' => '1279',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Firmenkundenberater',
     ),
@@ -3812,10 +3812,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Firmenkundenberater',
   ),
-  'Fleischer' => 
+  'Fleischer' =>
   array (
     'id' => '1280',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fleischer',
     ),
@@ -3823,10 +3823,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fleischer',
   ),
-  'Fleischereifachverkaeufer' => 
+  'Fleischereifachverkaeufer' =>
   array (
     'id' => 352,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fleischereifachverkäufer',
     ),
@@ -3834,10 +3834,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fleischereifachverkäufer',
   ),
-  'Flight-Attendant' => 
+  'Flight-Attendant' =>
   array (
     'id' => 353,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Flight Attendant',
     ),
@@ -3845,10 +3845,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Flight Attendant',
   ),
-  'Florist' => 
+  'Florist' =>
   array (
     'id' => '1283',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Florist',
     ),
@@ -3856,10 +3856,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Florist',
   ),
-  'Flottenmanager' => 
+  'Flottenmanager' =>
   array (
     'id' => '1284',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Flottenmanager',
     ),
@@ -3867,10 +3867,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Flottenmanager',
   ),
-  'Flugbegleiter' => 
+  'Flugbegleiter' =>
   array (
     'id' => '1285',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Flugbegleiter',
     ),
@@ -3878,10 +3878,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Flugbegleiter',
   ),
-  'Fluggeraetemechaniker' => 
+  'Fluggeraetemechaniker' =>
   array (
     'id' => 357,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fluggerätemechaniker',
     ),
@@ -3889,10 +3889,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fluggerätemechaniker',
   ),
-  'Fluggeraetmechaniker' => 
+  'Fluggeraetmechaniker' =>
   array (
     'id' => 358,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fluggerätmechaniker',
     ),
@@ -3900,10 +3900,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fluggerätmechaniker',
   ),
-  'Flugzeugtechniker' => 
+  'Flugzeugtechniker' =>
   array (
     'id' => '1288',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Flugzeugtechniker',
     ),
@@ -3911,10 +3911,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Flugzeugtechniker',
   ),
-  'Forscher' => 
+  'Forscher' =>
   array (
     'id' => '1289',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Forscher',
     ),
@@ -3922,10 +3922,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Forscher',
   ),
-  'Forschungsassistent' => 
+  'Forschungsassistent' =>
   array (
     'id' => '1290',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Forschungsassistent',
     ),
@@ -3933,10 +3933,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Forschungsassistent',
   ),
-  'Forschungsingenieur' => 
+  'Forschungsingenieur' =>
   array (
     'id' => '1291',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Forschungsingenieur',
     ),
@@ -3944,10 +3944,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Forschungsingenieur',
   ),
-  'Foerster' => 
+  'Foerster' =>
   array (
     'id' => 363,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Förster',
     ),
@@ -3955,10 +3955,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Förster',
   ),
-  'Fotograf' => 
+  'Fotograf' =>
   array (
     'id' => '1293',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fotograf',
     ),
@@ -3966,10 +3966,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fotograf',
   ),
-  'Fraeser' => 
+  'Fraeser' =>
   array (
     'id' => 365,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fräser',
     ),
@@ -3977,10 +3977,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fräser',
   ),
-  'Freileitungsmonteur' => 
+  'Freileitungsmonteur' =>
   array (
     'id' => '1295',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Freileitungsmonteur',
     ),
@@ -3988,10 +3988,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Freileitungsmonteur',
   ),
-  'Freiwilliger-Mitarbeiter' => 
+  'Freiwilliger-Mitarbeiter' =>
   array (
     'id' => 367,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Freiwilliger Mitarbeiter',
     ),
@@ -3999,10 +3999,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Freiwilliger Mitarbeiter',
   ),
-  'Fremdsprachen-Assistent' => 
+  'Fremdsprachen-Assistent' =>
   array (
     'id' => 368,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fremdsprachen Assistent',
     ),
@@ -4010,10 +4010,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fremdsprachen Assistent',
   ),
-  'Fremdsprachenassistentin' => 
+  'Fremdsprachenassistentin' =>
   array (
     'id' => '1298',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fremdsprachenassistentin',
     ),
@@ -4021,10 +4021,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fremdsprachenassistentin',
   ),
-  'Fremdsprachenkorrespondent' => 
+  'Fremdsprachenkorrespondent' =>
   array (
     'id' => '1299',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fremdsprachenkorrespondent',
     ),
@@ -4032,10 +4032,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fremdsprachenkorrespondent',
   ),
-  'Fremdsprachensekretaer' => 
+  'Fremdsprachensekretaer' =>
   array (
     'id' => 371,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fremdsprachensekretär',
     ),
@@ -4043,10 +4043,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fremdsprachensekretär',
   ),
-  'Fremdsprachensekretaerin' => 
+  'Fremdsprachensekretaerin' =>
   array (
     'id' => 372,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fremdsprachensekretärin',
     ),
@@ -4054,10 +4054,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fremdsprachensekretärin',
   ),
-  'Friseur' => 
+  'Friseur' =>
   array (
     'id' => '1302',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Friseur',
     ),
@@ -4065,10 +4065,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Friseur',
   ),
-  'Friseure' => 
+  'Friseure' =>
   array (
     'id' => '1303',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Friseure',
     ),
@@ -4076,10 +4076,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Friseure',
   ),
-  'Friseurin' => 
+  'Friseurin' =>
   array (
     'id' => '1304',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Friseurin',
     ),
@@ -4087,10 +4087,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Friseurin',
   ),
-  'Fuehrungskraft' => 
+  'Fuehrungskraft' =>
   array (
     'id' => 376,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Führungskraft',
     ),
@@ -4098,10 +4098,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Führungskraft',
   ),
-  'Fundraiser' => 
+  'Fundraiser' =>
   array (
     'id' => '1306',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fundraiser',
     ),
@@ -4109,10 +4109,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fundraiser',
   ),
-  'Fundraising' => 
+  'Fundraising' =>
   array (
     'id' => '1307',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Fundraising',
     ),
@@ -4120,10 +4120,10 @@ $options = array (
     'panel' => 'F',
     'text' => 'Fundraising',
   ),
-  'Gabelstaplerfahrer' => 
+  'Gabelstaplerfahrer' =>
   array (
     'id' => '1308',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gabelstaplerfahrer',
     ),
@@ -4131,10 +4131,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gabelstaplerfahrer',
   ),
-  'Galerist' => 
+  'Galerist' =>
   array (
     'id' => '1309',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Galerist',
     ),
@@ -4142,10 +4142,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Galerist',
   ),
-  'Galvaniseur' => 
+  'Galvaniseur' =>
   array (
     'id' => '1310',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Galvaniseur',
     ),
@@ -4153,10 +4153,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Galvaniseur',
   ),
-  'Gaertner' => 
+  'Gaertner' =>
   array (
     'id' => 383,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gärtner',
     ),
@@ -4164,10 +4164,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gärtner',
   ),
-  'Gas-Wasserinstallateur' => 
+  'Gas-Wasserinstallateur' =>
   array (
     'id' => 384,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gas  und Wasserinstallateur',
     ),
@@ -4175,10 +4175,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gas  und Wasserinstallateur',
   ),
-  'Gebaeudereiniger' => 
+  'Gebaeudereiniger' =>
   array (
     'id' => 385,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gebäudereiniger',
     ),
@@ -4186,10 +4186,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gebäudereiniger',
   ),
-  'Gebaeudetechniker' => 
+  'Gebaeudetechniker' =>
   array (
     'id' => 386,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gebäudetechniker',
     ),
@@ -4197,10 +4197,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gebäudetechniker',
   ),
-  'Gebietsleiter' => 
+  'Gebietsleiter' =>
   array (
     'id' => '1315',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gebietsleiter',
     ),
@@ -4208,10 +4208,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gebietsleiter',
   ),
-  'General-Counsel' => 
+  'General-Counsel' =>
   array (
     'id' => 388,
-    'query' => 
+    'query' =>
     array (
       'q' => 'General Counsel',
     ),
@@ -4219,10 +4219,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'General Counsel',
   ),
-  'Geograf' => 
+  'Geograf' =>
   array (
     'id' => '1317',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Geograf',
     ),
@@ -4230,10 +4230,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Geograf',
   ),
-  'Geoinformatiker' => 
+  'Geoinformatiker' =>
   array (
     'id' => '1318',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Geoinformatiker',
     ),
@@ -4241,10 +4241,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Geoinformatiker',
   ),
-  'Geologe' => 
+  'Geologe' =>
   array (
     'id' => '1319',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Geologe',
     ),
@@ -4252,10 +4252,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Geologe',
   ),
-  'Geomatiker' => 
+  'Geomatiker' =>
   array (
     'id' => '1320',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Geomatiker',
     ),
@@ -4263,10 +4263,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Geomatiker',
   ),
-  'Geophysiker' => 
+  'Geophysiker' =>
   array (
     'id' => '1321',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Geophysiker',
     ),
@@ -4274,10 +4274,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Geophysiker',
   ),
-  'Geruestbauer' => 
+  'Geruestbauer' =>
   array (
     'id' => 394,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gerüstbauer',
     ),
@@ -4285,10 +4285,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gerüstbauer',
   ),
-  'Geschaeftsfuehrer' => 
+  'Geschaeftsfuehrer' =>
   array (
     'id' => 395,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Geschäftsführer',
     ),
@@ -4296,10 +4296,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Geschäftsführer',
   ),
-  'Gesundheitsberater' => 
+  'Gesundheitsberater' =>
   array (
     'id' => '1324',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Gesundheitsberater',
     ),
@@ -4307,10 +4307,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Gesundheitsberater',
   ),
-  'GIS-Spezialist' => 
+  'GIS-Spezialist' =>
   array (
     'id' => 397,
-    'query' => 
+    'query' =>
     array (
       'q' => 'GIS Spezialist',
     ),
@@ -4318,10 +4318,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'GIS Spezialist',
   ),
-  'Glaser' => 
+  'Glaser' =>
   array (
     'id' => '1326',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Glaser',
     ),
@@ -4329,10 +4329,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Glaser',
   ),
-  'Grafikdesigner' => 
+  'Grafikdesigner' =>
   array (
     'id' => '1327',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Grafikdesigner',
     ),
@@ -4340,10 +4340,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Grafikdesigner',
   ),
-  'Grafiker' => 
+  'Grafiker' =>
   array (
     'id' => '1328',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Grafiker',
     ),
@@ -4351,10 +4351,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Grafiker',
   ),
-  'Grosshandelskaufmann' => 
+  'Grosshandelskaufmann' =>
   array (
     'id' => 401,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Großhandelskaufmann',
     ),
@@ -4362,10 +4362,10 @@ $options = array (
     'panel' => 'G',
     'text' => 'Großhandelskaufmann',
   ),
-  'Hardwareentwickler' => 
+  'Hardwareentwickler' =>
   array (
     'id' => '1330',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hardwareentwickler',
     ),
@@ -4373,10 +4373,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hardwareentwickler',
   ),
-  'Hausmeister' => 
+  'Hausmeister' =>
   array (
     'id' => '1331',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hausmeister',
     ),
@@ -4384,10 +4384,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hausmeister',
   ),
-  'Hauswart' => 
+  'Hauswart' =>
   array (
     'id' => '1332',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hauswart',
     ),
@@ -4395,10 +4395,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hauswart',
   ),
-  'Hausverwalter' => 
+  'Hausverwalter' =>
   array (
     'id' => '1333',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hausverwalter',
     ),
@@ -4406,10 +4406,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hausverwalter',
   ),
-  'Hauswirtschafter' => 
+  'Hauswirtschafter' =>
   array (
     'id' => '1334',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hauswirtschafter',
     ),
@@ -4417,10 +4417,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hauswirtschafter',
   ),
-  'Hauswirtschafterin' => 
+  'Hauswirtschafterin' =>
   array (
     'id' => '1335',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hauswirtschafterin',
     ),
@@ -4428,10 +4428,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hauswirtschafterin',
   ),
-  'Head-Regulatory-Affairs' => 
+  'Head-Regulatory-Affairs' =>
   array (
     'id' => 408,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Head Regulatory Affairs',
     ),
@@ -4439,10 +4439,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Head Regulatory Affairs',
   ),
-  'Health-Manager' => 
+  'Health-Manager' =>
   array (
     'id' => 409,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Health Manager',
     ),
@@ -4450,10 +4450,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Health Manager',
   ),
-  'Hebamme' => 
+  'Hebamme' =>
   array (
     'id' => '1338',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hebamme',
     ),
@@ -4461,10 +4461,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hebamme',
   ),
-  'Heilpaedagoge' => 
+  'Heilpaedagoge' =>
   array (
     'id' => 411,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Heilpädagoge',
     ),
@@ -4472,10 +4472,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Heilpädagoge',
   ),
-  'Heilpraktiker' => 
+  'Heilpraktiker' =>
   array (
     'id' => '1340',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Heilpraktiker',
     ),
@@ -4483,10 +4483,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Heilpraktiker',
   ),
-  'Heimleiter' => 
+  'Heimleiter' =>
   array (
     'id' => '1341',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Heimleiter',
     ),
@@ -4494,10 +4494,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Heimleiter',
   ),
-  'Heizungstechnik' => 
+  'Heizungstechnik' =>
   array (
     'id' => '1342',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Heizungstechnik',
     ),
@@ -4505,10 +4505,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Heizungstechnik',
   ),
-  'Helfer' => 
+  'Helfer' =>
   array (
     'id' => '1343',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Helfer',
     ),
@@ -4516,10 +4516,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Helfer',
   ),
-  'Herausgeber' => 
+  'Herausgeber' =>
   array (
     'id' => '1344',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Herausgeber',
     ),
@@ -4527,10 +4527,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Herausgeber',
   ),
-  'Hilfsarbeiter' => 
+  'Hilfsarbeiter' =>
   array (
     'id' => '1345',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hilfsarbeiter',
     ),
@@ -4538,10 +4538,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hilfsarbeiter',
   ),
-  'Hilfskraft' => 
+  'Hilfskraft' =>
   array (
     'id' => '1346',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hilfskraft',
     ),
@@ -4549,10 +4549,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hilfskraft',
   ),
-  'Historiker' => 
+  'Historiker' =>
   array (
     'id' => '1347',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Historiker',
     ),
@@ -4560,10 +4560,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Historiker',
   ),
-  'HLK-Ingenieur' => 
+  'HLK-Ingenieur' =>
   array (
     'id' => 420,
-    'query' => 
+    'query' =>
     array (
       'q' => 'HLK Ingenieur',
     ),
@@ -4571,10 +4571,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'HLK Ingenieur',
   ),
-  'Hochbauingenieur' => 
+  'Hochbauingenieur' =>
   array (
     'id' => '1349',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hochbauingenieur',
     ),
@@ -4582,10 +4582,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hochbauingenieur',
   ),
-  'Holzbearbeitungsmechaniker' => 
+  'Holzbearbeitungsmechaniker' =>
   array (
     'id' => '1350',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Holzbearbeitungsmechaniker',
     ),
@@ -4593,10 +4593,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Holzbearbeitungsmechaniker',
   ),
-  'Holzmechaniker' => 
+  'Holzmechaniker' =>
   array (
     'id' => '1351',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Holzmechaniker',
     ),
@@ -4604,10 +4604,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Holzmechaniker',
   ),
-  'Hoteldirektor' => 
+  'Hoteldirektor' =>
   array (
     'id' => '1352',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hoteldirektor',
     ),
@@ -4615,10 +4615,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hoteldirektor',
   ),
-  'Hotelfachfrau' => 
+  'Hotelfachfrau' =>
   array (
     'id' => '1353',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hotelfachfrau',
     ),
@@ -4626,10 +4626,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hotelfachfrau',
   ),
-  'Hotelfachleute' => 
+  'Hotelfachleute' =>
   array (
     'id' => '1354',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hotelfachleute',
     ),
@@ -4637,10 +4637,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hotelfachleute',
   ),
-  'Hotelfachmann' => 
+  'Hotelfachmann' =>
   array (
     'id' => '1355',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Hotelfachmann',
     ),
@@ -4648,10 +4648,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'Hotelfachmann',
   ),
-  'HR-Manager' => 
+  'HR-Manager' =>
   array (
     'id' => 428,
-    'query' => 
+    'query' =>
     array (
       'q' => 'HR Manager',
     ),
@@ -4659,10 +4659,10 @@ $options = array (
     'panel' => 'H',
     'text' => 'HR Manager',
   ),
-  'Illustrator' => 
+  'Illustrator' =>
   array (
     'id' => '1357',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Illustrator',
     ),
@@ -4670,10 +4670,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Illustrator',
   ),
-  'Immobilienbewirtschafter' => 
+  'Immobilienbewirtschafter' =>
   array (
     'id' => '1358',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Immobilienbewirtschafter',
     ),
@@ -4681,10 +4681,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Immobilienbewirtschafter',
   ),
-  'Immobilienkaufmann' => 
+  'Immobilienkaufmann' =>
   array (
     'id' => '1359',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Immobilienkaufmann',
     ),
@@ -4692,10 +4692,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Immobilienkaufmann',
   ),
-  'Immobilienmakler' => 
+  'Immobilienmakler' =>
   array (
     'id' => '1360',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Immobilienmakler',
     ),
@@ -4703,10 +4703,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Immobilienmakler',
   ),
-  'Immobilienschuetzer' => 
+  'Immobilienschuetzer' =>
   array (
     'id' => 433,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Immobilienschützer',
     ),
@@ -4714,10 +4714,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Immobilienschützer',
   ),
-  'Inbetriebnahmefachmann' => 
+  'Inbetriebnahmefachmann' =>
   array (
     'id' => '1362',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Inbetriebnahmefachmann',
     ),
@@ -4725,10 +4725,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Inbetriebnahmefachmann',
   ),
-  'Inbetriebnahmeleiter' => 
+  'Inbetriebnahmeleiter' =>
   array (
     'id' => '1363',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Inbetriebnahmeleiter',
     ),
@@ -4736,10 +4736,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Inbetriebnahmeleiter',
   ),
-  'Industriedesigner' => 
+  'Industriedesigner' =>
   array (
     'id' => '1364',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Industriedesigner',
     ),
@@ -4747,10 +4747,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Industriedesigner',
   ),
-  'Industriekauffrau' => 
+  'Industriekauffrau' =>
   array (
     'id' => '1365',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Industriekauffrau',
     ),
@@ -4758,10 +4758,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Industriekauffrau',
   ),
-  'Industriekaufleute' => 
+  'Industriekaufleute' =>
   array (
     'id' => '1366',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Industriekaufleute',
     ),
@@ -4769,10 +4769,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Industriekaufleute',
   ),
-  'Industriekaufmann' => 
+  'Industriekaufmann' =>
   array (
     'id' => '1367',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Industriekaufmann',
     ),
@@ -4780,10 +4780,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Industriekaufmann',
   ),
-  'Industriemechaniker' => 
+  'Industriemechaniker' =>
   array (
     'id' => '1368',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Industriemechaniker',
     ),
@@ -4791,10 +4791,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Industriemechaniker',
   ),
-  'Informatiker' => 
+  'Informatiker' =>
   array (
     'id' => '1369',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Informatiker',
     ),
@@ -4802,10 +4802,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Informatiker',
   ),
-  'Informatik-Ingenieur' => 
+  'Informatik-Ingenieur' =>
   array (
     'id' => 442,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Informatik Ingenieur',
     ),
@@ -4813,10 +4813,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Informatik Ingenieur',
   ),
-  'Informatikkaufmann' => 
+  'Informatikkaufmann' =>
   array (
     'id' => '1371',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Informatikkaufmann',
     ),
@@ -4824,10 +4824,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Informatikkaufmann',
   ),
-  'Information-Manager' => 
+  'Information-Manager' =>
   array (
     'id' => 444,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Information Manager',
     ),
@@ -4835,10 +4835,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Information Manager',
   ),
-  'Informationselektroniker' => 
+  'Informationselektroniker' =>
   array (
     'id' => '1373',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Informationselektroniker',
     ),
@@ -4846,10 +4846,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Informationselektroniker',
   ),
-  'Ingenieur' => 
+  'Ingenieur' =>
   array (
     'id' => '1374',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ingenieur',
     ),
@@ -4857,10 +4857,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Ingenieur',
   ),
-  'Ingenieurbuero' => 
+  'Ingenieurbuero' =>
   array (
     'id' => 447,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ingenieurbüro',
     ),
@@ -4868,10 +4868,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Ingenieurbüro',
   ),
-  'Innenarchitekt' => 
+  'Innenarchitekt' =>
   array (
     'id' => '1376',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Innenarchitekt',
     ),
@@ -4879,10 +4879,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Innenarchitekt',
   ),
-  'Innovationsmanager' => 
+  'Innovationsmanager' =>
   array (
     'id' => '1377',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Innovationsmanager',
     ),
@@ -4890,10 +4890,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Innovationsmanager',
   ),
-  'Inspektor' => 
+  'Inspektor' =>
   array (
     'id' => '1378',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Inspektor',
     ),
@@ -4901,10 +4901,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Inspektor',
   ),
-  'Instruktor' => 
+  'Instruktor' =>
   array (
     'id' => '1379',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Instruktor',
     ),
@@ -4912,10 +4912,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Instruktor',
   ),
-  'Intendant' => 
+  'Intendant' =>
   array (
     'id' => '1380',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Intendant',
     ),
@@ -4923,10 +4923,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Intendant',
   ),
-  'Internist' => 
+  'Internist' =>
   array (
     'id' => '1381',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Internist',
     ),
@@ -4934,10 +4934,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Internist',
   ),
-  'Interviewer' => 
+  'Interviewer' =>
   array (
     'id' => '1382',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Interviewer',
     ),
@@ -4945,10 +4945,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'Interviewer',
   ),
-  'IT-Administrator' => 
+  'IT-Administrator' =>
   array (
     'id' => 455,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Administrator',
     ),
@@ -4956,10 +4956,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Administrator',
   ),
-  'IT-Berater' => 
+  'IT-Berater' =>
   array (
     'id' => 457,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Berater',
     ),
@@ -4967,10 +4967,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Berater',
   ),
-  'IT-Kundenbetreuer' => 
+  'IT-Kundenbetreuer' =>
   array (
     'id' => 458,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Kundenbetreuer',
     ),
@@ -4978,10 +4978,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Kundenbetreuer',
   ),
-  'IT-Leiter' => 
+  'IT-Leiter' =>
   array (
     'id' => 459,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Leiter',
     ),
@@ -4989,10 +4989,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Leiter',
   ),
-  'IT-Manager' => 
+  'IT-Manager' =>
   array (
     'id' => 460,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Manager',
     ),
@@ -5000,10 +5000,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Manager',
   ),
-  'IT-Mitarbeiter' => 
+  'IT-Mitarbeiter' =>
   array (
     'id' => 461,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Mitarbeiter',
     ),
@@ -5011,10 +5011,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Mitarbeiter',
   ),
-  'IT-Projektmanager' => 
+  'IT-Projektmanager' =>
   array (
     'id' => 462,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Projektmanager',
     ),
@@ -5022,10 +5022,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Projektmanager',
   ),
-  'IT-Supporter' => 
+  'IT-Supporter' =>
   array (
     'id' => 463,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Supporter',
     ),
@@ -5033,10 +5033,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Supporter',
   ),
-  'IT-Systemadministrator' => 
+  'IT-Systemadministrator' =>
   array (
     'id' => 464,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Systemadministrator',
     ),
@@ -5044,10 +5044,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Systemadministrator',
   ),
-  'IT-Systemelektroniker' => 
+  'IT-Systemelektroniker' =>
   array (
     'id' => 465,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Systemelektroniker',
     ),
@@ -5055,10 +5055,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Systemelektroniker',
   ),
-  'IT-Systemkaufmann' => 
+  'IT-Systemkaufmann' =>
   array (
     'id' => 466,
-    'query' => 
+    'query' =>
     array (
       'q' => 'IT Systemkaufmann',
     ),
@@ -5066,10 +5066,10 @@ $options = array (
     'panel' => 'I',
     'text' => 'IT Systemkaufmann',
   ),
-  'Java-Entwickler' => 
+  'Java-Entwickler' =>
   array (
     'id' => 467,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Java Entwickler',
     ),
@@ -5077,10 +5077,10 @@ $options = array (
     'panel' => 'J',
     'text' => 'Java Entwickler',
   ),
-  'Journalist' => 
+  'Journalist' =>
   array (
     'id' => '1395',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Journalist',
     ),
@@ -5088,10 +5088,10 @@ $options = array (
     'panel' => 'J',
     'text' => 'Journalist',
   ),
-  'Jugendbetreuer' => 
+  'Jugendbetreuer' =>
   array (
     'id' => '1396',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Jugendbetreuer',
     ),
@@ -5099,10 +5099,10 @@ $options = array (
     'panel' => 'J',
     'text' => 'Jugendbetreuer',
   ),
-  'Junior-Manager' => 
+  'Junior-Manager' =>
   array (
     'id' => 470,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Junior Manager',
     ),
@@ -5110,10 +5110,10 @@ $options = array (
     'panel' => 'J',
     'text' => 'Junior Manager',
   ),
-  'Jurist' => 
+  'Jurist' =>
   array (
     'id' => '1398',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Jurist',
     ),
@@ -5121,10 +5121,10 @@ $options = array (
     'panel' => 'J',
     'text' => 'Jurist',
   ),
-  'Kalkulator' => 
+  'Kalkulator' =>
   array (
     'id' => '1399',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kalkulator',
     ),
@@ -5132,10 +5132,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kalkulator',
   ),
-  'Kaelteanlagenbauer' => 
+  'Kaelteanlagenbauer' =>
   array (
     'id' => 473,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kälteanlagenbauer',
     ),
@@ -5143,10 +5143,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kälteanlagenbauer',
   ),
-  'Kameramann' => 
+  'Kameramann' =>
   array (
     'id' => '1401',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kameramann',
     ),
@@ -5154,10 +5154,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kameramann',
   ),
-  'Kapitaen' => 
+  'Kapitaen' =>
   array (
     'id' => 475,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kapitän',
     ),
@@ -5165,10 +5165,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kapitän',
   ),
-  'Kardiologe' => 
+  'Kardiologe' =>
   array (
     'id' => '1403',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kardiologe',
     ),
@@ -5176,10 +5176,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kardiologe',
   ),
-  'Karosseriebauer' => 
+  'Karosseriebauer' =>
   array (
     'id' => '1404',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Karosseriebauer',
     ),
@@ -5187,10 +5187,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Karosseriebauer',
   ),
-  'Kartograf' => 
+  'Kartograf' =>
   array (
     'id' => '1405',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kartograf',
     ),
@@ -5198,10 +5198,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kartograf',
   ),
-  'Kaeufer' => 
+  'Kaeufer' =>
   array (
     'id' => 479,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Käufer',
     ),
@@ -5209,10 +5209,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Käufer',
   ),
-  'Kauffrau im Einzelhandel' => 
+  'Kauffrau im Einzelhandel' =>
   array (
     'id' => '1407',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kauffrau im Einzelhandel',
     ),
@@ -5220,10 +5220,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kauffrau im Einzelhandel',
   ),
-  'Kaufmann' => 
+  'Kaufmann' =>
   array (
     'id' => '1408',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kaufmann',
     ),
@@ -5231,10 +5231,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kaufmann',
   ),
-  'Kaufmann-audiovisuelle-Medien' => 
+  'Kaufmann-audiovisuelle-Medien' =>
   array (
     'id' => 482,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kaufmann für audiovisuelle Medien',
     ),
@@ -5242,10 +5242,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kaufmann für audiovisuelle Medien',
   ),
-  'Kaufmann-Einzelhandel' => 
+  'Kaufmann-Einzelhandel' =>
   array (
     'id' => 483,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kaufmann im Einzelhandel',
     ),
@@ -5253,10 +5253,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kaufmann im Einzelhandel',
   ),
-  'Kaufmaennischer-Angestellter' => 
+  'Kaufmaennischer-Angestellter' =>
   array (
     'id' => 484,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kaufmännischer Angestellter',
     ),
@@ -5264,10 +5264,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kaufmännischer Angestellter',
   ),
-  'Kaufmaennischer-Leiter' => 
+  'Kaufmaennischer-Leiter' =>
   array (
     'id' => 485,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kaufmännischer Leiter',
     ),
@@ -5275,10 +5275,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kaufmännischer Leiter',
   ),
-  'Kaufmaennischer-Mitarbeiter' => 
+  'Kaufmaennischer-Mitarbeiter' =>
   array (
     'id' => 486,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kaufmännischer Mitarbeiter',
     ),
@@ -5286,10 +5286,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kaufmännischer Mitarbeiter',
   ),
-  'Key-Account-Manager' => 
+  'Key-Account-Manager' =>
   array (
     'id' => 487,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Key Account Manager',
     ),
@@ -5297,10 +5297,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Key Account Manager',
   ),
-  'Kfz-Mechaniker' => 
+  'Kfz-Mechaniker' =>
   array (
     'id' => 488,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kfz Mechaniker',
     ),
@@ -5308,10 +5308,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kfz Mechaniker',
   ),
-  'Kieferorthopaede' => 
+  'Kieferorthopaede' =>
   array (
     'id' => 489,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kieferorthopäde',
     ),
@@ -5319,10 +5319,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kieferorthopäde',
   ),
-  'Kindergaertnerin' => 
+  'Kindergaertnerin' =>
   array (
     'id' => 490,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kindergärtnerin',
     ),
@@ -5330,10 +5330,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kindergärtnerin',
   ),
-  'Kinderkrankenschwester' => 
+  'Kinderkrankenschwester' =>
   array (
     'id' => '1418',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kinderkrankenschwester',
     ),
@@ -5341,10 +5341,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kinderkrankenschwester',
   ),
-  'Kleinkinderzieher' => 
+  'Kleinkinderzieher' =>
   array (
     'id' => '1419',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kleinkinderzieher',
     ),
@@ -5352,10 +5352,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kleinkinderzieher',
   ),
-  'Klempner' => 
+  'Klempner' =>
   array (
     'id' => '1420',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Klempner',
     ),
@@ -5363,10 +5363,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Klempner',
   ),
-  'Klimatechnik' => 
+  'Klimatechnik' =>
   array (
     'id' => '1421',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Klimatechnik',
     ),
@@ -5374,10 +5374,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Klimatechnik',
   ),
-  'Koch' => 
+  'Koch' =>
   array (
     'id' => '1422',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Koch',
     ),
@@ -5385,10 +5385,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Koch',
   ),
-  'Kommissionierer' => 
+  'Kommissionierer' =>
   array (
     'id' => '1423',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kommissionierer',
     ),
@@ -5396,10 +5396,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kommissionierer',
   ),
-  'Kommunikationschef' => 
+  'Kommunikationschef' =>
   array (
     'id' => '1424',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kommunikationschef',
     ),
@@ -5407,10 +5407,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kommunikationschef',
   ),
-  'Kommunikations-Designer' => 
+  'Kommunikations-Designer' =>
   array (
     'id' => 498,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kommunikations Designer',
     ),
@@ -5418,10 +5418,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kommunikations Designer',
   ),
-  'Komponist' => 
+  'Komponist' =>
   array (
     'id' => '1426',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Komponist',
     ),
@@ -5429,10 +5429,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Komponist',
   ),
-  'Konditor' => 
+  'Konditor' =>
   array (
     'id' => '1427',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konditor',
     ),
@@ -5440,10 +5440,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konditor',
   ),
-  'Konservator' => 
+  'Konservator' =>
   array (
     'id' => '1428',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konservator',
     ),
@@ -5451,10 +5451,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konservator',
   ),
-  'Konstrukteur' => 
+  'Konstrukteur' =>
   array (
     'id' => '1429',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konstrukteur',
     ),
@@ -5462,10 +5462,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konstrukteur',
   ),
-  'Konstruktionsingenieur' => 
+  'Konstruktionsingenieur' =>
   array (
     'id' => '1430',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konstruktionsingenieur',
     ),
@@ -5473,10 +5473,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konstruktionsingenieur',
   ),
-  'Konstruktionsleiter' => 
+  'Konstruktionsleiter' =>
   array (
     'id' => '1431',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konstruktionsleiter',
     ),
@@ -5484,10 +5484,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konstruktionsleiter',
   ),
-  'Konstruktionsmechaniker' => 
+  'Konstruktionsmechaniker' =>
   array (
     'id' => '1432',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konstruktionsmechaniker',
     ),
@@ -5495,10 +5495,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konstruktionsmechaniker',
   ),
-  'Konzeptioner' => 
+  'Konzeptioner' =>
   array (
     'id' => '1433',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Konzeptioner',
     ),
@@ -5506,10 +5506,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Konzeptioner',
   ),
-  'Kosmetikerin' => 
+  'Kosmetikerin' =>
   array (
     'id' => '1434',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kosmetikerin',
     ),
@@ -5517,10 +5517,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kosmetikerin',
   ),
-  'Kraftfahrer' => 
+  'Kraftfahrer' =>
   array (
     'id' => '1435',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kraftfahrer',
     ),
@@ -5528,10 +5528,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kraftfahrer',
   ),
-  'Kraftfahrzeugmechaniker' => 
+  'Kraftfahrzeugmechaniker' =>
   array (
     'id' => '1436',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kraftfahrzeugmechaniker',
     ),
@@ -5539,10 +5539,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kraftfahrzeugmechaniker',
   ),
-  'Kraftfahrzeugmechatroniker' => 
+  'Kraftfahrzeugmechatroniker' =>
   array (
     'id' => '1437',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kraftfahrzeugmechatroniker',
     ),
@@ -5550,10 +5550,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kraftfahrzeugmechatroniker',
   ),
-  'Kranfuehrer' => 
+  'Kranfuehrer' =>
   array (
     'id' => 511,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kranführer',
     ),
@@ -5561,10 +5561,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kranführer',
   ),
-  'Krankengymnast' => 
+  'Krankengymnast' =>
   array (
     'id' => '1439',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Krankengymnast',
     ),
@@ -5572,10 +5572,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Krankengymnast',
   ),
-  'Krankenpfleger' => 
+  'Krankenpfleger' =>
   array (
     'id' => '1440',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Krankenpfleger',
     ),
@@ -5583,10 +5583,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Krankenpfleger',
   ),
-  'Krankenpflegerin' => 
+  'Krankenpflegerin' =>
   array (
     'id' => '1441',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Krankenpflegerin',
     ),
@@ -5594,10 +5594,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Krankenpflegerin',
   ),
-  'Krankenschwester' => 
+  'Krankenschwester' =>
   array (
     'id' => '1442',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Krankenschwester',
     ),
@@ -5605,10 +5605,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Krankenschwester',
   ),
-  'Kreditmanager' => 
+  'Kreditmanager' =>
   array (
     'id' => '1443',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kreditmanager',
     ),
@@ -5616,10 +5616,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kreditmanager',
   ),
-  'Kreditorenbuchhalter' => 
+  'Kreditorenbuchhalter' =>
   array (
     'id' => '1444',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kreditorenbuchhalter',
     ),
@@ -5627,10 +5627,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kreditorenbuchhalter',
   ),
-  'Kreditsachbearbeiter' => 
+  'Kreditsachbearbeiter' =>
   array (
     'id' => '1445',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kreditsachbearbeiter',
     ),
@@ -5638,10 +5638,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kreditsachbearbeiter',
   ),
-  'Kundenberater' => 
+  'Kundenberater' =>
   array (
     'id' => '1446',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kundenberater',
     ),
@@ -5649,10 +5649,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kundenberater',
   ),
-  'Kundenbetreuer' => 
+  'Kundenbetreuer' =>
   array (
     'id' => '1447',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Kundenbetreuer',
     ),
@@ -5660,10 +5660,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Kundenbetreuer',
   ),
-  'Kuenstler' => 
+  'Kuenstler' =>
   array (
     'id' => 521,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Künstler',
     ),
@@ -5671,10 +5671,10 @@ $options = array (
     'panel' => 'K',
     'text' => 'Künstler',
   ),
-  'Laborant' => 
+  'Laborant' =>
   array (
     'id' => '1449',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Laborant',
     ),
@@ -5682,10 +5682,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Laborant',
   ),
-  'Laborassistent' => 
+  'Laborassistent' =>
   array (
     'id' => '1450',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Laborassistent',
     ),
@@ -5693,10 +5693,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Laborassistent',
   ),
-  'Laborleiter' => 
+  'Laborleiter' =>
   array (
     'id' => '1451',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Laborleiter',
     ),
@@ -5704,10 +5704,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Laborleiter',
   ),
-  'Lackierer' => 
+  'Lackierer' =>
   array (
     'id' => '1452',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lackierer',
     ),
@@ -5715,10 +5715,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lackierer',
   ),
-  'Lacklaborant' => 
+  'Lacklaborant' =>
   array (
     'id' => '1453',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lacklaborant',
     ),
@@ -5726,10 +5726,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lacklaborant',
   ),
-  'Lagerarbeiter' => 
+  'Lagerarbeiter' =>
   array (
     'id' => '1454',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lagerarbeiter',
     ),
@@ -5737,10 +5737,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lagerarbeiter',
   ),
-  'Lagerfachkraft' => 
+  'Lagerfachkraft' =>
   array (
     'id' => '1455',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lagerfachkraft',
     ),
@@ -5748,10 +5748,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lagerfachkraft',
   ),
-  'Lagerist' => 
+  'Lagerist' =>
   array (
     'id' => '1456',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lagerist',
     ),
@@ -5759,10 +5759,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lagerist',
   ),
-  'Lagerlogistiker' => 
+  'Lagerlogistiker' =>
   array (
     'id' => '1457',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lagerlogistiker',
     ),
@@ -5770,10 +5770,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lagerlogistiker',
   ),
-  'Landmaschinenmechaniker' => 
+  'Landmaschinenmechaniker' =>
   array (
     'id' => '1458',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Landmaschinenmechaniker',
     ),
@@ -5781,10 +5781,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Landmaschinenmechaniker',
   ),
-  'Landwirt' => 
+  'Landwirt' =>
   array (
     'id' => '1459',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Landwirt',
     ),
@@ -5792,10 +5792,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Landwirt',
   ),
-  'Layouter' => 
+  'Layouter' =>
   array (
     'id' => '1460',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Layouter',
     ),
@@ -5803,10 +5803,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Layouter',
   ),
-  'Lebensberater' => 
+  'Lebensberater' =>
   array (
     'id' => '1461',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lebensberater',
     ),
@@ -5814,10 +5814,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lebensberater',
   ),
-  'Lebensmittelchemiker' => 
+  'Lebensmittelchemiker' =>
   array (
     'id' => '1462',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lebensmittelchemiker',
     ),
@@ -5825,10 +5825,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lebensmittelchemiker',
   ),
-  'Lebensmittelingenieur' => 
+  'Lebensmittelingenieur' =>
   array (
     'id' => '1463',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lebensmittelingenieur',
     ),
@@ -5836,10 +5836,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lebensmittelingenieur',
   ),
-  'Lebensmitteltechniker' => 
+  'Lebensmitteltechniker' =>
   array (
     'id' => '1464',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lebensmitteltechniker',
     ),
@@ -5847,10 +5847,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lebensmitteltechniker',
   ),
-  'Legal-Counsel' => 
+  'Legal-Counsel' =>
   array (
     'id' => 538,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Legal Counsel',
     ),
@@ -5858,10 +5858,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Legal Counsel',
   ),
-  'Lehrer' => 
+  'Lehrer' =>
   array (
     'id' => '1466',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lehrer',
     ),
@@ -5869,10 +5869,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lehrer',
   ),
-  'Lehrling' => 
+  'Lehrling' =>
   array (
     'id' => '1467',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lehrling',
     ),
@@ -5880,10 +5880,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lehrling',
   ),
-  'Leitender-Ingenieur' => 
+  'Leitender-Ingenieur' =>
   array (
     'id' => 541,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leitender Ingenieur',
     ),
@@ -5891,10 +5891,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leitender Ingenieur',
   ),
-  'Leiter' => 
+  'Leiter' =>
   array (
     'id' => '1469',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter',
     ),
@@ -5902,10 +5902,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter',
   ),
-  'Leiter-Unternehmensentwicklung' => 
+  'Leiter-Unternehmensentwicklung' =>
   array (
     'id' => 543,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter der Unternehmensentwicklung',
     ),
@@ -5913,10 +5913,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter der Unternehmensentwicklung',
   ),
-  'Leiter-Facility-Management' => 
+  'Leiter-Facility-Management' =>
   array (
     'id' => 544,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Facility Management',
     ),
@@ -5924,10 +5924,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Facility Management',
   ),
-  'Leiter-Forschung-Entwicklung' => 
+  'Leiter-Forschung-Entwicklung' =>
   array (
     'id' => 545,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Forschung und Entwicklung',
     ),
@@ -5935,10 +5935,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Forschung und Entwicklung',
   ),
-  'Leiter-Pflegedienst' => 
+  'Leiter-Pflegedienst' =>
   array (
     'id' => 546,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter im Pflegedienst',
     ),
@@ -5946,10 +5946,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter im Pflegedienst',
   ),
-  'Leiter-Rechtsdienst' => 
+  'Leiter-Rechtsdienst' =>
   array (
     'id' => 547,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter im Rechtsdienst',
     ),
@@ -5957,10 +5957,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter im Rechtsdienst',
   ),
-  'Leiter-Instandhaltung' => 
+  'Leiter-Instandhaltung' =>
   array (
     'id' => 548,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Instandhaltung',
     ),
@@ -5968,10 +5968,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Instandhaltung',
   ),
-  'Leiter-Kundendienst' => 
+  'Leiter-Kundendienst' =>
   array (
     'id' => 549,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Kundendienst',
     ),
@@ -5979,10 +5979,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Kundendienst',
   ),
-  'Leiter-Marketing-Verkauf' => 
+  'Leiter-Marketing-Verkauf' =>
   array (
     'id' => 550,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Marketing und Verkauf',
     ),
@@ -5990,10 +5990,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Marketing und Verkauf',
   ),
-  'Leiter-Personalentwicklung' => 
+  'Leiter-Personalentwicklung' =>
   array (
     'id' => 551,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Personalentwicklung',
     ),
@@ -6001,10 +6001,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Personalentwicklung',
   ),
-  'Leiter-Produktentwicklung' => 
+  'Leiter-Produktentwicklung' =>
   array (
     'id' => 552,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Produktentwicklung',
     ),
@@ -6012,10 +6012,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Produktentwicklung',
   ),
-  'Leiter-Produktmanagement' => 
+  'Leiter-Produktmanagement' =>
   array (
     'id' => 553,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Produktmanagement',
     ),
@@ -6023,10 +6023,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Produktmanagement',
   ),
-  'Leiter-Qualitaetsmanagement' => 
+  'Leiter-Qualitaetsmanagement' =>
   array (
     'id' => 554,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Qualitätsmanagement',
     ),
@@ -6034,10 +6034,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Qualitätsmanagement',
   ),
-  'Leiter-Sicherheits-Risikomanagement' => 
+  'Leiter-Sicherheits-Risikomanagement' =>
   array (
     'id' => 555,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Sicherheits Risikomanagement',
     ),
@@ -6045,10 +6045,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Sicherheits Risikomanagement',
   ),
-  'Leiter-Software-Entwicklung' => 
+  'Leiter-Software-Entwicklung' =>
   array (
     'id' => 556,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Software Entwicklung',
     ),
@@ -6056,10 +6056,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Software Entwicklung',
   ),
-  'Leiter-Supply-Chain' => 
+  'Leiter-Supply-Chain' =>
   array (
     'id' => 557,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Supply Chain',
     ),
@@ -6067,10 +6067,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Supply Chain',
   ),
-  'Leiter-Technik' => 
+  'Leiter-Technik' =>
   array (
     'id' => 558,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Technik',
     ),
@@ -6078,10 +6078,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Technik',
   ),
-  'Leiter-Verkaufsinnendienst' => 
+  'Leiter-Verkaufsinnendienst' =>
   array (
     'id' => 559,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Verkaufsinnendienst',
     ),
@@ -6089,10 +6089,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Verkaufsinnendienst',
   ),
-  'Leiter-Verkaufstraining' => 
+  'Leiter-Verkaufstraining' =>
   array (
     'id' => 560,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Verkaufstraining',
     ),
@@ -6100,10 +6100,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Verkaufstraining',
   ),
-  'Leiter-Verpackung' => 
+  'Leiter-Verpackung' =>
   array (
     'id' => 561,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Verpackung',
     ),
@@ -6111,10 +6111,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Verpackung',
   ),
-  'Leiter-Wohngruppe' => 
+  'Leiter-Wohngruppe' =>
   array (
     'id' => 562,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Wohngruppe',
     ),
@@ -6122,10 +6122,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Wohngruppe',
   ),
-  'Leiter-Konstruktion' => 
+  'Leiter-Konstruktion' =>
   array (
     'id' => 563,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Leiter Konstruktion',
     ),
@@ -6133,10 +6133,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Leiter Konstruktion',
   ),
-  'Lektor' => 
+  'Lektor' =>
   array (
     'id' => '1491',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lektor',
     ),
@@ -6144,10 +6144,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lektor',
   ),
-  'Logistiker' => 
+  'Logistiker' =>
   array (
     'id' => '1492',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Logistiker',
     ),
@@ -6155,10 +6155,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Logistiker',
   ),
-  'Logistikleiter' => 
+  'Logistikleiter' =>
   array (
     'id' => '1493',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Logistikleiter',
     ),
@@ -6166,10 +6166,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Logistikleiter',
   ),
-  'Logistikplaner' => 
+  'Logistikplaner' =>
   array (
     'id' => '1494',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Logistikplaner',
     ),
@@ -6177,10 +6177,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Logistikplaner',
   ),
-  'Lohnbuchhalter' => 
+  'Lohnbuchhalter' =>
   array (
     'id' => '1495',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Lohnbuchhalter',
     ),
@@ -6188,10 +6188,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Lohnbuchhalter',
   ),
-  'Luft-Raumfahrtingenieur' => 
+  'Luft-Raumfahrtingenieur' =>
   array (
     'id' => 569,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Luft  und Raumfahrtingenieur',
     ),
@@ -6199,10 +6199,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Luft  und Raumfahrtingenieur',
   ),
-  'Luft-Raumfahrttechnik' => 
+  'Luft-Raumfahrttechnik' =>
   array (
     'id' => 570,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Luft  und Raumfahrttechnik',
     ),
@@ -6210,10 +6210,10 @@ $options = array (
     'panel' => 'L',
     'text' => 'Luft  und Raumfahrttechnik',
   ),
-  'MAG-Schweisser' => 
+  'MAG-Schweisser' =>
   array (
     'id' => 571,
-    'query' => 
+    'query' =>
     array (
       'q' => 'MAG Schweißer',
     ),
@@ -6221,10 +6221,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'MAG Schweißer',
   ),
-  'Makler' => 
+  'Makler' =>
   array (
     'id' => '1499',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Makler',
     ),
@@ -6232,10 +6232,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Makler',
   ),
-  'Maler' => 
+  'Maler' =>
   array (
     'id' => '1500',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maler',
     ),
@@ -6243,10 +6243,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maler',
   ),
-  'Management Analyst' => 
+  'Management Analyst' =>
   array (
     'id' => '1501',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Management Analyst',
     ),
@@ -6254,10 +6254,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Management Analyst',
   ),
-  'Manager' => 
+  'Manager' =>
   array (
     'id' => '1502',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Manager',
     ),
@@ -6265,10 +6265,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Manager',
   ),
-  'Manager-Medical-Affairs' => 
+  'Manager-Medical-Affairs' =>
   array (
     'id' => 576,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Manager Medical Affairs',
     ),
@@ -6276,10 +6276,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Manager Medical Affairs',
   ),
-  'Marketingassistent' => 
+  'Marketingassistent' =>
   array (
     'id' => '1504',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Marketingassistent',
     ),
@@ -6287,10 +6287,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Marketingassistent',
   ),
-  'Marketingberater' => 
+  'Marketingberater' =>
   array (
     'id' => '1505',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Marketingberater',
     ),
@@ -6298,10 +6298,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Marketingberater',
   ),
-  'Marketingleiter' => 
+  'Marketingleiter' =>
   array (
     'id' => '1506',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Marketingleiter',
     ),
@@ -6309,10 +6309,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Marketingleiter',
   ),
-  'Marketingmanager' => 
+  'Marketingmanager' =>
   array (
     'id' => '1507',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Marketingmanager',
     ),
@@ -6320,10 +6320,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Marketingmanager',
   ),
-  'Marktforscher' => 
+  'Marktforscher' =>
   array (
     'id' => '1508',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Marktforscher',
     ),
@@ -6331,10 +6331,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Marktforscher',
   ),
-  'Maschinenbauingenieur' => 
+  'Maschinenbauingenieur' =>
   array (
     'id' => '1509',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maschinenbauingenieur',
     ),
@@ -6342,10 +6342,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maschinenbauingenieur',
   ),
-  'Maschinenbautechniker' => 
+  'Maschinenbautechniker' =>
   array (
     'id' => '1510',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maschinenbautechniker',
     ),
@@ -6353,10 +6353,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maschinenbautechniker',
   ),
-  'Maschinenbediener' => 
+  'Maschinenbediener' =>
   array (
     'id' => '1511',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maschinenbediener',
     ),
@@ -6364,10 +6364,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maschinenbediener',
   ),
-  'Maschinenfuehrer' => 
+  'Maschinenfuehrer' =>
   array (
     'id' => 586,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maschinenführer',
     ),
@@ -6375,10 +6375,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maschinenführer',
   ),
-  'Maschineningenieur' => 
+  'Maschineningenieur' =>
   array (
     'id' => '1513',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maschineningenieur',
     ),
@@ -6386,10 +6386,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maschineningenieur',
   ),
-  'Masseur' => 
+  'Masseur' =>
   array (
     'id' => '1514',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Masseur',
     ),
@@ -6397,10 +6397,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Masseur',
   ),
-  'Mathematiker' => 
+  'Mathematiker' =>
   array (
     'id' => '1515',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mathematiker',
     ),
@@ -6408,10 +6408,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mathematiker',
   ),
-  'Maurer' => 
+  'Maurer' =>
   array (
     'id' => '1516',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Maurer',
     ),
@@ -6419,10 +6419,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Maurer',
   ),
-  'Mechanical-Design-Engineer' => 
+  'Mechanical-Design-Engineer' =>
   array (
     'id' => 591,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mechanical Design Engineer',
     ),
@@ -6430,10 +6430,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mechanical Design Engineer',
   ),
-  'Mechaniker' => 
+  'Mechaniker' =>
   array (
     'id' => '1518',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mechaniker',
     ),
@@ -6441,10 +6441,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mechaniker',
   ),
-  'Mechatroniker' => 
+  'Mechatroniker' =>
   array (
     'id' => '1519',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mechatroniker',
     ),
@@ -6452,10 +6452,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mechatroniker',
   ),
-  'Mechatronik Ingenieur' => 
+  'Mechatronik Ingenieur' =>
   array (
     'id' => '1520',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mechatronik Ingenieur',
     ),
@@ -6463,10 +6463,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mechatronik Ingenieur',
   ),
-  'Mediaberater' => 
+  'Mediaberater' =>
   array (
     'id' => '1521',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mediaberater',
     ),
@@ -6474,10 +6474,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mediaberater',
   ),
-  'Mediator' => 
+  'Mediator' =>
   array (
     'id' => '1522',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mediator',
     ),
@@ -6485,10 +6485,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mediator',
   ),
-  'Medical-Advisor' => 
+  'Medical-Advisor' =>
   array (
     'id' => 597,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medical Advisor',
     ),
@@ -6496,10 +6496,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medical Advisor',
   ),
-  'Medical-Manager' => 
+  'Medical-Manager' =>
   array (
     'id' => 598,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medical Manager',
     ),
@@ -6507,10 +6507,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medical Manager',
   ),
-  'Mediengestalter' => 
+  'Mediengestalter' =>
   array (
     'id' => '1525',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mediengestalter',
     ),
@@ -6518,10 +6518,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mediengestalter',
   ),
-  'Medientechnologe' => 
+  'Medientechnologe' =>
   array (
     'id' => '1526',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medientechnologe',
     ),
@@ -6529,10 +6529,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medientechnologe',
   ),
-  'Medizinischer-Direktor' => 
+  'Medizinischer-Direktor' =>
   array (
     'id' => 601,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medizinischer Direktor',
     ),
@@ -6540,10 +6540,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medizinischer Direktor',
   ),
-  'Medizinischer-Dokumentationsassistent' => 
+  'Medizinischer-Dokumentationsassistent' =>
   array (
     'id' => 602,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medizinischer Dokumentationsassistent',
     ),
@@ -6551,10 +6551,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medizinischer Dokumentationsassistent',
   ),
-  'Medizinphysiker' => 
+  'Medizinphysiker' =>
   array (
     'id' => '1529',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medizinphysiker',
     ),
@@ -6562,10 +6562,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medizinphysiker',
   ),
-  'Medizintechniker' => 
+  'Medizintechniker' =>
   array (
     'id' => '1530',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Medizintechniker',
     ),
@@ -6573,10 +6573,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Medizintechniker',
   ),
-  'Messtechniker' => 
+  'Messtechniker' =>
   array (
     'id' => '1531',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Messtechniker',
     ),
@@ -6584,10 +6584,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Messtechniker',
   ),
-  'Metallbauer' => 
+  'Metallbauer' =>
   array (
     'id' => '1532',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Metallbauer',
     ),
@@ -6595,10 +6595,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Metallbauer',
   ),
-  'Metzger' => 
+  'Metzger' =>
   array (
     'id' => '1533',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Metzger',
     ),
@@ -6606,10 +6606,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Metzger',
   ),
-  'MIG-Schweisser' => 
+  'MIG-Schweisser' =>
   array (
     'id' => 608,
-    'query' => 
+    'query' =>
     array (
       'q' => 'MIG Schweißer',
     ),
@@ -6617,10 +6617,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'MIG Schweißer',
   ),
-  'Mitarbeiter-Marketing' => 
+  'Mitarbeiter-Marketing' =>
   array (
     'id' => 609,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Mitarbeiter Marketing',
     ),
@@ -6628,10 +6628,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Mitarbeiter Marketing',
   ),
-  'Modedesigner' => 
+  'Modedesigner' =>
   array (
     'id' => '1536',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Modedesigner',
     ),
@@ -6639,10 +6639,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Modedesigner',
   ),
-  'Model' => 
+  'Model' =>
   array (
     'id' => '1537',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Model',
     ),
@@ -6650,10 +6650,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Model',
   ),
-  'Monteur' => 
+  'Monteur' =>
   array (
     'id' => '1538',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Monteur',
     ),
@@ -6661,10 +6661,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Monteur',
   ),
-  'Montierer' => 
+  'Montierer' =>
   array (
     'id' => '1539',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Montierer',
     ),
@@ -6672,10 +6672,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Montierer',
   ),
-  'MSR-Techniker' => 
+  'MSR-Techniker' =>
   array (
     'id' => 614,
-    'query' => 
+    'query' =>
     array (
       'q' => 'MSR Techniker',
     ),
@@ -6683,10 +6683,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'MSR Techniker',
   ),
-  'MTA' => 
+  'MTA' =>
   array (
     'id' => '1541',
-    'query' => 
+    'query' =>
     array (
       'q' => 'MTA',
     ),
@@ -6694,10 +6694,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'MTA',
   ),
-  'Muellwerker' => 
+  'Muellwerker' =>
   array (
     'id' => 616,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Müllwerker',
     ),
@@ -6705,10 +6705,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Müllwerker',
   ),
-  'Multimedia Produzent' => 
+  'Multimedia Produzent' =>
   array (
     'id' => '1543',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Multimedia Produzent',
     ),
@@ -6716,10 +6716,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Multimedia Produzent',
   ),
-  'Musiker' => 
+  'Musiker' =>
   array (
     'id' => '1544',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Musiker',
     ),
@@ -6727,10 +6727,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Musiker',
   ),
-  'Musiklehrer' => 
+  'Musiklehrer' =>
   array (
     'id' => '1545',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Musiklehrer',
     ),
@@ -6738,10 +6738,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Musiklehrer',
   ),
-  'Musikproduzent' => 
+  'Musikproduzent' =>
   array (
     'id' => '1546',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Musikproduzent',
     ),
@@ -6749,10 +6749,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Musikproduzent',
   ),
-  'Musikwissenschafter' => 
+  'Musikwissenschafter' =>
   array (
     'id' => '1547',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Musikwissenschafter',
     ),
@@ -6760,10 +6760,10 @@ $options = array (
     'panel' => 'M',
     'text' => 'Musikwissenschafter',
   ),
-  'Naeher' => 
+  'Naeher' =>
   array (
     'id' => 622,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Näher',
     ),
@@ -6771,10 +6771,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'Näher',
   ),
-  'Netzwerkadministrator' => 
+  'Netzwerkadministrator' =>
   array (
     'id' => '1549',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Netzwerkadministrator',
     ),
@@ -6782,10 +6782,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'Netzwerkadministrator',
   ),
-  'Netzwerk-Ingenieur' => 
+  'Netzwerk-Ingenieur' =>
   array (
     'id' => 624,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Netzwerk Ingenieur',
     ),
@@ -6793,10 +6793,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'Netzwerk Ingenieur',
   ),
-  'New-Media-Konzepter' => 
+  'New-Media-Konzepter' =>
   array (
     'id' => 625,
-    'query' => 
+    'query' =>
     array (
       'q' => 'New Media Konzepter',
     ),
@@ -6804,10 +6804,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'New Media Konzepter',
   ),
-  'Niederlassungsleiter' => 
+  'Niederlassungsleiter' =>
   array (
     'id' => '1552',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Niederlassungsleiter',
     ),
@@ -6815,10 +6815,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'Niederlassungsleiter',
   ),
-  'Notar' => 
+  'Notar' =>
   array (
     'id' => '1553',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Notar',
     ),
@@ -6826,10 +6826,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'Notar',
   ),
-  'Notarfachangestellter' => 
+  'Notarfachangestellter' =>
   array (
     'id' => '1554',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Notarfachangestellter',
     ),
@@ -6837,10 +6837,10 @@ $options = array (
     'panel' => 'N',
     'text' => 'Notarfachangestellter',
   ),
-  'Oberarzt' => 
+  'Oberarzt' =>
   array (
     'id' => '1555',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Oberarzt',
     ),
@@ -6848,10 +6848,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Oberarzt',
   ),
-  'Oberflaechenbeschichter' => 
+  'Oberflaechenbeschichter' =>
   array (
     'id' => 630,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Oberflächenbeschichter',
     ),
@@ -6859,10 +6859,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Oberflächenbeschichter',
   ),
-  'Obermonteur' => 
+  'Obermonteur' =>
   array (
     'id' => '1557',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Obermonteur',
     ),
@@ -6870,10 +6870,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Obermonteur',
   ),
-  'Office-Manager' => 
+  'Office-Manager' =>
   array (
     'id' => 632,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Office Manager',
     ),
@@ -6881,10 +6881,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Office Manager',
   ),
-  'Offset-Drucker' => 
+  'Offset-Drucker' =>
   array (
     'id' => 633,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Offset Drucker',
     ),
@@ -6892,10 +6892,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Offset Drucker',
   ),
-  'Oekologe' => 
+  'Oekologe' =>
   array (
     'id' => 634,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Ökologe',
     ),
@@ -6903,10 +6903,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Ökologe',
   ),
-  'Oenologe' => 
+  'Oenologe' =>
   array (
     'id' => 635,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Önologe',
     ),
@@ -6914,10 +6914,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Önologe',
   ),
-  'Operations Manager' => 
+  'Operations Manager' =>
   array (
     'id' => '1562',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Operations Manager',
     ),
@@ -6925,10 +6925,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Operations Manager',
   ),
-  'Operator' => 
+  'Operator' =>
   array (
     'id' => '1563',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Operator',
     ),
@@ -6936,10 +6936,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Operator',
   ),
-  'Optiker' => 
+  'Optiker' =>
   array (
     'id' => '1564',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Optiker',
     ),
@@ -6947,10 +6947,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Optiker',
   ),
-  'Optometrie' => 
+  'Optometrie' =>
   array (
     'id' => '1565',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Optometrie',
     ),
@@ -6958,10 +6958,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Optometrie',
   ),
-  'Organisator' => 
+  'Organisator' =>
   array (
     'id' => '1566',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Organisator',
     ),
@@ -6969,10 +6969,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Organisator',
   ),
-  'Osteopath' => 
+  'Osteopath' =>
   array (
     'id' => '1567',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Osteopath',
     ),
@@ -6980,10 +6980,10 @@ $options = array (
     'panel' => 'O',
     'text' => 'Osteopath',
   ),
-  'Paechter' => 
+  'Paechter' =>
   array (
     'id' => 642,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pächter',
     ),
@@ -6991,10 +6991,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pächter',
   ),
-  'Packer' => 
+  'Packer' =>
   array (
     'id' => '1569',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Packer',
     ),
@@ -7002,10 +7002,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Packer',
   ),
-  'Paedagoge' => 
+  'Paedagoge' =>
   array (
     'id' => 644,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pädagoge',
     ),
@@ -7013,10 +7013,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pädagoge',
   ),
-  'Partner' => 
+  'Partner' =>
   array (
     'id' => '1571',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Partner',
     ),
@@ -7024,10 +7024,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Partner',
   ),
-  'Patentanwalt' => 
+  'Patentanwalt' =>
   array (
     'id' => '1572',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Patentanwalt',
     ),
@@ -7035,10 +7035,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Patentanwalt',
   ),
-  'Patent-Assessor' => 
+  'Patent-Assessor' =>
   array (
     'id' => 647,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Patent Assessor',
     ),
@@ -7046,10 +7046,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Patent Assessor',
   ),
-  'Patentingenieur' => 
+  'Patentingenieur' =>
   array (
     'id' => '1574',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Patentingenieur',
     ),
@@ -7057,10 +7057,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Patentingenieur',
   ),
-  'Patissier' => 
+  'Patissier' =>
   array (
     'id' => '1575',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Patissier',
     ),
@@ -7068,10 +7068,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Patissier',
   ),
-  'Personalberater' => 
+  'Personalberater' =>
   array (
     'id' => '1576',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Personalberater',
     ),
@@ -7079,10 +7079,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Personalberater',
   ),
-  'Personalleiter' => 
+  'Personalleiter' =>
   array (
     'id' => '1577',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Personalleiter',
     ),
@@ -7090,10 +7090,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Personalleiter',
   ),
-  'Personalreferent' => 
+  'Personalreferent' =>
   array (
     'id' => '1578',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Personalreferent',
     ),
@@ -7101,10 +7101,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Personalreferent',
   ),
-  'Personalrekrutierer' => 
+  'Personalrekrutierer' =>
   array (
     'id' => '1579',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Personalrekrutierer',
     ),
@@ -7112,10 +7112,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Personalrekrutierer',
   ),
-  'Personalsachbearbeiter' => 
+  'Personalsachbearbeiter' =>
   array (
     'id' => '1580',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Personalsachbearbeiter',
     ),
@@ -7123,10 +7123,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Personalsachbearbeiter',
   ),
-  'Personalvermittler' => 
+  'Personalvermittler' =>
   array (
     'id' => '1581',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Personalvermittler',
     ),
@@ -7134,10 +7134,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Personalvermittler',
   ),
-  'Pflege-Ausbildner' => 
+  'Pflege-Ausbildner' =>
   array (
     'id' => 656,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pflege Ausbildner',
     ),
@@ -7145,10 +7145,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pflege Ausbildner',
   ),
-  'Pflegehelfer' => 
+  'Pflegehelfer' =>
   array (
     'id' => '1583',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pflegehelfer',
     ),
@@ -7156,10 +7156,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pflegehelfer',
   ),
-  'Pharmaberater' => 
+  'Pharmaberater' =>
   array (
     'id' => '1584',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pharmaberater',
     ),
@@ -7167,10 +7167,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pharmaberater',
   ),
-  'Pharmakant' => 
+  'Pharmakant' =>
   array (
     'id' => '1585',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pharmakant',
     ),
@@ -7178,10 +7178,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pharmakant',
   ),
-  'Pharmareferent' => 
+  'Pharmareferent' =>
   array (
     'id' => '1586',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pharmareferent',
     ),
@@ -7189,10 +7189,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pharmareferent',
   ),
-  'Pharmatechniker' => 
+  'Pharmatechniker' =>
   array (
     'id' => '1587',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pharmatechniker',
     ),
@@ -7200,10 +7200,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pharmatechniker',
   ),
-  'Pharmazeutisch-technischer-Assistent' => 
+  'Pharmazeutisch-technischer-Assistent' =>
   array (
     'id' => 662,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pharmazeutisch technischer Assistent',
     ),
@@ -7211,10 +7211,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pharmazeutisch technischer Assistent',
   ),
-  'Philosoph' => 
+  'Philosoph' =>
   array (
     'id' => '1589',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Philosoph',
     ),
@@ -7222,10 +7222,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Philosoph',
   ),
-  'Physiker' => 
+  'Physiker' =>
   array (
     'id' => '1590',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Physiker',
     ),
@@ -7233,10 +7233,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Physiker',
   ),
-  'Physik Laborant' => 
+  'Physik Laborant' =>
   array (
     'id' => '1591',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Physik Laborant',
     ),
@@ -7244,10 +7244,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Physik Laborant',
   ),
-  'Physiotherapeut' => 
+  'Physiotherapeut' =>
   array (
     'id' => '1592',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Physiotherapeut',
     ),
@@ -7255,10 +7255,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Physiotherapeut',
   ),
-  'Pilot' => 
+  'Pilot' =>
   array (
     'id' => '1593',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Pilot',
     ),
@@ -7266,10 +7266,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Pilot',
   ),
-  'PKA-Pharmazeutisch-kaufmaennischer-Assistent' => 
+  'PKA-Pharmazeutisch-kaufmaennischer-Assistent' =>
   array (
     'id' => 668,
-    'query' => 
+    'query' =>
     array (
       'q' => 'PKA Pharmazeutisch kaufmännischer Assistent',
     ),
@@ -7277,10 +7277,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'PKA Pharmazeutisch kaufmännischer Assistent',
   ),
-  'Planer' => 
+  'Planer' =>
   array (
     'id' => '1595',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Planer',
     ),
@@ -7288,10 +7288,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Planer',
   ),
-  'Polier' => 
+  'Polier' =>
   array (
     'id' => '1596',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Polier',
     ),
@@ -7299,10 +7299,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Polier',
   ),
-  'Politologe' => 
+  'Politologe' =>
   array (
     'id' => '1597',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Politologe',
     ),
@@ -7310,10 +7310,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Politologe',
   ),
-  'Polsterer' => 
+  'Polsterer' =>
   array (
     'id' => '1598',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Polsterer',
     ),
@@ -7321,10 +7321,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Polsterer',
   ),
-  'Portfolio-Manager' => 
+  'Portfolio-Manager' =>
   array (
     'id' => 673,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Portfolio Manager',
     ),
@@ -7332,10 +7332,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Portfolio Manager',
   ),
-  'Praktikant' => 
+  'Praktikant' =>
   array (
     'id' => '1600',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Praktikant',
     ),
@@ -7343,10 +7343,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Praktikant',
   ),
-  'Praesident' => 
+  'Praesident' =>
   array (
     'id' => 675,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Präsident',
     ),
@@ -7354,10 +7354,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Präsident',
   ),
-  'CEO' => 
+  'CEO' =>
   array (
     'id' => '1602',
-    'query' => 
+    'query' =>
     array (
       'q' => 'CEO',
     ),
@@ -7365,10 +7365,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'CEO',
   ),
-  'PR-Assistent' => 
+  'PR-Assistent' =>
   array (
     'id' => 677,
-    'query' => 
+    'query' =>
     array (
       'q' => 'PR Assistent',
     ),
@@ -7376,10 +7376,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'PR Assistent',
   ),
-  'Private-Banker' => 
+  'Private-Banker' =>
   array (
     'id' => 678,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Private Banker',
     ),
@@ -7387,10 +7387,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Private Banker',
   ),
-  'Privatkundenberater' => 
+  'Privatkundenberater' =>
   array (
     'id' => '1605',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Privatkundenberater',
     ),
@@ -7398,10 +7398,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Privatkundenberater',
   ),
-  'PR-Manager' => 
+  'PR-Manager' =>
   array (
     'id' => 680,
-    'query' => 
+    'query' =>
     array (
       'q' => 'PR Manager',
     ),
@@ -7409,10 +7409,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'PR Manager',
   ),
-  'Process-Engineer' => 
+  'Process-Engineer' =>
   array (
     'id' => 681,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Process Engineer',
     ),
@@ -7420,10 +7420,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Process Engineer',
   ),
-  'Product-Engineer' => 
+  'Product-Engineer' =>
   array (
     'id' => 682,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Product Engineer',
     ),
@@ -7431,10 +7431,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Product Engineer',
   ),
-  'Produktentwickler' => 
+  'Produktentwickler' =>
   array (
     'id' => '1609',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktentwickler',
     ),
@@ -7442,10 +7442,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktentwickler',
   ),
-  'Produktgestalter' => 
+  'Produktgestalter' =>
   array (
     'id' => '1610',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktgestalter',
     ),
@@ -7453,10 +7453,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktgestalter',
   ),
-  'Produktionsdesigner' => 
+  'Produktionsdesigner' =>
   array (
     'id' => '1611',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionsdesigner',
     ),
@@ -7464,10 +7464,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionsdesigner',
   ),
-  'Produktionsfachkraft-Chemie' => 
+  'Produktionsfachkraft-Chemie' =>
   array (
     'id' => 686,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionsfachkraft Chemie',
     ),
@@ -7475,10 +7475,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionsfachkraft Chemie',
   ),
-  'Produktionshelfer' => 
+  'Produktionshelfer' =>
   array (
     'id' => '1613',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionshelfer',
     ),
@@ -7486,10 +7486,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionshelfer',
   ),
-  'Produktionsingenieur' => 
+  'Produktionsingenieur' =>
   array (
     'id' => '1614',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionsingenieur',
     ),
@@ -7497,10 +7497,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionsingenieur',
   ),
-  'Produktionsleiter' => 
+  'Produktionsleiter' =>
   array (
     'id' => '1615',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionsleiter',
     ),
@@ -7508,10 +7508,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionsleiter',
   ),
-  'Produktionsmechaniker' => 
+  'Produktionsmechaniker' =>
   array (
     'id' => '1616',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionsmechaniker',
     ),
@@ -7519,10 +7519,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionsmechaniker',
   ),
-  'Produktionsplaner' => 
+  'Produktionsplaner' =>
   array (
     'id' => '1617',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktionsplaner',
     ),
@@ -7530,10 +7530,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktionsplaner',
   ),
-  'Produktmanagement-Assistent' => 
+  'Produktmanagement-Assistent' =>
   array (
     'id' => 692,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktmanagement Assistent',
     ),
@@ -7541,10 +7541,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktmanagement Assistent',
   ),
-  'Produktmanager' => 
+  'Produktmanager' =>
   array (
     'id' => '1619',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Produktmanager',
     ),
@@ -7552,10 +7552,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Produktmanager',
   ),
-  'Professor' => 
+  'Professor' =>
   array (
     'id' => '1620',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Professor',
     ),
@@ -7563,10 +7563,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Professor',
   ),
-  'Programmierer' => 
+  'Programmierer' =>
   array (
     'id' => '1621',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Programmierer',
     ),
@@ -7574,10 +7574,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Programmierer',
   ),
-  'Programmiersprache' => 
+  'Programmiersprache' =>
   array (
     'id' => '1622',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Programmiersprache',
     ),
@@ -7585,10 +7585,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Programmiersprache',
   ),
-  'Projectmanager' => 
+  'Projectmanager' =>
   array (
     'id' => '1623',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projectmanager',
     ),
@@ -7596,10 +7596,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projectmanager',
   ),
-  'Projektassistent' => 
+  'Projektassistent' =>
   array (
     'id' => '1624',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projektassistent',
     ),
@@ -7607,10 +7607,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projektassistent',
   ),
-  'Projektcontroller' => 
+  'Projektcontroller' =>
   array (
     'id' => '1625',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projektcontroller',
     ),
@@ -7618,10 +7618,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projektcontroller',
   ),
-  'Projektentwickler' => 
+  'Projektentwickler' =>
   array (
     'id' => '1626',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projektentwickler',
     ),
@@ -7629,10 +7629,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projektentwickler',
   ),
-  'Projektingenieur' => 
+  'Projektingenieur' =>
   array (
     'id' => '1627',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projektingenieur',
     ),
@@ -7640,10 +7640,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projektingenieur',
   ),
-  'Projektleiter' => 
+  'Projektleiter' =>
   array (
     'id' => '1628',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projektleiter',
     ),
@@ -7651,10 +7651,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projektleiter',
   ),
-  'Projektmanager' => 
+  'Projektmanager' =>
   array (
     'id' => '1629',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Projektmanager',
     ),
@@ -7662,10 +7662,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Projektmanager',
   ),
-  'Property-Manager' => 
+  'Property-Manager' =>
   array (
     'id' => 704,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Property Manager',
     ),
@@ -7673,10 +7673,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Property Manager',
   ),
-  'Prorektor' => 
+  'Prorektor' =>
   array (
     'id' => '1631',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Prorektor',
     ),
@@ -7684,10 +7684,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Prorektor',
   ),
-  'Prozessingenieur' => 
+  'Prozessingenieur' =>
   array (
     'id' => '1632',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Prozessingenieur',
     ),
@@ -7695,10 +7695,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Prozessingenieur',
   ),
-  'PR-Redaktor' => 
+  'PR-Redaktor' =>
   array (
     'id' => 707,
-    'query' => 
+    'query' =>
     array (
       'q' => 'PR Redaktor',
     ),
@@ -7706,10 +7706,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'PR Redaktor',
   ),
-  'Prueffeld-Techniker' => 
+  'Prueffeld-Techniker' =>
   array (
     'id' => 708,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Prüffeld Techniker',
     ),
@@ -7717,10 +7717,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Prüffeld Techniker',
   ),
-  'Psychiater' => 
+  'Psychiater' =>
   array (
     'id' => '1635',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Psychiater',
     ),
@@ -7728,10 +7728,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Psychiater',
   ),
-  'Psychologe' => 
+  'Psychologe' =>
   array (
     'id' => '1636',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Psychologe',
     ),
@@ -7739,10 +7739,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Psychologe',
   ),
-  'Psychotherapeut' => 
+  'Psychotherapeut' =>
   array (
     'id' => '1637',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Psychotherapeut',
     ),
@@ -7750,10 +7750,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'Psychotherapeut',
   ),
-  'PTA' => 
+  'PTA' =>
   array (
     'id' => '1638',
-    'query' => 
+    'query' =>
     array (
       'q' => 'PTA',
     ),
@@ -7761,10 +7761,10 @@ $options = array (
     'panel' => 'P',
     'text' => 'PTA',
   ),
-  'Qualifizierungsingenieur' => 
+  'Qualifizierungsingenieur' =>
   array (
     'id' => '1639',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Qualifizierungsingenieur',
     ),
@@ -7772,10 +7772,10 @@ $options = array (
     'panel' => 'Q',
     'text' => 'Qualifizierungsingenieur',
   ),
-  'Qualitaetsmanager' => 
+  'Qualitaetsmanager' =>
   array (
     'id' => 714,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Qualitätsmanager',
     ),
@@ -7783,10 +7783,10 @@ $options = array (
     'panel' => 'Q',
     'text' => 'Qualitätsmanager',
   ),
-  'Qualitaetsplaner' => 
+  'Qualitaetsplaner' =>
   array (
     'id' => 715,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Qualitätsplaner',
     ),
@@ -7794,10 +7794,10 @@ $options = array (
     'panel' => 'Q',
     'text' => 'Qualitätsplaner',
   ),
-  'Qualitaetspruefer' => 
+  'Qualitaetspruefer' =>
   array (
     'id' => 716,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Qualitätsprüfer',
     ),
@@ -7805,10 +7805,10 @@ $options = array (
     'panel' => 'Q',
     'text' => 'Qualitätsprüfer',
   ),
-  'Qualitaetstechniker' => 
+  'Qualitaetstechniker' =>
   array (
     'id' => 717,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Qualitätstechniker',
     ),
@@ -7816,10 +7816,10 @@ $options = array (
     'panel' => 'Q',
     'text' => 'Qualitätstechniker',
   ),
-  'Raumausstatter' => 
+  'Raumausstatter' =>
   array (
     'id' => '1644',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Raumausstatter',
     ),
@@ -7827,10 +7827,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Raumausstatter',
   ),
-  'Raumpflegerin' => 
+  'Raumpflegerin' =>
   array (
     'id' => '1645',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Raumpflegerin',
     ),
@@ -7838,10 +7838,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Raumpflegerin',
   ),
-  'Rechtsanwalt' => 
+  'Rechtsanwalt' =>
   array (
     'id' => '1646',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Rechtsanwalt',
     ),
@@ -7849,10 +7849,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Rechtsanwalt',
   ),
-  'Rechtsanwaltsfachangestellte' => 
+  'Rechtsanwaltsfachangestellte' =>
   array (
     'id' => '1647',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Rechtsanwaltsfachangestellte',
     ),
@@ -7860,10 +7860,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Rechtsanwaltsfachangestellte',
   ),
-  'Recruiter' => 
+  'Recruiter' =>
   array (
     'id' => '1648',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Recruiter',
     ),
@@ -7871,10 +7871,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Recruiter',
   ),
-  'Redakteur' => 
+  'Redakteur' =>
   array (
     'id' => '1649',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Redakteur',
     ),
@@ -7882,10 +7882,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Redakteur',
   ),
-  'Redner' => 
+  'Redner' =>
   array (
     'id' => '1650',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Redner',
     ),
@@ -7893,10 +7893,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Redner',
   ),
-  'Referent' => 
+  'Referent' =>
   array (
     'id' => '1651',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Referent',
     ),
@@ -7904,10 +7904,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Referent',
   ),
-  'Regionalverkaufsleiter' => 
+  'Regionalverkaufsleiter' =>
   array (
     'id' => '1652',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Regionalverkaufsleiter',
     ),
@@ -7915,10 +7915,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Regionalverkaufsleiter',
   ),
-  'Regisseur' => 
+  'Regisseur' =>
   array (
     'id' => '1653',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Regisseur',
     ),
@@ -7926,10 +7926,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Regisseur',
   ),
-  'Regulatory-Affairs-Specialist' => 
+  'Regulatory-Affairs-Specialist' =>
   array (
     'id' => 728,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Regulatory Affairs Specialist',
     ),
@@ -7937,10 +7937,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Regulatory Affairs Specialist',
   ),
-  'Regulatory-Manager' => 
+  'Regulatory-Manager' =>
   array (
     'id' => 729,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Regulatory Manager',
     ),
@@ -7948,10 +7948,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Regulatory Manager',
   ),
-  'Reinigungskraft' => 
+  'Reinigungskraft' =>
   array (
     'id' => '1656',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Reinigungskraft',
     ),
@@ -7959,10 +7959,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Reinigungskraft',
   ),
-  'Reiseleiter' => 
+  'Reiseleiter' =>
   array (
     'id' => '1657',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Reiseleiter',
     ),
@@ -7970,10 +7970,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Reiseleiter',
   ),
-  'Reiseverkehrskaufmann' => 
+  'Reiseverkehrskaufmann' =>
   array (
     'id' => '1658',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Reiseverkehrskaufmann',
     ),
@@ -7981,10 +7981,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Reiseverkehrskaufmann',
   ),
-  'Reporter' => 
+  'Reporter' =>
   array (
     'id' => '1659',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Reporter',
     ),
@@ -7992,10 +7992,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Reporter',
   ),
-  'Requisiteur' => 
+  'Requisiteur' =>
   array (
     'id' => '1660',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Requisiteur',
     ),
@@ -8003,10 +8003,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Requisiteur',
   ),
-  'Resident-Engineer' => 
+  'Resident-Engineer' =>
   array (
     'id' => 735,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Resident Engineer',
     ),
@@ -8014,10 +8014,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Resident Engineer',
   ),
-  'Restaurantfachmann' => 
+  'Restaurantfachmann' =>
   array (
     'id' => '1662',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Restaurantfachmann',
     ),
@@ -8025,10 +8025,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Restaurantfachmann',
   ),
-  'Retail-Manager' => 
+  'Retail-Manager' =>
   array (
     'id' => 737,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Retail Manager',
     ),
@@ -8036,10 +8036,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Retail Manager',
   ),
-  'Rettungsassistent' => 
+  'Rettungsassistent' =>
   array (
     'id' => '1664',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Rettungsassistent',
     ),
@@ -8047,10 +8047,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Rettungsassistent',
   ),
-  'Rettungssanitaeter' => 
+  'Rettungssanitaeter' =>
   array (
     'id' => 739,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Rettungssanitäter',
     ),
@@ -8058,10 +8058,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Rettungssanitäter',
   ),
-  'Rettungsschwimmer' => 
+  'Rettungsschwimmer' =>
   array (
     'id' => '1666',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Rettungsschwimmer',
     ),
@@ -8069,10 +8069,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Rettungsschwimmer',
   ),
-  'Revisior' => 
+  'Revisior' =>
   array (
     'id' => '1667',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Revisior',
     ),
@@ -8080,10 +8080,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Revisior',
   ),
-  'Richter' => 
+  'Richter' =>
   array (
     'id' => '1668',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Richter',
     ),
@@ -8091,10 +8091,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Richter',
   ),
-  'Risikocontroller' => 
+  'Risikocontroller' =>
   array (
     'id' => '1669',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Risikocontroller',
     ),
@@ -8102,10 +8102,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Risikocontroller',
   ),
-  'Risk Manager' => 
+  'Risk Manager' =>
   array (
     'id' => '1670',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Risk Manager',
     ),
@@ -8113,10 +8113,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Risk Manager',
   ),
-  'Rohrleitungsbauer' => 
+  'Rohrleitungsbauer' =>
   array (
     'id' => '1671',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Rohrleitungsbauer',
     ),
@@ -8124,10 +8124,10 @@ $options = array (
     'panel' => 'R',
     'text' => 'Rohrleitungsbauer',
   ),
-  'Sachbearbeiter' => 
+  'Sachbearbeiter' =>
   array (
     'id' => '1672',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sachbearbeiter',
     ),
@@ -8135,10 +8135,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sachbearbeiter',
   ),
-  'Sales-Account-Manager' => 
+  'Sales-Account-Manager' =>
   array (
     'id' => 747,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sales Account Manager',
     ),
@@ -8146,10 +8146,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sales Account Manager',
   ),
-  'Sales-Manager' => 
+  'Sales-Manager' =>
   array (
     'id' => 748,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sales Manager',
     ),
@@ -8157,10 +8157,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sales Manager',
   ),
-  'Sanitaertechnik' => 
+  'Sanitaertechnik' =>
   array (
     'id' => 749,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sanitärtechnik',
     ),
@@ -8168,10 +8168,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sanitärtechnik',
   ),
-  'SAP-Applikationsentwickler' => 
+  'SAP-Applikationsentwickler' =>
   array (
     'id' => 750,
-    'query' => 
+    'query' =>
     array (
       'q' => 'SAP Applikationsentwickler',
     ),
@@ -8179,10 +8179,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'SAP Applikationsentwickler',
   ),
-  'SAP-BI-Berater' => 
+  'SAP-BI-Berater' =>
   array (
     'id' => 751,
-    'query' => 
+    'query' =>
     array (
       'q' => 'SAP BI Berater',
     ),
@@ -8190,10 +8190,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'SAP BI Berater',
   ),
-  'SAP-Berater' => 
+  'SAP-Berater' =>
   array (
     'id' => 752,
-    'query' => 
+    'query' =>
     array (
       'q' => 'SAP Berater',
     ),
@@ -8201,10 +8201,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'SAP Berater',
   ),
-  'Sattler' => 
+  'Sattler' =>
   array (
     'id' => '1679',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sattler',
     ),
@@ -8212,10 +8212,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sattler',
   ),
-  'Satz' => 
+  'Satz' =>
   array (
     'id' => '1680',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Satz',
     ),
@@ -8223,10 +8223,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Satz',
   ),
-  'Schauspieler' => 
+  'Schauspieler' =>
   array (
     'id' => '1681',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schauspieler',
     ),
@@ -8234,10 +8234,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schauspieler',
   ),
-  'Schichtfuehrer' => 
+  'Schichtfuehrer' =>
   array (
     'id' => 756,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schichtführer',
     ),
@@ -8245,10 +8245,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schichtführer',
   ),
-  'Schichtleiter' => 
+  'Schichtleiter' =>
   array (
     'id' => '1683',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schichtleiter',
     ),
@@ -8256,10 +8256,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schichtleiter',
   ),
-  'Schiffsbauingenieur' => 
+  'Schiffsbauingenieur' =>
   array (
     'id' => '1684',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schiffsbauingenieur',
     ),
@@ -8267,10 +8267,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schiffsbauingenieur',
   ),
-  'Schlosser' => 
+  'Schlosser' =>
   array (
     'id' => '1685',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schlosser',
     ),
@@ -8278,10 +8278,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schlosser',
   ),
-  'Schneider' => 
+  'Schneider' =>
   array (
     'id' => '1686',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schneider',
     ),
@@ -8289,10 +8289,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schneider',
   ),
-  'Schreiner' => 
+  'Schreiner' =>
   array (
     'id' => '1687',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schreiner',
     ),
@@ -8300,10 +8300,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schreiner',
   ),
-  'Schriftsteller' => 
+  'Schriftsteller' =>
   array (
     'id' => '1688',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schriftsteller',
     ),
@@ -8311,10 +8311,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schriftsteller',
   ),
-  'Schulleiter' => 
+  'Schulleiter' =>
   array (
     'id' => '1689',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schulleiter',
     ),
@@ -8322,10 +8322,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schulleiter',
   ),
-  'Schweisser' => 
+  'Schweisser' =>
   array (
     'id' => 764,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schweißer',
     ),
@@ -8333,10 +8333,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schweißer',
   ),
-  'Schweissfachingenieur' => 
+  'Schweissfachingenieur' =>
   array (
     'id' => 765,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Schweißfachingenieur',
     ),
@@ -8344,10 +8344,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Schweißfachingenieur',
   ),
-  'Scrum Master' => 
+  'Scrum Master' =>
   array (
     'id' => '1692',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Scrum Master',
     ),
@@ -8355,10 +8355,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Scrum Master',
   ),
-  'Sekretaer' => 
+  'Sekretaer' =>
   array (
     'id' => 767,
-    'query' => 
+    'query' =>
     array (
       'q' => 'sekretär',
     ),
@@ -8366,10 +8366,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'sekretär',
   ),
-  'Senior-Ingenieur-Verfahrenstechnik' => 
+  'Senior-Ingenieur-Verfahrenstechnik' =>
   array (
     'id' => 768,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Senior Ingenieur für Verfahrenstechnik',
     ),
@@ -8377,10 +8377,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Senior Ingenieur für Verfahrenstechnik',
   ),
-  'Senior-Projektingenieur' => 
+  'Senior-Projektingenieur' =>
   array (
     'id' => 769,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Senior Projektingenieur',
     ),
@@ -8388,10 +8388,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Senior Projektingenieur',
   ),
-  'Senior-Systems-Engineer' => 
+  'Senior-Systems-Engineer' =>
   array (
     'id' => 770,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Senior Systems Engineer',
     ),
@@ -8399,10 +8399,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Senior Systems Engineer',
   ),
-  'Senior-Technical-Consultant' => 
+  'Senior-Technical-Consultant' =>
   array (
     'id' => 771,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Senior Technical Consultant',
     ),
@@ -8410,10 +8410,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Senior Technical Consultant',
   ),
-  'Senior-Consultant' => 
+  'Senior-Consultant' =>
   array (
     'id' => 772,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Senior Consultant',
     ),
@@ -8421,10 +8421,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Senior Consultant',
   ),
-  'Service-Delivery-Manager' => 
+  'Service-Delivery-Manager' =>
   array (
     'id' => 773,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Service Delivery Manager',
     ),
@@ -8432,10 +8432,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Service Delivery Manager',
   ),
-  'Serviceassistent' => 
+  'Serviceassistent' =>
   array (
     'id' => '1700',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Serviceassistent',
     ),
@@ -8443,10 +8443,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Serviceassistent',
   ),
-  'Servicefachangestellter' => 
+  'Servicefachangestellter' =>
   array (
     'id' => '1701',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Servicefachangestellter',
     ),
@@ -8454,10 +8454,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Servicefachangestellter',
   ),
-  'Service-Ingenieur' => 
+  'Service-Ingenieur' =>
   array (
     'id' => 776,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Service Ingenieur',
     ),
@@ -8465,10 +8465,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Service Ingenieur',
   ),
-  'Servicekaufmann Luftverkehr' => 
+  'Servicekaufmann Luftverkehr' =>
   array (
     'id' => '1703',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Servicekaufmann Luftverkehr',
     ),
@@ -8476,10 +8476,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Servicekaufmann Luftverkehr',
   ),
-  'Servicekraft' => 
+  'Servicekraft' =>
   array (
     'id' => '1704',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Servicekraft',
     ),
@@ -8487,10 +8487,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Servicekraft',
   ),
-  'Servicemanager' => 
+  'Servicemanager' =>
   array (
     'id' => '1705',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Servicemanager',
     ),
@@ -8498,10 +8498,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Servicemanager',
   ),
-  'Servicetechniker' => 
+  'Servicetechniker' =>
   array (
     'id' => '1706',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Servicetechniker',
     ),
@@ -8509,10 +8509,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Servicetechniker',
   ),
-  'Service-Techniker' => 
+  'Service-Techniker' =>
   array (
     'id' => 781,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Service Techniker',
     ),
@@ -8520,10 +8520,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Service Techniker',
   ),
-  'Sicherheitsbeauftragter' => 
+  'Sicherheitsbeauftragter' =>
   array (
     'id' => '1708',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sicherheitsbeauftragter',
     ),
@@ -8531,10 +8531,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sicherheitsbeauftragter',
   ),
-  'Sicherheitsingenieur' => 
+  'Sicherheitsingenieur' =>
   array (
     'id' => '1709',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sicherheitsingenieur',
     ),
@@ -8542,10 +8542,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sicherheitsingenieur',
   ),
-  'Sicherheitsmitarbeiter' => 
+  'Sicherheitsmitarbeiter' =>
   array (
     'id' => '1710',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sicherheitsmitarbeiter',
     ),
@@ -8553,10 +8553,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sicherheitsmitarbeiter',
   ),
-  'Social-Media-Manager' => 
+  'Social-Media-Manager' =>
   array (
     'id' => 785,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Social Media Manager',
     ),
@@ -8564,10 +8564,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Social Media Manager',
   ),
-  'Softwarearchitekt' => 
+  'Softwarearchitekt' =>
   array (
     'id' => '1712',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Softwarearchitekt',
     ),
@@ -8575,10 +8575,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Softwarearchitekt',
   ),
-  'Software-Engineer' => 
+  'Software-Engineer' =>
   array (
     'id' => 787,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Software Engineer',
     ),
@@ -8586,10 +8586,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Software Engineer',
   ),
-  'Softwareentwickler' => 
+  'Softwareentwickler' =>
   array (
     'id' => '1714',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Softwareentwickler',
     ),
@@ -8597,10 +8597,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Softwareentwickler',
   ),
-  'Software-Entwickler' => 
+  'Software-Entwickler' =>
   array (
     'id' => 789,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Software Entwickler',
     ),
@@ -8608,10 +8608,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Software Entwickler',
   ),
-  'Sound-Designer' => 
+  'Sound-Designer' =>
   array (
     'id' => 790,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sound Designer',
     ),
@@ -8619,10 +8619,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sound Designer',
   ),
-  'Sozialarbeiter' => 
+  'Sozialarbeiter' =>
   array (
     'id' => '1717',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sozialarbeiter',
     ),
@@ -8630,10 +8630,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sozialarbeiter',
   ),
-  'Sozialpaedagoge' => 
+  'Sozialpaedagoge' =>
   array (
     'id' => 792,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sozialpädagoge',
     ),
@@ -8641,10 +8641,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sozialpädagoge',
   ),
-  'Sozialversicherungsangestellter' => 
+  'Sozialversicherungsangestellter' =>
   array (
     'id' => '1719',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sozialversicherungsangestellter',
     ),
@@ -8652,10 +8652,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sozialversicherungsangestellter',
   ),
-  'Sozialversicherungs-Experte' => 
+  'Sozialversicherungs-Experte' =>
   array (
     'id' => 794,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sozialversicherungs Experte',
     ),
@@ -8663,10 +8663,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sozialversicherungs Experte',
   ),
-  'Sozialversicherungsfachangestellte' => 
+  'Sozialversicherungsfachangestellte' =>
   array (
     'id' => '1721',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sozialversicherungsfachangestellte',
     ),
@@ -8674,10 +8674,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sozialversicherungsfachangestellte',
   ),
-  'Speditionskaufmann' => 
+  'Speditionskaufmann' =>
   array (
     'id' => '1722',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Speditionskaufmann',
     ),
@@ -8685,10 +8685,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Speditionskaufmann',
   ),
-  'Spezialist-Trade-Finance' => 
+  'Spezialist-Trade-Finance' =>
   array (
     'id' => 797,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Spezialist Trade Finance',
     ),
@@ -8696,10 +8696,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Spezialist Trade Finance',
   ),
-  'Spezialist' => 
+  'Spezialist' =>
   array (
     'id' => '1724',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Spezialist  ',
     ),
@@ -8707,10 +8707,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Spezialist  ',
   ),
-  'Spitaldirektor' => 
+  'Spitaldirektor' =>
   array (
     'id' => '1725',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Spitaldirektor',
     ),
@@ -8718,10 +8718,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Spitaldirektor',
   ),
-  'Sportlehrer' => 
+  'Sportlehrer' =>
   array (
     'id' => '1726',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sportlehrer',
     ),
@@ -8729,10 +8729,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sportlehrer',
   ),
-  'Sports' => 
+  'Sports' =>
   array (
     'id' => '1727',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sports',
     ),
@@ -8740,10 +8740,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sports',
   ),
-  'Sportwissenschaftler' => 
+  'Sportwissenschaftler' =>
   array (
     'id' => '1728',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sportwissenschaftler',
     ),
@@ -8751,10 +8751,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sportwissenschaftler',
   ),
-  'Sprachlehrer' => 
+  'Sprachlehrer' =>
   array (
     'id' => '1729',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sprachlehrer',
     ),
@@ -8762,10 +8762,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sprachlehrer',
   ),
-  'Sprachwissenschaftler' => 
+  'Sprachwissenschaftler' =>
   array (
     'id' => '1730',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Sprachwissenschaftler',
     ),
@@ -8773,10 +8773,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Sprachwissenschaftler',
   ),
-  'SPS-Software-Ingenieur' => 
+  'SPS-Software-Ingenieur' =>
   array (
     'id' => 805,
-    'query' => 
+    'query' =>
     array (
       'q' => 'SPS Software Ingenieur',
     ),
@@ -8784,10 +8784,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'SPS Software Ingenieur',
   ),
-  'Staatsanwalt' => 
+  'Staatsanwalt' =>
   array (
     'id' => '1732',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Staatsanwalt',
     ),
@@ -8795,10 +8795,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Staatsanwalt',
   ),
-  'Staedtebau' => 
+  'Staedtebau' =>
   array (
     'id' => 807,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Städtebau',
     ),
@@ -8806,10 +8806,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Städtebau',
   ),
-  'Stadtplaner' => 
+  'Stadtplaner' =>
   array (
     'id' => '1734',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Stadtplaner',
     ),
@@ -8817,10 +8817,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Stadtplaner',
   ),
-  'Staff-Scientist' => 
+  'Staff-Scientist' =>
   array (
     'id' => 809,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Staff Scientist',
     ),
@@ -8828,10 +8828,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Staff Scientist',
   ),
-  'Stahlbauschlosser' => 
+  'Stahlbauschlosser' =>
   array (
     'id' => '1736',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Stahlbauschlosser',
     ),
@@ -8839,10 +8839,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Stahlbauschlosser',
   ),
-  'Statiker' => 
+  'Statiker' =>
   array (
     'id' => '1737',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Statiker',
     ),
@@ -8850,10 +8850,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Statiker',
   ),
-  'Stationsarzt' => 
+  'Stationsarzt' =>
   array (
     'id' => '1738',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Stationsarzt',
     ),
@@ -8861,10 +8861,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Stationsarzt',
   ),
-  'Stellvertretender Leiter' => 
+  'Stellvertretender Leiter' =>
   array (
     'id' => '1739',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Stellvertretender Leiter',
     ),
@@ -8872,10 +8872,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Stellvertretender Leiter',
   ),
-  'Steuerberater' => 
+  'Steuerberater' =>
   array (
     'id' => '1740',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Steuerberater',
     ),
@@ -8883,10 +8883,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Steuerberater',
   ),
-  'Steuerberater Assistent' => 
+  'Steuerberater Assistent' =>
   array (
     'id' => '1741',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Steuerberater Assistent',
     ),
@@ -8894,10 +8894,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Steuerberater Assistent',
   ),
-  'Steuerfachangestellter' => 
+  'Steuerfachangestellter' =>
   array (
     'id' => '1742',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Steuerfachangestellter',
     ),
@@ -8905,10 +8905,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Steuerfachangestellter',
   ),
-  'Steuerfachwirt' => 
+  'Steuerfachwirt' =>
   array (
     'id' => '1743',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Steuerfachwirt',
     ),
@@ -8916,10 +8916,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Steuerfachwirt',
   ),
-  'Steuerreferent' => 
+  'Steuerreferent' =>
   array (
     'id' => '1744',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Steuerreferent',
     ),
@@ -8927,10 +8927,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Steuerreferent',
   ),
-  'Storemanager' => 
+  'Storemanager' =>
   array (
     'id' => '1745',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Storemanager',
     ),
@@ -8938,10 +8938,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Storemanager',
   ),
-  'Strassenbauer' => 
+  'Strassenbauer' =>
   array (
     'id' => 821,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Straßenbauer',
     ),
@@ -8949,10 +8949,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Straßenbauer',
   ),
-  'Studiengangsleiter' => 
+  'Studiengangsleiter' =>
   array (
     'id' => '1747',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Studiengangsleiter',
     ),
@@ -8960,10 +8960,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Studiengangsleiter',
   ),
-  'Studienkoordinator' => 
+  'Studienkoordinator' =>
   array (
     'id' => '1748',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Studienkoordinator',
     ),
@@ -8971,10 +8971,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Studienkoordinator',
   ),
-  'Stylist' => 
+  'Stylist' =>
   array (
     'id' => '1749',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Stylist',
     ),
@@ -8982,10 +8982,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Stylist',
   ),
-  'Supervisor' => 
+  'Supervisor' =>
   array (
     'id' => '1750',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Supervisor',
     ),
@@ -8993,10 +8993,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Supervisor',
   ),
-  'Supply-Chain-Manager' => 
+  'Supply-Chain-Manager' =>
   array (
     'id' => 826,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Supply Chain Manager',
     ),
@@ -9004,10 +9004,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Supply Chain Manager',
   ),
-  'Supply-Chain-Management' => 
+  'Supply-Chain-Management' =>
   array (
     'id' => 827,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Supply Chain Management',
     ),
@@ -9015,10 +9015,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Supply Chain Management',
   ),
-  'Supporter' => 
+  'Supporter' =>
   array (
     'id' => '1753',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Supporter',
     ),
@@ -9026,10 +9026,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Supporter',
   ),
-  'Synchronsprecher' => 
+  'Synchronsprecher' =>
   array (
     'id' => '1754',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Synchronsprecher',
     ),
@@ -9037,10 +9037,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Synchronsprecher',
   ),
-  'Systemadministrator' => 
+  'Systemadministrator' =>
   array (
     'id' => '1755',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systemadministrator',
     ),
@@ -9048,10 +9048,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systemadministrator',
   ),
-  'Systemanalytiker' => 
+  'Systemanalytiker' =>
   array (
     'id' => '1756',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systemanalytiker',
     ),
@@ -9059,10 +9059,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systemanalytiker',
   ),
-  'Systembetreuer' => 
+  'Systembetreuer' =>
   array (
     'id' => '1757',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systembetreuer',
     ),
@@ -9070,10 +9070,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systembetreuer',
   ),
-  'Systemelektroniker' => 
+  'Systemelektroniker' =>
   array (
     'id' => '1758',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systemelektroniker',
     ),
@@ -9081,10 +9081,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systemelektroniker',
   ),
-  'Systemingenieur' => 
+  'Systemingenieur' =>
   array (
     'id' => '1759',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systemingenieur',
     ),
@@ -9092,10 +9092,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systemingenieur',
   ),
-  'Systemspezialist' => 
+  'Systemspezialist' =>
   array (
     'id' => '1760',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systemspezialist',
     ),
@@ -9103,10 +9103,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systemspezialist',
   ),
-  'Systemtechniker' => 
+  'Systemtechniker' =>
   array (
     'id' => '1761',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Systemtechniker',
     ),
@@ -9114,10 +9114,10 @@ $options = array (
     'panel' => 'S',
     'text' => 'Systemtechniker',
   ),
-  'Tankwart' => 
+  'Tankwart' =>
   array (
     'id' => '1762',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tankwart',
     ),
@@ -9125,10 +9125,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tankwart',
   ),
-  'Teamassistent' => 
+  'Teamassistent' =>
   array (
     'id' => '1763',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Teamassistent',
     ),
@@ -9136,10 +9136,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Teamassistent',
   ),
-  'Teamleiter' => 
+  'Teamleiter' =>
   array (
     'id' => '1764',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Teamleiter',
     ),
@@ -9147,10 +9147,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Teamleiter',
   ),
-  'Teamsekretaer' => 
+  'Teamsekretaer' =>
   array (
     'id' => 840,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Teamsekretär',
     ),
@@ -9158,10 +9158,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Teamsekretär',
   ),
-  'Technical-Trainer' => 
+  'Technical-Trainer' =>
   array (
     'id' => 841,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technical Trainer',
     ),
@@ -9169,10 +9169,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technical Trainer',
   ),
-  'Technical-Consultant' => 
+  'Technical-Consultant' =>
   array (
     'id' => 842,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technical Consultant',
     ),
@@ -9180,10 +9180,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technical Consultant',
   ),
-  'Techniker' => 
+  'Techniker' =>
   array (
     'id' => '1768',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Techniker',
     ),
@@ -9191,10 +9191,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Techniker',
   ),
-  'Technischer-Berater' => 
+  'Technischer-Berater' =>
   array (
     'id' => 849,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Berater',
     ),
@@ -9202,10 +9202,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Berater',
   ),
-  'Technischer-Leiter' => 
+  'Technischer-Leiter' =>
   array (
     'id' => 845,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Leiter',
     ),
@@ -9213,10 +9213,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Leiter',
   ),
-  'Technischer-Sachbearbeiter' => 
+  'Technischer-Sachbearbeiter' =>
   array (
     'id' => 846,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Sachbearbeiter',
     ),
@@ -9224,10 +9224,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Sachbearbeiter',
   ),
-  'Technischer-Supporter' => 
+  'Technischer-Supporter' =>
   array (
     'id' => 847,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Supporter',
     ),
@@ -9235,10 +9235,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Supporter',
   ),
-  'Technischer-Assistent' => 
+  'Technischer-Assistent' =>
   array (
     'id' => 848,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Assistent',
     ),
@@ -9246,10 +9246,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Assistent',
   ),
-  'Technischer-Redakteur' => 
+  'Technischer-Redakteur' =>
   array (
     'id' => 850,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Redakteur',
     ),
@@ -9257,10 +9257,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Redakteur',
   ),
-  'Technischer-Zeichner' => 
+  'Technischer-Zeichner' =>
   array (
     'id' => 851,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Technischer Zeichner',
     ),
@@ -9268,10 +9268,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Technischer Zeichner',
   ),
-  'Telefonischer-Kundenbetreuer' => 
+  'Telefonischer-Kundenbetreuer' =>
   array (
     'id' => 852,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Telefonischer Kundenbetreuer',
     ),
@@ -9279,10 +9279,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Telefonischer Kundenbetreuer',
   ),
-  'Testingenieur' => 
+  'Testingenieur' =>
   array (
     'id' => '1777',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Testingenieur',
     ),
@@ -9290,10 +9290,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Testingenieur',
   ),
-  'Texter' => 
+  'Texter' =>
   array (
     'id' => '1778',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Texter',
     ),
@@ -9301,10 +9301,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Texter',
   ),
-  'Textildesigner' => 
+  'Textildesigner' =>
   array (
     'id' => '1779',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Textildesigner',
     ),
@@ -9312,10 +9312,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Textildesigner',
   ),
-  'Textilingenieur' => 
+  'Textilingenieur' =>
   array (
     'id' => '1780',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Textilingenieur',
     ),
@@ -9323,10 +9323,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Textilingenieur',
   ),
-  'Theaterwissenschafter' => 
+  'Theaterwissenschafter' =>
   array (
     'id' => '1781',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Theaterwissenschafter',
     ),
@@ -9334,10 +9334,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Theaterwissenschafter',
   ),
-  'Therapeut' => 
+  'Therapeut' =>
   array (
     'id' => '1782',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Therapeut',
     ),
@@ -9345,10 +9345,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Therapeut',
   ),
-  'Tierarzt' => 
+  'Tierarzt' =>
   array (
     'id' => '1783',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tierarzt',
     ),
@@ -9356,10 +9356,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tierarzt',
   ),
-  'Tierpfleger' => 
+  'Tierpfleger' =>
   array (
     'id' => '1784',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tierpfleger',
     ),
@@ -9367,10 +9367,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tierpfleger',
   ),
-  'Tischler' => 
+  'Tischler' =>
   array (
     'id' => '1785',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tischler',
     ),
@@ -9378,10 +9378,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tischler',
   ),
-  'Tockenbaumonteuer' => 
+  'Tockenbaumonteuer' =>
   array (
     'id' => '1786',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tockenbaumonteuer',
     ),
@@ -9389,10 +9389,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tockenbaumonteuer',
   ),
-  'Tonmeister' => 
+  'Tonmeister' =>
   array (
     'id' => '1787',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tonmeister',
     ),
@@ -9400,10 +9400,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tonmeister',
   ),
-  'Trader' => 
+  'Trader' =>
   array (
     'id' => '1788',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Trader',
     ),
@@ -9411,10 +9411,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Trader',
   ),
-  'Traffic-Manager' => 
+  'Traffic-Manager' =>
   array (
     'id' => 865,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Traffic Manager',
     ),
@@ -9422,10 +9422,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Traffic Manager',
   ),
-  'Trainee' => 
+  'Trainee' =>
   array (
     'id' => '1790',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Trainee',
     ),
@@ -9433,10 +9433,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Trainee',
   ),
-  'Trainer' => 
+  'Trainer' =>
   array (
     'id' => '1791',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Trainer',
     ),
@@ -9444,10 +9444,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Trainer',
   ),
-  'Treasurer' => 
+  'Treasurer' =>
   array (
     'id' => '1792',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Treasurer',
     ),
@@ -9455,10 +9455,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Treasurer',
   ),
-  'Trockenbauer' => 
+  'Trockenbauer' =>
   array (
     'id' => '1793',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Trockenbauer',
     ),
@@ -9466,10 +9466,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Trockenbauer',
   ),
-  'Turbinenschlosser' => 
+  'Turbinenschlosser' =>
   array (
     'id' => '1794',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Turbinenschlosser',
     ),
@@ -9477,10 +9477,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Turbinenschlosser',
   ),
-  'Tutor' => 
+  'Tutor' =>
   array (
     'id' => '1795',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Tutor',
     ),
@@ -9488,10 +9488,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'Tutor',
   ),
-  'TV-Produzent' => 
+  'TV-Produzent' =>
   array (
     'id' => 872,
-    'query' => 
+    'query' =>
     array (
       'q' => 'TV Produzent',
     ),
@@ -9499,10 +9499,10 @@ $options = array (
     'panel' => 'T',
     'text' => 'TV Produzent',
   ),
-  'Uebersetzer' => 
+  'Uebersetzer' =>
   array (
     'id' => 873,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Übersetzer',
     ),
@@ -9510,10 +9510,10 @@ $options = array (
     'panel' => 'U',
     'text' => 'Übersetzer',
   ),
-  'Umweltberater' => 
+  'Umweltberater' =>
   array (
     'id' => '1798',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Umweltberater',
     ),
@@ -9521,10 +9521,10 @@ $options = array (
     'panel' => 'U',
     'text' => 'Umweltberater',
   ),
-  'Umweltschutztechniker' => 
+  'Umweltschutztechniker' =>
   array (
     'id' => '1799',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Umweltschutztechniker',
     ),
@@ -9532,10 +9532,10 @@ $options = array (
     'panel' => 'U',
     'text' => 'Umweltschutztechniker',
   ),
-  'Umweltwissenschaftler' => 
+  'Umweltwissenschaftler' =>
   array (
     'id' => '1800',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Umweltwissenschaftler',
     ),
@@ -9543,10 +9543,10 @@ $options = array (
     'panel' => 'U',
     'text' => 'Umweltwissenschaftler',
   ),
-  'Unternehmensberater' => 
+  'Unternehmensberater' =>
   array (
     'id' => '1801',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Unternehmensberater',
     ),
@@ -9554,10 +9554,10 @@ $options = array (
     'panel' => 'U',
     'text' => 'Unternehmensberater',
   ),
-  'User-Experience-Designer' => 
+  'User-Experience-Designer' =>
   array (
     'id' => 878,
-    'query' => 
+    'query' =>
     array (
       'q' => 'User Experience Designer',
     ),
@@ -9565,10 +9565,10 @@ $options = array (
     'panel' => 'U',
     'text' => 'User Experience Designer',
   ),
-  'Veranstaltungskaufmann' => 
+  'Veranstaltungskaufmann' =>
   array (
     'id' => '1803',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Veranstaltungskaufmann',
     ),
@@ -9576,10 +9576,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Veranstaltungskaufmann',
   ),
-  'Verfahrensmechaniker' => 
+  'Verfahrensmechaniker' =>
   array (
     'id' => '1804',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verfahrensmechaniker',
     ),
@@ -9587,10 +9587,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verfahrensmechaniker',
   ),
-  'Verfahrenstechniker' => 
+  'Verfahrenstechniker' =>
   array (
     'id' => '1805',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verfahrenstechniker',
     ),
@@ -9598,10 +9598,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verfahrenstechniker',
   ),
-  'Verkaeufer' => 
+  'Verkaeufer' =>
   array (
     'id' => 882,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkäufer',
     ),
@@ -9609,10 +9609,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkäufer',
   ),
-  'Verkaufsfoerderer' => 
+  'Verkaufsfoerderer' =>
   array (
     'id' => 883,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkaufsförderer',
     ),
@@ -9620,10 +9620,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkaufsförderer',
   ),
-  'Verkaufsinnendienstmitarbeiter' => 
+  'Verkaufsinnendienstmitarbeiter' =>
   array (
     'id' => '1808',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkaufsinnendienstmitarbeiter',
     ),
@@ -9631,10 +9631,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkaufsinnendienstmitarbeiter',
   ),
-  'Verkaufsleiter' => 
+  'Verkaufsleiter' =>
   array (
     'id' => '1809',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkaufsleiter',
     ),
@@ -9642,10 +9642,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkaufsleiter',
   ),
-  'Verkaufstrainer' => 
+  'Verkaufstrainer' =>
   array (
     'id' => '1810',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkaufstrainer',
     ),
@@ -9653,10 +9653,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkaufstrainer',
   ),
-  'Verkehrsingenieur' => 
+  'Verkehrsingenieur' =>
   array (
     'id' => '1811',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkehrsingenieur',
     ),
@@ -9664,10 +9664,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkehrsingenieur',
   ),
-  'Verkehrsplaner' => 
+  'Verkehrsplaner' =>
   array (
     'id' => '1812',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verkehrsplaner',
     ),
@@ -9675,10 +9675,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verkehrsplaner',
   ),
-  'Verlagskaufmann' => 
+  'Verlagskaufmann' =>
   array (
     'id' => '1813',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verlagskaufmann',
     ),
@@ -9686,10 +9686,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verlagskaufmann',
   ),
-  'Vermessungsingenieur' => 
+  'Vermessungsingenieur' =>
   array (
     'id' => '1814',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vermessungsingenieur',
     ),
@@ -9697,10 +9697,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vermessungsingenieur',
   ),
-  'Vermessungstechniker' => 
+  'Vermessungstechniker' =>
   array (
     'id' => '1815',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vermessungstechniker',
     ),
@@ -9708,10 +9708,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vermessungstechniker',
   ),
-  'Vermoegensberater' => 
+  'Vermoegensberater' =>
   array (
     'id' => 892,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vermögensberater',
     ),
@@ -9719,10 +9719,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vermögensberater',
   ),
-  'Verpackungsdesigner' => 
+  'Verpackungsdesigner' =>
   array (
     'id' => '1817',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verpackungsdesigner',
     ),
@@ -9730,10 +9730,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verpackungsdesigner',
   ),
-  'Verpackungsfachmann' => 
+  'Verpackungsfachmann' =>
   array (
     'id' => '1818',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verpackungsfachmann',
     ),
@@ -9741,10 +9741,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verpackungsfachmann',
   ),
-  'Verpackungsmittelmechaniker' => 
+  'Verpackungsmittelmechaniker' =>
   array (
     'id' => '1819',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verpackungsmittelmechaniker',
     ),
@@ -9752,10 +9752,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verpackungsmittelmechaniker',
   ),
-  'Versicherungsberater' => 
+  'Versicherungsberater' =>
   array (
     'id' => '1820',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Versicherungsberater',
     ),
@@ -9763,10 +9763,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Versicherungsberater',
   ),
-  'Versicherungsfachmann' => 
+  'Versicherungsfachmann' =>
   array (
     'id' => '1821',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Versicherungsfachmann',
     ),
@@ -9774,10 +9774,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Versicherungsfachmann',
   ),
-  'Versicherungskaufmann' => 
+  'Versicherungskaufmann' =>
   array (
     'id' => '1822',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Versicherungskaufmann',
     ),
@@ -9785,10 +9785,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Versicherungskaufmann',
   ),
-  'Versicherungsmakler' => 
+  'Versicherungsmakler' =>
   array (
     'id' => '1823',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Versicherungsmakler',
     ),
@@ -9796,10 +9796,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Versicherungsmakler',
   ),
-  'Versuchsingenieur' => 
+  'Versuchsingenieur' =>
   array (
     'id' => '1824',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Versuchsingenieur',
     ),
@@ -9807,10 +9807,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Versuchsingenieur',
   ),
-  'Vertriebsassistent' => 
+  'Vertriebsassistent' =>
   array (
     'id' => '1825',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebsassistent',
     ),
@@ -9818,10 +9818,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebsassistent',
   ),
-  'Vertriebscontroller' => 
+  'Vertriebscontroller' =>
   array (
     'id' => '1826',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebscontroller',
     ),
@@ -9829,10 +9829,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebscontroller',
   ),
-  'Vertriebsingenieur' => 
+  'Vertriebsingenieur' =>
   array (
     'id' => '1827',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebsingenieur',
     ),
@@ -9840,10 +9840,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebsingenieur',
   ),
-  'Vertriebsleiter' => 
+  'Vertriebsleiter' =>
   array (
     'id' => '1828',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebsleiter',
     ),
@@ -9851,10 +9851,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebsleiter',
   ),
-  'Vertriebsmitarbeiter' => 
+  'Vertriebsmitarbeiter' =>
   array (
     'id' => '1829',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebsmitarbeiter',
     ),
@@ -9862,10 +9862,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebsmitarbeiter',
   ),
-  'Vertriebsspezialist' => 
+  'Vertriebsspezialist' =>
   array (
     'id' => '1830',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebsspezialist',
     ),
@@ -9873,10 +9873,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebsspezialist',
   ),
-  'Vertriebstrainer' => 
+  'Vertriebstrainer' =>
   array (
     'id' => '1831',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vertriebstrainer',
     ),
@@ -9884,10 +9884,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vertriebstrainer',
   ),
-  'Verwalter' => 
+  'Verwalter' =>
   array (
     'id' => '1832',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwalter',
     ),
@@ -9895,10 +9895,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwalter',
   ),
-  'Verwaltungsangestellter' => 
+  'Verwaltungsangestellter' =>
   array (
     'id' => '1833',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwaltungsangestellter',
     ),
@@ -9906,10 +9906,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwaltungsangestellter',
   ),
-  'Verwaltungsassistent' => 
+  'Verwaltungsassistent' =>
   array (
     'id' => '1834',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwaltungsassistent',
     ),
@@ -9917,10 +9917,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwaltungsassistent',
   ),
-  'Verwaltungsdirektor' => 
+  'Verwaltungsdirektor' =>
   array (
     'id' => '1835',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwaltungsdirektor',
     ),
@@ -9928,10 +9928,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwaltungsdirektor',
   ),
-  'Verwaltungsfachangestellter' => 
+  'Verwaltungsfachangestellter' =>
   array (
     'id' => '1836',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwaltungsfachangestellter',
     ),
@@ -9939,10 +9939,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwaltungsfachangestellter',
   ),
-  'Verwaltungsrat' => 
+  'Verwaltungsrat' =>
   array (
     'id' => '1837',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwaltungsrat',
     ),
@@ -9950,10 +9950,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwaltungsrat',
   ),
-  'Verwaltungswirt' => 
+  'Verwaltungswirt' =>
   array (
     'id' => '1838',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Verwaltungswirt',
     ),
@@ -9961,10 +9961,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Verwaltungswirt',
   ),
-  'Vikar' => 
+  'Vikar' =>
   array (
     'id' => '1839',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vikar',
     ),
@@ -9972,10 +9972,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vikar',
   ),
-  'Volkswirt' => 
+  'Volkswirt' =>
   array (
     'id' => '1840',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Volkswirt',
     ),
@@ -9983,10 +9983,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Volkswirt',
   ),
-  'Volljurist' => 
+  'Volljurist' =>
   array (
     'id' => '1841',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Volljurist',
     ),
@@ -9994,10 +9994,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Volljurist',
   ),
-  'Volontaer' => 
+  'Volontaer' =>
   array (
     'id' => 918,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Volontär',
     ),
@@ -10005,10 +10005,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Volontär',
   ),
-  'Vorsitzender' => 
+  'Vorsitzender' =>
   array (
     'id' => '1843',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vorsitzender',
     ),
@@ -10016,10 +10016,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vorsitzender',
   ),
-  'Vorstandsassistent' => 
+  'Vorstandsassistent' =>
   array (
     'id' => '1844',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Vorstandsassistent',
     ),
@@ -10027,10 +10027,10 @@ $options = array (
     'panel' => 'V',
     'text' => 'Vorstandsassistent',
   ),
-  'Webdesigner' => 
+  'Webdesigner' =>
   array (
     'id' => '1845',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Webdesigner',
     ),
@@ -10038,10 +10038,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Webdesigner',
   ),
-  'Webentwickler' => 
+  'Webentwickler' =>
   array (
     'id' => '1846',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Webentwickler',
     ),
@@ -10049,10 +10049,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Webentwickler',
   ),
-  'Webmaster' => 
+  'Webmaster' =>
   array (
     'id' => '1847',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Webmaster',
     ),
@@ -10060,10 +10060,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Webmaster',
   ),
-  'Wellness Manager' => 
+  'Wellness Manager' =>
   array (
     'id' => '1848',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Wellness Manager',
     ),
@@ -10071,10 +10071,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Wellness Manager',
   ),
-  'Werbekaufmann' => 
+  'Werbekaufmann' =>
   array (
     'id' => '1849',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werbekaufmann',
     ),
@@ -10082,10 +10082,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werbekaufmann',
   ),
-  'Werbetexter' => 
+  'Werbetexter' =>
   array (
     'id' => '1850',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werbetexter',
     ),
@@ -10093,10 +10093,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werbetexter',
   ),
-  'Werkleiter' => 
+  'Werkleiter' =>
   array (
     'id' => '1851',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werkleiter',
     ),
@@ -10104,10 +10104,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werkleiter',
   ),
-  'Werkstoffingenieur' => 
+  'Werkstoffingenieur' =>
   array (
     'id' => '1852',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werkstoffingenieur',
     ),
@@ -10115,10 +10115,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werkstoffingenieur',
   ),
-  'Werkstoffpruefer' => 
+  'Werkstoffpruefer' =>
   array (
     'id' => 929,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werkstoffprüfer',
     ),
@@ -10126,10 +10126,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werkstoffprüfer',
   ),
-  'Werkzeugmacher' => 
+  'Werkzeugmacher' =>
   array (
     'id' => '1854',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werkzeugmacher',
     ),
@@ -10137,10 +10137,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werkzeugmacher',
   ),
-  'Werkzeugmechaniker' => 
+  'Werkzeugmechaniker' =>
   array (
     'id' => '1855',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Werkzeugmechaniker',
     ),
@@ -10148,10 +10148,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Werkzeugmechaniker',
   ),
-  'Winzer' => 
+  'Winzer' =>
   array (
     'id' => '1856',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Winzer',
     ),
@@ -10159,10 +10159,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Winzer',
   ),
-  'Wirtschaftsinformatiker' => 
+  'Wirtschaftsinformatiker' =>
   array (
     'id' => '1857',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Wirtschaftsinformatiker',
     ),
@@ -10170,10 +10170,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Wirtschaftsinformatiker',
   ),
-  'Wirtschaftsingenieur' => 
+  'Wirtschaftsingenieur' =>
   array (
     'id' => '1858',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Wirtschaftsingenieur',
     ),
@@ -10181,10 +10181,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Wirtschaftsingenieur',
   ),
-  'Wirtschaftspruefer' => 
+  'Wirtschaftspruefer' =>
   array (
     'id' => 935,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Wirtschaftsprüfer',
     ),
@@ -10192,10 +10192,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Wirtschaftsprüfer',
   ),
-  'Wissenschaftlicher-Projektmanager' => 
+  'Wissenschaftlicher-Projektmanager' =>
   array (
     'id' => 936,
-    'query' => 
+    'query' =>
     array (
       'q' => 'Wissenschaftlicher Projektmanager',
     ),
@@ -10203,10 +10203,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Wissenschaftlicher Projektmanager',
   ),
-  'Wissensmanager' => 
+  'Wissensmanager' =>
   array (
     'id' => '1861',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Wissensmanager',
     ),
@@ -10214,10 +10214,10 @@ $options = array (
     'panel' => 'W',
     'text' => 'Wissensmanager',
   ),
-  'Zahnarzt' => 
+  'Zahnarzt' =>
   array (
     'id' => '1862',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zahnarzt',
     ),
@@ -10225,10 +10225,10 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zahnarzt',
   ),
-  'Zahnarzthelfer' => 
+  'Zahnarzthelfer' =>
   array (
     'id' => '1863',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zahnarzthelfer',
     ),
@@ -10236,10 +10236,10 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zahnarzthelfer',
   ),
-  'Zahntechniker' => 
+  'Zahntechniker' =>
   array (
     'id' => '1864',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zahntechniker',
     ),
@@ -10247,10 +10247,10 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zahntechniker',
   ),
-  'Zeichner' => 
+  'Zeichner' =>
   array (
     'id' => '1865',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zeichner',
     ),
@@ -10258,10 +10258,10 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zeichner',
   ),
-  'Zerspanungsmechaniker' => 
+  'Zerspanungsmechaniker' =>
   array (
     'id' => '1866',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zerspanungsmechaniker',
     ),
@@ -10269,10 +10269,10 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zerspanungsmechaniker',
   ),
-  'Zimmerer' => 
+  'Zimmerer' =>
   array (
     'id' => '1867',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zimmerer',
     ),
@@ -10280,10 +10280,10 @@ $options = array (
     'panel' => 'Z',
     'text' => 'Zimmerer',
   ),
-  'Zweiradmechaniker' => 
+  'Zweiradmechaniker' =>
   array (
     'id' => '1868',
-    'query' => 
+    'query' =>
     array (
       'q' => 'Zweiradmechaniker',
     ),
@@ -10294,4 +10294,4 @@ $options = array (
 );
 /* Do not edit below this line */
 
-return []; #'options' => [\Gastro24\Options\Landingpages::class => [$options]]];
+return ['options' => [\Stellenmarkt\Options\Landingpages::class => [$options]]];
