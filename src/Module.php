@@ -142,6 +142,36 @@ class Module implements AssetProviderInterface
                     $query->set('id', $routeMatch->getParam('id') ?: $event->getRequest()->getQuery('id'));
                 }
 
+                 if ('lang/landingPage' == $matchedRouteName) {
+                    $services = $event->getApplication()->getServiceManager();
+                    $options = $services->get(Landingpages::class);
+                    $term = $routeMatch->getParam('q');
+
+                    if (!$term) {
+                        return;
+                    }
+
+                    $query = $options->getQueryParameters($term);
+                    $routeMatch->setParam('wpId', $options->getIdMap($term));
+                    $routeMatch->setParam('isLandingPage', true);
+                    $routeMatch->setParam('term', $term);
+
+                    if ($query) {
+                        $origQuery = $event->getRequest()->getQuery()->toArray();
+                        if (count($origQuery)) {
+                            $routeMatch->setParam('isFilteredLandingPage', true);
+                            $query = array_merge($origQuery, $query);
+                        }
+                        $event->getRequest()->setQuery(new Parameters($query));
+                    } else {
+                        return;
+                    }
+
+                    $container->landingPageTerm = $term;
+                    $container->landingPageSearchQuery = $query['q'];
+                }
+
+
                 if ('lang/jobboard' == $matchedRouteName || 'lang/landingPage' == $matchedRouteName) {
                     $services = $event->getApplication()->getServiceManager();
                     $options = $services->get(Landingpages::class);
