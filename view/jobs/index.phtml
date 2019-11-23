@@ -19,7 +19,7 @@ $this->headMeta()->setName('keywords', $wordpress->call('value', ['meta-fields.k
 $description = $wordpress->call('value', ['content.rendered'], '');
 
 $title = $wordpress->call('value', ['meta-fields.title'], '');
-$this->headTitle($title ?: $this->translate('Jobs'));
+$this->headTitle($title ?: $this->translate('Jobs') . ' ' . $queryGet['q'] ?: '');
 
 $robots = "noindex,follow";
 if (2813 === $query || 
