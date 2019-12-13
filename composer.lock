@@ -163,6 +163,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -3235,12 +3236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/export-ba.git",
-                "reference": "fab10849cebb60d2a0e56e3efb07b932cbfd4353"
+                "reference": "0838f97d555cb283e3b10769f11fe59fd498918c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/export-ba/zipball/fab10849cebb60d2a0e56e3efb07b932cbfd4353",
-                "reference": "fab10849cebb60d2a0e56e3efb07b932cbfd4353",
+                "url": "https://api.github.com/repos/yawik/export-ba/zipball/0838f97d555cb283e3b10769f11fe59fd498918c",
+                "reference": "0838f97d555cb283e3b10769f11fe59fd498918c",
                 "shasum": ""
             },
             "require": {
@@ -3293,7 +3294,7 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-11-18T09:27:17+00:00"
+            "time": "2019-12-13T14:43:40+00:00"
         },
         {
             "name": "yawik/geo",
