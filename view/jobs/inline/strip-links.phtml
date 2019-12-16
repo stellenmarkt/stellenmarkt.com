@@ -79,7 +79,7 @@ $orgName = $this->jobOrganizationName($this->job);
 
             <?php if ($this->html): ?>
                  <div class="col-md-12 position">
-                   <?=$this->html?>
+                   <?=striplinks($this->html)?>
                  </div>
             <?php else: ?>
               <div class="col-md-12 position">
@@ -195,4 +195,29 @@ $orgName = $this->jobOrganizationName($this->job);
     </div>
 </div>
 
+<?php
 
+function striplinks($html) {
+    if (preg_match("//u", $html)) {
+        // $html is valid UTF-8
+        $html=preg_replace("/iso-8859-1/","utf-8",$html);
+    } else if ($encoding = mb_detect_encoding($html, ['iso-8859-15', 'latin1'])) {
+        $html = mb_convert_encoding($html, 'utf8', $encoding);
+        $html = preg_replace('~' . preg_quote($encoding) . '|iso-8859-.{1,2}~', 'utf-8', $html);
+    } else {
+        $html = utf8_encode($html);
+    }
+    $oldErrorReporting = error_reporting(0);
+    $dom = new \DOMDocument();
+    $dom->loadHTML('<?xml charset="utf8"?>' . $html);
+
+    // delete links
+    while($elem = $dom->getElementsByTagName("a")->item(0)) {
+        $elem->parentNode->removeChild($elem);
+    }
+    $html = $dom->saveHTML();
+    error_reporting($oldErrorReporting);
+
+    return($html);
+
+}
