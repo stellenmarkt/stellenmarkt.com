@@ -4099,12 +4099,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/export-ba.git",
-                "reference": "4d0b157c1281cf2144bfc3d30ef4fdc984fdc0b1"
+                "reference": "43112c63fe5346528533bf0bc36254e841ba9eb7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/export-ba/zipball/4d0b157c1281cf2144bfc3d30ef4fdc984fdc0b1",
-                "reference": "4d0b157c1281cf2144bfc3d30ef4fdc984fdc0b1",
+                "url": "https://api.github.com/repos/yawik/export-ba/zipball/43112c63fe5346528533bf0bc36254e841ba9eb7",
+                "reference": "43112c63fe5346528533bf0bc36254e841ba9eb7",
                 "shasum": ""
             },
             "require": {
@@ -4157,7 +4157,7 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-12-19T17:19:46+00:00"
+            "time": "2019-12-20T09:25:01+00:00"
         },
         {
             "name": "yawik/geo",
@@ -4646,12 +4646,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/SimpleImport.git",
-                "reference": "0bfbcabaf16eb64dd55e25fe627c39e19e2fde8a"
+                "reference": "33732c995823aaf85704dbf00b3cea427299979d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/SimpleImport/zipball/0bfbcabaf16eb64dd55e25fe627c39e19e2fde8a",
-                "reference": "0bfbcabaf16eb64dd55e25fe627c39e19e2fde8a",
+                "url": "https://api.github.com/repos/yawik/SimpleImport/zipball/33732c995823aaf85704dbf00b3cea427299979d",
+                "reference": "33732c995823aaf85704dbf00b3cea427299979d",
                 "shasum": ""
             },
             "require": {
@@ -4721,7 +4721,7 @@
                 "yawik",
                 "zf3"
             ],
-            "time": "2019-12-18T14:24:40+00:00"
+            "time": "2019-12-20T09:25:55+00:00"
         },
         {
             "name": "yawik/sitemap",
