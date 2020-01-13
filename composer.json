@@ -30,7 +30,7 @@
         "yawik/landingpages": "^0.1.0",
         "yawik/sitemap": "^0.3.0",
 	"yawik/export-ba": "dev-master",
-	"yawik/simple-import": "dev-store_extra_data"
+	"yawik/simple-import": "dev-store_meta_data"
     },
     "autoload": {
         "psr-4": {
