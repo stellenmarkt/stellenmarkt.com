@@ -16,5 +16,7 @@ public/layout.css
 test/sandbox/.env
 
 test/sandbox/config/autoload/yawik.config.global.php
+test/sandbox/config/autoload/landingpages.config.global.php
+test/sandbox/config/autoload/mail-service.global.php
 deployer.phar
 .env

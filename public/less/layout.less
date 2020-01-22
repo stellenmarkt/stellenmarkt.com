@@ -44,10 +44,6 @@ body {
 	margin-top: 0;
 	height: 100%;
 	overflow-x: hidden;
-	background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 .featured-image-box {
@@ -225,12 +221,30 @@ main {
 				padding-top: 10px;
 				padding-bottom: 10px;
 				margin-top: 30px;
-				font-weight: 300;
+				font-weight: 500;
 				font-size: 16px
 			}
 			.dropdown-menu>li>a:hover {
 				background-color: @navbar-inverse-toggle-hover-bg;
 			}
+			.navbar-nav>li{
+				position: relative;
+			  }
+			.navbar-nav>li::before{
+				content: '';
+			    position: absolute;
+			    left: 50%;
+			bottom: 0;
+			width: 100%;
+			height: 2px;
+			background-color: @brand-primary;
+			transform-origin: center;
+			transform: translate(-50%, 0) scaleX(0);
+			transition: transform 0.3s ease-in-out;
+			  }
+		    .navbar-nav>li:hover::before {
+				transform: translate(-50%, 0) scaleX(1);
+			  }
 		}
 	}
   // Ipad
@@ -375,3 +389,77 @@ a[data-toggle="collapse"] {
 #cookieNotice {
 	z-index: 1010 !important;
 }
+.h2 {
+	font-size: 18px;
+}
+h4, .h4 {
+	font-size: 16px;
+	line-height: 21px;
+}
+.search-form-container .searchform {
+    position: relative;
+    margin-top: 209px;
+    margin-bottom: auto;
+    background: rgba(255,255,255,0.3);
+    padding: 34px;
+}
+.input-group{
+	font-size: 17px;
+}
+.form-control{
+    height: 40px !important;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.select2-container--bootstrap .select2-selection--single {
+    height: 40px !important;
+}
+.select2-container--bootstrap .select2-selection {
+    color:#777;
+}
+.select2-container--bootstrap .select2-selection--single .select2-selection__placeholder {
+    color:#777;
+}
+.btn {
+	padding: 8px 12px;
+    font-size: 15px;
+}
+
+span {
+	position: relative;
+  }
+  
+  span::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #fc2f70;
+	transform-origin: center;
+	transform: translate(-50%, 0) scaleX(0);
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  span:hover::before {
+	transform: translate(-50%, 0) scaleX(1);
+  }
+  .yk-pagination ul {
+    margin: 0 0 4px;
+  }
+  .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+	>li>a{
+		padding: 15px !important;
+		margin-right: 3px;
+	}
+  }
+ 
+
