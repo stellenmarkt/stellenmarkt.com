@@ -25,11 +25,15 @@
         "yawik/jobs-by-mail": "^0.2",
         "yawik/solr": "^0.8",
         "yawik/organizations": "^0.33",
+        "yawik/applications": "^0.33",
+        "yawik/cv": "^0.33",
+        "yawik/auth": "^0.33",
+        "yawik/settings": "^0.33",
         "yawik/pdf": "^0.33",
-        "yawik/composer-plugin": "^0.32@dev",
+        "yawik/composer-plugin": "^1.0",
         "yawik/landingpages": "^0.1.0",
         "yawik/sitemap": "^0.3.0",
-	"yawik/export-ba": "dev-master",
+	"yawik/export-ba": "^0.0",
 	"yawik/simple-import": "dev-store_meta_data"
     },
     "autoload": {
