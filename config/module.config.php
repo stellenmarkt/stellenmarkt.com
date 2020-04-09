@@ -5,7 +5,6 @@ use Stellenmarkt\Form\JobDetailsHydrator;
 use Stellenmarkt\Form\JobDetailsHydratorFactory;
 use Stellenmarkt\Options\Landingpages;
 use Jobs\Listener\Events\JobEvent;
-use SimpleImport\Entity\Crawler;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 Module::$isLoaded = true;
@@ -125,12 +124,6 @@ return [
         'factories' => [
             JobDetailsHydrator::class => JobDetailsHydratorFactory::class,
         ],
-    ],
-
-    'simple_import_crawler_processor_manager' => [
-        'factories' => [
-            Crawler::TYPE_JOB => SimpleImport\JobProcessorFactory::class
-        ]
     ],
 
     'view_helpers' => [
