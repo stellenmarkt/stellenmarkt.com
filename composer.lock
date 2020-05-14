@@ -5191,6 +5191,7 @@
                 "rest",
                 "sdk"
             ],
+            "abandoned": true,
             "time": "2019-01-04T20:04:25+00:00"
         },
         {
@@ -7214,16 +7215,16 @@
         },
         {
             "name": "yawik/export-ba",
-            "version": "v0.1.2",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/export-ba.git",
-                "reference": "8bbed5c595dcbc337503bc15d8d008996f03607f"
+                "reference": "6d7d6af9f65b164e7eb890e98c31b1468d0c6144"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/export-ba/zipball/8bbed5c595dcbc337503bc15d8d008996f03607f",
-                "reference": "8bbed5c595dcbc337503bc15d8d008996f03607f",
+                "url": "https://api.github.com/repos/yawik/export-ba/zipball/6d7d6af9f65b164e7eb890e98c31b1468d0c6144",
+                "reference": "6d7d6af9f65b164e7eb890e98c31b1468d0c6144",
                 "shasum": ""
             },
             "require": {
@@ -7277,7 +7278,7 @@
                 "module",
                 "yawik"
             ],
-            "time": "2020-05-08T16:22:44+00:00"
+            "time": "2020-05-13T14:53:51+00:00"
         },
         {
             "name": "yawik/geo",
