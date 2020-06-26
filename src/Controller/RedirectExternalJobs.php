@@ -70,6 +70,7 @@ class RedirectExternalJobs extends AbstractActionController
                 $internModel->setTemplate($jobTemplate ?: 'stellenmarkt/jobs/view-intern');
                 $model->addChild($internModel, 'internalJob');
             } else {
+                $response->setStatusCode(Response::STATUS_CODE_410);
                 $model->setVariable('isExpired', true);
             }
 
