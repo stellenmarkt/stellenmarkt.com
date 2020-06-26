@@ -71,9 +71,11 @@ $orgName = $this->jobOrganizationName($this->job);
                         <span class="yk-contract yk-<?=$typeOfContract?>"><?=$typeOfContract; ?></span>
 
           </p>
-
+<?php if ($this->isExpired): ?>
+            <p class="text-secondary lead">Dieser Job ist nicht mehr online.</p>
+<?php else: ?>
            <?=$this->jobboardApplyUrl($job);?>
-
+<?php endif ?>
     </div>
 </div>
     <?php if (!$this->isIntern && $this->isVisited && !$this->isEmbeddable): ?>

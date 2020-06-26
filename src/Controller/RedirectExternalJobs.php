@@ -43,10 +43,10 @@ class RedirectExternalJobs extends AbstractActionController
         $response = $this->getResponse();
 
         try {
-            /* @var \Jobs\Entity\JobInterface $job */
+            /** @var \Jobs\Entity\Job $job */
             $job = $this->initializeJob()->get($this->params());
         } catch (NotFoundException $e) {
-            /* @var Response $response */
+            /** @var Response $response */
             $response = $this->getResponse();
             $response->setStatusCode(Response::STATUS_CODE_404);
             return [
@@ -64,9 +64,15 @@ class RedirectExternalJobs extends AbstractActionController
         if (!$job->getLink() || $jobTemplate) {
 
             $appTemplate = $appModel->getTemplate();
-            $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
-            $internModel->setTemplate($jobTemplate ?: 'stellenmarkt/jobs/view-intern');
-            $model->addChild($internModel, 'internalJob');
+
+            if ($job->isActive()) {
+                $internModel = $this->forward()->dispatch('Jobs/Template', ['internal' => true, 'id' => $job->getId(), 'action' => 'view']);
+                $internModel->setTemplate($jobTemplate ?: 'stellenmarkt/jobs/view-intern');
+                $model->addChild($internModel, 'internalJob');
+            } else {
+                $model->setVariable('isExpired', true);
+            }
+
             $model->setVariable('isIntern', true);
             // restore application models' template
             $appModel->setTemplate($appTemplate);
