@@ -17,7 +17,7 @@
 
         $form.find('.facet-param').each(function(){
             var $checkbox = $(this);
-            var name = $checkbox.attr('name');
+            var name = $checkbox.attr('name').replace(/"/g, '&quot;');
             var value=name.replace(/^[^\[]+\[(.*)\]$/, '$1');
             if (name.match(/^region/)) {
                 facets.r.push(value);
