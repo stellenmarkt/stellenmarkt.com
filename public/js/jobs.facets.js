@@ -48,7 +48,7 @@
         $('#facets-apply').click(function() {
             $('.facet-checkbox').each(function() {
                 var $checkbox = $(this),
-                    name = $checkbox.attr('name');
+                    name = $checkbox.attr('name').replace(/"/g, '&quot;');
                 $form.find('input[name="' + name + '"]').remove();
                 if ($checkbox.prop('checked')) {
                     $form.append('<input type="hidden" class="facet-param" name="' + name + '">');
@@ -82,5 +82,5 @@
         $('#jobs-list-container').on('yk-paginator-container:loaded.jobs-facets', onPaginatorLoaded);
     });
 
-})(jQuery); 
- 
+})(jQuery);
+
