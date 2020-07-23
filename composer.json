@@ -67,5 +67,11 @@
         "zf": {
             "module": "Stellenmarkt"
         }
-    }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/cbleek"
+        }
+    ]
 }
