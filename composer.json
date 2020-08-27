@@ -34,7 +34,8 @@
         "yawik/landingpages": "^0.2",
         "yawik/sitemap": "^0.4.0",
 	"yawik/export-ba": "^0.1",
-        "yawik/simple-import": "^0.9.1"
+        "yawik/simple-import": "^0.9.1",
+        "yawik/sentry": "^0.0.1"
     },
     "autoload": {
         "psr-4": {
