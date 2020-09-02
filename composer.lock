@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7052ad97d9857aeb71692bc2380e7914",
+    "content-hash": "e4ee1332117e7c7d82ad50eb6b9bd0b1",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -8940,16 +8940,16 @@
         },
         {
             "name": "yawik/jobs-by-mail",
-            "version": "v0.2.2",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yawik/JobsByMail.git",
-                "reference": "dd8b002997541c2f1395d59f51a005ea8798e00a"
+                "reference": "3d2d4301e1523b09c4b15d5626935e9f26e8ad5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yawik/JobsByMail/zipball/dd8b002997541c2f1395d59f51a005ea8798e00a",
-                "reference": "dd8b002997541c2f1395d59f51a005ea8798e00a",
+                "url": "https://api.github.com/repos/yawik/JobsByMail/zipball/3d2d4301e1523b09c4b15d5626935e9f26e8ad5b",
+                "reference": "3d2d4301e1523b09c4b15d5626935e9f26e8ad5b",
                 "shasum": ""
             },
             "require": {
@@ -8988,16 +8988,16 @@
             ],
             "authors": [
                 {
-                    "name": "Anthonius Munthi",
-                    "email": "me@itstoni.com"
+                    "name": "Carsten Bleek",
+                    "email": "bleek@cross-solution.de"
                 },
                 {
                     "name": "Mathias Gelhausen",
                     "email": "gelhausen@cross-solution.de"
                 },
                 {
-                    "name": "Carsten Bleek",
-                    "email": "bleek@cross-solution.de"
+                    "name": "Anthonius Munthi",
+                    "email": "me@itstoni.com"
                 }
             ],
             "description": "This module enables subscription to latest jobs by email",
@@ -9005,7 +9005,7 @@
                 "jobs",
                 "yawik"
             ],
-            "time": "2019-03-22T10:26:50+00:00"
+            "time": "2019-03-22T09:26:00+00:00"
         },
         {
             "name": "yawik/landingpages",
