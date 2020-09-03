@@ -7,7 +7,7 @@ require 'recipe/zend_framework.php';
 set('application', 'stellenmarkt.com');
 
 // Project repository
-set('repository', 'git@gitlab.cross-solution.de:cbleek/Stellenmarkt.com.git');
+set('repository', 'git@gitlab.cross-solution.de:HPL/yawik-modules/Stellenmarkt.com.git');
 
 // Shared files/dirs between deploys 
 add('shared_files', [
