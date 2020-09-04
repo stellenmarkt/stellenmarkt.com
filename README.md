@@ -9,5 +9,20 @@ otherwise many things are hard coded.
 ## Installation using composer
 
 ```bash
-$ composer require stellenmarkt/stellenmarkt-com
+:~$ git clone https://github.com/stellenmarkt/stellenmarkt.com.git
+:~$ cd stellenmarktt.com
+:~stellenmarkt.com$ composer install
+```
+
+You'll need a mongo db. If you have no database, install the yawik/install
+bodule. 
+
+```bash
+:~/stellenmarkt.com$ composer require yawik/install
+```
+
+Start the dev env
+
+```bash
+:~/stellenmarkt.com$ composer serve
 ```
