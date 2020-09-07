@@ -19,13 +19,13 @@ $this->headMeta()->setName('keywords', $wordpress->call('value', ['meta-fields.k
 $description = $wordpress->call('value', ['content.rendered'], '');
 
 $title = $wordpress->call('value', ['meta-fields.title'], '');
-$this->headTitle($title ?: $this->translate('Jobs') . ' ' . $queryGet['q'] ?: '');
+$this->headTitle($title ?: $this->translate('Jobs') . ' ' . $queryGet['q'] ?? '');
 
 $robots = "noindex,follow";
-if (2813 === $query || 
+if (2813 === $query ||
     !isset($queryGet['page']) ||
-    ($this->params()->fromRoute('isLandingPage') && 
-    !$this->params()->fromRoute('isFilteredLandingPage') 
+    ($this->params()->fromRoute('isLandingPage') &&
+    !$this->params()->fromRoute('isFilteredLandingPage')
     && (count($this->jobs) || $description))
     ) {
         $robots = substr($robots, 2);
@@ -100,7 +100,7 @@ $this->headScript()->captureStart();
             $this->filterForm->setAttribute('data-handle-by', 'native');
             $this->filterForm->setAttribute('action', $this->url('lang/jobboard', [], true));
             $this->filterForm->getButtons()->get('clear')->setAttribute('onclick', 'location.href=\'?clear=1\';');
-            ?>    
+            ?>
             <div class="searchform">
                 <?=$this->searchForm()->openTag($filterForm)?>
                 <div class="row">
