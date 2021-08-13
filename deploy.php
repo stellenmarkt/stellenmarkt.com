@@ -33,7 +33,7 @@ set('default_stage', 'prod');
 
 // Hosts
 
-host('upcoming.stellenmarkt.com')
+host('stellenmarkt.com')
     ->user('yawik')
     ->stage('prod')
     ->multiplexing(false) 
