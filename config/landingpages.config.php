@@ -1139,6 +1139,13 @@ $options = array (
     'panel' => 'A',
     'text' => 'Automotive Ingenieur',
   ),
+  'Backwaren' => [
+      'id' => 2953,
+      'query' => [ 'q' => 'backwaren'],
+      'tab' => 'Job ABC',
+      'panel' => 'B',
+      'text' => 'Backwaren',
+  ],
   'Back-Office' =>
   array (
     'id' => 1037,
